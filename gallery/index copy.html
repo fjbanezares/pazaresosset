@@ -31,60 +31,30 @@
 
     <section class="jumbotron text-center">
       <div class="container">
-        <a class="brand" href="www.pazaresosset.es"><img src="../logopazares.png"
-            style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-        <h1 class="jumbotron-heading">Filter Categories</h1>
-        <!-- Trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#categoryModal">
-          Select Categories
-        </button>
-        <button id="resetButton" class="btn btn-secondary btn-lg">Reset</button>
+        <a class="brand" href=#><img src="../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;"
+            alt="Paz Arés Osset, the Artist"></a>
+        <h1 class="jumbotron-heading">Gallery</h1>
+        <p class="lead text-muted">Filter pressing on any of the categories below.</p>
       </div>
     </section>
-    <!-- Modal -->
-    <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="categoryModalLabel">Select Categories</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="spiritual-pics" id="spiritualCheckbox">
-              <label class="form-check-label" for="spiritualCheckbox">Spiritual</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="oil-painting" id="oilCheckbox">
-              <label class="form-check-label" for="oilCheckbox">Oil painting</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="watercolor" id="watercolorCheckbox">
-              <label class="form-check-label" for="watercolorCheckbox">Watercolor</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="all" id="allCheckbox">
-              <label class="form-check-label" for="allCheckbox">All</label>
-            </div>
-            <!-- Add more categories as needed -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <!-- Grid row -->
     <div class="row">
 
       <!-- Grid column -->
-
-
+      <div class="col-md-12 d-flex justify-content-center mb-5">
+        <button type="button" class="btn btn-outline-black waves-effect filter"
+          data-rel="spiritual-pics">Spiritual</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="oil-painting">Oil
+          painting</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter"
+          data-rel="watercolor">Watercolor</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="love">Love</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="pepe">Mountains</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="2">Sea</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="pepe">Mountains</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="2">Sea</button>
+      </div>
       <!-- Grid column -->
 
     </div>
@@ -96,7 +66,7 @@
 
 
       <!-- Grid column -->
-      <div class="mb-3 pics animation  love watercolor spiritual-pics all">
+      <div class="mb-3 pics animation  love watercolor spiritual-pics">
         <a href="../painting/womaninlove/index.html"><img class="img-fluid" src="womaninlove.jpeg" alt="Swing Love"></a>
       </div>
       <!-- Grid column -->

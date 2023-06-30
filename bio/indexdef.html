@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Soy Paz en el Azul Intenso</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: black;
+            font-size: 1.7rem;
+        }
+
+        .jumbotron {
+            background-color: black;
+            color: #fff;
+        }
+
+        .custom-select-lg {
+            font-size: 3rem;
+            line-height: 1.2;
+            padding: .5rem 1rem;
+            height: auto;
+        }
+
+        .jumbotron h1 {
+            margin-top: 40px;
+            font-family: 'Montserrat', sans-serif;
+            color: magenta;
+            font-weight: 700;
+        }
+
+        .multilingual-description {
+            font-size: 3rem;
+            margin-top: 30px;
+            border: 2px solid magenta;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        .language-desc {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .main-description {
+            margin-top: 20px;
+        }
+
+        .description {
+            margin: 12px;
+            color: white;
+            font-family: 'Lemonada', cursive;
+        }
+
+        .audio {
+            text-align: center;
+            border: 20px;
+            padding: 0;
+            margin: 0;
+            width: min-content;
+            height: min-content;
+            top: 40px;
+        }
+
+        .buttonAudio {
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+        <select id="language-select" class="custom-select-lg">
+            <option value="english">English</option>
+            <option value="spanish">Español</option>
+            <option value="italian">Italiano</option>
+            <option value="chinese">中文</option>
+        </select>
+    </div>
+
+    <div class="jumbotron text-center">
+        <img src="ruta/al/logo.png" alt="Logo" class="img-fluid">
+        <h1 class="display-4">Soy Paz en el Azul Intenso</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="language english" style="display: block;">
+                    <h1>Biography of Paz Arés Osset</h1>
+                    <ul>
+                        <li><a href="./africa">Africa</a></li>
+                        <li><a href="./valencia">Valencia</a></li>
+                        <li><a href="./madrid">Madrid</a></li>
+                        <li><a href="./avila">Avila</a></li>
+                    </ul>
+                </div>
+                <div class="language spanish" style="display: none;">
+                    <h1>Biografía de Paz Arés Osset</h1>
+                    <ul>
+                        <li><a href="africa.html">África</a></li>
+                        <li><a href="valencia.html">Valencia</a></li>
+                        <li><a href="madrid.html">Madrid</a></li>
+                        <li><a href="avila.html">Ávila</a></li>
+                    </ul>
+                </div>
+                <div class="language italian" style="display: none;">
+                    <h1>Biografia di Paz Arés Osset</h1>
+                    <ul>
+                        <li><a href="africa.html">Africa</a></li>
+                        <li><a href="valencia.html">Valencia</a></li>
+                        <li><a href="madrid.html">Madrid</a></li>
+                        <li><a href="avila.html">Avila</a></li>
+                    </ul>
+                </div>
+                <div class="language chinese" style="display: none;">
+                    <h1>帕斯·阿雷斯·奥塞特的传记</h1>
+                    <ul>
+                        <li><a href="africa.html">非洲</a></li>
+                        <li><a href="valencia.html">瓦伦西亚</a></li>
+                        <li><a href="madrid.html">马德里</a></li>
+                        <li><a href="avila.html">阿维拉</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('language-select').addEventListener('change', function () {
+                // Hide all language elements
+                document.querySelectorAll('.language').forEach(function (element) {
+                    element.style.display = 'none';
+                });
+
+                // Show selected language elements
+                document.querySelectorAll('.' + this.value).forEach(function (element) {
+                    element.style.display = 'block';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

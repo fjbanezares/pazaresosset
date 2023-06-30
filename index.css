@@ -1,34 +1,39 @@
 .gallery {
--webkit-column-count: 3;
--moz-column-count: 3;
-column-count: 3;
--webkit-column-width: 33%;
--moz-column-width: 33%;
-column-width: 33%; }
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+}
+
 .gallery .pics {
--webkit-transition: all 350ms ease;
-transition: all 350ms ease; }
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
 .gallery .animation {
--webkit-transform: scale(1);
--ms-transform: scale(1);
-transform: scale(1); }
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
 
 @media (max-width: 450px) {
-.gallery {
--webkit-column-count: 1;
--moz-column-count: 1;
-column-count: 1;
--webkit-column-width: 100%;
--moz-column-width: 100%;
-column-width: 100%;
-}
+  .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+  }
 }
 
 @media (max-width: 400px) {
-.btn.filter {
-padding-left: 1.1rem;
-padding-right: 1.1rem;
-}
+  .btn.filter {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
 }
 
 .jumbotron {
@@ -37,6 +42,7 @@ padding-right: 1.1rem;
   margin-bottom: 0;
   background-color: #fff;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 2rem;
@@ -63,4 +69,37 @@ footer {
 
 footer p {
   margin-bottom: .25rem;
+}
+
+.custom-button {
+  font-size: 2rem;
+  /* Increased font size */
+  line-height: 2.5;
+  padding: 1rem 2rem;
+  /* Increased padding */
+  height: auto;
+  /* Adjust as needed */
+  background-color: #007BFF;
+  /* Deep blue color */
+  color: #fff;
+  /* White color for text */
+  border: none;
+  /* No border */
+  border-radius: 10px;
+  /* Rounded corners for a softer look */
+  transition: 0.3s;
+  /* Transition effect for hover action */
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  /* Darker blue when mouse hovers over the button */
+}
+
+.dropdown-item {
+  font-size: 1.25rem;
+}
+
+.dropdown-menu {
+  right: 0;
 }

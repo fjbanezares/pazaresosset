@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Madrid</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            font-size: 1.7rem;
+            color: #fff;
+        }
+
+        .custom-header {
+            padding: 2rem 1rem;
+            text-align: center;
+            color: inherit;
+            background-color: black;
+        }
+
+        .custom-select-lg {
+            font-size: 3rem;
+            line-height: 1.2;
+            padding: .5rem 1rem;
+            height: auto;
+        }
+
+        .custom-header h1 {
+            margin-top: 40px;
+            font-family: 'Montserrat', sans-serif;
+            color: magenta;
+            font-weight: 700;
+        }
+
+        .multilingual-description {
+            font-size: 3rem;
+            margin-top: 30px;
+            border: 2px solid magenta;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        .language-desc {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .main-description {
+            margin-top: 20px;
+        }
+
+        .description {
+            margin: 12px;
+            color: white;
+            font-family: 'Lemonada', cursive;
+        }
+
+        .audio {
+            text-align: center;
+            border: 20px;
+            padding: 0;
+            margin: 0;
+            width: min-content;
+            height: min-content;
+            top: 40px;
+        }
+
+        .buttonAudio {
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+        <select id="language-select" class="custom-select-lg">
+            <option value="english">English</option>
+            <option value="spanish">Español</option>
+            <option value="italian">Italiano</option>
+            <option value="chinese">中文</option>
+        </select>
+    </div>
+
+    <div class="custom-header">
+        <a class="brand" href="#"><img src="../../logopazares.png"
+                style="position:absolute; margin: 10px;top:0px; right:0px;" alt="Paz Arés Osset, the Artist"></a>
+        <h1 class="display-4 language english">Paz Arés, the Artist</h1>
+        <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
+        <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
+        <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
+    </div>
+
+
+    <section class="multilingual-description">
+        <div class="container">
+            <h2>
+                <div class="english language">Description</div>
+                <div class="spanish language" style="display: none;">Descripción</div>
+                <div class="italian language" style="display: none;">Descrizione</div>
+                <div class="chinese language" style="display: none;">描述</div>
+            </h2>
+
+            <div class="english language">
+                <!-- English description here -->
+
+            </div>
+
+            <div class="spanish language" style="display: none;">
+                <!-- Spanish description here -->
+
+
+            </div>
+
+            <div class="italian language" style="display: none;">
+                <!-- Italian description here -->
+
+
+            </div>
+
+            <div class="chinese language" style="display: none;">
+                <!-- Chinese description here -->
+
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('language-select').addEventListener('change', function () {
+                // Hide all language elements
+                document.querySelectorAll('.language').forEach(function (element) {
+                    element.style.display = 'none';
+                });
+
+                // Show selected language elements
+                document.querySelectorAll('.' + this.value).forEach(function (element) {
+                    element.style.display = 'block';
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

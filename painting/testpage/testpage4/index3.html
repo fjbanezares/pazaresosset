@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .image-wrapper {
+            height: 40%;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 5px solid black; */
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: all 0.3s ease-in-out;
+            border: 5px solid black;
+            box-shadow: 0 0 20px red;
+
+        }
+
+        .image-wrapper.expand {
+            height: 98%;
+            width: 98%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-wrapper" id="image-wrapper">
+        <img src="Ilusiones2.jpg" alt="Gallery Image">
+    </div>
+
+    <script>
+        var imageWrapper = document.getElementById('image-wrapper');
+
+        imageWrapper.addEventListener('click', function () {
+            if (this.classList.contains('expand')) {
+                this.classList.remove('expand');
+            } else {
+                this.classList.add('expand');
+            }
+        });
+    </script>
+</body>
+
+</html>

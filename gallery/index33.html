@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Gallery with Shuffle.js</title>
+  <link rel="stylesheet" href="https://unpkg.com/shufflejs@5.3.0/dist/shuffle.min.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 10px;
+    }
+    .shuffle-item {
+      position: relative;
+      border: 3px solid #333;
+      padding: 10px;
+    }
+    .shuffle-item img {
+      width: 100%;
+      height: auto;
+    }
+    .filter {
+      background-color: #ccc;
+      border: none;
+      color: #333;
+      cursor: pointer;
+      margin-right: 5px;
+      padding: 5px 10px;
+    }
+    .filter.selected {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+  <script src="https://unpkg.com/shufflejs@5.3.0/dist/shuffle.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Galería con Shuffle.js</h1>
+    <div>
+      <button class="filter" data-group="category1">Categoría 1</button>
+      <button class="filter" data-group="category2">Categoría 2</button>
+      <button class="filter" data-group="category3">Categoría 3</button>
+      <button class="filter" data-group="all">Todos</button>
+    </div>
+  </header>
+  <main>
+    <div class="gallery" id="gallery">
+      <div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image1.jpg" alt="Imagen 1">
+      </div>
+      <div class="shuffle-item" data-groups='["category2"]'>
+        <img src="image2.jpg" alt="Imagen 2">
+      </div>
+      <div class="shuffle-item" data-groups='["category3"]'>
+        <img src="image3.jpg" alt="Imagen 3">
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var gallery = document.getElementById('gallery');
+      var filters = document.querySelectorAll('.filter');
+      
+      var shuffleInstance = new Shuffle(gallery, {
+        itemSelector: '.shuffle-item',
+        sizer: null,
+      });
+
+      function filterHandler(event) {
+        var target = event.target;
+        var group = target.getAttribute('data-group');
+        
+        if (group === 'all') {
+          shuffleInstance.filter(Shuffle.ALL_ITEMS);
+          filters.forEach(function (filter) {
+            filter.classList.remove('selected');
+          });
+          target.classList.add('selected');
+        } else {
+          var selectedGroups = Array.from(filters)
+            .filter(filter => filter.classList.contains('selected'))
+            .map(filter => filter.getAttribute('data-group'));
+
+          shuffleInstance.filter(function (element) {
+            var elementGroups = JSON.parse(element.getAttribute('data-groups'));
+            return selectedGroups.some(group => elementGroups.includes(group));
+          });
+        }
+      }
+
+      filters.forEach(function (filter) {
+        filter.addEventListener('click', function (event) {
+          if (event.target.getAttribute('data-group') !== 'all') {

@@ -1,140 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<!doctype html>
-<html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="A glimpse of Light into the Darkness">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <meta name="keywords" content="Paz Arés Osset, Arés, Paz Ares, Ares, charcoal, Art, Painting, Portrait, Artist, Africa, Spitituality" />
-    <meta name="description" content="Paz Arés Osset" />
-    <title>Paz Arés Osset Poems</title>
-
-
-    <link rel="canonical" href="https://pazaresosset.es">
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900|Ubuntu:300,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-    <!-- MDBootstrap flags -->
-<link href="css/addons/flag.min.css" rel="stylesheet">
-
+    <title>Paz Arés the Artist</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+        rel="stylesheet">
 
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        body {
+            background-color: black;
+            font-size: 1.7rem;
+            color: #fff;
         }
-      }
+
+        .custom-header {
+            padding: 2rem 1rem;
+            text-align: center;
+            color: inherit;
+            background-color: black;
+        }
+
+        .custom-select-lg {
+            font-size: 3rem;
+            line-height: 1.2;
+            padding: .5rem 1rem;
+            height: auto;
+        }
+
+        .custom-header h1 {
+            margin-top: 40px;
+            font-family: 'Montserrat', sans-serif;
+            color: magenta;
+            font-weight: 700;
+        }
+
+        .multilingual-description {
+            font-size: 3rem;
+            margin-top: 30px;
+            border: 2px solid magenta;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        .language-desc {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .main-description {
+            margin-top: 20px;
+        }
+
+        .description {
+            margin: 12px;
+            color: white;
+            font-family: 'Lemonada', cursive;
+        }
+
+        .audio {
+            text-align: center;
+            border: 20px;
+            padding: 0;
+            margin: 0;
+            width: min-content;
+            height: min-content;
+            top: 40px;
+        }
+
+        .buttonAudio {
+            top: 200px;
+        }
     </style>
-    <!-- Custom styles for this template -->
+</head>
 
-    <link rel="stylesheet" href="bio.css">
+<body>
+    <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+        <select id="language-select" class="custom-select-lg">
+            <option value="english">English</option>
+            <option value="spanish">Español</option>
+            <option value="italian">Italiano</option>
+            <option value="chinese">中文</option>
+        </select>
+    </div>
 
-  </head>
-  <body>
+    <div class="custom-header">
+        <a class="brand" href="https://www.pazaresosset.es"><img src="../../logopazares.png"
+                style="position:absolute; margin: 10px;top:0px; right:0px;" alt="Paz Arés Osset, the Artist"></a>
+        <h1 class="display-4 language english">Paz Arés, the Artist</h1>
+        <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
+        <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
+        <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
+    </div>
 
 
-<main role="main">
-
-  <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Bio</h1>
-      <a class="brand" href="www.pazaresosset.es"><img src="../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-      <p class="lead text-muted"> Paz has a deep need to communicate her spiritual feelings and her passion to sculpt reality: She is the end of Darkness and beginning of Light </p>
-    </div>
-  </section>
-
-
-  <section>
-
-    <div class="container">
-  <h2>Card Deck</h2>
-  <p>The .card-deck class creates an <strong>equal height and width</strong> grid of cards. The layout will automatically adjust as you insert more cards.</p>
-  <p>In this example we have added extra content to the first card, to make it taller. Notice how the other cards follow.</p>
-  <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px):</p>
-  <div class="card-deck">
-
-      <div class="card bg-primary" onclick="ifni">
-        <div class="card-header bg-dark text-white language english" style="display:block;"><span>Ifnito</span>
-        <i class="spain flag" onclick="doublesetSpanishInDiv(this)"></i>
-        <i class="uk flag" onclick="doublesetEnglishInDiv(this)"></i></div>
-        <div class="card-header bg-dark text-white language spanish" style="display:none;"><span>Ifni</span>
-        <i class="spain flag" onclick="doublesetSpanishInDiv(this)"></i>
-        <i class="uk flag" onclick="doublesetEnglishInDiv(this)"></i></div>
-        <button type="button" name="button"  onclick="">OPEN</button>
-        <div class="card-body language spanish" style="display:none;">
-            <p class="card-text">Ifni, in Africa Paz lived 12 years</p>
-
+        <div class="row">
+            <div class="col-md-12">
+                <div class="language english" style="display: block;">
+                    <h1>Biography of Paz Arés Osset</h1>
+                    <ul>
+                        <li><a href="./africa">Africa</a></li>
+                        <li><a href="./valencia">Valencia</a></li>
+                        <li><a href="./madrid">Madrid</a></li>
+                        <li><a href="./avila">Avila</a></li>
+                    </ul>
+                </div>
+                <div class="language spanish" style="display: none;">
+                    <h1>Biografía de Paz Arés Osset</h1>
+                    <ul>
+                        <li><a href="africa.html">África</a></li>
+                        <li><a href="valencia.html">Valencia</a></li>
+                        <li><a href="madrid.html">Madrid</a></li>
+                        <li><a href="avila.html">Ávila</a></li>
+                    </ul>
+                </div>
+                <div class="language italian" style="display: none;">
+                    <h1>Biografia di Paz Arés Osset</h1>
+                    <ul>
+                        <li><a href="africa.html">Africa</a></li>
+                        <li><a href="valencia.html">Valencia</a></li>
+                        <li><a href="madrid.html">Madrid</a></li>
+                        <li><a href="avila.html">Avila</a></li>
+                    </ul>
+                </div>
+                <div class="language chinese" style="display: none;">
+                    <h1>帕斯·阿雷斯·奥塞特的传记</h1>
+                    <ul>
+                        <li><a href="africa.html">非洲</a></li>
+                        <li><a href="valencia.html">瓦伦西亚</a></li>
+                        <li><a href="madrid.html">马德里</a></li>
+                        <li><a href="avila.html">阿维拉</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <section class="multilingual-description">
+        <div class="container">
+            <h2>
+                <div class="english language">Paz Arés Osset</div>
+                <div class="spanish language" style="display: none;">Paz Arés Osset</div>
+                <div class="italian language" style="display: none;">Paz Arés Osset</div>
+                <div class="chinese language" style="display: none;">Paz Arés Osset</div>
+            </h2>
+
+            <div class="english language">
+                <!-- English description here -->
+                <p>Dear brothers and sisters, allow me to speak to you about the artist Paz, a true holistic and
+                    mystical soul who has
+                    devoted her life to the pursuit of union between heaven and earth. Through her art, she has
+                    represented the fusion
+                    of religions and awakened the spiritual consciousness of humanity, empowering us to make the
+                    necessary change and
+                    thrive on our beloved planet.</p>
+
+                <p>From her birth in Spanish West Africa during the Ifni War, Paz has shown exceptional talent from a
+                    young age. Her
+                    love for reading, painting, drawing, dance, theater, singing, and guitar manifested remarkably at
+                    the age of five.
+                    Throughout her life, she has been blessed with immersion in various religions, providing her with
+                    deep knowledge and
+                    unique understanding.</p>
+
+                <p>Paz has dedicated forty years of her life to teaching as a primary and secondary school teacher,
+                    working in the
+                    Ministry of Education of the State. She has also pursued three university degrees, earning her
+                    doctorate in
+                    Philosophy and Education Sciences, specializing in Psychology, Pedagogy, and Sociology. Her thirst
+                    for knowledge and
+                    passion for art led her to study Fine Arts, where she also obtained her doctorate in 1998.</p>
+
+                <p>For twelve years, Paz immersed herself in the profound study of Kadampa Buddhism, receiving all the
+                    initiations and
+                    cultivating her spirituality. This experience has influenced her art, allowing her work to convey a
+                    deep sense of
+                    peace and serenity.</p>
+
+                <p>As an artist, Paz is multifaceted, constantly seeking perfection in all the styles she explores. Her
+                    creations
+                    include sculpture, painting, watercolor, pastels, prints, and photography, each reflecting her
+                    dedication and
+                    ability to capture beauty in every artistic expression.</p>
+
+                <p>Her talent has been recognized with numerous painting awards, and she has had the honor of exhibiting
+                    her work in
+                    various locations worldwide. Paz has also participated in important poetry recitals and has been
+                    included in
+                    prestigious poetry anthologies.</p>
+
+                <p>In 2019, she had the privilege of being part of the International Peace Caravan organized by the
+                    Mekky Moursia
+                    Institute, where her pictorial art and poetry shone, conveying messages of harmony and unity among
+                    nations.</p>
+
+                <p>Dear friends, Paz's art transcends borders and invites us to reflect on our deepest essence. Through
+                    her artistic
+                    vision, she shows us the path to inner peace and connection with the divine. Her works are a gift to
+                    our senses and
+                    a reminder of the beauty we can find in the world.</p>
+
+                <p>May her art continue to illuminate our hearts and guide us towards a future of love and unity. Peace
+                    be with you, now
+                    and always.</p>
+
+            </div>
+
+            <div class="spanish language" style="display: none;">
+                <!-- Spanish description here -->
+                <p>Queridos hermanos y hermanas, permitidme hablaros de la artista Paz, una verdadera alma holística y
+                    mística que ha
+                    dedicado su vida a la búsqueda de la unión entre el cielo y la tierra. A través de su arte, ella ha
+                    representado la
+                    fusión de las religiones y ha despertado la conciencia espiritual de la humanidad, capacitándonos
+                    para realizar el
+                    cambio necesario y prosperar en nuestro amado planeta.</p>
+
+                <p>Desde su nacimiento en la África Occidental Española durante la Guerra de Ifni, Paz ha demostrado un
+                    talento
+                    excepcional desde una edad temprana. Su amor por la lectura, la pintura, el dibujo, la danza, el
+                    teatro, el canto y
+                    la guitarra se manifestaron de manera sorprendente a los cinco años. A lo largo de su vida, ha
+                    tenido la bendición
+                    de sumergirse en diversas religiones, lo que le ha proporcionado un profundo conocimiento y una
+                    comprensión única.
+                </p>
+
+                <p>Paz ha dedicado cuarenta años de su vida a impartir clases como profesora en Educación Primaria y
+                    Secundaria,
+                    desempeñando su labor en el Ministerio de Educación del Estado. Además, ha estudiado tres carreras
+                    universitarias,
+                    obteniendo su doctorado en Filosofía y Ciencias de la Educación, con especialización en Psicología,
+                    Pedagogía y
+                    Sociología. Su sed de conocimiento y su pasión por el arte la llevaron a estudiar Bellas Artes,
+                    donde también obtuvo
+                    su doctorado en el año 1998.</p>
+
+                <p>Durante doce años, Paz se sumergió en el estudio profundo del Budismo Kadampa, recibiendo todas las
+                    iniciaciones y
+                    cultivando así su espiritualidad. Esta experiencia ha influido en su arte, permitiendo que su obra
+                    transmita un
+                    profundo sentido de paz y serenidad.</p>
+
+                <p>Como artista, Paz es multifacética y busca la perfección en todos los estilos que aborda. Sus
+                    creaciones incluyen
+                    esculturas, pinturas, acuarelas, pasteles, grabados y fotografías, cada una de ellas reflejando su
+                    dedicación y
+                    habilidad para plasmar la belleza en cada forma de expresión artística.</p>
+
+                <p>Su talento ha sido reconocido con numerosos premios de pintura y ha tenido el honor de exponer su
+                    obra en diversos
+                    lugares alrededor del mundo. Además, Paz ha participado en importantes recitales de poesía y ha sido
+                    incluida en
+                    prestigiosas antologías poéticas.</p>
+
+                <p>En el año 2019, tuvo el privilegio de formar parte de la Caravana Internacional de La Paz, organizada
+                    por el
+                    Instituto Mekky Moursia, donde su arte pictórico y su poesía brillaron, transmitiendo mensajes de
+                    armonía y unidad
+                    entre los pueblos.</p>
+
+                <p>Queridos amigos, el arte de Paz trasciende las fronteras y nos invita a reflexionar sobre nuestra
+                    esencia más
+                    profunda. A través de su visión artística, nos muestra el camino hacia la paz interior y la conexión
+                    con lo divino.
+                    Sus obras son un regalo para nuestros sentidos y un recordatorio de la belleza que podemos encontrar
+                    en el mundo.
+                </p>
+
+                <p>Que su arte siga iluminando nuestros corazones y guiándonos hacia un futuro de amor y unidad. Paz sea
+                    con vosotros,
+                    ahora y siempre.</p>
+            </div>
+
+            <div class="italian language" style="display: none;">
+                <!-- Italian description here -->
+                <p>Cari fratelli e sorelle, permettetemi di parlarvi dell'artista Paz, un'anima veramente olistica e
+                    mistica che ha
+                    dedicato la sua vita alla ricerca dell'unione tra il cielo e la terra. Attraverso la sua arte, ha
+                    rappresentato la
+                    fusione delle religioni e risvegliato la coscienza spirituale dell'umanità, permettendoci di
+                    apportare il
+                    cambiamento necessario e prosperare sul nostro amato pianeta.</p>
+
+                <p>Dalla sua nascita nell'Africa occidentale spagnola durante la guerra di Ifni, Paz ha mostrato un
+                    talento eccezionale
+                    fin da giovane. Il suo amore per la lettura, la pittura, il disegno, la danza, il teatro, il canto e
+                    la chitarra si
+                    è manifestato in modo sorprendente all'età di cinque anni. Nel corso della sua vita, ha avuto la
+                    fortuna di
+                    immergersi in diverse religioni, acquisendo una conoscenza profonda e una comprensione unica.</p>
+
+                <p>Paz ha dedicato quarant'anni della sua vita all'insegnamento come insegnante di scuola primaria e
+                    secondaria,
+                    lavorando presso il Ministero dell'Istruzione dello Stato. Ha inoltre conseguito tre lauree
+                    universitarie, ottenendo
+                    il dottorato in Filosofia e Scienze dell'Educazione, con specializzazione in Psicologia, Pedagogia e
+                    Sociologia. La
+                    sua sete di conoscenza e la passione per l'arte l'hanno spinta a studiare Belle Arti, dove ha
+                    ottenuto anche il
+                    dottorato nel 1998.</p>
+
+                <p>Per dodici anni, Paz si è immersa nello studio approfondito del Buddhismo Kadampa, ricevendo tutte le
+                    iniziazioni e
+                    coltivando così la sua spiritualità. Questa esperienza ha influenzato la sua arte, consentendo alle
+                    sue opere di
+                    trasmettere un profondo senso di pace e serenità.</p>
+
+                <p>Come artista, Paz è poliedrica, alla costante ricerca della perfezione in tutti gli stili che
+                    esplora. Le sue
+                    creazioni includono sculture, dipinti, acquerelli, pastelli, incisioni e fotografia, ognuna
+                    riflettendo la sua
+                    dedizione e abilità nel catturare la bellezza in ogni forma di espressione artistica.</p>
+
+                <p>Il suo talento è stato riconosciuto con numerosi premi per la pittura, ed ha avuto l'onore di esporre
+                    le sue opere in
+                    diverse località in tutto il mondo. Paz ha inoltre partecipato a importanti recital poetici ed è
+                    stata inclusa in
+                    prestigiose antologie poetiche.</p>
+
+                <p>Nel 2019, ha avuto il privilegio di far parte del Caravan International Peace, organizzato
+                    dall'Istituto Mekky
+                    Moursia, dove la sua arte pittorica e le sue poesie hanno brillato, trasmettendo messaggi di armonia
+                    e unità tra le
+                    nazioni.</p>
+
+                <p>Cari amici, l'arte di Paz va oltre i confini e ci invita a riflettere sulla nostra essenza più
+                    profonda. Attraverso
+                    la sua visione artistica, ci mostra il cammino verso la pace interiore e la connessione con il
+                    divino. Le sue opere
+                    sono un dono per i nostri sensi e un promemoria della bellezza che possiamo trovare nel mondo.</p>
+
+                <p>Possano le sue opere continuare ad illuminare i nostri cuori e guidarci verso un futuro di amore e
+                    unità. La pace sia
+                    con voi, ora e sempre.</p>
+
+            </div>
+
+            <div class="chinese language" style="display: none;">
+                <!-- Chinese description here -->
+                <p>亲爱的兄弟姐妹们，让我向你们介绍艺术家Paz，一个真正的整体性和神秘主义的灵魂，她将自己的生命奉献于天地之间的统一追求。通过她的艺术，她描绘了宗教的融合，并唤醒了人类的精神意识，使我们能够进行必要的改变，在我们所热爱的星球上茁壮成长。
+                </p>
+
+                <p>Paz出生于西班牙西非，在Ifni战争期间展现了非凡的才华。她自幼热爱阅读、绘画、绘图、舞蹈、戏剧、歌唱和吉他，五岁时展现出了惊人的才能。她的一生中，有幸沉浸于各种宗教之中，获得了深刻的知识和独特的理解。
+                </p>
+
+                <p>Paz将四十年时间奉献于作为小学和中学教师的教学工作，就职于国家教育部。她还攻读了三个大学学位，获得了哲学和教育科学的博士学位，专攻心理学、教育学和社会学。她对知识的渴望和对艺术的热情使她决定攻读美术学位，在1998年获得了博士学位。
+                </p>
+
+                <p>在接下来的十二年里，Paz深入研究了Kadampa佛教，接受了所有的灌顶仪式，培养了自己的灵性。这一经历影响了她的艺术创作，使她的作品传达出深沉的平静与宁静。</p>
+
+                <p>作为一位艺术家，Paz多才多艺，不断追求在所涉及的各种风格中的完美表现。她的作品包括雕塑、绘画、水彩、粉彩、版画和摄影，每一件作品都反映了她的专注和能力，以捕捉艺术表达中的美感。</p>
+
+                <p>她的才华得到了众多绘画奖项的认可，并有幸在世界各地展示她的作品。此外，Paz还参与了重要的诗歌朗诵会，并被收录在著名的诗歌选集中。</p>
+
+                <p>2019年，她有幸成为由Mekky Moursia研究所组织的国际和平游行的一部分，她的绘画艺术和诗歌光芒四射，传递着和谐与团结的信息。</p>
+
+                <p>亲爱的朋友们，Paz的艺术超越了国界，邀请我们反思我们内心最深处的本质。通过她的艺术视野，她向我们展示了通向内心和与神连接的道路。她的作品是我们感官的礼物，也是提醒我们世界中存在的美的象征。</p>
+
+                <p>愿她的艺术继续照亮我们的内心，引领我们走向充满爱与团结的未来。愿平安与您同在，现在和永远。</p>
 
 
+            </div>
         </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('language-select').addEventListener('change', function () {
+                // Hide all language elements
+                document.querySelectorAll('.language').forEach(function (element) {
+                    element.style.display = 'none';
+                });
+
+                // Show selected language elements
+                document.querySelectorAll('.' + this.value).forEach(function (element) {
+                    element.style.display = 'block';
+                });
+            });
+        });
+    </script>
 
 
-
-    <div class="card bg-warning">
-      <div class="card-body text-center">
-        <p class="card-text">Some text inside the second card</p>
-      </div>
-    </div>
-    <div class="card bg-success">
-      <div class="card-body text-center">
-        <p class="card-text">Some text inside the third card</p>
-      </div>
-    </div>
-    <div class="card bg-danger">
-      <div class="card-body text-center">
-        <p class="card-text">Some text inside the fourth card</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-</section>
-
-</main>
-
-<footer id="footer">
-    <a href="https://www.facebook.com/pazarestheartist/"> <img src="../facebook-logo-510.png" width="89px" height="69px" alt="The Artist"  /></a>
-    <a href="https://twitter.com/pazaresosset"><img src="../twitterlogo.png" width="89px" height="69px" alt="The Artist"  /></a>
-    <a href="https://www.instagram.com/pazaresosset/"><img src="../instagram-logo-png-2426.png" width="69px" height="69px" alt="The Artist"   /></a>
-    <a href="https://www.youtube.com/user/pazaresosset"><img src="../youtubeicon.svg" width="100px" height="69px" alt="The Artist"  style="margin-left: 20px;" /></a>
-  </br>
-</br>
-  <p style="text-align: center;"> © Copyright 2020 Paz Arés Osset</p>
-</footer>
-
-<!-- jQuery -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="js/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="js/mdb.min.js"></script>
-<!-- Your custom scripts (optional) -->
-
-<!-- MDBootstrap Masonry  -->
-<script type="text/javascript" src="js/addons/masonry.pkgd.min.js"></script>
-
-<script type="text/javascript" src="js/addons/imagesloaded.pkgd.min.js"></script>
-
-<script type="text/javascript"  src="bio.js"></script>
+</body>
 
 </html>

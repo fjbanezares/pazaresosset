@@ -13,7 +13,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script> -->
 
 
@@ -24,22 +24,41 @@
   <section id="title">
     <div class="container-fluid">
 
-      <img class="logo" src="logopazares.png" alt="Paz Arés Osset, the Artist">
-      <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-        <select id="page-select" class="custom-select-lg" onchange="location = this.value;"
-          style="font-size: 2rem; line-height: 2.5; padding: 1rem 2rem; height: calc(4.875rem + 2px); background-color: #007bff; color: white; border: none;">
-          <option value="index.html">Select</option>
-          <option value="gallery/index.html">Gallery</option>
-          <option value="https://poetry.pazaresosset.es/">Poetry</option>
-          <option value="contact/index.html">Contact</option>
-          <option value="bio/index.html">Bio</option>
-        </select>
+      <div class="position-fixed d-flex justify-content-end p-4 dropdown" style="right: 0; top: 0; z-index: 1;">
+        <button class="btn dropdown-toggle custom-button" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Select Page
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="home.html">Home</a>
+          <a class="dropdown-item" href="gallery.html">Gallery</a>
+          <a class="dropdown-item" href="contact.html">Contact</a>
+          <!-- add more pages as needed -->
+        </div>
       </div>
 
 
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
 
-
-
+        <a class="navbar-brand" href=index.html><img src="logopazares.png" alt="Paz Arés Osset, the Artist"
+            style="margin:0px 150px 12px 0px;"></a>
+        <!-- in case the screen narrows the navbar collapses into a button -->
+        <!-- Example single danger button -->
+        <div class="btn-group" style="align:right">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Menu
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="gallery/index.html">Gallery</a>
+            <a class="dropdown-item" href="poetry/index.html">Poetry</a>
+            <a class="dropdown-item" href="#">Contact</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="bio/index.html">Bio</a>
+          </div>
+        </div>
+      </nav>
 
       <!-- Title -->
       <div class="row">

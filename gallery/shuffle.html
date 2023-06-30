@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Gallery with Shuffle.js</title>
+  <link rel="stylesheet" href="https://unpkg.com/shufflejs@5.3.0/dist/shuffle.min.css">
+  <style>
+    body {
+      margin: 10px;
+      padding: 0;
+    }
+    .gallery {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 20px;
+      margin: 20px;
+
+    }
+    .shuffle-item {
+      position: relative;
+      border: 3px solid red;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 5px;
+    }
+    .shuffle-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .filter {
+      background-color: #ccc;
+      border: 2px solid black;
+      color: #333;
+      cursor: pointer;
+      margin-right: 5px;
+      padding: 5px 10px;
+    }
+    .filter.selected {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .botonesfiltro {
+        display: flex;
+        padding: 20px;
+        justify-content: flex-start;
+        border: 2px solid black;
+        margin: 20px;
+        gap: 5px;
+    }
+  </style>
+  <script src="https://unpkg.com/shufflejs@5.3.0/dist/shuffle.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Galería con Shuffle.js</h1>
+    <div class="botonesfiltro">
+      <button class="filter" data-group="category1">Categoría 1</button>
+      <button class="filter" data-group="category2">Categoría 2</button>
+      <button class="filter" data-group="category3">Categoría 3</button>
+      <button class="filter allfilter" data-group="all" style="background-color: antiquewhite;">Todos</button>
+    </div>
+  </header>
+  <main>
+    <div class="gallery" id="gallery">
+      <div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image1.jpg" alt="Imagen 1">
+      </div>
+      <div class="shuffle-item" data-groups='["category2"]'>
+        <img src="image2.jpg" alt="Imagen 2">
+      </div>
+      <div class="shuffle-item" data-groups='["category3"]'>
+        <img src="image3.jpg" alt="Imagen 3">
+      </div>
+      <div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image3.jpg" alt="Imagen 4">
+      </div>
+      <div class="shuffle-item" data-groups='["category3", "category2"]'>
+        <img src="image3.jpg" alt="Imagen 5">
+      </div>
+      <div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image1.jpg" alt="Imagen 1">
+      </div>
+      <div class="shuffle-item" data-groups='["category2"]'>
+        <img src="image2.jpg" alt="Imagen 2">
+      </div>
+      <div class="shuffle-item" data-groups='["category3"]'>
+        <img src="image3.jpg" alt="Imagen 3">
+      </div>
+      <div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image3.jpg" alt="Imagen 4">
+      </div>
+      <div class="shuffle-item" data-groups='["category3", "category2"]'>
+        <img src="image3.jpg" alt="Imagen 5">
+      </div><div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image1.jpg" alt="Imagen 1">
+      </div>
+      <div class="shuffle-item" data-groups='["category2"]'>
+        <img src="image2.jpg" alt="Imagen 2">
+      </div>
+      <div class="shuffle-item" data-groups='["category3"]'>
+        <img src="image3.jpg" alt="Imagen 3">
+      </div>
+      <div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image3.jpg" alt="Imagen 4">
+      </div>
+      <div class="shuffle-item" data-groups='["category3", "category2"]'>
+        <img src="image3.jpg" alt="Imagen 5">
+      </div><div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image1.jpg" alt="Imagen 1">
+      </div>
+      <div class="shuffle-item" data-groups='["category2"]'>
+        <img src="image2.jpg" alt="Imagen 2">
+      </div>
+      <div class="shuffle-item" data-groups='["category3"]'>
+        <img src="image3.jpg" alt="Imagen 3">
+      </div>
+      <div class="shuffle-item" data-groups='["category1"]'>
+        <img src="image3.jpg" alt="Imagen 4">
+      </div>
+      <div class="shuffle-item" data-groups='["category3", "category2"]'>
+        <img src="image3.jpg" alt="Imagen 5">
+      </div>
+      
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var gallery = document.getElementById('gallery');
+      var filters = document.querySelectorAll('.filter');
+      
+      var shuffleInstance = new Shuffle(gallery, {
+        itemSelector: '.shuffle-item',
+        sizer: null,
+      });
+
+      function filterHandler(event) {
+        var target = event.target;
+        var group = target.getAttribute('data-group');
+        
+        if (group === 'all') {
+          shuffleInstance.filter(Shuffle.ALL_ITEMS);
+        } else {
+          var selectedGroups = Array.from(filters)
+            .filter(filter => filter.classList.contains('selected'))
+            .map(filter => filter.getAttribute('data-group'));
+
+          shuffleInstance.filter(function (element) {
+            var elementGroups = JSON.parse(element.getAttribute('data-groups'));
+            return selectedGroups.some(group => elementGroups.includes(group));
+          });
+        }
+      }
+
+      filters.forEach(function (filter) {
+        filter.addEventListener('click', function (event) {
+          event.target.classList.toggle('selected');
+          filterHandler(event);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

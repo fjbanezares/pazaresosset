@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Woman´s Body</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,7 +21,7 @@
 <body>
   <section class="jumbotron text-center">
     <div class="container">
-      <a class="brand" href=#><img src="../../logopazares.png"
+      <a class="brand" href="https://www.pazaresosset.es"><img src="../../logopazares.png"
           style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
       <h1 class="jumbotron-heading">Twilight</h1>
       <p class="lead text-muted">This watercolor work depicts a women dancing in the Twilight surrounded by the element
@@ -63,10 +65,38 @@
         </div>
       </div>
     </div>
-    </div>
+  </section>
+
+  <section class="multilingual-description">
+    <div class="container">
+      <h2>Description</h2>
+      <select id="language-select">
+        <option value="english">English</option>
+        <option value="spanish">Español</option>
+        <option value="italian">Italiano</option>
+        <option value="chinese">中文</option>
+        <!-- Add as many languages as you like -->
+      </select>
+
+      <div id="english-desc" class="language-desc">
+        <!-- English description here -->
+      </div>
+
+      <div id="spanish-desc" class="language-desc" style="display: none;">
+        <!-- Spanish description here -->
+      </div>
+
+      <div id="italian-desc" class="language-desc" style="display: none;">
+        <!-- Italian description here -->
+      </div>
+
+      <div id="chinese-desc" class="language-desc" style="display: none;">
+        <!-- Chinese description here -->
+      </div>
   </section>
 
 
+  <script src="twilight.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

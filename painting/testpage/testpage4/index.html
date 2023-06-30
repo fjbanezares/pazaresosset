@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        .image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40%;
+            width: 40%;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            /* border: 5px solid pink; */
+
+        }
+
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+
+        .image-wrapper.expand {
+            height: 98%;
+            width: 98%;
+        }
+
+        .image-wrapper img {
+            border: 5px solid black;
+            box-shadow: 0 0 20px red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-wrapper">
+        <img src="Ilusiones2.jpg" alt="Gallery Image">
+    </div>
+
+    <script>
+        var imageWrapper = document.getElementById('image-wrapper');
+
+        imageWrapper.addEventListener('click', function () {
+            if (this.classList.contains('expand')) {
+                this.classList.remove('expand');
+            } else {
+                this.classList.add('expand');
+            }
+        });
+
+        imageWrapper.addEventListener('mouseover', function () {
+            this.classList.add('expand');
+        });
+
+        imageWrapper.addEventListener('mouseout', function () {
+            if (!this.classList.contains('expand')) {
+                this.classList.remove('expand');
+            }
+        });
+    </script>
+</body>
+
+</html>

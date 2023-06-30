@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact the Artist Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .language {
+            display: none;
+        }
+
+        .english {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+        <select id="language-select" class="custom-select-lg">
+            <option value="english">English</option>
+            <option value="spanish">Español</option>
+            <option value="italian">Italiano</option>
+            <option value="chinese">中文</option>
+        </select>
+    </div>
+
+    <!-- Logo Section -->
+    <section class="container py-5">
+        <div class="text-center">
+            <a href="https://www.pazaresosset.es">
+                <img src="../../logopazares.png" alt="Paz Arés Osset, the Artist" class="mb-4">
+            </a>
+        </div>
+    </section>
+
+    <!-- Your existing HTML content goes here -->
+
+    <!-- Contact section -->
+    <section id="contact" class="container py-5">
+        <form action="https://formspree.io/f/xwkjgjez" method="POST" class="bg-light p-4 rounded">
+            <div class="form-group">
+                <label for="name">
+                    <div class="english language">Your name</div>
+                    <div class="spanish language">Su nombre</div>
+                    <div class="italian language">Il tuo nome</div>
+                    <div class="chinese language">您的姓名</div>
+                </label>
+                <input type="text" class="form-control" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">
+                    <div class="english language">Your email</div>
+                    <div class="spanish language">Su correo electrónico</div>
+                    <div class="italian language">La tua email</div>
+                    <div class="chinese language">您的电子邮件</div>
+                </label>
+                <input type="email" class="form-control" name="_replyto" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">
+                    <div class="english language">Your message</div>
+                    <div class="spanish language">Tu mensaje</div>
+                    <div class="italian language">Il tuo messaggio</div>
+                    <div class="chinese language">你的消息</div>
+                </label>
+                <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <div class="english language">Send</div>
+                <div class="spanish language">Enviar</div>
+                <div class="italian language">Inviare</div>
+                <div class="chinese language">发送</div>
+            </button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('language-select').addEventListener('change', function () {
+            var selectedLanguage = this.value;
+            var languages = ['english', 'spanish', 'italian', 'chinese'];
+            for (var i = 0; i < languages.length; i++) {
+                var language = languages[i];
+                var elements = document.getElementsByClassName(language);
+                for (var j = 0; j < elements.length; j++) {
+                    var element = elements[j];
+                    if (language !== selectedLanguage) {
+                        element.style.display = 'none';
+                    } else {
+                        element.style.display = 'block';
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
