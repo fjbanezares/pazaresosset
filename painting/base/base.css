@@ -1,0 +1,77 @@
+body {
+  /* background-color: #ef8172; */
+  background-color: black;
+  font-size: 1.7rem;
+
+}
+
+.jumbotron {
+  background-color: black;
+  color: #fff;
+}
+
+/* .jumbotron h1 {
+  margin-top: 20px;
+  font-family: 'Monoton', cursive;
+  color: magenta;
+
+} */
+.custom-select-lg {
+  font-size: 3rem;
+  line-height: 1.2;
+  padding: .5rem 1rem;
+  height: auto;
+  /* You can set this to auto or a fixed value larger than 2.875rem */
+}
+
+.jumbotron h1 {
+  margin-top: 40px;
+  /* increase this value to add more space */
+  font-family: 'Montserrat', sans-serif;
+  color: magenta;
+  font-weight: 700;
+}
+
+.multilingual-description {
+  font-size: 3rem;
+  /* rest of your properties */
+  margin-top: 30px;
+  border: 2px solid magenta;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: black;
+  color: #fff;
+}
+
+.language-desc {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.main-description {
+  margin-top: 20px;
+}
+
+.description {
+  /* rest of your properties */
+  margin: 12px;
+  color: white;
+  /* font-family: 'Manjari', sans-serif; */
+  /* font-family: 'Monoton', cursive; */
+  /* font-family: 'Philosopher', sans-serif; */
+  font-family: 'Lemonada', cursive;
+}
+
+.audio {
+  text-align: center;
+  border: 20px;
+  padding: 0;
+  margin: 0;
+  width: min-content;
+  height: min-content;
+  top: 40px;
+}
+
+.buttonAudio {
+  top: 200px;
+}

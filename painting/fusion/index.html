@@ -3,28 +3,60 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Woman´s Body</title>
+  <title>El Columpio del Éxtasis.</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="fusion.css">
-
-
-
 </head>
 
 <body>
+  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+    <select id="language-select" class="custom-select-lg">
+      <option value="english">English</option>
+      <option value="spanish">Español</option>
+      <option value="italian">Italiano</option>
+      <option value="chinese">中文</option>
+    </select>
+  </div>
+
+
   <section class="jumbotron text-center">
     <div class="container">
-      <a class="brand" href=#><img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-      <h1 class="jumbotron-heading">Fusion of Religions</h1>
-      <p class="lead text-muted">We are one. All religions, if you pass the veil of appearances give hands and are the same.</p>
-      <!-- <p>
-        <a class="btn btn-primary my-2" href="../../index.html" role="button">Main Page</a>
-      </p> -->
+
+      <a class="brand" href="https://www.pazaresosset.es">
+        <img src="../../logopazares.png" style="
+        position:absolute; 
+        margin: 10px;
+        top:0px; 
+        left:0px;" alt="Paz Arés Osset, the Artist">
+      </a>
+
+
+      <h1 class="jumbotron-heading">
+        <div class="english language">Communion: The Fusion of Religions</div>
+        <div class="spanish language" style="display: none;">Comunión: La Fusión de las Religiones</div>
+        <div class="italian language" style="display: none;">Comunione: La Fusione delle Religioni</div>
+        <div class="chinese language" style="display: none;">宗教的融合</div>
+      </h1>
+
+      <div class="lead text-muted">
+        <div class="english language">Religions reaching out to each other in a world where Love has triumphed</div>
+        <div class="spanish language" style="display: none;">Las religiones dándose la mano en un mundo donde triunfó el
+          Amor</div>
+        <div class="italian language" style="display: none;">Le religioni si danno la mano in un mondo in cui ha
+          trionfato
+          l'amore</div>
+        <div class="chinese language" style="display: none;">在爱情胜利的世界中，各宗教握手言和</div>
+      </div>
     </div>
   </section>
+
+
 
   <section class="main-image">
     <div class="container">
@@ -38,16 +70,40 @@
 
     </div>
   </section>
+  <!-- Rest of the HTML here... -->
 
   <section class="main-description">
     <div class="container">
       <div class="row">
         <div class="col-6-md description">
           <ul>
-            <li>Technique: Engraving</li>
-            <li>size: 40x30 cm</li>
-            <li>Creation Place: Workshop in Madrid</li>
+            <li>
+              <div class="english language">Technique: Engraving</div>
+              <div class="spanish language" style="display: none;">Técnica: Grabado</div>
+              <div class="italian language" style="display: none;">Tecnica: Incisione</div>
+              <div class="chinese language" style="display: none;">技术：雕刻</div>
+            </li>
+            <li>
+              <div class="english language">Size: 30x40 cm </div>
+              <div class="spanish language" style="display: none;">Tamaño: 30x40 cm</div>
+              <div class="italian language" style="display: none;">Dimensioni: 30x40 cm</div>
+              <div class="chinese language" style="display: none;">尺寸：30x40厘米</div>
+            </li>
+            <li>
+              <div class="english language">Creation Place: Engraving School in Madrid</div>
+              <div class="spanish language" style="display: none;">Lugar de Creación: Escuela de Grabado en Madrid</div>
+              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Incisione a Madrid
+              </div>
+              <div class="chinese language" style="display: none;">创作地点：马德里雕刻学校</div>
+            </li>
+            <li>
+              <div class="english language">Current Location: Plates in Madrid</div>
+              <div class="spanish language" style="display: none;">Ubicación Actual: Planchas en Madrid</div>
+              <div class="italian language" style="display: none;">Posizione Attuale: Piastre a Madrid</div>
+              <div class="chinese language" style="display: none;">当前位置：马德里的板</div>
+            </li>
           </ul>
+
 
         </div>
         <div class="col-6 md audio" style="display:none;">
@@ -55,14 +111,268 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="multilingual-description">
+    <div class="container">
+      <h2>
+        <div class="english language">Description</div>
+        <div class="spanish language" style="display: none;">Descripción</div>
+        <div class="italian language" style="display: none;">Descrizione</div>
+        <div class="chinese language" style="display: none;">描述</div>
+      </h2>
+
+      <div class="english language">
+        <!-- English description here -->
+        <p>
+          We present an extraordinary work, a divine fusion of religions that will forever change our perception of
+          spirituality.
+
+        </p>
+        <p>
+          Allow me to take you on a journey back in time to the year 2000, when Paz Arés Osset, a devout Christian, was
+          immersed
+          in her studies to become a Buddhist teacher. In that same year, she founded the NGO CALCOOP, an organization
+          dedicated
+          to cooperation with Calcutta, India. Her deep love and understanding of both Hinduism and India, as well as
+          Arab
+          countries and Islam, sparked within her a burning love for spiritual paths and the wisdom they embody.
+        </p>
+        <p>
+          In her heart, these paths intertwined and merged into the unity of her essence, which is love itself. This
+          mystical
+          vision revealed to her a universal truth: all religions, if we transcend the veil of appearances, join hands
+          and, deep
+          down, are the same expression of divine love.
+        </p>
+        <p>
+          Inspired by this revelation, Paz Arés Osset created a work of art in engraving that captures the essence of
+          her
+          transcendental vision. In this work, we can contemplate the presence of a Buddhist monk and a Catholic nun,
+          their
+          hands intertwined in a gesture of spiritual communion. The Islamic lattice, with its intricate arabesques,
+          illuminates
+          the room, revealing the presence of an angel and Jesus Christ in the trunk of a sacred tree.
+        </p>
+        <p>
+          Every element of this work conveys a deep connection between different spiritual traditions. The monk holds
+          the bible,
+          symbolizing Christian wisdom and teachings, while the nun reads the Buddhist tablets, representing the pursuit
+          of
+          truth and inner peace. The arabesques in the lattice reveal an angel and Jesus Christ in the tree, thus
+          uniting
+          Christianity with the Islamic tradition.
+        </p>
+        <p>
+          This work of engraving art is an invitation to reflect on the unity and beauty that resides in spiritual
+          diversity.
+          Paz Arés Osset reminds us that we are one, that all human beings share the same pursuit of peace and
+          happiness. Her
+          prayer calls for world peace, the unity of all beings from different spiritual paths, so that together we may
+          reach
+          bliss and free ourselves from suffering, embraced by love in its unity.
+        </p>
+        <p>
+          Fall in love with this wonderful creation that challenges the boundaries of art and spirituality. Let it touch
+          your
+          soul and open your eyes to the unity that lies beyond superficial appearances. This transcendental work by Paz
+          Arés
+          Osset is a legacy that will endure through the ages, inspiring future generations to embrace communion and
+          love in all
+          its forms.
+        </p>
+        <p>
+          You cannot miss the opportunity to witness this masterpiece that merges religions and ignites the flame of
+          unity and
+          peace in our hearts!
+        </p>
+
+
+      </div>
+
+      <div class="spanish language" style="display: none;">
+        <!-- Spanish description here -->
+        <p>
+          Presentamos una obra extraordinaria, una fusión divina de las religiones que cambiará para siempre nuestra
+          percepción
+          de la espiritualidad.
+        </p>
+        <p>
+          Permítanme llevarlos en un viaje en el tiempo hacia el año 2000, cuando Paz Arés Osset, una cristiana devota,
+          se
+          encontraba inmersa en sus estudios para convertirse en maestra budista. En ese mismo año, fundó la ONG
+          CALCOOP, una
+          organización dedicada a la cooperación con Calcuta, India. Su amor y conocimiento profundo tanto del hinduismo
+          y de la
+          India, como de los países árabes y el Islam, despertaron en ella un fuego ardiente de amor por los caminos
+          espirituales
+          y la sabiduría que encierran.
+        </p>
+        <p>
+          En su corazón, estos caminos se entrelazaron y se fusionaron en la unidad de su esencia, que es el mismo amor.
+          Esta
+          visión mística le reveló una verdad universal: todas las religiones, si trascendemos el velo de las
+          apariencias, se dan
+          la mano y, en el fondo, son una misma expresión del amor divino.
+        </p>
+        <p>
+          Inspirada por esta revelación, Paz Arés Osset creó una obra de arte en grabado que captura la esencia de su
+          visión
+          trascendental. En esta obra, podemos contemplar la presencia de un monje budista y una monja católica, cuyas
+          manos se
+          entrelazan en un gesto de comunión espiritual. La celosía islámica, con sus intrincados arabescos, ilumina la
+          estancia,
+          revelando la presencia de un ángel y de Jesucristo en el tronco de un árbol sagrado.
+        </p>
+        <p>
+          Cada elemento de esta obra transmite una profunda conexión entre diferentes tradiciones espirituales. El monje
+          sostiene
+          la biblia, simbolizando la sabiduría y enseñanzas cristianas, mientras que la monja lee las tablillas
+          budistas,
+          representando la búsqueda de la verdad y la paz interior. Los arabescos en la celosía revelan un ángel y a
+          Jesucristo en
+          el árbol, uniendo así el cristianismo con la tradición islámica.
+        </p>
+        <p>
+          Esta obra de arte en grabado es una invitación a reflexionar sobre la unidad y la belleza que reside en la
+          diversidad
+          espiritual. Paz Arés Osset nos recuerda que somos uno, que todos los seres humanos compartimos una misma
+          búsqueda de paz
+          y felicidad. Su rezo pide la paz del mundo, la unión de todos los seres de diferentes caminos espirituales,
+          para que
+          juntos alcancemos la dicha y nos liberemos del sufrimiento, abrazados por el amor en su unidad.
+        </p>
+        <p>
+          Enamórate de esta maravillosa creación que desafía los límites del arte y la espiritualidad. Permítele tocar
+          tu alma y
+          abrir tus ojos a la unidad que yace más allá de las apariencias superficiales. Esta obra trascendental de Paz
+          Arés Osset
+          es un legado que perdurará a lo largo de los tiempos, inspirando a generaciones futuras a abrazar la comunión
+          y el amor
+          en todas sus formas.
+        </p>
+        <p>
+          ¡No puedes dejar pasar la oportunidad de ser testigo de esta obra maestra que fusiona religiones y enciende
+          la llama de
+          la unidad y la paz en nuestros corazones!
+        </p>
+
+      </div>
+
+      <div class="italian language" style="display: none;">
+        <!-- Italian description here -->
+        <p>
+          Presentiamo un'opera straordinaria, una divina fusione di religioni che cambierà per sempre la nostra
+          percezione della
+          spiritualità.
+
+        </p>
+        <p>
+          Permettetemi di portarvi in un viaggio indietro nel tempo, all'anno 2000, quando Paz Arés Osset, una devota
+          cristiana,
+          era immersa nei suoi studi per diventare un'insegnante buddista. Nello stesso anno, ha fondato l'ONG CALCOOP,
+          un'organizzazione dedicata alla cooperazione con Calcutta, India. Il suo profondo amore e comprensione sia
+          dell'induismo e dell'India, sia dei paesi arabi e dell'Islam, hanno acceso in lei un amore ardente per i
+          sentieri
+          spirituali e la saggezza che racchiudono.
+        </p>
+        <p>
+          Nel suo cuore, questi sentieri si sono intrecciati e fusi nell'unità della sua essenza, che è l'amore stesso.
+          Questa
+          visione mistica le ha rivelato una verità universale: tutte le religioni, se trascendiamo il velo delle
+          apparenze, si
+          danno la mano e, in profondità, sono la stessa espressione dell'amore divino.
+        </p>
+        <p>
+          Ispirata da questa rivelazione, Paz Arés Osset ha creato un'opera d'arte in incisione che cattura l'essenza
+          della sua
+          visione trascendentale. In quest'opera, possiamo contemplare la presenza di un monaco buddista e una suora
+          cattolica,
+          le cui mani si intrecciano in un gesto di comunione spirituale. La grata islamica, con i suoi intricati
+          arabeschi,
+          illumina la stanza, rivelando la presenza di un angelo e Gesù Cristo nel tronco di un albero sacro.
+        </p>
+        <p>
+          Ogni elemento di quest'opera trasmette un profondo legame tra diverse tradizioni spirituali. Il monaco tiene
+          la
+          Bibbia, simbolizzando la saggezza e gli insegnamenti cristiani, mentre la suora legge le tavolette buddiste,
+          rappresentando la ricerca della verità e della pace interiore. Gli arabeschi nella grata rivelano un angelo e
+          Gesù
+          Cristo nell'albero, unendo così il cristianesimo con la tradizione islamica.
+        </p>
+        <p>
+          Quest'opera d'arte incisa è un invito a riflettere sull'unità e la bellezza che risiedono nella diversità
+          spirituale.
+          Paz Arés Osset ci ricorda che siamo uno, che tutti gli esseri umani condividono la stessa ricerca di pace e
+          felicità.
+          La sua preghiera invoca la pace del mondo, l'unità di tutti gli esseri di diversi percorsi spirituali,
+          affinché
+          insieme possiamo raggiungere la beatitudine e liberarci dalla sofferenza, abbracciati dall'amore nella sua
+          unità.
+        </p>
+        <p>
+          Innamoratevi di questa meravigliosa creazione che sfida i confini dell'arte e della spiritualità. Lasciate che
+          tocchi
+          la vostra anima e apra i vostri occhi all'unità che giace oltre le apparenze superficiali. Quest'opera
+          trascendentale
+          di Paz Arés Osset è un'eredità che perdurerà attraverso i secoli, ispirando le future generazioni ad
+          abbracciare la
+          comunione e l'amore in tutte le sue forme.
+        </p>
+        <p>
+          Non potete perdere l'opportunità di assistere a questo capolavoro che fonde le religioni e accende la fiamma
+          dell'unità e della pace nei nostri cuori!
+        </p>
+
+
+      </div>
+
+      <div class="chinese language" style="display: none;">
+        <!-- Chinese description here -->
+        <p>
+          我们展示了一部非凡的作品，这是一种宗教的神圣融合，将永远改变我们对精神性的认知。
+
+        </p>
+        <p>
+          让我带您回到2000年的时光之旅，当时的Paz Arés
+          Osset是一位虔诚的基督徒，她沉浸在她的研究中，以成为一位佛教教师。同年，她创立了非政府组织CALCOOP，这是一个致力于与印度加尔各答合作的组织。她对印度教和印度以及阿拉伯国家和伊斯兰教的深深的爱和理解，在她心中激起了对精神道路和他们所包含的智慧的热爱。
+        </p>
+        <p>
+          在她的心中，这些道路交织并融合成她的本质的统一，那就是爱本身。这种神秘的视野向她揭示了一个普遍的真理：所有的宗教，如果我们超越外表的面纱，都会携手并进，在深处，都是神圣爱的同一表达。
+        </p>
+        <p>
+          受此启发，Paz Arés
+          Osset创作了一部艺术作品，以雕刻的方式捕捉她超然视野的本质。在这部作品中，我们可以看到一个佛教僧侣和一个天主教修女的存在，他们的手以精神交流的手势交织在一起。伊斯兰格子窗，其错综复杂的阿拉伯式花饰照亮了房间，揭示了一位天使和耶稣基督在一棵神圣树干中的存在。
+        </p>
+        <p>
+          这个作品的每个元素都传达了不同精神传统之间的深深联系。和尚握着圣经，象征着基督教的智慧和教义，而修女阅读佛教经文，代表对真理和内心平静的追求。在格子窗的阿拉伯式花饰中揭示了一个天使和耶稣基督在树中，从而将基督教与伊斯兰传统结合在一起。
+        </p>
+        <p>
+          这部雕刻艺术作品是对反思精神多样性中的统一和美的邀请。Paz Arés
+          Osset提醒我们，我们是一体的，所有的人类都有着相同的追求，那就是和平与幸福。她的祈祷呼吁世界和平，所有来自不同精神道路的生物的统一，这样我们可以一起达到幸福，并从痛苦中解脱出来，被爱在其统一中所包围。
+        </p>
+        <p>
+          爱上这个挑战艺术和精神性边界的奇妙创造。让它触摸你的灵魂，打开你的眼睛，看到超越表面外表的统一。Paz Arés Osset的这部超然作品是一种将流传世世的遗产，激励未来的世代去接受团结和爱的所有形式。
+        </p>
+        <p>
+          你不能错过这个机会，去见证这个融合宗教，并在我们的心中点燃团结和和平火焰的杰作！
+        </p>
+      </div>
     </div>
   </section>
 
 
+  <script src="fusion.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

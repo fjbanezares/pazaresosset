@@ -3,69 +3,389 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Colourful Couple</title>
+  <title>Dance of Fire and Brilliance</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="parejadecolor.css">
 
-
-
+  <!-- css here -->
+  <link rel="stylesheet" href="tao.css">
 </head>
 
 <body>
+  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+    <select id="language-select" class="custom-select-lg">
+      <option value="english">English</option>
+      <option value="spanish">Español</option>
+      <option value="italian">Italiano</option>
+      <option value="chinese">中文</option>
+      <option value="arabic">العربية</option>
+    </select>
+  </div>
+
+
   <section class="jumbotron text-center">
     <div class="container">
-      <a class="brand" href=#><img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-      <h1 class="jumbotron-heading">Colourful Couple</h1>
-      <p class="lead text-muted">We are light and love.</p>
-      <!-- <p>
-        <a class="btn btn-primary my-2" href="../../index.html" role="button">Main Page</a>
-      </p> -->
+
+      <a class="brand" href="https://www.pazaresosset.es">
+        <img src="../../logopazares.png" style="
+        position:absolute; 
+        margin: 10px;
+        top:0px; 
+        left:0px;" alt="Paz Arés Osset, the Artist">
+      </a>
+
+
+      <h1 class="jumbotron-heading">
+        <div class="english language">Chromatic Explosion: Dance of Fire and Brilliance</div>
+        <div class="spanish language" style="display: none;">Explosión Cromática: Danza de Fuego y Brillo</div>
+        <div class="italian language" style="display: none;">Esplosione Cromatica: Danza di Fuoco e Splendore</div>
+        <div class="chinese language" style="display: none;">色彩爆炸：火焰与辉煌之舞</div>
+        <div class="arabic language" style="display: none;">انفجار الألوان: رقصة النار والبريق</div>
+
+      </h1>
+
+      <div class="lead text-muted">
+        <div class="english language">Colorful Eruption: A Frenzy of Life.
+        </div>
+        <div class="spanish language" style="display: none;">Efusión de colores en un frenesí de vida.</div>
+        <div class="italian language" style="display: none;">Esplosione di Colori: Un Frenesia di Vita.</div>
+        <div class="chinese language" style="display: none;">"色彩爆发：生命的狂欢</div>
+        <div class="arabic language" style="display: none;">تدفق الألوان في هياج الحياة.</div>
+      </div>
+
     </div>
   </section>
+
+
 
   <section class="main-image">
     <div class="container">
       <div class="row">
         <div class="col-12-lg">
-          <img src="parejadecolor.jpeg" class="w3-hover-grayscale" width="100%" style="border:30px solid white;">
-          <!-- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_images_hover_eff -->
+
+
+          <img class="zoom-image" src="parejadecolor.jpeg" width="100%" style="border:30px solid white;" alt="Amazing">
+
+
         </div>
 
       </div>
 
     </div>
+
+
   </section>
+  <!-- Rest of the HTML here... -->
 
   <section class="main-description">
     <div class="container">
       <div class="row">
         <div class="col-6-md description">
           <ul>
-            <li>Technique: Acrylic</li>
-            <li>size: 2 x 100 cm× 20cm</li>
-            <li>Creation Place: Fine Arts School of Madrid</li>
-            <li>Current Location: Private Collection Madrid</li>
+            <li>
+              <div class="english language">Technique: Acrylic.</div>
+              <div class="spanish language" style="display: none;">Técnica: Acrílico.</div>
+              <div class="italian language" style="display: none;">Tecnica: Acrilico.</div>
+              <div class="chinese language" style="display: none;">技术：丙烯酸.</div>
+              <div class="arabic language" style="display: none;">تقنية: أكريليك.</div>
+            </li>
+
+
+            <li>
+              <div class="english language">Size: 20x100 cm</div>
+              <div class="spanish language" style="display: none;">Tamaño: 20x100 cm</div>
+              <div class="italian language" style="display: none;">Dimensioni: 20x100 cm</div>
+              <div class="chinese language" style="display: none;">尺寸：20x100厘米</div>
+              <div class="arabic language" style="display: none;">الحجم: 20x100 سم</div>
+
+            </li>
+            <li>
+              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
+              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
+              </div>
+              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
+              </div>
+              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
+              <div class="arabic language" style="display: none;">مكان الإبداع: كلية الفنون الجميلة في مدريد</div>
+
+            </li>
+            <li>
+              <div class="english language">Current Location: Private Collection Madrid</div>
+              <div class="spanish language" style="display: none;">Ubicación Actual: Colección en Madrid</div>
+              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
+              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
+              <div class="arabic language" style="display: none;">الموقع الحالي: مجموعة في مدريد</div>
+
+            </li>
+
           </ul>
 
+
         </div>
-        <div class="col-6 md audio">
-
+        <div class="col-6 md audio" style="display:none;">
           <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   </section>
 
+  <section class="multilingual-description">
+    <div class="container">
+      <h2>
+        <div class="english language">Description</div>
+        <div class="spanish language" style="display: none;">Descripción</div>
+        <div class="italian language" style="display: none;">Descrizione</div>
+        <div class="chinese language" style="display: none;">描述</div>
+        <div class="arabic language" style="display: none;">وصف</div>
+      </h2>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <div class="english language">
+        <!-- English description here -->
+        <p>These two paintings, conceived by the talented artist Paz Ares Osset, are a wonderful manifestation of the
+          explosive
+          fusion between color, dance, and art. From the moment your eyes behold them, you are immediately captivated by
+          the
+          richness and vitality that emanates from them.</p>
+        <p>Each of these canvases is a whirlwind of warm and vibrant colors. You can perceive the fiery tones of red,
+          the
+          resplendent yellows and oranges that radiate energy, and the blues and greens that seem to jump and bounce off
+          each
+          other. It's as if the colors are in constant dialogue, creating new shades and generating a magnificent dance
+          with
+          each brush stroke.</p>
+        <p>The lines that meander and intertwine with each other are like tongues of colors that stretch and mingle in a
+          unique
+          choreography. The curvy and prolonged strokes evoke sinuous and elegant movements, like those of a pair of
+          dancers who
+          glide smoothly across the stage. Through these dancing strokes, the artist captures the very essence of dance
+          and
+          conveys it to the canvas in a poetic way.</p>
+        <p>The composition of these paintings allows them to be appreciated separately, as each one is a masterpiece in
+          itself.
+          However, their union is truly exceptional, as if both paintings were destined to be together, complementing
+          each other
+          and creating a magical synergy. It's as if the energy and passion of two dancers were merging into a single
+          harmonious
+          movement.</p>
+        <p>The artist, passionate about dance, poetry, and music, manages to convey that passion through her work. In
+          this dance
+          of color, you can feel the joy and enthusiasm that Paz Ares Osset seeks to depict. Her paintings are a
+          celebration of
+          life, an explosion of emotions that fill any space where they are displayed with brilliance.</p>
+        <p>Moreover, it is important to note that the beauty of these paintings is not limited to a single perspective.
+          The
+          artist has achieved a composition that is aesthetically pleasing from any angle at which they are placed.
+          Thus, each
+          viewer has the opportunity to appreciate the dance of color from their own perspective, discovering new shapes
+          and
+          shades with each contemplation.</p>
+        <p>These two elongated rectangular paintings by Paz Ares Osset are an explosion of colors, dancing lines, and
+          pictorial
+          poetry. Their harmonious and vibrant fusion evokes the energy of a pair of dancers fully committed to their
+          art. They
+          are an invitation to immerse oneself in the joy and passion they radiate, creating a lasting impact on the
+          hearts and
+          minds of those fortunate enough to behold them.</p>
+
+      </div>
+
+      <div class="spanish language" style="display: none;">
+        <!-- Spanish description here -->
+        <p>Estos dos cuadros, concebidos por la talentosa artista Paz Ares Osset, son una maravillosa manifestación de
+          la fusión
+          explosiva entre el color, la danza y el arte. Desde el momento en que tus ojos los contemplan, quedas
+          inmediatamente
+          cautivado por la riqueza y la vitalidad que emana de ellos.
+        </p>
+
+        <p>
+          Cada uno de estos lienzos es un torbellino de colores cálidos y vibrantes. Puedes percibir los tonos ardientes
+          de rojo
+          fuego, los resplandecientes amarillos y naranjas que irradian energía y los azules y verdes que parecen saltar
+          y rebotar
+          entre sí. Es como si los colores estuvieran en constante diálogo, creando nuevos matices y generando una danza
+          magnífica
+          en cada pincelada.
+        </p>
+
+        <p>
+          Las líneas que serpentean y se entrelazan entre sí son como lenguas de colores que se estiran y se
+          entremezclan en una
+          coreografía única. Los trazos curvos y prolongados evocan movimientos sinuosos y elegantes, como los de una
+          pareja de
+          bailarines que se deslizan suavemente por el escenario. A través de estos trazos danzantes, la artista captura
+          la
+          esencia misma de la danza y la transmite al lienzo de forma poética.
+        </p>
+
+        <p>
+          La composición de estos cuadros permite que se puedan apreciar por separado, ya que cada uno es una obra
+          maestra en sí
+          misma. Sin embargo, su unión es verdaderamente excepcional, como si ambos cuadros estuvieran destinados a
+          estar juntos,
+          complementándose y creando una sinergia mágica. Es como si la energía y la pasión de dos bailarines se
+          fusionaran en un
+          solo movimiento armonioso.
+        </p>
+
+        <p>
+          La artista, apasionada de la danza, la poesía y la música, logra transmitir esa pasión a través de su obra. En
+          esta
+          danza de color, se puede sentir la alegría y el entusiasmo que Paz Ares Osset busca plasmar. Sus cuadros son
+          un canto a
+          la vida, un estallido de emociones que llenan de brillo cualquier espacio donde sean exhibidos.
+        </p>
+        <p>
+          Además, es importante destacar que la belleza de estos cuadros no se limita a una única perspectiva. La
+          artista
+          ha
+          logrado una composición que resulta estéticamente agradable desde cualquier ángulo en el que se coloquen. Así,
+          cada
+          espectador tiene la oportunidad de apreciar la danza de color desde su propia perspectiva, descubriendo nuevas
+          formas y
+          matices en cada contemplación.
+        </p>
+
+        <p>
+          Estos dos cuadros alargados rectangulares de Paz Ares Osset son una explosión de colores, líneas danzantes y
+          poesía
+          pictórica. Su fusión armoniosa y vibrante evoca la energía de una pareja de bailarines que se entregan por
+          completo a su
+          arte. Son una invitación a sumergirse en la alegría y la pasión que irradian, creando un impacto duradero en
+          el corazón
+          y la mente de aquellos que tienen la suerte de contemplarlos.
+        </p>
+
+      </div>
+
+
+      <div class="italian language" style="display: none;">
+        <!-- Italian description here -->
+        <p>Questi due quadri, concepiti dalla talentuosa artista Paz Ares Osset, sono una meravigliosa manifestazione
+          della
+          fusione esplosiva tra colore, danza e arte. Dal momento in cui i tuoi occhi li osservano, sei immediatamente
+          affascinato dalla ricchezza e vitalità che emanano.</p>
+        <p>Ognuno di questi dipinti è un turbinio di colori caldi e vibranti. Puoi percepire i toni infuocati del rosso,
+          i
+          gialli e gli arancioni risplendenti che irradiano energia, e i blu e i verdi che sembrano saltare e rimbalzare
+          l'uno
+          contro l'altro. È come se i colori fossero in costante dialogo, creando nuove sfumature e generando una
+          magnifica
+          danza con ogni pennellata.</p>
+        <p>Le linee che serpeggiano e si intrecciano tra loro sono come lingue di colori che si allungano e si mescolano
+          in una
+          coreografia unica. I tratti curvi e prolungati evocano movimenti sinuosi ed eleganti, come quelli di una
+          coppia di
+          ballerini che si muovono con dolcezza sul palcoscenico. Attraverso queste pennellate danzanti, l'artista
+          cattura
+          l'essenza stessa della danza e la trasmette sulla tela in modo poetico.
+        </p>
+        <p>La composizione di questi quadri permette di apprezzarli separatamente, poiché ognuno è un capolavoro in sé.
+          Tuttavia, la loro unione è veramente eccezionale, come se entrambi i dipinti fossero destinati a stare
+          insieme,
+          completandosi a vicenda e creando una sinergia magica. È come se l'energia e la passione di due ballerini si
+          fondessero in un unico movimento armonioso.
+        </p>
+        <p>L'artista, appassionata di danza, poesia e musica, riesce a trasmettere questa passione attraverso il suo
+          lavoro. In
+          questa danza di colori, si può sentire la gioia e l'entusiasmo che Paz Ares Osset cerca di raffigurare. I suoi
+          quadri
+          sono un inno alla vita, un'esplosione di emozioni che riempiono di splendore qualsiasi spazio in cui vengano
+          esposti.
+        </p>
+        <p>Inoltre, è importante sottolineare che la bellezza di questi quadri non si limita a una singola prospettiva.
+          L'artista è riuscita a creare una composizione che risulta esteticamente gradevole da qualsiasi angolo si
+          guardi.
+          Così, ogni spettatore ha l'opportunità di apprezzare la danza dei colori dal proprio punto di vista, scoprendo
+          nuove
+          forme e sfumature ad ogni contemplazione.
+        </p>
+        <p>Questi due quadri rettangolari allungati di Paz Ares Osset sono un'esplosione di colori, linee danzanti e
+          poesia
+          pittorica. La loro fusione armoniosa e vibrante evoca l'energia di una coppia di ballerini che si dedicano
+          completamente alla loro arte. Sono un invito a immergersi nella gioia e nella passione che irradiano, creando
+          un
+          impatto duraturo nel cuore e nella mente di coloro che hanno la fortuna di ammirarli.
+        </p>
+
+
+      </div>
+
+      <div class="chinese language" style="display: none;">
+        <!-- Chinese description here -->
+
+
+
+      </div>
+
+      <div class="arabic language" style="display: none;">
+        <!-- Arabic description here -->
+        <p>هذه اللوحتين الفنيتين، التي أنشأتها الفنانة الموهوبة باظ أريس أوسيت، هي تجلي مدهش للاندماج الناري بين اللون
+          والرقص
+          والفن. من اللحظة التي ترى فيها عيناك هذه اللوحات، تصبح مسحورًا على الفور بالثراء والحيوية التي تتألق منها.</p>
+        <p>كل من هذه الألواح هو زوبعة من الألوان الدافئة والمشرقة. يمكنك أن تلحظ النغمات المتقدة من الأحمر، والأصفر
+          والبرتقالي
+          المشع الذي يشع الطاقة، والأزرق والأخضر التي تبدو كأنها تقفز وتتدحرج بين بعضها البعض. كأن الألوان في حوار
+          مستمر، تخلق
+          ظلالًا جديدة وتولد رقصة رائعة في كل لمسة فرشاة.</p>
+        <p>الخطوط التي تعرج وتتشابك مع بعضها البعض هي مثل ألسنة الألوان التي تتمدد وتتداخل في كوريغرافيا فريدة من نوعها.
+          الضربات
+          المنحنية والممتدة تستحضر الحركات المتمايلة والأنيقة، مثل تلك التي يقوم بها زوج من الراقصين يتزلجون بلطف على
+          المسرح. من
+          خلال هذه الخطوط الراقصة، تلتقط الفنانة جوهر الرقص وتنقله إلى اللوحة بطريقة شاعرية.</p>
+        <p>تركيبة هذه اللوحات تتيح الاستمتاع بها بشكل منفصل، حيث كل واحدة منها هي عمل فني رائع بحد ذاته. ومع ذلك، فإن
+          اتحادهم
+          حقًا استثنائي، كأن كلا اللوحتين كانا مقدرين ليكونا معًا، مكملين بعضهما البعض وخلقين تآزر سحري. وكأن الطاقة
+          والشغف لزوج
+          من الراقصين يندمجان في حركة واحدة متناغمة.</p>
+        <p>الفنانة، التي تتمتع بالشغف بالرقص والشعر والموسيقى، تنجح في نقل هذا الشغف من خلال عملها. في هذه الرقصة
+          الملونة، يمكنك
+          أن تشعر بالفرح والحماسة التي تسعى باظ أريس أوسيت للتعبير عنها. لوحاتها هي ترنيمة للحياة، انفجار من العواطف
+          تملأ
+          بالتألق أي مكان يتم عرضها فيه.</p>
+        <p>بالإضافة إلى ذلك، من الجدير بالذكر أن جمال هذه اللوحات لا يقتصر على منظور واحد. الفنانة نجحت في خلق تكوين
+          يبدو جميلًا
+          بصريًا من أي زاوية يتم وضعه فيها. بذلك، لكل مشاهد الفرصة للاستمتاع برقصة الألوان من منظوره الخاص، مكتشفًا
+          أشكالًا
+          وظلالًا جديدة في كل مشاهدة.</p>
+        <p>هذين اللوحتين الطويلتين المستطيلتين لباظ أريس أوسيت هما انفجار من الألوان، وخطوط راقصة، وشعر رسمي. اندماجهما
+          المتناغم
+          والمشرق يستحضر الطاقة لزوج من الراقصين الذين يتفانون تمامًا في فنهم. هما دعوة للانغماس في الفرح والشغف الذي
+          ينبعث
+          منهما، خلقًا تأثيرًا دائمًا على قلوب وعقول أولئك الذين يتمتعون بالشرف برؤيتهما.</p>
+
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- js here -->
+  <script src="tao.js"></script>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    var zoomImages = document.querySelectorAll('.zoom-image');
+
+    zoomImages.forEach(function (image) {
+      image.addEventListener('touchstart', function () {
+        image.classList.toggle('hover');
+      });
+    });
+  </script>
+
+
 </body>
 
 </html>

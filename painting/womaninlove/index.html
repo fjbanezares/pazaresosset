@@ -3,28 +3,58 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Woman´s Body</title>
+  <title>El Columpio del Éxtasis.</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="womaninlove.css">
-
-
-
 </head>
 
 <body>
+  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+    <select id="language-select" class="custom-select-lg">
+      <option value="english">English</option>
+      <option value="spanish">Español</option>
+      <option value="italian">Italiano</option>
+      <option value="chinese">中文</option>
+    </select>
+  </div>
+
+
   <section class="jumbotron text-center">
     <div class="container">
-      <a class="brand" href=#><img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-      <h1 class="jumbotron-heading">Woman in Love</h1>
-      <p class="lead text-muted">Woman in love flows swinging between earth, water, air and fire.</p>
-      <!-- <p>
-        <a class="btn btn-primary my-2" href="../../index.html" role="button">Main Page</a>
-      </p> -->
+      <a class="brand" href="https://www.pazaresosset.es">
+        <img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;"
+          alt="Paz Arés Osset, the Artist">
+      </a>
+      <h1 class="jumbotron-heading">
+        <div class="english language">The Swing of Ecstasy</div>
+        <div class="spanish language" style="display: none;">El Columpio del Éxtasis</div>
+        <div class="italian language" style="display: none;">L'Altalena dell'Estasi</div>
+        <div class="chinese language" style="display: none;">狂喜的秋千</div>
+      </h1>
+
+      <p class="lead text-muted">
+      <div class="english language">This work captures a woman in love, flowing as she swings between earth, water, air,
+        and
+        fire.</div>
+
+      <div class="spanish language" style="display: none;">Esta obra capta a una mujer enamorada, fluyendo mientras se
+        balancea entre tierra, agua, aire y fuego.</div>
+
+      <div class="italian language" style="display: none;">Quest'opera cattura una donna innamorata, che fluisce mentre
+        oscilla tra terra, acqua, aria e fuoco.</div>
+
+      <div class="chinese language" style="display: none;">这项作品捕捉到了一个恋爱中的女人，她在地球、水、空气和火之间流动摇摆。</div>
+    </div>
+    </p>
     </div>
   </section>
+
 
   <section class="main-image">
     <div class="container">
@@ -38,34 +68,179 @@
 
     </div>
   </section>
+  <!-- Rest of the HTML here... -->
 
   <section class="main-description">
     <div class="container">
       <div class="row">
         <div class="col-6-md description">
           <ul>
-            <li>Technique: Watercolor</li>
-            <li>size: 30x40 cm </li>
-            <li>Creation Place: Fine Arts School of Madrid</li>
-            <li>Current Location: Private Collection Madrid</li>
+            <li>
+              <div class="english language">Technique: Watercolor</div>
+              <div class="spanish language" style="display: none;">Técnica: Acuarela</div>
+              <div class="italian language" style="display: none;">Tecnica: Acquerello</div>
+              <div class="chinese language" style="display: none;">技术：水彩</div>
+            </li>
+            <li>
+              <div class="english language">Size: 30x40 cm</div>
+              <div class="spanish language" style="display: none;">Tamaño: 30x40 cm</div>
+              <div class="italian language" style="display: none;">Dimensioni: 30x40 cm</div>
+              <div class="chinese language" style="display: none;">尺寸：30x40厘米</div>
+            </li>
+            <li>
+              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
+              <div class="spanish language" style="display: none;">Lugar de Creación: Escuela de Bellas Artes de Madrid
+              </div>
+              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
+              </div>
+              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
+            </li>
+            <li>
+              <div class="english language">Current Location: Private Collection Madrid</div>
+              <div class="spanish language" style="display: none;">Ubicación Actual: Colección Privada Madrid</div>
+              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
+              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
+            </li>
           </ul>
 
         </div>
-        <div class="col-6 md audio">
-
+        <div class="col-6 md audio" style="display:none;">
           <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-
+        </div>
       </div>
     </div>
-    </div>
+  </section>
+
+  <section class="multilingual-description">
+    <div class="container">
+      <h2>
+        <div class="english language">Description</div>
+        <div class="spanish language" style="display: none;">Descripción</div>
+        <div class="italian language" style="display: none;">Descrizione</div>
+        <div class="chinese language" style="display: none;">描述</div>
+      </h2>
+
+      <div class="english language">
+        <!-- English description here -->
+        <p>The work at hand is an exceptional creation of the talented artist Paz Arés Osset, who has masterfully
+          captured on
+          canvas the emotions and sensations experienced while swinging. Through her artistic skill, the author invites
+          us to
+          immerse ourselves in a world full of mysticism and lightness, evoking moments of deep connection with the
+          divine.</p>
+
+        <p>The watercolor technique, chosen by the artist, is perfect for conveying the sensation of lightness and
+          fluidity
+          experienced when sliding through the air on a swing made of green leaves and colorful flowers. The use of
+          colors and
+          the delicate, restless strokes lend a dreamlike atmosphere to the painting, conveying to the viewer the
+          sensation of
+          being suspended in the air, free from earthly ties.</p>
+
+        <p>In this piece, the artist represents herself in a moment of absolute communion with nature and the
+          transcendental. As
+          she tilts her head back and feels her hair floating like her spirit, the artist manages to connect with a
+          higher
+          plane, in a meditation united with the divine. This work is undoubtedly a testament to the greatness of art
+          and the
+          human being's ability to find inspiration and spirituality in the simplest and most everyday moments of life.
+        </p>
+
+        <p>Paz Arés Osset's painting is a hymn to the beauty and freedom of the human spirit, and her ability to capture
+          on
+          canvas the most intimate and universal experiences makes this work a unique gem within the contemporary
+          Spanish
+          artistic landscape.</p>
+
+
+      </div>
+
+      <div class="spanish language" style="display: none;">
+        <!-- Spanish description here -->
+        <p>La obra que nos ocupa es una creación excepcional de la talentosa artista Paz Arés Osset, que ha sabido
+          plasmar
+          magistralmente en un lienzo las emociones y sensaciones que experimenta al columpiarse. A través de su
+          habilidad
+          artística, la autora nos invita a sumergirnos en un mundo lleno de misticismo y ligereza, evocando momentos de
+          profunda conexión con lo divino.</p>
+
+        <p>La técnica de acuarela, elegida por la artista, es perfecta para transmitir la sensación de ligereza y
+          fluidez que se
+          experimenta al deslizarse por el aire en un columpio hecho de hojas verdes y flores de colores. El uso de los
+          colores
+          y los trazos delicados e inquietos aportan una atmósfera de ensueño al cuadro, transmitiendo al espectador la
+          sensación de estar suspendido en el aire, libre de las ataduras terrenales.</p>
+
+        <p>En esta pieza, la artista se representa a sí misma en un momento de absoluta comunión con la naturaleza y lo
+          trascendental. Al echar la cabeza hacia atrás y sentir su cabello flotando como su espíritu, la artista logra
+          conectar
+          con un plano superior, en una meditación unida a lo divino. Esta obra es sin duda un testimonio de la grandeza
+          del
+          arte y la capacidad del ser humano para encontrar inspiración y espiritualidad en los momentos más cotidianos
+          y
+          simples de la vida.</p>
+
+        <p>El cuadro de Paz Arés Osset es un canto a la belleza y a la libertad del espíritu humano, y su habilidad para
+          plasmar
+          en un lienzo las experiencias más íntimas y universales convierte a esta obra en una joya única dentro del
+          panorama
+          artístico contemporáneo español.</p>
+      </div>
+
+      <div class="italian language" style="display: none;">
+        <!-- Italian description here -->
+        <p>L'opera che ci occupa è una creazione eccezionale dell'artista di talento Paz Arés Osset, che ha saputo
+          catturare
+          magistralmente su tela le emozioni e le sensazioni provate durante l'altalena. Attraverso la sua abilità
+          artistica,
+          l'autrice ci invita a immergerci in un mondo pieno di misticismo e leggerezza, evocando momenti di profonda
+          connessione con il divino.</p>
+
+        <p>La tecnica dell'acquerello, scelta dall'artista, è perfetta per trasmettere la sensazione di leggerezza e
+          fluidità
+          provata quando si scivola nell'aria su un'altalena fatta di foglie verdi e fiori colorati. L'uso dei colori e
+          dei
+          tratti delicati e inquieti conferiscono un'atmosfera da sogno al quadro, trasmettendo allo spettatore la
+          sensazione di
+          essere sospeso nell'aria, libero dai legami terreni.</p>
+
+        <p>In questo pezzo, l'artista si rappresenta in un momento di assoluta comunione con la natura e il
+          trascendentale.
+          Inclinando la testa all'indietro e sentendo i suoi capelli fluttuare come il suo spirito, l'artista riesce a
+          connettersi con un piano superiore, in una meditazione unita al divino. Quest'opera è senza dubbio una
+          testimonianza
+          della grandezza dell'arte e della capacità dell'essere umano di trovare ispirazione e spiritualità nei momenti
+          più
+          semplici e quotidiani della vita.</p>
+
+        <p>Il dipinto di Paz Arés Osset è un inno alla bellezza e alla libertà dello spirito umano, e la sua capacità di
+          catturare su tela le esperienze più intime e universali rende quest'opera un gioiello unico nel panorama
+          artistico
+          contemporaneo spagnolo.</p>
+
+
+      </div>
+
+      <div class="chinese language" style="display: none;">
+        <!-- Chinese description here -->
+
+
+      </div>
     </div>
   </section>
 
 
+  <script src="womaninlove.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

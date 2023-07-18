@@ -3,31 +3,79 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Woman´s Body</title>
+  <title>Aphrodite</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- css here -->
   <link rel="stylesheet" href="aphrodite.css">
-
-
-
 </head>
 
 <body>
+  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+    <select id="language-select" class="custom-select-lg">
+      <option value="english">English</option>
+      <option value="spanish">Español</option>
+      <option value="italian">Italiano</option>
+      <option value="chinese">中文</option>
+    </select>
+  </div>
+
+
   <section class="jumbotron text-center">
     <div class="container">
-      <a class="brand" href=#><img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-      <h1 class="jumbotron-heading">aphrodite</h1>
-      <p class="lead text-muted">Greek goddess of love expressing her power through this charcoil piece of Paz.</p>
-      <!-- <p>
-        <a class="btn btn-primary my-2" href="../../index.html" role="button">Main Page</a>
-      </p> -->
+
+      <a class="brand" href="https://www.pazaresosset.es">
+        <img src="../../logopazares.png" style="
+        position:absolute; 
+        margin: 10px;
+        top:0px; 
+        left:0px;" alt="Paz Arés Osset, the Artist">
+      </a>
+
+
+      <h1 class="jumbotron-heading">
+        <div class="english language">Aphrodite</div>
+        <div class="spanish language" style="display: none;">Afrodita</div>
+        <div class="italian language" style="display: none;">Afrodite</div>
+        <div class="chinese language" style="display: none;">阿佛洛狄忒</div>
+      </h1>
+
+      <div class="lead text-muted">
+        <div class="english language">Greek goddess of love expressing her power through this charcoal piece of Paz.
+        </div>
+        <div class="spanish language" style="display: none;">Diosa griega del amor expresando su poder a través de esta
+          obra
+          de carbón de Paz.</div>
+        <div class="italian language" style="display: none;">Dea greca dell'amore che esprime il suo potere attraverso
+          questo
+          pezzo di carbone di Paz.</div>
+        <div class="chinese language" style="display: none;">希腊爱神通过Paz的这件木炭作品表达了她的力量。</div>
+      </div>
+
     </div>
   </section>
 
+
+
   <section class="main-image">
     <div class="container">
+      <div class="row">
+        <div class="col-12-lg">
+          <img src="afrodita.jpg" class="w3-hover-grayscale" width="100%" style="border:30px solid white;">
+          <!-- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_images_hover_eff -->
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container" style="margin-top: 2em;">
       <div class="row">
         <div class="col-12-lg">
           <img src="afroditadiosa.jpg" class="w3-hover-grayscale" width="100%" style="border:30px solid white;">
@@ -38,34 +86,199 @@
 
     </div>
   </section>
+  <!-- Rest of the HTML here... -->
 
   <section class="main-description">
     <div class="container">
       <div class="row">
         <div class="col-6-md description">
           <ul>
-            <li>Technique: Charcoil</li>
-            <li>size: 75x100 cm / 30x40 inches</li>
-            <li>Creation Place: Fine Arts School of Madrid</li>
-            <li>Current Location: Private Collection Madrid</li>
+            <li>
+              <div class="english language">Technique: Charcoal</div>
+              <div class="spanish language" style="display: none;">Técnica: Carboncillo</div>
+              <div class="italian language" style="display: none;">Tecnica: Carboncino</div>
+              <div class="chinese language" style="display: none;">技术：木炭</div>
+            </li>
+
+            <li>
+              <div class="english language">Size: 75x100 cm</div>
+              <div class="spanish language" style="display: none;">Tamaño: 75x100 cm</div>
+              <div class="italian language" style="display: none;">Dimensioni: 75x100 cm</div>
+              <div class="chinese language" style="display: none;">尺寸：75x100厘米</div>
+            </li>
+            <li>
+              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
+              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
+              </div>
+              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
+              </div>
+              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
+            </li>
+            <li>
+              <div class="english language">Current Location: Private Collection Madrid</div>
+              <div class="spanish language" style="display: none;">Ubicación Actual: Colección en Madrid</div>
+              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
+              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
+            </li>
+
           </ul>
 
+
         </div>
-        <div class="col-6 md audio">
-
+        <div class="col-6 md audio" style="display:none;">
           <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   </section>
 
+  <section class="multilingual-description">
+    <div class="container">
+      <h2>
+        <div class="english language">Description</div>
+        <div class="spanish language" style="display: none;">Descripción</div>
+        <div class="italian language" style="display: none;">Descrizione</div>
+        <div class="chinese language" style="display: none;">描述</div>
+      </h2>
+
+      <div class="english language">
+        <!-- English description here -->
+        <P>We present an exceptional artwork that has opened the doors of the prestigious Faculty of Fine Arts at the
+          Complutense
+          University of Madrid for its talented creator. This piece, masterfully executed in charcoal and sanguine on
+          Ingres
+          paper, skillfully fuses elements of two iconic figures from mythology and classical art: the Venus de Milo and
+          Aphrodite.</P>
+
+        <P>
+          The majestic statue, rising to 1.60 meters upon its pedestal, features a slender and elegant figure, wrapped
+          in a Greek
+          mantle that reveals a breast in a nod to the classical style. The Greek profile nose and intricate, angelic
+          hairstyle,
+          comprised of curled locks wound into a bun, reflect the mastery and artistic knowledge of its creator.
+        </P>
+
+        <P>The penetrating and delicate gaze of the goddess is directed towards a point in space, as if something had
+          captured her
+          divine attention. This detail brings life and depth to the work, connecting the viewer with the artist's mind
+          and heart.
+          The piece, measuring 100 cm high and 75 cm wide, is a striking representation of the power and beauty of
+          classical art,
+          as well as a tribute to the skill and passion of its author.
+        </P>
+
+        <P>The delicacy in the execution of the drawing and that transcendent gaze reflect the spirituality of the
+          artist, who
+          created this work during the week of the entrance exam to Fine Arts. Her talent and dedication are evident in
+          each
+          stroke, revealing a soul passionate about art and its profound meaning.
+        </P>
+      </div>
+
+      <div class="spanish language" style="display: none;">
+        <!-- Spanish description here -->
+        <P>Presentamos una obra excepcional que ha abierto las puertas de la prestigiosa Facultad de Bellas Artes en la
+          Universidad
+          Complutense de Madrid para su talentosa creadora. Esta pieza, magistralmente realizada en carboncillo y
+          sanguina sobre
+          papel Ingres, fusiona con maestría elementos de dos icónicas figuras de la mitología y el arte clásico: la
+          Venus de Milo
+          y Afrodita.</P>
+
+        <P>La majestuosa estatua, que se eleva a 1,60 metros sobre su pedestal, presenta una figura esbelta y elegante,
+          envuelta en
+          un manto griego que deja al descubierto un pecho en un guiño al estilo clásico. La nariz de perfil griego y el
+          peinado
+          intrincado y angelical, compuesto por tirabuzones enrollados en un moño, reflejan la maestría y el
+          conocimiento
+          artístico de su creadora.</P>
+
+        <P>La mirada penetrante y delicada de la diosa está dirigida hacia un punto en el espacio, como si algo hubiera
+          capturado
+          su atención divina. Este detalle aporta vida y profundidad a la obra, conectando al espectador con la mente y
+          el corazón
+          de la artista. La pieza, que mide 100 cm de alto y 75 cm de ancho, es una impactante representación del poder
+          y la
+          belleza del arte clásico, así como un tributo a la habilidad y la pasión de su autora.
+        </P>
+
+        <P>La delicadeza en la realización del dibujo y esa mirada trascendente reflejan la espiritualidad de la
+          artista, quien
+          creó esta obra durante la semana del examen de ingreso a Bellas Artes. Su talento y dedicación son evidentes
+          en cada
+          trazo, revelando un alma apasionada por el arte y su profundo significado.</P>
+      </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <div class="italian language" style="display: none;">
+        <!-- Italian description here -->
+        <P>Presentiamo un'opera eccezionale che ha aperto le porte della prestigiosa Facoltà di Belle Arti presso
+          l'Università
+          Complutense di Madrid per la sua talentuosa creatrice. Questo pezzo, magistralmente realizzato in carboncino e
+          sanguigna su carta Ingres, fonde abilmente elementi di due figure iconiche della mitologia e dell'arte
+          classica: la
+          Venere di Milo e Afrodita.</P>
+
+        <P>La maestosa statua, che si eleva a 1,60 metri sul suo piedistallo, presenta una figura snella ed elegante,
+          avvolta in
+          un mantello greco che lascia scoperto un seno in un cenno allo stile classico. Il naso di profilo greco e
+          l'acconciatura intricata e angelica, composta da boccoli avvolti in un chignon, riflettono la maestria e la
+          conoscenza
+          artistica della sua creatrice.</P>
+
+        <P>Lo sguardo penetrante e delicato della dea è rivolto verso un punto nello spazio, come se qualcosa avesse
+          catturato
+          la sua attenzione divina. Questo dettaglio dona vita e profondità all'opera, collegando lo spettatore alla
+          mente e al
+          cuore dell'artista. Il pezzo, che misura 100 cm di altezza e 75 cm di larghezza, è una rappresentazione
+          impressionante
+          del potere e della bellezza dell'arte classica, così come un tributo all'abilità e alla passione dell'autrice.
+        </P>
+
+        <P>La delicatezza nella realizzazione del disegno e quello sguardo trascendente riflettono la spiritualità
+          dell'artista,
+          che ha creato quest'opera durante la settimana dell'esame di ingresso a Belle Arti. Il suo talento e la sua
+          dedizione
+          sono evidenti in ogni tratto, rivelando un'anima appassionata per l'arte e il suo profondo significato.
+        </P>
+
+
+      </div>
+
+      <div class="chinese language" style="display: none;">
+        <!-- Chinese description here -->
+        <P>
+          我们现在要介绍的是一件非凡的作品，这件作品为其才华横溢的创作者打开了马德里康普顿斯大学著名的美术学院的大门。这件作品巧妙地融合了两个古典神话和艺术中的标志性人物：米洛的维纳斯和阿佛洛狄忒，它是用木炭和红铅笔在英格雷斯纸上精心制作的。
+        </P>
+
+        <P>这座宏伟的雕像高1.60米，矗立在她的基座上，呈现出一个苗条而优雅的形象，身披希腊长袍，赤裸的胸部似乎在向古典风格致敬。希腊侧脸的鼻子和复杂而天使般的发型，由卷曲的卷发组成一个发髻，反映了创作者的艺术技巧和知识。
+        </P>
+
+        <P>
+          这位女神深情而细腻的眼神似乎被空间中的某个点所吸引，就好像某个东西已经吸引了她的神圣注意力。这个细节为作品增加了生命力和深度，使观众与艺术家的思想和心灵相连。这件作品高100厘米，宽75厘米，是古典艺术的力量和美感的令人震惊的表现，也是对其作者技巧和激情的致敬。
+        </P>
+
+        <P>绘图的细腻和那种超越的眼神反映了艺术家的精神境界，她在美术入学考试的那一周创作了这件作品。她的才华和奉献在每一笔画中都显而易见，揭示了一颗对艺术及其深远意义充满热情的灵魂。
+
+        </P>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- js here -->
+  <script src="aphrodite.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
