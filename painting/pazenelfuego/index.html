@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Paz en el Fuego</title>
+  <link rel="icon" type="image/png" href="../../favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- css here -->
+  <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+    <select id="language-select" class="custom-select-lg">
+      <option value="english">English</option>
+      <option value="spanish">Español</option>
+      <option value="italian">Italiano</option>
+      <option value="chinese">中文</option>
+      <option value="arabic">العربية</option>
+    </select>
+  </div>
+
+
+  <section class="jumbotron text-center">
+    <div class="container">
+
+      <a class="brand" href="https://www.pazaresosset.es">
+        <img src="../../logopazares.png" style="
+        position:absolute; 
+        margin: 10px;
+        top:0px; 
+        left:0px;" alt="Paz Arés Osset, the Artist">
+      </a>
+
+
+      <h1 class="jumbotron-heading">
+        <div class="english language">Peace in the Fire</div>
+        <div class="spanish language" style="display: none;">Paz en el Fuego</div>
+        <div class="italian language" style="display: none;">Pace nel Fuoco</div>
+        <div class="chinese language" style="display: none;">火中的和平</div>
+        <div class="arabic language" style="display: none;">السلام في النار</div>
+      </h1>
+
+
+      <div class="lead text-muted">
+        <div class="english language">A visual symphony of conflict and serenity, "Peace in the Fire" is a stirring
+          portrayal
+          of the human spirit's resilience.</div>
+        <div class="spanish language" style="display: none;">Una sinfonía visual de conflicto y serenidad, "Paz en el
+          Fuego"
+          es una conmovedora representación de la resiliencia del espíritu humano.</div>
+        <div class="italian language" style="display: none;">Una sinfonia visiva di conflitto e serenità, "Pace nel
+          Fuoco" è
+          un commovente ritratto della resilienza dello spirito umano.</div>
+        <div class="chinese language" style="display: none;">冲突与宁静的视觉交响曲，《火中的和平》是人类精神韧性的动人描绘。</div>
+        <div class="arabic language" style="display: none;">سيمفونية بصرية للصراع والسكينة، "السلام في النار" تصوير مؤثر
+          لمرونة الروح الإنسانية.</div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section class="main-image">
+    <div class="container">
+      <div class="row">
+        <div class="col-12-lg">
+          <img class="zoom-image" src="pazenelfuego.jpg" width="100%" style="border:30px solid white;" alt="Amazing">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Rest of the HTML here... -->
+
+  <section class="main-description">
+    <div class="container">
+      <div class="row">
+        <div class="col-6-md description">
+          <ul>
+            <li>
+              <div class="english language">Technique: Acrylic.</div>
+              <div class="spanish language" style="display: none;">Técnica: Acrílico.</div>
+              <div class="italian language" style="display: none;">Tecnica: Acrilico.</div>
+              <div class="chinese language" style="display: none;">技术：丙烯酸.</div>
+              <div class="arabic language" style="display: none;">تقنية: أكريليك.</div>
+            </li>
+
+
+            <li>
+              <div class="english language">Size: 50x65 cm</div>
+              <div class="spanish language" style="display: none;">Tamaño: 50x65 cm</div>
+              <div class="italian language" style="display: none;">Dimensioni: 50x65 cm</div>
+              <div class="chinese language" style="display: none;">尺寸：50x65厘米</div>
+              <div class="arabic language" style="display: none;">الحجم: 50x65 سم</div>
+
+            </li>
+            <li>
+              <div class="english language">Creation Place: Casa de la Cultura de Colmenarejo</div>
+              <div class="spanish language" style="display: none;">Lugar de Creación: Casa de la Cultura de Colmenarejo
+              </div>
+              <div class="italian language" style="display: none;">Luogo di Creazione: Casa de la Cultura de Colmenarejo
+              </div>
+              <div class="chinese language" style="display: none;">创作地点：科尔梅内霍文化之家</div>
+              <div class="arabic language" style="display: none;">مكان الإبداع: دار الثقافة في كولميناريخو</div>
+            </li>
+
+            <li>
+              <div class="english language">Current Location: Private Collection Madrid</div>
+              <div class="spanish language" style="display: none;">Ubicación Actual: Colección en Madrid</div>
+              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
+              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
+              <div class="arabic language" style="display: none;">الموقع الحالي: مجموعة في مدريد</div>
+
+            </li>
+
+          </ul>
+
+
+        </div>
+        <div class="col-6 md audio" style="display:none;">
+          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="multilingual-description">
+    <div class="container">
+      <h1 style="color: gold;">
+        <div class="english language">Description</div>
+        <div class="spanish language" style="display: none;">Descripción</div>
+        <div class="italian language" style="display: none;">Descrizione</div>
+        <div class="chinese language" style="display: none;">描述</div>
+        <div class="arabic language" style="display: none;">وصف</div>
+      </h1>
+
+
+      <div class="english language">
+        <!-- English description here -->
+        <p>The work "Peace in the Fire" by Paz Arés Osset, when observed directly, is a visual whirlwind that evokes an
+          intense
+          sensation of movement and energy. The swirls in the painting give the impression of a living fire, and the
+          color
+          palette used is vibrant and evocative, with deep reds, bright yellows, and flashes of violet that suggest a
+          flame in
+          constant change, an element that is both destructive and purifying.</p>
+
+        <p>The style of the painting is abstract expressionism; the brushstrokes are free and the composition seems to
+          follow an
+          organic rhythm that gives the feeling that the work is in the midst of a fervent dance. The colors not only
+          represent
+          passion and energy but also convey the warmth and light that can emanate even in the most turbulent moments.
+          The
+          presence of the name "Peace," inscribed in calming blues, serves as a visual and emotional anchor in the
+          center of the
+          chaos, reminding the viewer that in the center of the tumult, a space of tranquility can always be found.</p>
+
+        <p>The shadow and light in the work are another aspect that deserves to be highlighted. The contrast between
+          bright and
+          dark areas enhances the sense of depth and dimension, while the illuminated areas seem to glow with an inner
+          light,
+          suggesting the presence of something divine or unbreakable even in the midst of agitation.</p>
+
+        <p>From a sensitive standpoint, one could feel a mix of commotion and serenity when contemplating "Peace in the
+          Fire."
+          The work could evoke a reflection on the dual nature of life: its capacity to be at once agitated and
+          peaceful,
+          destructive and creative. The insertion of the blue heart in the center can be seen as a reminder that love
+          and peace
+          are possible even in the most adverse circumstances.</p>
+
+        <p>"Peace in the Fire" is a complex and dynamic work that invites introspection. It offers a visual narrative
+          that in
+          the heart of chaos there can exist a core of peace, and that beauty can be found in the struggle, a message
+          that
+          resonates deeply in an era of uncertainty and change.</p>
+
+        <p>"Peace in the Fire," created by the renowned artist Paz Arés Osset. With its roots in abstract expressionism,
+          this
+          painting is a moving testament to the triumph of peace and love through tumultuous times, and the artist's
+          persistent
+          longing to cultivate and preserve her inner serenity.</p>
+
+        <p>The painting, a visual fire of 50 x 65 cm, is imbued with red and yellow tones, colors that evoke the
+          intensity and
+          energy of fire, the burning force of struggle and passion, as well as the need for change and transformation.
+          This
+          riot of colors contrasts beautifully with the core of the work, where we find the word "Peace" inscribed in
+          celestial
+          shades of blue.</p>
+
+        <p>The viewer is guided to the center, where the heart of the work (and perhaps also the heart of the artist)
+          resides.
+          Here, the 'a' from the artist's name transforms into a serene blue heart, a bastion of love and serenity amid
+          the
+          conflagration. The blue heart is a visual metaphor for the artist's inner peace, her refuge, and her shield
+          against
+          life's trials.</p>
+
+        <p>This juxtaposition of colors is also a reflection of the artist's name, Paz Arés Osset, a name that links the
+          goddess
+          of peace with the god of war, in a vivid contrast that is explored and reconciled in this powerful work of
+          art.</p>
+
+        <p>"Peace in the Fire" is a visual and emotional reminder of the importance of maintaining peace in times of
+          chaos. As
+          such, it is a work that resonates with those who are familiar with the ups and downs of life and who seek,
+          like the
+          artist, peace and tranquility despite the difficulties.</p>
+
+        <p>Ultimately, "Peace in the Fire" is a celebration of the human spirit, of our ability to maintain calm and
+          serenity in
+          the midst of the fire of challenges. It is a tribute to resilience, to the ability to transform moments of
+          struggle
+          into moments of love, and to the belief that, even in the most challenging circumstances, we can find and
+          maintain
+          peace.</p>
+
+        <p>In a world often filled with conflicts and tensions, "Peace in the Fire" is a powerful call to harmony and
+          unity. In
+          her wish to see a world without wars, Paz Arés Osset brings a message of hope and love, encapsulated in the
+          vibrant
+          palette of her work. The painting is a mirror of our societies, a canvas in which are reflected our deepest
+          hopes, our
+          darkest fears, and our constant longing for peace.</p>
+
+        <p>This work is not just an object of beauty but also a symbol of resistance and a pacifist manifesto. In the
+          contrast
+          of the blue tones and the red and yellow fires, we see a desire for balance, for a peaceful coexistence
+          between
+          opposing forces. In the central figure of peace and love, we find a symbol of resistance to conflict and
+          division.</p>
+
+        <p>"Peace in the Fire" is more than just a work of art, it is a universal message that transcends language and
+          cultural
+          barriers. Its message is simple yet powerful: although wars may seem inevitable, peace and love always have
+          the power
+          to prevail. This is a message that we all need to hear in these times of uncertainty.</p>
+
+        <p>Through her art, Paz Arés Osset urges us to seek peace in our own lives, to confront our own internal
+          conflicts, and
+          to build a world where love and peace are the norm, not the exception. Ultimately, her work is a reminder that
+          each of
+          us has the power to effect change, and that through our love and compassion we can help create a more peaceful
+          world.
+        </p>
+
+        <p>Be the change you want to see in the world.</p>
+
+
+
+
+      </div>
+
+      <div class="spanish language" style="display: none;">
+        <!-- Spanish description here -->
+        <p>La obra "Paz en el Fuego" de Paz Arés Osset, al ser observada directamente, es un torbellino visual que evoca
+          una
+          intensa sensación de movimiento y energía. Los remolinos en la pintura dan la impresión de un fuego viviente,
+          y la
+          paleta de colores usada es vibrante y evocadora, con rojos profundos, amarillos brillantes y destellos de
+          violeta que
+          sugieren una llama en constante cambio, un elemento que es tanto destructor como purificador.
+        </p>
+
+        <p>El estilo de la pintura es expresionista abstracto; las pinceladas son libres y la composición parece seguir
+          un ritmo
+          orgánico que da la sensación de que la obra está en medio de una danza fervorosa. Los colores no solo
+          representan la
+          pasión y la energía, sino que también transmiten la calidez y la luz que pueden emanar incluso en los momentos
+          más
+          turbulentos. La presencia del nombre "Paz", inscrito en azules calmantes, sirve como un ancla visual y
+          emocional en el
+          centro del caos, recordando al espectador que en el centro del tumulto siempre se puede encontrar un espacio
+          de
+          tranquilidad. </p>
+
+        <p>La sombra y la luz en la obra son otro aspecto que merece ser destacado. El contraste entre las áreas
+          brillantes y
+          oscuras refuerza la sensación de profundidad y dimensión, mientras que las zonas iluminadas parecen brillar
+          con una luz
+          interna, sugiriendo la presencia de algo divino o inquebrantable incluso en medio de la agitación. </p>
+
+        <p>Desde un punto de vista sensible, uno podría sentir una mezcla de conmoción y serenidad al contemplar "Paz en
+          el Fuego".
+          La obra podría evocar una reflexión sobre la naturaleza dual de la vida: su capacidad para ser al mismo tiempo
+          agitada y
+          apacible, destructiva y creativa. La inserción del corazón azul en el centro puede ser vista como un
+          recordatorio de que
+          el amor y la paz son posibles incluso en las circunstancias más adversas. </p>
+
+        <p>"Paz en el Fuego" es una obra compleja y dinámica que invita a la introspección. Ofrece una
+          narrativa
+          visual de que en el corazón del caos puede existir un núcleo de paz, y que la belleza puede encontrarse en la
+          lucha, un
+          mensaje que resuena profundamente en una era de incertidumbre y cambio. </p>
+
+        <p>"Paz en el Fuego", creada por la renombrada artista Paz Arés Osset. Con sus raíces en el expresionismo
+          abstracto, este
+          cuadro es un testimonio conmovedor del triunfo de la paz y el amor a través de los tiempos tumultuosos, y del
+          persistente anhelo de la artista de cultivar y preservar su serenidad interna.</p>
+
+        <p>La pintura, un fuego visual de 50 x 65 cm, está impregnada de tonos rojos y amarillos, colores que evocan la
+          intensidad
+          y la energía del fuego, la fuerza ardiente de la lucha y la pasión, así como la necesidad de cambio y
+          transformación.
+          Esta algarabía de colores contrasta maravillosamente con el núcleo de la obra, donde encontramos la palabra
+          "Paz"
+          inscrita en tonos celestiales de azul.</p>
+
+        <p>El espectador es guiado hacia el centro, donde el corazón de la obra( y quizás también el corazón de la
+          artista) reside.
+          Aquí, la "a" del nombre de la artista se transforma en un corazón azul sereno, un baluarte de amor y serenidad
+          en medio
+          de la conflagración. El corazón azul es una metáfora visual de la paz interna de la artista, su refugio y su
+          escudo
+          contra las pruebas de la vida.</p>
+
+        <p>Esta yuxtaposición de colores es también un reflejo del nombre de la artista, Paz Arés Osset, un nombre que
+          vincula la
+          diosa de la paz con el dios de la guerra, en un vívido contraste que es explorado y reconciliado en esta
+          poderosa obra
+          de arte.</p>
+
+        <p>"Paz en el Fuego" es un recordatorio visual y emocional de la importancia de mantener la paz en tiempos de
+          caos. Como
+          tal, es una obra que resuena con aquellos que están familiarizados con los altibajos de la vida y que buscan,
+          como la
+          artista, la paz y la tranquilidad a pesar de las dificultades.</p>
+
+        <p> En última instancia, "Paz en el Fuego" es una celebración del espíritu humano, de nuestra capacidad para
+          mantener la
+          calma y la serenidad en medio del fuego de los desafíos. Es un homenaje a la resistencia, a la capacidad de
+          transformar
+          los momentos de lucha en momentos de amor, y a la convicción de que, incluso en las circunstancias más
+          desafiantes,
+          podemos encontrar y mantener la paz.</p>
+
+        <p>En un mundo a menudo lleno de conflictos y tensiones, "Paz en el Fuego" es un llamado poderoso a la
+          armonía y la unidad.
+          En su deseo de ver un mundo sin guerras, Paz Arés Osset trae un mensaje de esperanza y amor, encapsulado en la
+          vibrante
+          paleta de su obra. La pintura es un espejo de nuestras sociedades, un lienzo en el que se reflejan nuestras
+          esperanzas
+          más profundas, nuestros miedos más oscuros y nuestro constante anhelo de paz.</p>
+
+        <p>Esta obra no es solo un objeto de belleza, sino también un símbolo de resistencia y un manifiesto pacifista.
+          En el
+          contraste de los tonos azules y los fuegos rojos y amarillos, vemos un deseo de equilibrio, de una
+          coexistencia pacífica
+          entre fuerzas opuestas. En la figura central de la paz y el amor, encontramos un símbolo de resistencia al
+          conflicto y a
+          la división.</p>
+
+        <p>"Paz en el Fuego" es más que una simple obra de arte, es un mensaje universal que trasciende las barreras del
+          lenguaje y
+          la cultura. Su mensaje es sencillo pero poderoso: aunque las guerras puedan parecer inevitables, la paz y el
+          amor
+          siempre tienen el poder de prevalecer. Este es un mensaje que todos necesitamos escuchar en estos tiempos de
+          incertidumbre.</p>
+
+        <p>A través de su arte, Paz Arés Osset nos insta a buscar la paz en nuestras propias vidas, a enfrentar nuestros
+          propios
+          conflictos internos y a construir un mundo donde el amor y la paz sean la norma y no la excepción. En última
+          instancia,
+          su obra es un recordatorio de que cada uno de nosotros tiene el poder de hacer un cambio, y de que a través de
+          nuestro
+          amor y compasión podemos ayudar a crear un mundo más pacífico.</p>
+
+        <p>Sé el cambio que quieres ver en el mundo.</p>
+
+
+
+      </div>
+
+
+      <div class="italian language" style="display: none;">
+        <!-- Italian description here -->
+        <p>L'opera "Pace nel Fuoco" di Paz Arés Osset, quando osservata direttamente, è un turbinio visivo che evoca
+          un'intensa
+          sensazione di movimento ed energia. I vortici nella pittura danno l'impressione di un fuoco vivente e la
+          palette di
+          colori utilizzata è vibrante ed evocativa, con rossi profondi, gialli brillanti e lampi di viola che
+          suggeriscono una
+          fiamma in costante cambiamento, un elemento che è sia distruttivo che purificatore.</p>
+
+        <p>Lo stile della pittura è espressionismo astratto; le pennellate sono libere e la composizione sembra seguire
+          un ritmo
+          organico che dà la sensazione che l'opera sia in mezzo a una danza fervente. I colori non solo rappresentano
+          la
+          passione e l'energia, ma trasmettono anche il calore e la luce che possono emanare anche nei momenti più
+          turbolenti.
+          La presenza del nome "Pace", scritto in toni di blu calmanti, serve come un'ancora visiva ed emotiva al centro
+          del
+          caos, ricordando allo spettatore che nel centro del tumulto si può sempre trovare uno spazio di tranquillità.
+        </p>
+
+        <p>L'ombra e la luce nell'opera sono un altro aspetto che merita di essere evidenziato. Il contrasto tra le aree
+          luminose e scure rafforza la sensazione di profondità e dimensione, mentre le zone illuminate sembrano
+          brillare con
+          una luce interna, suggerendo la presenza di qualcosa di divino o indistruttibile anche in mezzo
+          all'agitazione.</p>
+
+        <p>Da un punto di vista sensibile, si potrebbe sentire un misto di commozione e serenità contemplando "Pace nel
+          Fuoco".
+          L'opera potrebbe evocare una riflessione sulla natura duale della vita: la sua capacità di essere allo stesso
+          tempo
+          agitata e pacifica, distruttiva e creativa. L'inserimento del cuore blu al centro può essere visto come un
+          promemoria
+          che l'amore e la pace sono possibili anche nelle circostanze più avverse.</p>
+
+        <p>"Pace nel Fuoco" è un'opera complessa e dinamica che invita all'introspezione. Offre una narrativa visiva che
+          nel
+          cuore del caos può esistere un nucleo di pace, e che la bellezza può essere trovata nella lotta, un messaggio
+          che
+          risuona profondamente in un'epoca di incertezza e cambiamento.</p>
+
+        <p>"Pace nel Fuoco", creata dalla rinomata artista Paz Arés Osset. Con le sue radici nell'espressionismo
+          astratto,
+          questo quadro è una commovente testimonianza del trionfo della pace e dell'amore attraverso i tempi
+          tumultuosi, e del
+          persistente desiderio dell'artista di coltivare e preservare la sua serenità interiore.</p>
+
+        <p>La pittura, un fuoco visivo di 50 x 65 cm, è impregnata di toni rossi e gialli, colori che evocano
+          l'intensità e
+          l'energia del fuoco, la forza ardente della lotta e della passione, così come la necessità di cambiamento e
+          trasformazione. Questa algarabía di colori contrasta meravigliosamente con il nucleo dell'opera, dove troviamo
+          la
+          parola "Pace" iscritta in toni celesti di blu.</p>
+
+        <p>Lo spettatore è guidato verso il centro, dove risiede il cuore dell'opera (e forse anche il cuore
+          dell'artista). Qui,
+          la "a" del nome dell'artista si trasforma in un cuore blu sereno, un baluardo di amore e serenità in mezzo
+          alla
+          conflagrazione. Il cuore blu è una metafora visiva della pace interiore dell'artista, il suo rifugio e il suo
+          scudo
+          contro le prove della vita.</p>
+
+        <p>Questa giustapposizione di colori è anche un riflesso del nome dell'artista, Paz Arés Osset, un nome che
+          collega la
+          dea della pace con il dio della guerra, in un vivido contrasto che è esplorato e riconciliato in questa
+          potente opera
+          d'arte.</p>
+
+        <p>"Pace nel Fuoco" è un promemoria visivo ed emotivo dell'importanza di mantenere la pace nei tempi del caos.
+          Come
+          tale, è un'opera che risuona con coloro che sono familiari con gli alti e bassi della vita e che cercano, come
+          l'artista, la pace e la tranquillità nonostante le difficoltà.</p>
+
+        <p>In definitiva, "Pace nel Fuoco" è una celebrazione dello spirito umano, della nostra capacità di mantenere la
+          calma e
+          la serenità in mezzo al fuoco delle sfide. È un omaggio alla resilienza, alla capacità di trasformare i
+          momenti di
+          lotta in momenti di amore, e alla convinzione che, anche nelle circostanze più impegnative, possiamo trovare e
+          mantenere la pace.</p>
+
+        <p>In un mondo spesso pieno di conflitti e tensioni, "Pace nel Fuoco" è un potente appello all'armonia e
+          all'unità. Nel
+          suo desiderio di vedere un mondo senza guerre, Paz Arés Osset porta un messaggio di speranza e amore,
+          incapsulato
+          nella vibrante palette della sua opera. Il dipinto è uno specchio delle nostre società, una tela in cui si
+          riflettono
+          le nostre speranze più profonde, le nostre paure più oscure e il nostro costante anelito di pace.</p>
+
+        <p>Quest'opera non è solo un oggetto di bellezza, ma anche un simbolo di resistenza e un manifesto pacifista.
+          Nel
+          contrasto dei toni blu e dei fuochi rossi e gialli, vediamo un desiderio di equilibrio, di una coesistenza
+          pacifica
+          tra forze opposte. Nella figura centrale della pace e dell'amore, troviamo un simbolo di resistenza al
+          conflitto e
+          alla divisione.</p>
+
+        <p>"Pace nel Fuoco" è più di una semplice opera d'arte, è un messaggio universale che trascende le barriere del
+          linguaggio e della cultura. Il suo messaggio è semplice ma potente: anche se le guerre possono sembrare
+          inevitabili,
+          la pace e l'amore hanno sempre il potere di prevalere. Questo è un messaggio che tutti noi abbiamo bisogno di
+          ascoltare in questi tempi di incertezza.</p>
+
+        <p>Attraverso la sua arte, Paz Arés Osset ci esorta a cercare la pace nelle nostre vite, ad affrontare i nostri
+          conflitti interni e a costruire un mondo dove l'amore e la pace siano la norma e non l'eccezione. In ultima
+          analisi,
+          la sua opera è un promemoria che ognuno di noi ha il potere di effettuare un cambiamento, e che attraverso il
+          nostro
+          amore e la nostra compassione possiamo aiutare a creare un mondo più pacifico.</p>
+
+        <p>Sii il cambiamento che vuoi vedere nel mondo.</p>
+
+
+      </div>
+
+      <div class="chinese language" style="display: none;">
+        <!-- Chinese description here -->
+        <p>当直接观察Paz Arés
+          Osset的作品《火中的和平》时，它是一个视觉上的旋风，唤起了一种强烈的动感和能量感。画中的漩涡给人一种生动的火焰印象，使用的色彩调色板是生动而引人入胜的，深红色，明亮的黄色和紫色的闪光，暗示着一个不断变化的火焰，这个元素既是破坏性的也是净化的。
+        </p>
+
+        <p>
+          这幅画的风格是抽象表现主义；笔触自由，构图似乎遵循着一个有机的节奏，给人一种作品正处于热烈舞动之中的感觉。颜色不仅代表激情和能量，也传达了即使在最动荡的时刻也能散发出的温暖和光明。名为“和平”的字样用平静的蓝色写就，作为混沌中心的视觉和情感锚点，提醒观众在骚动的中心总能找到一个宁静的空间。
+        </p>
+
+        <p>作品中的阴影和光明是另一个值得强调的方面。明暗区域之间的对比增强了深度和维度感，而明亮区域似乎散发着内在的光芒，暗示着即使在动荡中也存在着某种神圣或不可破的存在。</p>
+
+        <p>
+          从一个敏感的角度来看，当人们沉思《火中的和平》时，可能会感到一种震撼和宁静的混合。这幅作品可能会引发对生活双重性质的反思：它同时具有激动和平静、破坏性和创造性的能力。画面中心蓝色心形的加入可以被视为一个提醒，即使在最不利的情况下，爱和和平也是可能的。
+        </p>
+
+        <p>《火中的和平》是一件复杂而动态的作品，它邀请人们进行内省。它提供了一个视觉叙事，即在混沌的核心可以存在和平的核心，美丽可以在斗争中找到，这是一个在不确定和变化的时代深深回响的信息。</p>
+
+        <p>《火中的和平》，由著名艺术家Paz Arés Osset创作。作为抽象表现主义的传承者，这幅画是对和平与爱在动荡时期的胜利以及艺术家持续渴望培养和保持内心宁静的动人证明。</p>
+
+        <p>这幅画是一个50 x
+          65厘米的视觉之火，充满了红色和黄色的色调，这些颜色唤起了火的强度和能量，斗争和激情的燃烧力量，以及变化和转变的需求。这种色彩的欢乱与作品的核心形成了美妙的对比，在那里我们找到了用天蓝色的神圣色调书写的“和平”一词。
+        </p>
+
+        <p>观众被引导到中心，那里是作品的心脏（也许也是艺术家的心脏）所在。在这里，艺术家名字中的“a”变成了一个宁静的蓝色心脏，在冲突中成为爱和宁静的堡垒。蓝色的心脏是艺术家内心和平的视觉隐喻，是她的庇护所和生活考验的盾牌。
+        </p>
+
+        <p>这种颜色的并置也反映了艺术家的名字，Paz Arés Osset，这个名字将和平之神与战争之神联系起来，在这个生动的对比中被探索并在这个强大的艺术作品中得到和解。</p>
+
+        <p>《火中的和平》是一个视觉和情感的提醒，提醒我们在混乱的时代保持和平的重要性。因此，它是一个与那些熟悉生活起伏并寻求和平与宁静的作品产生共鸣的作品，正如艺术家一样，尽管面临困难。</p>
+
+        <p>最终，《火中的和平》是对人类精神的庆祝，是我们在挑战之火中保持冷静和宁静的能力的颂歌。它是对韧性的赞颂，是将斗争时刻转化为爱的时刻的能力，是对我们的信念，即使在最具挑战性的情况下，我们也能找到并保持和平。</p>
+
+        <p>在一个经常充满冲突和紧张的世界里，《火中的和平》是一个强有力的呼吁，呼吁和谐与团结。在她希望看到一个没有战争的世界的愿望中，Paz Arés
+          Osset带来了希望和爱的信息，这些信息被封装在她作品的生动调色板中。这幅画是我们社会的镜子，是一块反映我们最深切的希望，我们最深的恐惧和我们对和平的持续渴望的画布。</p>
+
+        <p>这个作品不仅仅是一个美丽的对象，也是抵抗的象征和和平主义的宣言。在蓝色调和红色与黄色火焰的对比中，我们看到了一种平衡的渴望，一种相反力量之间和平共存的愿望。在和平与爱的中心人物中，我们找到了抵抗冲突和分裂的象征。
+        </p>
+
+        <p>《火中的和平》不仅仅是一件艺术品，它是一个超越语言和文化障碍的普遍信息。它的信息虽然简单，但却强大：尽管战争可能看起来是不可避免的，和平与爱永远有力量占据上风。这是我们所有人在这个不确定的时代都需要听到的信息。</p>
+
+        <p>通过她的艺术，Paz Arés
+          Osset敦促我们在自己的生活中寻找和平，面对我们自己的内在冲突，并建立一个爱和和平是常态而不是例外的世界。最终，她的作品提醒我们，我们每个人都有能力做出改变，通过我们的爱和同情，我们可以帮助创造一个更和平的世界。
+        </p>
+
+        <p>成为你想在世界上看到的变化。</p>
+
+      </div>
+
+      <div class="arabic language" style="display: none;">
+        <!-- Arabic description here -->
+        <p>تُعدُّ لوحة "السلام في النار" للفنانة باز أريس أوسيت، عندما يُشاهَدها المُشاهد مُباشرةً، كأنها إعصار بصري
+          يُثير
+          شعورًا قويًا بالحركة والطاقة. تُعطي الدوامات في اللوحة انطباعًا بوجود نار حية، وتكون لوحة الألوان المستخدمة
+          نابضة
+          بالحياة وجذابة، مع درجات عميقة من اللون الأحمر والأصفر اللامع وومضات من اللون البنفسجي التي تُوحي بوجود لهب
+          يتغير
+          باستمرار، وهو عنصر يعمل على التدمير والتطهير في ذات الوقت.</p>
+
+        <p>يتسم أسلوب الرسم بأنه تعبيري تجريدي؛ فالضربات بالفرشاة حرة ويبدو أن التكوين يتبع إيقاعًا عضويًا يُعطي الإحساس
+          بأن
+          العمل في خضم رقصة متحمسة. لا تُمثّل الألوان الشغف والطاقة فحسب، بل تُوصل أيضًا الدفء والضوء اللذين يمكن أن
+          ينبعثا حتى
+          في أكثر الأوقات اضطرابًا. تُشكّل وجود كلمة "السلام" المكتوبة بألوان زرقاء هادئة مرساة بصرية وعاطفية في مركز
+          الفوضى،
+          مما يُذكّر المشاهد بأنه يمكن دائمًا العثور على مساحة للهدوء في قلب الصخب.</p>
+
+        <p>يُعدّ الظل والضوء في العمل جانبًا آخر يستحق التسليط عليه. يعزز التباين بين المناطق المضيئة والمظلمة الشعور
+          بالعمق
+          والبعد، بينما تبدو المناطق المُضاءة كأنها تتوهج بضوء داخلي، مما يُوحي بوجود شيء إلهي أو غير قابل للكسر حتى وسط
+          الاضطراب.</p>
+
+        <p>من منظور حساس، قد يشعر المرء بمزيج من الاضطراب والسكينة عند التأمل في "السلام في النار". قد تثير اللوحة
+          تأملات حول
+          الطبيعة الثنائية للحياة: قدرتها على أن تكون مضطربة وهادئة في آن واحد، مدمرة وخلاقة. يمكن اعتبار إضافة القلب
+          الأزرق في
+          المركز تذكيرًا بأن الحب والسلام ممكنان حتى في أصعب الظروف.</p>
+
+        <p>"السلام في النار" هو عمل معقد وديناميكي يدعو إلى التأمل الذاتي. يقدم سردًا بصريًا يُظهر أنه يمكن أن يوجد في
+          قلب
+          الفوضى نواة من السلام، وأنه يمكن العثور على الجمال في الكفاح، وهو رسالة تتردد بعمق في عصر من عدم اليقين
+          والتغيير.</p>
+
+        <p>"السلام في النار"، من تأليف الفنانة المعروفة باز أريس أوسيت. بجذورها في التعبيرية التجريدية، هذه اللوحة هي
+          شهادة
+          مؤثرة على انتصار السلام والحب عبر الأوقات المضطربة، وعلى الشوق المستمر للفنانة لتنمية والحفاظ على سكينتها
+          الداخلية.
+        </p>
+
+        <p>اللوحة، وهي نار بصرية بحجم 50 × 65 سم، مشبعة بألوان حمراء وصفراء، وهي ألوان تُثير الشعور بشدة وطاقة النار،
+          وقوة
+          النضال والشغف الملتهب، وكذلك الحاجة إلى التغيير والتحول. يتناقض هذا الزخم اللوني بشكل رائع مع جوهر العمل، حيث
+          نجد كلمة
+          "السلام" مكتوبة بألوان زرقاء سماوية.</p>
+
+        <p>يتم توجيه المشاهد نحو المركز، حيث يقع قلب العمل (وربما قلب الفنانة أيضًا). هنا، تتحول حرف "أ" من اسم الفنانة
+          إلى قلب
+          أزرق هادئ، حصن من الحب والسكينة وسط الاشتباك. القلب الأزرق هو استعارة بصرية للسلام الداخلي للفنانة، ملجئها
+          ودرعها ضد
+          تحديات الحياة.</p>
+
+        <p>هذا التداخل بين الألوان هو أيضًا انعكاس لاسم الفنانة، باز أريس أوسيت، وهو اسم يربط بين إلهة السلام وإله
+          الحرب، في
+          تناقض حي يتم استكشافه وتوفيقه في هذا العمل الفني القوي.</p>
+
+        <p>"السلام في النار" هو تذكير بصري وعاطفي بأهمية الحفاظ على السلام في أوقات الفوضى. وعلى هذا النحو، فهو عمل يت
+          resonates
+          مع أولئك الذين هم على دراية بمد وجزر الحياة والذين يسعون، مثل الفنانة، إلى السلام والهدوء على الرغم من
+          الصعوبات.</p>
+
+        <p>في نهاية المطاف، "السلام في النار" هو احتفال بالروح الإنسانية، بقدرتنا على الحفاظ على الهدوء والسكينة وسط
+          نيران
+          التحديات. إنها تحية للمقاومة، ولقدرتنا على تحويل لحظات الصراع إلى لحظات من الحب، وللإيمان بأنه حتى في أصعب
+          الظروف،
+          يمكننا العثور على السلام والحفاظ عليه.</p>
+
+        <p>في عالم غالباً ما يكون مليئاً بالصراعات والتوترات، "السلام في النار" هو نداء قوي إلى الانسجام والوحدة. في
+          رغبتها في
+          رؤية عالم خالٍ من الحروب، تقدم باز أريس أوسيت رسالة أمل وحب، متجسدة في لوحة الألوان النابضة بالحياة لعملها.
+          اللوحة هي
+          مرآة لمجتمعاتنا، ولوحة تعكس أعمق آمالنا وأشد مخاوفنا ورغبتنا الدائمة في السلام.</p>
+
+        <p>هذا العمل ليس مجرد جسم جميل، بل هو أيضاً رمز للمقاومة وإعلان سلمي. في التباين بين الألوان الزرقاء والنيران
+          الحمراء
+          والصفراء، نرى رغبة في التوازن، وفي التعايش السلمي بين القوى المتعاكسة. في الشكل المركزي للسلام والحب، نجد
+          رمزاً
+          للمقاومة ضد الصراع والانقسام.</p>
+
+        <p>"السلام في النار" ليس مجرد عمل فني بسيط، بل هو رسالة عالمية تتجاوز حواجز اللغة والثقافة. رسالته بسيطة لكنها
+          قوية: على
+          الرغم من أن الحروب قد تبدو حتمية، فإن السلام والحب لديهما دائماً القوة للتغلب. هذه رسالة نحتاج جميعاً إلى
+          سماعها في
+          هذه الأوقات المليئة بالشكوك.</p>
+
+        <p>من خلال فنها، تحثنا باز أريس أوسيت على البحث عن السلام في حياتنا الخاصة، ومواجهة صراعاتنا الداخلية، وبناء
+          عالم يكون
+          فيه الحب والسلام هو القاعدة وليس الاستثناء. في النهاية، عملها هو تذكير بأن كل واحد منا لديه القدرة على إحداث
+          تغيير،
+          وأنه من خلال حبنا وتعاطفنا يمكننا المساعدة في خلق عالم أكثر سلاماً.</p>
+
+        <p>كن التغيير الذي ترغب في رؤيته في العالم.</p>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- js here -->
+  <script src="base.js"></script>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    var zoomImages = document.querySelectorAll('.zoom-image');
+
+    zoomImages.forEach(function (image) {
+      image.addEventListener('touchstart', function () {
+        image.classList.toggle('hover');
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

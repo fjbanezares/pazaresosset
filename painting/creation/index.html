@@ -3,28 +3,64 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Woman´s Body</title>
+  <title>Aphrodite</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="creation.css">
 
-
-
+  <!-- css here -->
+  <link rel="stylesheet" href="explosivecreation.css">
 </head>
 
 <body>
+  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+    <select id="language-select" class="custom-select-lg">
+      <option value="english">English</option>
+      <option value="spanish">Español</option>
+      <option value="italian">Italiano</option>
+      <option value="chinese">中文</option>
+      <option value="arabic">العربية</option>
+    </select>
+  </div>
+
+
   <section class="jumbotron text-center">
     <div class="container">
-      <a class="brand" href=#><img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-      <h1 class="jumbotron-heading">Creation</h1>
-      <p class="lead text-muted">The eternal expressed on this piece of Paz.</p>
-      <!-- <p>
-        <a class="btn btn-primary my-2" href="../../index.html" role="button">Main Page</a>
-      </p> -->
+
+      <a class="brand" href="https://www.pazaresosset.es">
+        <img src="../../logopazares.png" style="
+        position:absolute; 
+        margin: 10px;
+        top:0px; 
+        left:0px;" alt="Paz Arés Osset, the Artist">
+      </a>
+
+
+      <h1 class='jumbotron-heading'>
+        <div class='english language'>Divine Dance of Creation</div>
+        <div class='spanish language' style='display: none;'>Divina Danza de la Creación</div>
+        <div class='italian language' style='display: none;'>Divina Danza della Creazione</div>
+        <div class='chinese language' style='display: none;'>神圣的创造之舞</div>
+        <div class='arabic language' style='display: none;'>رقصة الخلق الإلهية</div>
+
+      </h1>
+
+      <div class='lead text-muted'>
+        <div class='english language'>From Nothing comes the Everything.</div>
+        <div class='spanish language' style='display: none;'>De la Nada surge el Todo.</div>
+        <div class='italian language' style='display: none;'>Dal Nulla emerge il Tutto.</div>
+        <div class='chinese language' style='display: none;'>从无中生有。</div>
+        <div class='arabic language' style='display: none;'>من العدم ينبثق الكل.</div>
+      </div>
     </div>
+
   </section>
+
+
 
   <section class="main-image">
     <div class="container">
@@ -37,35 +73,271 @@
       </div>
 
     </div>
+
   </section>
+  <!-- Rest of the HTML here... -->
 
   <section class="main-description">
     <div class="container">
       <div class="row">
         <div class="col-6-md description">
           <ul>
-            <li>Acrylic and Oleo</li>
-            <li>size: 162x130 cm</li>
-            <li>Creation Place: Fine Arts School of Madrid</li>
-            <li>Current Location: Private Collection Madrid</li>
+            <li>
+              <div class='english language'>Technique: </div>
+              <div class='spanish language' style='display: none;'>Técnica: Tintas Chinas sobre papel hecho a mano.
+              </div>
+              <div class='italian language' style='display: none;'>Tecnica: Inchiostri cinesi su carta fatta a mano.
+              </div>
+              <div class='chinese language' style='display: none;'>技术：中国墨水在手工纸上。</div>
+              <div class='arabic language' style='display: none;'>تقنية: الحبر الصيني على الورق المصنوع يدويًا.</div>
+            </li>
+
+            <li>
+              <div class="english language">Size: 70x50 cm</div>
+              <div class="spanish language" style="display: none;">Tamaño: 70x50 cm</div>
+              <div class="italian language" style="display: none;">Dimensioni: 70x50 cm</div>
+              <div class="chinese language" style="display: none;">尺寸：70x50厘米</div>
+              <div class="arabic language" style="display: none;">الحجم: 70x50 سم</div>
+
+            </li>
+            <li>
+              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
+              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
+              </div>
+              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
+              </div>
+              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
+              <div class="arabic language" style="display: none;">مكان الإبداع: كلية الفنون الجميلة في مدريد</div>
+
+            </li>
+            <li>
+              <div class="english language">Current Location: Private Collection Madrid</div>
+              <div class="spanish language" style="display: none;">Ubicación Actual: Colección en Madrid</div>
+              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
+              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
+              <div class="arabic language" style="display: none;">الموقع الحالي: مجموعة في مدريد</div>
+
+            </li>
+
           </ul>
 
+
         </div>
-        <div class="col-6 md audio">
-
+        <div class="col-6 md audio" style="display:none;">
           <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   </section>
 
+  <section class="multilingual-description">
+    <div class="container">
+      <h1 style="color: gold;">
+        <div class="english language">Description</div>
+        <div class="spanish language" style="display: none;">Descripción</div>
+        <div class="italian language" style="display: none;">Descrizione</div>
+        <div class="chinese language" style="display: none;">描述</div>
+        <div class="arabic language" style="display: none;">وصف</div>
 
-  <script src="creation.js" charset="utf-8"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      </h1>
+
+      <div class="english language">
+        <!-- English description here -->
+        <p>
+          The exceptional international artist, Paz Ares Osset, presents us with one of her finest works, "Divine Dance
+          of
+          Creation," a striking piece that combines acrylic and Chinese inks on a 70 x 50 cm paper. The choice of black
+          and
+          white tones creates a powerful contrast and brings a dynamic and intense energy to the canvas.
+        </p>
+
+        <p>
+          This masterpiece evokes the sensation of an explosion, a Big Bang, a moment of creation where everything
+          begins. The
+          energetic stains and strokes resemble fireworks, celebrating the emergence of life and energy in the universe.
+          Upon
+          closer observation, figures of dancers can be discerned, spinning in harmony, reminiscent of dervishes or
+          ballet
+          dancers, in a cosmic dance that celebrates creation and existence.
+        </p>
+
+        <p>
+          From a higher perspective, the work takes on the appearance of a moving vaporous tulle, evoking the delicacy
+          and
+          beauty of dancer's dresses. The "Divine Dance of Creation" is a visual metaphor for the power and grace of
+          creation,
+          uniting the divine and the human in an eternal dance.
+        </p>
+
+        <p>
+          The brilliance of Paz Ares Osset shines through this work, demonstrating once again her ability to capture and
+          express
+          abstract concepts and deep emotions in her art. This piece is a testament to the artist's talent and
+          creativity,
+          inviting the viewer to immerse themselves in the cosmic dance of creation and to reflect on the connection
+          between the
+          divine and the human.
+        </p>
+
+
+      </div>
+
+      <div class="spanish language" style="display: none;">
+        <!-- Spanish description here -->
+        <p>
+          La excepcional artista internacional Paz Ares Osset nos presenta una de sus mejores obras, "Divina Danza de la
+          Creación", una impactante pieza que combina acrílico y tintas chinas sobre papel de 70 x 50 cm. La elección de
+          tonos
+          blanco y negro crea un contraste poderoso y aporta una energía dinámica e intensa al lienzo.
+
+        </p>
+
+        <p>
+
+          Esta obra maestra evoca la sensación de una explosión, un Big Bang, un momento de creación en el que todo
+          comienza. Las
+          manchas y trazos enérgicos se asemejan a fuegos artificiales, celebrando el surgimiento de la vida y la
+          energía en el
+          universo. Al observar con detenimiento, se pueden discernir figuras de bailarines que giran en armonía,
+          recordando a los
+          derviches o bailarinas de ballet, en una danza cósmica que celebra la creación y la existencia.
+
+        </p>
+        <p>
+
+
+          Desde una perspectiva más elevada, la obra adquiere la apariencia de un tul vaporoso en movimiento, evocando
+          la
+          delicadeza y la belleza de los vestidos de las bailarinas. La "Divina Danza de la Creación" es una metáfora
+          visual del
+          poder y la gracia de la creación, uniendo lo divino y lo humano en una danza eterna.
+
+        </p>
+
+        <p>
+
+          La genialidad de Paz Ares Osset brilla a través de esta obra, demostrando una vez más su habilidad para
+          capturar y
+          expresar conceptos abstractos y emociones profundas en su arte. Esta pieza es un testimonio del talento y la
+          creatividad
+          de la artista, invitando al espectador a sumergirse en la danza cósmica de la creación y a reflexionar sobre
+          la conexión
+          entre lo divino y lo humano.
+        </p>
+
+      </div>
+
+
+      <div class="italian language" style="display: none;">
+        <!-- Italian description here -->
+        <p>
+          L'eccezionale artista internazionale, Paz Ares Osset, ci presenta uno dei suoi lavori più raffinati, "Divina
+          Danza
+          della Creazione", un pezzo sorprendente che combina acrilico e inchiostri cinesi su un foglio di 70 x 50 cm.
+          La scelta
+          dei toni bianchi e neri crea un potente contrasto e apporta un'energia dinamica e intensa alla tela.
+        </p>
+        <p>
+          Questo capolavoro evoca la sensazione di un'esplosione, un Big Bang, un momento di creazione in cui tutto
+          inizia. Le
+          macchie e i tratti energetici ricordano i fuochi d'artificio, celebrando l'emergere della vita e dell'energia
+          nell'universo. Osservando più da vicino, si possono discernere figure di danzatori che girano in armonia, che
+          ricordano dervisci o ballerine di balletto, in una danza cosmica che celebra la creazione e l'esistenza.
+        </p>
+
+        <p>
+          Da una prospettiva più alta, l'opera assume l'aspetto di un tulle vaporoso in movimento, evocando la
+          delicatezza e la
+          bellezza dei vestiti delle ballerine. La "Divina Danza della Creazione" è una metafora visiva del potere e
+          della
+          grazia della creazione, unendo il divino e l'umano in una danza eterna.
+        </p>
+
+        <p>
+          La brillantezza di Paz Ares Osset risplende in quest'opera, dimostrando ancora una volta la sua capacità di
+          catturare
+          ed esprimere concetti astratti ed emozioni profonde nella sua arte. Questo pezzo è una testimonianza del
+          talento e
+          della creatività dell'artista, invitando lo spettatore a immergersi nella danza cosmica della creazione e a
+          riflettere
+          sulla connessione tra il divino e l'umano.
+        </p>
+
+
+
+      </div>
+
+      <div class="chinese language" style="display: none;">
+        <!-- Chinese description here -->
+        <p>
+          卓越的国际艺术家Paz Ares Osset向我们展示了她的最佳作品之一，"神圣的创造之舞"，这是一件令人震惊的作品，结合了丙烯和中国墨水在70 x
+          50厘米的纸上。黑白色调的选择产生了强烈的对比，为画布带来了动态而强烈的能量。
+        </p>
+
+        <p>
+          这个杰作唤起了一种爆炸的感觉，一个大爆炸，一切开始的创造时刻。精力充沛的斑点和笔触像烟火一样，庆祝生命和能量在宇宙中的出现。在仔细观察时，可以辨认出旋转的舞者的形象，让人想起旋转舞者或芭蕾舞者，这是一种庆祝创造和存在的宇宙之舞。
+        </p>
+
+        <p>
+          从一个更高的角度看，这件作品看起来像是一块移动的烟雾般的薄纱，唤起了舞者裙子的精致和美丽。"神圣的创造之舞"是一个视觉隐喻，象征着创造的力量和优雅，将神圣和人类结合在一个永恒的舞蹈中。
+        </p>
+
+        <p>
+          Paz Ares Osset的才华在这件作品中闪耀，再次展示了她在艺术中捕捉和表达抽象概念和深刻情感的能力。这件作品是对艺术家才能和创造力的见证，邀请观众沉浸在创造的宇宙之舞中，思考神圣和人类之间的联系。
+        </p>
+
+
+      </div>
+
+      <div class="arabic language" style="display: none;">
+        <!-- Arabic description here -->
+        <p>
+          تقدم لنا الفنانة الدولية المتميزة باز أريس أوسيت واحدة من أفضل أعمالها، "رقصة الخلق الإلهية"، قطعة مدهشة تجمع
+          بين
+          الأكريليك والحبر الصيني على ورق بحجم 70 × 50 سم. يخلق اختيار الألوان البيضاء والسوداء تباينًا قويًا ويضيف طاقة
+          ديناميكية وعنيفة إلى اللوحة.
+        </p>
+        <p>
+          يثير هذا العمل الرائع الشعور بالانفجار، الانفجار الكبير، لحظة الخلق التي تبدأ فيها كل الأشياء. تشبه البقع
+          والخطوط
+          النشطة الألعاب النارية، وتحتفل بظهور الحياة والطاقة في الكون. عند الملاحظة بعناية، يمكن تمييز أشكال الراقصين
+          الذين
+          يدورون في الهارموني، مما يذكرنا بالدرويش أو راقصات الباليه، في رقصة كونية تحتفل بالخلق والوجود.
+        </p>
+
+        <p>
+          من منظور أعلى، تأخذ العمل مظهر طل تبخري متحرك، يثير الرقة والجمال للفساتين الراقصات. "رقصة الخلق الإلهية" هي
+          مجاز بصري
+          للقوة والنعمة للخلق، وهو يجمع بين الإلهي والإنسان في رقصة أبدية.
+        </p>
+
+        <p>
+          تتألق براعة باز أريس أوسيت من خلال هذا العمل، مما يدل على مرة أخرى قدرتها على التقاط والتعبير عن المفاهيم
+          المجردة
+          والعواطف العميقة في فنها. هذه القطعة هي شهادة على موهبة الفنان وإبداعه، داعية المشاهد للانغماس في رقصة الخلق
+          الكونية
+          والتفكير في الرابط بين الإلهي والإنسان.
+        </p>
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- js here -->
+  <script src="explosivecreation.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
