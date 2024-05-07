@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gallery Paz Arés Osset.</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="index.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="index.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <style>
+    .img-container {
+      width: 300px;
+      /* Fijo para demostración */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: #000;
+      /* Fondo para todo el contenedor */
+    }
+
+    .img-container img {
+      width: 100%;
+      /* Ancho completo dentro del contenedor */
+      height: auto;
+      /* Altura automática */
+    }
+
+    .img-title {
+      color: #FFF;
+      background-color: #000;
+      font-size: 20px;
+      padding: 10px;
+      margin-top: 5px;
+      /* Reducido para quitar espacio innecesario */
+      width: 100%;
+      /* Ancho completo */
+    }
+  </style>
+</head>
+
+<body>
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es"><img src="../logopazares.png"
+            style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
+        <h1 class="jumbotron-heading" data-en="Filter Categories" data-es="Filtrar Categorías"
+          data-it="Filtra Categorie" data-zh="筛选类别" data-ar="تصفية الفئات">
+          Filter Categories
+        </h1>
+        <!-- Language Selection -->
+
+        <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+          <select id="languageSelect" class="custom-select-lg">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="zh">中文</option>
+            <option value="ar">العربية</option>
+          </select>
+        </div>
+
+
+        <!-- Trigger modal -->
+        <button type="button" id="selectCategoriesButton" class="btn btn-primary btn-lg" data-toggle="modal"
+          data-target="#categoryModal" data-en="Select Categories" data-es="Seleccionar Categorías"
+          data-it="Seleziona Categorie" data-zh="选择类别" data-ar="اختر الفئات">
+          Select Categories
+        </button>
+        <button id="resetButton" class="btn btn-secondary btn-lg" data-en="Reset" data-es="Reiniciar" data-it="Reset"
+          data-zh="重置" data-ar="إعادة تعيين">
+          Reset
+        </button>
+
+      </div>
+    </section>
+    <!-- Modal -->
+
+    <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-fullscreen" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="categoryModalLabel" data-en="Select Categories" data-es="Seleccionar Categorías"
+              data-it="Seleziona Categorie" data-zh="选择类别" data-ar="اختر الفئات">
+              Select Categories
+            </h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-check">
+              <input class="form-check-input filter" type="checkbox" value="spiritual-pics" id="spiritualCheckbox">
+              <label class="form-check-label" for="spiritualCheckbox" data-en="Spiritual" data-es="Espiritual"
+                data-it="Spirituali" data-zh="精神" data-ar="روحاني">
+                Spiritual
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input filter" type="checkbox" value="landscape" id="landscapeCheckbox">
+              <label class="form-check-label" for="landscapeCheckbox" data-en="Landscape" data-es="Paisaje"
+                data-it="Paesaggio" data-zh="风景画" data-ar="منظر طبيعي">
+                Landscape
+              </label>
+            </div>
+
+
+            <div class="form-check">
+              <input class="form-check-input filter" type="checkbox" value="oil-painting" id="oilCheckbox">
+              <label class="form-check-label" for="oilCheckbox" data-en="Oil Painting" data-es="Pintura al Óleo"
+                data-it="Pittura a Olio" data-zh="油画" data-ar="رسم زيتي">
+                Oil Painting
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input filter" type="checkbox" value="watercolor" id="watercolorCheckbox">
+              <label class="form-check-label" for="watercolorCheckbox" data-en="Watercolor" data-es="Acuarela"
+                data-it="Acquarello" data-zh="水彩画" data-ar="الألوان المائية">
+                Watercolor
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input filter" type="checkbox" value="acrylic" id="acrylicCheckbox">
+              <label class="form-check-label" for="acrylicCheckbox" data-en="Acrylic" data-es="Acrílico"
+                data-it="Acrilico" data-zh="丙烯" data-ar="أكريليك">
+                Acrylic
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input filter" type="checkbox" value="colourful" id="colourfulCheckbox">
+              <label class="form-check-label" for="colourfulCheckbox" data-en="Colourful" data-es="Colorido"
+                data-it="Colorato" data-zh="多彩" data-ar="ملون">
+                Colourful
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input filter" type="checkbox" value="engraving" id="engravingCheckbox">
+              <label class="form-check-label" for="engravingCheckbox" data-en="Engraving" data-es="Grabado"
+                data-it="Incisione" data-zh="雕刻" data-ar="النقش">
+                Engraving
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input filter" type="checkbox" value="all" id="allCheckbox">
+              <label class="form-check-label" for="allCheckbox" data-en="All" data-es="Todos" data-it="Tutti"
+                data-zh="所有" data-ar="الكل">
+                All
+              </label>
+            </div>
+
+            <!-- Add more categories as needed -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+
+
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="gallery" id="gallery">
+
+
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all spiritual-pics img-container">
+        <a href="../poetry/soy_paz_en_el_azul_intenso/">
+          <img src="images/soy Paz en el Azul Intenso-EDIT.jpg" alt="Soy Paz en el Azul Intenso">
+          <div class="img-title">Soy Paz en el Azul Intenso</div>
+        </a>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all spiritual-pics img-container">
+        <a href="../poetry/soy_paz_en_el_azul_intenso/">
+          <img src="images/soy Paz en el Azul Intenso-EDIT.jpg" alt="Soy Paz en el Azul Intenso">
+          <div class="img-title">Soy Paz en el Azul Intenso</div>
+        </a>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all spiritual-pics img-container">
+        <a href="../poetry/soy_paz_en_el_azul_intenso/">
+          <img src="images/soy Paz en el Azul Intenso-EDIT.jpg" alt="Soy Paz en el Azul Intenso">
+          <div class="img-title">Soy Paz en el Azul Intenso</div>
+        </a>
+      </div>
+      <!-- Grid column -->
+
+
+
+    </div>
+    <!-- Grid row -->
+
+
+  </main>
+  <script>
+    // Place the JavaScript code heredocument.getElementById('languageSelect').addEventListener('change', function() {
+    document.getElementById('languageSelect').addEventListener('change', function () {
+      var selectedLanguage = this.value;
+      updateLanguage(selectedLanguage);
+    });
+
+    function updateLanguage(language) {
+      var elementsToUpdate = document.querySelectorAll(
+        '.modal-body .form-check-label, #selectCategoriesButton, #resetButton, .jumbotron-heading, #categoryModalLabel'
+      );
+      elementsToUpdate.forEach(function (element) {
+        element.textContent = element.getAttribute('data-' + language);
+      });
+    }
+  </script>
+
+
+
+
+  </script>
+</body>
+
+</html>
