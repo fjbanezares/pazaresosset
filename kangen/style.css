@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.beneficios {
+    text-align: center;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+}
+
+.maquina {
+    text-align: center;
+}
+
+.maquina img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.maquina ul {
+    list-style: none;
+    padding: 0;
+}
+
+.maquina li {
+    margin-bottom: 10px;
+}
+
+.testimonios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.testimonio {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid

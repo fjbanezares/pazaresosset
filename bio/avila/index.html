@@ -2,152 +2,376 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <title>Madrid</title>
-    <link rel="icon" type="image/png" href="../../favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-        rel="stylesheet">
+        <meta charset="utf-8">
+        <title>Avila</title>
+        <link rel="icon" type="image/png" href="../../favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+                rel="stylesheet">
 
-    <style>
-        body {
-            background-color: black;
-            font-size: 1.7rem;
-            color: #fff;
-        }
+        <style>
+                body {
+                        background-color: black;
+                        font-size: 1.7rem;
+                        color: #fff;
+                }
 
-        .custom-header {
-            padding: 2rem 1rem;
-            text-align: center;
-            color: inherit;
-            background-color: black;
-        }
+                .custom-header {
+                        padding: 2rem 1rem;
+                        text-align: center;
+                        color: inherit;
+                        background-color: black;
+                }
 
-        .custom-select-lg {
-            font-size: 3rem;
-            line-height: 1.2;
-            padding: .5rem 1rem;
-            height: auto;
-        }
+                .custom-select-lg {
+                        font-size: 3rem;
+                        line-height: 1.2;
+                        padding: .5rem 1rem;
+                        height: auto;
+                }
 
-        .custom-header h1 {
-            margin-top: 40px;
-            font-family: 'Montserrat', sans-serif;
-            color: magenta;
-            font-weight: 700;
-        }
+                .custom-header h1 {
+                        margin-top: 40px;
+                        font-family: 'Montserrat', sans-serif;
+                        color: magenta;
+                        font-weight: 700;
+                }
 
-        .multilingual-description {
-            font-size: 3rem;
-            margin-top: 30px;
-            border: 2px solid magenta;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: black;
-            color: #fff;
-        }
+                .multilingual-description {
+                        font-size: 3rem;
+                        margin-top: 30px;
+                        border: 2px solid magenta;
+                        border-radius: 10px;
+                        padding: 20px;
+                        background-color: black;
+                        color: #fff;
+                }
 
-        .language-desc {
-            padding: 10px;
-            margin-top: 10px;
-        }
+                .language-desc {
+                        padding: 10px;
+                        margin-top: 10px;
+                }
 
-        .main-description {
-            margin-top: 20px;
-        }
+                .main-description {
+                        margin-top: 20px;
+                }
 
-        .description {
-            margin: 12px;
-            color: white;
-            font-family: 'Lemonada', cursive;
-        }
+                .description {
+                        margin: 12px;
+                        color: white;
+                        font-family: 'Lemonada', cursive;
+                }
 
-        .audio {
-            text-align: center;
-            border: 20px;
-            padding: 0;
-            margin: 0;
-            width: min-content;
-            height: min-content;
-            top: 40px;
-        }
+                .audio {
+                        text-align: center;
+                        border: 20px;
+                        padding: 0;
+                        margin: 0;
+                        width: min-content;
+                        height: min-content;
+                        top: 40px;
+                }
 
-        .buttonAudio {
-            top: 200px;
-        }
-    </style>
+                .buttonAudio {
+                        top: 200px;
+                }
+        </style>
 </head>
 
 <body>
-    <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-        <select id="language-select" class="custom-select-lg">
-            <option value="english">English</option>
-            <option value="spanish">Español</option>
-            <option value="italian">Italiano</option>
-            <option value="chinese">中文</option>
-        </select>
-    </div>
-
-    <div class="custom-header">
-        <a class="brand" href="#"><img src="../../logopazares.png"
-                style="position:absolute; margin: 10px;top:0px; right:0px;" alt="Paz Arés Osset, the Artist"></a>
-        <h1 class="display-4 language english">Paz Arés, the Artist</h1>
-        <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
-        <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
-        <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
-    </div>
-
-
-    <section class="multilingual-description">
-        <div class="container">
-            <h2>
-                <div class="english language">Description</div>
-                <div class="spanish language" style="display: none;">Descripción</div>
-                <div class="italian language" style="display: none;">Descrizione</div>
-                <div class="chinese language" style="display: none;">描述</div>
-            </h2>
-
-            <div class="english language">
-                <!-- English description here -->
-                <p>WORK IN PROGRESS</p>
-
-            </div>
-
-            <div class="spanish language" style="display: none;">
-                <!-- Spanish description here -->
-
-
-            </div>
-
-            <div class="italian language" style="display: none;">
-                <!-- Italian description here -->
-
-
-            </div>
-
-            <div class="chinese language" style="display: none;">
-                <!-- Chinese description here -->
-
-
-            </div>
+        <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+                <select id="language-select" class="custom-select-lg">
+                        <option value="english">English</option>
+                        <option value="spanish">Español</option>
+                        <option value="italian">Italiano</option>
+                        <option value="chinese">中文</option>
+                        <option value="arabic">العربية</option>
+                </select>
         </div>
-    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('language-select').addEventListener('change', function () {
-                // Hide all language elements
-                document.querySelectorAll('.language').forEach(function (element) {
-                    element.style.display = 'none';
-                });
+        <div class="custom-header">
+                <a class="brand" href="#"><img src="../../logopazares.png"
+                                style="position:absolute; margin: 10px;top:0px; right:0px;"
+                                alt="Paz Arés Osset, the Artist"></a>
+                <h1 class="display-4 language english">Paz Arés, the Artist</h1>
+                <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
+                <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
+                <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
+                <h1 class="display-4 language arabic" style="display: none;">الفنانة باز أريس</h1>
 
-                // Show selected language elements
-                document.querySelectorAll('.' + this.value).forEach(function (element) {
-                    element.style.display = 'block';
+                <h2 class="language english">Ávila</h2>
+                <h2 class="language spanish" style="display: none;">Ávila</h2>
+                <h2 class="language italian" style="display: none;">Ávila</h2>
+                <h2 class="language chinese" style="display: none;">阿维拉</h2>
+                <h2 class="language arabic" style="display: none;">أفيلا</h2>
+
+        </div>
+
+
+
+
+        <section style="margin-top: 30px; text-align: center;">
+                <div style="display: inline-block; text-align: left;">
+                        <div class="english language">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li style="margin: 10px 0;"><a href="traslado_avila.html"
+                                                        style="color: lime; text-decoration: none;">Move to Ávila</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="culminacion_estudios.html"
+                                                        style="color: lime; text-decoration: none;">Completion of
+                                                        Teaching
+                                                        Studies</a></li>
+                                        <li style="margin: 10px 0;"><a href="carrera_profesora.html"
+                                                        style="color: lime; text-decoration: none;">Teaching Career in
+                                                        Ávila</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="matrimonio_javier.html"
+                                                        style="color: lime; text-decoration: none;">Meeting and Marriage
+                                                        with
+                                                        Javier</a></li>
+                                        <li style="margin: 10px 0;"><a href="exploracion_ocultismo.html"
+                                                        style="color: lime; text-decoration: none;">Exploration of
+                                                        Occultism and
+                                                        New Age</a></li>
+                                        <li style="margin: 10px 0;"><a href="estudios_uned.html"
+                                                        style="color: lime; text-decoration: none;">Studies at UNED</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="influencia_santa_teresa.html"
+                                                        style="color: lime; text-decoration: none;">Influence of Santa
+                                                        Teresa
+                                                        and Spiritual Environment</a></li>
+                                        <li style="margin: 10px 0;"><a href="movimiento_vegetariano.html"
+                                                        style="color: lime; text-decoration: none;">Connection with the
+                                                        Vegetarian Movement</a></li>
+                                        <li style="margin: 10px 0;"><a href="activismo_ambiental.html"
+                                                        style="color: lime; text-decoration: none;">Activism and
+                                                        Commitment to
+                                                        Health and Environment</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_obra_artistica.html"
+                                                        style="color: lime; text-decoration: none;">Influence on
+                                                        Artistic
+                                                        Work</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="spanish language" style="display: none;">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li style="margin: 10px 0;"><a href="traslado_avila.html"
+                                                        style="color: lime; text-decoration: none;">Traslado a Ávila</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="culminacion_estudios.html"
+                                                        style="color: lime; text-decoration: none;">Culminación de
+                                                        Estudios en
+                                                        Magisterio</a></li>
+                                        <li style="margin: 10px 0;"><a href="carrera_profesora.html"
+                                                        style="color: lime; text-decoration: none;">Carrera como
+                                                        Profesora en
+                                                        Ávila</a></li>
+                                        <li style="margin: 10px 0;"><a href="matrimonio_javier.html"
+                                                        style="color: lime; text-decoration: none;">Encuentro y
+                                                        Matrimonio con
+                                                        Javier</a></li>
+                                        <li style="margin: 10px 0;"><a href="exploracion_ocultismo.html"
+                                                        style="color: lime; text-decoration: none;">Exploración del
+                                                        Ocultismo y
+                                                        el New Age</a></li>
+                                        <li style="margin: 10px 0;"><a href="estudios_uned.html"
+                                                        style="color: lime; text-decoration: none;">Estudios en la
+                                                        UNED</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_santa_teresa.html"
+                                                        style="color: lime; text-decoration: none;">Influencia de Santa
+                                                        Teresa y
+                                                        el Entorno Espiritual</a></li>
+                                        <li style="margin: 10px 0;"><a href="movimiento_vegetariano.html"
+                                                        style="color: lime; text-decoration: none;">Conexión con el
+                                                        Movimiento
+                                                        Vegetariano</a></li>
+                                        <li style="margin: 10px 0;"><a href="activismo_ambiental.html"
+                                                        style="color: lime; text-decoration: none;">Activismo y
+                                                        Compromiso con
+                                                        la Salud y el Medio Ambiente</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_obra_artistica.html"
+                                                        style="color: lime; text-decoration: none;">Influencia en su
+                                                        Obra
+                                                        Artística</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="italian language" style="display: none;">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li style="margin: 10px 0;"><a href="traslado_avila.html"
+                                                        style="color: lime; text-decoration: none;">Trasferimento ad
+                                                        Ávila</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="culminacion_estudios.html"
+                                                        style="color: lime; text-decoration: none;">Completamento degli
+                                                        Studi di
+                                                        Insegnamento</a></li>
+                                        <li style="margin: 10px 0;"><a href="carrera_profesora.html"
+                                                        style="color: lime; text-decoration: none;">Carriera di
+                                                        Insegnante ad
+                                                        Ávila</a></li>
+                                        <li style="margin: 10px 0;"><a href="matrimonio_javier.html"
+                                                        style="color: lime; text-decoration: none;">Incontro e
+                                                        Matrimonio con
+                                                        Javier</a></li>
+                                        <li style="margin: 10px 0;"><a href="exploracion_ocultismo.html"
+                                                        style="color: lime; text-decoration: none;">Esplorazione
+                                                        dell'Occulto e
+                                                        del New Age</a></li>
+                                        <li style="margin: 10px 0;"><a href="estudios_uned.html"
+                                                        style="color: lime; text-decoration: none;">Studi presso
+                                                        l'UNED</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_santa_teresa.html"
+                                                        style="color: lime; text-decoration: none;">Influenza di Santa
+                                                        Teresa e
+                                                        Ambiente Spirituale</a></li>
+                                        <li style="margin: 10px 0;"><a href="movimiento_vegetariano.html"
+                                                        style="color: lime; text-decoration: none;">Connessione con il
+                                                        Movimento
+                                                        Vegetariano</a></li>
+                                        <li style="margin: 10px 0;"><a href="activismo_ambiental.html"
+                                                        style="color: lime; text-decoration: none;">Attivismo e Impegno
+                                                        per la
+                                                        Salute e l'Ambiente</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_obra_artistica.html"
+                                                        style="color: lime; text-decoration: none;">Influenza sul Lavoro
+                                                        Artistico</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="chinese language" style="display: none;">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li style="margin: 10px 0;"><a href="traslado_avila.html"
+                                                        style="color: lime; text-decoration: none;">搬到阿维拉</a></li>
+                                        <li style="margin: 10px 0;"><a href="culminacion_estudios.html"
+                                                        style="color: lime; text-decoration: none;">完成教学研究</a></li>
+                                        <li style="margin: 10px 0;"><a href="carrera_profesora.html"
+                                                        style="color: lime; text-decoration: none;">在阿维拉的教学生涯</a></li>
+                                        <li style="margin: 10px 0;"><a href="matrimonio_javier.html"
+                                                        style="color: lime; text-decoration: none;">与哈维尔的相识与婚姻</a></li>
+                                        <li style="margin: 10px 0;"><a href="exploracion_ocultismo.html"
+                                                        style="color: lime; text-decoration: none;">探索神秘学和新时代</a></li>
+                                        <li style="margin: 10px 0;"><a href="estudios_uned.html"
+                                                        style="color: lime; text-decoration: none;">在UNED学习</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_santa_teresa.html"
+                                                        style="color: lime; text-decoration: none;">圣特蕾莎的影响和精神环境</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="movimiento_vegetariano.html"
+                                                        style="color: lime; text-decoration: none;">与素食主义运动的联系</a></li>
+                                        <li style="margin: 10px 0;"><a href="activismo_ambiental.html"
+                                                        style="color: lime; text-decoration: none;">对健康和环境的积极参与</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_obra_artistica.html"
+                                                        style="color: lime; text-decoration: none;">对艺术作品的影响</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="arabic language" style="display: none;">
+                                <ul style="list-style-type: disc; padding-right: 20px; direction: rtl;">
+                                        <li style="margin: 10px 0;"><a href="traslado_avila.html"
+                                                        style="color: lime; text-decoration: none;">الانتقال إلى
+                                                        أفيلا</a></li>
+                                        <li style="margin: 10px 0;"><a href="culminacion_estudios.html"
+                                                        style="color: lime; text-decoration: none;">إكمال دراسات
+                                                        التدريس</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="carrera_profesora.html"
+                                                        style="color: lime; text-decoration: none;">مسيرة التدريس في
+                                                        أفيلا</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="matrimonio_javier.html"
+                                                        style="color: lime; text-decoration: none;">لقاء والزواج من
+                                                        خافيير</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="exploracion_ocultismo.html"
+                                                        style="color: lime; text-decoration: none;">استكشاف السحر والعصر
+                                                        الجديد</a></li>
+                                        <li style="margin: 10px 0;"><a href="estudios_uned.html"
+                                                        style="color: lime; text-decoration: none;">الدراسة في UNED</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="influencia_santa_teresa.html"
+                                                        style="color: lime; text-decoration: none;">تأثير سانتا تيريزا
+                                                        والبيئة
+                                                        الروحية</a></li>
+                                        <li style="margin: 10px 0;"><a href="movimiento_vegetariano.html"
+                                                        style="color: lime; text-decoration: none;">الاتصال بالحركة
+                                                        النباتية</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="activismo_ambiental.html"
+                                                        style="color: lime; text-decoration: none;">النشاط والالتزام
+                                                        بالصحة
+                                                        والبيئة</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_obra_artistica.html"
+                                                        style="color: lime; text-decoration: none;">تأثير على العمل
+                                                        الفني</a>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+        </section>
+
+
+
+
+
+        <section class="multilingual-description">
+                <div class="container">
+                        <h2 class="language english">Ávila</h2>
+                        <h2 class="language spanish" style="display: none;">Ávila</h2>
+                        <h2 class="language italian" style="display: none;">Ávila</h2>
+                        <h2 class="language chinese" style="display: none;">阿维拉</h2>
+                        <h2 class="language arabic" style="display: none;">أفيلا</h2>
+
+
+
+
+                        <div class="english language">
+                                <!-- English description here -->
+                                <p>WORK IN PROGRESS</p>
+
+                        </div>
+
+                        <div class="spanish language" style="display: none;">
+                                <!-- Spanish description here -->
+
+
+                        </div>
+
+                        <div class="italian language" style="display: none;">
+                                <!-- Italian description here -->
+
+
+                        </div>
+
+                        <div class="chinese language" style="display: none;">
+                                <!-- Chinese description here -->
+
+
+                        </div>
+
+                        <div class="arabic language" style="display: none;">
+                                <!-- Arabic  description here -->
+
+
+                        </div>
+                </div>
+        </section>
+
+        <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('language-select').addEventListener('change', function () {
+                                // Hide all language elements
+                                document.querySelectorAll('.language').forEach(function (element) {
+                                        element.style.display = 'none';
+                                });
+
+                                // Show selected language elements
+                                document.querySelectorAll('.' + this.value).forEach(function (element) {
+                                        element.style.display = 'block';
+                                });
+                        });
                 });
-            });
-        });
-    </script>
+        </script>
 
 
 </body>

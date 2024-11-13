@@ -2,152 +2,636 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <title>Madrid</title>
-    <link rel="icon" type="image/png" href="../../favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-        rel="stylesheet">
+        <meta charset="utf-8">
+        <title>Valencia</title>
+        <link rel="icon" type="image/png" href="../../favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+                rel="stylesheet">
 
-    <style>
-        body {
-            background-color: black;
-            font-size: 1.7rem;
-            color: #fff;
-        }
+        <style>
+                body {
+                        background-color: black;
+                        font-size: 1.7rem;
+                        color: #fff;
+                }
 
-        .custom-header {
-            padding: 2rem 1rem;
-            text-align: center;
-            color: inherit;
-            background-color: black;
-        }
+                .custom-header {
+                        padding: 2rem 1rem;
+                        text-align: center;
+                        color: inherit;
+                        background-color: black;
+                }
 
-        .custom-select-lg {
-            font-size: 3rem;
-            line-height: 1.2;
-            padding: .5rem 1rem;
-            height: auto;
-        }
+                .custom-select-lg {
+                        font-size: 3rem;
+                        line-height: 1.2;
+                        padding: .5rem 1rem;
+                        height: auto;
+                }
 
-        .custom-header h1 {
-            margin-top: 40px;
-            font-family: 'Montserrat', sans-serif;
-            color: magenta;
-            font-weight: 700;
-        }
+                .custom-header h1 {
+                        margin-top: 40px;
+                        font-family: 'Montserrat', sans-serif;
+                        color: magenta;
+                        font-weight: 700;
+                }
 
-        .multilingual-description {
-            font-size: 3rem;
-            margin-top: 30px;
-            border: 2px solid magenta;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: black;
-            color: #fff;
-        }
+                .multilingual-description {
+                        font-size: 3rem;
+                        margin-top: 30px;
+                        border: 2px solid magenta;
+                        border-radius: 10px;
+                        padding: 20px;
+                        background-color: black;
+                        color: #fff;
+                }
 
-        .language-desc {
-            padding: 10px;
-            margin-top: 10px;
-        }
+                .language-desc {
+                        padding: 10px;
+                        margin-top: 10px;
+                }
 
-        .main-description {
-            margin-top: 20px;
-        }
+                .main-description {
+                        margin-top: 20px;
+                }
 
-        .description {
-            margin: 12px;
-            color: white;
-            font-family: 'Lemonada', cursive;
-        }
+                .description {
+                        margin: 12px;
+                        color: white;
+                        font-family: 'Lemonada', cursive;
+                }
 
-        .audio {
-            text-align: center;
-            border: 20px;
-            padding: 0;
-            margin: 0;
-            width: min-content;
-            height: min-content;
-            top: 40px;
-        }
+                .audio {
+                        text-align: center;
+                        border: 20px;
+                        padding: 0;
+                        margin: 0;
+                        width: min-content;
+                        height: min-content;
+                        top: 40px;
+                }
 
-        .buttonAudio {
-            top: 200px;
-        }
-    </style>
+                .buttonAudio {
+                        top: 200px;
+                }
+        </style>
 </head>
 
 <body>
-    <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-        <select id="language-select" class="custom-select-lg">
-            <option value="english">English</option>
-            <option value="spanish">Español</option>
-            <option value="italian">Italiano</option>
-            <option value="chinese">中文</option>
-        </select>
-    </div>
-
-    <div class="custom-header">
-        <a class="brand" href="#"><img src="../../logopazares.png"
-                style="position:absolute; margin: 10px;top:0px; right:0px;" alt="Paz Arés Osset, the Artist"></a>
-        <h1 class="display-4 language english">Paz Arés, the Artist</h1>
-        <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
-        <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
-        <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
-    </div>
-
-
-    <section class="multilingual-description">
-        <div class="container">
-            <h2>
-                <div class="english language">Description</div>
-                <div class="spanish language" style="display: none;">Descripción</div>
-                <div class="italian language" style="display: none;">Descrizione</div>
-                <div class="chinese language" style="display: none;">描述</div>
-            </h2>
-
-            <div class="english language">
-                <!-- English description here -->
-                <p>WORK IN PROGRESS</p>
-
-            </div>
-
-            <div class="spanish language" style="display: none;">
-                <!-- Spanish description here -->
-
-
-            </div>
-
-            <div class="italian language" style="display: none;">
-                <!-- Italian description here -->
-
-
-            </div>
-
-            <div class="chinese language" style="display: none;">
-                <!-- Chinese description here -->
-
-
-            </div>
+        <div class="position-fixed d-flex justify-content-end p-4"
+                style="position: fixed; right:0; top: 1; z-index: 1;">
+                <select id="language-select" class="custom-select-lg">
+                        <option value="english">English</option>
+                        <option value="spanish">Español</option>
+                        <option value="italian">Italiano</option>
+                        <option value="chinese">中文</option>
+                        <option value="arabic">العربية</option>
+                </select>
         </div>
-    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('language-select').addEventListener('change', function () {
-                // Hide all language elements
-                document.querySelectorAll('.language').forEach(function (element) {
-                    element.style.display = 'none';
-                });
+        <div class="custom-header">
+                <a class="brand" href="https://www.pazaresosset.es">
+                        <img src="../../logopazares.png" style="
+                        position:absolute; 
+                        margin: 10px;
+                        top:0px; 
+                        left:0px;" alt="Paz Arés Osset, the Artist">
+                </a>
+                <h1 class="display-4 language english">Paz Arés, the Artist</h1>
+                <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
+                <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
+                <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
+                <h1 class="display-4 language arabic" style="display: none;">الفنانة باز أريس</h1>
 
-                // Show selected language elements
-                document.querySelectorAll('.' + this.value).forEach(function (element) {
-                    element.style.display = 'block';
+                <h2 class="language english">Valencia</h2>
+                <h2 class="language spanish" style="display: none;">Valencia</h2>
+                <h2 class="language italian" style="display: none;">Valencia</h2>
+                <h2 class="language chinese" style="display: none;">瓦伦西亚</h2>
+                <h2 class="language arabic" style="display: none;">فالنسيا</h2>
+
+        </div>
+
+
+
+
+        <section style="margin-top: 30px; text-align: center;">
+                <div style="display: inline-block; text-align: left;">
+                        <div class="english language">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                                                        style="color: lime; text-decoration: none;">Return to
+                                                        Valencia</a></li>
+                                        <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                                                        style="color: lime; text-decoration: none;">Educational
+                                                        Challenges</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                                                        style="color: lime; text-decoration: none;">Meeting Marina
+                                                        Moscardó</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                                                        style="color: lime; text-decoration: none;">Passion for Las
+                                                        Fallas</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                                                        style="color: lime; text-decoration: none;">Academic and
+                                                        Professional
+                                                        Aspirations</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                                                        style="color: lime; text-decoration: none;">Influence of
+                                                        Valencia</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="primer_amor.html"
+                                                        style="color: lime; text-decoration: none;">First Love and
+                                                        Cultural
+                                                        Barriers</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="spanish language" style="display: none;">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                                                        style="color: lime; text-decoration: none;">Regreso a
+                                                        Valencia</a></li>
+                                        <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                                                        style="color: lime; text-decoration: none;">Desafíos
+                                                        Educativos</a></li>
+                                        <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                                                        style="color: lime; text-decoration: none;">Encuentro con Marina
+                                                        Moscardó</a></li>
+                                        <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                                                        style="color: lime; text-decoration: none;">Pasión por Las
+                                                        Fallas</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                                                        style="color: lime; text-decoration: none;">Aspiraciones
+                                                        Académicas y
+                                                        Profesionales</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                                                        style="color: lime; text-decoration: none;">Influencia de
+                                                        Valencia</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="primer_amor.html"
+                                                        style="color: lime; text-decoration: none;">Primer Amor y
+                                                        Barreras
+                                                        Culturales</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="italian language" style="display: none;">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                                                        style="color: lime; text-decoration: none;">Ritorno a
+                                                        Valencia</a></li>
+                                        <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                                                        style="color: lime; text-decoration: none;">Sfide Educative</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                                                        style="color: lime; text-decoration: none;">Incontro con Marina
+                                                        Moscardó</a></li>
+                                        <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                                                        style="color: lime; text-decoration: none;">Passione per Las
+                                                        Fallas</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                                                        style="color: lime; text-decoration: none;">Aspirazioni
+                                                        Accademiche e
+                                                        Professionali</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                                                        style="color: lime; text-decoration: none;">Influenza di
+                                                        Valencia</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="primer_amor.html"
+                                                        style="color: lime; text-decoration: none;">Primo Amore e
+                                                        Barriere
+                                                        Culturali</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="chinese language" style="display: none;">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                                                        style="color: lime; text-decoration: none;">回到瓦伦西亚</a></li>
+                                        <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                                                        style="color: lime; text-decoration: none;">教育挑战</a></li>
+                                        <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                                                        style="color: lime; text-decoration: none;">与玛丽娜·莫斯卡多的相遇</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                                                        style="color: lime; text-decoration: none;">对Las Fallas的热爱</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                                                        style="color: lime; text-decoration: none;">学术和职业抱负</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                                                        style="color: lime; text-decoration: none;">瓦伦西亚的影响</a></li>
+                                        <li style="margin: 10px 0;"><a href="primer_amor.html"
+                                                        style="color: lime; text-decoration: none;">初恋和文化障碍</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="arabic language" style="display: none;">
+                                <ul style="list-style-type: disc; padding-right: 20px; direction: rtl;">
+                                        <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                                                        style="color: lime; text-decoration: none;">العودة إلى
+                                                        فالنسيا</a></li>
+                                        <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                                                        style="color: lime; text-decoration: none;">التحديات
+                                                        التعليمية</a></li>
+                                        <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                                                        style="color: lime; text-decoration: none;">لقاء مع مارينا
+                                                        موسكاردو</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                                                        style="color: lime; text-decoration: none;">الشغف بـ Las
+                                                        Fallas</a></li>
+                                        <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                                                        style="color: lime; text-decoration: none;">التطلعات الأكاديمية
+                                                        والمهنية</a></li>
+                                        <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                                                        style="color: lime; text-decoration: none;">تأثير فالنسيا</a>
+                                        </li>
+                                        <li style="margin: 10px 0;"><a href="primer_amor.html"
+                                                        style="color: lime; text-decoration: none;">الحب الأول والحواجز
+                                                        الثقافية</a></li>
+                                </ul>
+                        </div>
+                </div>
+        </section>
+
+
+
+
+        <section class="multilingual-description">
+                <div class="container">
+                        <h2 class="language english">Valencia</h2>
+                        <h2 class="language spanish" style="display: none;">Valencia</h2>
+                        <h2 class="language italian" style="display: none;">Valencia</h2>
+                        <h2 class="language chinese" style="display: none;">瓦伦西亚</h2>
+                        <h2 class="language arabic" style="display: none;">فالنسيا</h2>
+
+
+                        <div class="english language">
+                                <!-- English description here -->
+                                <h2 style="color: #FFD700;">Return to Valencia</h2>
+                                <p>In 1968, after the loss of Sidi Ifni, the family of Paz Arés Osset returned to live
+                                        in Valencia. This return marked
+                                        the beginning of a new stage in the artist's life, and Valencia would become the
+                                        setting for her adolescence and
+                                        the beginnings of her teaching career. Adapting to the new life in Valencia was
+                                        a challenge, but also an
+                                        opportunity for Paz's personal and professional growth.</p>
+
+                                <h2 style="color: #FFD700;">Educational Challenges</h2>
+                                <p>Upon joining the Colegio de las Escolapias, Paz faced a significant academic gap. The
+                                        educational level in Valencia
+                                        was much more advanced than what she had received in Sidi Ifni, which made her
+                                        feel frustrated and overwhelmed.
+                                        Her innate perfectionism drove her to study tirelessly, trying to catch up and
+                                        surpass her classmates. This
+                                        constant effort, though exhausting, was a manifestation of her determination and
+                                        desire for success.</p>
+
+                                <h2 style="color: #FFD700;">Meeting Marina Moscardó</h2>
+                                <p>The academic pressure led Paz to moments of crying and despair in the school
+                                        corridors. It was during one of these
+                                        moments when Marina Moscardó, a classmate, approached her. With empathy and
+                                        kindness, Marina helped her
+                                        integrate into the school's social circles, providing Paz with the emotional
+                                        support she desperately needed.
+                                        This friendship not only offered her comfort but also opened the door to a
+                                        richer and more balanced social life.
+                                </p>
+
+                                <h2 style="color: #FFD700;">Passion for Las Fallas</h2>
+                                <p>Valencia, with its rich cultural tradition and vibrant festive life, introduced Paz
+                                        Arés Osset to one of its most
+                                        emblematic celebrations: Las Fallas. This festival, celebrated every year in
+                                        March, immediately captured Paz's
+                                        attention and heart. Las Fallas are known for their impressive papier-mâché,
+                                        wood, and other material monuments,
+                                        which are built throughout the year only to be burned on March 19th, Saint
+                                        Joseph's Day. This ritual of creation
+                                        and destruction symbolizes the transience of life and became a deep source of
+                                        inspiration for Paz.</p>
+
+                                <h2 style="color: #FFD700;">Academic and Professional Aspirations</h2>
+                                <p>Education has always been a deep passion for Paz Arés Osset. Inspired by her love of
+                                        learning and her desire to
+                                        positively influence the lives of others, Paz decided in 1970, along with her
+                                        friend Marina Moscardó, to study
+                                        Teaching at the Escuela de Profesores de Valencia. This decision reflected not
+                                        only her commitment to education
+                                        but also her determination to become a force for change and support for future
+                                        generations.</p>
+
+                                <h2 style="color: #FFD700;">Influence of Valencia on her Life and Work</h2>
+                                <p>The time Paz Arés Osset spent in Valencia was a decisive period in her life, marked
+                                        by the city's rich culture and
+                                        deep traditions. Valencia, with its vibrant festivities, impressive
+                                        architecture, and active community life,
+                                        offered Paz an environment conducive to personal and artistic growth. The city
+                                        became a reference point and a
+                                        constant source of inspiration that significantly influenced her work.</p>
+
+                                <h2 style="color: #FFD700;">Floral Games</h2>
+                                <p>When Paz Arés Osset was a child, she received a very special invitation that filled
+                                        her with pride and excitement.
+                                        The mayor of Valencia, recognizing her grace, charm, and potential, personally
+                                        sent her a letter inviting her to
+                                        join the Cort d'Honor de la Regina dels Jocs Florals de Valencia. This festival,
+                                        of great cultural and social
+                                        relevance in the region, not only celebrated Valencian traditions but also
+                                        honored young women who stood out in
+                                        the community.</p>
+
+                        </div>
+
+                        <div class="spanish language" style="display: none;">
+                                <!-- Spanish description here -->
+                                <h2 style="color: #FFD700;">Regreso a Valencia</h2>
+                                <p>En 1968, tras la pérdida de Sidi Ifni, la familia de Paz Arés Osset regresó a vivir a
+                                        Valencia. Este retorno marcó el
+                                        comienzo de una nueva etapa en la vida de la artista, y Valencia se convertiría
+                                        en el escenario de su
+                                        adolescencia y los inicios de su carrera como docente. La adaptación a la nueva
+                                        vida en Valencia fue un desafío,
+                                        pero también una oportunidad para el crecimiento personal y profesional de Paz.
+                                </p>
+
+                                <h2 style="color: #FFD700;">Desafíos Educativos</h2>
+                                <p>Al integrarse en el Colegio de las Escolapias, Paz se enfrentó a una brecha académica
+                                        significativa. El nivel
+                                        educativo en Valencia era mucho más avanzado que el que había recibido en Sidi
+                                        Ifni, lo que la llevó a sentirse
+                                        frustrada y abrumada. Su perfeccionismo innato la impulsó a estudiar sin
+                                        descanso, tratando de alcanzar y
+                                        superar a sus compañeras de clase. Este esfuerzo constante, aunque extenuante,
+                                        fue una manifestación de su
+                                        determinación y deseo de éxito.</p>
+
+                                <h2 style="color: #FFD700;">Encuentro con Marina Moscardó</h2>
+                                <p>La presión académica llevó a Paz a momentos de llanto y desesperación en los pasillos
+                                        del colegio. Fue en uno de
+                                        estos momentos cuando Marina Moscardó, una compañera de clase, se acercó a ella.
+                                        Con empatía y amabilidad,
+                                        Marina la ayudó a integrarse en los círculos de amistades del colegio,
+                                        proporcionando a Paz el apoyo emocional
+                                        que tanto necesitaba. Esta amistad no solo le ofreció consuelo, sino que también
+                                        abrió la puerta a una vida
+                                        social más rica y equilibrada.</p>
+
+                                <h2 style="color: #FFD700;">Pasión por las Fallas</h2>
+                                <p>Valencia, con su rica tradición cultural y vibrante vida festiva, presentó a Paz Arés
+                                        Osset una de sus celebraciones
+                                        más emblemáticas: Las Fallas. Esta festividad, celebrada cada año en marzo,
+                                        capturó de inmediato la atención y
+                                        el corazón de Paz. Las Fallas son conocidas por sus impresionantes monumentos de
+                                        papel maché, madera y otros
+                                        materiales, que se construyen a lo largo del año solo para ser quemados el 19 de
+                                        marzo, día de San José. Este
+                                        ritual de creación y destrucción simboliza la transitoriedad de la vida y se
+                                        convirtió en una fuente de profunda
+                                        inspiración para Paz.</p>
+
+                                <h2 style="color: #FFD700;">Aspiraciones Académicas y Profesionales</h2>
+                                <p>La educación siempre ha sido una pasión profunda para Paz Arés Osset. Inspirada por
+                                        su amor por el aprendizaje y su
+                                        deseo de influir positivamente en la vida de los demás, Paz decidió en 1970,
+                                        junto a su amiga Marina Moscardó,
+                                        estudiar Magisterio en la Escuela de Profesores de Valencia. Esta decisión
+                                        reflejaba no solo su compromiso con
+                                        la educación, sino también su determinación de convertirse en una fuerza de
+                                        cambio y apoyo para futuras
+                                        generaciones.</p>
+
+                                <h2 style="color: #FFD700;">Influencia de Valencia en su Vida y Obra</h2>
+                                <p>El tiempo que Paz Arés Osset pasó en Valencia fue un periodo decisivo en su vida,
+                                        marcado por la rica cultura y las
+                                        profundas tradiciones de la ciudad. Valencia, con sus vibrantes festividades,
+                                        arquitectura impresionante y una
+                                        vida comunitaria activa, ofreció a Paz un entorno propicio para el crecimiento
+                                        personal y artístico. La ciudad
+                                        se convirtió en un punto de referencia y una fuente constante de inspiración que
+                                        influyó significativamente en
+                                        su obra.</p>
+
+                                <h2 style="color: #FFD700;">Juegos Florales</h2>
+                                <p>Cuando Paz Arés Osset era una niña, recibió una invitación muy especial que la llenó
+                                        de orgullo y emoción. El alcalde
+                                        de Valencia, reconociendo su gracia, encanto y potencial, le envió personalmente
+                                        una carta invitándola a formar
+                                        parte de la Cort d'Honor de la Regina dels Jocs Florals de Valencia. Esta
+                                        festividad, de gran relevancia
+                                        cultural y social en la región, no solo celebraba las tradiciones valencianas,
+                                        sino que también honraba a las
+                                        jóvenes que se destacaban en la comunidad.</p>
+                        </div>
+
+                        <div class="italian language" style="display: none;">
+                                <!-- Italian description here -->
+                                <h2 style="color: #FFD700;">Ritorno a Valencia</h2>
+                                <p>Nel 1968, dopo la perdita di Sidi Ifni, la famiglia di Paz Arés Osset tornò a vivere
+                                        a Valencia. Questo ritorno segnò
+                                        l'inizio di una nuova fase nella vita dell'artista, e Valencia sarebbe diventata
+                                        il palcoscenico della sua
+                                        adolescenza e degli inizi della sua carriera di insegnante. Adattarsi alla nuova
+                                        vita a Valencia fu una sfida,
+                                        ma anche un'opportunità per la crescita personale e professionale di Paz.</p>
+
+                                <h2 style="color: #FFD700;">Sfide Educative</h2>
+                                <p>Entrando al Colegio de las Escolapias, Paz si trovò ad affrontare un significativo
+                                        divario accademico. Il livello
+                                        educativo a Valencia era molto più avanzato rispetto a quello che aveva ricevuto
+                                        a Sidi Ifni, il che la fece
+                                        sentire frustrata e sopraffatta. Il suo innato perfezionismo la spinse a
+                                        studiare incessantemente, cercando di
+                                        raggiungere e superare le sue compagne di classe. Questo sforzo costante,
+                                        sebbene estenuante, fu una
+                                        manifestazione della sua determinazione e del suo desiderio di successo.</p>
+
+                                <h2 style="color: #FFD700;">Incontro con Marina Moscardó</h2>
+                                <p>La pressione accademica portò Paz a momenti di pianto e disperazione nei corridoi
+                                        della scuola. Fu durante uno di
+                                        questi momenti che Marina Moscardó, una compagna di classe, si avvicinò a lei.
+                                        Con empatia e gentilezza, Marina
+                                        la aiutò a integrarsi nei circoli sociali della scuola, fornendo a Paz il
+                                        supporto emotivo di cui aveva tanto
+                                        bisogno. Questa amicizia non solo le offrì conforto, ma aprì anche la porta a
+                                        una vita sociale più ricca e
+                                        equilibrata.</p>
+
+                                <h2 style="color: #FFD700;">Passione per Las Fallas</h2>
+                                <p>Valencia, con la sua ricca tradizione culturale e la sua vibrante vita festiva,
+                                        presentò a Paz Arés Osset una delle
+                                        sue celebrazioni più emblematiche: Las Fallas. Questa festività, celebrata ogni
+                                        anno a marzo, catturò
+                                        immediatamente l'attenzione e il cuore di Paz. Las Fallas sono conosciute per i
+                                        loro impressionanti monumenti di
+                                        cartapesta, legno e altri materiali, che vengono costruiti durante tutto l'anno
+                                        solo per essere bruciati il 19
+                                        marzo, giorno di San Giuseppe. Questo rituale di creazione e distruzione
+                                        simboleggia la transitorietà della vita
+                                        e divenne una profonda fonte di ispirazione per Paz.</p>
+
+                                <h2 style="color: #FFD700;">Aspirazioni Accademiche e Professionali</h2>
+                                <p>L'educazione è sempre stata una profonda passione per Paz Arés Osset. Ispirata dal
+                                        suo amore per l'apprendimento e
+                                        dal suo desiderio di influenzare positivamente la vita degli altri, Paz decise
+                                        nel 1970, insieme alla sua amica
+                                        Marina Moscardó, di studiare per diventare insegnante alla Escuela de Profesores
+                                        de Valencia. Questa decisione
+                                        rifletteva non solo il suo impegno verso l'educazione, ma anche la sua
+                                        determinazione a diventare una forza di
+                                        cambiamento e supporto per le future generazioni.</p>
+
+                                <h2 style="color: #FFD700;">Influenza di Valencia sulla sua Vita e Opera</h2>
+                                <p>Il tempo che Paz Arés Osset trascorse a Valencia fu un periodo decisivo della sua
+                                        vita, segnato dalla ricca cultura e
+                                        dalle profonde tradizioni della città. Valencia, con le sue vibranti festività,
+                                        l'architettura impressionante e
+                                        la vita comunitaria attiva, offrì a Paz un ambiente propizio alla crescita
+                                        personale e artistica. La città
+                                        divenne un punto di riferimento e una costante fonte di ispirazione che
+                                        influenzò significativamente la sua
+                                        opera.</p>
+
+                                <h2 style="color: #FFD700;">Giochi Floreali</h2>
+                                <p>Quando Paz Arés Osset era una bambina, ricevette un invito molto speciale che la
+                                        riempì di orgoglio ed emozione. Il
+                                        sindaco di Valencia, riconoscendo la sua grazia, il suo fascino e il suo
+                                        potenziale, le inviò personalmente una
+                                        lettera invitandola a far parte della Cort d'Honor de la Regina dels Jocs
+                                        Florals de Valencia. Questa festività,
+                                        di grande rilevanza culturale e sociale nella regione, non solo celebrava le
+                                        tradizioni valenciane, ma onorava
+                                        anche le giovani donne che si distinguevano nella comunità.</p>
+
+
+                        </div>
+
+                        <div class="chinese language" style="display: none;">
+                                <!-- Chinese description here -->
+                                <h2 style="color: #FFD700;">返回瓦伦西亚</h2>
+                                <p>1968年，在失去西属伊弗尼后，Paz Arés Osset
+                                        的家人返回瓦伦西亚。这次回归标志着这位艺术家生活的新阶段，瓦伦西亚将成为她青春期和教学生涯初期的舞台。适应瓦伦西亚的新生活是一个挑战，但也是Paz个人和职业成长的机会。
+                                </p>
+
+                                <h2 style="color: #FFD700;">教育挑战</h2>
+                                <p>加入Escolapias学院后，Paz
+                                        面临着巨大的学术差距。瓦伦西亚的教育水平比她在西属伊弗尼接受的教育要先进得多，这使她感到沮丧和不知所措。她天生的完美主义驱使她不懈地学习，试图赶上并超越她的同学。这种持续的努力虽然很累，但也是她决心和成功欲望的体现。
+                                </p>
+
+                                <h2 style="color: #FFD700;">与Marina Moscardó 的相遇</h2>
+                                <p>学术压力导致 Paz 在学校走廊里哭泣和绝望。在这些时刻之一，Marina Moscardó，一位同班同学，走近了她。Marina 以同情和善意帮助她融入学校的社交圈，给
+                                        Paz
+                                        提供了她急需的情感支持。这段友谊不仅给了她安慰，还打开了更丰富、更平衡的社交生活的大门。</p>
+
+                                <h2 style="color: #FFD700;">对法雅节的热爱</h2>
+                                <p>瓦伦西亚以其丰富的文化传统和充满活力的节庆生活向 Paz Arés Osset 展示了其最具代表性的庆祝活动之一：法雅节。每年三月庆祝的这一节日立即吸引了 Paz
+                                        的注意力和心灵。法雅节因其令人印象深刻的纸艺、木艺和其他材料制成的纪念碑而闻名，这些纪念碑在整年建造，只为在三月十九日圣约瑟夫节那天被烧毁。这种创造和毁灭的仪式象征着生命的短暂，成为
+                                        Paz 深刻的灵感来源。</p>
+
+                                <h2 style="color: #FFD700;">学术和职业抱负</h2>
+                                <p>教育一直是 Paz Arés Osset 的深厚热情。受她对学习的热爱和积极影响他人生活的愿望所激励，Paz 在1970年与她的朋友 Marina Moscardó
+                                        一起决定在瓦伦西亚教师学院学习教育学。这个决定不仅反映了她对教育的承诺，也体现了她成为变革和支持未来几代力量的决心。</p>
+
+                                <h2 style="color: #FFD700;">瓦伦西亚对她生活和作品的影响</h2>
+                                <p>Paz Arés Osset
+                                        在瓦伦西亚度过的时光是她生命中的决定性时期，这一时期以该市丰富的文化和深厚的传统为标志。瓦伦西亚以其充满活力的节庆活动、令人印象深刻的建筑和活跃的社区生活，为
+                                        Paz
+                                        提供了一个有利于个人和艺术成长的环境。这座城市成为一个参考点和持续的灵感来源，对她的作品产生了重大影响。</p>
+
+                                <h2 style="color: #FFD700;">花卉游戏</h2>
+                                <p>当 Paz Arés Osset 还是个孩子时，她收到了一个非常特别的邀请，这让她充满了自豪和激动。瓦伦西亚市长亲自给她寄了一封信，邀请她加入瓦伦西亚Jocs
+                                        Florals
+                                        女王荣誉法院，认可她的优雅、魅力和潜力。这个节日，在该地区具有重要的文化和社会意义，不仅庆祝瓦伦西亚的传统，还表彰在社区中脱颖而出的年轻女性。</p>
+
+
+                        </div>
+
+                        <div class="arabic language" style="display: none;">
+                                <!-- Arabic  description here -->
+                                <h2 style="color: #FFD700;">العودة إلى فالنسيا</h2>
+                                <p>في عام 1968، بعد فقدان سيدي إفني، عادت عائلة باز أريس أوسيت للعيش في فالنسيا. هذه
+                                        العودة كانت بداية مرحلة جديدة في
+                                        حياة الفنانة، وأصبحت فالنسيا المسرح لمراهقتها وبداية حياتها المهنية كمدرسة.
+                                        التكيف مع الحياة الجديدة في فالنسيا
+                                        كان تحدياً، ولكنه كان أيضاً فرصة للنمو الشخصي والمهني لباس.</p>
+
+                                <h2 style="color: #FFD700;">التحديات التعليمية</h2>
+                                <p>عند انضمامها إلى مدرسة Escolapias، واجهت باز فجوة أكاديمية كبيرة. مستوى التعليم في
+                                        فالنسيا كان أكثر تقدماً بكثير مما
+                                        تلقته في سيدي إفني، مما جعلها تشعر بالإحباط والإرهاق. دفعها كمالها الفطري إلى
+                                        الدراسة بلا هوادة، محاولتاً اللحاق
+                                        بزميلاتها وتجاوزهن. هذا الجهد المستمر، رغم أنه كان مرهقاً، كان تعبيراً عن
+                                        تصميمها ورغبتها في النجاح.</p>
+
+                                <h2 style="color: #FFD700;">لقاء مع مارينا موسكاردو</h2>
+                                <p>الضغط الأكاديمي أدى ب باز إلى لحظات من البكاء واليأس في ممرات المدرسة. خلال أحد هذه
+                                        اللحظات، اقتربت منها مارينا
+                                        موسكاردو، زميلة في الصف. بفضل تعاطفها ولطفها، ساعدت مارينا باز على الاندماج في
+                                        الدوائر الاجتماعية للمدرسة، مقدمة
+                                        لها الدعم العاطفي الذي كانت بحاجة ماسة إليه. هذه الصداقة لم توفر لها الراحة فقط،
+                                        بل فتحت لها الباب أيضاً لحياة
+                                        اجتماعية أكثر غنىً وتوازناً.</p>
+
+                                <h2 style="color: #FFD700;">شغف بالفالاس</h2>
+                                <p>قدمت فالنسيا، بتقاليدها الثقافية الغنية وحياتها الاحتفالية النابضة بالحياة، لباس أريس
+                                        أوسيت واحدة من أهم احتفالاتها:
+                                        الفالاس. هذا المهرجان، الذي يحتفل به كل عام في مارس، لفت انتباه وقلب باز على
+                                        الفور. الفالاس معروفة بنصبها
+                                        التذكارية المثيرة للإعجاب المصنوعة من الورق المعجن، والخشب، ومواد أخرى، التي
+                                        تُبنى على مدار العام ليتم حرقها في
+                                        19 مارس، يوم القديس يوسف. هذا الطقس من الخلق والتدمير يرمز إلى زوال الحياة وأصبح
+                                        مصدر إلهام عميق لباس.</p>
+
+                                <h2 style="color: #FFD700;">التطلعات الأكاديمية والمهنية</h2>
+                                <p>كانت التعليم دائماً شغفاً عميقاً لباس أريس أوسيت. مستوحاة من حبها للتعلم ورغبتها في
+                                        التأثير الإيجابي على حياة
+                                        الآخرين، قررت باز في عام 1970، جنباً إلى جنب مع صديقتها مارينا موسكاردو، دراسة
+                                        التعليم في مدرسة المعلمين في
+                                        فالنسيا. هذا القرار عكس ليس فقط التزامها بالتعليم، بل أيضاً تصميمها على أن تكون
+                                        قوة للتغيير والدعم للأجيال
+                                        القادمة.</p>
+
+                                <h2 style="color: #FFD700;">تأثير فالنسيا على حياتها وأعمالها</h2>
+                                <p>كانت الفترة التي قضتها باز أريس أوسيت في فالنسيا فترة حاسمة في حياتها، تميزت بالثقافة
+                                        الغنية والتقاليد العميقة
+                                        للمدينة. قدمت فالنسيا، باحتفالاتها النابضة بالحياة وعمارتها الرائعة وحياتها
+                                        المجتمعية النشطة، لباس بيئة ملائمة
+                                        للنمو الشخصي والفني. أصبحت المدينة نقطة مرجعية ومصدر إلهام مستمر أثر بشكل كبير
+                                        على أعمالها.</p>
+
+                                <h2 style="color: #FFD700;">الألعاب الزهرية</h2>
+                                <p>عندما كانت باز أريس أوسيت طفلة، تلقت دعوة خاصة جداً ملأتها بالفخر والحماس. العمدة
+                                        فالنسيا، الذي اعترف برشاقتها وسحرها
+                                        وإمكاناتها، أرسل لها شخصياً رسالة يدعوها فيها للانضمام إلى كورت د'أونور دي لا
+                                        ريجينا ديلز جوكس فلورالس دي
+                                        فالنسيا. هذا المهرجان، الذي يحمل أهمية ثقافية واجتماعية كبيرة في المنطقة، لم
+                                        يحتفل فقط بالتقاليد الفالنسية، بل
+                                        أيضاً كرّم الشابات اللواتي تميزن في المجتمع.</p>
+
+
+                        </div>
+                </div>
+        </section>
+
+        <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('language-select').addEventListener('change', function () {
+                                // Hide all language elements
+                                document.querySelectorAll('.language').forEach(function (element) {
+                                        element.style.display = 'none';
+                                });
+
+                                // Show selected language elements
+                                document.querySelectorAll('.' + this.value).forEach(function (element) {
+                                        element.style.display = 'block';
+                                });
+                        });
                 });
-            });
-        });
-    </script>
+        </script>
 
 
 </body>
