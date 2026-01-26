@@ -1,41 +1,50 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-//document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
+// Espera a que todo el contenido HTML de la página se haya cargado
 document.addEventListener('DOMContentLoaded', function () {
+
+  // --- INICIO: CÓDIGO PARA IDIOMA POR DEFECTO ---
+  // Esta sección se asegura de que la página cargue en español
+
+  // 1. Oculta todos los elementos 'english' (que el HTML original podría mostrar)
+  document.querySelectorAll('.english').forEach(function (element) {
+    element.style.display = 'none';
+  });
+
+  // 2. Muestra todos los elementos 'spanish'
+  document.querySelectorAll('.spanish').forEach(function (element) {
+    element.style.display = 'block';
+  });
+
+  // 3. Pone el menú <select> en la opción "Español"
+  document.getElementById('language-select').value = 'spanish';
+
+  // --- FIN: CÓDIGO PARA IDIOMA POR DEFECTO ---
+
+
+  // --- INICIO: MANEJADOR DEL CAMBIO DE IDIOMA ---
+  // Este código se ejecuta CADA VEZ que el usuario cambia el idioma en el <select>
   document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
+
+    // 1. Oculta TODOS los elementos de idioma
     document.querySelectorAll('.language').forEach(function (element) {
       element.style.display = 'none';
     });
 
-    // Show selected language elements
+    // 2. Muestra SÓLO los elementos del idioma seleccionado
+    // (Usa el 'value' del select, ej: "spanish", "english", etc.)
     document.querySelectorAll('.' + this.value).forEach(function (element) {
       element.style.display = 'block';
     });
   });
+  // --- FIN: MANEJADOR DEL CAMBIO DE IDIOMA ---
 
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
+
+  // --- INICIO: SCRIPT DE ZOOM PARA MÓVILES (TOUCH) ---
+  // (Este código venía en tu HTML original, lo he movido aquí)
   var zoomImages = document.querySelectorAll('.zoom-image');
 
-  // Recorre todas las imágenes
   zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
     var isZoomed = false;
 
-    // Función para realizar el zoom en la imagen
     function zoomImage() {
       if (isZoomed) {
         image.style.transform = 'scale(1)';
@@ -46,31 +55,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Asigna el evento touchstart (toque) a la imagen
+    // Al tocar la imagen
     image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
+      event.preventDefault(); // Evita comportamientos extraños del navegador
+      zoomImage(); // Aplica el zoom
 
-      // Establece un temporizador para reducir el zoom después de 3 segundos
+      // Quita el zoom automáticamente después de 3 segundos
       setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
+        zoomImage();
       }, 3000);
     });
   });
-
-  ////
-
+  // --- FIN: SCRIPT DE ZOOM ---
 
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });

@@ -24,6 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.' + this.value).forEach(function (element) {
       element.style.display = 'block';
     });
+
+    // Switch comic image
+    var comicImage = document.getElementById('comic-image');
+    var language = this.value;
+    var imageMap = {
+      'english': 'assets/comic-english.jpg',
+      'spanish': 'assets/comic-spanish.jpg',
+      'chinese': 'assets/comic-chinese.jpg',
+      'arabic': 'assets/comic-arabic.jpg',
+      'italian': 'assets/comic-italian.jpg',
+      'russian': 'assets/comic-russian.jpg',
+      'french': 'assets/comic-french.jpg'
+    };
+
+    if (imageMap[language]) {
+      comicImage.src = imageMap[language];
+    }
   });
 
   ////

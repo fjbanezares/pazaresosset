@@ -20,10 +20,12 @@
   <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
     <select id="language-select" class="custom-select-lg">
       <option value="english">English</option>
-      <option value="spanish">Español</option>
+      <option value="spanish" selected>Español</option>
       <option value="italian">Italiano</option>
       <option value="chinese">中文</option>
       <option value="arabic">العربية</option>
+      <option value="russian">Русский</option>
+      <option value="french">Français</option>
     </select>
   </div>
 
@@ -41,24 +43,34 @@
 
 
       <h1 class="jumbotron-heading">
-        <div class="english language">You Smell of Love</div>
-        <div class="spanish language" style="display: none;">Hueles a Amor</div>
+        <div class="english language" style="display: none;">You Smell of Love</div>
+        <div class="spanish language">Hueles a Amor</div>
         <div class="italian language" style="display: none;">Profumi d'Amore</div>
         <div class="chinese language" style="display: none;">你闻起来像爱情</div>
         <div class="arabic language" style="display: none;">أنت تفوحين بعطر الحب</div>
+        <div class="russian language" style="display: none;">Ты пахнешь любовью</div>
+        <div class="french language" style="display: none;">Tu sens l'amour</div>
 
       </h1>
 
 
       <div class="lead text-muted">
-        <div class="english language">A beautiful poem about love, nature, and tranquility.</div>
-        <div class="spanish language" style="display: none;">Un hermoso poema sobre el amor, la naturaleza y la
+        <div class="english language" style="display: none;">A beautiful poem about love, nature, and tranquility.</div>
+        <div class="spanish language">Un hermoso poema sobre el amor, la naturaleza y la
           tranquilidad.
         </div>
         <div class="italian language" style="display: none;">Un bellissimo poema sull'amore, la natura e la
           tranquillità.</div>
         <div class="chinese language" style="display: none;">一首关于爱情、自然和宁静的美丽诗歌。</div>
         <div class="arabic language" style="display: none;">قصيدة جميلة عن الحب والطبيعة والهدوء.</div>
+        <div class="russian language" style="display: none;">Прекрасное стихотворение о любви, природе и спокойствии.
+        </div>
+        <div class="french language" style="display: none;">Un beau poème sur l'amour, la nature et la tranquillité.
+        </div>
+      </div>
+
+      <div class="text-center">
+        <img id="comic-image" src="assets/comic-spanish.jpg" class="comic-style" alt="Comic interpretation of the poem">
       </div>
 
     </div>
@@ -80,15 +92,17 @@
     <div class="container">
 
       <h1 style="color: gold;">
-        <div class="english language">You Smell of Love</div>
-        <div class="spanish language" style="display: none;">Hueles a Amor</div>
+        <div class="english language" style="display: none;">You Smell of Love</div>
+        <div class="spanish language">Hueles a Amor</div>
         <div class="italian language" style="display: none;">Profumi d'Amore</div>
         <div class="chinese language" style="display: none;">你闻起来像爱情</div>
         <div class="arabic language" style="display: none;">أنت تفوحين بعطر الحب</div>
+        <div class="russian language" style="display: none;">Ты пахнешь любовью</div>
+        <div class="french language" style="display: none;">Tu sens l'amour</div>
 
       </h1>
 
-      <div class="english language">
+      <div class="english language" style="display: none;">
         <!-- English description here -->
         <br>
         <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
@@ -126,7 +140,7 @@
 
       </div>
 
-      <div class="spanish language" style="display: none;">
+      <div class="spanish language">
         <br>
         <!-- Spanish description here -->
         <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
@@ -275,6 +289,64 @@
 
       </div>
 
+      <div class="russian language" style="display: none;">
+        <br>
+        <!-- Russian description here -->
+        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+          <br>
+          <p>Ты пахнешь любовью среди цветов,</p>
+          <p>Под закатом у золотого дуба...</p>
+          <p>В моих объятиях спит солнце...</p>
+          <p>Всё отдыхает... свет гаснет...</p>
+          <br>
+          <p>Вечный свет меркнет...</p>
+          <p>как твои глаза в моём взгляде.</p>
+          <br>
+          <p>Как я тебя люблю!</p>
+          <p>Как я тебя люблю!</p>
+          <br>
+          <p>В твоей улыбке всё затихает...</p>
+          <p>Мир спокойный достигает моей души.</p>
+          <br>
+          <p>Закрой глаза, девушка из снов!</p>
+          <p>Как я люблю твою радостную любовь!</p>
+          <br>
+          <p>Милая девушка, любовь моя, жизнь моя;</p>
+          <p>среди переплетённых зарослей,</p>
+          <p>среди песен соловьев,</p>
+          <p>ты пахнешь любовью среди цветов.</p>
+        </div>
+      </div>
+
+      <div class="french language" style="display: none;">
+        <br>
+        <!-- French description here -->
+        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+          <br>
+          <p>Tu sens l'amour parmi les fleurs,</p>
+          <p>Sous le coucher de soleil du chêne vert doré,</p>
+          <p>Dans mes bras, le soleil s'endort...</p>
+          <p>Tout se repose...</p>
+          <p>La lumière faiblit...</p>
+          <br>
+          <p>La lumière éternelle s'estompe...</p>
+          <p>Comme tes yeux dans mon regard.</p>
+          <br>
+          <p>Comme je t'aime !</p>
+          <p>Comme je t'aime !</p>
+          <br>
+          <p>Dans ton sourire, tout se calme...</p>
+          <p>La paix tranquille arrive à mon âme.</p>
+          <br>
+          <p>Ferme les yeux, fille enchanteresse !</p>
+          <p>Comme ton amour souriant me ravit !</p>
+          <br>
+          <p>Jolie fille, mon amour, ma vie,</p>
+          <p>Parmi les buissons entrelacés,</p>
+          <p>Parmi les chants des rossignols,</p>
+          <p>Tu sens l'amour parmi les fleurs.</p>
+        </div>
+      </div>
 
     </div>
   </section>

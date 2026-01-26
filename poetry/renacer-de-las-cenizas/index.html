@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Renacer de las Cenizas</title>
+  <link rel="icon" type="image/png" href="../../favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+    <select id="language-select" class="custom-select-lg">
+      <option value="english">English</option>
+      <option value="spanish">Español</option>
+      <option value="italian">Italiano</option>
+      <option value="chinese">中文</option>
+      <option value="arabic">العربية</option>
+      <option value="russian">Русский</option>
+    </select>
+  </div>
+
+
+  <section class="jumbotron text-center">
+    <div class="container">
+
+      <a class="brand" href="https://www.pazaresosset.es">
+        <img src="../../logopazares.png" style="
+        position:absolute; 
+        margin: 10px;
+        top:0px; 
+        left:0px;" alt="Paz Arés Osset, the Artist">
+      </a>
+
+
+      <h1 class="jumbotron-heading">
+        <div class="english language" style="display: none;">Rebirth from the Ashes</div>
+        <div class="spanish language">Renacer de las Cenizas</div>
+        <div class="italian language" style="display: none;">Rinascere dalle Ceneri</div>
+        <div class="chinese language" style="display: none;">灰烬重生</div>
+        <div class="arabic language" style="display: none;">النهوض من الرماد</div>
+        <div class="russian language" style="display: none;">Возрождение из пепла</div>
+      </h1>
+
+
+      <div class="lead text-muted">
+        <div class="english language" style="display: none;">a poem inspired by the fires that devastated Spain in the
+          summer of 2025</div>
+        <div class="spanish language">un poema inspirado en los incendios que asolaron Espana en verano de 2025</div>
+        <div class="italian language" style="display: none;">una poesia ispirata agli incendi che hanno devastato la
+          Spagna nell'estate del 2025</div>
+        <div class="chinese language" style="display: none;">一首灵感源于2025年夏天席卷西班牙大火的诗</div>
+        <div class="arabic language" style="display: none;">قصيدة مستوحاة من الحرائق التي اجتاحت إسبانيا في صيف 2025
+        </div>
+        <div class="russian language" style="display: none;">поэма, вдохновленная пожарами, опустошившими Испанию летом
+          2025 года</div>
+      </div>
+
+      <div class="music-button-container" style="margin-top: 25px;">
+        <div class="english language" style="display: none;">
+          <a href="https://open.spotify.com/track/TUTRACHDEEJEMPLO1" target="_blank" class="btn-spotify">
+            🎵 Listen to the song
+          </a>
+        </div>
+        <div class="spanish language">
+          <a href="https://open.spotify.com/track/TUTRACHDEEJEMPLO1" target="_blank" class="btn-spotify">
+            🎵 Escuchar la canción
+          </a>
+        </div>
+        <div class="italian language" style="display: none;">
+          <a href="https://open.spotify.com/track/TUTRACHDEEJEMPLO1" target="_blank" class="btn-spotify">
+            🎵 Ascolta la canzone
+          </a>
+        </div>
+        <div class="chinese language" style="display: none;">
+          <a href="https://open.spotify.com/track/TUTRACHDEEJEMPLO1" target="_blank" class="btn-spotify">
+            🎵 听这首歌
+          </a>
+        </div>
+        <div class="arabic language" style="display: none;" dir="rtl">
+          <a href="https://open.spotify.com/track/TUTRACHDEEJEMPLO1" target="_blank" class="btn-spotify">
+            🎵 استمع للأغنية
+          </a>
+        </div>
+        <div class="russian language" style="display: none;">
+          <a href="https://open.spotify.com/track/TUTRACHDEEJEMPLO1" target="_blank" class="btn-spotify">
+            🎵 Слушать песню
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="multilingual-description">
+    <div class="container">
+
+      <h1 style="color: gold;">
+        <div class="english language" style="display: none;">Rebirth from the Ashes</div>
+        <div class="spanish language">Renacer de las Cenizas</div>
+        <div class="italian language" style="display: none;">Rinascere dalle Ceneri</div>
+        <div class="chinese language" style="display: none;">灰烬重生</div>
+        <div class="arabic language" style="display: none;">النهوض من الرماد</div>
+        <div class="russian language" style="display: none;">Возрождение из пепла</div>
+      </h1>
+
+
+      <div class="english language" style="display: none;">
+        <p style="line-height: 1.5; font-size: 0.8em;">
+          This year, more than any other,<br>
+          Spain burned without control,<br>
+          thousands of green hectares,<br>
+          today ashes under the sun.<br>
+          As the fire advances relentlessly, the animals flee without stopping,<br>
+          seeking a safe place to take refuge.<br>
+          On the beach of Tarifa,<br>
+          my mind flies to the mountain,<br>
+          they tell me of its skin,<br>
+          once so green, today burned.<br>
+          <br>
+          The pines, once home to trees<br>
+          today are black skeletons,<br>
+          and the rabbits flee terrified,<br>
+          seeking a new Eden.<br>
+          <br>
+          The butterflies, with no flowers to kiss,<br>
+          and the bees, with no pollen to carry,<br>
+          wander lost, with no direction or peace.<br>
+          The earth is sad, the children cry for their friends, the trees,<br>
+          <br>
+          and I know that life is reborn, and will bloom again.<br>
+          And although the fire burns strong, hope will shine,<br>
+          because life always finds a way to continue.<br>
+          <br>
+          And in the silence, the earth breathes deeply,<br>
+          holding in its womb the promise of tomorrow.<br>
+          Because although the fire dances rabidly in memory,<br>
+          life, like a phoenix, always rises.<br>
+          <br>
+          And I, a witness to this duel between ashes and hope,<br>
+          know that green will return to paint these mountains.<br>
+          For this, the strength of my voice will join the wind,<br>
+          and together we will sow the seed of a new beginning.<br>
+          With prayers to heaven, I will ask for this rebirth.
+        </p>
+        <br>
+        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+        </div>
+        <br>
+      </div>
+
+      <div class="spanish language">
+        <br>
+        <p style="line-height: 1.5; font-size: 0.8em;">
+          Este año, más que ningún otro,<br>
+          España ardió sin control,<br>
+          miles de hectáreas verdes,<br>
+          hoy cenizas bajo el sol.<br>
+          Mientras el fuego avanza implacable, los animales huyen sin cesar,<br>
+          buscando un lugar seguro donde poderse refugiar.<br>
+          En la playa de Tarifa,<br>
+          mi mente vuela a la montaña,<br>
+          me cuentan de su piel,<br>
+          antes tan verde, hoy quemada.<br>
+          <br>
+          Los pinos, antes hogar de árboles<br>
+          hoy son esqueletos negros,<br>
+          y los conejos huyen despavoridos,<br>
+          buscando un nuevo edén.<br>
+          <br>
+          Las mariposas, sin flores que besar,<br>
+          y las abejas, sin polen que llevar,<br>
+          vagan perdidas, sin rumbo ni paz.<br>
+          La tierra está triste, los niños lloran por sus amigos, los árboles,<br>
+          <br>
+          y sé que la vida renace, y volverá a florecer.<br>
+          Y aunque el fuego queme fuerte, la esperanza brillará,<br>
+          porque la vida siempre encuentra la forma de continuar.<br>
+          <br>
+          Y en el silencio, la tierra respira hondo,<br>
+          guardando en su vientre la promesa del mañana.<br>
+          Porque aunque el fuego baile rabioso en la memoria,<br>
+          la vida, cual ave fénix, siempre se levanta.<br>
+          <br>
+          Y yo, testigo de este duelo entre cenizas y esperanza,<br>
+          sé que el verde volverá a pintar estas montañas.<br>
+          Para ello, la fuerza de mi voz se unirá al viento,<br>
+          y juntos sembraremos la semilla de un nuevo comienzo.<br>
+          Con oraciones al cielo, pediré por este renacimiento.
+        </p>
+
+        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+        </div>
+        <br>
+      </div>
+
+      <div class="italian language" style="display: none;">
+        <p style="line-height: 1.5; font-size: 0.8em;">
+          Quest'anno, più di ogni altro,<br>
+          la Spagna è bruciata senza controllo,<br>
+          migliaia di ettari verdi,<br>
+          oggi cenere sotto il sole.<br>
+          Mentre il fuoco avanza implacabile, gli animali fuggono senza sosta,<br>
+          cercando un luogo sicuro dove rifugiarsi.<br>
+          Sulla spiaggia di Tarifa,<br>
+          la mia mente vola alla montagna,<br>
+          mi raccontano della sua pelle,<br>
+          un tempo così verde, oggi bruciata.<br>
+          <br>
+          I pini, un tempo dimora di alberi<br>
+          oggi sono scheletri neri,<br>
+          e i conigli fuggono terrorizzati,<br>
+          cercando un nuovo Eden.<br>
+          <br>
+          Le farfalle, senza fiori da baciare,<br>
+          e le api, senza polline da portare,<br>
+          vagano perse, senza meta né pace.<br>
+          La terra è triste, i bambini piangono per i loro amici, gli alberi,<br>
+          <br>
+          e so che la vita rinasce, e tornerà a fiorire.<br>
+          E anche se il fuoco brucia forte, la speranza brillerà,<br>
+          perché la vita trova sempre il modo di continuare.<br>
+          <br>
+          E nel silenzio, la terra respira profondamente,<br>
+          custodendo in grembo la promessa del domani.<br>
+          Perché anche se il fuoco danza rabbioso nella memoria,<br>
+          la vita, come una fenice, si rialza sempre.<br>
+          <br>
+          E io, testimone di questo duello tra ceneri e speranza,<br>
+          so che il verde tornerà a dipingere queste montagne.<br>
+          Per questo, la forza della mia voce si unirà al vento,<br>
+          e insieme semineremo il seme di un nuovo inizio.<br>
+          Con preghiere al cielo, chiederò per questa rinascita.
+        </p>
+
+        <br>
+        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+        </div>
+        <br>
+      </div>
+
+      <div class="chinese language" style="display: none;">
+        <p style="line-height: 1.5; font-size: 0.8em;">
+          今年，比以往任何时候都更甚，<br>
+          西班牙的火焰失控地燃烧，<br>
+          成千上万公顷的绿色，<br>
+          如今在阳光下化为灰烬。<br>
+          当大火无情地推进，动物们不停地逃离，<br>
+          寻找一个可以避难的安全之地。<br>
+          在塔里法的海滩上，<br>
+          我的思绪飞向那座山，<br>
+          他们告诉我关于它的皮肤，<br>
+          曾经那般翠绿，如今已焦黑一片。<br>
+          <br>
+          松树，曾经是树木的家园，<br>
+          今天已是黑色的骨架，<br>
+          兔子们惊恐地逃窜，<br>
+          寻找一个新的伊甸园。<br>
+          <br>
+          蝴蝶，没有花朵可吻，<br>
+          蜜蜂，没有花粉可采，<br>
+          它们迷失地游荡，没有方向，没有安宁。<br>
+          大地在悲伤，孩子们为他们的朋友树木而哭泣，<br>
+          <br>
+          但我知道生命会重生，并会再次绽放。<br>
+          尽管火焰猛烈燃烧，希望仍将闪耀，<br>
+          因为生命总能找到继续下去的方式。<br>
+          <br>
+          在寂静中，大地深深地呼吸，<br>
+          在它的怀中守护着明天的承诺。<br>
+          因为尽管火焰在记忆中狂舞，<br>
+          生命，如同凤凰，总会浴火重生。<br>
+          <br>
+          而我，这场灰烬与希望之争的见证者，<br>
+          知道绿色将重回这些山峦。<br>
+          为此，我声音的力量将汇入风中，<br>
+          我们将一同播下新起点的种子。<br>
+          我将向天空祈祷，祈求这次重生。
+        </p>
+
+        <br>
+        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+        </div>
+        <br>
+      </div>
+
+      <div class="arabic language" style="display: none;" dir="rtl">
+        <br>
+        <p style="line-height: 1.5; font-size: 0.8em; text-align: right;">
+          هذا العام، أكثر من أي عام مضى،<br>
+          اشتعلت إسبانيا بلا حسيب ولا رقيب،<br>
+          آلاف الهكتارات الخضراء،<br>
+          أصبحت اليوم رماداً تحت الشمس.<br>
+          بينما تتقدم النار بلا هوادة، تهرب الحيوانات بلا توقف،<br>
+          تبحث عن مكان آمن تلجأ إليه.<br>
+          على شاطئ طريفة،<br>
+          عقلي يطير إلى الجبل،<br>
+          يخبرونني عن جلده،<br>
+          الذي كان أخضر يانعاً، واليوم احترق.<br>
+          <br>
+          أشجار الصنوبر، التي كانت موطناً للأشجار<br>
+          أصبحت اليوم هياكل عظمية سوداء،<br>
+          والأرانب تهرب مذعورة،<br>
+          تبحث عن جنة جديدة.<br>
+          <br>
+          الفراشات، لا زهور لتقبيلها،<br>
+          والنحل، لا رحيق لحمله،<br>
+          يهيمون ضائعين، بلا وجهة ولا سلام.<br>
+          الأرض حزينة، الأطفال يبكون على أصدقائهم، الأشجار،<br>
+          <br>
+          وأنا أعلم أن الحياة تولد من جديد، وستزهر مرة أخرى.<br>
+          ورغم أن النار تحرق بقوة، فإن الأمل سيشع،<br>
+          لأن الحياة تجد دائماً طريقة للاستمرار.<br>
+          <br>
+          وفي الصمت، تتنفس الأرض بعمق،<br>
+          تحتفظ في رحمها بوعد الغد.<br>
+          لأنه حتى لو رقصت النار بغضب في الذاكرة،<br>
+          فإن الحياة، كطائر الفينيق، تنهض دائماً.<br>
+          <br>
+          وأنا، الشاهد على هذا الصراع بين الرمAD والأمل،<br>
+          أعلم أن الخضرة ستعود لتلون هذه الجبال.<br>
+          لأجل ذلك، ستتحد قوة صوتي مع الريح،<br>
+          وسنبذر معاً بذرة بداية جديدة.<br>
+          بالصلوات إلى السماء، سأطلب هذا البعث الجديد.
+        </p>
+
+        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+        </div>
+      </div>
+
+      <div class="russian language" style="display: none;">
+        <p style="line-height: 1.5; font-size: 0.8em;">
+          В этом году, больше чем когда-либо,<br>
+          Испания горела бесконтрольно,<br>
+          тысячи зеленых гектаров,<br>
+          сегодня — пепел под солнцем.<br>
+          Пока огонь неумолимо наступает, животные бегут без остановки,<br>
+          ища безопасное место, где можно укрыться.<br>
+          На пляже Тарифы,<br>
+          мой разум летит к горе,<br>
+          мне рассказывают о ее коже,<br>
+          раньше такой зеленой, сегодня сожженной.<br>
+          <br>
+          Сосны, бывшие домом для деревьев<br>
+          сегодня — черные скелеты,<br>
+          и кролики бегут в ужасе,<br>
+          ища новый Эдем.<br>
+          <br>
+          Бабочки, без цветов для поцелуев,<br>
+          и пчелы, без пыльцы, чтобы нести,<br>
+          бродят потерянные, без направления и покоя.<br>
+          Земля грустит, дети плачут о своих друзьях, деревьях,<br>
+          <br>
+          и я знаю, что жизнь возрождается и снова зацветет.<br>
+          И хотя огонь горит сильно, надежда будет сиять,<br>
+          потому что жизнь всегда находит способ продолжаться.<br>
+          <br>
+          И в тишине земля глубоко дышит,<br>
+          храня в своем чреве обещание завтрашнего дня.<br>
+          Потому что, хотя огонь яростно танцует в памяти,<br>
+          жизнь, как феникс, всегда восстает.<br>
+          <br>
+          И я, свидетель этой дуэли между пеплом и надеждой,<br>
+          знаю, что зелень снова раскрасит эти горы.<br>
+          Для этого сила моего голоса соединится с ветром,<br>
+          и вместе мы посеем семя нового начала.<br>
+          С молитвами к небу я буду просить об этом возрождении.
+        </p>
+
+        <br>
+        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+        </div>
+        <br>
+      </div>
+
+
+    </div>
+  </section>
+
+  <script src="base.js"></script>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    var zoomImages = document.querySelectorAll('.zoom-image');
+
+    zoomImages.forEach(function (image) {
+      image.addEventListener('touchstart', function () {
+        image.classList.toggle('hover');
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

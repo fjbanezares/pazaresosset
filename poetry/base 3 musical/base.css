@@ -1,0 +1,112 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+  background-color: black;
+  font-size: 1.7rem;
+}
+
+/* ===== CABECERA (JUMBOTRON) ===== */
+.jumbotron {
+  background-color: black;
+  color: #fff;
+}
+
+.jumbotron h1 {
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: magenta;
+  font-weight: 700;
+}
+
+/* ===== SELECTOR DE IDIOMA ===== */
+.custom-select-lg {
+  font-size: 3rem;
+  line-height: 1.2;
+  padding: .5rem 1rem;
+  height: auto;
+}
+
+/* ===== SECCIÓN DEL POEMA ===== */
+.multilingual-description {
+  font-size: 3rem;
+  /* Tamaño de letra base grande para esta sección */
+  margin-top: 30px;
+  border: 2px solid magenta;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: black;
+  color: #fff;
+}
+
+/* ===== OTRAS CLASES (puedes borrarlas si no las usas) ===== */
+.language-desc {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.main-description {
+  margin-top: 20px;
+}
+
+.description {
+  margin: 12px;
+  color: white;
+  font-family: 'Lemonada', cursive;
+}
+
+.audio {
+  text-align: center;
+  border: 20px;
+  padding: 0;
+  margin: 0;
+  width: min-content;
+  height: min-content;
+  top: 40px;
+}
+
+.buttonAudio {
+  top: 200px;
+}
+
+/* ===== ZOOM DE IMÁGENES ===== */
+.zoom-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.zoom-image {
+  transition: transform 0.9s ease;
+}
+
+.zoom-image:hover {
+  transform: scale(1.2);
+}
+
+/* ===== BOTÓN DE MÚSICA (SPOTIFY) ===== */
+.btn-spotify {
+  display: inline-block;
+  /* Para que respete padding y margin */
+  padding: 10px 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: #1DB954;
+  /* Color verde de Spotify */
+  color: white !important;
+  /* !important para forzar el color blanco */
+  text-decoration: none;
+  /* Quita el subrayado del enlace */
+  border-radius: 50px;
+  /* Bordes redondeados */
+  font-weight: bold;
+  font-size: 0.8em;
+  /* Tamaño de letra relativo al contenedor (Jumbotron) */
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease;
+  /* Animación suave al pasar el ratón */
+}
+
+.btn-spotify:hover {
+  background-color: #1ed760;
+  /* Verde más brillante al pasar el ratón */
+  color: white !important;
+  text-decoration: none;
+}
