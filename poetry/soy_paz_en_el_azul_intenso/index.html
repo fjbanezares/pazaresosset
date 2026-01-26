@@ -20,10 +20,11 @@
   <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
     <select id="language-select" class="custom-select-lg">
       <option value="english">English</option>
-      <option value="spanish">Español</option>
+      <option value="spanish" selected>Español</option>
       <option value="italian">Italiano</option>
       <option value="chinese">中文</option>
       <option value="arabic">العربية</option>
+      <option value="russian">Русский</option>
     </select>
   </div>
 
@@ -41,19 +42,21 @@
 
 
       <h1 class="jumbotron-heading">
-        <div class="english language">I am Peace in the Deep Blue</div>
-        <div class="spanish language" style="display: none;">Soy Paz en el Azul Intenso</div>
+        <div class="english language" style="display: none;">I am Peace in the Deep Blue</div>
+        <div class="spanish language">Soy Paz en el Azul Intenso</div>
         <div class="italian language" style="display: none;">Sono Pace nell'Azzurro Intenso</div>
         <div class="chinese language" style="display: none;">我在深蓝中是和平</div>
         <div class="arabic language" style="display: none;">أنا السلام في الأزرق العميق</div>
+        <div class="russian language" style="display: none;">Я — Мир в Глубокой Синеве</div>
       </h1>
 
 
       <div class="lead text-muted">
-        <div class="english language">Embracing the Ocean's Immensity: A journey through the deep blues, where peace
+        <div class="english language" style="display: none;">Embracing the Ocean's Immensity: A journey through the deep
+          blues, where peace
           envelops
           and love dances with the waves.</div>
-        <div class="spanish language" style="display: none;">Abrazando la Inmensidad del Océano: Un viaje a través del
+        <div class="spanish language">Abrazando la Inmensidad del Océano: Un viaje a través del
           intenso azul, donde la
           paz
           envuelve y el amor baila con las olas.</div>
@@ -64,12 +67,43 @@
         <div class="arabic language" style="display: none;">احتضان عظمة المحيط: رحلة عبر الأزرق العميق، حيث تحيط السلام
           وترقص
           الحب مع الأمواج.</div>
+        <div class="russian language" style="display: none;">Объятия необъятного океана: путешествие по глубокой синеве,
+          где мир окутывает, а любовь танцует с волнами.</div>
       </div>
 
     </div>
   </section>
 
-  <!-- Rest of the HTML here... -->
+  <!-- Imagen, Spotify y Linktree -->
+  <!-- Multimedia Section: Comic & Audio (Dark Theme) -->
+  <section class="text-center pb-5 pt-3" style="background-color: #000000;">
+    <div class="container">
+
+      <!-- Imagen -->
+      <div class="mb-5">
+        <img id="comic-image" src="comic_soy_paz/soy_paz_spanish.png" class="img-fluid rounded shadow-lg"
+          alt="Arte del poema" style="max-height: 800px; border: 1px solid #333;">
+      </div>
+
+      <!-- Discrete Audio Buttons -->
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <!-- Audio Controls Row -->
+          <div class="d-flex justify-content-center align-items-center mb-3">
+            <a id="audio-button" href="https://music.youtube.com/watch?v=AqlUQSR9fok&si=dPrzhwOQwMUGvliC"
+              target="_blank" class="btn btn-sm rounded-pill mx-2 px-4 py-2"
+              style="background: linear-gradient(45deg, #1DB954, #1ed760); color: white; border: none; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(30, 215, 96, 0.4); text-transform: uppercase;">
+              <i class="fas fa-play mr-2"></i> Escuchar Música
+            </a>
+            <a href="../../linktree.html" class="btn btn-outline-light btn-sm rounded-pill mx-2 px-3">
+              <i class="fas fa-link"></i> Linktree
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- <section class="main-description">
     <div class="container">
@@ -85,14 +119,15 @@
     <div class="container">
 
       <h1 style="color: gold;">
-        <div class="english language">I am Peace in the Deep Blue</div>
-        <div class="spanish language" style="display: none;">Soy Paz en el Azul Intenso</div>
+        <div class="english language" style="display: none;">I am Peace in the Deep Blue</div>
+        <div class="spanish language">Soy Paz en el Azul Intenso</div>
         <div class="italian language" style="display: none;">Sono Pace nell'Azzurro Intenso</div>
         <div class="chinese language" style="display: none;">我在深蓝中是和平</div>
         <div class="arabic language" style="display: none;">أنا السلام في الأزرق العميق</div>
+        <div class="russian language" style="display: none;">Я — Мир в Глубокой Синеве</div>
       </h1>
 
-      <div class="english language">
+      <div class="english language" style="display: none;">
         <!-- English description here -->
         <br>
         <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
@@ -189,7 +224,7 @@
 
       </div>
 
-      <div class="spanish language" style="display: none;">
+      <div class="spanish language">
         <br>
         <!-- Spanish description here -->
         <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
@@ -577,6 +612,98 @@
 
 
 
+      </div>
+
+      <div class="russian language" style="display: none;">
+        <br>
+        <div
+          style="line-height: 1.2; color: limegreen; background-color: black; font-size: 0.8em; padding: 20px; border: 1px solid #333;">
+          <p>Лазурная бескрайность океана...</p>
+          <p>В его покое я ныряю вновь.</p>
+          <p>Вода ласкает... словно берег странный,</p>
+          <p>Пузырьки дарят нежную любовь.</p>
+          <br>
+          <p>Закатом тихим в небе наслаждаюсь,</p>
+          <p>Танцует он на кромке бытия.</p>
+          <p>Я факел ввысь поднять не побоялась,</p>
+          <p>Чтоб тьма исчезла в свете, став ничья.</p>
+          <br>
+          <p>Огонь мой дух согреет, наполняя,</p>
+          <p>Любовь растет, пожаром в сердце бьет.</p>
+          <p>Она лучится, искрами сияя,</p>
+          <p>Я — как волна, что в танце вод плывет.</p>
+          <br>
+          <p>Океан живительной влаги,</p>
+          <p>Щедрая мать-земля,</p>
+          <p>Воздух, чистый отваги,</p>
+          <p>Огонь, освещающий поля.</p>
+          <br>
+          <p>Прошу отваги в душе моей,</p>
+          <p>Что ищет мира и покоя,</p>
+          <p>Что жаждет любви сильней,</p>
+          <p>Чтоб тьму прогнать, не зная боя.</p>
+          <br>
+          <p>Что к жизни стремится вечной,</p>
+          <p>Чтоб природу святую хранить,</p>
+          <p>Чтоб к твари любой, беспечной,</p>
+          <p>Состраданье в душе взрастить.</p>
+          <br>
+          <p>Что хочет чистоты небесной,</p>
+          <p>Чтоб больше мир не отравлять,</p>
+          <p>Чтоб с любовью, в тиши чудесной,</p>
+          <p>Яд и грязь вокруг не умножать.</p>
+          <br>
+          <p>Океаны стонут от пластика!</p>
+          <p>В воде — мышьяк и линдан!</p>
+          <p>Земля — пестицидов гимнастика!</p>
+          <p>Воздух — в химтрейлах, как капкан.</p>
+          <br>
+          <p>Друзья наши звери — под пыткой!</p>
+          <p>Братья наши звери — в беде!</p>
+          <p>Слуги-деревья — под пилкой,</p>
+          <p>Гибнут в огне и в узде.</p>
+          <br>
+          <p>Тайная война косит жизни плод,</p>
+          <p>Третья мировая — в тени идет!</p>
+          <br>
+          <p>Лишь сила Любви неизменна!!</p>
+          <p>Революция — в каждом из нас.</p>
+          <p>Я пламя Духа взметну вдохновенно,</p>
+          <p>Мой личный бунт — в этот час.</p>
+          <br>
+          <p>Я жизнью вдохну, не смертью,</p>
+          <p>В живых лесах буду дышать.</p>
+          <p>В морях я омоюсь твердью,</p>
+          <p>Танцы мира буду плясать.</p>
+          <br>
+          <p>Себя полюблю, окрепну я,</p>
+          <p>Искусством и словом наполнюсь.</p>
+          <p>Музыкой высокой плененная,</p>
+          <p>В путь далекий отправлюсь.</p>
+          <br>
+          <p>Миллион садов посажу я,</p>
+          <p>Миллион друзей позову в круга.</p>
+          <p>Чтоб все существа, ликуя,</p>
+          <p>Стали единым берегом луга.</p>
+          <br>
+          <p>Сейчас! Настала любви революция,</p>
+          <p>Мы — голос Души, мы — ее путь.</p>
+          <p>Мы — Любви и Света конституция,</p>
+          <p>Мы в Сердце нашли свою суть.</p>
+          <br>
+          <p>Мы едины.</p>
+          <p>Мы — волны океана,</p>
+          <p>Мы — лазурь небес,</p>
+          <p>Мы — синева без изъяна,</p>
+          <p>Мы — воды святой воскрес.</p>
+          <p>Мы — мечта, что стала явью,</p>
+          <p>Мы — победа над грязью и злом.</p>
+          <br>
+          <p>Мы — свет во тьме, за гранью,</p>
+          <p>Мы — искры во мраке былом.</p>
+          <p>Тьмы нет больше нигде,</p>
+          <p>Только Свет.</p>
+        </div>
       </div>
 
 

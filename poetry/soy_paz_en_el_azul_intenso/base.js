@@ -24,6 +24,40 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.' + this.value).forEach(function (element) {
       element.style.display = 'block';
     });
+
+    // Switch comic image
+    var comicImage = document.getElementById('comic-image');
+    var language = this.value;
+    var imageMap = {
+      'english': 'comic_soy_paz/soy_paz_english.png',
+      'spanish': 'comic_soy_paz/soy_paz_spanish.png',
+      'chinese': 'comic_soy_paz/soy_paz_chino.png',
+      'arabic': 'comic_soy_paz/soy_paz_arabe.png',
+      'italian': 'comic_soy_paz/soy_paz_italian.png',
+      'russian': 'comic_soy_paz/soy_paz_russian.png'
+    };
+
+    var audioMap = {
+      'english': 'https://music.youtube.com/watch?v=Z_F9gXYroEs&si=bPOOXWJihFHwjDcV',
+      'spanish': 'https://music.youtube.com/watch?v=AqlUQSR9fok&si=dPrzhwOQwMUGvliC',
+      'chinese': 'https://music.youtube.com/watch?v=w1qnTANZJSY&si=w86alTIJNSmg8Nh8',
+      'italian': 'https://music.youtube.com/watch?v=qSfJ1RAbImg&si=CVxFaw2Dpa1eFtqH',
+      'russian': 'https://music.youtube.com/watch?v=bO8kbEGB-Jk&si=YQ7s46Q7wL8IVR87',
+      'arabic': 'https://music.youtube.com/channel/UC2k23Asvrz31iE8pPTPSNwQ'
+    };
+
+    if (imageMap[language]) {
+      comicImage.src = imageMap[language];
+    }
+
+    var audioButton = document.getElementById('audio-button');
+    if (audioMap[language]) {
+      audioButton.href = audioMap[language];
+      audioButton.style.display = 'inline-block';
+    } else {
+      audioButton.href = 'https://music.youtube.com/watch?v=AqlUQSR9fok&si=dPrzhwOQwMUGvliC';
+    }
+
   });
 
   ////

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paz Arés Osset - Enlaces</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            /* Azul intenso como el poema */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        p {
+            opacity: 0.9;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .link-container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-btn {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            text-align: center;
+            transition: transform 0.2s, background 0.2s;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .link-btn:hover {
+            background: white;
+            color: #1e3c72;
+            transform: scale(1.02);
+        }
+
+        .social-icons {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: opacity 0.2s;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.7;
+        }
+
+        .footer {
+            margin-top: auto;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="logopazares.png" alt="Paz Arés Osset" class="profile-img">
+    <h1>Paz Arés Osset</h1>
+    <p>Arte, Poesía y Espiritualidad</p>
+
+    <div class="link-container">
+        <!-- Ejemplo de enlace a lo último -->
+        <a href="poetry/soy_paz_en_el_azul_intenso/index.html" class="link-btn">
+            <i class="fas fa-star"></i> Último Poema: Soy Paz...
+        </a>
+
+        <!-- YouTube Music Channel (Official) -->
+        <a href="https://music.youtube.com/channel/UC2k23Asvrz31iE8pPTPSNwQ" class="link-btn"
+            style="background-color: #ff0033; border: 1px solid #ff0033;">
+            <i class="fab fa-youtube"></i> YouTube Music Oficial
+        </a>
+
+        <!-- Enlace a Spotify -->
+        <a href="https://open.spotify.com/intl-es/artist/2vCZwNWvAX2NqGDdzqBY3r?si=8nD4WhKYRyGbdaGQXFSk7Q"
+            class="link-btn" style="background-color: #1DB954; border: 1px solid #1DB954;">
+            <i class="fab fa-spotify"></i> Perfil Spotify
+        </a>
+
+        <!-- Enlace a Galería -->
+        <a href="gallery/index.html" class="link-btn">
+            <i class="fas fa-palette"></i> Galería de Arte
+        </a>
+
+        <!-- Enlace a Ko-fi (Donación Simpática) -->
+        <a href="https://ko-fi.com/pazaresosset" class="link-btn"
+            style="background-color: #FFDD00; color: black; border: none; font-weight: 800; box-shadow: 0 4px 15px rgba(255, 221, 0, 0.4);">
+            <i class="fas fa-beer" style="font-size: 1.2em;"></i> Invítame a una Cerveza (Ko-fi)
+        </a>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/pazaresosset/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@pazaresosset"><i class="fab fa-tiktok"></i></a>
+        <a href="https://twitter.com/pazaresosset"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/user/pazaresosset"><i class="fab fa-youtube"></i></a>
+        <a href="https://music.youtube.com/channel/UC2k23Asvrz31iE8pPTPSNwQ"><i class="fas fa-play-circle"></i></a>
+    </div>
+
+    <div class="footer">
+        © 2025 Paz Arés Osset
+    </div>
+
+</body>
+
+</html>

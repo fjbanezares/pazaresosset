@@ -93,3 +93,10 @@ body {
 .zoom-image:hover {
   transform: scale(1.2);
 }
+
+/* RTL Support for Arabic */
+.arabic.language {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: bidi-override;
+}
