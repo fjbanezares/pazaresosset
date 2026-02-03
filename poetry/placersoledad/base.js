@@ -14,16 +14,61 @@ function pepito() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  // --- Initialize Spanish as default ---
+  document.querySelectorAll('.language').forEach(function (element) {
+    element.style.display = 'none';
+  });
+  document.querySelectorAll('.spanish').forEach(function (element) {
+    element.style.display = 'block';
+  });
+  document.getElementById('language-select').value = 'spanish';
+  // -------------------------------------
+
   document.getElementById('language-select').addEventListener('change', function () {
+    const selectedLanguage = this.value;
+
     // Hide all language elements
     document.querySelectorAll('.language').forEach(function (element) {
       element.style.display = 'none';
     });
 
     // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
+    document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
       element.style.display = 'block';
     });
+
+    // --- Update Multimedia based on language ---
+    const imageMap = {
+      'spanish': 'comic_placer_soledad/comic_spanish.png',
+      'english': 'comic_placer_soledad/comic_english.png',
+      'italian': 'comic_placer_soledad/comic_italian.png',
+      'chinese': 'comic_placer_soledad/comic_chinese.png',
+      'arabic': 'comic_placer_soledad/comic_arabic.png',
+      'russian': 'comic_placer_soledad/comic_russian.png'
+    };
+
+    const audioButtonTexts = {
+      'spanish': 'Escuchar Música',
+      'english': 'Listen to Music',
+      'italian': 'Ascolta la Musica',
+      'chinese': '听音乐',
+      'arabic': 'استمع إلى الموسيقى',
+      'russian': 'Слушать музыку'
+    };
+
+    const audioLinks = {
+      'spanish': '#',
+      'english': '#',
+      'italian': '#',
+      'chinese': '#',
+      'arabic': '#',
+      'russian': '#'
+    };
+
+    document.getElementById('comic-image').src = imageMap[selectedLanguage] || imageMap['spanish'];
+    document.getElementById('audio-button-text').innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
+    document.getElementById('audio-button').href = audioLinks[selectedLanguage] || '#';
+    // ------------------------------------------
   });
 
   ////

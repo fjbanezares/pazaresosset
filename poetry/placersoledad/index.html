@@ -19,11 +19,12 @@
 <body>
   <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
     <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
+      <option value="spanish">🇪🇸 Español</option>
+      <option value="english">🇺🇸 English</option>
+      <option value="italian">🇮🇹 Italiano</option>
+      <option value="chinese">🇨🇳 中文</option>
+      <option value="arabic">🇦🇪 العربية</option>
+      <option value="russian">🇷🇺 Русский</option>
     </select>
   </div>
 
@@ -46,6 +47,7 @@
         <div class="italian language" style="display: none;">Solitudine Che Tanto Mi Piace</div>
         <div class="chinese language" style="display: none;">如此让我愉悦的孤独</div>
         <div class="arabic language" style="display: none;">وحدة التي تروق لي كثيرًا</div>
+        <div class="russian language" style="display: none;">Одиночество, которое мне так нравится</div>
       </h1>
 
 
@@ -63,8 +65,29 @@
         <div class="arabic language" style="display: none;">في حضن الوحدة الهادئة، حيث تهمس أشجار الصنوبر الخضراء بأسرار
           الروح.
         </div>
+        <div class="russian language" style="display: none;">В тихом объятии одиночества, где зеленые сосны шепчут тайны
+          души.</div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Multimedia Section: Comic & Audio -->
+  <section class="text-center pb-5 pt-3" style="background-color: #000000;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="d-flex justify-content-center align-items-center mb-3">
+            <a id="audio-button" href="#" target="_blank" class="btn btn-sm rounded-pill mx-2 px-4 py-2"
+              style="background: linear-gradient(45deg, #1DB954, #1ed760); color: white; border: none; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(30, 215, 96, 0.4); text-transform: uppercase;">
+              <i class="fas fa-play mr-2"></i> <span id="audio-button-text">Escuchar Música</span>
+            </a>
+            <a href="../../linktree.html" class="btn btn-outline-light btn-sm rounded-pill mx-2 px-3">
+              <i class="fas fa-link"></i> Linktree
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -89,6 +112,7 @@
         <div class="italian language" style="display: none;">Solitudine Che Tanto Mi Piace</div>
         <div class="chinese language" style="display: none;">如此让我愉悦的孤独</div>
         <div class="arabic language" style="display: none;">وحدة التي تروق لي كثيرًا</div>
+        <div class="russian language" style="display: none;">Одиночество, которое мне так нравится</div>
       </h1>
 
       <div class="english language">
@@ -196,12 +220,10 @@
 
 
       </div>
-
       <div class="arabic language" style="display: none;">
         <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
+        <div
+          style="line-height: 0.8; color: limegreen; background-color: rgba(0,0,0,0.8); font-size: 0.7em; padding: 20px; border-radius: 10px; border: 1px solid limegreen;">
           <p>وحدة التي تروق لي كثيرًا</p>
           <p>شعر هادئ ليوم مشمس</p>
           <p>حيث يبدو كل شيء متباطئًا</p>
@@ -216,18 +238,38 @@
           <p>وحدة خضراء وهادئة</p>
           <p>روح مقاسة</p>
           <p>وحدة ممتعة.</p>
-
         </div>
+      </div>
 
-
-
-
-
-
+      <div class="russian language" style="display: none;">
+        <br>
+        <div
+          style="line-height: 0.8; color: limegreen; background-color: rgba(0,0,0,0.8); font-size: 0.7em; padding: 20px; border-radius: 10px; border: 1px solid limegreen;">
+          <p>Спокойная поэзия солнечного дня,</p>
+          <p>Где всё кажется замедленным,</p>
+          <p>Где всё качается в ласке нежного воздуха,</p>
+          <p>Где зеленый сосновый бор дает мне свой ключ.</p>
+          <p>Душистая зелень, сосновая зелень,</p>
+          <p>Мховая зелень, золотая зелень,</p>
+          <p>Грустная зелень, веселая зелень,</p>
+          <p>Вечная зелень, звучная зелень,</p>
+          <p>Теневая зелень, серьезная зелень,</p>
+          <p>Зелень только в сопровождении,</p>
+          <p>Зеленое и спокойное одиночество,</p>
+          <p>Размеренный дух,</p>
+          <p>Приятное одиночество.</p>
+        </div>
       </div>
 
 
     </div>
+
+    <!-- Comic Section -->
+    <div class="container mt-5 mb-5 text-center">
+      <img id="comic-image" src="comic_placer_soledad/comic_spanish.png" class="img-fluid rounded shadow-lg"
+        alt="Arte del poema" style="max-height: 800px; border: 1px solid #333;">
+    </div>
+
   </section>
 
   <!-- js here -->

@@ -14,6 +14,16 @@ function pepito() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  // --- Initialize Spanish as default ---
+  document.querySelectorAll('.language').forEach(function (element) {
+    element.style.display = 'none';
+  });
+  document.querySelectorAll('.spanish').forEach(function (element) {
+    element.style.display = 'block';
+  });
+  document.getElementById('language-select').value = 'spanish';
+  // -------------------------------------
+
   document.getElementById('language-select').addEventListener('change', function () {
     // Hide all language elements
     document.querySelectorAll('.language').forEach(function (element) {
@@ -42,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'spanish': 'https://music.youtube.com/watch?v=AqlUQSR9fok&si=dPrzhwOQwMUGvliC',
       'chinese': 'https://music.youtube.com/watch?v=w1qnTANZJSY&si=w86alTIJNSmg8Nh8',
       'italian': 'https://music.youtube.com/watch?v=qSfJ1RAbImg&si=CVxFaw2Dpa1eFtqH',
-      'russian': 'https://music.youtube.com/watch?v=bO8kbEGB-Jk&si=YQ7s46Q7wL8IVR87',
+      'russian': 'https://music.youtube.com/watch?v=fwnFtoTcGUI',
       'arabic': 'https://music.youtube.com/channel/UC2k23Asvrz31iE8pPTPSNwQ'
     };
 
