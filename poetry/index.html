@@ -1,184 +1,544 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="A glimpse of Light into the Darkness">
-  <meta name="generator" content="Jekyll v3.8.5">
-  <title>Paz Arés Osset Poems</title>
+  <meta name="description" content="Colección de poemas de Paz Arés Osset">
+  <meta name="author" content="Paz Arés Osset">
+  <title>Índice de Poesía - Paz Arés Osset</title>
 
-  <link rel="canonical" href="https://pazaresosset.es">
-
-  <!-- Bootstrap core CSS -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900|Ubuntu:300,700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+    :root {
+      --gold: #FFD700;
+      --dark-gold: #B8860B;
+      --bg-dark: #0a0a0a;
+      --text-muted: #888;
     }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    body {
+      background-color: var(--bg-dark);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .jumbotron {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('subiendo_la_montana/background.png');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 2px solid var(--gold);
+      padding: 80px 0;
+      margin-bottom: 0;
+      position: relative;
+    }
+
+    .jumbotron-heading {
+      font-family: 'Philosopher', serif;
+      font-size: 3.5rem;
+      letter-spacing: 5px;
+      color: var(--gold);
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      margin-top: 20px;
+    }
+
+    .poem-index-container {
+      max-width: 1000px;
+      margin: -40px auto 50px auto;
+      background: rgba(20, 20, 20, 0.95);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 215, 0, 0.1);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+      position: relative;
+    }
+
+    .index-title {
+      font-family: 'Caveat', cursive;
+      color: var(--gold);
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 1px double var(--gold);
+      display: inline-block;
+      width: 100%;
+      padding-bottom: 10px;
+    }
+
+    .poem-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 40px;
+    }
+
+    .poem-item {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.05);
+    }
+
+    .poem-item:hover {
+      text-decoration: none;
+      padding-left: 15px;
+      color: var(--gold);
+      background: rgba(255, 215, 0, 0.05);
+      border-radius: 10px;
+    }
+
+    .poem-number {
+      font-family: 'Philosopher', serif;
+      font-size: 1.2rem;
+      color: var(--dark-gold);
+      margin-right: 20px;
+      min-width: 40px;
+      font-weight: 700;
+      opacity: 0.6;
+    }
+
+    .poem-info {
+      flex-grow: 1;
+    }
+
+    .poem-name {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 400;
+    }
+
+    .poem-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 200;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+    }
+
+    .language-select-container {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .custom-select-dark {
+      background-color: #222;
+      color: var(--gold);
+      border: 1px solid var(--dark-gold);
+      border-radius: 10px;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .social-link {
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    /* RTL Support for Arabic */
+    .rtl .poem-list {
+      direction: rtl;
+    }
+
+    .rtl .poem-item:hover {
+      padding-right: 15px;
+      padding-left: 0;
+    }
+
+    .rtl .poem-number {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .poem-list {
+        grid-template-columns: 1fr;
       }
     }
   </style>
-  <!-- Custom styles for this template -->
-
-  <link rel="stylesheet" href="poetry.css">
-
 </head>
 
 <body>
-
 
   <main role="main">
 
     <section class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">Poesía</h1>
-        <a class="brand" href="www.pazaresosset.es"><img src="../logopazares.png"
-            style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-        <p class="lead text-muted"> Paz tiene una profunda necesidad de comunicar sus sentimientos espirituales y su
-          pasión por esculpir la realidad: Ella es el fin de la Oscuridad y el comienzo de la Luz </p>
+        <a class="brand" href="../index.html">
+          <img src="../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px; max-width: 120px;"
+            alt="Logo Paz Arés">
+        </a>
+        <h1 class="jumbotron-heading">
+          <span class="language spanish">LIBRO DE POESÍA</span>
+          <span class="language english" style="display:none;">POETRY BOOK</span>
+          <span class="language italian" style="display:none;">LIBRO DI POESIA</span>
+          <span class="language chinese" style="display:none;">诗集</span>
+          <span class="language arabic" style="display:none;">كتاب الشعر</span>
+          <span class="language russian" style="display:none;">КНИГА ПОЭЗИИ</span>
+        </h1>
+        <p class="lead" style="color: #ccc; font-weight: 200; max-width: 700px; margin: 20px auto;">
+          <span class="language spanish">"Ella es el fin de la Oscuridad y el comienzo de la Luz"</span>
+          <span class="language english" style="display:none;">"She is the end of Darkness and the beginning of
+            Light"</span>
+          <span class="language italian" style="display:none;">"Lei è la fine dell'Oscurità e l'inizio della
+            Luce"</span>
+          <span class="language chinese" style="display:none;">“她是黑暗的终结，光明的开始”</span>
+          <span class="language arabic" style="display:none;">"هي نهاية الظلام وبداية النور"</span>
+          <span class="language russian" style="display:none;">«Она — конец Тьмы и начало Света»</span>
+        </p>
       </div>
     </section>
 
-    <div class="album py-5 bg-light">
-      <div class="container">
+    <div class="container">
+      <div class="poem-index-container" id="main-container">
+        <div class="language-select-container">
+          <select id="language-select" class="custom-select-dark">
+            <option value="spanish">🇪🇸 Español</option>
+            <option value="english">🇺🇸 English</option>
+            <option value="italian">🇮🇹 Italiano</option>
+            <option value="chinese">🇨🇳 中文</option>
+            <option value="arabic">🇦🇪 العربية</option>
+            <option value="russian">🇷🇺 Русский</option>
+          </select>
+        </div>
 
-        <div class="row">
-          <!-- Ifni War-->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="ifni-war"><img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  src="ifni-war/ifniwar.jpg" /></a>
-              <div class="card-body">
-                <p class="card-text">Guerra de Ifni 1957</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--  -->
-          <!-- Hueles a amor-->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="huelesaamor"><img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  src="ifni-war/ifniwar.jpg" /></a>
-              <div class="card-body">
-                <p class="card-text">Hueles a Amor, una poesía con sentimientos de Amor</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--  -->
-          <!-- Grito de Mujer -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="gritodemujer"><img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  src="ifni-war/ifniwar.jpg" /></a>
-              <div class="card-body">
-                <p class="card-text">Grito de Mujer, una poesía sobre el fin de las humillaciones sufridas por la mujer
-                  y el comienzo de la igualdad entre Hombres y Mujeres.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--  -->
+        <h2 class="index-title">
+          <span class="language spanish">Índice de Obras</span>
+          <span class="language english" style="display:none;">Index of Works</span>
+          <span class="language italian" style="display:none;">Indice delle Opere</span>
+          <span class="language chinese" style="display:none;">作品目录</span>
+          <span class="language arabic" style="display:none;">فهرس الأعمال</span>
+          <span class="language russian" style="display:none;">Указатель произведений</span>
+        </h2>
 
-          <!-- Paz en el Azul-->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="pazenelazul"><img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  src="ifni-war/ifniwar.jpg" /></a>
-              <div class="card-body">
-                <p class="card-text">Soy Paz en el Azul Intenso, una poesía sobre el infinito.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--  -->
+        <div class="poem-list">
 
-          <!-- Paz en el Azul-->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="pazenelazul"><img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  src="ifni-war/ifniwar.jpg" /></a>
-              <div class="card-body">
-                <p class="card-text">Soy Paz en el Azul Intenso, una poesía sobre el infinito.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
+          <!-- 01: SUBIENDO LA MONTAÑA -->
+          <a href="subiendo_la_montana/index.html" class="poem-item">
+            <span class="poem-number">01</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Subiendo la Montaña</span>
+                <span class="language english" style="display:none;">Climbing the Mountain</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Viaje del abismo a la luz.</span>
+                <span class="language english" style="display:none;">Journey from abyss to light.</span>
+              </span>
             </div>
-          </div>
-          <!--  -->
-          <!-- Paz en el Azul-->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="pazenelazul"><img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  src="ifni-war/ifniwar.jpg" /></a>
-              <div class="card-body">
-                <p class="card-text">Soy Paz en el Azul Intenso, una poesía sobre el infinito.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
+          </a>
+
+          <!-- 02: SOY PAZ EN EL AZUL INTENSO -->
+          <a href="soy_paz_en_el_azul_intenso/index.html" class="poem-item">
+            <span class="poem-number">02</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Soy Paz en el Azul Intenso</span>
+                <span class="language english" style="display:none;">I am Peace in the Deep Blue</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Reflexión sobre el infinito.</span>
+                <span class="language english" style="display:none;">Reflection on the infinite.</span>
+              </span>
             </div>
-          </div>
-          <!--  -->
+          </a>
+
+          <!-- 03: GRITO POR LA PAZ -->
+          <a href="grito-por-la-paz/index.html" class="poem-item">
+            <span class="poem-number">03</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Grito por la Paz</span>
+                <span class="language english" style="display:none;">Shout for Peace</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Canto por la armonía mundial.</span>
+                <span class="language english" style="display:none;">Shout for world harmony.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 04: HUELLES A AMOR -->
+          <a href="hueles-a-amor/index.html" class="poem-item">
+            <span class="poem-number">04</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Hueles a Amor</span>
+                <span class="language english" style="display:none;">You Smell of Love</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Fragancia de sentimientos puros.</span>
+                <span class="language english" style="display:none;">Fragrance of pure feelings.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 05: PLACER SOLEDAD -->
+          <a href="placersoledad/index.html" class="poem-item">
+            <span class="poem-number">05</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Soledad Que Tanto Me Places</span>
+                <span class="language english" style="display:none;">Solitude That Pleases Me</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Reencuentro en el silencio.</span>
+                <span class="language english" style="display:none;">Reunion in the silence.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 06: GRITO DE MUJER -->
+          <a href="gritodemujer/index.html" class="poem-item">
+            <span class="poem-number">06</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Grito de Mujer</span>
+                <span class="language english" style="display:none;">Woman's Cry</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">El fin de las humillaciones.</span>
+                <span class="language english" style="display:none;">The end of humiliations.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 07: 1957 GUERRA EN IFNI -->
+          <a href="1957-guerra-ifni/index.html" class="poem-item">
+            <span class="poem-number">07</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">1957 Guerra en Ifni</span>
+                <span class="language english" style="display:none;">1957 War in Ifni</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Memoria de un conflicto.</span>
+                <span class="language english" style="display:none;">Memory of a conflict.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 08: TREN DE VIDA -->
+          <a href="tren-de-vida/index.html" class="poem-item">
+            <span class="poem-number">08</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Tren de Vida</span>
+                <span class="language english" style="display:none;">Train of Life</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Viaje a través del tiempo.</span>
+                <span class="language english" style="display:none;">Journey through time.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 09: GRITO SONORO -->
+          <a href="grito-sonoro/index.html" class="poem-item">
+            <span class="poem-number">09</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Grito Sonoro</span>
+                <span class="language english" style="display:none;">Resounding Cry</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Es ya la hora del grito.</span>
+                <span class="language english" style="display:none;">Now is the time.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 10: COSMICO DESCANSO -->
+          <a href="cosmico-descanso/index.html" class="poem-item">
+            <span class="poem-number">10</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Cósmico Descanso</span>
+                <span class="language english" style="display:none;">Cosmic Rest</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Paz en la inmensidad.</span>
+                <span class="language english" style="display:none;">Peace in immensity.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 11: CHISPA DIVINA -->
+          <a href="chispa-divina-del-sentimiento-puro/index.html" class="poem-item">
+            <span class="poem-number">11</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Chispa Divina</span>
+                <span class="language english" style="display:none;">Divine Spark</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Sentimiento puro.</span>
+                <span class="language english" style="display:none;">Pure feeling.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 12: COLUMPIO DEL EXTASIS -->
+          <a href="columpio-del-extasis/index.html" class="poem-item">
+            <span class="poem-number">12</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Columpio del Éxtasis</span>
+                <span class="language english" style="display:none;">Swing of Ecstasy</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Vibración y elevación.</span>
+                <span class="language english" style="display:none;">Vibration and elevation.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 13: LLANTO DE LOS NIÑOS -->
+          <a href="llanto-de-children/index.html" class="poem-item">
+            <span class="poem-number">13</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">El Llanto de los Niños</span>
+                <span class="language english" style="display:none;">The Cry of Children</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Inocencia y dolor.</span>
+                <span class="language english" style="display:none;">Innocence and pain.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 14: PAZ DE ÁFRICA -->
+          <a href="paz-de-africa/index.html" class="poem-item">
+            <span class="poem-number">14</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Paz de África</span>
+                <span class="language english" style="display:none;">Africa's Peace</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Canto al continente.</span>
+                <span class="language english" style="display:none;">Song to the continent.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 15: BULGARIA Y SERBIA -->
+          <a href="serbia/index.html" class="poem-item">
+            <span class="poem-number">15</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Bulgaria y Serbia</span>
+                <span class="language english" style="display:none;">Bulgaria and Serbia</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Lazos de paz.</span>
+                <span class="language english" style="display:none;">Bonds of peace.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 16: PAZ POR LA PAZ -->
+          <a href="paz-por-la-paz/index.html" class="poem-item">
+            <span class="poem-number">16</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Paz por la Paz</span>
+                <span class="language english" style="display:none;">Peace for Peace</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Poeta y artista de paz.</span>
+                <span class="language english" style="display:none;">Artist of peace.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 17: MIEL -->
+          <a href="miel/index.html" class="poem-item">
+            <span class="poem-number">17</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Miel</span>
+                <span class="language english" style="display:none;">Honey</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Dulzura del alma.</span>
+                <span class="language english" style="display:none;">Soul sweetness.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 18: AMOR INFINITO -->
+          <a href="amor-infinito/index.html" class="poem-item">
+            <span class="poem-number">18</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Amor Infinito</span>
+                <span class="language english" style="display:none;">Infinite Love</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Sin límites ni final.</span>
+                <span class="language english" style="display:none;">Without limits or end.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 19: VIENTO Y ALMA -->
+          <a href="viento-y-mar/index.html" class="poem-item">
+            <span class="poem-number">19</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Viento y Alma</span>
+                <span class="language english" style="display:none;">Wind and Soul</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Esencia en movimiento.</span>
+                <span class="language english" style="display:none;">Essence in motion.</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- 20: RENACER DE LAS CENIZAS -->
+          <a href="renacer-de-las-cenizas/index.html" class="poem-item">
+            <span class="poem-number">20</span>
+            <div class="poem-info">
+              <span class="poem-name">
+                <span class="language spanish">Renacer de las Cenizas</span>
+                <span class="language english" style="display:none;">Rising from Ashes</span>
+              </span>
+              <span class="poem-desc">
+                <span class="language spanish">Fénix del sentimiento.</span>
+                <span class="language english" style="display:none;">Soul's rebirth.</span>
+              </span>
+            </div>
+          </a>
 
         </div>
       </div>
@@ -186,27 +546,38 @@
 
   </main>
 
-  <footer id="footer">
-    <a href="https://www.facebook.com/pazarestheartist/"> <img src="../facebook-logo-510.png" width="89px" height="69px"
-        alt="The Artist" /></a>
-    <a href="https://twitter.com/pazaresosset"><img src="../twitterlogo.png" width="89px" height="69px"
-        alt="The Artist" /></a>
-    <a href="https://www.instagram.com/pazaresosset/"><img src="../instagram-logo-png-2426.png" width="69px"
-        height="69px" alt="The Artist" /></a>
-    <a href="https://www.youtube.com/user/pazaresosset"><img src="../youtubeicon.svg" width="100px" height="69px"
-        alt="The Artist" style="margin-left: 20px;" /></a>
-    </br>
-    </br>
-    <p style="text-align: center;"> © Copyright 2020 Paz Arés Osset</p>
+  <footer class="footer">
+    <div class="mb-4">
+      <a href="https://www.facebook.com/pazarestheartist/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/pazaresosset" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/pazaresosset/" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/user/pazaresosset" class="social-link"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>© 2026 Paz Arés Osset - <span class="language spanish">Todos los derechos reservados</span><span
+        class="language english" style="display:none;">All rights reserved</span></p>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
-    crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('language-select').addEventListener('change', function () {
+      const selectedLanguage = this.value;
+
+      // Toggle language elements
+      document.querySelectorAll('.language').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.querySelectorAll('.language.' + selectedLanguage).forEach(el => {
+        el.style.display = 'inline-block';
+      });
+
+      // Toggle RTL class for the container
+      const container = document.getElementById('main-container');
+      if (selectedLanguage === 'arabic') {
+        container.classList.add('rtl');
+      } else {
+        container.classList.remove('rtl');
+      }
+    });
+  </script>
 </body>
 
 </html>

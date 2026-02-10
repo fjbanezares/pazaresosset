@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Subiendo la Montaña - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
+    <style>
+        body {
+            transition: background-color 1s ease;
+            background-color: #000;
+            overflow-x: hidden;
+        }
+
+        /* Estilos específicos para este poema */
+        .jumbotron {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .handwritten {
+            font-family: 'Caveat', cursive;
+            font-size: 2.5rem !important;
+            margin-bottom: 20px;
+        }
+
+        .poem-text {
+            line-height: 1.8;
+            color: limegreen;
+            background-color: rgba(0, 0, 0, 0.8);
+            font-size: 1.1rem;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(50, 205, 50, 0.3);
+            display: inline-block;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .stanza {
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .stanza.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Video responsive container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            border: 1px solid #444;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Canvas for effects */
+        #effects-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .content-wrap {
+            position: relative;
+            z-index: 1;
+        }
+
+        .arabic {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .arabic .poem-text {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+        <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
+            <select id="language-select" class="custom-select-lg">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portuges">🇵🇹 Português</option>
+            </select>
+        </div>
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;"
+                        alt="Paz Arés Osset">
+                </a>
+
+                <h1 class="jumbotron-heading">
+                    <div class="spanish language">Subiendo la Montaña</div>
+                    <div class="english language" style="display: none;">Climbing the Mountain</div>
+                    <div class="italian language" style="display: none;">Salendo sulla Montagna</div>
+                    <div class="chinese language" style="display: none;">登上山顶</div>
+                    <div class="arabic language" style="display: none;">تسلق الجبل</div>
+                    <div class="russian language" style="display: none;">Восхождение на гору</div>
+                    <div class="aleman language" style="display: none;">Den Berg besteigen</div>
+                    <div class="frances language" style="display: none;">Gravir la Montagne</div>
+                    <div class="japones language" style="display: none;">山を登る</div>
+                    <div class="portuges language" style="display: none;">Subindo a Montanha</div>
+                </h1>
+
+                <div class="lead">
+                    <div class="spanish language">Un viaje desde el abismo del miedo hacia la luz del amor.</div>
+                    <div class="english language" style="display: none;">A journey from the abyss of fear towards the
+                        light
+                        of love.</div>
+                    <div class="italian language" style="display: none;">Un viaggio dall'abisso della paura verso la
+                        luce
+                        dell'amore.</div>
+                    <div class="chinese language" style="display: none;">从恐惧的深渊走向爱的光芒之旅。</div>
+                    <div class="arabic language" style="display: none;">رحلة من هاوية الخوف إلى نور الحب.</div>
+                    <div class="russian language" style="display: none;">Путешествие из бездны страха к свету любви.
+                    </div>
+                    <div class="aleman language" style="display: none;">Eine Reise aus dem Abgrund der Angst zum Licht
+                        der Liebe.</div>
+                    <div class="frances language" style="display: none;">Un voyage de l'abîme de la peur vers la lumière
+                        de l'amour.</div>
+                    <div class="japones language" style="display: none;">恐怖の深淵から愛の光への旅。</div>
+                    <div class="portuges language" style="display: none;">Uma jornada do abismo do medo em direção à luz
+                        do amor.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center pb-5 pt-3" style="background-color: #000000;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <a id="audio-button" href="#" target="_blank" class="btn btn-sm rounded-pill mx-2 px-4 py-2"
+                                style="background: linear-gradient(45deg, #FFD700, #FFA500); color: black; border: none; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4); text-transform: uppercase;">
+                                <i class="fas fa-play mr-2"></i> <span id="audio-button-text">Escuchar Música</span>
+                            </a>
+                            <a href="../../linktree.html" class="btn btn-outline-light btn-sm rounded-pill mx-2 px-3">
+                                <i class="fas fa-link"></i> Linktree
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
+
+                <!-- SPANISH -->
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: gold;">Subiendo la Montaña</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            He bajado al abismo negro.<br>
+                            Una vez más me he encarcelado,<br>
+                            Las barreras del miedo<br>
+                            Una vez más me han dominado.
+                        </div>
+                        <div class="stanza">
+                            Las telarañas de los demás me han acosado.<br>
+                            Sus absurdos hilos se me han pegado.<br>
+                            Sus miedos, sus prejuicios me han rodeado<br>
+                            Alrededor de los míos que aún no he esfumado.
+                        </div>
+                        <div class="stanza">
+                            ¿Cuándo bailaré sonriendo hacia la cima?<br>
+                            ¿Cuándo dejaré las pegajosas telarañas?<br>
+                            De la base a la cima, por la ladera,<br>
+                            Por la ladera de la vida voy subiendo.
+                        </div>
+                        <div class="stanza">
+                            El esfuerzo intenso, no me importa.<br>
+                            Cada vez diviso más amplio el horizonte.<br>
+                            Cada vez es más bonito lo que encuentro.<br>
+                            Más cerca del sol y de las nubes, de la luna y estrellas.
+                        </div>
+                        <div class="stanza">
+                            Más cerca de la luz intensa que traspasa.<br>
+                            Más cerca del amor.<br>
+                            Más cerca de la vida.
+                        </div>
+                        <div class="stanza">
+                            Cuando miro hacia atrás el camino recorrido,<br>
+                            en el que tan feliz he sido como he sufrido,<br>
+                            veo cada vez más grande el precipicio,<br>
+                            y a veces dudo de seguir, pararme o regresar.
+                        </div>
+                        <div class="stanza">
+                            Dudo del esfuerzo realizado, del valor que haya tenido.<br>
+                            Pero tu amor me dice sigue, sigue.<br>
+                            Descanso, estoy cansada, es ahora<br>
+                            tan dura la pendiente,<br>
+                            y tiemblo, tiemblo de no llegar,<br>
+                            y tiemblo de morir antes que amar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="english language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">Climbing the Mountain</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            I have descended into the black abyss.<br>
+                            Once again I have imprisoned myself,<br>
+                            The barriers of fear<br>
+                            Once again have dominated me.
+                        </div>
+                        <div class="stanza">
+                            Others' spiderwebs have harassed me.<br>
+                            Their absurd threads have stuck to me.<br>
+                            Their fears, their prejudices have surrounded me<br>
+                            Around my own, which I have not yet vanished.
+                        </div>
+                        <div class="stanza">
+                            When will I dance smiling toward the summit?<br>
+                            When will I leave the sticky spiderwebs behind?<br>
+                            From the base to the peak, along the slope,<br>
+                            By the slope of life, I am climbing up.
+                        </div>
+                        <div class="stanza">
+                            The intense effort, I do not mind.<br>
+                            Each time I see a wider horizon.<br>
+                            Each time what I find is more beautiful.<br>
+                            Closer to the sun and the clouds, to the moon and stars.
+                        </div>
+                        <div class="stanza">
+                            Closer to the intense light that pierces through.<br>
+                            Closer to love.<br>
+                            Closer to life.
+                        </div>
+                        <div class="stanza">
+                            When I look back at the path I've traveled,<br>
+                            In which I've been as happy as I've suffered,<br>
+                            I see the precipice growing larger,<br>
+                            And sometimes I doubt whether to continue, stop, or return.
+                        </div>
+                        <div class="stanza">
+                            I doubt the effort made, the value it may have had.<br>
+                            But your love tells me: keep going, keep going.<br>
+                            I rest, I am tired, it is now<br>
+                            Such a steep slope,<br>
+                            And I tremble, I tremble from not arriving,<br>
+                            And I tremble from dying before I love.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="italian language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">Salendo sulla Montagna</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Sono scesa nel nero abisso.<br>
+                            Ancora una volta mi sono imprigionata,<br>
+                            Le barriere della paura<br>
+                            Ancora una volta mi hanno dominata.
+                        </div>
+                        <div class="stanza">
+                            Le ragnatele degli altri mi hanno perseguitata.<br>
+                            I loro assurdi fili mi si sono appiccicati.<br>
+                            Le loro paure, i loro pregiudizi mi hanno circondata<br>
+                            Attorno ai miei che non ho ancora dissipato.
+                        </div>
+                        <div class="stanza">
+                            Quando ballerò sorridendo verso la cima?<br>
+                            Quando lascerò le appiccicose ragnatele?<br>
+                            Dalla base alla cima, lungo il fianco,<br>
+                            Lungo il fianco della vita sto salendo.
+                        </div>
+                        <div class="stanza">
+                            Lo sforzo intenso, non mi importa.<br>
+                            Ogni volta vedo l'orizzonte più ampio.<br>
+                            Ogni volta è più bello ciò que trovo.<br>
+                            Più vicina al sole e alle nubi, alla luna e alle stelle.
+                        </div>
+                        <div class="stanza">
+                            Più vicina alla luce intensa che trafigge.<br>
+                            Più vicina all'amore.<br>
+                            Più vicina alla vita.
+                        </div>
+                        <div class="stanza">
+                            Quando guardo indietro al cammino percorso,<br>
+                            in cui sono stata tanto felice quanto ho sofferto,<br>
+                            vedo il precipizio ogni volta più grande,<br>
+                            e a volte dubito se continuare, fermarmi o tornare indietro.
+                        </div>
+                        <div class="stanza">
+                            Dubito dello sforzo compiuto, del valore che può aver avuto.<br>
+                            Ma il tuo amore mi dice: continua, continua.
+                        </div>
+                        <div class="stanza">
+                            Riposo, sono stanca, è ora<br>
+                            così dura la pendenza,<br>
+                            e tremo, tremo di non arrivare,<br>
+                            e tremo di morire prima di amare.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHINESE -->
+                <div class="chinese language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">登上山顶</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            我已坠入黑暗的深渊。<br>
+                            我再次将自己囚禁，<br>
+                            恐惧的障碍<br>
+                            再次统领了我。
+                        </div>
+                        <div class="stanza">
+                            他人的蛛网在骚扰我。<br>
+                            他们荒谬的丝线粘附在我身上。<br>
+                            他们的恐惧、他们的偏见包围了我<br>
+                            围绕着我那些尚未消散的阴影。
+                        </div>
+                        <div class="stanza">
+                            我何时能微笑着舞向顶峰？<br>
+                            我何时能离开那粘稠的蛛网？<br>
+                            从山脚到巅峰，沿着山坡，<br>
+                            沿着生命的坡度，我正在向上攀登。
+                        </div>
+                        <div class="stanza">
+                            艰辛的努力，我并不在乎。<br>
+                            每一次望去，地平线都更加宽阔。<br>
+                            每一次发现，所见之景都更加美丽。<br>
+                            更接近太阳和云朵，更接近月亮和星辰。
+                        </div>
+                        <div class="stanza">
+                            更接近那穿透一切的强烈光芒。<br>
+                            更接近爱。<br>
+                            更接近生命。
+                        </div>
+                        <div class="stanza">
+                            当我回顾走过的路，<br>
+                            在那里我曾多么幸福，也曾多么痛苦，<br>
+                            我看到悬崖愈发深邃，<br>
+                            有时我怀疑是否该继续、停下或回头。
+                        </div>
+                        <div class="stanza">
+                            我怀疑付出的努力，怀疑它是否有价值。<br>
+                            但你的爱对我说：继续，继续。
+                        </div>
+                        <div class="stanza">
+                            休息一下，我很累，现在的坡度<br>
+                            是如此陡峭，<br>
+                            我战栗，我战栗于无法到达，<br>
+                            我战栗于在爱之前死去。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARABIC -->
+                <div class="arabic language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">تسلق الجبل</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            لقد نزلت إلى الهاوية السوداء.<br>
+                            مرة أخرى سجنت نفسي،<br>
+                            حواجز الخوف<br>
+                            مرة أخرى سيطرت عليّ.
+                        </div>
+                        <div class="stanza">
+                            لقد ضايقتني خيوط العنكبوت الخاصة بالآخرين.<br>
+                            خيوطهم العبثية التصقت بي.<br>
+                            مخاوفهم، وتحيزاتهم أحاطت بي<br>
+                            حول مخاوفي التي لم تتبدد بعد.
+                        </div>
+                        <div class="stanza">
+                            متى سأرقص مبتسمة نحو القمة؟<br>
+                            متى سأترك خيوط العنكبوت اللزجة؟<br>
+                            من القاعدة إلى القمة، عبر المنحدر،<br>
+                            عبر منحدر الحياة، أنا أصعد.
+                        </div>
+                        <div class="stanza">
+                            الجهد المكثف، لا يهمني.<br>
+                            في كل مرة أرى الأفق أوسع.<br>
+                            في كل مرة يكون ما أجده أجمل.<br>
+                            أقرب إلى الشمس والغيوم، إلى القمر والنجوم.
+                        </div>
+                        <div class="stanza">
+                            أقرب إلى الضوء المكثف الذي ينفذ.<br>
+                            أقرب إلى الحب.<br>
+                            أقرب إلى الحياة.
+                        </div>
+                        <div class="stanza">
+                            عندما أنظر إلى الوراء إلى الطريق الذي قطعته،<br>
+                            الذي كنت فيه سعيدة بقدر ما عانيت،<br>
+                            أرى الهاوية تكبر أكثر فأكثر،<br>
+                            وأحيانًا أشك في الاستمرار، أو التوقف أو العودة.
+                        </div>
+                        <div class="stanza">
+                            أشك في الجهد المكثف، وفي القيمة التي قد تكون له.<br>
+                            لكن حبك يقول لي: استمري، استمري.
+                        </div>
+                        <div class="stanza">
+                            أرتاح، أنا متعبة، المنحدر الآن<br>
+                            قاسٍ جدًا،<br>
+                            وأرتجف، أرتجف من عدم الوصول،<br>
+                            وأرتجف من الموت قبل أن أحب.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUSSIAN -->
+                <div class="russian language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">Восхождение на гору</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Я спустилась в черную бездну.<br>
+                            В очередной раз я заточила себя,<br>
+                            Барьеры страха<br>
+                            В очередной раз завладели мной.
+                        </div>
+                        <div class="stanza">
+                            Паутины других донимают меня.<br>
+                            Их абсурдные нити прилипли ко мне.<br>
+                            Их страхи, их предрассудки окружили меня<br>
+                            Вокруг моих собственных, которые еще не исчезли.
+                        </div>
+                        <div class="stanza">
+                            Когда же я буду танцевать, улыбаясь вершине?<br>
+                            Когда я оставлю липкие паутины?<br>
+                            От подножия до пика, по склону,<br>
+                            По склону жизни я поднимаюсь.
+                        </div>
+                        <div class="stanza">
+                            Напряженные усилия — мне все равно.<br>
+                            С каждым разом я вижу горизонт всё шире.<br>
+                            С каждым разом всё прекраснее то, что я нахожу.<br>
+                            Ближе к солнцу и облакам, к луне и звездам.
+                        </div>
+                        <div class="stanza">
+                            Ближе к пронизывающему интенсивному свету.<br>
+                            Ближе к любви.<br>
+                            Ближе к жизни.
+                        </div>
+                        <div class="stanza">
+                            Когда я смотрю назад на пройденный путь,<br>
+                            на котором я была так счастлива, как и страдала,<br>
+                            я вижу, что пропасть становится всё больше,<br>
+                            и иногда я сомневаюсь: идти ли дальше, остановиться или вернуться.
+                        </div>
+                        <div class="stanza">
+                            Я сомневаюсь в приложенных усилиях, в их ценности.<br>
+                            Но твоя любовь говорит мне: иди, иди.
+                        </div>
+                        <div class="stanza">
+                            Отдых, я устала, сейчас склон<br>
+                            такой крутой,<br>
+                            и я дрожу, я дрожу от того, что не дойду,<br>
+                            и я дрожу от того, что умру прежде, чем полюблю.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="aleman language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">Den Berg besteigen</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Ich bin in den schwarzen Abgrund hinabgestiegen.<br>
+                            Wieder einmal habe ich mich selbst eingekerkert,<br>
+                            Die Barrieren der Angst<br>
+                            Haben mich wieder einmal beherrscht.
+                        </div>
+                        <div class="stanza">
+                            Die Spinnweben der anderen haben mich bedrängt.<br>
+                            Ihre absurden Fäden sind an mir hängengeblieben.<br>
+                            Ihre Ängste, ihre Vorurteile haben mich umgeben<br>
+                            Um die meinen herum, die ich noch nicht ausgelöscht habe.
+                        </div>
+                        <div class="stanza">
+                            Wann werde ich lächelnd zum Gipfel tanzen?<br>
+                            Wann werde ich die klebrigen Spinnweben verlassen?<br>
+                            Vom Fuß zum Gipfel, den Hang hinauf,<br>
+                            Den Hang des Lebens steige ich hinan.
+                        </div>
+                        <div class="stanza">
+                            Die intensive Anstrengung macht mir nichts aus.<br>
+                            Jedes Mal erblicke ich einen weiteren Horizont.<br>
+                            Jedes Mal ist das, was ich finde, schöner.<br>
+                            Näher an der Sonne und den Wolken, am Mond und den Sternen.
+                        </div>
+                        <div class="stanza">
+                            Näher am intensiven Licht, das alles durchdringt.<br>
+                            Näher an der Liebe.<br>
+                            Näher an dem Leben.
+                        </div>
+                        <div class="stanza">
+                            Wenn ich auf den zurückgelegten Weg blicke,<br>
+                            auf dem ich so glücklich war wie ich gelitten habe,<br>
+                            sehe ich den Abgrund jedes Mal größer,<br>
+                            und manchmal zweifle ich, ob ich weitergehen, anhalten oder zurückkehren soll.
+                        </div>
+                        <div class="stanza">
+                            Ich zweifle an der erbrachten Anstrengung, an ihrem Wert.<br>
+                            Aber deine Liebe sagt mir: mach weiter, mach weiter.
+                        </div>
+                        <div class="stanza">
+                            Ich ruhe mich aus, ich bin müde, jetzt ist<br>
+                            die Steigung so hart,<br>
+                            und ich zittere, ich zittere, nicht anzukommen,<br>
+                            und ich zittere, zu sterben, bevor ich liebe.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="frances language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">Gravir la Montagne</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Je suis descendue dans l'abîme noir.<br>
+                            Une fois de plus, je me suis emprisonnée,<br>
+                            Les barrières de la peur<br>
+                            M'ont une fois de plus dominée.
+                        </div>
+                        <div class="stanza">
+                            Les toiles d'araignée des autres m'ont harcelée.<br>
+                            Leurs fils absurdes se sont collés à moi.<br>
+                            Leurs peurs, leurs préjugés m'ont entourée<br>
+                            Autour des miens que je n'ai pas encore effacés.
+                        </div>
+                        <div class="stanza">
+                            Quand danserais-je en souriant vers le sommet ?<br>
+                            Quand quitterais-je les toiles d'araignée collantes ?<br>
+                            De la base au sommet, par le versant,<br>
+                            Par le versant de la vie, je monte.
+                        </div>
+                        <div class="stanza">
+                            L'effort intense ne m'importe pas.<br>
+                            Chaque fois, j'aperçois l'horizon plus vaste.<br>
+                            Chaque fois, ce que je trouve est plus beau.<br>
+                            Plus près du soleil et des nuages, de la lune et des étoiles.
+                        </div>
+                        <div class="stanza">
+                            Plus près de la lumière intense qui transperce.<br>
+                            Plus près de l'amour.<br>
+                            Plus près de la vie.
+                        </div>
+                        <div class="stanza">
+                            Quand je regarde en arrière le chemin parcouru,<br>
+                            où j'ai été aussi heureuse que j'ai souffert,<br>
+                            je vois l'abîme de plus en plus grand,<br>
+                            et parfois je doute de continuer, de m'arrêter ou de revenir.
+                        </div>
+                        <div class="stanza">
+                            Je doute de l'effort réalisé, de la valeur qu'il a pu avoir.<br>
+                            Mais ton amour me dit : continue, continue.
+                        </div>
+                        <div class="stanza">
+                            Je me repose, je suis fatiguée, c'est maintenant<br>
+                            si dure la pente,<br>
+                            et je tremble, je tremble de ne pas arriver,<br>
+                            et je tremble de mourir avant d'aimer.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JAPANESE -->
+                <div class="japones language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">山を登る</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            私は黒い深淵に降りていった。<br>
+                            もう一度、自分を閉じ込めた。<br>
+                            恐怖の壁に<br>
+                            もう一度、支配された。
+                        </div>
+                        <div class="stanza">
+                            他人の蜘蛛の糸が私を苦しめる。<br>
+                            彼らの不条理な糸が私にまとわりつく。<br>
+                            彼らの恐怖、彼らの偏見が私を囲む<br>
+                            まだ消えていない私自身の恐怖の周りに。
+                        </div>
+                        <div class="stanza">
+                            いつ、笑顔で山頂に向かって踊るのだろう？<br>
+                            いつ、粘着性のある蜘蛛の糸を離れるのだろう？<br>
+                            ふもとから山頂へ、斜面を通って、<br>
+                            人生の斜面を、私は登っていく。
+                        </div>
+                        <div class="stanza">
+                            激しい努力も、気にならない。<br>
+                            そのたびに、地平線がより広く見える。<br>
+                            そのたびに、見つけるものがより美しくなる。<br>
+                            太陽と雲、月と星に、より近く。
+                        </div>
+                        <div class="stanza">
+                            突き抜ける強烈な光に、より近く。<br>
+                            愛に、より近く。<br>
+                            生に、より近く。
+                        </div>
+                        <div class="stanza">
+                            歩んできた道を振り返るとき、<br>
+                            幸せだったのと同じくらい苦しんだ道、<br>
+                            絶壁がますます大きく見える。<br>
+                            そして時々、続けるべきか、立ち止まるべきか、戻るべきか迷う。
+                        </div>
+                        <div class="stanza">
+                            費やした努力、その価値を疑う。<br>
+                            でも、あなたの愛が私に言う、続けなさい、続けなさい。
+                        </div>
+                        <div class="stanza">
+                            休息、私は疲れている、今は<br>
+                            とても険しい斜面、<br>
+                            そして震える、たどり着けないのではないかと震える、<br>
+                            愛する前に死ぬのではないかと。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTUGUESE -->
+                <div class="portuges language" style="display: none;">
+                    <h1 class="handwritten" style="color: gold;">Subindo a Montanha</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Desci ao abismo negro.<br>
+                            Mais uma vez me encarcerei,<br>
+                            As barreiras do medo<br>
+                            Mais uma vez me dominaram.
+                        </div>
+                        <div class="stanza">
+                            As teias de aranha dos outros me acossaram.<br>
+                            Seus fios absurdos grudaram em mim.<br>
+                            Seus medos, seus preconceitos me cercaram<br>
+                            Ao redor dos meus que ainda não se esfumaram.
+                        </div>
+                        <div class="stanza">
+                            Quando dançarei sorrindo em direção ao topo?<br>
+                            Quando deixarei as teias de aranha pegajosas?<br>
+                            Da base ao topo, pela encosta,<br>
+                            Pela encosta da vida vou subindo.
+                        </div>
+                        <div class="stanza">
+                            O esforço intenso não me importa.<br>
+                            Cada vez diviso mais amplo o horizonte.<br>
+                            Cada vez é mais bonito o que encontro.<br>
+                            Mais perto do sol e das nuvens, da lua e estrelas.
+                        </div>
+                        <div class="stanza">
+                            Mais perto da luz intensa que traspassa.<br>
+                            Mais perto do amor.<br>
+                            Mais perto da vida.
+                        </div>
+                        <div class="stanza">
+                            Quando olho para trás o camino recorrido,<br>
+                            no qual fui tão feliz como sofri,<br>
+                            vejo cada vez maior o precipício,<br>
+                            e às vezes duvido de seguir, parar ou regressar.
+                        </div>
+                        <div class="stanza">
+                            Duvido do esforço realizado, do valor que tenha tido.<br>
+                            Mas teu amor me diz segue, segue.
+                        </div>
+                        <div class="stanza">
+                            Descanso, estou cansada, é agora<br>
+                            tão dura a pendente,<br>
+                            e tremo, tremo de não chegar,<br>
+                            e tremo de morrer antes que amar.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Video Section -->
+            <div class="container mt-5">
+                <h2 class="handwritten text-light align-middle">
+                    <i class="fab fa-youtube text-danger mr-2"></i>
+                    <span class="spanish language">Video Explicativo</span>
+                    <span class="english language" style="display: none;">Explanatory Video</span>
+                    <span class="italian language" style="display: none;">Video Esplicativo</span>
+                    <span class="chinese language" style="display: none;">讲解视频</span>
+                    <span class="arabic language" style="display: none;">فيديو توضيحي</span>
+                    <span class="russian language" style="display: none;">Пояснительное видео</span>
+                    <span class="aleman language" style="display: none;">Erklärvideo</span>
+                    <span class="frances language" style="display: none;">Vidéo explicative</span>
+                    <span class="japones language" style="display: none;">解説動画</span>
+                    <span class="portuges language" style="display: none;">Vídeo Explicativo</span>
+                </h2>
+                <div class="video-container">
+                    <!-- Video explicativo de NotebookLM -->
+                    <iframe src="https://www.youtube.com/embed/SkYciZ-PbUw" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Comic Section Placeholder -->
+            <div class="container mt-5 mb-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <span class="spanish language">El Poema en Imágenes</span>
+                    <span class="english language" style="display: none;">The Poem in Images</span>
+                    <span class="italian language" style="display: none;">Il Poema in Immagini</span>
+                    <span class="chinese language" style="display: none;">图片中的诗</span>
+                    <span class="arabic language" style="display: none;">القصيدة في صور</span>
+                    <span class="russian language" style="display: none;">Стихотворение в картинках</span>
+                    <span class="aleman language" style="display: none;">Das Gedicht in Bildern</span>
+                    <span class="frances language" style="display: none;">Le poème en images</span>
+                    <span class="japones language" style="display: none;">画像で見る詩</span>
+                    <span class="portuges language" style="display: none;">O Poema em Imagens</span>
+                </h2>
+                <img id="comic-image" src="comic_subiendo/comic_subiendo_la_montana_español.png"
+                    class="img-fluid rounded shadow-lg" alt="Arte del poema"
+                    style="max-height: 800px; border: 1px solid #333;"
+                    onerror="this.src='../../logopazares.png'; this.style.opacity='0.5';">
+            </div>
+
+        </section>
+
+    </div> <!-- Close content-wrap -->
+
+    <script src="base.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
