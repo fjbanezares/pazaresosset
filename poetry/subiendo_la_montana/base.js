@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const imageMap = {
-      'spanish': 'comic_subiendo/comic_subiendo_la_montana_español.png',
+      'spanish': 'comic_subiendo/comic_subiendo_la_montana_espanol.png',
       'english': 'comic_subiendo/comic_subiendo_la_montana_ingles.png',
       'italian': 'comic_subiendo/comic_subiendo_la_montana_italiano.png',
       'chinese': 'comic_subiendo/comic_subiendo_la_montana_chino.png',
