@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Julio - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+        <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+            <!-- Linktree Button -->
+            <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+                <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+                <span>Linktree</span>
+            </a>
+            <!-- Spotify Button -->
+            <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+                <i class="fab fa-spotify mr-2" style="font-size: 1.2rem;"></i>
+                <span id="audio-button-text">Escuchar Música</span>
+            </a>
+            <select id="language-select" class="custom-select-lg">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portuges">🇵🇹 Português</option>
+            </select>
+        </div>
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;"
+                        alt="Paz Arés Osset">
+                </a>
+
+                <h1 class="jumbotron-heading">
+                    <div class="spanish language">Julio</div>
+                    <div class="english language">July</div>
+                    <div class="italian language">Luglio</div>
+                    <div class="chinese language">七月</div>
+                    <div class="arabic language">يوليو</div>
+                    <div class="russian language">Июль</div>
+                    <div class="aleman language">Juli</div>
+                    <div class="frances language">Juillet</div>
+                    <div class="japones language">七月</div>
+                    <div class="portuges language">Julho</div>
+                </h1>
+
+                <div class="lead">
+                    <div class="spanish language">Un poema de truenos, lluvia y esperanza.</div>
+                    <div class="english language">A poem of thunders, rain, and hope.</div>
+                    <div class="italian language">Una poesia di tuoni, pioggia e speranza.</div>
+                    <div class="chinese language">一首关于雷电、雨水与希望的诗。</div>
+                    <div class="arabic language">قصيدة عن الرعود والمطر والأمل.</div>
+                    <div class="russian language">Стихотворение о громе, дожде и надежде.</div>
+                    <div class="aleman language">Ein Gedicht über Donner, Regen und Hoffnung.</div>
+                    <div class="frances language">Un poème de tonnerres, de pluie et d'espoir.</div>
+                    <div class="japones language">雷、雨、そして希望の詩。</div>
+                    <div class="portuges language">Um poema de trovões, chuva e esperança.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
+
+                <!-- SPANISH -->
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: #87CEEB;">Julio</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Noche de truenos, melancolía.<br>
+                            Se extingue el día.<br>
+                            Dos años, vida, julio comienza.<br>
+                            Por verte ahora todo daría.
+                        </div>
+                        <div class="stanza">
+                            Entre las luces que titilean,<br>
+                            entre los rayos que parpadean,<br>
+                            bajo la lluvia,<br>
+                            ¿Dónde te buscaría?
+                        </div>
+                        <div class="stanza">
+                            Azul y plata en la ventana,<br>
+                            Noche de grana,<br>
+                            canta el alma, sueña, descansa...<br>
+                            Hoy ya es mañana.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="english language">
+                    <h1 class="handwritten" style="color: #87CEEB;">July</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Night of thunders, melancholy.<br>
+                            The day is extinguishing.<br>
+                            Two years, life, July begins.<br>
+                            To see you now, I would give everything.
+                        </div>
+                        <div class="stanza">
+                            Among the twinkling lights,<br>
+                            among the flickering lightning,<br>
+                            under the rain,<br>
+                            Where would I look for you?
+                        </div>
+                        <div class="stanza">
+                            Blue and silver in the window,<br>
+                            Crimson night,<br>
+                            the soul sings, dreams, rests...<br>
+                            Today is already tomorrow.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="italian language">
+                    <h1 class="handwritten" style="color: #87CEEB;">Luglio</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Notte di tuoni, malinconia.<br>
+                            Il giorno si spegne.<br>
+                            Due anni, vita, luglio comincia.<br>
+                            Per vederti ora darei tutto.
+                        </div>
+                        <div class="stanza">
+                            Tra le luci che scintillano,<br>
+                            tra i lampi che ammiccano,<br>
+                            sotto la pioggia,<br>
+                            Dove ti cercherei?
+                        </div>
+                        <div class="stanza">
+                            Azzurro e argento alla finestra,<br>
+                            Notte di porpora,<br>
+                            canta l'anima, sogna, riposa...<br>
+                            Oggi è già domani.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHINESE -->
+                <div class="chinese language">
+                    <h1 class="handwritten" style="color: #87CEEB;">七月</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            雷鸣之夜，忧郁。<br>
+                            白昼正在熄灭。<br>
+                            两年了，生命，七月开始了。<br>
+                            为了此刻见到你，我愿付出一切。
+                        </div>
+                        <div class="stanza">
+                            在闪烁的灯火间，<br>
+                            在闪动的雷光中，<br>
+                            在细雨之下，<br>
+                            我该去哪里寻找你？
+                        </div>
+                        <div class="stanza">
+                            窗前的蓝与银，<br>
+                            深红之夜，<br>
+                            灵魂在歌唱，在梦想，在休憩……<br>
+                            今天已是明天。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARABIC -->
+                <div class="arabic language">
+                    <h1 class="handwritten" style="color: #87CEEB;">يوليو</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            ليلة رعود، ملنخوليا.<br>
+                            ينطفئ النهار.<br>
+                            عامان يا حياة، يوليو يبدأ.<br>
+                            لأراك الآن، سأعطي كل شيء.
+                        </div>
+                        <div class="stanza">
+                            بين الأضواء التي تتلألأ،<br>
+                            بين الصواعق التي تومض،<br>
+                            تحت المطر،<br>
+                            أين سأبحث عنك؟
+                        </div>
+                        <div class="stanza">
+                            أزرق وفضة في النافذة،<br>
+                            ليلة قرمزية،<br>
+                            تغني الروح، تحلم، ترتاح...<br>
+                            اليوم هو بالفعل غدًا.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUSSIAN -->
+                <div class="russian language">
+                    <h1 class="handwritten" style="color: #87CEEB;">Июль</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Ночь громов, меланхолия.<br>
+                            День угасает.<br>
+                            Два года, жизнь, июль начинается.<br>
+                            Чтобы увидеть тебя сейчас, я бы отдала всё.
+                        </div>
+                        <div class="stanza">
+                            Среди мерцающих огней,<br>
+                            среди мигающих молний,<br>
+                            под дождем,<br>
+                            Где бы я тебя искала?
+                        </div>
+                        <div class="stanza">
+                            Синий и серебро в окне,<br>
+                            Алая ночь,<br>
+                            поет душа, мечтает, отдыхает...<br>
+                            Сегодня — это уже завтра.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="aleman language">
+                    <h1 class="handwritten" style="color: #87CEEB;">Juli</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Nacht der Donner, Melancholie.<br>
+                            Der Tag erlischt.<br>
+                            Zwei Jahre, Leben, der Juli beginnt.<br>
+                            Um dich jetzt zu sehen, würde ich alles geben.
+                        </div>
+                        <div class="stanza">
+                            Zwischen den lichtern, die funkeln,<br>
+                            zwischen den Blitzen, die zucken,<br>
+                            unter dem Regen,<br>
+                            Wo würde ich dich suchen?
+                        </div>
+                        <div class="stanza">
+                            Blau und Silber am Fenster,<br>
+                            Scharlachrote Nacht,<br>
+                            die Seele singt, träumt, ruht aus...<br>
+                            Heute ist schon morgen.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="frances language">
+                    <h1 class="handwritten" style="color: #87CEEB;">Juillet</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Nuit de tonnerres, mélancolie.<br>
+                            Le jour s'éteint.<br>
+                            Deux ans, vie, juillet commence.<br>
+                            Pour te voir maintenant, je donnerais tout.
+                        </div>
+                        <div class="stanza">
+                            Entre les lumières qui scintillent,<br>
+                            entre les éclairs qui clignotent,<br>
+                            sous la pluie,<br>
+                            Où te chercherais-je ?
+                        </div>
+                        <div class="stanza">
+                            Bleu et argent à la fenêtre,<br>
+                            Nuit de pourpre,<br>
+                            l'âme chante, rêve, se repose...<br>
+                            Aujourd'hui, c'est déjà demain.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JAPANESE -->
+                <div class="japones language">
+                    <h1 class="handwritten" style="color: #87CEEB;">七月</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            雷の夜、憂鬱。<br>
+                            日は消えゆく。<br>
+                            二年、命、七月が始まる。<br>
+                            今あなたに会えるなら、すべてを捧げよう。
+                        </div>
+                        <div class="stanza">
+                            またたく光の間で、<br>
+                            瞬く稲妻の間で、<br>
+                            雨の下で、<br>
+                            どこであなたを探せばいいの？
+                        </div>
+                        <div class="stanza">
+                            窓の青 y 銀、<br>
+                            深紅の夜、<br>
+                            魂は歌い、夢を見、休息する……<br>
+                            今日はもう明日。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTUGUESE -->
+                <div class="portuges language">
+                    <h1 class="handwritten" style="color: #87CEEB;">Julho</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Noite de trovões, melancolia.<br>
+                            O dia se extingue.<br>
+                            Dois anos, vida, julho começa.<br>
+                            Por te ver agora tudo daria.
+                        </div>
+                        <div class="stanza">
+                            Entre as luces que titilam,<br>
+                            entre os raios que piscam,<br>
+                            sob a chuva,<br>
+                            Onde te buscaria?
+                        </div>
+                        <div class="stanza">
+                            Azul e prata na janela,<br>
+                            Noite de escarlate,<br>
+                            canta a alma, sonha, descansa...<br>
+                            Hoje já é amanhã.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Music Section Placeholder -->
+            <div class="container mt-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <i class="fab fa-spotify text-success mr-2"></i>
+                    <span class="spanish language">Música Sugerida (Próximamente)</span>
+                    <span class="english language">Suggested Music (Coming Soon)</span>
+                    <span class="italian language">Musica Suggerita (Prossimamente)</span>
+                    <span class="chinese language">建议音乐（即将推出）</span>
+                    <span class="arabic language">الموسيقى المقترحة (قريباً)</span>
+                    <span class="russian language">Предлагаемая музыка (Скоро)</span>
+                    <span class="aleman language">Empfohlene Musik (Demnächst)</span>
+                    <span class="frances language">Musique suggérée (Bientôt)</span>
+                    <span class="japones language">おすすめの音楽（間もなく）</span>
+                    <span class="portuges language">Música Sugerida (Em breve)</span>
+                </h2>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-9 mb-4">
+                        <div id="spotify-player-container">
+                            <!-- Spotify fallback placeholder -->
+                            <div class="p-5 rounded"
+                                style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2);">
+                                <i class="fab fa-spotify fa-3x mb-3 text-success"></i>
+                                <p>El reproductor se activará cuando la música esté disponible.</p>
+                            </div>
+                            <iframe id="spotify-iframe" style="border-radius:12px; display:none;" src="" width="100%"
+                                height="152" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comic Section Placeholder -->
+            <div class="container mt-5 mb-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <span class="spanish language">El Poema en Imágenes</span>
+                    <span class="english language">The Poem in Images</span>
+                    <span class="italian language">Il Poema in Immagini</span>
+                    <span class="chinese language">图片中的诗</span>
+                    <span class="arabic language">القصيدة في صور</span>
+                    <span class="russian language">Стихотворение в картинках</span>
+                    <span class="aleman language">Das Gedicht in Bildern</span>
+                    <span class="frances language">Le poème en images</span>
+                    <span class="japones language">画像で見る詩</span>
+                    <span class="portuges language">O Poema em Imagens</span>
+                </h2>
+                <div class="p-5 rounded mb-4"
+                    style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2); min-height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <i class="fas fa-palette fa-4x mb-3" style="color: #87CEEB; opacity: 0.5;"></i>
+                    <p class="text-muted">Espacio reservado para los cómics del poema Julio</p>
+                    <img id="comic-image" src="" class="img-fluid rounded shadow-lg" alt="Arte del poema"
+                        style="max-height: 800px; border: 1px solid #333; display:none;"
+                        onerror="this.style.display='none';">
+                </div>
+            </div>
+
+        </section>
+
+    </div> <!-- Close content-wrap -->
+
+    <script src="base.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

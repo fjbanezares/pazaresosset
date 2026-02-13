@@ -31,6 +31,19 @@ document.addEventListener('DOMContentLoaded', function () {
       'portuges': 'comic_subiendo/comic_subiendo_la_montana_portuges.png'
     };
 
+    const spotifyMap = {
+      'spanish': '3TwGR3maxI6D4Db4ExxRHL',
+      'english': '3TwGR3maxI6D4Db4ExxRHL', // Placeholder (actualizar cuando tengas los links)
+      'italian': '3TwGR3maxI6D4Db4ExxRHL',
+      'russian': '3TwGR3maxI6D4Db4ExxRHL',
+      'chinese': '3TwGR3maxI6D4Db4ExxRHL',
+      'arabic': '3TwGR3maxI6D4Db4ExxRHL',
+      'aleman': '3TwGR3maxI6D4Db4ExxRHL',
+      'frances': '3TwGR3maxI6D4Db4ExxRHL',
+      'japones': '3TwGR3maxI6D4Db4ExxRHL',
+      'portuges': '3TwGR3maxI6D4Db4ExxRHL'
+    };
+
     const audioButtonTexts = {
       'spanish': 'Escuchar Música',
       'english': 'Listen to Music',
@@ -51,6 +64,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const audioButtonText = document.getElementById('audio-button-text');
     if (audioButtonText) {
       audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
+    }
+
+    // Update Spotify UI
+    const spotifyId = spotifyMap[selectedLanguage] || spotifyMap['spanish'];
+    const spotifyIframe = document.getElementById('spotify-iframe');
+    const spotifyLink = document.getElementById('spotify-link');
+
+    if (spotifyIframe) {
+      spotifyIframe.src = `https://open.spotify.com/embed/album/${spotifyId}?utm_source=generator`;
+    }
+    if (spotifyLink) {
+      spotifyLink.href = `https://open.spotify.com/album/${spotifyId}`;
     }
   });
 

@@ -5,124 +5,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paz Arés Osset - Enlaces</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Caveat:wght@400;700&family=Philosopher:ital,wght@1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
+        :root {
+            --gold: #FFD700;
+            --dark-gold: #B8860B;
+            --bg-dark: #0a0a0a;
+            --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            /* Azul intenso como el poema */
-            color: white;
+            background-color: var(--bg-dark);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('poetry/subiendo_la_montana/background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .profile-img {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            border: 3px solid white;
+            border: 3px solid var(--gold);
             margin-bottom: 15px;
             object-fit: cover;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
         }
 
         h1 {
-            font-size: 1.5rem;
+            font-family: 'Caveat', cursive;
+            font-size: 3.8rem;
+            color: var(--gold);
             margin-bottom: 5px;
+            text-shadow: var(--text-shadow);
         }
 
-        p {
-            opacity: 0.9;
+        .subtitle {
+            font-family: 'Philosopher', serif;
+            font-style: italic;
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
             margin-bottom: 20px;
-            text-align: center;
+            text-shadow: var(--text-shadow);
         }
 
         .link-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 480px;
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
         .link-btn {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 30px;
-            text-decoration: none;
+            background: rgba(20, 20, 20, 0.85);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #ffffff !important;
+            padding: 18px 25px;
+            border-radius: 15px;
+            text-decoration: none !important;
             text-align: center;
-            transition: transform 0.2s, background 0.2s;
-            font-weight: bold;
+            transition: all 0.3s ease;
+            font-weight: 400;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
         .link-btn:hover {
-            background: white;
-            color: #1e3c72;
-            transform: scale(1.02);
+            background: rgba(40, 40, 40, 0.95);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .btn-featured {
+            border: 2px solid var(--gold);
+            background: rgba(255, 215, 0, 0.1);
+            font-weight: 700;
+        }
+
+        .support-note {
+            font-size: 0.9rem;
+            color: var(--gold);
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: -5px;
+            font-weight: 400;
+            text-shadow: var(--text-shadow);
+        }
+
+        .btn-support {
+            border: 1px dashed var(--gold);
+            background: rgba(255, 0, 0, 0.05);
         }
 
         .social-icons {
-            margin-top: 30px;
+            margin-top: 40px;
             display: flex;
             gap: 20px;
         }
 
         .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-            transition: opacity 0.2s;
+            color: #ffffff;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+            text-shadow: var(--text-shadow);
         }
 
         .social-icons a:hover {
-            opacity: 0.7;
+            color: var(--gold);
         }
 
-        .footer {
-            margin-top: auto;
-            font-size: 0.8rem;
-            opacity: 0.6;
-            padding-top: 20px;
-        }
-
+        /* Language Select */
         .language-selector {
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1000;
+            z-index: 2000;
         }
 
         #language-select {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            padding: 5px 15px;
-            font-size: 0.9rem;
+            background: #222;
+            color: var(--gold);
+            border: 1px solid var(--dark-gold);
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-size: 0.85rem;
             cursor: pointer;
-            outline: none;
         }
 
-        #language-select option {
-            background: #1e3c72;
-            color: white;
-        }
-
-        /* RTL Support */
-        .arabic {
-            direction: rtl;
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            padding: 30px 0;
+            font-size: 0.8rem;
+            color: #888;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -134,102 +173,116 @@
             <option value="spanish">🇪🇸 Español</option>
             <option value="english">🇺🇸 English</option>
             <option value="italian">🇮🇹 Italiano</option>
-            <option value="russian">🇷🇺 Русский</option>
             <option value="chinese">🇨🇳 中文</option>
             <option value="arabic">🇦🇪 العربية</option>
-            <option value="portuguese">🇵🇹 Português</option>
-            <option value="japanese">🇯🇵 日本語</option>
-            <option value="korean">🇰🇷 한국어</option>
+            <option value="russian">🇷🇺 Русский</option>
+            <option value="aleman">🇩🇪 Deutsch</option>
+            <option value="frances">🇫🇷 Français</option>
+            <option value="japones">🇯🇵 日本語</option>
+            <option value="portugues">🇵🇹 Português</option>
         </select>
     </div>
 
-    <img src="logopazares.png" alt="Paz Arés Osset" class="profile-img">
-    <h1>Paz Arés Osset</h1>
-
-    <div id="subtitle">
-        <p class="spanish language">Arte, Poesía y Espiritualidad</p>
-        <p class="english language" style="display: none;">Art, Poetry and Spirituality</p>
-        <p class="italian language" style="display: none;">Arte, Poesia e Spiritualità</p>
-        <p class="russian language" style="display: none;">Искусство, Поэзия и Духовность</p>
-        <p class="chinese language" style="display: none;">艺术、诗歌与灵性</p>
-        <p class="arabic language" style="display: none;">الفن والشعر والروحانية</p>
-        <p class="portuguese language" style="display: none;">Arte, Poesia e Espiritualidade</p>
-        <p class="japanese language" style="display: none;">芸術、詩、そしてスピリチュアリティ</p>
-        <p class="korean language" style="display: none;">예술, 시, 그리고 영성</p>
+    <div class="header-section">
+        <img src="NuevaYorktorreoro.jpg" alt="Paz Arés Osset" class="profile-img">
+        <h1>Paz Arés Osset</h1>
+        <div class="subtitle">
+            <span class="language spanish">Poesía, Arte y Espiritualidad</span>
+            <span class="language english" style="display:none;">Poetry, Art and Spirituality</span>
+            <span class="language italian" style="display:none;">Poesia, Arte e Spiritualità</span>
+            <span class="language chinese" style="display:none;">诗歌、艺术与灵性</span>
+            <span class="language arabic" style="display:none;">الشعر والفن والروحانية</span>
+            <span class="language russian" style="display:none;">Поэзия, искусство и духовность</span>
+            <span class="language aleman" style="display:none;">Poesie, Kunst und Spiritualität</span>
+            <span class="language frances" style="display:none;">Poésie, art et spiritualité</span>
+            <span class="language japones" style="display:none;">詩、芸術、そしてスピリチュアリティ</span>
+            <span class="language portugues" style="display:none;">Poesia, Arte e Espiritualidade</span>
+        </div>
     </div>
 
     <div class="link-container">
-        <!-- Ejemplo de enlace a lo último -->
-        <a href="poetry/soy_paz_en_el_azul_intenso/index.html" class="link-btn">
-            <i class="fas fa-star"></i>
-            <span class="spanish language">Último Poema: Soy Paz...</span>
-            <span class="english language" style="display: none;">Latest Poem: I am Peace...</span>
-            <span class="italian language" style="display: none;">Ultima Poesia: Sono Pace...</span>
-            <span class="russian language" style="display: none;">Последнее стихотворение: Я — Мир...</span>
-            <span class="chinese language" style="display: none;">最新诗作：我是和平...</span>
-            <span class="arabic language" style="display: none;">أحدث قصيدة: أنا سلام...</span>
-            <span class="portuguese language" style="display: none;">Último Poema: Sou Paz...</span>
-            <span class="japanese language" style="display: none;">最新の詩：私は平和...</span>
-            <span class="korean language" style="display: none;">최신 시: 나는 평화다...</span>
+        <a href="poetry/subiendo_la_montana/index.html" class="link-btn btn-featured">
+            <i class="fas fa-mountain"></i>
+            <span class="language spanish">Nuevo Poema: Subiendo la Montaña</span>
+            <span class="language english" style="display:none;">New Poem: Climbing the Mountain</span>
+            <span class="language italian" style="display:none;">Nuova Poesia: Salendo sulla Montagna</span>
+            <span class="language chinese" style="display:none;">新诗：登上山顶</span>
+            <span class="language arabic" style="display:none;">قصيدة جديدة: تسلق الجبل</span>
+            <span class="language russian" style="display:none;">Новое стихотворение: Восхождение на гору</span>
+            <span class="language aleman" style="display:none;">Neues Gedicht: Den Berg besteigen</span>
+            <span class="language frances" style="display:none;">Nouveau poème : Gravir la montagne</span>
+            <span class="language japones" style="display:none;">新しい詩：山を登る</span>
+            <span class="language portugues" style="display:none;">Novo Poema: Subindo a Montanha</span>
         </a>
 
-        <!-- YouTube Music Channel (Official) -->
-        <a href="https://music.youtube.com/channel/UC2k23Asvrz31iE8pPTPSNwQ" class="link-btn"
-            style="background-color: #ff0033; border: 1px solid #ff0033;">
-            <i class="fab fa-youtube"></i>
-            <span class="spanish language">YouTube Music Oficial</span>
-            <span class="english language" style="display: none;">Official YouTube Music</span>
-            <span class="italian language" style="display: none;">YouTube Music Ufficiale</span>
-            <span class="russian language" style="display: none;">Официальный YouTube Music</span>
-            <span class="chinese language" style="display: none;">官方 YouTube 音乐</span>
-            <span class="arabic language" style="display: none;">يوتيوب ميوزيك الرسمي</span>
-            <span class="portuguese language" style="display: none;">YouTube Music Oficial</span>
-            <span class="japanese language" style="display: none;">公式 YouTube Music</span>
-            <span class="korean language" style="display: none;">공식 유튜브 뮤직</span>
+        <a href="poetry/index.html" class="link-btn">
+            <i class="fas fa-book-open"></i>
+            <span class="language spanish">Libro de Poesía (Índice)</span>
+            <span class="language english" style="display:none;">Poetry Book (Index)</span>
+            <span class="language italian" style="display:none;">Libro di Poesia (Indice)</span>
+            <span class="language chinese" style="display:none;">诗集（目录）</span>
+            <span class="language arabic" style="display:none;">كتاب الشعر (فهرس)</span>
+            <span class="language russian" style="display:none;">Книга поэзии (Указатель)</span>
+            <span class="language aleman" style="display:none;">Gedichtband (Index)</span>
+            <span class="language frances" style="display:none;">Recueil de poésie (Index)</span>
+            <span class="language japones" style="display:none;">詩集（インデックス）</span>
+            <span class="language portugues" style="display:none;">Livro de Poesia (Índice)</span>
         </a>
 
-        <!-- Enlace a Spotify -->
-        <a href="https://open.spotify.com/intl-es/artist/2vCZwNWvAX2NqGDdzqBY3r?si=8nD4WhKYRyGbdaGQXFSk7Q"
-            class="link-btn" style="background-color: #1DB954; border: 1px solid #1DB954;">
-            <i class="fab fa-spotify"></i>
-            <span class="spanish language">Perfil Spotify</span>
-            <span class="english language" style="display: none;">Spotify Profile</span>
-            <span class="italian language" style="display: none;">Profilo Spotify</span>
-            <span class="russian language" style="display: none;">Профиль Spotify</span>
-            <span class="chinese language" style="display: none;">Spotify 个人资料</span>
-            <span class="arabic language" style="display: none;">ملف سبوتيفاي</span>
-            <span class="portuguese language" style="display: none;">Perfil Spotify</span>
-            <span class="japanese language" style="display: none;">Spotify プロフィール</span>
-            <span class="korean language" style="display: none;">스포티파이 프로필</span>
-        </a>
-
-        <!-- Enlace a Galería -->
         <a href="gallery/index.html" class="link-btn">
             <i class="fas fa-palette"></i>
-            <span class="spanish language">Galería de Arte</span>
-            <span class="english language" style="display: none;">Art Gallery</span>
-            <span class="italian language" style="display: none;">Galleria d'Arte</span>
-            <span class="russian language" style="display: none;">Арт-галерея</span>
-            <span class="chinese language" style="display: none;">艺术画廊</span>
-            <span class="arabic language" style="display: none;">معرض الفنون</span>
-            <span class="portuguese language" style="display: none;">Galeria de Arte</span>
-            <span class="japanese language" style="display: none;">アートギャラリー</span>
-            <span class="korean language" style="display: none;">아트 갤러리</span>
+            <span class="language spanish">Galería de Pintura</span>
+            <span class="language english" style="display:none;">Painting Gallery</span>
+            <span class="language italian" style="display:none;">Galleria di Pittura</span>
+            <span class="language chinese" style="display:none;">画廊</span>
+            <span class="language arabic" style="display:none;">معرض الرسم</span>
+            <span class="language russian" style="display:none;">Галерея живописи</span>
+            <span class="language aleman" style="display:none;">Gemäldegalerie</span>
+            <span class="language frances" style="display:none;">Galerie de peinture</span>
+            <span class="language japones" style="display:none;">絵画ギャラリー</span>
+            <span class="language portugues" style="display:none;">Galeria de Pintura</span>
         </a>
 
-        <!-- Enlace a Ko-fi (Donación Simpática) -->
-        <a href="https://ko-fi.com/pazaresosset" class="link-btn"
-            style="background-color: #FFDD00; color: black; border: none; font-weight: 800; box-shadow: 0 4px 15px rgba(255, 221, 0, 0.4);">
-            <i class="fas fa-beer" style="font-size: 1.2em;"></i>
-            <span class="spanish language">Invítame a una Cerveza (Ko-fi)</span>
-            <span class="english language" style="display: none;">Buy me a Beer (Ko-fi)</span>
-            <span class="italian language" style="display: none;">Offrimi una Birra (Ko-fi)</span>
-            <span class="russian language" style="display: none;">Купи мне пива (Ko-fi)</span>
-            <span class="chinese language" style="display: none;">请我喝杯啤酒 (Ko-fi)</span>
-            <span class="arabic language" style="display: none;">اشتري لي بيرة (Ko-fi)</span>
-            <span class="portuguese language" style="display: none;">Pague-me uma Cerveja (Ko-fi)</span>
-            <span class="japanese language" style="display: none;">ビールをおごって (Ko-fi)</span>
-            <span class="korean language" style="display: none;">맥주 한 잔 사주세요 (Ko-fi)</span>
+        <a href="https://open.spotify.com/intl-es/artist/2vCZwNWvAX2NqGDdzqBY3r" target="_blank" class="link-btn">
+            <i class="fab fa-spotify" style="color: #1DB954;"></i>
+            <span class="language spanish">Mi Música en Spotify</span>
+            <span class="language english" style="display:none;">My Music on Spotify</span>
+            <span class="language italian" style="display:none;">La mia musica su Spotify</span>
+            <span class="language chinese" style="display:none;">我在 Spotify 上的音乐</span>
+            <span class="language arabic" style="display:none;">موسيقاي على سبوتيفاي</span>
+            <span class="language russian" style="display:none;">Моя музыка в Spotify</span>
+            <span class="language aleman" style="display:none;">Meine Musik auf Spotify</span>
+            <span class="language frances" style="display:none;">Ma musique sur Spotify</span>
+            <span class="language japones" style="display:none;">Spotifyで私の音楽を</span>
+            <span class="language portugues" style="display:none;">Minha música no Spotify</span>
+        </a>
+
+        <div class="support-note">
+            <span class="language spanish">¿Te gusta mi contenido? Apoya mi obra.</span>
+            <span class="language english" style="display:none;">Do you enjoy my art? Support my work.</span>
+            <span class="language italian" style="display:none;">Ti piace la mi arte? Sostieni la mi opera.</span>
+            <span class="language chinese" style="display:none;">你喜欢我的作品吗？支持我的创作。</span>
+            <span class="language arabic" style="display:none;">هل يعجبك محتواي؟ ادعم عملي.</span>
+            <span class="language russian" style="display:none;">Вам нравится мое творчество? Поддержите мою
+                работу.</span>
+            <span class="language aleman" style="display:none;">Gefällt Ihnen meine Kunst? Unterstützen Sie mich.</span>
+            <span class="language frances" style="display:none;">Vous aimez mon art ? Soutenez mon œuvre.</span>
+            <span class="language japones" style="display:none;">私の作品を楽しんでいますか？活動を支援してください。</span>
+            <span class="language portugues" style="display:none;">Gosta da minha arte? Apoie o meu trabalho.</span>
+        </div>
+
+        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="link-btn btn-support">
+            <i class="fas fa-heart text-danger"></i>
+            <span class="language spanish">Invítame a un café (Ko-fi)</span>
+            <span class="language english" style="display:none;">Buy me a coffee (Ko-fi)</span>
+            <span class="language italian" style="display:none;">Offrimi un caffè (Ko-fi)</span>
+            <span class="language chinese" style="display:none;">请我喝咖啡 (Ko-fi)</span>
+            <span class="language arabic" style="display:none;">تبرع عبر كوفي (Ko-fi)</span>
+            <span class="language russian" style="display:none;">Поддержите меня на Ko-fi</span>
+            <span class="language aleman" style="display:none;">Lade mich auf einen Kaffee ein (Ko-fi)</span>
+            <span class="language frances" style="display:none;">Offrez-moi un café (Ko-fi)</span>
+            <span class="language japones" style="display:none;">コーヒーを奢って (Ko-fi)</span>
+            <span class="language portugues" style="display:none;">Pague-me um café (Ko-fi)</span>
         </a>
     </div>
 
@@ -238,43 +291,34 @@
         <a href="https://www.tiktok.com/@pazaresosset"><i class="fab fa-tiktok"></i></a>
         <a href="https://twitter.com/pazaresosset"><i class="fab fa-twitter"></i></a>
         <a href="https://www.youtube.com/user/pazaresosset"><i class="fab fa-youtube"></i></a>
-        <a href="https://music.youtube.com/channel/UC2k23Asvrz31iE8pPTPSNwQ"><i class="fas fa-play-circle"></i></a>
     </div>
 
     <div class="footer">
-        © 2025 Paz Arés Osset
+        © 2026 PAZ ARÉS OSSET
     </div>
 
     <script>
         document.getElementById('language-select').addEventListener('change', function () {
             const selectedLanguage = this.value;
 
-            // Hide all language elements
+            // Hide all language spans
             document.querySelectorAll('.language').forEach(function (element) {
                 element.style.display = 'none';
             });
 
-            // Show selected language elements
-            document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
+            // Show selected language spans
+            document.querySelectorAll('.language.' + selectedLanguage).forEach(function (element) {
                 element.style.display = 'inline-block';
-                // If it's a paragraph, display block
-                if (element.tagName === 'P') {
-                    element.style.display = 'block';
-                }
             });
 
-            // RTL adjustment for Arabic
+            // RTL for Arabic
             if (selectedLanguage === 'arabic') {
-                document.body.classList.add('arabic');
+                document.body.style.direction = 'rtl';
             } else {
-                document.body.classList.remove('arabic');
+                document.body.style.direction = 'ltr';
             }
         });
-
-        // Initialize with Spanish
-        document.getElementById('language-select').value = 'spanish';
     </script>
-
 </body>
 
 </html>
