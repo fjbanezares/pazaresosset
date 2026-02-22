@@ -1,102 +1,133 @@
 body {
-  /* background-color: #ef8172; */
-  background-color: black;
-  font-size: 1.7rem;
-
+  transition: background-color 1s ease;
+  background: linear-gradient(180deg, #001e3c 0%, #000000 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color: white;
+  min-height: 100vh;
 }
 
 .jumbotron {
-  background-color: black;
-  color: #fff;
-}
-
-/* .jumbotron h1 {
-  margin-top: 20px;
-  font-family: 'Monoton', cursive;
-  color: magenta;
-
-} */
-.custom-select-lg {
-  font-size: 3rem;
-  line-height: 1.2;
-  padding: .5rem 1rem;
-  height: auto;
-  /* You can set this to auto or a fixed value larger than 2.875rem */
+  background: transparent;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+  padding: 6rem 2rem;
+  margin-bottom: 0;
 }
 
 .jumbotron h1 {
-  margin-top: 40px;
-  /* increase this value to add more space */
   font-family: 'Montserrat', sans-serif;
-  color: magenta;
+  color: #00d4ff;
   font-weight: 700;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
 }
 
-.multilingual-description {
-  font-size: 3rem;
-  /* rest of your properties */
-  margin-top: 30px;
-  border: 2px solid magenta;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: black;
+.handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 2.8rem !important;
+  margin-bottom: 20px;
+}
+
+.poem-text {
+  line-height: 1.8;
   color: #fff;
-}
-
-.language-desc {
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.main-description {
-  margin-top: 20px;
-}
-
-.description {
-  /* rest of your properties */
-  margin: 12px;
-  color: white;
-  /* font-family: 'Manjari', sans-serif; */
-  /* font-family: 'Monoton', cursive; */
-  /* font-family: 'Philosopher', sans-serif; */
-  font-family: 'Lemonada', cursive;
-}
-
-.audio {
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 1.3rem;
+  padding: 60px;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  display: inline-block;
   text-align: center;
-  border: 20px;
-  padding: 0;
-  margin: 0;
-  width: min-content;
-  height: min-content;
-  top: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  max-width: 900px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
 }
 
-.buttonAudio {
-  top: 200px;
+.stanza {
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
 }
 
-.zoom-container {
-  /* overflow: hidden; */
-
-  width: 50%;
-  /* or whatever width you want */
-  margin: 0 auto;
-  /* centers the element */
-
+.stanza.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.zoom-image {
-  transition: transform 0.9s ease;
+#effects-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.zoom-image:hover {
-  transform: scale(1.2);
+.content-wrap {
+  position: relative;
+  z-index: 1;
 }
 
-/* RTL Support for Arabic */
-.arabic.language {
+#language-select {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  font-weight: bold;
+}
+
+.btn-spotify {
+  background-color: #1DB954;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-spotify:hover {
+  background-color: #1ed760;
+  transform: scale(1.05);
+  color: white;
+  text-decoration: none;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 850px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.language {
+  display: none;
+}
+
+.arabic {
   direction: rtl;
   text-align: right;
-  unicode-bidi: bidi-override;
+}
+
+.arabic .poem-text {
+  text-align: right;
 }

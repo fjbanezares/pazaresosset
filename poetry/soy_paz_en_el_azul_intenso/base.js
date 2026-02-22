@@ -1,18 +1,3 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-//document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
 document.addEventListener('DOMContentLoaded', function () {
   // --- Initialize Spanish as default ---
   document.querySelectorAll('.language').forEach(function (element) {
@@ -21,100 +6,157 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.spanish').forEach(function (element) {
     element.style.display = 'block';
   });
-  document.getElementById('language-select').value = 'spanish';
-  // -------------------------------------
+  const langSelect = document.getElementById('language-select');
+  if (langSelect) langSelect.value = 'spanish';
 
-  document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
-    document.querySelectorAll('.language').forEach(function (element) {
-      element.style.display = 'none';
+  // --- Language Selector ---
+  if (langSelect) {
+    langSelect.addEventListener('change', function () {
+      const selectedLanguage = this.value;
+      document.querySelectorAll('.language').forEach(function (element) {
+        element.style.display = 'none';
+      });
+      document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
+        element.style.display = 'block';
+      });
+
+      const imageMapOld = {
+        'spanish': 'comic_soy_paz/soy_paz_spanish.png',
+        'english': 'comic_soy_paz/soy_paz_english.png',
+        'italian': 'comic_soy_paz/soy_paz_italian.png',
+        'chinese': 'comic_soy_paz/soy_paz_chino.png',
+        'arabic': 'comic_soy_paz/soy_paz_arabe.png',
+        'russian': 'comic_soy_paz/soy_paz_russian.png',
+        'aleman': 'comic_soy_paz/soy_paz_spanish.png', // Fallback
+        'frances': 'comic_soy_paz/soy_paz_spanish.png',
+        'japones': 'comic_soy_paz/soy_paz_spanish.png',
+        'portuges': 'comic_soy_paz/soy_paz_spanish.png'
+      };
+
+      const imageMap = {
+        'spanish': 'comic_soy_paz/comic_soy_paz_espanol.png',
+        'english': 'comic_soy_paz/comic_soy_paz_ingles.png',
+        'italian': 'comic_soy_paz/comic_soy_paz_italiano.png',
+        'chinese': 'comic_soy_paz/comic_soy_paz_chino.png',
+        'arabic': 'comic_soy_paz/comic_soy_paz_arabe.png',
+        'russian': 'comic_soy_paz/comic_soy_paz_ruso.png',
+        'aleman': 'comic_soy_paz/comic_soy_paz_aleman.png',
+        'frances': 'comic_soy_paz/comic_soy_paz_frances.png',
+        'japones': 'comic_soy_paz/comic_soy_paz_japones.png',
+        'portuges': 'comic_soy_paz/comic_soy_paz_portuges.png'
+      };
+
+      const audioButtonTexts = {
+        'spanish': 'Escuchar Música',
+        'english': 'Listen to Music',
+        'italian': 'Ascolta la Musica',
+        'chinese': '听音乐',
+        'arabic': 'استمع إلى الموسيقى',
+        'russian': 'Слушать музыку',
+        'aleman': 'Musik hören',
+        'frances': 'Écouter la musique',
+        'japones': '音楽を聴く',
+        'portuges': 'Ouvir música'
+      };
+
+      const comicImageOld = document.getElementById('comic-image-old');
+      if (comicImageOld) {
+        comicImageOld.src = imageMapOld[selectedLanguage] || imageMapOld['spanish'];
+      }
+
+      const comicImage = document.getElementById('comic-image');
+      if (comicImage) {
+        comicImage.src = imageMap[selectedLanguage] || imageMap['spanish'];
+      }
+      const audioButtonText = document.getElementById('audio-button-text');
+      if (audioButtonText) {
+        audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
+      }
+
+      // Spotify update logic will go here when links are provided
     });
+  }
 
-    // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
+  // --- Scroll Reveal ---
+  const observerOptions = { threshold: 0.1 };
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      }
     });
+  }, observerOptions);
 
-    // Switch comic image
-    var comicImage = document.getElementById('comic-image');
-    var language = this.value;
-    var imageMap = {
-      'english': 'comic_soy_paz/soy_paz_english.png',
-      'spanish': 'comic_soy_paz/soy_paz_spanish.png',
-      'chinese': 'comic_soy_paz/soy_paz_chino.png',
-      'arabic': 'comic_soy_paz/soy_paz_arabe.png',
-      'italian': 'comic_soy_paz/soy_paz_italian.png',
-      'russian': 'comic_soy_paz/soy_paz_russian.png'
-    };
-
-    var audioMap = {
-      'english': 'https://music.youtube.com/watch?v=Z_F9gXYroEs&si=bPOOXWJihFHwjDcV',
-      'spanish': 'https://music.youtube.com/watch?v=AqlUQSR9fok&si=dPrzhwOQwMUGvliC',
-      'chinese': 'https://music.youtube.com/watch?v=w1qnTANZJSY&si=w86alTIJNSmg8Nh8',
-      'italian': 'https://music.youtube.com/watch?v=qSfJ1RAbImg&si=CVxFaw2Dpa1eFtqH',
-      'russian': 'https://music.youtube.com/watch?v=fwnFtoTcGUI',
-      'arabic': 'https://music.youtube.com/channel/UC2k23Asvrz31iE8pPTPSNwQ'
-    };
-
-    if (imageMap[language]) {
-      comicImage.src = imageMap[language];
-    }
-
-    var audioButton = document.getElementById('audio-button');
-    if (audioMap[language]) {
-      audioButton.href = audioMap[language];
-      audioButton.style.display = 'inline-block';
-    } else {
-      audioButton.href = 'https://music.youtube.com/watch?v=AqlUQSR9fok&si=dPrzhwOQwMUGvliC';
-    }
-
+  document.querySelectorAll('.stanza').forEach(stanza => {
+    revealObserver.observe(stanza);
   });
 
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
-  var zoomImages = document.querySelectorAll('.zoom-image');
+  // --- Canvas Effects (Underwater/Bubbles) ---
+  const canvas = document.getElementById('effects-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width, height;
 
-  // Recorre todas las imágenes
-  zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
-    var isZoomed = false;
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
 
-    // Función para realizar el zoom en la imagen
-    function zoomImage() {
-      if (isZoomed) {
-        image.style.transform = 'scale(1)';
-        isZoomed = false;
-      } else {
-        image.style.transform = 'scale(1.5)';
-        isZoomed = true;
+    class Bubble {
+      constructor() {
+        this.reset();
+        this.y = Math.random() * height;
+      }
+
+      reset() {
+        this.x = Math.random() * width;
+        this.y = height + 10;
+        this.size = Math.random() * 5 + 2;
+        this.speed = Math.random() * 2 + 1;
+        this.alpha = Math.random() * 0.3 + 0.1;
+        this.oscillation = Math.random() * 2;
+        this.oscTime = 0;
+      }
+
+      update() {
+        this.y -= this.speed;
+        this.oscTime += 0.05;
+        this.x += Math.sin(this.oscTime) * this.oscillation;
+        if (this.y < -this.size) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        ctx.strokeStyle = `rgba(255, 255, 255, ${this.alpha})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.stroke();
       }
     }
 
-    // Asigna el evento touchstart (toque) a la imagen
-    image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
+    const bubbles = [];
+    for (let i = 0; i < 40; i++) {
+      bubbles.push(new Bubble());
+    }
 
-      // Establece un temporizador para reducir el zoom después de 3 segundos
-      setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
-      }, 3000);
-    });
-  });
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
 
-  ////
+      // Suttle Blueish overlay based on scroll
+      const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      ctx.fillStyle = `rgba(0, 30, 60, ${0.1 + scrollPercent * 0.2})`;
+      ctx.fillRect(0, 0, width, height);
 
-
+      bubbles.forEach(b => {
+        b.update();
+        b.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Libros - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../favicon.ico" />
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        :root {
+            --gold: #FFD700;
+            --dark-gold: #B8860B;
+            --pink-accent: #ff4c68;
+            --dark-bg: #0a0a0a;
+            --glass-bg: rgba(20, 20, 20, 0.75);
+            --glass-border: rgba(255, 215, 0, 0.2);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            background-color: var(--dark-bg);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../carrousel/crepusculoresized.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+            z-index: 10;
+        }
+
+        .logo-img {
+            max-height: 70px;
+            transition: transform 0.3s;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .custom-select-dark {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .custom-select-dark:hover {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            z-index: 1;
+        }
+
+        .page-title {
+            font-family: 'Philosopher', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 15px;
+        }
+
+        .books-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .book-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            text-decoration: none !important;
+            color: white;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.3);
+            color: white;
+        }
+
+        .book-cover {
+            width: 180px;
+            height: 250px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .book-cover i {
+            font-size: 4rem;
+            color: var(--gold);
+        }
+
+        .book-title {
+            font-size: 1.5rem;
+            font-family: 'Philosopher', serif;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--pink-accent);
+        }
+
+        .book-desc {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .btn-read {
+            background: linear-gradient(45deg, var(--gold), var(--dark-gold));
+            color: black;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .btn-read:hover {
+            box-shadow: 0 0 15px var(--gold);
+            color: black;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 10;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--gold);
+            font-size: 1.2rem;
+            text-decoration: none !important;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--pink-accent);
+        }
+
+        /* Languages */
+        .lang {
+            display: none;
+        }
+
+        .lang.active {
+            display: inline-block;
+        }
+
+        .rtl-body {
+            direction: rtl;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html">
+            <img src="../logopazares.png" alt="Paz Arés Osset Logo" class="logo-img">
+        </a>
+        <div class="lang-select-wrapper">
+            <select id="language-select" class="custom-select-dark">
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="zh">🇨🇳 中文</option>
+                <option value="ar">🇦🇪 العربية</option>
+                <option value="ru">🇷🇺 Русский</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i>
+            <span class="lang es active">Volver al inicio</span>
+            <span class="lang en">Back to Home</span>
+            <span class="lang it">Torna alla Home</span>
+            <span class="lang zh">返回首页</span>
+            <span class="lang ar">العودة إلى الصفحة الرئيسية</span>
+            <span class="lang ru">Вернуться на главную</span>
+        </a>
+
+        <h1 class="page-title">
+            <span class="lang es active">Mis Libros</span>
+            <span class="lang en">My Books</span>
+            <span class="lang it">I Miei Libri</span>
+            <span class="lang zh">我的书</span>
+            <span class="lang ar">كتبي</span>
+            <span class="lang ru">Мои книги</span>
+        </h1>
+
+        <div class="books-container">
+
+            <!-- Book 1: Mi amigo Jesucristo -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <i class="fas fa-cross"></i>
+                </div>
+                <div class="book-title">
+                    <span class="lang es active">A Glimpse of Light into the Darkness</span>
+                    <span class="lang en">A Glimpse of Light into the Darkness</span>
+                    <span class="lang it">A Glimpse of Light into the Darkness</span>
+                    <span class="lang zh">A Glimpse of Light into the Darkness</span>
+                    <span class="lang ar">A Glimpse of Light into the Darkness</span>
+                    <span class="lang ru">A Glimpse of Light into the Darkness</span>
+                </div>
+                <div class="book-desc">
+                    <span class="lang es active">Mi amigo Jesucristo. Una profunda reflexión espiritual sobre la fusión
+                        de religiones, el amor puro y la luz universal.</span>
+                    <span class="lang en">My friend Jesus Christ. A deep spiritual reflection on the fusion of
+                        religions, pure love, and universal light.</span>
+                    <span class="lang it">Il mio amico Gesù Cristo. Una profonda riflessione spirituale sulla fusione
+                        delle religioni, l'amore puro e la luce universale.</span>
+                    <span class="lang zh">我的朋友耶稣基督。对宗教融合、纯洁的爱和普遍之光的深刻心灵反思。</span>
+                    <span class="lang ar">صديقي يسوع المسيح. تأمل روحي عميق في اندماج الأديان والحب النقي والنور
+                        العالمي.</span>
+                    <span class="lang ru">Мой друг Иисус Христос. Глубокое духовное размышление о слиянии религий,
+                        чистой любви и универсальном свете.</span>
+                </div>
+                <a href="http://librojesus.pazaresosset.es" class="btn-read" target="_blank">
+                    <span class="lang es active">Leer / Descubrir</span>
+                    <span class="lang en">Read / Discover</span>
+                    <span class="lang it">Leggi / Scopri</span>
+                    <span class="lang zh">阅读/发现</span>
+                    <span class="lang ar">اقرأ / اكتشف</span>
+                    <span class="lang ru">Читать / Открыть</span>
+                </a>
+            </div>
+
+            <!-- Add more books here later with the same structure -->
+
+        </div>
+    </main>
+
+    <footer>
+        <div style="color: #888; font-size: 0.9rem;">
+            © <span id="year"></span> Paz Arés Osset
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const languageSelect = document.getElementById('language-select');
+        const allLangs = document.querySelectorAll('.lang');
+
+        languageSelect.addEventListener('change', (e) => {
+            const selectedLang = e.target.value;
+
+            // Toggle visibility
+            allLangs.forEach(el => {
+                el.classList.remove('active');
+                if (el.classList.contains(selectedLang)) {
+                    el.classList.add('active');
+                }
+            });
+
+            // Handle RTL for Arabic
+            if (selectedLang === 'ar') {
+                document.body.classList.add('rtl-body');
+            } else {
+                document.body.classList.remove('rtl-body');
+            }
+        });
+    </script>
+</body>
+
+</html>

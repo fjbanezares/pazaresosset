@@ -1,138 +1,523 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Paz Arés Osset, The Artist.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Paz Arés Osset, The Artist</title>
   <link rel="icon" type="image/png" href="favicon.ico" />
 
-
-  <!-- jQuery, fontawesome, booststrap -->
-
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900|Ubuntu:300,700&display=swap"
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/styles.css">
-  <!-- <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script> -->
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap (for grid/layout basics, though custom css does the heavy lifting) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+  <style>
+    :root {
+      --gold: #FFD700;
+      --dark-gold: #B8860B;
+      --pink-accent: #ff4c68;
+      --dark-bg: #0a0a0a;
+      --glass-bg: rgba(20, 20, 20, 0.75);
+      --glass-border: rgba(255, 215, 0, 0.2);
+    }
 
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      background-color: var(--dark-bg);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Fullscreen fading background */
+    #bg-slider {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 2s ease-in-out;
+      filter: brightness(0.4) saturate(1.2);
+    }
+
+    /* Header */
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+      z-index: 10;
+    }
+
+    .logo-img {
+      max-height: 70px;
+      transition: transform 0.3s;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .lang-select-wrapper {
+      position: relative;
+    }
+
+    .custom-select-dark {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    .custom-select-dark:hover,
+    .custom-select-dark:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      z-index: 1;
+    }
+
+    .hero-container {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--gold);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+      margin-bottom: 25px;
+      transition: transform 0.5s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05) rotate(2deg);
+      box-shadow: 0 0 40px rgba(255, 76, 104, 0.6);
+      border-color: var(--pink-accent);
+    }
+
+    .hero-title {
+      font-family: 'Philosopher', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--pink-accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: #eaeaea;
+      margin-bottom: 30px;
+    }
+
+    /* Grid layout for links */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .menu-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      text-decoration: none !important;
+      color: white;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 160px;
+    }
+
+    .menu-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.5s ease;
+      transform: skewX(-20deg);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--gold);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.3);
+      color: white;
+    }
+
+    .menu-card:hover::before {
+      left: 150%;
+    }
+
+    .menu-card i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: var(--pink-accent);
+      transition: color 0.3s;
+    }
+
+    .menu-card:hover i {
+      color: var(--gold);
+    }
+
+    .menu-card span.card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-family: 'Philosopher', serif;
+      letter-spacing: 1px;
+    }
+
+    /* Call to action */
+    .cta-section {
+      text-align: center;
+      margin-top: 60px;
+      padding: 40px;
+      background: linear-gradient(rgba(255, 76, 104, 0.1), rgba(0, 0, 0, 0.6));
+      border-radius: 20px;
+      border-top: 2px solid rgba(255, 76, 104, 0.3);
+      max-width: 900px;
+      backdrop-filter: blur(10px);
+    }
+
+    .cta-text {
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #f0f0f0;
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      position: relative;
+      z-index: 10;
+    }
+
+    .social-icons {
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      color: var(--gold);
+      font-size: 1.8rem;
+      margin: 0 15px;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .social-icons a:hover {
+      color: var(--pink-accent);
+      transform: translateY(-5px) scale(1.1);
+    }
+
+    .footer-text {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* Base language hiding */
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: inline-block;
+    }
+
+    /* Arabic RTL */
+    .rtl-body {
+      direction: rtl;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .profile-img {
+        width: 180px;
+        height: 180px;
+      }
+
+      header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <section id="title">
-    <div class="container-fluid">
+  <!-- Background slider -->
+  <div id="bg-slider"></div>
 
-      <img class="logo" src="logopazares.png" alt="Paz Arés Osset, the Artist">
-      <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-        <select id="page-select" class="custom-select-lg" onchange="location = this.value;"
-          style="font-size: 2rem; line-height: 2.5; padding: 1rem 2rem; height: calc(4.875rem + 2px); background-color: #007bff; color: white; border: none;">
-          <option value="index.html">Select</option>
-          <option value="gallery/index.html">Gallery</option>
-          <!-- <option value="https://poetry.pazaresosset.es/">Poetry</option> -->
-          <option value="poetry/index.html">Poetry</option>
-          <option value="contact/index.html">Contact</option>
-          <option value="bio/index.html">Bio</option>
-        </select>
+  <header>
+    <a href="index.html">
+      <img src="logopazares.png" alt="Paz Arés Osset Logo" class="logo-img">
+    </a>
+    <div class="lang-select-wrapper">
+      <select id="language-select" class="custom-select-dark">
+        <option value="es">🇪🇸 Español</option>
+        <option value="en">🇺🇸 English</option>
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="zh">🇨🇳 中文</option>
+        <option value="ar">🇦🇪 العربية</option>
+        <option value="ru">🇷🇺 Русский</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-container">
+      <a href="http://aglimpseoflightintothedarkness.pazaresosset.es/" target="_blank">
+        <img src="Nuevayorktorreoro.jpg" alt="Paz Arés Osset" class="profile-img">
+      </a>
+      <h1 class="hero-title">Paz Arés Osset</h1>
+      <div class="hero-subtitle">
+        <span class="lang es active">Artista con una grandiosa y colorida visión de la vida</span>
+        <span class="lang en">Artist with great and colourful vision of life</span>
+        <span class="lang it">Artista con una grande e colorata visione della vita</span>
+        <span class="lang zh">拥有伟大而多彩的生活愿景的艺术家</span>
+        <span class="lang ar">فنانة برؤية عظيمة وملونة للحياة</span>
+        <span class="lang ru">Художник с великим и красочным видением жизни</span>
       </div>
+    </div>
 
+    <div class="menu-grid">
+      <!-- Books -->
+      <a href="libros/index.html" class="menu-card">
+        <i class="fas fa-book-open"></i>
+        <span class="card-title">
+          <span class="lang es active">Libros</span>
+          <span class="lang en">Books</span>
+          <span class="lang it">Libri</span>
+          <span class="lang zh">书籍</span>
+          <span class="lang ar">كتب</span>
+          <span class="lang ru">Книги</span>
+        </span>
+      </a>
 
+      <!-- Poetry -->
+      <a href="poetry/index.html" class="menu-card">
+        <i class="fas fa-feather-alt"></i>
+        <span class="card-title">
+          <span class="lang es active">Poesía</span>
+          <span class="lang en">Poetry</span>
+          <span class="lang it">Poesia</span>
+          <span class="lang zh">诗歌</span>
+          <span class="lang ar">الشعر</span>
+          <span class="lang ru">Поэзия</span>
+        </span>
+      </a>
 
+      <!-- Art gallery -->
+      <a href="gallery/index.html" class="menu-card">
+        <i class="fas fa-palette"></i>
+        <span class="card-title">
+          <span class="lang es active">Arte</span>
+          <span class="lang en">Art</span>
+          <span class="lang it">Arte</span>
+          <span class="lang zh">艺术</span>
+          <span class="lang ar">فن</span>
+          <span class="lang ru">Искусство</span>
+        </span>
+      </a>
 
+      <!-- Bio -->
+      <a href="bio/index.html" class="menu-card">
+        <i class="fas fa-user"></i>
+        <span class="card-title">
+          <span class="lang es active">Biografía</span>
+          <span class="lang en">Bio</span>
+          <span class="lang it">Biografia</span>
+          <span class="lang zh">简介</span>
+          <span class="lang ar">سيرة شخصية</span>
+          <span class="lang ru">Биография</span>
+        </span>
+      </a>
 
+      <!-- Contact -->
+      <a href="contact/index.html" class="menu-card">
+        <i class="fas fa-envelope"></i>
+        <span class="card-title">
+          <span class="lang es active">Contacto</span>
+          <span class="lang en">Contact</span>
+          <span class="lang it">Contatto</span>
+          <span class="lang zh">联系</span>
+          <span class="lang ar">اتصال</span>
+          <span class="lang ru">Контакты</span>
+        </span>
+      </a>
 
-      <!-- Title -->
-      <div class="row">
-        <div class="col-lg-4">
-          <!-- <h1>Paz Arés Osset, the Artist...</h1> -->
-          <!-- <button type="button" class="btn btn-outline-dark btn-lg  download-buton button-gallery"><span><b class="far fa-gem" style="margin-right:2px"></b></span> Gallery </button>
-          <button type="button" class="btn btn-outline-dark btn-lg download-buton button-poetry"><span><i class="fas fa-hand-holding-heart" style="margin-right:2px"></i></span> Poetry </button>
-          <button type="button" class="btn btn-outline-dark btn-lg download-buton button-poetry"><span><i class="fas fa-hand-holding-heart" style="margin-right:2px"></i></span> Bio </button> -->
+      <!-- Linktree -->
+      <a href="linktree.html" class="menu-card">
+        <i class="fas fa-link"></i>
+        <span class="card-title">
+          <span class="lang es active">Enlaces (Linktree)</span>
+          <span class="lang en">Linktree</span>
+          <span class="lang it">Linktree</span>
+          <span class="lang zh">链接树</span>
+          <span class="lang ar">شجرة الروابط</span>
+          <span class="lang ru">Ссылки</span>
+        </span>
+      </a>
+    </div>
 
+    <!-- Call to action area -->
+    <div class="cta-section">
+      <div class="cta-text">
+        <span class="lang es active">"Contribuye con ella a traer paz al mundo y resolver problemas globales."</span>
+        <span class="lang en">"Contribute with her to bring peace to the world and solve global issues."</span>
+        <span class="lang it">"Contribuisci con lei a portare la pace nel mondo e risolvere i problemi globali."</span>
+        <span class="lang zh">“与她一起为世界带来和平，解决全球问题。”</span>
+        <span class="lang ar">"ساهم معها في إحلال السلام في العالم وحل القضايا العالمية."</span>
+        <span class="lang ru">"Внеси свой вклад вместе с ней в установление мира во всем мире."</span>
+      </div>
+      <div class="cta-text" style="color: var(--gold); font-weight: 400;">
+        <span class="lang es active">Si buscas espiritualidad y la fusión de religiones, somos uno...</span>
+        <span class="lang en">If you seek spirituality and fusion of religions, we are one...</span>
+        <span class="lang it">Se cerchi spiritualità e la fusione delle religioni, siamo uno...</span>
+        <span class="lang zh">如果你寻求灵性和宗教的融合，我们是一体的……</span>
+        <span class="lang ar">إذا كنت تسعى للروحانية واندماج الأديان، فنحن واحد...</span>
+        <span class="lang ru">Если вы ищете духовность и слияние религий, мы едины...</span>
+      </div>
+    </div>
+  </main>
 
-
-          <a href="http://aglimpseoflightintothedarkness.pazaresosset.es/"><img src="Nuevayorktorreoro.jpg"
-              width="350px" height="350px" alt="The Artist" class="image"
-              style="border:3px solid; border-radius:400px; margin:22px 12px 12px 12px;" /></a>
-
-
-        </div>
-
-        <div class="col-lg-8">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item " data-interval="4000">
-                <img src="carrousel/fusionreligionesresized.jpg" height="250px" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item active" data-interval="4000">
-                <img src="carrousel/impresionanteresized.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-interval="4000">
-                <img src="carrousel/crepusculosresized.jpg" height="250px" class="d-block w-100" alt="...">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--      <div class="col-lg-6 cotiene-twitter">
-          <div class="pepito" style="text-align:center;">
-                  	<h2>Official Twitter</h2>
-                     <a class="twitter-timeline"  data-chrome="transparent nofooter  noheader noscrollbar "  href="https://twitter.com/pazaresosset"  data-widget-id="388122143755497473">Tweets por @pazaresosset</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          </div>
-        </div> -->
-      </div> <!--row-->
-
-    </div> <!--container-fluid-->
-  </section>
-
-
-
-  <!-- Call to Action -->
-
-  <section id="cta">
-
-    <h3 class="cta-heading">
-      <p>Artist with great and colourful vision of life</p>
-      <p>Contribute with her to bring peace to the world and solve global issues</p>
-      <p>If you seek spirituality and fusion of religions, we are one...</p>
-      <button type="button" class="btn btn-dark btn-lg  download-buton"><span><i class="fab fa-apple"></i></span>
-        Gallery</button>
-      <button type="button" class="btn btn-light btn-lg download-buton"> <i class="fab fa-google-play"></i> Bio</button>
-
-  </section>
-
-
-  <!-- Footer -->
-
-  <footer id="footer">
-    <a href="https://www.facebook.com/pazarestheartist/"> <img src="facebook-logo-510.png" width="69px" height="59px"
-        alt="The Artist" /></a>
-    <a href="https://www.tiktok.com/@pazaresosset"> <img src="logo-tik-tok.png" width="89px" height="89px"
-        alt="The Artist" /></a>
-    <a href="https://twitter.com/pazaresosset"><img src="twitterlogo.png" width="89px" height="69px"
-        alt="The Artist" /></a>
-    <a href="https://www.instagram.com/pazaresosset/"><img src="instagram-logo-png-2426.png" width="69px" height="69px"
-        alt="The Artist" /></a>
-    <a href="https://www.youtube.com/user/pazaresosset"><img src="youtubeicon.svg" width="80px" height="69px"
-        alt="The Artist" style="margin-left: 20px;" /></a>
-    </br>
-    </br>
-    <p style="text-align: center;"> © Copyright 2023 Paz Arés Osset</p>
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/pazarestheartist/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/pazaresosset" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.tiktok.com/@pazaresosset" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/pazaresosset/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/user/pazaresosset" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="footer-text">
+      © Copyright <span id="year"></span> Paz Arés Osset -
+      <span class="lang es active">Todos los derechos reservados</span>
+      <span class="lang en">All rights reserved</span>
+      <span class="lang it">Tutti i diritti riservati</span>
+      <span class="lang zh">版权所有</span>
+      <span class="lang ar">كل الحقوق محفوظة</span>
+      <span class="lang ru">Все права защищены</span>
+    </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="pazaresosset.js" charset="utf-8"></script>
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
+    /* --- Background Slider --- */
+    const bgImages = [
+      'url("carrousel/fusionreligionesresized.jpg")',
+      'url("carrousel/impresionanteresized.jpg")',
+      'url("carrousel/crepusculoresized.jpg")',
+      'url("carrousel/afrodita.jpg")',
+      'url("carrousel/Ilusiones1.jpg")'
+    ];
+    let currentBgIndex = 0;
+    const bgElement = document.getElementById('bg-slider');
 
+    // Init first background
+    bgElement.style.backgroundImage = bgImages[currentBgIndex];
+
+    setInterval(() => {
+      currentBgIndex = (currentBgIndex + 1) % bgImages.length;
+      bgElement.style.backgroundImage = bgImages[currentBgIndex];
+    }, 5000); // 5 seconds change
+
+    /* --- Language Selector --- */
+    const languageSelect = document.getElementById('language-select');
+    const allLangs = document.querySelectorAll('.lang');
+
+    languageSelect.addEventListener('change', (e) => {
+      const selectedLang = e.target.value;
+
+      // Toggle visibility
+      allLangs.forEach(el => {
+        el.classList.remove('active');
+        if (el.classList.contains(selectedLang)) {
+          el.classList.add('active');
+        }
+      });
+
+      // Handle RTL for Arabic
+      if (selectedLang === 'ar') {
+        document.body.classList.add('rtl-body');
+      } else {
+        document.body.classList.remove('rtl-body');
+      }
+    });
+  </script>
 </body>
 
 </html>
