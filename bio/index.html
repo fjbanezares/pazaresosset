@@ -1,395 +1,716 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
-    <title>Paz Arés the Artist</title>
-    <link rel="icon" type="image/png" href="../../favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Biografía - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../favicon.ico" />
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <style>
+        :root {
+            --gold: #FFD700;
+            --dark-gold: #B8860B;
+            --pink-accent: #ff4c68;
+            --dark-bg: #050505;
+            --glass-bg: rgba(20, 20, 20, 0.75);
+            --glass-border: rgba(255, 215, 0, 0.2);
+        }
+
         body {
-            background-color: black;
-            font-size: 1.7rem;
-            color: #fff;
-        }
-
-        .custom-header {
-            padding: 2rem 1rem;
-            text-align: center;
-            color: inherit;
-            background-color: black;
-        }
-
-        .custom-select-lg {
-            font-size: 3rem;
-            line-height: 1.2;
-            padding: .5rem 1rem;
-            height: auto;
-        }
-
-        .custom-header h1 {
-            margin-top: 40px;
-            font-family: 'Montserrat', sans-serif;
-            color: magenta;
-            font-weight: 700;
-        }
-
-        .multilingual-description {
-            font-size: 3rem;
-            margin-top: 30px;
-            border: 2px solid magenta;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: black;
-            color: #fff;
-        }
-
-        .language-desc {
-            padding: 10px;
-            margin-top: 10px;
-        }
-
-        .main-description {
-            margin-top: 20px;
-        }
-
-        .description {
-            margin: 12px;
-            color: white;
-            font-family: 'Lemonada', cursive;
-        }
-
-        .audio {
-            text-align: center;
-            border: 20px;
-            padding: 0;
             margin: 0;
-            width: min-content;
-            height: min-content;
-            top: 40px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            background-color: var(--dark-bg);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(255, 76, 104, 0.08), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(255, 215, 0, 0.08), transparent 40%);
+            background-attachment: fixed;
         }
 
-        .buttonAudio {
-            top: 200px;
+        /* Header */
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+            z-index: 10;
+            position: sticky;
+            top: 0;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold);
+            font-size: 1.1rem;
+            text-decoration: none !important;
+            transition: color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            color: var(--pink-accent);
+            transform: translateX(-5px);
+        }
+
+        .custom-select-dark {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 8px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .custom-select-dark:hover {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 20px 60px;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .page-title {
+            font-family: 'Philosopher', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Intro Section (Prologue) */
+        .prologue {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-left: 4px solid var(--pink-accent);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 900px;
+        }
+
+        .prologue p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #eaeaea;
+            margin-bottom: 20px;
+        }
+
+        .prologue p:last-child {
+            margin-bottom: 0;
+        }
+
+        .prologue .highlight {
+            color: var(--gold);
+            font-family: 'Philosopher', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+
+        /* Chapters Timeline Grid */
+        .chapters-title {
+            font-family: 'Philosopher', serif;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chapters-title::before,
+        .chapters-title::after {
+            content: '';
+            height: 2px;
+            width: 50px;
+            background: var(--gold);
+            display: block;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .chapter-card {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none !important;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            /* Bouncy effect */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .chapter-img-placeholder {
+            height: 180px;
+            background: linear-gradient(45deg, #111, #2a0815);
+            /* Dark pinkish tone */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-card:nth-child(even) .chapter-img-placeholder {
+            background: linear-gradient(45deg, #111, #1a1a05);
+            /* Dark gold tone */
+        }
+
+        .chapter-img-placeholder i {
+            font-size: 4rem;
+            color: rgba(255, 215, 0, 0.3);
+            transition: all 0.4s;
+            z-index: 2;
+        }
+
+        .chapter-card:hover .chapter-img-placeholder i {
+            color: var(--gold);
+            transform: scale(1.2);
+        }
+
+        /* Subtle animated pattern overlay for placeholders ahead of having AI logic */
+        .chapter-img-placeholder::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 20px 20px;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .chapter-content {
+            padding: 30px 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chapter-number {
+            font-size: 0.9rem;
+            color: var(--pink-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .chapter-title {
+            font-family: 'Philosopher', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .chapter-card:hover .chapter-title {
+            color: var(--gold);
+        }
+
+        .chapter-desc {
+            font-size: 0.95rem;
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .chapter-action {
+            font-weight: bold;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chapter-action i {
+            transition: transform 0.3s;
+        }
+
+        .chapter-card:hover .chapter-action i {
+            transform: translateX(5px);
+            color: var(--pink-accent);
+        }
+
+        /* Coming soon badge effect */
+        .badge-ai {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 76, 104, 0.8);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            z-index: 3;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 10;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        /* Languages */
+        .lang {
+            display: none;
+        }
+
+        .lang.active {
+            display: inline-block;
+        }
+
+        .rtl-body {
+            direction: rtl;
+        }
+
+        .rtl-body .back-btn i {
+            transform: rotate(180deg);
+        }
+
+        .rtl-body .chapter-action i {
+            transform: rotate(180deg);
+        }
+
+        .rtl-body .chapter-card:hover .chapter-action i {
+            transform: translateX(-5px) rotate(180deg);
+        }
+
+        .rtl-body .badge-ai {
+            right: auto;
+            left: 15px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 3rem;
+            }
+
+            .prologue {
+                padding: 25px;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-        <select id="language-select" class="custom-select-lg">
-            <option value="english">English</option>
-            <option value="spanish">Español</option>
-            <option value="italian">Italiano</option>
-            <option value="chinese">中文</option>
-        </select>
-    </div>
 
-    <div class="custom-header">
-        <a class="brand" href="https://www.pazaresosset.es"><img src="../../logopazares.png"
-                style="position:absolute; margin: 10px;top:0px; right:0px;" alt="Paz Arés Osset, the Artist"></a>
-        <h1 class="display-4 language english">Paz Arés, the Artist</h1>
-        <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
-        <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
-        <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="language english" style="display: block;">
-                    <h1>Biography of Paz Arés Osset</h1>
-                    <ul>
-                        <li><a href="./ifni">Africa</a></li>
-                        <li><a href="./valencia">Valencia</a></li>
-                        <li><a href="./madrid">Madrid</a></li>
-                        <li><a href="./avila">Avila</a></li>
-                    </ul>
-                </div>
-                <div class="language spanish" style="display: none;">
-                    <h1>Biografía de Paz Arés Osset</h1>
-                    <ul>
-                        <li><a href="ifni">África</a></li>
-                        <li><a href="valencia">Valencia</a></li>
-                        <li><a href="madrid">Madrid</a></li>
-                        <li><a href="avila">Ávila</a></li>
-                        <li><a href="bellas-artes/">Bellas Artes</a></li>
-
-                    </ul>
-                </div>
-                <div class="language italian" style="display: none;">
-                    <h1>Biografia di Paz Arés Osset</h1>
-                    <ul>
-                        <li><a href="ifni">Africa</a></li>
-                        <li><a href="valencia">Valencia</a></li>
-                        <li><a href="madrid">Madrid</a></li>
-                        <li><a href="avila">Avila</a></li>
-                    </ul>
-                </div>
-                <div class="language chinese" style="display: none;">
-                    <h1>帕斯·阿雷斯·奥塞特的传记</h1>
-                    <ul>
-                        <li><a href="ifni">非洲</a></li>
-                        <li><a href="valencia">瓦伦西亚</a></li>
-                        <li><a href="madrid">马德里</a></li>
-                        <li><a href="avila">阿维拉</a></li>
-                        <li><a href="bellas-artes/">阿维拉</a></li>
-                    </ul>
-                </div>
-            </div>
+    <header>
+        <a href="../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            <img src="../logopazares.png" alt="Logo" style="height: 40px; margin-left:10px;">
+        </a>
+        <div class="lang-select-wrapper">
+            <select id="language-select" class="custom-select-dark">
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="zh">🇨🇳 中文</option>
+                <option value="ar">🇦🇪 العربية</option>
+                <option value="ru">🇷🇺 Русский</option>
+            </select>
         </div>
-    </div>
+    </header>
 
-    <section class="multilingual-description">
-        <div class="container">
-            <h2>
-                <div class="english language">Paz Arés Osset</div>
-                <div class="spanish language" style="display: none;">Paz Arés Osset</div>
-                <div class="italian language" style="display: none;">Paz Arés Osset</div>
-                <div class="chinese language" style="display: none;">Paz Arés Osset</div>
-            </h2>
+    <main>
+        <h1 class="page-title">
+            <span class="lang es active">Biografía</span>
+            <span class="lang en">Biography</span>
+            <span class="lang it">Biografia</span>
+            <span class="lang zh">传记</span>
+            <span class="lang ar">سيرة شخصية</span>
+            <span class="lang ru">Биография</span>
+        </h1>
 
-            <div class="english language">
-                <!-- English description here -->
-                <p>Dear brothers and sisters, allow me to speak to you about the artist Paz, a true holistic and
-                    mystical soul who has
-                    devoted her life to the pursuit of union between heaven and earth. Through her art, she has
-                    represented the fusion
-                    of religions and awakened the spiritual consciousness of humanity, empowering us to make the
-                    necessary change and
-                    thrive on our beloved planet.</p>
-
-                <p>From her birth in Spanish West Africa during the Ifni War, Paz has shown exceptional talent from a
-                    young age. Her
-                    love for reading, painting, drawing, dance, theater, singing, and guitar manifested remarkably at
-                    the age of five.
-                    Throughout her life, she has been blessed with immersion in various religions, providing her with
-                    deep knowledge and
-                    unique understanding.</p>
-
-                <p>Paz has dedicated forty years of her life to teaching as a primary and secondary school teacher,
-                    working in the
-                    Ministry of Education of the State. She has also pursued three university degrees, earning her
-                    doctorate in
-                    Philosophy and Education Sciences, specializing in Psychology, Pedagogy, and Sociology. Her thirst
-                    for knowledge and
-                    passion for art led her to study Fine Arts, where she also obtained her doctorate in 1998.</p>
-
-                <p>For twelve years, Paz immersed herself in the profound study of Kadampa Buddhism, receiving all the
-                    initiations and
-                    cultivating her spirituality. This experience has influenced her art, allowing her work to convey a
-                    deep sense of
-                    peace and serenity.</p>
-
-                <p>As an artist, Paz is multifaceted, constantly seeking perfection in all the styles she explores. Her
-                    creations
-                    include sculpture, painting, watercolor, pastels, prints, and photography, each reflecting her
-                    dedication and
-                    ability to capture beauty in every artistic expression.</p>
-
-                <p>Her talent has been recognized with numerous painting awards, and she has had the honor of exhibiting
-                    her work in
-                    various locations worldwide. Paz has also participated in important poetry recitals and has been
-                    included in
-                    prestigious poetry anthologies.</p>
-
-                <p>In 2019, she had the privilege of being part of the International Peace Caravan organized by the
-                    Mekky Moursia
-                    Institute, where her pictorial art and poetry shone, conveying messages of harmony and unity among
-                    nations.</p>
-
-                <p>Dear friends, Paz's art transcends borders and invites us to reflect on our deepest essence. Through
-                    her artistic
-                    vision, she shows us the path to inner peace and connection with the divine. Her works are a gift to
-                    our senses and
-                    a reminder of the beauty we can find in the world.</p>
-
-                <p>May her art continue to illuminate our hearts and guide us towards a future of love and unity. Peace
-                    be with you, now
-                    and always.</p>
-
+        <!-- Prologue Section -->
+        <div class="prologue">
+            <div class="highlight mb-3">
+                <span class="lang es active">"El arte de unir el cielo y la tierra."</span>
+                <span class="lang en">"The art of uniting heaven and earth."</span>
+                <span class="lang it">"L'arte di unire il cielo e la terra."</span>
+                <span class="lang zh">“连接天地之艺术。”</span>
+                <span class="lang ar">"فن توحيد السماء والأرض."</span>
+                <span class="lang ru">"Искусство объединения небес и земли."</span>
             </div>
-
-            <div class="spanish language" style="display: none;">
-                <!-- Spanish description here -->
-                <p>Queridos hermanos y hermanas, permitidme hablaros de la artista Paz, una verdadera alma holística y
-                    mística que ha
-                    dedicado su vida a la búsqueda de la unión entre el cielo y la tierra. A través de su arte, ella ha
-                    representado la
-                    fusión de las religiones y ha despertado la conciencia espiritual de la humanidad, capacitándonos
-                    para realizar el
-                    cambio necesario y prosperar en nuestro amado planeta.</p>
-
-                <p>Desde su nacimiento en la África Occidental Española durante la Guerra de Ifni, Paz ha demostrado un
-                    talento
-                    excepcional desde una edad temprana. Su amor por la lectura, la pintura, el dibujo, la danza, el
-                    teatro, el canto y
-                    la guitarra se manifestaron de manera sorprendente a los cinco años. A lo largo de su vida, ha
-                    tenido la bendición
-                    de sumergirse en diversas religiones, lo que le ha proporcionado un profundo conocimiento y una
-                    comprensión única.
-                </p>
-
-                <p>Paz ha dedicado cuarenta años de su vida a impartir clases como profesora en Educación Primaria y
-                    Secundaria,
-                    desempeñando su labor en el Ministerio de Educación del Estado. Además, ha estudiado tres carreras
-                    universitarias,
-                    obteniendo su doctorado en Filosofía y Ciencias de la Educación, con especialización en Psicología,
-                    Pedagogía y
-                    Sociología. Su sed de conocimiento y su pasión por el arte la llevaron a estudiar Bellas Artes,
-                    donde también obtuvo
-                    su doctorado en el año 1998.</p>
-
-                <p>Durante doce años, Paz se sumergió en el estudio profundo del Budismo Kadampa, recibiendo todas las
-                    iniciaciones y
-                    cultivando así su espiritualidad. Esta experiencia ha influido en su arte, permitiendo que su obra
-                    transmita un
-                    profundo sentido de paz y serenidad.</p>
-
-                <p>Como artista, Paz es multifacética y busca la perfección en todos los estilos que aborda. Sus
-                    creaciones incluyen
-                    esculturas, pinturas, acuarelas, pasteles, grabados y fotografías, cada una de ellas reflejando su
-                    dedicación y
-                    habilidad para plasmar la belleza en cada forma de expresión artística.</p>
-
-                <p>Su talento ha sido reconocido con numerosos premios de pintura y ha tenido el honor de exponer su
-                    obra en diversos
-                    lugares alrededor del mundo. Además, Paz ha participado en importantes recitales de poesía y ha sido
-                    incluida en
-                    prestigiosas antologías poéticas.</p>
-
-                <p>En el año 2019, tuvo el privilegio de formar parte de la Caravana Internacional de La Paz, organizada
-                    por el
-                    Instituto Mekky Moursia, donde su arte pictórico y su poesía brillaron, transmitiendo mensajes de
-                    armonía y unidad
-                    entre los pueblos.</p>
-
-                <p>Queridos amigos, el arte de Paz trasciende las fronteras y nos invita a reflexionar sobre nuestra
-                    esencia más
-                    profunda. A través de su visión artística, nos muestra el camino hacia la paz interior y la conexión
-                    con lo divino.
-                    Sus obras son un regalo para nuestros sentidos y un recordatorio de la belleza que podemos encontrar
-                    en el mundo.
-                </p>
-
-                <p>Que su arte siga iluminando nuestros corazones y guiándonos hacia un futuro de amor y unidad. Paz sea
-                    con vosotros,
-                    ahora y siempre.</p>
-            </div>
-
-            <div class="italian language" style="display: none;">
-                <!-- Italian description here -->
-                <p>Cari fratelli e sorelle, permettetemi di parlarvi dell'artista Paz, un'anima veramente olistica e
-                    mistica che ha
-                    dedicato la sua vita alla ricerca dell'unione tra il cielo e la terra. Attraverso la sua arte, ha
-                    rappresentato la
-                    fusione delle religioni e risvegliato la coscienza spirituale dell'umanità, permettendoci di
-                    apportare il
-                    cambiamento necessario e prosperare sul nostro amato pianeta.</p>
-
-                <p>Dalla sua nascita nell'Africa occidentale spagnola durante la guerra di Ifni, Paz ha mostrato un
-                    talento eccezionale
-                    fin da giovane. Il suo amore per la lettura, la pittura, il disegno, la danza, il teatro, il canto e
-                    la chitarra si
-                    è manifestato in modo sorprendente all'età di cinque anni. Nel corso della sua vita, ha avuto la
-                    fortuna di
-                    immergersi in diverse religioni, acquisendo una conoscenza profonda e una comprensione unica.</p>
-
-                <p>Paz ha dedicato quarant'anni della sua vita all'insegnamento come insegnante di scuola primaria e
-                    secondaria,
-                    lavorando presso il Ministero dell'Istruzione dello Stato. Ha inoltre conseguito tre lauree
-                    universitarie, ottenendo
-                    il dottorato in Filosofia e Scienze dell'Educazione, con specializzazione in Psicologia, Pedagogia e
-                    Sociologia. La
-                    sua sete di conoscenza e la passione per l'arte l'hanno spinta a studiare Belle Arti, dove ha
-                    ottenuto anche il
-                    dottorato nel 1998.</p>
-
-                <p>Per dodici anni, Paz si è immersa nello studio approfondito del Buddhismo Kadampa, ricevendo tutte le
-                    iniziazioni e
-                    coltivando così la sua spiritualità. Questa esperienza ha influenzato la sua arte, consentendo alle
-                    sue opere di
-                    trasmettere un profondo senso di pace e serenità.</p>
-
-                <p>Come artista, Paz è poliedrica, alla costante ricerca della perfezione in tutti gli stili che
-                    esplora. Le sue
-                    creazioni includono sculture, dipinti, acquerelli, pastelli, incisioni e fotografia, ognuna
-                    riflettendo la sua
-                    dedizione e abilità nel catturare la bellezza in ogni forma di espressione artistica.</p>
-
-                <p>Il suo talento è stato riconosciuto con numerosi premi per la pittura, ed ha avuto l'onore di esporre
-                    le sue opere in
-                    diverse località in tutto il mondo. Paz ha inoltre partecipato a importanti recital poetici ed è
-                    stata inclusa in
-                    prestigiose antologie poetiche.</p>
-
-                <p>Nel 2019, ha avuto il privilegio di far parte del Caravan International Peace, organizzato
-                    dall'Istituto Mekky
-                    Moursia, dove la sua arte pittorica e le sue poesie hanno brillato, trasmettendo messaggi di armonia
-                    e unità tra le
-                    nazioni.</p>
-
-                <p>Cari amici, l'arte di Paz va oltre i confini e ci invita a riflettere sulla nostra essenza più
-                    profonda. Attraverso
-                    la sua visione artistica, ci mostra il cammino verso la pace interiore e la connessione con il
-                    divino. Le sue opere
-                    sono un dono per i nostri sensi e un promemoria della bellezza che possiamo trovare nel mondo.</p>
-
-                <p>Possano le sue opere continuare ad illuminare i nostri cuori e guidarci verso un futuro di amore e
-                    unità. La pace sia
-                    con voi, ora e sempre.</p>
-
-            </div>
-
-            <div class="chinese language" style="display: none;">
-                <!-- Chinese description here -->
-                <p>亲爱的兄弟姐妹们，让我向你们介绍艺术家Paz，一个真正的整体性和神秘主义的灵魂，她将自己的生命奉献于天地之间的统一追求。通过她的艺术，她描绘了宗教的融合，并唤醒了人类的精神意识，使我们能够进行必要的改变，在我们所热爱的星球上茁壮成长。
-                </p>
-
-                <p>Paz出生于西班牙西非，在Ifni战争期间展现了非凡的才华。她自幼热爱阅读、绘画、绘图、舞蹈、戏剧、歌唱和吉他，五岁时展现出了惊人的才能。她的一生中，有幸沉浸于各种宗教之中，获得了深刻的知识和独特的理解。
-                </p>
-
-                <p>Paz将四十年时间奉献于作为小学和中学教师的教学工作，就职于国家教育部。她还攻读了三个大学学位，获得了哲学和教育科学的博士学位，专攻心理学、教育学和社会学。她对知识的渴望和对艺术的热情使她决定攻读美术学位，在1998年获得了博士学位。
-                </p>
-
-                <p>在接下来的十二年里，Paz深入研究了Kadampa佛教，接受了所有的灌顶仪式，培养了自己的灵性。这一经历影响了她的艺术创作，使她的作品传达出深沉的平静与宁静。</p>
-
-                <p>作为一位艺术家，Paz多才多艺，不断追求在所涉及的各种风格中的完美表现。她的作品包括雕塑、绘画、水彩、粉彩、版画和摄影，每一件作品都反映了她的专注和能力，以捕捉艺术表达中的美感。</p>
-
-                <p>她的才华得到了众多绘画奖项的认可，并有幸在世界各地展示她的作品。此外，Paz还参与了重要的诗歌朗诵会，并被收录在著名的诗歌选集中。</p>
-
-                <p>2019年，她有幸成为由Mekky Moursia研究所组织的国际和平游行的一部分，她的绘画艺术和诗歌光芒四射，传递着和谐与团结的信息。</p>
-
-                <p>亲爱的朋友们，Paz的艺术超越了国界，邀请我们反思我们内心最深处的本质。通过她的艺术视野，她向我们展示了通向内心和与神连接的道路。她的作品是我们感官的礼物，也是提醒我们世界中存在的美的象征。</p>
-
-                <p>愿她的艺术继续照亮我们的内心，引领我们走向充满爱与团结的未来。愿平安与您同在，现在和永远。</p>
-
-
-            </div>
+            <p>
+                <span class="lang es active">
+                    Queridos hermanos y hermanas, permitidme hablaros de Paz, una verdadera alma holística y mística. A
+                    través de su arte y literatura, ella ha representado la fusión de las religiones y ha despertado la
+                    conciencia espiritual de la humanidad.
+                </span>
+                <span class="lang en">
+                    Dear brothers and sisters, allow me to tell you about Paz, a true holistic and mystical soul.
+                    Through her art and literature, she has represented the fusion of religions and awakened the
+                    spiritual consciousness of humanity.
+                </span>
+                <span class="lang it">
+                    Cari fratelli e sorelle, permettetemi di parlarvi di Paz, un'anima veramente olistica e mistica.
+                    Attraverso la sua arte e la sua letteratura, ha rappresentato la fusione delle religioni e
+                    risvegliato la coscienza spirituale dell'umanità.
+                </span>
+                <span class="lang zh">
+                    亲爱的兄弟姐妹们，让我向你们介绍Paz，一个真正的整体性和神秘主义的灵魂。通过她的艺术和文学，她描绘了宗教的融合，并唤醒了人类的精神意识。
+                </span>
+                <span class="lang ar">
+                    إخوتي وأخواتي الأعزاء، اسمحوا لي أن أحدثكم عن باز، روح شمولية وصوفية حقيقية. من خلال فنها وأدبها،
+                    مثلت اندماج الأديان وأيقظت الوعي الروحي للإنسانية.
+                </span>
+                <span class="lang ru">
+                    Дорогие братья и сестры, позвольте мне рассказать вам о Пас, истинной целостной и мистической душе.
+                    Через свое искусство и литературу она представила слияние религий и пробудила духовное сознание
+                    человечества.
+                </span>
+            </p>
+            <p>
+                <span class="lang es active">
+                    Desde su nacimiento en la África Occidental Española hasta su doctorado en Bellas Artes e inmersión
+                    en el Budismo Kadampa, cada etapa de su vida es un capítulo dedicado a la búsqueda de la belleza, la
+                    paz interior y la conexión con lo divino. Explora su historia a continuación.
+                </span>
+                <span class="lang en">
+                    From her birth in Spanish West Africa to her doctorate in Fine Arts and immersion in Kadampa
+                    Buddhism, each stage of her life is a chapter dedicated to the search for beauty, inner peace, and
+                    connection with the divine. Explore her story below.
+                </span>
+                <span class="lang it">
+                    Dalla sua nascita in Africa occidentale spagnola al suo dottorato in Belle Arti e l'immersione nel
+                    Buddismo Kadampa, ogni fase della sua vita è un capitolo dedicato alla ricerca della bellezza, della
+                    pace interiore e della connessione con il divino. Esplora la sua storia qui sotto.
+                </span>
+                <span class="lang zh">
+                    从她出生在西属西非，到她获得美术博士学位并沉浸在噶当派佛教中，她生活的每个阶段都是致力于寻找美丽、内心平静和与神圣的联系的篇章。在下面探索她的故事。
+                </span>
+                <span class="lang ar">
+                    منذ ولادتها في غرب إفريقيا الإسبانية إلى دكتوراه في الفنون الجميلة والانغماس في البوذية الكادامبا،
+                    كل مرحلة من حياتها هي فصل مخصص للبحث عن الجمال والسلام الداخلي والتواصل مع الإلهي. اكتشف قصتها
+                    أدناه.
+                </span>
+                <span class="lang ru">
+                    От ее рождения в испанской Западной Африке до докторской степени в области изящных искусств и
+                    погружения в буддизм Кадампа, каждый этап ее жизни — это глава, посвященная поиску красоты,
+                    внутреннего мира и связи с божественным. Изучите ее историю ниже.
+                </span>
+            </p>
         </div>
-    </section>
+
+        <h2 class="chapters-title">
+            <span class="lang es active">Capítulos de mi Vida</span>
+            <span class="lang en">Chapters of my Life</span>
+            <span class="lang it">Capitoli della mia Vita</span>
+            <span class="lang zh">我生活中的篇章</span>
+            <span class="lang ar">فصول من حياتي</span>
+            <span class="lang ru">Главы моей жизни</span>
+        </h2>
+
+        <div class="timeline-grid">
+
+            <!-- Chapter 1 -->
+            <a href="ifni/index.html" class="chapter-card">
+                <div class="badge-ai">
+                    <i class="fas fa-magic"></i> AI Comics
+                </div>
+                <div class="chapter-img-placeholder">
+                    <i class="fas fa-globe-africa"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">
+                        <span class="lang es active">Capítulo I</span>
+                        <span class="lang en">Chapter I</span>
+                        <span class="lang it">Capitolo I</span>
+                        <span class="lang zh">第一章</span>
+                        <span class="lang ar">الفصل الأول</span>
+                        <span class="lang ru">Глава I</span>
+                    </div>
+                    <div class="chapter-title">
+                        <span class="lang es active">África (Ifni)</span>
+                        <span class="lang en">Africa (Ifni)</span>
+                        <span class="lang it">Africa (Ifni)</span>
+                        <span class="lang zh">非洲 (伊夫尼)</span>
+                        <span class="lang ar">أفريقيا (إفني)</span>
+                        <span class="lang ru">Африка (Ифни)</span>
+                    </div>
+                    <div class="chapter-desc">
+                        <span class="lang es active">Nacimiento en la África Occidental Española durante la guerra. Los
+                            primeros destellos de talento y espiritualidad en medio de paisajes desérticos.</span>
+                        <span class="lang en">Birth in Spanish West Africa during the war. The first glimpses of talent
+                            and spirituality amidst desert landscapes.</span>
+                        <span class="lang it">Nascita nell'Africa occidentale spagnola durante la guerra. I primi
+                            barlumi di talento e spiritualità tra i paesaggi desertici.</span>
+                        <span class="lang zh">在冲突期间出生在西属西非。在沙漠景观中展现出的天赋和灵性的最初光芒。</span>
+                        <span class="lang ar">الولادة في غرب أفريقيا الإسبانية أثناء الحرب. اللمحات الأولى للموهبة
+                            والروحانية وسط المناظر الطبيعية الصحراوية.</span>
+                        <span class="lang ru">Рождение в испанской Западной Африке во время войны. Первые проблески
+                            таланта и духовности среди пустынных пейзажей.</span>
+                    </div>
+                    <div class="chapter-action">
+                        <span class="lang es active">Explorar época</span>
+                        <span class="lang en">Explore era</span>
+                        <span class="lang it">Esplora l'epoca</span>
+                        <span class="lang zh">探索时代</span>
+                        <span class="lang ar">استكشاف العصر</span>
+                        <span class="lang ru">Исследовать эпоху</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Chapter 2 -->
+            <a href="valencia/index.html" class="chapter-card">
+                <div class="badge-ai">
+                    <i class="fas fa-magic"></i> AI Stories
+                </div>
+                <div class="chapter-img-placeholder">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">
+                        <span class="lang es active">Capítulo II</span>
+                        <span class="lang en">Chapter II</span>
+                        <span class="lang it">Capitolo II</span>
+                        <span class="lang zh">第二章</span>
+                        <span class="lang ar">الفصل الثاني</span>
+                        <span class="lang ru">Глава II</span>
+                    </div>
+                    <div class="chapter-title">
+                        <span class="lang es active">Valencia</span>
+                        <span class="lang en">Valencia</span>
+                        <span class="lang it">Valencia</span>
+                        <span class="lang zh">瓦伦西亚</span>
+                        <span class="lang ar">فالنسيا</span>
+                        <span class="lang ru">Валенсия</span>
+                    </div>
+                    <div class="chapter-desc">
+                        <span class="lang es active">La luz del Mediterráneo. El despertar juvenil, los amores por las
+                            artes, la música, la pintura y la poesía.</span>
+                        <span class="lang en">The light of the Mediterranean. Youthful awakening, passions for arts,
+                            music, painting, and poetry.</span>
+                        <span class="lang it">La luce del Mediterraneo. Il risveglio giovanile, le passioni per le arti,
+                            la musica, la pittura e la poesia.</span>
+                        <span class="lang zh">地中海之光。青春的觉醒，对艺术、音乐、绘画和诗歌的热爱。</span>
+                        <span class="lang ar">نور البحر الأبيض المتوسط. الصحوة الشبابية والعواطف للفنون والموسيقى والرسم
+                            والشعر.</span>
+                        <span class="lang ru">Свет Средиземноморья. Юношеское пробуждение, страсти к искусству, музыке,
+                            живописи и поэзии.</span>
+                    </div>
+                    <div class="chapter-action">
+                        <span class="lang es active">Explorar época</span>
+                        <span class="lang en">Explore era</span>
+                        <span class="lang it">Esplora l'epoca</span>
+                        <span class="lang zh">探索时代</span>
+                        <span class="lang ar">استكشاف العصر</span>
+                        <span class="lang ru">Исследовать эпоху</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Chapter 3 -->
+            <a href="profesora/index.html" class="chapter-card">
+                <div class="badge-ai">
+                    <i class="fas fa-magic"></i> AI Videos
+                </div>
+                <div class="chapter-img-placeholder">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">
+                        <span class="lang es active">Capítulo III</span>
+                        <span class="lang en">Chapter III</span>
+                        <span class="lang it">Capitolo III</span>
+                        <span class="lang zh">第三章</span>
+                        <span class="lang ar">الفصل الثالث</span>
+                        <span class="lang ru">Глава III</span>
+                    </div>
+                    <div class="chapter-title">
+                        <span class="lang es active">La Profesora</span>
+                        <span class="lang en">The Teacher</span>
+                        <span class="lang it">L'Insegnante</span>
+                        <span class="lang zh">教师生涯</span>
+                        <span class="lang ar">المعلمة</span>
+                        <span class="lang ru">Учитель</span>
+                    </div>
+                    <div class="chapter-desc">
+                        <span class="lang es active">Cuarenta años de dedicación a la enseñanza. Compartiendo
+                            conocimientos de Pedagogía, Psicología e inspirando a futuras generaciones.</span>
+                        <span class="lang en">Forty years dedicated to teaching. Sharing knowledge in Pedagogy,
+                            Psychology, and inspiring future generations.</span>
+                        <span class="lang it">Quarant'anni dedicati all'insegnamento. Condividendo conoscenze in
+                            Pedagogia, Psicologia e ispirando le generazioni future.</span>
+                        <span class="lang zh">四十年致力于教学。分享教育学、心理学的知识，激励后代。</span>
+                        <span class="lang ar">أربعون عامًا مكرسة للتدريس. تبادل المعرفة في علم التربية وعلم النفس وإلهام
+                            الأجيال القادمة.</span>
+                        <span class="lang ru">Сорок лет посвящено обучению. Делится знаниями в области педагогики,
+                            психологии и вдохновляет будущие поколения.</span>
+                    </div>
+                    <div class="chapter-action">
+                        <span class="lang es active">Explorar época</span>
+                        <span class="lang en">Explore era</span>
+                        <span class="lang it">Esplora l'epoca</span>
+                        <span class="lang zh">探索时代</span>
+                        <span class="lang ar">استكشاف العصر</span>
+                        <span class="lang ru">Исследовать эпоху</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Chapter 4 -->
+            <a href="bellas-artes/index.html" class="chapter-card">
+                <div class="badge-ai">
+                    <i class="fas fa-magic"></i> Virtual Art
+                </div>
+                <div class="chapter-img-placeholder">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">
+                        <span class="lang es active">Capítulo IV</span>
+                        <span class="lang en">Chapter IV</span>
+                        <span class="lang it">Capitolo IV</span>
+                        <span class="lang zh">第四章</span>
+                        <span class="lang ar">الفصل الرابع</span>
+                        <span class="lang ru">Глава IV</span>
+                    </div>
+                    <div class="chapter-title">
+                        <span class="lang es active">Bellas Artes & Ávila</span>
+                        <span class="lang en">Fine Arts & Ávila</span>
+                        <span class="lang it">Belle Arti e Ávila</span>
+                        <span class="lang zh">美术与阿维拉</span>
+                        <span class="lang ar">الفنون الجميلة وأفيلا</span>
+                        <span class="lang ru">Изящные искусства и Авила</span>
+                    </div>
+                    <div class="chapter-desc">
+                        <span class="lang es active">La consolidación como artista. El Doctorado, los galardones y la
+                            profunda inmersión mística bajo las nubes de Ávila y Madrid.</span>
+                        <span class="lang en">Consolidation as an artist. The Doctorate, awards, and deep mystical
+                            immersion under the clouds of Ávila and Madrid.</span>
+                        <span class="lang it">Consolidamento come artista. Il Dottorato, i premi e la profonda
+                            immersione mistica sotto le nuvole di Ávila e Madrid.</span>
+                        <span class="lang zh">作为艺术家的巩固。博士学位、奖项和在阿维拉和马德里云端下的深刻神秘沉浸。</span>
+                        <span class="lang ar">التوحيد كفنان. الدكتوراه والجوائز والانغماس الصوفي العميق تحت غيوم أفيلا
+                            ومدريد.</span>
+                        <span class="lang ru">Консолидация как художника. Докторская степень, награды и глубокое
+                            мистическое погружение под облаками Авилы и Мадрида.</span>
+                    </div>
+                    <div class="chapter-action">
+                        <span class="lang es active">Explorar época</span>
+                        <span class="lang en">Explore era</span>
+                        <span class="lang it">Esplora l'epoca</span>
+                        <span class="lang zh">探索时代</span>
+                        <span class="lang ar">استكشاف العصر</span>
+                        <span class="lang ru">Исследовать эпоху</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <div style="color: #888; font-size: 0.9rem;">
+            © <span id="year"></span> Paz Arés Osset
+        </div>
+    </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('language-select').addEventListener('change', function () {
-                // Hide all language elements
-                document.querySelectorAll('.language').forEach(function (element) {
-                    element.style.display = 'none';
-                });
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-                // Show selected language elements
-                document.querySelectorAll('.' + this.value).forEach(function (element) {
-                    element.style.display = 'block';
-                });
+        const languageSelect = document.getElementById('language-select');
+        const allLangs = document.querySelectorAll('.lang');
+
+        languageSelect.addEventListener('change', (e) => {
+            const selectedLang = e.target.value;
+
+            // Auto save lang in localStorage (optional)
+            // localStorage.setItem('pazares_lang', selectedLang);
+
+            // Toggle visibility
+            allLangs.forEach(el => {
+                el.classList.remove('active');
+                if (el.classList.contains(selectedLang)) {
+                    el.classList.add('active');
+                }
             });
+
+            // Handle RTL for Arabic
+            if (selectedLang === 'ar') {
+                document.body.classList.add('rtl-body');
+            } else {
+                document.body.classList.remove('rtl-body');
+            }
         });
     </script>
-
-
 </body>
 
 </html>

@@ -1,76 +1,185 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-//document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
-    document.querySelectorAll('.language').forEach(function (element) {
-      element.style.display = 'none';
-    });
+  // --- Initialize Spanish as default ---
+  document.querySelectorAll('.language').forEach(function (element) {
+    element.style.display = 'none';
+  });
+  document.querySelectorAll('.spanish').forEach(function (element) {
+    element.style.display = 'block';
+  });
+  const langSelect = document.getElementById('language-select');
+  if (langSelect) langSelect.value = 'spanish';
 
-    // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
+  // --- Language Selector ---
+  if (langSelect) {
+    langSelect.addEventListener('change', function () {
+      const selectedLanguage = this.value;
+      document.querySelectorAll('.language').forEach(function (element) {
+        element.style.display = 'none';
+      });
+      document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
+        element.style.display = 'block';
+      });
+
+      // Comic identical for all languages (visual storytelling without text bubbles)
+      const globalComicPath = 'comic/comic_1957.png';
+      const imageMap = {
+        'spanish': globalComicPath,
+        'english': globalComicPath,
+        'italian': globalComicPath,
+        'chinese': globalComicPath,
+        'arabic': globalComicPath,
+        'russian': globalComicPath,
+        'aleman': globalComicPath,
+        'frances': globalComicPath,
+        'japones': globalComicPath,
+        'portuges': globalComicPath
+      };
+
+      const spotifyMap = {
+        'spanish': 'placeholder',
+        'english': 'placeholder',
+        'italian': 'placeholder',
+        'russian': 'placeholder',
+        'chinese': 'placeholder',
+        'arabic': 'placeholder',
+        'aleman': 'placeholder',
+        'frances': 'placeholder',
+        'japones': 'placeholder',
+        'portuges': 'placeholder'
+      };
+
+      const audioButtonTexts = {
+        'spanish': 'Escuchar Música',
+        'english': 'Listen to Music',
+        'italian': 'Ascolta la Musica',
+        'chinese': '听音乐',
+        'arabic': 'استمع إلى الموسيقى',
+        'russian': 'Слушать музыку',
+        'aleman': 'Musik hören',
+        'frances': 'Écouter la musique',
+        'japones': '音楽を聴く',
+        'portuges': 'Ouvir música'
+      };
+
+      const comicImage = document.getElementById('comic-image');
+      if (comicImage) {
+        comicImage.src = imageMap[selectedLanguage] || globalComicPath;
+      }
+      const audioButtonText = document.getElementById('audio-button-text');
+      if (audioButtonText) {
+        audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
+      }
+
+      // Update Spotify UI
+      const spotifyId = spotifyMap[selectedLanguage] || spotifyMap['spanish'];
+      const spotifyIframe = document.getElementById('spotify-iframe');
+      const spotifyLink = document.getElementById('spotify-link');
+
+      if (spotifyId !== 'placeholder') {
+        if (spotifyIframe) {
+          spotifyIframe.src = `https://open.spotify.com/embed/album/${spotifyId}?utm_source=generator`;
+          spotifyIframe.style.display = 'block';
+        }
+        if (spotifyLink) {
+          spotifyLink.href = `https://open.spotify.com/album/${spotifyId}`;
+          spotifyLink.style.display = 'inline-flex';
+        }
+      } else {
+        if (spotifyIframe) {
+          spotifyIframe.style.display = 'none';
+        }
+      }
     });
+  }
+
+  // --- 1. Background Transition on Scroll ---
+  window.addEventListener('scroll', function () {
+    const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+
+    // Subtle tint change to darker
+    const r = Math.floor(scrollPercent * 10);
+    const g = Math.floor(scrollPercent * 10);
+    const b = Math.floor(scrollPercent * 10);
+
+    // document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`; 
   });
 
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
-  var zoomImages = document.querySelectorAll('.zoom-image');
+  // --- 2. Scroll Reveal Animation for Stanzas ---
+  const observerOptions = {
+    threshold: 0.2
+  };
 
-  // Recorre todas las imágenes
-  zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
-    var isZoomed = false;
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      }
+    });
+  }, observerOptions);
 
-    // Función para realizar el zoom en la imagen
-    function zoomImage() {
-      if (isZoomed) {
-        image.style.transform = 'scale(1)';
-        isZoomed = false;
-      } else {
-        image.style.transform = 'scale(1.5)';
-        isZoomed = true;
+  document.querySelectorAll('.stanza').forEach(stanza => {
+    revealObserver.observe(stanza);
+  });
+
+  // --- 3. Canvas Effects (Subtle dust/sand for Ifni war mood) ---
+  const canvas = document.getElementById('effects-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width, height;
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.speedX = (Math.random() - 0.5) * 1;
+        this.speedY = (Math.random() - 0.5) * 1;
+        this.size = Math.random() * 2 + 0.5;
+        this.alpha = Math.random() * 0.3 + 0.1;
+        this.color = `rgba(200, 150, 100, ${this.alpha})`;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
       }
     }
 
-    // Asigna el evento touchstart (toque) a la imagen
-    image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
+    const particles = [];
+    for (let i = 0; i < 150; i++) {
+      particles.push(new Particle());
+    }
 
-      // Establece un temporizador para reducir el zoom después de 3 segundos
-      setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
-      }, 3000);
-    });
-  });
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
 
-  ////
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
 
-
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });

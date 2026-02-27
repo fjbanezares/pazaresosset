@@ -1,562 +1,1139 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>TITULO XXX</title>
-  <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
-  <link rel="stylesheet" href="base.css">
+    <meta charset="utf-8">
+    <title>Tren de Vida - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
-  </div>
-
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Train of Life</div>
-        <div class="spanish language" style="display: none;">Tren de Vida</div>
-        <div class="italian language" style="display: none;">Treno della Vita</div>
-        <div class="chinese language" style="display: none;">生命之旅</div>
-        <div class="arabic language" style="display: none;">قطار الحياة</div>
-
-      </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">A poetic journey through life, seen as a train full of experiences and
-          reflections.</div>
-        <div class="spanish language" style="display: none;">Un viaje poético por la vida, vista como un tren lleno de
-          experiencias y reflexiones.</div>
-        <div class="italian language" style="display: none;">Un viaggio poetico attraverso la vita, vista come un treno
-          pieno
-          di
-          esperienze e riflessioni.</div>
-        <div class="chinese language" style="display: none;">一趟诗意的生命之旅，将生活视作充满体验与反思的火车。</div>
-        <div class="arabic language" style="display: none;">رحلة شاعرية عبر الحياة، تُرى كقطار مليء بالتجارب والتأملات.
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+        <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+            <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+                <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+                <span>Linktree</span>
+            </a>
+            <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+                <i class="fab fa-spotify mr-2" style="font-size: 1.2rem;"></i>
+                <span id="audio-button-text">Escuchar Música</span>
+            </a>
+            <select id="language-select" class="custom-select-lg">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portuges">🇵🇹 Português</option>
+            </select>
         </div>
 
-      </div>
+        <section class="jumbotron text-center">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+                </a>
+
+                <h1 class="jumbotron-heading">
+                    <div class="spanish language">Tren de Vida</div>
+                    <div class="english language">Train of Life</div>
+                    <div class="italian language">Treno della Vita</div>
+                    <div class="chinese language">生命之旅</div>
+                    <div class="arabic language">قطار الحياة</div>
+                    <div class="russian language">Поезд жизни</div>
+                    <div class="aleman language">Zug des Lebens</div>
+                    <div class="frances language">Train de Vie</div>
+                    <div class="japones language">人生の列車</div>
+                    <div class="portuges language">Trem da Vida</div>
+                </h1>
+
+                <div class="lead">
+                    <div class="spanish language">Un viaje poético por la vida, vista como un tren lleno de experiencias y reflexiones.</div>
+                    <div class="english language">A poetic journey through life, seen as a train full of experiences and reflections.</div>
+                    <div class="italian language">Un viaggio poetico attraverso la vita, vista come un treno pieno di esperienze e riflessioni.</div>
+                    <div class="chinese language">一趟诗意的生命之旅，将生活视作充满体验与反思的火车。</div>
+                    <div class="arabic language">رحلة شاعرية عبر الحياة، تُرى كقطار مليء بالتجارب والتأملات.</div>
+                    <div class="russian language">Поэтическое путешествие по жизни, рассматриваемой как поезд, полный опыта и размышлений.</div>
+                    <div class="aleman language">Eine poetische Reise durchs Leben, gesehen als ein Zug voller Erfahrungen und Reflexionen.</div>
+                    <div class="frances language">Un voyage poétique à travers la vie, vue comme un train plein d'expériences et de réflexions.</div>
+                    <div class="japones language">経験と省察に満ちた列車として見立てられた、人生を巡る詩的な旅。</div>
+                    <div class="portuges language">Uma viagem poética pela vida, vista como um trem cheio de experiências e reflexões.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
+
+
+                <!-- SPANISH -->
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: #FFD700;">Tren de Vida</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Hoy un tren de poetas<br>
+                            al Museo del Ferrocarril llegó<br>
+                            con sus vagones de versos<br>
+                            harán viajar al alma<br>
+                            durante un tiempo.
+                        </div>
+                        <div class="stanza">
+                            El tren es poesía,<br>
+                            la poesía es un tren<br>
+                            formado por versos<br>
+                            Cada verso es un vagón...
+                        </div>
+                        <div class="stanza">
+                            Se deslizan<br>
+                            desde el principio al final<br>
+                            Te hacen viajar<br>
+                            a profundos sentimientos
+                        </div>
+                        <div class="stanza">
+                            Mil expresiones sobre el tren<br>
+                            vuelan en mi cabeza
+                        </div>
+                        <div class="stanza">
+                            "Estás como un tren"<br>
+                            al pasar como un piropo
+                        </div>
+                        <div class="stanza">
+                            "Vaya tren de vida"...
+                        </div>
+                        <div class="stanza">
+                            y así es para mí<br>
+                            la Vida es un tren<br>
+                            el tren es la Vida...
+                        </div>
+                        <div class="stanza">
+                            Se desliza por tierra y aire<br>
+                            Transcurre por muchas estaciones<br>
+                            Suben y bajan nuevas personas<br>
+                            a nuestros vagones
+                        </div>
+                        <div class="stanza">
+                            No pierdas el tren de la Vida<br>
+                            ¡Atento a las circunstancias<br>
+                            en el vagón de presente!<br>
+                            para avanzar sin cesar...
+                        </div>
+                        <div class="stanza">
+                            Haciendo presente el futuro<br>
+                            y alejando el pasado sin parar
+                        </div>
+                        <div class="stanza">
+                            En marcha la Vida es imparable<br>
+                            va tan veloz como un torbellino
+                        </div>
+                        <div class="stanza">
+                            Solo medita y disfruta<br>
+                            aquietando esa rapidez
+                        </div>
+                        <div class="stanza">
+                            Y así voy de viaje en el tren<br>
+                            No necesito hacer nada;<br>
+                            disfrutar de vivir
+                        </div>
+                        <div class="stanza">
+                            Me siento en paz<br>
+                            observando por la ventana<br>
+                            todo se desliza en mi quietud,<br>
+                            las cosas van y vienen
+                        </div>
+                        <div class="stanza">
+                            Cierro los ojos y descanso<br>
+                            y siento el amor...<br>
+                            soy la consciencia de mí misma<br>
+                            sin prisas en la prisa del tren
+                        </div>
+                        <div class="stanza">
+                            Estoy aquí y ahora...<br>
+                            en silencio...<br>
+                            soy paz
+                        </div>
+                        <div class="stanza">
+                            Y me siento tren<br>
+                            pasando por vivencias vitales<br>
+                            con comienzo y fin<br>
+                            Todo pasará<br>
+                            Solo la consciencia,<br>
+                            el viajero,<br>
+                            permanecerá
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="english language">
+                    <h1 class="handwritten" style="color: #FFD700;">Train of Life</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Today a train of poets<br>
+                            arrived at the Railway Museum<br>
+                            with its carriages of verses<br>
+                            to make the soul travel<br>
+                            for a while.
+                        </div>
+                        <div class="stanza">
+                            The train is poetry,<br>
+                            poetry is a train<br>
+                            made up of verses<br>
+                            Each verse is a carriage...
+                        </div>
+                        <div class="stanza">
+                            They glide<br>
+                            from start to finish<br>
+                            They make you travel<br>
+                            to deep feelings
+                        </div>
+                        <div class="stanza">
+                            A thousand expressions about the train<br>
+                            fly in my head
+                        </div>
+                        <div class="stanza">
+                            "You look like a train"<br>
+                            as a passing compliment
+                        </div>
+                        <div class="stanza">
+                            "What a train of life"...
+                        </div>
+                        <div class="stanza">
+                            and that's how it is for me<br>
+                            Life is a train<br>
+                            the train is Life...
+                        </div>
+                        <div class="stanza">
+                            It glides on land and air<br>
+                            It passes through many stations<br>
+                            New people get on and off<br>
+                            our carriages
+                        </div>
+                        <div class="stanza">
+                            Don't miss the train of Life<br>
+                            Be attentive to the circumstances<br>
+                            in the carriage of the present!<br>
+                            to advance without stopping...
+                        </div>
+                        <div class="stanza">
+                            Making the future present<br>
+                            and leaving the past away without stopping
+                        </div>
+                        <div class="stanza">
+                            In motion, Life is unstoppable<br>
+                            it goes as fast as a whirlwind
+                        </div>
+                        <div class="stanza">
+                            Just meditate and enjoy<br>
+                            calming that speed
+                        </div>
+                        <div class="stanza">
+                            And so I go traveling on the train<br>
+                            I don't need to do anything;<br>
+                            just enjoy living
+                        </div>
+                        <div class="stanza">
+                            I feel at peace<br>
+                            watching out the window<br>
+                            everything glides in my stillness,<br>
+                            things come and go
+                        </div>
+                        <div class="stanza">
+                            I close my eyes and rest<br>
+                            and feel the love...<br>
+                            I am the consciousness of myself<br>
+                            without haste in the hurry of the train
+                        </div>
+                        <div class="stanza">
+                            I'm here and now...<br>
+                            in silence...<br>
+                            I am peace
+                        </div>
+                        <div class="stanza">
+                            And I feel like a train<br>
+                            passing through vital experiences<br>
+                            with beginning and end<br>
+                            Everything will pass<br>
+                            Only consciousness,<br>
+                            the traveler,<br>
+                            will remain
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="italian language">
+                    <h1 class="handwritten" style="color: #FFD700;">Treno della Vita</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Oggi un treno di poeti<br>
+                            è arrivato al Museo del Ferrovia<br>
+                            con i suoi vagoni di versi<br>
+                            faranno viaggiare l'anima<br>
+                            per un po'.
+                        </div>
+                        <div class="stanza">
+                            Il treno è poesia,<br>
+                            la poesia è un treno<br>
+                            formato da versi<br>
+                            Ogni verso è un vagone...
+                        </div>
+                        <div class="stanza">
+                            Scivolano<br>
+                            dall'inizio alla fine<br>
+                            Ti fanno viaggiare<br>
+                            in profondi sentimenti
+                        </div>
+                        <div class="stanza">
+                            Mille espressioni sul treno<br>
+                            volano nella mia testa
+                        </div>
+                        <div class="stanza">
+                            "Sei come un treno"<br>
+                            passando come un complimento
+                        </div>
+                        <div class="stanza">
+                            "Che treno di vita"...
+                        </div>
+                        <div class="stanza">
+                            e così è per me<br>
+                            la Vita è un treno<br>
+                            il treno è la Vita...
+                        </div>
+                        <div class="stanza">
+                            Scivola su terra e aria<br>
+                            Scorre attraverso molte stazioni<br>
+                            Nuove persone salgono e scendono<br>
+                            dai nostri vagoni
+                        </div>
+                        <div class="stanza">
+                            Non perdere il treno della Vita<br>
+                            Attento alle circostanze<br>
+                            nel vagone del presente!<br>
+                            per avanzare senza fermarsi...
+                        </div>
+                        <div class="stanza">
+                            Rendendo presente il futuro<br>
+                            e allontanando il passato senza fermarsi
+                        </div>
+                        <div class="stanza">
+                            In movimento la Vita è inarrestabile<br>
+                            va veloce come un turbine
+                        </div>
+                        <div class="stanza">
+                            Solo medita e goditi<br>
+                            calmando quella velocità
+                        </div>
+                        <div class="stanza">
+                            E così viaggio sul treno<br>
+                            Non ho bisogno di fare nulla;<br>
+                            goditi la vita
+                        </div>
+                        <div class="stanza">
+                            Mi sento in pace<br>
+                            guardando dalla finestra<br>
+                            tutto scivola nella mia quiete,<br>
+                            le cose vanno e vengono
+                        </div>
+                        <div class="stanza">
+                            Chiudo gli occhi e riposo<br>
+                            e sento l'amore...<br>
+                            sono la coscienza di me stessa<br>
+                            senza fretta nella fretta del treno
+                        </div>
+                        <div class="stanza">
+                            Sono qui e ora...<br>
+                            in silenzio...<br>
+                            sono pace
+                        </div>
+                        <div class="stanza">
+                            E mi sento treno<br>
+                            passando attraverso esperienze vitali<br>
+                            con inizio e fine<br>
+                            Tutto passerà<br>
+                            Solo la coscienza,<br>
+                            il viaggiatore,<br>
+                            rimarrà
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHINESE -->
+                <div class="chinese language">
+                    <h1 class="handwritten" style="color: #FFD700;">生命之旅</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            今天诗人的火车<br>
+                            抵达铁路博物馆<br>
+                            带着它的诗篇车厢<br>
+                            将灵魂带往<br>
+                            一段时间。
+                        </div>
+                        <div class="stanza">
+                            火车是诗歌，<br>
+                            诗歌是火车<br>
+                            由诗句组成<br>
+                            每句诗都是一节车厢...
+                        </div>
+                        <div class="stanza">
+                            它们滑行<br>
+                            从开始到结束<br>
+                            它们让你旅行<br>
+                            进入深情
+                        </div>
+                        <div class="stanza">
+                            关于火车的千种表达<br>
+                            在我脑海中飞舞
+                        </div>
+                        <div class="stanza">
+                            "你看起来像火车"<br>
+                            作为恭维
+                        </div>
+                        <div class="stanza">
+                            "多么繁忙的生活"...
+                        </div>
+                        <div class="stanza">
+                            对我来说就是这样<br>
+                            生活是火车<br>
+                            火车是生活...
+                        </div>
+                        <div class="stanza">
+                            它滑行在陆地和空气中<br>
+                            穿过许多站<br>
+                            新的人上下车<br>
+                            在我们的车厢
+                        </div>
+                        <div class="stanza">
+                            不要错过生活的火车<br>
+                            注意周围环境<br>
+                            在当前的车厢！<br>
+                            继续前进不停...
+                        </div>
+                        <div class="stanza">
+                            实现未来的目标<br>
+                            不停地放下过去
+                        </div>
+                        <div class="stanza">
+                            在前进中，生活不可阻挡<br>
+                            它像旋风一样迅速
+                        </div>
+                        <div class="stanza">
+                            只需冥想并享受<br>
+                            平静那种速度
+                        </div>
+                        <div class="stanza">
+                            于是我在火车上旅行<br>
+                            我不需要做任何事；<br>
+                            享受生活
+                        </div>
+                        <div class="stanza">
+                            我感到平静<br>
+                            透过窗户看着<br>
+                            一切在我的静止中滑行，<br>
+                            事物来来往往
+                        </div>
+                        <div class="stanza">
+                            我闭上眼睛休息<br>
+                            并感受到爱...<br>
+                            我是自己的意识<br>
+                            在火车的匆忙中没有匆忙
+                        </div>
+                        <div class="stanza">
+                            我在这里，现在...<br>
+                            静默中...<br>
+                            我是和平
+                        </div>
+                        <div class="stanza">
+                            我感到自己是火车<br>
+                            穿过生命体验<br>
+                            有开始和结束<br>
+                            一切都会过去<br>
+                            唯有意识，<br>
+                            旅客，<br>
+                            会留下
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARABIC -->
+                <div class="arabic language">
+                    <h1 class="handwritten" style="color: #FFD700;">قطار الحياة</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            اليوم قطار الشعراء<br>
+                            وصل إلى متحف السكك الحديدية<br>
+                            بعرباته من الآيات<br>
+                            سوف يسافر الروح<br>
+                            لبعض الوقت.
+                        </div>
+                        <div class="stanza">
+                            القطار هو الشعر،<br>
+                            الشعر هو قطار<br>
+                            يتكون من الآيات<br>
+                            كل آية هي عربة...
+                        </div>
+                        <div class="stanza">
+                            ينزلقون<br>
+                            من البداية إلى النهاية<br>
+                            يجعلونك تسافر<br>
+                            إلى مشاعر عميقة
+                        </div>
+                        <div class="stanza">
+                            ألف تعبير عن القطار<br>
+                            يطير في رأسي
+                        </div>
+                        <div class="stanza">
+                            "أنت تبدو كقطار"<br>
+                            كإطراء
+                        </div>
+                        <div class="stanza">
+                            "يا له من قطار حياة"...
+                        </div>
+                        <div class="stanza">
+                            وهكذا هو الحال بالنسبة لي<br>
+                            الحياة هي قطار<br>
+                            القطار هو الحياة...
+                        </div>
+                        <div class="stanza">
+                            ينزلق عبر الأرض والهواء<br>
+                            يمر عبر العديد من المحطات<br>
+                            يصعد وينزل أشخاص جدد<br>
+                            إلى عرباتنا
+                        </div>
+                        <div class="stanza">
+                            لا تفوت قطار الحياة<br>
+                            كن منتبهاً للظروف<br>
+                            في عربة الحاضر!<br>
+                            للتقدم دون توقف...
+                        </div>
+                        <div class="stanza">
+                            جعل المستقبل حاضراً<br>
+                            وإبعاد الماضي دون توقف
+                        </div>
+                        <div class="stanza">
+                            أثناء الحركة الحياة لا تقاوم<br>
+                            تسير بسرعة مثل الزوبعة
+                        </div>
+                        <div class="stanza">
+                            فقط تأمل واستمتع<br>
+                            تهدئة تلك السرعة
+                        </div>
+                        <div class="stanza">
+                            وهكذا أذهب في الرحلة بالقطار<br>
+                            لا أحتاج إلى فعل أي شيء؛<br>
+                            استمتع بالعيش
+                        </div>
+                        <div class="stanza">
+                            أشعر بالسلام<br>
+                            أراقب من النافذة<br>
+                            كل شيء ينزلق في هدوئي،<br>
+                            الأشياء تأتي وتذهب
+                        </div>
+                        <div class="stanza">
+                            أغلق عيني وأستريح<br>
+                            وأشعر بالحب...<br>
+                            أنا وعي بنفسي<br>
+                            بدون استعجال في استعجال القطار
+                        </div>
+                        <div class="stanza">
+                            أنا هنا، الآن...<br>
+                            في الصمت...<br>
+                            أنا السلام
+                        </div>
+                        <div class="stanza">
+                            وأشعر أنني قطار<br>
+                            أمر بتجارب حيوية<br>
+                            بداية ونهاية<br>
+                            كل شيء سيمر<br>
+                            فقط الوعي،<br>
+                            المسافر،<br>
+                            سيبقى
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUSSIAN -->
+                <div class="russian language">
+                    <h1 class="handwritten" style="color: #FFD700;">Поезд жизни</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Сегодня поезд поэтов<br>
+                            прибыл в Музей железной дороги<br>
+                            со своими вагонами стихов<br>
+                            чтобы душа отправилась в путь<br>
+                            на некоторое время.
+                        </div>
+                        <div class="stanza">
+                            Поезд — это поэзия,<br>
+                            поэзия — это поезд<br>
+                            состоящий из стихов<br>
+                            Каждый стих — это вагон...
+                        </div>
+                        <div class="stanza">
+                            Они скользят<br>
+                            от начала до конца<br>
+                            Они заставляют тебя путешествовать<br>
+                            к глубоким чувствам
+                        </div>
+                        <div class="stanza">
+                            Тысячи выражений о поезде<br>
+                            проносятся в моей голове
+                        </div>
+                        <div class="stanza">
+                            "Ты как паровоз"<br>
+                            мимоходом как комплимент
+                        </div>
+                        <div class="stanza">
+                            "Вот это поезд жизни"...
+                        </div>
+                        <div class="stanza">
+                            И так это для меня<br>
+                            Жизнь — это поезд<br>
+                            а поезд — это Жизнь...
+                        </div>
+                        <div class="stanza">
+                            Он скользит по земле и по воздуху<br>
+                            Проходит через множество станций<br>
+                            Новые люди садятся и выходят<br>
+                            в наши вагоны
+                        </div>
+                        <div class="stanza">
+                            Не упусти свой поезд Жизни<br>
+                            Будь внимателен к обстоятельствам<br>
+                            в вагоне настоящего!<br>
+                            чтобы двигаться вперед без остановки...
+                        </div>
+                        <div class="stanza">
+                            Делая будущее настоящим<br>
+                            и неустанно удаляясь от прошлого
+                        </div>
+                        <div class="stanza">
+                            В движении Жизнь неудержима<br>
+                            она мчится быстро, как вихрь
+                        </div>
+                        <div class="stanza">
+                            Просто медитируй и наслаждайся<br>
+                            успокаивая эту стремительность
+                        </div>
+                        <div class="stanza">
+                            И вот я путешествую в поезде<br>
+                            Мне не нужно ничего делать;<br>
+                            просто радоваться жизни
+                        </div>
+                        <div class="stanza">
+                            Я чувствую покой<br>
+                            глядя в окно<br>
+                            все скользит в моей тишине,<br>
+                            вещи приходят и уходят
+                        </div>
+                        <div class="stanza">
+                            Я закрываю глаза и отдыхаю<br>
+                            и чувствую любовь...<br>
+                            я — осознание самой себя<br>
+                            без спешки в суете поезда
+                        </div>
+                        <div class="stanza">
+                            Я здесь и сейчас...<br>
+                            в тишине...<br>
+                            я — мир
+                        </div>
+                        <div class="stanza">
+                            И я чувствую себя поездом<br>
+                            проходящим через жизненный опыт<br>
+                            со своим началом и концом<br>
+                            Все пройдет<br>
+                            Только осознанность,<br>
+                            этот путешественник,<br>
+                            останется
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALEMAN -->
+                <div class="aleman language">
+                    <h1 class="handwritten" style="color: #FFD700;">Zug des Lebens</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Heute ist ein Zug von Poeten<br>
+                            im Eisenbahnmuseum angekommen<br>
+                            mit seinen Waggons voller Verse<br>
+                            wird er die Seele auf Reisen schicken<br>
+                            für eine Weile.
+                        </div>
+                        <div class="stanza">
+                            Der Zug ist Poesie,<br>
+                            die Poesie ist ein Zug<br>
+                            geformt aus Versen<br>
+                            Jeder Vers ist ein Waggon...
+                        </div>
+                        <div class="stanza">
+                            Sie gleiten<br>
+                            vom Anfang bis zum Ende<br>
+                            Sie lassen dich reisen<br>
+                            zu tiefen Gefühlen
+                        </div>
+                        <div class="stanza">
+                            Tausend Ausdrücke über den Zug<br>
+                            fliegen mir durch den Kopf
+                        </div>
+                        <div class="stanza">
+                            "Du bist wie ein Zug"<br>
+                            im Vorbeigehen als Kompliment
+                        </div>
+                        <div class="stanza">
+                            "Was für ein Zug des Lebens"...
+                        </div>
+                        <div class="stanza">
+                            Und so ist es für mich<br>
+                            Das Leben ist ein Zug<br>
+                            der Zug ist das Leben...
+                        </div>
+                        <div class="stanza">
+                            Er gleitet über Land und durch die Luft<br>
+                            Fährt durch viele Stationen<br>
+                            Neue Leute steigen in unsere Waggons<br>
+                            ein und aus
+                        </div>
+                        <div class="stanza">
+                            Verpasse nicht den Zug des Lebens<br>
+                            Achte auf die Umstände<br>
+                            im Waggon der Gegenwart!<br>
+                            um unaufhaltsam voranzukommen...
+                        </div>
+                        <div class="stanza">
+                            Die Zukunft gegenwärtig machen<br>
+                            und die Vergangenheit unaufhörlich hinter sich lassen
+                        </div>
+                        <div class="stanza">
+                            In Bewegung ist das Leben unaufhaltsam<br>
+                            es fährt so schnell wie ein Wirbelwind
+                        </div>
+                        <div class="stanza">
+                            Meditiere einfach und genieße<br>
+                            und beruhige diese Schnelligkeit
+                        </div>
+                        <div class="stanza">
+                            Und so reise ich im Zug<br>
+                            Ich muss nichts tun;<br>
+                            nur das Leben genießen
+                        </div>
+                        <div class="stanza">
+                            Ich fühle mich in Frieden<br>
+                            beim Blick aus dem Fenster<br>
+                            alles gleitet in meiner Stille,<br>
+                            Dinge kommen und gehen
+                        </div>
+                        <div class="stanza">
+                            Ich schließe die Augen und ruhe mich aus<br>
+                            und ich spüre die Liebe...<br>
+                            Ich bin das Bewusstsein meiner selbst<br>
+                            ohne Eile in der Eile des Zuges
+                        </div>
+                        <div class="stanza">
+                            Ich bin hier und jetzt...<br>
+                            in der Stille...<br>
+                            Ich bin Frieden
+                        </div>
+                        <div class="stanza">
+                            Und ich fühle mich als Zug<br>
+                            der lebensnotwendige Erfahrungen durchläuft<br>
+                            mit Anfang und Ende<br>
+                            Alles wird vergehen<br>
+                            Nur das Bewusstsein,<br>
+                            der Reisende,<br>
+                            wird bleiben
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRANCES -->
+                <div class="frances language">
+                    <h1 class="handwritten" style="color: #FFD700;">Train de Vie</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Aujourd'hui un train de poètes<br>
+                            est arrivé au Musée du Chemin de Fer<br>
+                            avec ses wagons de vers<br>
+                            ils feront voyager l'âme<br>
+                            pendant un moment.
+                        </div>
+                        <div class="stanza">
+                            Le train est poésie,<br>
+                            la poésie est un train<br>
+                            formé de vers<br>
+                            Chaque vers est un wagon...
+                        </div>
+                        <div class="stanza">
+                            Ils glissent<br>
+                            du début à la fin<br>
+                            Ils te font voyager<br>
+                            vers de profonds sentiments
+                        </div>
+                        <div class="stanza">
+                            Mille expressions sur le train<br>
+                            volent dans ma tête
+                        </div>
+                        <div class="stanza">
+                            "Tu es comme un train"<br>
+                            en passant comme un compliment
+                        </div>
+                        <div class="stanza">
+                            "Quel train de vie"...
+                        </div>
+                        <div class="stanza">
+                            et c'est ainsi pour moi<br>
+                            La Vie est un train<br>
+                            le train est la Vie...
+                        </div>
+                        <div class="stanza">
+                            Il glisse sur la terre et dans les airs<br>
+                            Passe par de nombreuses stations<br>
+                            De nouvelles personnes montent et descendent<br>
+                            de nos wagons
+                        </div>
+                        <div class="stanza">
+                            Ne rate pas le train de la Vie<br>
+                            Sois attentif aux circonstances<br>
+                            dans le wagon du présent !<br>
+                            pour avancer sans cesse...
+                        </div>
+                        <div class="stanza">
+                            Rendre le futur présent<br>
+                            et éloigner le passé sans s'arrêter
+                        </div>
+                        <div class="stanza">
+                            En mouvement, la Vie est imparable<br>
+                            elle va aussi vite qu'un tourbillon
+                        </div>
+                        <div class="stanza">
+                            Médite simplement et profite<br>
+                            en apaisant cette rapidité
+                        </div>
+                        <div class="stanza">
+                            Et ainsi je voyage dans le train<br>
+                            Je n'ai rien à faire ;<br>
+                            seulement profiter de vivre
+                        </div>
+                        <div class="stanza">
+                            Je me sens en paix<br>
+                            en regardant par la fenêtre<br>
+                            tout glisse dans mon calme,<br>
+                            les choses vont et viennent
+                        </div>
+                        <div class="stanza">
+                            Je ferme les yeux et je me repose<br>
+                            et je ressens l'amour...<br>
+                            je suis la conscience de moi-même<br>
+                            sans hâte dans la hâte du train
+                        </div>
+                        <div class="stanza">
+                            Je suis ici et maintenant...<br>
+                            en silence...<br>
+                            je suis la paix
+                        </div>
+                        <div class="stanza">
+                            Et je me sens comme un train<br>
+                            traversant des expériences vitales<br>
+                            avec un début et une fin<br>
+                            Tout passera<br>
+                            Seule la conscience,<br>
+                            le voyageur,<br>
+                            restera
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JAPONES -->
+                <div class="japones language">
+                    <h1 class="handwritten" style="color: #FFD700;">人生の列車</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            今日、詩人たちの列車が<br>
+                            鉄道博物館に到着した<br>
+                            詩の車両を連れて<br>
+                            魂を旅立たせるだろう<br>
+                            しばらくの間。
+                        </div>
+                        <div class="stanza">
+                            列車は詩であり、<br>
+                            詩は列車である<br>
+                            詩句で作られた<br>
+                            一つ一つの詩が車両である...
+                        </div>
+                        <div class="stanza">
+                            それらは滑るように進む<br>
+                            始まりから終わりまで<br>
+                            あなたを旅させる<br>
+                            深い感情の世界へ
+                        </div>
+                        <div class="stanza">
+                            列車についての千の表現が<br>
+                            私の頭の中を飛び交う
+                        </div>
+                        <div class="stanza">
+                            「君は列車のようだね」<br>
+                            通りすがりの褒め言葉として
+                        </div>
+                        <div class="stanza">
+                            「なんて人生の列車だ」...
+                        </div>
+                        <div class="stanza">
+                            私にとってもそうだ<br>
+                            人生は列車であり<br>
+                            列車は人生である...
+                        </div>
+                        <div class="stanza">
+                            陸や空を滑るように進み<br>
+                            多くの駅を通り過ぎる<br>
+                            新しい人々が乗り降りする<br>
+                            私たちの車両へ
+                        </div>
+                        <div class="stanza">
+                            人生の列車に乗り遅れないで<br>
+                            状況に気を配りなさい<br>
+                            現在の車両の中で！<br>
+                            絶えず前進するために...
+                        </div>
+                        <div class="stanza">
+                            未来を現在にし<br>
+                            止まることなく過去を遠ざける
+                        </div>
+                        <div class="stanza">
+                            動いている人生は止められない<br>
+                            つむじ風のように速く進む
+                        </div>
+                        <div class="stanza">
+                            ただ瞑想して楽しみ<br>
+                            その速さを静めなさい
+                        </div>
+                        <div class="stanza">
+                            そして今、私は列車で旅をしている<br>
+                            何もする必要はない；<br>
+                            ただ生きることを楽しむだけ
+                        </div>
+                        <div class="stanza">
+                            私は平和を感じている<br>
+                            窓から外を眺めていると<br>
+                            すべてが私の静寂の中を滑り過ぎ、<br>
+                            物事が行き交う
+                        </div>
+                        <div class="stanza">
+                            目を閉じて休むと<br>
+                            愛を感じる...<br>
+                            私は私自身の意識である<br>
+                            列車の急ぎの中で急ぐことなく
+                        </div>
+                        <div class="stanza">
+                            私は今ここにいる...<br>
+                            沈黙の中で...<br>
+                            私は平和である
+                        </div>
+                        <div class="stanza">
+                            そして私は自分が列車のようだと感じる<br>
+                            重要な経験を通り過ぎる<br>
+                            始まりと終わりとともに<br>
+                            すべては過ぎ去るだろう<br>
+                            意識、<br>
+                            旅人だけが、<br>
+                            残るだろう
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTUGES -->
+                <div class="portuges language">
+                    <h1 class="handwritten" style="color: #FFD700;">Trem da Vida</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Hoje um trem de poetas<br>
+                            chegou ao Museu Ferroviário<br>
+                            com seus vagões de versos<br>
+                            farão a alma viajar<br>
+                            por um tempo.
+                        </div>
+                        <div class="stanza">
+                            O trem é poesia,<br>
+                            a poesia é um trem<br>
+                            formado por versos<br>
+                            Cada verso é um vagão...
+                        </div>
+                        <div class="stanza">
+                            Eles deslizam<br>
+                            do começo ao fim<br>
+                            Eles te fazem viajar<br>
+                            para sentimentos profundos
+                        </div>
+                        <div class="stanza">
+                            Mil expressões sobre o trem<br>
+                            voam em minha cabeça
+                        </div>
+                        <div class="stanza">
+                            "Você está como um trem"<br>
+                            ao passar como um elogio
+                        </div>
+                        <div class="stanza">
+                            "Que trem de vida"...
+                        </div>
+                        <div class="stanza">
+                            E assim é para mim<br>
+                            A Vida é um trem<br>
+                            o trem é a Vida...
+                        </div>
+                        <div class="stanza">
+                            Ele desliza por terra e ar<br>
+                            Fila por muitas estações<br>
+                            Novas pessoas sobem e descem<br>
+                            dos nossos vagões
+                        </div>
+                        <div class="stanza">
+                            Não perca o trem da Vida<br>
+                            Fique atento às circunstâncias<br>
+                            no vagão do presente!<br>
+                            para avançar sem parar...
+                        </div>
+                        <div class="stanza">
+                            Tornando o futuro num presente<br>
+                            e afastando o passado sem cessar
+                        </div>
+                        <div class="stanza">
+                            Em movimento, a Vida é imparável<br>
+                            vai tão rápido quanto um torvelinho
+                        </div>
+                        <div class="stanza">
+                            Apenas medite e aproveite<br>
+                            acalmando essa rapidez
+                        </div>
+                        <div class="stanza">
+                            E assim vou viajando no trem<br>
+                            Não preciso fazer nada;<br>
+                            apenas aproveitar viver
+                        </div>
+                        <div class="stanza">
+                            Sinto-me em paz<br>
+                            observando pela janela<br>
+                            tudo desliza em minha quietude,<br>
+                            as coisas vêm e vão
+                        </div>
+                        <div class="stanza">
+                            Fecho os olhos e descanso<br>
+                            e sinto o amor...<br>
+                            sou a consciência de mim mesma<br>
+                            sem pressa na pressa do trem
+                        </div>
+                        <div class="stanza">
+                            Estou aqui e agora...<br>
+                            em silêncio...<br>
+                            sou a paz
+                        </div>
+                        <div class="stanza">
+                            E me sinto trem<br>
+                            passando por vivências vitais<br>
+                            com começo e fim<br>
+                            Tudo passará<br>
+                            Só a consciência,<br>
+                            o viajante,<br>
+                            permanecerá
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Music Section Placeholder -->
+            <div class="container mt-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <i class="fab fa-spotify text-success mr-2"></i>
+                    <span class="spanish language">Música Sugerida (Próximamente)</span>
+                    <span class="english language">Suggested Music (Coming Soon)</span>
+                    <span class="italian language">Musica Suggerita (Prossimamente)</span>
+                    <span class="chinese language">建议音乐（即将推出）</span>
+                    <span class="arabic language">الموسيقى المقترحة (قريباً)</span>
+                    <span class="russian language">Предлагаемая музыка (Скоро)</span>
+                    <span class="aleman language">Empfohlene Musik (Demnächst)</span>
+                    <span class="frances language">Musique suggérée (Bientôt)</span>
+                    <span class="japones language">おすすめの音楽（間もなく）</span>
+                    <span class="portuges language">Música Sugerida (Em breve)</span>
+                </h2>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-9 mb-4">
+                        <div id="spotify-player-container">
+                            <div class="p-5 rounded" style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2);">
+                                <i class="fab fa-spotify fa-3x mb-3 text-success"></i>
+                                <p>El reproductor se activará cuando la música esté disponible.</p>
+                            </div>
+                            <iframe id="spotify-iframe" style="border-radius:12px; display:none;" src="" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Section -->
+                <div class="container mt-5">
+                    <h2 class="handwritten text-light align-middle text-center">
+                        <i class="fab fa-youtube text-danger mr-2"></i>
+                        <span class="spanish language">Video Explicativo</span>
+                        <span class="english language">Explanatory Video</span>
+                        <span class="italian language">Video Esplicativo</span>
+                        <span class="chinese language">讲解视频</span>
+                        <span class="arabic language">فيديو توضيحي</span>
+                        <span class="russian language">Пояснительное видео</span>
+                        <span class="aleman language">Erklärvideo</span>
+                        <span class="frances language">Vidéo explicative</span>
+                        <span class="japones language">解説動画</span>
+                        <span class="portuges language">Vídeo Explicativo</span>
+                    </h2>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/iKq8Ji7Kn8Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Comic Section -->
+                <div class="container mt-5 mb-5 text-center">
+                    <h2 class="handwritten text-light mb-4">
+                        <span class="spanish language">El Poema en Imágenes</span>
+                        <span class="english language">The Poem in Images</span>
+                        <span class="italian language">Il Poema in Immagini</span>
+                        <span class="chinese language">图片中的诗</span>
+                        <span class="arabic language">القصيدة في صور</span>
+                        <span class="russian language">Стихотворение в картинках</span>
+                        <span class="aleman language">Das Gedicht in Bildern</span>
+                        <span class="frances language">Le poème en images</span>
+                        <span class="japones language">画像で見る詩</span>
+                        <span class="portuges language">O Poema em Imagens</span>
+                    </h2>
+                    <div class="mt-4">
+                        <img id="comic-image" src="comic/comic_tren.png" class="img-fluid rounded shadow-lg" alt="Arte del poema" style="max-height: 1000px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.6);">
+                    </div>
+                </div>
+
+        </section>
 
     </div>
-  </section>
 
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Train of Life</div>
-        <div class="spanish language" style="display: none;">Tren de Vida</div>
-        <div class="italian language" style="display: none;">Treno della Vita</div>
-        <div class="chinese language" style="display: none;">生命之旅</div>
-        <div class="arabic language" style="display: none;">قطار الحياة</div>
-
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Train of Life</p>
-          <br>
-          <p>Today a train of poets</p>
-          <p>arrived at the Railway Museum</p>
-          <p>with its carriages of verses</p>
-          <p>to make the soul travel</p>
-          <p>for a while.</p>
-          <br>
-          <p>The train is poetry,</p>
-          <p>poetry is a train</p>
-          <p>made up of verses</p>
-          <p>Each verse is a carriage...</p>
-          <br>
-          <p>They glide</p>
-          <p>from start to finish</p>
-          <p>They make you travel</p>
-          <p>to deep feelings</p>
-          <br>
-          <p>A thousand expressions about the train</p>
-          <p>fly in my head</p>
-          <br>
-          <p>"You look like a train"</p>
-          <p>as a compliment</p>
-          <br>
-          <p>"What a train of life"...</p>
-          <br>
-          <p>and that's how it is for me</p>
-          <p>Life is a train</p>
-          <p>the train is Life...</p>
-          <br>
-          <p>It glides on land and air</p>
-          <p>It passes through many stations</p>
-          <p>New people get on and off</p>
-          <p>our carriages</p>
-          <br>
-          <p>Don't miss the train of Life</p>
-          <p>Be attentive to the circumstances</p>
-          <p>in the carriage of the present!</p>
-          <p>to advance without stopping...</p>
-          <br>
-          <p>Making the future present</p>
-          <p>and leaving the past behind without stopping</p>
-          <br>
-          <p>In motion, Life is unstoppable</p>
-          <p>it goes as fast as a whirlwind</p>
-          <br>
-          <p>Just meditate and enjoy</p>
-          <p>calming that speed</p>
-          <br>
-          <p>And so I go traveling on the train</p>
-          <p>I don't need to do anything;</p>
-          <p>just enjoy living</p>
-          <br>
-          <p>I feel at peace</p>
-          <p>watching out the window</p>
-          <p>everything glides in my stillness,</p>
-          <p>things come and go</p>
-          <br>
-          <p>I close my eyes and rest</p>
-          <p>and feel the love...</p>
-          <p>I am the consciousness of myself</p>
-          <p>without haste in the hurry of the train</p>
-          <br>
-          <p>I'm here and now...</p>
-          <p>in silence...</p>
-          <p>I am peace</p>
-          <br>
-          <p>And I feel like a train</p>
-          <p>passing through vital experiences</p>
-          <p>with beginning and end</p>
-          <p>Everything will pass</p>
-          <p>Only consciousness,</p>
-          <p>the traveler,</p>
-          <p>will remain</p>
-
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Tren de Vida</p>
-          <br>
-          <p>Hoy un tren de poetas</p>
-          <p>al Museo del Ferrocarril llegó</p>
-          <p>con sus vagones de versos</p>
-          <p>harán viajar al alma</p>
-          <p>durante un tiempo.</p>
-          <br>
-          <p>El tren es poesía,</p>
-          <p>la poesía es un tren</p>
-          <p>formado por versos</p>
-          <p>Cada verso es un vagón...</p>
-          <br>
-          <p>Se deslizan</p>
-          <p>desde el principio al final</p>
-          <p>Te hacen viajar</p>
-          <p>a profundos sentimientos</p>
-          <br>
-          <p>Mil expresiones sobre el tren</p>
-          <p>vuelan en mi cabeza</p>
-          <br>
-          <p>"Estás como un tren"</p>
-          <p>al pasar como un piropo</p>
-          <br>
-          <p>"Vaya tren de vida"...</p>
-          <br>
-          <p>y así es para mí</p>
-          <p>la Vida es un tren</p>
-          <p>el tren es la Vida...</p>
-          <br>
-          <p>Se desliza por tierra y aire</p>
-          <p>Transcurre por muchas estaciones</p>
-          <p>Suben y bajan nuevas personas</p>
-          <p>a nuestros vagones</p>
-          <br>
-          <p>No pierdas el tren de la Vida</p>
-          <p>¡Atento a las circunstancias</p>
-          <p>en el vagón de presente!</p>
-          <p>para avanzar sin cesar...</p>
-          <br>
-          <p>Haciendo presente el futuro</p>
-          <p>y alejando el pasado sin parar</p>
-          <br>
-          <p>En marcha la Vida es imparable</p>
-          <p>va tan veloz como un torbellino</p>
-          <br>
-          <p>Solo medita y disfruta</p>
-          <p>aquietando esa rapidez</p>
-          <br>
-          <p>Y así voy de viaje en el tren</p>
-          <p>No necesito hacer nada;</p>
-          <p>disfrutar de vivir</p>
-          <br>
-          <p>Me siento en paz</p>
-          <p>observando por la ventana</p>
-          <p>todo se desliza en mi quietud,</p>
-          <p>las cosas van y vienen</p>
-          <br>
-          <p>Cierro los ojos y descanso</p>
-          <p>y siento el amor...</p>
-          <p>soy la consciencia de mí misma</p>
-          <p>sin prisas en la prisa del tren</p>
-          <br>
-          <p>Estoy aquí y ahora...</p>
-          <p>en silencio...</p>
-          <p>soy paz</p>
-          <br>
-          <p>Y me siento tren</p>
-          <p>pasando por vivencias vitales</p>
-          <p>con comienzo y fin</p>
-          <p>Todo pasará</p>
-          <p>Solo la consciencia,</p>
-          <p>el viajero,</p>
-          <p>permanecerá</p>
-
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Treno della Vita</p>
-          <br>
-          <p>Oggi un treno di poeti</p>
-          <p>è arrivato al Museo del Ferrovia</p>
-          <p>con i suoi vagoni di versi</p>
-          <p>faranno viaggiare l'anima</p>
-          <p>per un po'.</p>
-          <br>
-          <p>Il treno è poesia,</p>
-          <p>la poesia è un treno</p>
-          <p>formato da versi</p>
-          <p>Ogni verso è un vagone...</p>
-          <br>
-          <p>Scivolano</p>
-          <p>dall'inizio alla fine</p>
-          <p>Ti fanno viaggiare</p>
-          <p>in profondi sentimenti</p>
-          <br>
-          <p>Mille espressioni sul treno</p>
-          <p>volano nella mia testa</p>
-          <br>
-          <p>"Sei come un treno"</p>
-          <p>passando come un complimento</p>
-          <br>
-          <p>"Che treno di vita"...</p>
-          <br>
-          <p>e così è per me</p>
-          <p>la Vita è un treno</p>
-          <p>il treno è la Vita...</p>
-          <br>
-          <p>Scivola su terra e aria</p>
-          <p>Scorre attraverso molte stazioni</p>
-          <p>Nuove persone salgono e scendono</p>
-          <p>dai nostri vagoni</p>
-          <br>
-          <p>Non perdere il treno della Vita</p>
-          <p>Attento alle circostanze</p>
-          <p>nel vagone del presente!</p>
-          <p>per avanzare senza fermarsi...</p>
-          <br>
-          <p>Rendendo presente il futuro</p>
-          <p>e allontanando il passato senza fermarsi</p>
-          <br>
-          <p>In movimento la Vita è inarrestabile</p>
-          <p>va veloce come un turbine</p>
-          <br>
-          <p>Solo medita e goditi</p>
-          <p>calmando quella velocità</p>
-          <br>
-          <p>E così viaggio sul treno</p>
-          <p>Non ho bisogno di fare nulla;</p>
-          <p>goditi la vita</p>
-          <br>
-          <p>Mi sento in pace</p>
-          <p>guardando dalla finestra</p>
-          <p>tutto scivola nella mia quiete,</p>
-          <p>le cose vanno e vengono</p>
-          <br>
-          <p>Chiudo gli occhi e riposo</p>
-          <p>e sento l'amore...</p>
-          <p>sono la coscienza di me stessa</p>
-          <p>senza fretta nella fretta del treno</p>
-          <br>
-          <p>Sono qui e ora...</p>
-          <p>in silenzio...</p>
-          <p>sono pace</p>
-          <br>
-          <p>E mi sento treno</p>
-          <p>passando attraverso esperienze vitali</p>
-          <p>con inizio e fine</p>
-          <p>Tutto passerà</p>
-          <p>Solo la coscienza,</p>
-          <p>il viaggiatore,</p>
-          <p>rimarrà</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>生命之旅</p>
-          <br>
-          <p>今天诗人的火车</p>
-          <p>抵达铁路博物馆</p>
-          <p>带着它的诗篇车厢</p>
-          <p>将灵魂带往</p>
-          <p>一段时间。</p>
-          <br>
-          <p>火车是诗歌，</p>
-          <p>诗歌是火车</p>
-          <p>由诗句组成</p>
-          <p>每句诗都是一节车厢...</p>
-          <br>
-          <p>它们滑行</p>
-          <p>从开始到结束</p>
-          <p>它们让你旅行</p>
-          <p>进入深情</p>
-          <br>
-          <p>关于火车的千种表达</p>
-          <p>在我脑海中飞舞</p>
-          <br>
-          <p>"你看起来像火车"</p>
-          <p>作为恭维</p>
-          <br>
-          <p>"多么繁忙的生活"...</p>
-          <br>
-          <p>对我来说就是这样</p>
-          <p>生活是火车</p>
-          <p>火车是生活...</p>
-          <br>
-          <p>它滑行在陆地和空气中</p>
-          <p>穿过许多站</p>
-          <p>新的人上下车</p>
-          <p>在我们的车厢</p>
-          <br>
-          <p>不要错过生活的火车</p>
-          <p>注意周围环境</p>
-          <p>在当前的车厢！</p>
-          <p>继续前进不停...</p>
-          <br>
-          <p>实现未来的目标</p>
-          <p>不停地放下过去</p>
-          <br>
-          <p>在前进中，生活不可阻挡</p>
-          <p>它像旋风一样迅速</p>
-          <br>
-          <p>只需冥想并享受</p>
-          <p>平静那种速度</p>
-          <br>
-          <p>于是我在火车上旅行</p>
-          <p>我不需要做任何事；</p>
-          <p>享受生活</p>
-          <br>
-          <p>我感到平静</p>
-          <p>透过窗户看着</p>
-          <p>一切在我的静止中滑行，</p>
-          <p>事物来来往往</p>
-          <br>
-          <p>我闭上眼睛休息</p>
-          <p>并感受到爱...</p>
-          <p>我是自己的意识</p>
-          <p>在火车的匆忙中没有匆忙</p>
-          <br>
-          <p>我在这里，现在...</p>
-          <p>静默中...</p>
-          <p>我是和平</p>
-          <br>
-          <p>我感到自己是火车</p>
-          <p>穿过生命体验</p>
-          <p>有开始和结束</p>
-          <p>一切都会过去</p>
-          <p>唯有意识，</p>
-          <p>旅客，</p>
-          <p>会留下</p>
-
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>قطار الحياة</p>
-          <br>
-          <p>اليوم قطار الشعراء</p>
-          <p>وصل إلى متحف السكك الحديدية</p>
-          <p>بعرباته من الآيات</p>
-          <p>سوف يسافر الروح</p>
-          <p>لبعض الوقت.</p>
-          <br>
-          <p>القطار هو الشعر،</p>
-          <p>الشعر هو قطار</p>
-          <p>يتكون من الآيات</p>
-          <p>كل آية هي عربة...</p>
-          <br>
-          <p>ينزلقون</p>
-          <p>من البداية إلى النهاية</p>
-          <p>يجعلونك تسافر</p>
-          <p>إلى مشاعر عميقة</p>
-          <br>
-          <p>ألف تعبير عن القطار</p>
-          <p>يطير في رأسي</p>
-          <br>
-          <p>"أنت تبدو كقطار"</p>
-          <p>كإطراء</p>
-          <br>
-          <p>"يا له من قطار حياة"...</p>
-          <br>
-          <p>وهكذا هو الحال بالنسبة لي</p>
-          <p>الحياة هي قطار</p>
-          <p>القطار هو الحياة...</p>
-          <br>
-          <p>ينزلق عبر الأرض والهواء</p>
-          <p>يمر عبر العديد من المحطات</p>
-          <p>يصعد وينزل أشخاص جدد</p>
-          <p>إلى عرباتنا</p>
-          <br>
-          <p>لا تفوت قطار الحياة</p>
-          <p>كن منتبهاً للظروف</p>
-          <p>في عربة الحاضر!</p>
-          <p>للتقدم دون توقف...</p>
-          <br>
-          <p>جعل المستقبل حاضراً</p>
-          <p>وإبعاد الماضي دون توقف</p>
-          <br>
-          <p>أثناء الحركة الحياة لا تقاوم</p>
-          <p>تسير بسرعة مثل الزوبعة</p>
-          <br>
-          <p>فقط تأمل واستمتع</p>
-          <p>تهدئة تلك السرعة</p>
-          <br>
-          <p>وهكذا أذهب في الرحلة بالقطار</p>
-          <p>لا أحتاج إلى فعل أي شيء؛</p>
-          <p>استمتع بالعيش</p>
-          <br>
-          <p>أشعر بالسلام</p>
-          <p>أراقب من النافذة</p>
-          <p>كل شيء ينزلق في هدوئي،</p>
-          <p>الأشياء تأتي وتذهب</p>
-          <br>
-          <p>أغلق عيني وأستريح</p>
-          <p>وأشعر بالحب...</p>
-          <p>أنا وعي بنفسي</p>
-          <p>بدون استعجال في استعجال القطار</p>
-          <br>
-          <p>أنا هنا، الآن...</p>
-          <p>في الصمت...</p>
-          <p>أنا السلام</p>
-          <br>
-          <p>وأشعر أنني قطار</p>
-          <p>أمر بتجارب حيوية</p>
-          <p>بداية ونهاية</p>
-          <p>كل شيء سيمر</p>
-          <p>فقط الوعي،</p>
-          <p>المسافر،</p>
-          <p>سيبقى</p>
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
-  <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+    <script src="base.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

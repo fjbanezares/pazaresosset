@@ -1,420 +1,770 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>TITULO XXX</title>
-  <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
-  <link rel="stylesheet" href="base.css">
+    <meta charset="utf-8">
+    <title>1957 Guerra en Ifni - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
-  </div>
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+        <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+            <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+                <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+                <span>Linktree</span>
+            </a>
+            <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+                <i class="fab fa-spotify mr-2" style="font-size: 1.2rem;"></i>
+                <span id="audio-button-text">Escuchar Música</span>
+            </a>
+            <select id="language-select" class="custom-select-lg">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portuges">🇵🇹 Português</option>
+            </select>
+        </div>
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+                </a>
+
+                <h1 class="jumbotron-heading">
+                    <div class="spanish language">1957 Guerra en Ifni</div>
+                    <div class="english language">1957 War in Ifni</div>
+                    <div class="italian language">1957 Guerra in Ifni</div>
+                    <div class="chinese language">1957年 伊夫尼战争</div>
+                    <div class="arabic language">حرب إفني 1957</div>
+                    <div class="russian language">Война в Ифни 1957 года</div>
+                    <div class="aleman language">1957 Krieg in Ifni</div>
+                    <div class="frances language">1957 Guerre d'Ifni</div>
+                    <div class="japones language">1957年 イフニ戦争</div>
+                    <div class="portuges language">1957 Guerra de Ifni</div>
+                </h1>
+
+                <div class="lead">
+                    <div class="spanish language">Abrazando la paz entre las sombras de la guerra, el corazón de una niña anhela tranquilidad en el turbulento año 1957 en Ifni.</div>
+                    <div class="english language">Embracing peace amidst the shadows of war, a little girl’s heart yearns for tranquility in the turbulent year of 1957 in Ifni.</div>
+                    <div class="italian language">Abbracciando la pace tra le ombre della guerra, il cuore di una piccola ragazza anela alla tranquillità nell'anno turbolento del 1957 a Ifni.</div>
+                    <div class="chinese language">在1957年伊夫尼动荡的战争阴影中，一个小女孩的心渴望和平。</div>
+                    <div class="arabic language">في ظلال الحرب، تتوق قلب فتاة صغيرة إلى السلام في العام المضطرب 1957 في إفني.</div>
+                    <div class="russian language">Обнимая мир посреди теней войны, сердце маленькой девочки жаждет спокойствия в неспокойном 1957 году в Ифни.</div>
+                    <div class="aleman language">Den Frieden inmitten der Schatten des Krieges umarmend, sehnt sich das Herz eines kleinen Mädchens nach Ruhe im turbulenten Jahr 1957 in Ifni.</div>
+                    <div class="frances language">Embrassant la paix au milieu des ombres de la guerre, le cœur d'une petite fille aspire à la tranquillité dans l'année mouvementée de 1957 à Ifni.</div>
+                    <div class="japones language">1957年のイフニ、戦争の影の中で平和を抱きしめ、小さな少女の心は平穏を切望する。</div>
+                    <div class="portuges language">Abraçando a paz entre as sombras da guerra, o coração de uma menina anseia por tranquilidade no turbulento ano de 1957 em Ifni.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
 
 
-  <section class="jumbotron text-center">
-    <div class="container">
+                <!-- SPANISH -->
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: #F4A460;">1957 Guerra en Ifni</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Inmersa en esa Guerra<br>
+                            Sin Ninguna voluntad<br>
+                            Sólo tengo dos añitos...<br>
+                            y nací para la Paz
+                        </div>
+                        <div class="stanza">
+                            En mi almita,<br>
+                            Siento Niña pequeñita,<br>
+                            Una penita se grababa.<br>
+                            En mi corazoncito de amor<br>
+                            Una tristeza quedaba.
+                        </div>
+                        <div class="stanza">
+                            En brazos de mi Mamá<br>
+                            Ella me enseñó la Paz,<br>
+                            unidos quedamos;<br>
+                            no abandonamos;<br>
+                            Amor Familiar<br>
+                            Rezo por la Paz
+                        </div>
+                        <div class="stanza">
+                            Mari Paz su fruto de Amor<br>
+                            Espíritu grande<br>
+                            Cuerpo pequeño<br>
+                            Yo, búsqueda del paraíso<br>
+                            Su ruego de Paz<br>
+                            Impotencia sentí<br>
+                            Calma… Ansiedad… Ahora no puedes… Ya lo harás
+                        </div>
+                        <div class="stanza">
+                            Cada día<br>
+                            mengua el territorio,<br>
+                            cada día<br>
+                            amigos muertos,<br>
+                            en lo más duro...<br>
+                            la guerra
+                        </div>
+                        <div class="stanza">
+                            Encerrados en un pozo<br>
+                            Otros niños asustados<br>
+                            en oscuridad esperan<br>
+                            por seguridad resisten<br>
+                            Prisioneros sin sol
+                        </div>
+                        <div class="stanza">
+                            Al salir de la congoja<br>
+                            Qué desearán los niños<br>
+                            Solo desean la paz<br>
+                            Sólo desean la luz,<br>
+                            La vida y la libertad<br>
+                            Amar y Amar.
+                        </div>
+                    </div>
+                </div>
 
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
+                <!-- ENGLISH -->
+                <div class="english language">
+                    <h1 class="handwritten" style="color: #F4A460;">1957 War in Ifni</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Immersed in that War<br>
+                            Without any will<br>
+                            I'm only two years old...<br>
+                            and I was born for Peace
+                        </div>
+                        <div class="stanza">
+                            In my little soul,<br>
+                            I feel, a little girl,<br>
+                            A sorrow was engraved.<br>
+                            In my little heart of love<br>
+                            A sadness remained.
+                        </div>
+                        <div class="stanza">
+                            In my mother's arms<br>
+                            She taught me Peace,<br>
+                            we stayed united;<br>
+                            we did not abandon;<br>
+                            Family Love<br>
+                            I pray for Peace
+                        </div>
+                        <div class="stanza">
+                            Mari Paz her fruit of Love<br>
+                            Great spirit<br>
+                            Small body<br>
+                            I, seeker of paradise<br>
+                            Her plea for Peace<br>
+                            I felt powerless<br>
+                            Calm… Anxiety… Not now… You will later
+                        </div>
+                        <div class="stanza">
+                            Every day<br>
+                            the territory shrinks,<br>
+                            every day<br>
+                            friends die,<br>
+                            in the toughest...<br>
+                            the war
+                        </div>
+                        <div class="stanza">
+                            Trapped in a well<br>
+                            Other frightened children<br>
+                            wait in the dark<br>
+                            they hold on for safety<br>
+                            Prisoners without sun
+                        </div>
+                        <div class="stanza">
+                            Upon leaving the anguish<br>
+                            What will the children wish for?<br>
+                            They only wish for peace<br>
+                            They only wish for light,<br>
+                            Life and freedom<br>
+                            To love and to love.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="italian language">
+                    <h1 class="handwritten" style="color: #F4A460;">1957 Guerra in Ifni</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Immersa in quella Guerra<br>
+                            Senza alcuna volontà<br>
+                            Ho solo due anni...<br>
+                            e sono nata per la Pace
+                        </div>
+                        <div class="stanza">
+                            Nella mia piccola anima,<br>
+                            Sento, una bambina piccola,<br>
+                            Un dolore si incise.<br>
+                            Nel mio piccolo cuore d'amore<br>
+                            Una tristezza rimase.
+                        </div>
+                        <div class="stanza">
+                            Nelle braccia di mia mamma<br>
+                            Lei mi ha insegnato la Pace,<br>
+                            rimanemmo uniti;<br>
+                            non abbiamo abbandonato;<br>
+                            Amore Familiare<br>
+                            Prego per la Pace
+                        </div>
+                        <div class="stanza">
+                            Mari Paz suo frutto d'Amore<br>
+                            Grande spirito<br>
+                            Corpo piccolo<br>
+                            Io, cercatrice del paradiso<br>
+                            Suo appello per la Pace<br>
+                            Mi sentivo impotente<br>
+                            Calma… Ansia… Non ora… Lo farai più tardi
+                        </div>
+                        <div class="stanza">
+                            Ogni giorno<br>
+                            il territorio si riduce,<br>
+                            ogni giorno<br>
+                            amici muoiono,<br>
+                            nel più duro...<br>
+                            la guerra
+                        </div>
+                        <div class="stanza">
+                            Intrappolati in un pozzo<br>
+                            Altri bambini impauriti<br>
+                            aspettano nel buio<br>
+                            resistono per la sicurezza<br>
+                            Prigionieri senza sole
+                        </div>
+                        <div class="stanza">
+                            Uscendo dall'angoscia<br>
+                            Cosa desidereranno i bambini?<br>
+                            Desiderano solo la pace<br>
+                            Desiderano solo la luce,<br>
+                            La vita e la libertà<br>
+                            Amare e amare.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHINESE -->
+                <div class="chinese language">
+                    <h1 class="handwritten" style="color: #F4A460;">1957年 伊夫尼战争</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            深陷那场战争<br>
+                            无奈何<br>
+                            我只有两岁……<br>
+                            我生来是为了和平
+                        </div>
+                        <div class="stanza">
+                            在我的小灵魂里，<br>
+                            感受到一位小女孩，<br>
+                            一种悲伤被刻录。<br>
+                            在我充满爱的小心里<br>
+                            留下了一种悲伤。
+                        </div>
+                        <div class="stanza">
+                            在我妈妈的怀里<br>
+                            她教我和平，<br>
+                            我们团结一致；<br>
+                            我们没有放弃；<br>
+                            家庭之爱<br>
+                            我为和平祈祷
+                        </div>
+                        <div class="stanza">
+                            玛丽·帕兹她的爱之果<br>
+                            伟大的精神<br>
+                            小小的身体<br>
+                            我，寻求天堂<br>
+                            她的和平祈求<br>
+                            我感到无力<br>
+                            平静……焦虑……现在不能……你将来会做到
+                        </div>
+                        <div class="stanza">
+                            每天<br>
+                            领土在缩小，<br>
+                            每天<br>
+                            朋友死去，<br>
+                            在最艰难的……<br>
+                            战争
+                        </div>
+                        <div class="stanza">
+                            被困在井中<br>
+                            其他害怕的孩子<br>
+                            在黑暗中等待<br>
+                            为了安全坚持<br>
+                            没有阳光的囚犯
+                        </div>
+                        <div class="stanza">
+                            走出痛苦<br>
+                            孩子们会希望什么<br>
+                            他们只希望和平<br>
+                            他们只希望光明，<br>
+                            生命和自由<br>
+                            爱与爱。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARABIC -->
+                <div class="arabic language">
+                    <h1 class="handwritten" style="color: #F4A460;">حرب إفني 1957</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            غارق في تلك الحرب<br>
+                            بدون أي إرادة<br>
+                            أنا فقط عمري عامين...<br>
+                            وولدت من أجل السلام
+                        </div>
+                        <div class="stanza">
+                            في روحي الصغيرة،<br>
+                            أشعر، طفلة صغيرة،<br>
+                            حزن قد نُقش.<br>
+                            في قلبي الصغير المليء بالحب<br>
+                            بقيت حزن.
+                        </div>
+                        <div class="stanza">
+                            في أحضان أمي<br>
+                            علمتني السلام،<br>
+                            بقينا متحدين؛<br>
+                            لم نتخلى؛<br>
+                            حب العائلة<br>
+                            أصلي من أجل السلام
+                        </div>
+                        <div class="stanza">
+                            ماري باث ثمرة حبها<br>
+                            روح عظيمة<br>
+                            جسم صغير<br>
+                            أنا، باحثة عن الجنة<br>
+                            توسلها من أجل السلام<br>
+                            شعرت بالعجز<br>
+                            الهدوء... القلق... ليس الآن... ستفعل لاحقًا
+                        </div>
+                        <div class="stanza">
+                            كل يوم<br>
+                            يتقلص الإقليم،<br>
+                            كل يوم<br>
+                            أصدقاء يموتون،<br>
+                            في الأصعب...<br>
+                            الحرب
+                        </div>
+                        <div class="stanza">
+                            محاصرون في بئر<br>
+                            أطفال آخرون خائفون<br>
+                            ينتظرون في الظلام<br>
+                            يصمدون من أجل الأمان<br>
+                            سجناء بدون شمس
+                        </div>
+                        <div class="stanza">
+                            عند الخروج من الكرب<br>
+                            ماذا سيتمنى الأطفال؟<br>
+                            كل ما يريدونه هو السلام<br>
+                            كل ما يريدونه هو الضوء،<br>
+                            الحياة والحرية<br>
+                            أن يحبوا ويحبوا.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUSSIAN -->
+                <div class="russian language">
+                    <h1 class="handwritten" style="color: #F4A460;">Война в Ифни 1957 года</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Погруженная в ту войну<br>
+                            Без всякой воли<br>
+                            Мне всего два годика...<br>
+                            И я рождена для мира
+                        </div>
+                        <div class="stanza">
+                            В моей маленькой душе,<br>
+                            Чувствую, маленькая девочка,<br>
+                            Запечатлелась печаль.<br>
+                            В моем маленьком сердце, полном любви<br>
+                            Осталась грусть.
+                        </div>
+                        <div class="stanza">
+                            В объятиях моей мамы<br>
+                            Она научила меня миру,<br>
+                            Мы остались едины;<br>
+                            Мы не сдались;<br>
+                            Семейная любовь<br>
+                            Я молюсь о мире
+                        </div>
+                        <div class="stanza">
+                            Мари Пас - ее плод любви<br>
+                            Великий дух<br>
+                            Маленькое тело<br>
+                            Я, в поисках рая<br>
+                            Ее мольба о мире<br>
+                            Я чувствовала бессилие<br>
+                            Спокойствие… Тревога… Сейчас не можешь… Сделаешь это потом
+                        </div>
+                        <div class="stanza">
+                            Каждый день<br>
+                            сокращается территория,<br>
+                            каждый день<br>
+                            мертвые друзья,<br>
+                            в самом суровом...<br>
+                            война
+                        </div>
+                        <div class="stanza">
+                            Запертые в колодце<br>
+                            Другие напуганные дети<br>
+                            В темноте ждут<br>
+                            Ради безопасности держатся<br>
+                            Пленники без солнца
+                        </div>
+                        <div class="stanza">
+                            Выходя из тоски<br>
+                            Чего пожелают дети<br>
+                            Они желают только мира<br>
+                            Они желают только света,<br>
+                            Жизни и свободы<br>
+                            Любить и любить.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALEMAN -->
+                <div class="aleman language">
+                    <h1 class="handwritten" style="color: #F4A460;">1957 Krieg in Ifni</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Eingetaucht in diesen Krieg<br>
+                            Ohne jeden Willen<br>
+                            Ich bin erst zwei Jahre alt...<br>
+                            und ich wurde für den Frieden geboren
+                        </div>
+                        <div class="stanza">
+                            In meiner kleinen Seele,<br>
+                            Fühle ich, ein kleines Mädchen,<br>
+                            Grabte sich ein Kummer ein.<br>
+                            In meinem kleinen Herz voller Liebe<br>
+                            Blieb eine Traurigkeit zurück.
+                        </div>
+                        <div class="stanza">
+                            In den Armen meiner Mutter<br>
+                            Lehrte sie mich den Frieden,<br>
+                            wir blieben vereint;<br>
+                            wir gaben nicht auf;<br>
+                            Familiäre Liebe<br>
+                            Ich bete für den Frieden
+                        </div>
+                        <div class="stanza">
+                            Mari Paz, ihre Frucht der Liebe<br>
+                            Großer Geist<br>
+                            Kleiner Körper<br>
+                            Ich, auf der Suche nach dem Paradies<br>
+                            Ihr Flehen um Frieden<br>
+                            Ohnmacht fühlte ich<br>
+                            Ruhe… Angst… Jetzt kannst du nicht… Du wirst es später tun
+                        </div>
+                        <div class="stanza">
+                            Jeden Tag<br>
+                            schrumpft das Territorium,<br>
+                            jeden Tag<br>
+                            tote Freunde,<br>
+                            im Härtesten...<br>
+                            der Krieg
+                        </div>
+                        <div class="stanza">
+                            Eingesperrt in einem Brunnen<br>
+                            Andere verängstigte Kinder<br>
+                            warten im Dunkeln<br>
+                            halten aus Sicherheitsgründen durch<br>
+                            Gefangene ohne Sonne
+                        </div>
+                        <div class="stanza">
+                            Beim Verlassen der Angst<br>
+                            Was werden sich die Kinder wünschen<br>
+                            Sie wünschen sich nur Frieden<br>
+                            Sie wünschen sich nur Licht,<br>
+                            Leben und Freiheit<br>
+                            Zu lieben und zu lieben.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRANCES -->
+                <div class="frances language">
+                    <h1 class="handwritten" style="color: #F4A460;">1957 Guerre d'Ifni</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Immergée dans cette Guerre<br>
+                            Sans aucune volonté<br>
+                            Je n'ai que deux ans...<br>
+                            et je suis née pour la Paix
+                        </div>
+                        <div class="stanza">
+                            Dans ma petite âme,<br>
+                            Je sens, une petite fille,<br>
+                            Un chagrin s'est gravé.<br>
+                            Dans mon petit cœur d'amour<br>
+                            Une tristesse est restée.
+                        </div>
+                        <div class="stanza">
+                            Dans les bras de ma Maman<br>
+                            Elle m'a enseigné la Paix,<br>
+                            nous sommes restés unis ;<br>
+                            nous n'avons pas abandonné ;<br>
+                            Amour Familial<br>
+                            Je prie pour la Paix
+                        </div>
+                        <div class="stanza">
+                            Mari Paz, son fruit d'Amour<br>
+                            Grand esprit<br>
+                            Petit corps<br>
+                            Moi, à la recherche du paradis<br>
+                            Sa prière de Paix<br>
+                            J'ai ressenti de l'impuissance<br>
+                            Calme… Anxiété… Pas maintenant… Tu le feras plus tard
+                        </div>
+                        <div class="stanza">
+                            Chaque jour<br>
+                            le territoire se rétrécit,<br>
+                            chaque jour<br>
+                            des amis morts,<br>
+                            dans le plus dur...<br>
+                            la guerre
+                        </div>
+                        <div class="stanza">
+                            Enfermés dans un puits<br>
+                            D'autres enfants effrayés<br>
+                            attendent dans l'obscurité<br>
+                            ils résistent pour la sécurité<br>
+                            Prisonniers sans soleil
+                        </div>
+                        <div class="stanza">
+                            En sortant de l'angoisse<br>
+                            Que souhaiteront les enfants<br>
+                            Ils ne souhaitent que la paix<br>
+                            Ils ne souhaitent que la lumière,<br>
+                            La vie et la liberté<br>
+                            Aimer et Aimer.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JAPONES -->
+                <div class="japones language">
+                    <h1 class="handwritten" style="color: #F4A460;">1957年 イフニ戦争</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            その戦争に飲み込まれて<br>
+                            何の意志もなく<br>
+                            私はまだ2歳…<br>
+                            そして、私は平和のために生まれた
+                        </div>
+                        <div class="stanza">
+                            私の小さな魂に、<br>
+                            小さな女の子の私が感じる、<br>
+                            悲しみが刻まれた。<br>
+                            私の愛にあふれた小さな心に<br>
+                            悲しみが残った。
+                        </div>
+                        <div class="stanza">
+                            ママの腕の中で<br>
+                            彼女は私に平和を教えた、<br>
+                            私たちは団結したままだった。<br>
+                            私たちは見捨てなかった。<br>
+                            家族の愛<br>
+                            私は平和を祈る
+                        </div>
+                        <div class="stanza">
+                            マリ・パス、彼女の愛の結晶<br>
+                            偉大な精神<br>
+                            小さな体<br>
+                            私、楽園を探し求めて<br>
+                            彼女の平和への願い<br>
+                            無力感を感じた<br>
+                            落ち着いて… 不安… 今はできない… 後でできるから
+                        </div>
+                        <div class="stanza">
+                            毎日<br>
+                            領土は縮小し、<br>
+                            毎日<br>
+                            死んでいく友人たち、<br>
+                            最も過酷な中で…<br>
+                            戦争
+                        </div>
+                        <div class="stanza">
+                            井戸に閉じ込められて<br>
+                            他の怯える子供たち<br>
+                            暗闇の中で待つ<br>
+                            安全のために耐え忍ぶ<br>
+                            太陽のない囚人たち
+                        </div>
+                        <div class="stanza">
+                            苦悩から抜け出たとき<br>
+                            子供たちは何を望むのか<br>
+                            彼らはただ平和を望む<br>
+                            彼らはただ光を望む、<br>
+                            命と自由<br>
+                            愛し、愛することを。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTUGES -->
+                <div class="portuges language">
+                    <h1 class="handwritten" style="color: #F4A460;">1957 Guerra de Ifni</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Imersa nessa Guerra<br>
+                            Sem nenhuma vontade<br>
+                            Eu tenho apenas dois aninhos...<br>
+                            e nasci para a Paz
+                        </div>
+                        <div class="stanza">
+                            Na minha alminha,<br>
+                            Sinto Menina pequenininha,<br>
+                            Uma peninha se gravava.<br>
+                            No meu coraçãozinho de amor<br>
+                            Uma tristeza ficava.
+                        </div>
+                        <div class="stanza">
+                            Nos braços de minha Mamãe<br>
+                            Ela me ensinou a Paz,<br>
+                            unidos ficamos;<br>
+                            não abandonamos;<br>
+                            Amor Familiar<br>
+                            Rezo pela Paz
+                        </div>
+                        <div class="stanza">
+                            Mari Paz, seu fruto de Amor<br>
+                            Espírito grande<br>
+                            Corpo pequeno<br>
+                            Eu, em busca do paraíso<br>
+                            Sua prece de Paz<br>
+                            Impotência senti<br>
+                            Calma… Ansiedade… Agora não podes… Já o farás
+                        </div>
+                        <div class="stanza">
+                            A cada dia<br>
+                            mingua o território,<br>
+                            a cada dia<br>
+                            amigos mortos,<br>
+                            no mais duro...<br>
+                            a guerra
+                        </div>
+                        <div class="stanza">
+                            Trancados num poço<br>
+                            Outras crianças assustadas<br>
+                            na escuridão esperam<br>
+                            por segurança resistem<br>
+                            Prisioneiros sem sol
+                        </div>
+                        <div class="stanza">
+                            Ao sair da angústia<br>
+                            O que desejarão as crianças<br>
+                            Só desejam a paz<br>
+                            Só desejam a luz,<br>
+                            A vida e a liberdade<br>
+                            Amar e Amar.
+                        </div>
+                    </div>
+                </div>
 
 
-      <h1 class="jumbotron-heading">
-        <div class="english language">1957 War in Ifni</div>
-        <div class="spanish language" style="display: none;">1957 Guerra en Ifni</div>
-        <div class="italian language" style="display: none;">1957 Guerra in Ifni</div>
-        <div class="chinese language" style="display: none;">1957年 伊夫尼战争</div>
-        <div class="arabic language" style="display: none;">حرب إفني 1957</div>
+            </div>
 
-      </h1>
+            <!-- Music Section Placeholder -->
+            <div class="container mt-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <i class="fab fa-spotify text-success mr-2"></i>
+                    <span class="spanish language">Música Sugerida (Próximamente)</span>
+                    <span class="english language">Suggested Music (Coming Soon)</span>
+                    <span class="italian language">Musica Suggerita (Prossimamente)</span>
+                    <span class="chinese language">建议音乐（即将推出）</span>
+                    <span class="arabic language">الموسيقى المقترحة (قريباً)</span>
+                    <span class="russian language">Предлагаемая музыка (Скоро)</span>
+                    <span class="aleman language">Empfohlene Musik (Demnächst)</span>
+                    <span class="frances language">Musique suggérée (Bientôt)</span>
+                    <span class="japones language">おすすめの音楽（間もなく）</span>
+                    <span class="portuges language">Música Sugerida (Em breve)</span>
+                </h2>
 
+                <div class="row justify-content-center">
+                    <div class="col-md-9 mb-4">
+                        <div id="spotify-player-container">
+                            <div class="p-5 rounded" style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2);">
+                                <i class="fab fa-spotify fa-3x mb-3 text-success"></i>
+                                <p>El reproductor se activará cuando la música esté disponible.</p>
+                            </div>
+                            <iframe id="spotify-iframe" style="border-radius:12px; display:none;" src="" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Section -->
+                <div class="container mt-5">
+                    <h2 class="handwritten text-light align-middle text-center">
+                        <i class="fab fa-youtube text-danger mr-2"></i>
+                        <span class="spanish language">Video Explicativo</span>
+                        <span class="english language">Explanatory Video</span>
+                        <span class="italian language">Video Esplicativo</span>
+                        <span class="chinese language">讲解视频</span>
+                        <span class="arabic language">فيديو توضيحي</span>
+                        <span class="russian language">Пояснительное видео</span>
+                        <span class="aleman language">Erklärvideo</span>
+                        <span class="frances language">Vidéo explicative</span>
+                        <span class="japones language">解説動画</span>
+                        <span class="portuges language">Vídeo Explicativo</span>
+                    </h2>
+                    <div class="video-container">
+                        <!-- Placeholder link -->
+                        <iframe src="https://www.youtube.com/embed/iKq8Ji7Kn8Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
 
-      <div class="lead text-muted">
-        <div class="english language">Embracing peace amidst the shadows of war, a little girl’s heart yearns for
-          tranquility in
-          the turbulent year of 1957 in Ifni.</div>
-        <div class="spanish language" style="display: none;">Abrazando la paz entre las sombras de la guerra, el corazón
-          de una
-          niña anhela tranquilidad en el turbulento año 1957 en Ifni.</div>
-        <div class="italian language" style="display: none;">Abbracciando la pace tra le ombre della guerra, il cuore di
-          una
-          piccola ragazza anela alla tranquillità nell'anno turbolento del 1957 a Ifni.</div>
-        <div class="chinese language" style="display: none;">在1957年伊夫尼动荡的战争阴影中，一个小女孩的心渴望和平。</div>
-        <div class="arabic language" style="display: none;">في ظلال الحرب، تتوق قلب فتاة صغيرة إلى السلام في العام
-          المضطرب 1957
-          في إفني.</div>
-      </div>
+                <!-- Comic Section Placeholder -->
+                <div class="container mt-5 mb-5 text-center">
+                    <h2 class="handwritten text-light mb-4">
+                        <span class="spanish language">El Poema en Imágenes</span>
+                        <span class="english language">The Poem in Images</span>
+                        <span class="italian language">Il Poema in Immagini</span>
+                        <span class="chinese language">图片中的诗</span>
+                        <span class="arabic language">القصيدة في صور</span>
+                        <span class="russian language">Стихотворение в картинках</span>
+                        <span class="aleman language">Das Gedicht in Bildern</span>
+                        <span class="frances language">Le poème en images</span>
+                        <span class="japones language">画像で見る詩</span>
+                        <span class="portuges language">O Poema em Imagens</span>
+                    </h2>
+                    <div class="mt-4">
+                        <img id="comic-image" src="comic/comic_1957.png" class="img-fluid rounded shadow-lg" alt="Arte del poema" style="max-height: 1000px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.6);">
+                    </div>
+                </div>
+
+        </section>
 
     </div>
-  </section>
 
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">1957 War in Ifni</div>
-        <div class="spanish language" style="display: none;">1957 Guerra en Ifni</div>
-        <div class="italian language" style="display: none;">1957 Guerra in Ifni</div>
-        <div class="chinese language" style="display: none;">1957年 伊夫尼战争</div>
-        <div class="arabic language" style="display: none;">حرب إفني 1957</div>
-
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>Immersed in that War</p>
-          <p>Without any will</p>
-          <p>I'm only two years old...</p>
-          <p>and I was born for Peace</p>
-          <br>
-          <p>In my little soul,</p>
-          <p>I feel, a little girl,</p>
-          <p>A sorrow was engraved.</p>
-          <p>In my little heart of love</p>
-          <p>A sadness remained.</p>
-          <br>
-          <p>In my mother's arms</p>
-          <p>She taught me Peace,</p>
-          <p>we stayed united;</p>
-          <p>we did not abandon;</p>
-          <p>Family Love</p>
-          <p>I pray for Peace</p>
-          <br>
-          <p>Mari Paz her fruit of Love</p>
-          <p>Great spirit</p>
-          <p>Small body</p>
-          <p>I, seeker of paradise</p>
-          <p>Her plea for Peace</p>
-          <p>I felt powerless</p>
-          <p>Calm… Anxiety… Not now… You will later</p>
-          <br>
-          <p>Every day</p>
-          <p>the territory shrinks,</p>
-          <p>every day</p>
-          <p>friends die,</p>
-          <p>in the toughest...</p>
-          <p>the war</p>
-          <br>
-          <p>Trapped in a well</p>
-          <p>Other frightened children</p>
-          <p>wait in the dark</p>
-          <p>they hold on for safety</p>
-          <p>Prisoners without sun</p>
-          <br>
-          <p>Upon leaving the anguish</p>
-          <p>What will the children wish for?</p>
-          <p>They only wish for peace</p>
-          <p>They only wish for light,</p>
-          <p>Life and freedom</p>
-          <p>To love and to love.</p>
-
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>Inmersa en esa Guerra</p>
-          <p>Sin Ninguna voluntad</p>
-          <p>Sólo tengo dos añitos...</p>
-          <p>y nací para la Paz</p>
-          <br>
-          <p>En mi almita,</p>
-          <p>Siento Niña pequeñita,</p>
-          <p>Una penita se grababa.</p>
-          <p>En mi corazoncito de amor</p>
-          <p>Una tristeza quedaba.</p>
-          <br>
-          <p>En brazos de mi Mamá</p>
-          <p>Ella me enseñó la Paz,</p>
-          <p>unidos quedamos;</p>
-          <p>no abandonamos;</p>
-          <p>Amor Familiar</p>
-          <p>Rezo por la Paz</p>
-          <br>
-          <p>Mari Paz su fruto de Amor</p>
-          <p>Espíritu grande</p>
-          <p>Cuerpo pequeño</p>
-          <p>Yo, búsqueda del paraíso</p>
-          <p>Su ruego de Paz</p>
-          <p>Impotencia sentí</p>
-          <p>Calma… Ansiedad… Ahora no puedes… Ya lo harás</p>
-          <br>
-          <p>Cada día</p>
-          <p>mengua el territorio,</p>
-          <p>cada día</p>
-          <p>amigos muertos,</p>
-          <p>en lo más duro...</p>
-          <p>la guerra</p>
-          <br>
-          <p>Encerrados en un pozo</p>
-          <p>Otros niños asustados</p>
-          <p>en oscuridad esperan</p>
-          <p>por seguridad resisten</p>
-          <p>Prisioneros sin sol</p>
-          <br>
-          <p>Al salir de la congoja</p>
-          <p>Qué desearán los niños</p>
-          <p>Solo desean la paz</p>
-          <p>Sólo desean la luz,</p>
-          <p>La vida y la libertad</p>
-          <p>Amar y Amar.</p>
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>1957 Guerra in Ifni</p>
-          <br>
-          <p>Immersa in quella Guerra</p>
-          <p>Senza alcuna volontà</p>
-          <p>Ho solo due anni...</p>
-          <p>e sono nata per la Pace</p>
-          <br>
-          <p>Nella mia piccola anima,</p>
-          <p>Sento, una bambina piccola,</p>
-          <p>Un dolore si incise.</p>
-          <p>Nel mio piccolo cuore d'amore</p>
-          <p>Una tristezza rimase.</p>
-          <br>
-          <p>Nelle braccia di mia mamma</p>
-          <p>Lei mi ha insegnato la Pace,</p>
-          <p>rimanemmo uniti;</p>
-          <p>non abbiamo abbandonato;</p>
-          <p>Amore Familiare</p>
-          <p>Prego per la Pace</p>
-          <br>
-          <p>Mari Paz suo frutto d'Amore</p>
-          <p>Grande spirito</p>
-          <p>Corpo piccolo</p>
-          <p>Io, cercatrice del paradiso</p>
-          <p>Suo appello per la Pace</p>
-          <p>Mi sentivo impotente</p>
-          <p>Calma… Ansia… Non ora… Lo farai più tardi</p>
-          <br>
-          <p>Ogni giorno</p>
-          <p>il territorio si riduce,</p>
-          <p>ogni giorno</p>
-          <p>amici muoiono,</p>
-          <p>nel più duro...</p>
-          <p>la guerra</p>
-          <br>
-          <p>Intrappolati in un pozzo</p>
-          <p>Altri bambini impauriti</p>
-          <p>aspettano nel buio</p>
-          <p>resistono per la sicurezza</p>
-          <p>Prigionieri senza sole</p>
-          <br>
-          <p>Uscendo dall'angoscia</p>
-          <p>Cosa desidereranno i bambini?</p>
-          <p>Desiderano solo la pace</p>
-          <p>Desiderano solo la luce,</p>
-          <p>La vita e la libertà</p>
-          <p>Amare e amare.</p>
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>深陷那场战争</p>
-          <p>无奈何</p>
-          <p>我只有两岁……</p>
-          <p>我生来是为了和平</p>
-          <br>
-          <p>在我的小灵魂里，</p>
-          <p>感受到一位小女孩，</p>
-          <p>一种悲伤被刻录。</p>
-          <p>在我充满爱的小心里</p>
-          <p>留下了一种悲伤。</p>
-          <br>
-          <p>在我妈妈的怀里</p>
-          <p>她教我和平，</p>
-          <p>我们团结一致；</p>
-          <p>我们没有放弃；</p>
-          <p>家庭之爱</p>
-          <p>我为和平祈祷</p>
-          <br>
-          <p>玛丽·帕兹她的爱之果</p>
-          <p>伟大的精神</p>
-          <p>小小的身体</p>
-          <p>我，寻求天堂</p>
-          <p>她的和平祈求</p>
-          <p>我感到无力</p>
-          <p>平静……焦虑……现在不能……你将来会做到</p>
-          <br>
-          <p>每天</p>
-          <p>领土在缩小，</p>
-          <p>每天</p>
-          <p>朋友死去，</p>
-          <p>在最艰难的……</p>
-          <p>战争</p>
-          <br>
-          <p>被困在井中</p>
-          <p>其他害怕的孩子</p>
-          <p>在黑暗中等待</p>
-          <p>为了安全坚持</p>
-          <p>没有阳光的囚犯</p>
-          <br>
-          <p>走出痛苦</p>
-          <p>孩子们会希望什么</p>
-          <p>他们只希望和平</p>
-          <p>他们只希望光明，</p>
-          <p>生命和自由</p>
-          <p>爱与爱。</p>
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>غارق في تلك الحرب</p>
-          <p>بدون أي إرادة</p>
-          <p>أنا فقط عمري عامين...</p>
-          <p>وولدت من أجل السلام</p>
-          <br>
-          <p>في روحي الصغيرة،</p>
-          <p>أشعر، طفلة صغيرة،</p>
-          <p>حزن قد نُقش.</p>
-          <p>في قلبي الصغير المليء بالحب</p>
-          <p>بقيت حزن.</p>
-          <br>
-          <p>في أحضان أمي</p>
-          <p>علمتني السلام،</p>
-          <p>بقينا متحدين؛</p>
-          <p>لم نتخلى؛</p>
-          <p>حب العائلة</p>
-          <p>أصلي من أجل السلام</p>
-          <br>
-          <p>ماري باث ثمرة حبها</p>
-          <p>روح عظيمة</p>
-          <p>جسم صغير</p>
-          <p>أنا، باحثة عن الجنة</p>
-          <p>توسلها من أجل السلام</p>
-          <p>شعرت بالعجز</p>
-          <p>الهدوء... القلق... ليس الآن... ستفعل لاحقًا</p>
-          <br>
-          <p>كل يوم</p>
-          <p>يتقلص الإقليم،</p>
-          <p>كل يوم</p>
-          <p>أصدقاء يموتون،</p>
-          <p>في الأصعب...</p>
-          <p>الحرب</p>
-          <br>
-          <p>محاصرون في بئر</p>
-          <p>أطفال آخرون خائفون</p>
-          <p>ينتظرون في الظلام</p>
-          <p>يصمدون من أجل الأمان</p>
-          <p>سجناء بدون شمس</p>
-          <br>
-          <p>عند الخروج من الكرب</p>
-          <p>ماذا سيتمنى الأطفال؟</p>
-          <p>كل ما يريدونه هو السلام</p>
-          <p>كل ما يريدونه هو الضوء،</p>
-          <p>الحياة والحرية</p>
-          <p>أن يحبوا ويحبوا.</p>
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
-  <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+    <script src="base.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

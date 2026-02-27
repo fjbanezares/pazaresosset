@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sinfonía de la Naturaleza - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+        <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+            <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+                <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+                <span>Linktree</span>
+            </a>
+            <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+                <i class="fab fa-spotify mr-2" style="font-size: 1.2rem;"></i>
+                <span id="audio-button-text">Escuchar Música</span>
+            </a>
+            <select id="language-select" class="custom-select-lg">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portuges">🇵🇹 Português</option>
+            </select>
+        </div>
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+                </a>
+
+                <h1 class="jumbotron-heading">
+                    <div class="spanish language">Sinfonía de la Naturaleza</div>
+                    <div class="english language">Symphony of Nature</div>
+                    <div class="italian language">Sinfonia della Natura</div>
+                    <div class="chinese language">大自然的交响曲</div>
+                    <div class="arabic language">سيمفونية الطبيعة</div>
+                    <div class="russian language">Симфония природы</div>
+                    <div class="aleman language">Sinfonie der Natur</div>
+                    <div class="frances language">Symphonie de la Nature</div>
+                    <div class="japones language">大自然の交響曲</div>
+                    <div class="portuges language">Sinfonia da Natureza</div>
+                </h1>
+
+                <div class="lead">
+                    <div class="spanish language">Un canto a la vida, una oración que exhala la tierra en cada rincón de su belleza eterna.</div>
+                    <div class="english language">A song to life, a prayer exhaled by the earth in every corner of its eternal beauty.</div>
+                    <div class="italian language">Un canto alla vita, una preghiera esalata dalla terra in ogni angolo della sua eterna bellezza.</div>
+                    <div class="chinese language">一首生命的赞歌，大地在永恒美丽的每一个角落呼出的祈祷。</div>
+                    <div class="arabic language">ترنيمة للحياة، صلاة تنفثها الأرض في كل ركن من أركان جمالها الأبدي.</div>
+                    <div class="russian language">Песнь жизни, молитва, возносимая землей в каждом уголке ее вечной красоты.</div>
+                    <div class="aleman language">Ein Lied an das Leben, ein Gebet, das die Erde in jedem Winkel ihrer ewigen Schönheit ausatmet.</div>
+                    <div class="frances language">Un chant à la vie, une prière exhalée par la terre dans chaque recoin de sa beauté éternelle.</div>
+                    <div class="japones language">生命への歌、その永遠の美しさのあらゆる場所で大地が吐き出す祈り。</div>
+                    <div class="portuges language">Um canto à vida, uma oração exalada pela terra em cada canto de sua beleza eterna.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
+
+
+                <!-- SPANISH -->
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: #FFD700;">Sinfonía de la Naturaleza</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            En el vibrante abrazo de la aurora,<br>
+                            donde el viento despierta su canción,<br>
+                            siento la luz de Dios, y en esta hora,<br>
+                            la tierra entera exhala su oración.
+                        </div>
+                        <div class="stanza">
+                            El roble extiende al cielo su ramaje,<br>
+                            como buscando el cielo del Creador<br>
+                            y en el verdor inmenso del paisaje,<br>
+                            la flor silvestre se abre con color.
+                        </div>
+                        <div class="stanza">
+                            El ruiseñor afina su garganta<br>
+                            y el bosque verde pinta tu ternura.<br>
+                            El colibrí que en el rocío canta,<br>
+                            es un destello de tu hermosura.
+                        </div>
+                        <div class="stanza">
+                            La ballena que salta en el abismo,<br>
+                            el águila, el venado y el delfín,<br>
+                            la mariposa, libélula y el arroyo mismo<br>
+                            son la voz de un milagro sin confín.
+                        </div>
+                        <div class="stanza">
+                            Y en medio de esta selva luminosa,<br>
+                            el ser humano aporta su sentido.<br>
+                            Con mente libre y con el alma hermosa,<br>
+                            el arte humano nace agradecido.
+                        </div>
+                        <div class="stanza">
+                            Se vuelve el lienzo reflejo de tu gloria,<br>
+                            la danza imita el giro sideral,<br>
+                            la música es la voz de la euforia<br>
+                            que busca unirse al canto universal.
+                        </div>
+                        <div class="stanza">
+                            Somos parte del río y la montaña,<br>
+                            somos la flor, el mar y la semilla.<br>
+                            Nuestra alma ante tu luz se maravilla,<br>
+                            y tu paz celestial nos acompaña.
+                        </div>
+                        <div class="stanza">
+                            ¡Qué lata el corazón del Universo!<br>
+                            ¡Qué brille el gran Amor que nos sostiene!<br>
+                            ¡Qué todo bosque, río y verso,<br>
+                            Sea la Paz que a nuestra Tierra viene!.
+                        </div>
+                        <div class="stanza">
+                            ¡Qué despierte al fin la humana criatura,<br>
+                            para cuidar, en Paz, de tu hermosura!<br>
+                            Así Ya tu paraíso se refleja en la cultura,<br>
+                            Ya destella en nuestro arte y literatura.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="english language">
+                    <h1 class="handwritten" style="color: #FFD700;">Symphony of Nature</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            In the vibrant embrace of the dawn,<br>
+                            where the wind awakens its song,<br>
+                            I feel God's light, and in this hour,<br>
+                            the entire earth exhales its prayer.
+                        </div>
+                        <div class="stanza">
+                            The oak extends its branches to the sky,<br>
+                            as if seeking the Creator's heaven,<br>
+                            and in the immense greenness of the landscape,<br>
+                            the wild flower opens with color.
+                        </div>
+                        <div class="stanza">
+                            The nightingale tunes its throat,<br>
+                            and the green forest paints your tenderness.<br>
+                            The hummingbird that sings in the dew,<br>
+                            is a flash of your beauty.
+                        </div>
+                        <div class="stanza">
+                            The whale that jumps in the abyss,<br>
+                            the eagle, the deer, and the dolphin,<br>
+                            the butterfly, dragonfly, and the stream itself<br>
+                            are the voice of a miracle without end.
+                        </div>
+                        <div class="stanza">
+                            And in the midst of this luminous jungle,<br>
+                            the human being contributes its sense.<br>
+                            With a free mind and a beautiful soul,<br>
+                            human art is born grateful.
+                        </div>
+                        <div class="stanza">
+                            The canvas becomes a reflection of your glory,<br>
+                            the dance imitates the sidereal turn,<br>
+                            music is the voice of euphoria<br>
+                            that seeks to join the universal chant.
+                        </div>
+                        <div class="stanza">
+                            We are part of the river and the mountain,<br>
+                            we are the flower, the sea, and the seed.<br>
+                            Our soul marvels before your light,<br>
+                            and your celestial peace accompanies us.
+                        </div>
+                        <div class="stanza">
+                            May the heart of the Universe beat!<br>
+                            May the great Love that sustains us shine!<br>
+                            May every forest, river, and verse,<br>
+                            Be the Peace that comes to our Earth!.
+                        </div>
+                        <div class="stanza">
+                            May the human creature finally awaken,<br>
+                            to care, in Peace, for your beauty!<br>
+                            Thus your paradise is already reflected in culture,<br>
+                            It already sparkles in our art and literature.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="italian language">
+                    <h1 class="handwritten" style="color: #FFD700;">Sinfonia della Natura</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Nel vibrante abbraccio dell'aurora,<br>
+                            dove il vento risveglia il suo canto,<br>
+                            sento la luce di Dio, e in quest'ora,<br>
+                            l'intera terra esala la sua preghiera.
+                        </div>
+                        <div class="stanza">
+                            La quercia estende al cielo i suoi rami,<br>
+                            come cercando il cielo del Creatore,<br>
+                            e nell'immenso verde del paesaggio,<br>
+                            il fiore selvatico si apre con colore.
+                        </div>
+                        <div class="stanza">
+                            L'usignolo affina la sua gola<br>
+                            e il bosco verde dipinge la tua tenerezza.<br>
+                            Il colibrì che canta nella rugiada,<br>
+                            è un bagliore della tua bellezza.
+                        </div>
+                        <div class="stanza">
+                            La balena che salta nell'abisso,<br>
+                            l'aquila, il cervo e il delfino,<br>
+                            la farfalla, la libellula e il ruscello stesso<br>
+                            sono la voce di un miracolo senza confini.
+                        </div>
+                        <div class="stanza">
+                            E in mezzo a questa selva luminosa,<br>
+                            l'essere umano apporta il suo senso.<br>
+                            Con mente libera e con l'anima bella,<br>
+                            l'arte umana nasce grata.
+                        </div>
+                        <div class="stanza">
+                            La tela diventa riflesso della tua gloria,<br>
+                            la danza imita il giro siderale,<br>
+                            la musica è la voce dell'euforia<br>
+                            che cerca di unirsi al canto universale.
+                        </div>
+                        <div class="stanza">
+                            Siamo parte del fiume e della montagna,<br>
+                            siamo il fiore, il mare e il seme.<br>
+                            La nostra anima si meraviglia dinanzi alla tua luce,<br>
+                            e la tua pace celeste ci accompagna.
+                        </div>
+                        <div class="stanza">
+                            Che batta il cuore dell'Universo!<br>
+                            Che brilli il grande Amore che ci sostiene!<br>
+                            Che ogni bosco, fiume e verso,<br>
+                            Sia la Pace che viene sulla nuestra Terra!.
+                        </div>
+                        <div class="stanza">
+                            Che si svegli finalmente la creatura umana,<br>
+                            per curare, in Pace, la tua bellezza!<br>
+                            Così il tuo paradiso già si riflette nella cultura,<br>
+                            Già brilla nella nostra arte e letteratura.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHINESE -->
+                <div class="chinese language">
+                    <h1 class="handwritten" style="color: #FFD700;">大自然的交响曲</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            在黎明活力四射的怀抱中，<br>
+                            清风唤醒了它的乐章，<br>
+                            我感受到了上帝的光芒，在这一刻，<br>
+                            整个大地都吐露着它的祈祷。
+                        </div>
+                        <div class="stanza">
+                            橡树向天空伸展枝桠，<br>
+                            仿佛在寻觅造物主的天堂，<br>
+                            在风景无垠的翠绿中，<br>
+                            野花绚烂绽放。
+                        </div>
+                        <div class="stanza">
+                            夜莺亮起歌喉，<br>
+                            绿色的森林绘出你的温柔。<br>
+                            在露珠中歌唱的蜂鸟，<br>
+                            是你美丽的闪现。
+                        </div>
+                        <div class="stanza">
+                            在深渊中跳跃的鲸鱼，<br>
+                            雄鹰、鹿和海豚，<br>
+                            蝴蝶、蜻蜓还有溪流本身，<br>
+                            都是无尽奇迹的声音。
+                        </div>
+                        <div class="stanza">
+                            在这片明亮的森林中，<br>
+                            人类贡献了自己的感知。<br>
+                            以自由的思想和美丽的灵魂，<br>
+                            人类艺术怀着感恩诞生。
+                        </div>
+                        <div class="stanza">
+                            画布成了你荣耀的映照，<br>
+                            舞蹈模仿着星际的旋转，<br>
+                            音乐是欢欣的呼喊，<br>
+                            寻求加入宇宙的合唱。
+                        </div>
+                        <div class="stanza">
+                            我们是河流和山脉的一部分，<br>
+                            我们是花朵、海洋和种子。<br>
+                            我们的灵魂在你的光芒下惊叹，<br>
+                            你天上的平安伴随着我们。
+                        </div>
+                        <div class="stanza">
+                            让宇宙的心脏跳动吧！<br>
+                            让支撑我们的伟大的爱闪耀吧！<br>
+                            愿所有的森林、河流和诗句，<br>
+                            成为降临大地的和平！
+                        </div>
+                        <div class="stanza">
+                            愿人类终于觉醒，<br>
+                            在和平中守护你的美丽！<br>
+                            如此，你的天堂已在文化中映照，<br>
+                            已在我们的艺术和文学中熠熠生辉。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARABIC -->
+                <div class="arabic language">
+                    <h1 class="handwritten" style="color: #FFD700;">سيمفونية الطبيعة</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            في حضن الفجر النابض بالحياة،<br>
+                            حيث توقظ الرياح أغنيتها،<br>
+                            أشعر بنور الله، وفي هذه الساعة،<br>
+                            تخرج الأرض كلها صلاتها.
+                        </div>
+                        <div class="stanza">
+                            يمد البلوط أغصانه إلى السماء،<br>
+                            وكأنه يبحث عن جنة الخالق،<br>
+                            وفي الخضرة الشاسعة للمناظر الطبيعية،<br>
+                            تتفتح الزهرة البرية بالألوان.
+                        </div>
+                        <div class="stanza">
+                            العندليب يصقل حنجرته،<br>
+                            والغابة الخضراء ترسم حنانك.<br>
+                            الطنان الذي يغني في الندى،<br>
+                            هو وميض من جمالك.
+                        </div>
+                        <div class="stanza">
+                            الحوت الذي يقفز في الهاوية،<br>
+                            النسر، الأيل، والدلفين،<br>
+                            الفراشة، اليعسوب، والجدول نفسه،<br>
+                            هم صوت معجزة لا حدود لها.
+                        </div>
+                        <div class="stanza">
+                            وفي وسط هذه الغابة المضيئة،<br>
+                            يضيف الإنسان معناه.<br>
+                            بعقل حر وروح جميلة،<br>
+                            يولد الفن البشري ممتنًا.
+                        </div>
+                        <div class="stanza">
+                            تصبح اللوحة انعكاسًا لمجدك،<br>
+                            والرقص يحاكي دوران النجوم،<br>
+                            الموسيقى هي صوت البهجة،<br>
+                            التي تسعى للانضمام إلى الترتيلة العالمية.
+                        </div>
+                        <div class="stanza">
+                            نحن جزء من النهر والجبل،<br>
+                            نحن الزهرة، البحر والبذرة.<br>
+                            تندهش أرواحنا أمام نورك،<br>
+                            وسلامك السماوي يرافقنا.
+                        </div>
+                        <div class="stanza">
+                            لينبض قلب الكون!<br>
+                            ليشرق الحب العظيم الذي يسندنا!<br>
+                            لتكن كل غابة ونهر وقصيدة،<br>
+                            هي السلام الذي يأتي إلى أرضنا!
+                        </div>
+                        <div class="stanza">
+                            لتستيقظ أخيرًا الكائنات البشرية،<br>
+                            لترعى جمالك في سلام!<br>
+                            وهكذا ينعكس فردوسك بالفعل في الثقافة،<br>
+                            ويضيء بالفعل في فننا وأدبنا.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUSSIAN -->
+                <div class="russian language">
+                    <h1 class="handwritten" style="color: #FFD700;">Симфония природы</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            В ярких объятиях зари,<br>
+                            где ветер пробуждает свою песню,<br>
+                            я чувствую свет Бога, и в этот час,<br>
+                            вся земля возносит свою молитву.
+                        </div>
+                        <div class="stanza">
+                            Дуб протягивает к небу свои ветви,<br>
+                            словно ища небеса Творца,<br>
+                            и в бескрайней зелени пейзажа,<br>
+                            расцветает дикий цветок.
+                        </div>
+                        <div class="stanza">
+                            Соловей настраивает свое горло,<br>
+                            и зеленый лес рисует твою нежность.<br>
+                            Колибри, поющий в росе,<br>
+                            это отблеск твоей красоты.
+                        </div>
+                        <div class="stanza">
+                            Кит, прыгающий в бездне,<br>
+                            орел, олень и дельфин,<br>
+                            бабочка, стрекоза и сам ручей<br>
+                            это голос бесконечного чуда.
+                        </div>
+                        <div class="stanza">
+                            И посреди этого светлого леса<br>
+                            человек привносит свой смысл.<br>
+                            Со свободным разумом и прекрасной душой,<br>
+                            человеческое искусство рождается в благодарности.
+                        </div>
+                        <div class="stanza">
+                            Холст становится отражением твоей славы,<br>
+                            танец имитирует звездное вращение,<br>
+                            музыка — это голос эйфории,<br>
+                            стремящейся слиться с вселенским пением.
+                        </div>
+                        <div class="stanza">
+                            Мы — часть реки и горы,<br>
+                            мы — цветок, море и семя.<br>
+                            Наша душа трепещет пред твоим светом,<br>
+                            и твой небесный покой сопровождает нас.
+                        </div>
+                        <div class="stanza">
+                            Пусть бьется сердце Вселенной!<br>
+                            Пусть сияет великая Любовь, что держит нас!<br>
+                            Пусть каждый лес, река и стих,<br>
+                            Станут Миром, что приходит на нашу Землю!
+                        </div>
+                        <div class="stanza">
+                            Пусть пробудится наконец человеческое существо,<br>
+                            чтобы в Мире беречь твою красоту!<br>
+                            Так твой рай уже отражается в культуре,<br>
+                            Уже сияет в нашем искусстве и литературе.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALEMAN -->
+                <div class="aleman language">
+                    <h1 class="handwritten" style="color: #FFD700;">Sinfonie der Natur</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            In der lebendigen Umarmung der Morgenröte,<br>
+                            wo der Wind sein Lied erweckt,<br>
+                            spüre ich Gottes Licht, und in dieser Stunde,<br>
+                            atmet die ganze Erde ihr Gebet aus.
+                        </div>
+                        <div class="stanza">
+                            Die Eiche streckt ihr Geäst dem Himmel entgegen,<br>
+                            als suchte sie den Himmel des Schöpfers,<br>
+                            und im unermesslichen Grün der Landschaft,<br>
+                            öffnet sich die Wildblume mit Farbe.
+                        </div>
+                        <div class="stanza">
+                            Die Nachtigall stimmt ihre Kehle an,<br>
+                            und der grüne Wald malt deine Zärtlichkeit.<br>
+                            Der Kolibri, der im Tau singt,<br>
+                            ist ein Aufblitzen deiner Schönheit.
+                        </div>
+                        <div class="stanza">
+                            Der Wal, der im Abgrund springt,<br>
+                            der Adler, der Hirsch und der Delfin,<br>
+                            der Schmetterling, die Libelle und der Bach selbst<br>
+                            sind die Stimme eines grenzenlosen Wunders.
+                        </div>
+                        <div class="stanza">
+                            Und inmitten dieses leuchtenden Urwaldes,<br>
+                            trägt der Mensch seinen Sinn bei.<br>
+                            Mit freiem Geist und schöner Seele,<br>
+                            wird die menschliche Kunst dankbar geboren.
+                        </div>
+                        <div class="stanza">
+                            Die Leinwand wird zum Spiegel deines Glanzes,<br>
+                            der Tanz ahmt die Sternendrehung nach,<br>
+                            die Musik ist die Stimme der Euphorie,<br>
+                            die sich dem universellen Gesang anschließen will.
+                        </div>
+                        <div class="stanza">
+                            Wir sind Teil des Flusses und der Berge,<br>
+                            wir sind die Blume, das Meer und der Same.<br>
+                            Unsere Seele staunt vor deinem Licht,<br>
+                            und dein himmlischer Friede begleitet uns.
+                        </div>
+                        <div class="stanza">
+                            Möge das Herz des Universums schlagen!<br>
+                            Möge die große Liebe, die uns trägt, leuchten!<br>
+                            Möge jeder Wald, jeder Fluss und jeder Vers,<br>
+                            der Friede sein, der auf unsere Erde kommt!
+                        </div>
+                        <div class="stanza">
+                            Möge die menschliche Kreatur endlich erwachen,<br>
+                            um in Frieden deine Schönheit zu bewahren!<br>
+                            So spiegelt sich dein Paradies bereits in der Kultur wider,<br>
+                            Es strahlt bereits in unserer Kunst und Literatur.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRANCES -->
+                <div class="frances language">
+                    <h1 class="handwritten" style="color: #FFD700;">Symphonie de la Nature</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Dans l'étreinte vibrante de l'aurore,<br>
+                            où le vent éveille sa chanson,<br>
+                            je sens la lumière de Dieu, et à cette heure,<br>
+                            la terre entière exhale sa prière.
+                        </div>
+                        <div class="stanza">
+                            Le chêne étend ses branches vers le ciel,<br>
+                            comme cherchant le ciel du Créateur,<br>
+                            et dans la verdure immense du paysage,<br>
+                            la fleur sauvage s'ouvre avec couleur.
+                        </div>
+                        <div class="stanza">
+                            Le rossignol accorde sa gorge,<br>
+                            et la forêt verte peint ta tendresse.<br>
+                            Le colibri qui chante dans la rosée,<br>
+                            est un éclat de ta beauté.
+                        </div>
+                        <div class="stanza">
+                            La baleine qui saute dans l'abîme,<br>
+                            l'aigle, le cerf et le dauphin,<br>
+                            le papillon, la libellule et le ruisseau lui-même<br>
+                            sont la voix d'un miracle sans fin.
+                        </div>
+                        <div class="stanza">
+                            Et au milieu de cette forêt lumineuse,<br>
+                            l'être humain apporte son sens.<br>
+                            Avec l'esprit libre et l'âme belle,<br>
+                            l'art humain naît reconnaissant.
+                        </div>
+                        <div class="stanza">
+                            La toile devient le reflet de ta gloire,<br>
+                            la danse imite le tournoiement sidéral,<br>
+                            la musique est la voix de l'euphorie<br>
+                            qui cherche à s'unir au chant universel.
+                        </div>
+                        <div class="stanza">
+                            Nous faisons partie du fleuve et de la montagne,<br>
+                            nous sommes la fleur, la mer et la graine.<br>
+                            Notre âme s'émerveille devant ta lumière,<br>
+                            et ta paix céleste nous accompagne.
+                        </div>
+                        <div class="stanza">
+                            Que batte le cœur de l'Univers !<br>
+                            Que brille le grand Amour qui nous soutient !<br>
+                            Que chaque forêt, fleuve et vers,<br>
+                            Soit la Paix qui vient sur notre Terre !
+                        </div>
+                        <div class="stanza">
+                            Que s'éveille enfin la créature humaine,<br>
+                            pour prendre soin, dans la Paix, de ta beauté !<br>
+                            Ainsi ton paradis se reflète déjà dans la culture,<br>
+                            Il étincelle déjà dans notre art et littérature.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JAPONES -->
+                <div class="japones language">
+                    <h1 class="handwritten" style="color: #FFD700;">大自然の交響曲</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            夜明けの活気に満ちた抱擁の中で、<br>
+                            風がその歌を目覚めさせるとき、<br>
+                            私は神の光を感じる。この時、<br>
+                            大地全体がその祈りを吐き出す。
+                        </div>
+                        <div class="stanza">
+                            樫の木は空へと枝を広げ、<br>
+                            創造主の天を探し求めるかのよう。<br>
+                            風景の広大な緑の中で、<br>
+                            野生の花が色鮮やかに開く。
+                        </div>
+                        <div class="stanza">
+                            サヨナキドリは喉を整え、<br>
+                            緑の森はあなたの優しさを描く。<br>
+                            露の中で歌うハチドリは、<br>
+                            あなたの美しさの煌めき。
+                        </div>
+                        <div class="stanza">
+                            深淵で跳ねるクジラ、<br>
+                            鷲、鹿、そしてイルカ、<br>
+                            蝶、トンボ、そして小川そのものが、<br>
+                            果てしない奇跡の声。
+                        </div>
+                        <div class="stanza">
+                            そしてこの光り輝く森の中で、<br>
+                            人間はその意味を添える。<br>
+                            自由な心と美しい魂とともに、<br>
+                            人間の芸術は感謝とともに生まれる。
+                        </div>
+                        <div class="stanza">
+                            キャンバスはあなたの栄光の反映となり、<br>
+                            踊りは星々の回転を模倣する。<br>
+                            音楽は歓喜の声、<br>
+                            宇宙の歌声に加わろうとする声。
+                        </div>
+                        <div class="stanza">
+                            私たちは川と山の一部であり、<br>
+                            花であり、海であり、種子である。<br>
+                            私たちの魂はあなたの光の前に感嘆し、<br>
+                            天の平和が私たちとともに歩む。
+                        </div>
+                        <div class="stanza">
+                            宇宙の鼓動よ、響け！<br>
+                            私たちを支える大いなる愛よ、輝け！<br>
+                            すべての森、川、そして詩が、<br>
+                            私たちの地球に来る平和となりますように！
+                        </div>
+                        <div class="stanza">
+                            人間がついに目覚めますように、<br>
+                            平和の中で、あなたの美しさを守るために！<br>
+                            こうして、あなたの楽園はすでに文化に反映され、<br>
+                            私たちの芸術と文学の中にすでに輝いている。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTUGES -->
+                <div class="portuges language">
+                    <h1 class="handwritten" style="color: #FFD700;">Sinfonia da Natureza</h1>
+                    <br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            No vibrante abraço da aurora,<br>
+                            onde o vento desperta sua canção,<br>
+                            sinto a luz de Deus, e nesta hora,<br>
+                            a terra inteira exala sua oração.
+                        </div>
+                        <div class="stanza">
+                            O carvalho estende ao céu sua ramagem,<br>
+                            como buscando o céu do Criador<br>
+                            e no verdor imenso da paisagem,<br>
+                            a flor silvestre se abre com cor.
+                        </div>
+                        <div class="stanza">
+                            O rouxinol afina sua garganta<br>
+                            e o bosque verde pinta sua ternura.<br>
+                            O colibri que no orvalho canta,<br>
+                            é um lampejo de sua beleza.
+                        </div>
+                        <div class="stanza">
+                            A baleia que salta no abismo,<br>
+                            a águia, o veado e o golfinho,<br>
+                            a borboleta, a libélula e o próprio riacho<br>
+                            são a voz de um milagre sem fim.
+                        </div>
+                        <div class="stanza">
+                            E no meio desta selva luminosa,<br>
+                            o ser humano aporta seu sentido.<br>
+                            Com mente livre e com a alma formosa,<br>
+                            o arte humano nasce agradecido.
+                        </div>
+                        <div class="stanza">
+                            Torna-se a tela reflexo de sua glória,<br>
+                            a dança imita o giro sideral,<br>
+                            a música é a voz da euforia<br>
+                            que busca unir-se ao canto universal.
+                        </div>
+                        <div class="stanza">
+                            Somos parte do rio e da montanha,<br>
+                            somos a flor, o mar e a semente.<br>
+                            Nossa alma diante de sua luz se maravilha,<br>
+                            e sua paz celestial nos acompanha.
+                        </div>
+                        <div class="stanza">
+                            Que bata o coração do Universo!<br>
+                            Que brilhe o grande Amor que nos sustenta!<br>
+                            Que todo bosque, rio e verso,<br>
+                            Seja a Paz que à nossa Terra vem!.
+                        </div>
+                        <div class="stanza">
+                            Que desperte enfim a criatura humana,<br>
+                            para cuidar, em Paz, de sua beleza!<br>
+                            Assim já seu paraíso se reflete na cultura,<br>
+                            Já brilha em nosso arte e literatura.
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Music Section Placeholder -->
+            <div class="container mt-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <i class="fab fa-spotify text-success mr-2"></i>
+                    <span class="spanish language">Música Sugerida (Próximamente)</span>
+                    <span class="english language">Suggested Music (Coming Soon)</span>
+                    <span class="italian language">Musica Suggerita (Prossimamente)</span>
+                    <span class="chinese language">建议音乐（即将推出）</span>
+                    <span class="arabic language">الموسيقى المقترحة (قريباً)</span>
+                    <span class="russian language">Предлагаемая музыка (Скоро)</span>
+                    <span class="aleman language">Empfohlene Musik (Demnächst)</span>
+                    <span class="frances language">Musique suggérée (Bientôt)</span>
+                    <span class="japones language">おすすめの音楽（間もなく）</span>
+                    <span class="portuges language">Música Sugerida (Em breve)</span>
+                </h2>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-9 mb-4">
+                        <div id="spotify-player-container">
+                            <div class="p-5 rounded" style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2);">
+                                <i class="fab fa-spotify fa-3x mb-3 text-success"></i>
+                                <p>El reproductor se activará cuando la música esté disponible.</p>
+                            </div>
+                            <iframe id="spotify-iframe" style="border-radius:12px; display:none;" src="" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Section -->
+                <div class="container mt-5">
+                    <h2 class="handwritten text-light align-middle text-center">
+                        <i class="fab fa-youtube text-danger mr-2"></i>
+                        <span class="spanish language">Video Explicativo</span>
+                        <span class="english language">Explanatory Video</span>
+                        <span class="italian language">Video Esplicativo</span>
+                        <span class="chinese language">讲解视频</span>
+                        <span class="arabic language">فيديو توضيحي</span>
+                        <span class="russian language">Пояснительное видео</span>
+                        <span class="aleman language">Erklärvideo</span>
+                        <span class="frances language">Vidéo explicative</span>
+                        <span class="japones language">解説動画</span>
+                        <span class="portuges language">Vídeo Explicativo</span>
+                    </h2>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/iKq8Ji7Kn8Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Comic Section -->
+                <div class="container mt-5 mb-5 text-center">
+                    <h2 class="handwritten text-light mb-4">
+                        <span class="spanish language">El Poema en Imágenes</span>
+                        <span class="english language">The Poem in Images</span>
+                        <span class="italian language">Il Poema in Immagini</span>
+                        <span class="chinese language">图片中的诗</span>
+                        <span class="arabic language">القصيدة في صور</span>
+                        <span class="russian language">Стихотворение в картинках</span>
+                        <span class="aleman language">Das Gedicht in Bildern</span>
+                        <span class="frances language">Le poème en images</span>
+                        <span class="japones language">画像で見る詩</span>
+                        <span class="portuges language">O Poema em Imagens</span>
+                    </h2>
+                    <div class="mt-4">
+                        <img id="comic-image" src="comic/comic_sinfonia.png" class="img-fluid rounded shadow-lg" alt="Arte del poema" style="max-height: 1000px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.6);">
+                    </div>
+                </div>
+
+        </section>
+
+    </div>
+
+    <script src="base.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
