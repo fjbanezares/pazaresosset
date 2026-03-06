@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Propuesta Familiar - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../favicon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --pink: #ff4c68;
+            --dark-bg: #0a0a0a;
+            --card-bg: rgba(25, 25, 25, 0.9);
+            --glass-border: rgba(255, 215, 0, 0.2);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            background-color: var(--dark-bg);
+            background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1100px;
+            padding: 40px 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Philosopher', serif;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 30px;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--pink) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Comparison Grid */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .stat-val {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Roadmap Timeline */
+        .roadmap {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .roadmap-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .roadmap-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            color: black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .roadmap-content h4 {
+            color: var(--gold);
+            margin-top: 0;
+        }
+
+        /* Table */
+        .custom-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            margin-top: 20px;
+        }
+
+        .custom-table th {
+            color: #888;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            padding: 10px 20px;
+            text-align: left;
+        }
+
+        .custom-table td {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+        }
+
+        .custom-table tr td:first-child {
+            border-radius: 15px 0 0 15px;
+        }
+
+        .custom-table tr td:last-child {
+            border-radius: 0 15px 15px 0;
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .action-button {
+            background: linear-gradient(45deg, var(--gold), #B8860B);
+            color: black;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .action-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            color: black;
+            text-decoration: none;
+        }
+
+        .notary-badge {
+            background: rgba(255, 76, 104, 0.2);
+            border: 1px solid var(--pink);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: var(--pink);
+        }
+
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header-section">
+            <a href="index.html"
+                style="color: var(--gold); text-decoration: none; font-weight: bold; margin-bottom: 20px; display: inline-block;">
+                <i class="fas fa-arrow-left"></i> Volver a Reflexiones
+            </a>
+            <h1>Estrategia Patrimonial Familiar</h1>
+            <p style="color: #888; letter-spacing: 1px;">SINTESIS DEL CASO - MARZO 2026</p>
+        </div>
+
+        <!-- Part 1: Numbers -->
+        <h3 class="mb-4"><i class="fas fa-chart-line mr-2"></i> Valoración y Fiscalidad (Ahorro IRPF)</h3>
+        <div class="summary-grid">
+            <div class="stat-card">
+                <div class="stat-label">Valor Adquisición (2015)</div>
+                <div class="stat-val">250.000€</div>
+                <p style="font-size: 0.9rem; color: #888;">Basado en tasación Javi (Marzo 2015). <br>Clave para
+                    minimizar plusvalía.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Valor Mercado (2026)</div>
+                <div class="stat-val">300k - 350k€</div>
+                <p style="font-size: 0.9rem; color: #888;">Incremento estimado. <br>Sujeto a confirmación agencias
+                    (Fallas).</p>
+            </div>
+            <div class="stat-card" style="background: rgba(255, 215, 0, 0.05);">
+                <div class="stat-label" style="color: var(--gold);">Objetivo Inmediato</div>
+                <div class="stat-val" style="color: #fff;">Video Call</div>
+                <p style="font-size: 0.9rem; color: #aaa;">"Este tema es muy importante para mí."</p>
+            </div>
+        </div>
+
+        <!-- Part 2: Assets -->
+        <h3 class="mt-5 mb-4"><i class="fas fa-home mr-2"></i> Inventario de Activos (Valencia)</h3>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Activo</th>
+                    <th>Estado Actual</th>
+                    <th>Acción Pendiente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="highlight">Piso Valencia</td>
+                    <td>Ducha inhabilitada (problemas vecino). Inundación terraza (Diciembre).</td>
+                    <td>Limpieza, fotos para Idealista/Fotocasa (Semana Fallas).</td>
+                </tr>
+                <tr>
+                    <td class="highlight">Local Comercial</td>
+                    <td>Llaves en posesión de abogada (Elena).</td>
+                    <td>Tomar posesión, tasar y fotografiar.</td>
+                </tr>
+                <tr>
+                    <td class="highlight">Trastero</td>
+                    <td>Propiedad exclusiva (según la abuela en 2011).</td>
+                    <td>Verificar acceso y ubicación en Finca Roja.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Part 3: Roadmap -->
+        <h3 class="mt-5 mb-4"><i class="fas fa-tasks mr-2"></i> Hoja de Ruta Operativa</h3>
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <div class="roadmap-icon"><i class="fas fa-video"></i></div>
+                <div class="roadmap-content">
+                    <h4>Paso 1: Coordinación Familiar</h4>
+                    <p>Videollamada para alinear valores y estrategia. Propuesto: Hora de la comida (Elena/Teresa).</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-icon"><i class="fas fa-stamp"></i></div>
+                <div class="roadmap-content">
+                    <h4>Paso 2: Notaría Estratégica <span class="notary-badge">Torrelodones</span></h4>
+                    <p>Gestión ágil. Protocolización del Cuaderno Particional.</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-icon"><i class="fas fa-search-dollar"></i></div>
+                <div class="roadmap-content">
+                    <h4>Paso 3: Verificación Fiscal (Modelo 650)</h4>
+                    <p>Búsqueda en Comunidad de Madrid / Hacienda. Consulta a expertos (amigos fiscalistas).</p>
+                </div>
+            </div>
+            <div class="roadmap-item" style="margin-bottom: 0;">
+                <div class="roadmap-icon"><i class="fas fa-bullhorn"></i></div>
+                <div class="roadmap-content">
+                    <h4>Paso 4: Salida al Mercado</h4>
+                    <p>Anuncios en Idealista/Fotocasa post-partición definitiva.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p style="font-style: italic; color: #888;">"Con total Paz decidme cuando os viene bien..."</p>
+            <a href="https://wa.me/?text=Hola%20hermanas,%20he%20preparado%20este%20esquema%20para%20la%20reunión"
+                class="action-button">
+                Compartir Propuesta
+            </a>
+        </div>
+
+    </div>
+
+    <footer class="text-center p-5" style="color: #444; font-size: 0.8rem;">
+        © 2026 Resumen para Uso Familiar Privado
+    </footer>
+
+</body>
+
+</html>

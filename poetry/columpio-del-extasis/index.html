@@ -1,420 +1,804 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>TITULO XXX</title>
+  <title>El Columpio del Éxtasis - Paz Arés Osset</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
+      </a>
+      <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+        <i class="fab fa-spotify mr-2" style="font-size: 1.2rem;"></i>
+        <span id="audio-button-text">Escuchar Música</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;"
+            alt="Paz Arés Osset">
+        </a>
+
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">El Columpio del Éxtasis</div>
+          <div class="english language">The Swing of Ecstasy</div>
+          <div class="italian language">L'Altalena dell'Estasi</div>
+          <div class="chinese language">狂喜的秋千</div>
+          <div class="arabic language">أرجوحة النشوة</div>
+          <div class="russian language">Качели Экстаза</div>
+          <div class="aleman language">Die Schaukel der Ekstase</div>
+          <div class="frances language">L'Escarpolette de l'Extase</div>
+          <div class="japones language">恍惚のブランコ</div>
+          <div class="portuges language">O Balanço do Êxtase</div>
+        </h1>
+
+        <div class="lead">
+          <div class="spanish language">Un viaje místico hacia el gozo y el amor cósmico.</div>
+          <div class="english language">A mystical journey into joy and cosmic love.</div>
+          <div class="italian language">Un viaggio mistico nella gioia e nell'amore cosmico.</div>
+          <div class="chinese language">通往喜悦与宇宙之爱的神秘旅程。</div>
+          <div class="arabic language">رحلة صوفية نحو الفرح والحب الكوني.</div>
+          <div class="russian language">Мистическое путешествие к радости и космической любви.</div>
+          <div class="aleman language">Eine mystische Reise in die Freude und die kosmische Liebe.</div>
+          <div class="frances language">Un voyage mystique dans la joie et l'amour cosmique.</div>
+          <div class="japones language">歓喜と宇宙の愛への神秘的な旅。</div>
+          <div class="portuges language">Uma viagem mística à alegria e ao amor cósmico.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="multilingual-description py-5" style="background-color: transparent;">
+      <div class="container text-center">
+
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #FFD700;">El Columpio del Éxtasis</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              En la acuarela tú puedes solo ver la apariencia...<br>
+              Una mujer desnuda y bella<br>
+              Deslizándose por el aire, con sus cabellos al viento<br>
+              En un original columpio de guirnaldas multicolores...
+            </div>
+            <div class="stanza">
+              Yendo más allá de lo visible,<br>
+              descubres el interior invisible.
+            </div>
+            <div class="stanza">
+              Me columpio en amor.<br>
+              Me deslizo entre las flores de colores…<br>
+              Rítmicamente respirando,<br>
+              sintiendo su calidez y frescura...
+            </div>
+            <div class="stanza">
+              La caricia de la brisa<br>
+              en la suavidad de mi piel de seda...<br>
+              Sumida en el gozo del éxtasis...<br>
+              En el péndulo rítmico y repetitivo...
+            </div>
+            <div class="stanza">
+              Entre el baile de flores, mariposas<br>
+              y libélulas en corazón...<br>
+              En el que beso el sol en el radiante día.<br>
+              En el que alcanzamos la luna en la noche estrellada.
+            </div>
+            <div class="stanza">
+              Inspiro y suspiro.<br>
+              Entro en otra dimensión.<br>
+              En la vibración del gozo infinito<br>
+              En la eternidad del instante.
+            </div>
+            <div class="stanza">
+              Donde sucede la lentitud en la rapidez...<br>
+              Me siento una estrella fugaz luminosa...<br>
+              Inspiro y suspiro.<br>
+              Se abre mi eros erotizando el momento...
+            </div>
+            <div class="stanza">
+              Olvido el pasado de melancolía.<br>
+              Todo es fulgor del fuego de mi ser brillante y divino...<br>
+              Rebosando pasión entre las galaxias.<br>
+              Todo es luz de color naranja en mis ojos cerrados.
+            </div>
+            <div class="stanza">
+              En los oídos el silencio del mar...<br>
+              Y mi alma llega al místico amar el amor...<br>
+              Amor de poesía...
+            </div>
+            <div class="stanza">
+              Amor divino y sagrado.<br>
+              Intensidad, eternidad y gozo sin fin.<br>
+              Es la mujer en gozo.<br>
+              Soy la mujer en éxtasis.
+            </div>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #FFD700;">The Swing of Ecstasy</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              In the watercolor you can only see the appearance...<br>
+              A beautiful naked woman<br>
+              Sliding through the air, with her hair in the wind<br>
+              On an original swing of multicolored garlands...
+            </div>
+            <div class="stanza">
+              Going beyond the visible,<br>
+              you discover the invisible interior.
+            </div>
+            <div class="stanza">
+              I swing in love.<br>
+              I slide among the colorful flowers…<br>
+              Rhythmically breathing,<br>
+              feeling its warmth and freshness...
+            </div>
+            <div class="stanza">
+              The caress of the breeze<br>
+              on the softness of my silky skin...<br>
+              Submerged in the joy of ecstasy...<br>
+              In the rhythmic and repetitive pendulum...
+            </div>
+            <div class="stanza">
+              Among the dance of flowers, butterflies<br>
+              and dragonflies in heart...<br>
+              In which I kiss the sun on the radiant day.<br>
+              In which I reach the moon on the starry night.
+            </div>
+            <div class="stanza">
+              I inhale and sigh.<br>
+              I enter another dimension.<br>
+              In the vibration of infinite joy<br>
+              In the eternity of the moment.
+            </div>
+            <div class="stanza">
+              Where slowness happens in speed...<br>
+              I feel like a luminous shooting star...<br>
+              I inhale and sigh.<br>
+              My eros opens erotizing the moment...
+            </div>
+            <div class="stanza">
+              I forget the past of melancholy.<br>
+              Everything is the glow of the fire of my brilliant and divine being...<br>
+              Overflowing with passion among the galaxies.<br>
+              Everything is orange light in my closed eyes.
+            </div>
+            <div class="stanza">
+              In the ears the silence of the sea...<br>
+              And my soul reaches the mystic loving of love...<br>
+              Love of poetry...
+            </div>
+            <div class="stanza">
+              Divine and sacred love.<br>
+              Intensity, eternity and endless joy.<br>
+              It is the woman in joy.<br>
+              I am the woman in ecstasy.
+            </div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #FFD700;">L'Altalena dell'Estasi</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Nell'acquerello puoi solo vedere l'apparenza...<br>
+              Una donna nuda e bella<br>
+              Scivolando per l'aria, con i capelli al vento<br>
+              Su un'altalena originale di ghirlande multicolori...
+            </div>
+            <div class="stanza">
+              Andando oltre il visibile,<br>
+              scopri l'interno invisibile.
+            </div>
+            <div class="stanza">
+              Mi altaleno nell'amore.<br>
+              Scivolo tra i fiori colorati…<br>
+              Respirando ritmicamente,<br>
+              sentendo il suo calore e freschezza...
+            </div>
+            <div class="stanza">
+              La carezza della brezza<br>
+              sulla morbidezza della mia pelle di seta...<br>
+              Immersa nella gioia dell'estasi...<br>
+              Nel pendolo ritmico e repetitivo...
+            </div>
+            <div class="stanza">
+              Tra la danza di fiori, farfalle<br>
+              e libellule nel cuore...<br>
+              In cui bacio il sole nel giorno radioso.<br>
+              In cui raggiungo la luna nella notte stellata.
+            </div>
+            <div class="stanza">
+              Inspiro e sospiro.<br>
+              Entro in un'altra dimensione.<br>
+              Nella vibrazione della gioia infinita<br>
+              Nell'eternità dell'istante.
+            </div>
+            <div class="stanza">
+              Dove la lentezza accade nella velocità...<br>
+              Mi sento una stella cadente luminosa...<br>
+              Inspiro e sospiro.<br>
+              Il mio eros si apre erotizzando il momento...
+            </div>
+            <div class="stanza">
+              Dimentico il passato di malinconia.<br>
+              Tutto è splendore del fuoco del mio essere brillante e divino...<br>
+              Traboccante di passione tra le galassie.<br>
+              Tutto è luce arancione nei miei occhi chiusi.
+            </div>
+            <div class="stanza">
+              Nelle orecchie il silenzio del mare...<br>
+              E la mia anima raggiunge il mistico amare l'amore...<br>
+              Amore di poesia...
+            </div>
+            <div class="stanza">
+              Amore divino e sacro.<br>
+              Intensità, eternità e gioia senza fine.<br>
+              È la donna nella gioia.<br>
+              Sono la donna in estasi.
+            </div>
+          </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="chinese language">
+          <h1 class="handwritten" style="color: #FFD700;">狂喜的秋千</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              在水彩画中，你只能看到外表……<br>
+              一位美丽而赤裸的女性<br>
+              在空中滑行，发丝随风飘扬<br>
+              在一个绚丽花环组成的独特秋千上……
+            </div>
+            <div class="stanza">
+              超越可见的一切，<br>
+              你发现了不可见的内在。
+            </div>
+            <div class="stanza">
+              我在爱中荡漾。<br>
+              我在彩花间滑行……<br>
+              律动地呼吸，<br>
+              感受它的温暖与清新……
+            </div>
+            <div class="stanza">
+              微风的爱抚<br>
+              在我丝滑柔嫩的皮肤上……<br>
+              沉浸在狂喜的愉悦中……<br>
+              在有节奏的、重复的摆动中……
+            </div>
+            <div class="stanza">
+              在花朵、蝴蝶与<br>
+              心中的蜻蜓共舞之间……<br>
+              在灿烂的日子里吻过太阳，<br>
+              在繁星点点的夜晚触及月亮。
+            </div>
+            <div class="stanza">
+              我吸气并叹息。<br>
+              我进入了另一个维度。<br>
+              在无限喜悦的振动中，<br>
+              在瞬间的永恒中。
+            </div>
+            <div class="stanza">
+              当缓慢在极速中发生……<br>
+              我感觉自己像一颗明亮的流星……<br>
+              我吸气并叹息。<br>
+              我的欲望开启，让此刻充满了诗意的情色……
+            </div>
+            <div class="stanza">
+              我忘记了忧郁的过去。<br>
+              一切都是我光辉而神圣存在的烈焰……<br>
+              在星系间洋溢着激情。<br>
+              闭上双眼，一切都是橙色的光芒。
+            </div>
+            <div class="stanza">
+              耳畔是海洋的寂静……<br>
+              我的灵魂到达了神秘的爱之爱……<br>
+              诗歌之爱……
+            </div>
+            <div class="stanza">
+              神圣而崇高的爱。<br>
+              强度、永恒与无尽的喜悦。<br>
+              这是愉悦中的女人。<br>
+              我是狂喜中的女人。
+            </div>
+          </div>
+        </div>
+
+        <!-- ARABIC -->
+        <div class="arabic language">
+          <h1 class="handwritten" style="color: #FFD700;">أرجوحة النشوة</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              في الألوان المائية، يمكنك فقط رؤية المظهر...<br>
+              امرأة جميلة وعارية<br>
+              تنزلق في الهواء، وشعرها يتطاير في الريح<br>
+              على أرجوحة فريدة من أكاليل الزهور الملونة...
+            </div>
+            <div class="stanza">
+              بالذهاب إلى ما وراء المرئي،<br>
+              تكتشف الداخل غير المرئي.
+            </div>
+            <div class="stanza">
+              أتأرجح في الحب.<br>
+              أنزلق بين الزهور الملونة…<br>
+              أتنفس بإيقاع،<br>
+              أشعر بدفئها ونضارتها...
+            </div>
+            <div class="stanza">
+              لمسة النسيم<br>
+              على نعومة بشرتي الحريرية...<br>
+              منغمسة في غبطة النشوة...<br>
+              في البندول الإيقاعي والمتكرر...
+            </div>
+            <div class="stanza">
+              بين رقصة الزهور، الفراشات<br>
+              واليعاسيب في القلب...<br>
+              حيث أقبل الشمس في اليوم المشرق.<br>
+              وحيث أصل إلى القمر في الليلة المرصعة بالنجوم.
+            </div>
+            <div class="stanza">
+              أستنشق وأتنهد.<br>
+              أدخل في بُعد آخر.<br>
+              في اهتزاز الفرح اللامتناهي<br>
+              في أبدية اللحظة.
+            </div>
+            <div class="stanza">
+              حيث يحدث البطء في السرعة...<br>
+              أشعر وكأني شهاب مضيء...<br>
+              أستنشق وأتنهد.<br>
+              فتح إيروسي مثيراً اللحظة...
+            </div>
+            <div class="stanza">
+              أنسى ماضي الكآبة.<br>
+              كل شيء هو وهج نار كياني اللامع والإلهي...<br>
+              يفيض بالشغف بين المجرات.<br>
+              كل شيء ضوء برتقالي في عيني المغلقتين.
+            </div>
+            <div class="stanza">
+              في الأذنين صمت البحر...<br>
+              وتصل روحي إلى الحب الصوفي للحب...<br>
+              حب الشعر...
+            </div>
+            <div class="stanza">
+              حب إلهي ومقدس.<br>
+              كثافة، أبدية وفرح بلا نهاية.<br>
+              هي المرأة في غبطة.<br>
+              أنا المرأة في نشوة.
+            </div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #FFD700;">Качели Экстаза</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              В акварели ты видишь лишь видимость...<br>
+              Прекрасная обнаженная женщина<br>
+              Скользит в воздухе, волосы по ветру<br>
+              На оригинальных качелях из многоцветных гирлянд...
+            </div>
+            <div class="stanza">
+              Идя дальше видимого,<br>
+              ты открываешь невидимое нутро.
+            </div>
+            <div class="stanza">
+              Я качаюсь в любви.<br>
+              Я скольжу среди цветных цветов…<br>
+              Ритмично дыша,<br>
+              ощущая их тепло и свежесть...
+            </div>
+            <div class="stanza">
+              Ласка бриза<br>
+              на мягкости моей шелковой кожи...<br>
+              Погруженная в радость экстаза...<br>
+              В ритмичном и повторяющемся маятнике...
+            </div>
+            <div class="stanza">
+              Среди танца цветов, бабочек<br>
+              и стрекоз в сердце...<br>
+              В котором я целую солнце в сияющий день.<br>
+              В котором я достигаю луны в звездную ночь.
+            </div>
+            <div class="stanza">
+              Вдох и вздох.<br>
+              Я вхожу в другое измерение.<br>
+              В вибрации бесконечной радости<br>
+              В вечности мгновения.
+            </div>
+            <div class="stanza">
+              Где медлительность случается в скорости...<br>
+              Я чувствую себя яркой падающей звездой...<br>
+              Вдох и вздох.<br>
+              Мой эрос открывается, эротизируя момент...
+            </div>
+            <div class="stanza">
+              Я забываю прошлое меланхолии.<br>
+              Все есть сияние огня моего блестящего и божественного существа...<br>
+              Переполненная страстью среди галактик.<br>
+              Все есть оранжевый свет в моих закрытых глазах.
+            </div>
+            <div class="stanza">
+              В ушах тишина моря...<br>
+              И моя душа достигает мистической любви к любви...<br>
+              Любви к поэзии...
+            </div>
+            <div class="stanza">
+              Божественная и священная любовь.<br>
+              Интенсивность, вечность и бесконечная радость.<br>
+              Это женщина в радости.<br>
+              Я — женщина в экстазе.
+            </div>
+          </div>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="aleman language">
+          <h1 class="handwritten" style="color: #FFD700;">Die Schaukel der Ekstase</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Im Aquarell kannst du nur den Anschein sehen...<br>
+              Eine wunderschöne nackte Frau<br>
+              Gleitet durch die Luft, das Haar im Wind<br>
+              Auf einer originellen Schaukel aus bunten Girlanden...
+            </div>
+            <div class="stanza">
+              Jenseits des Sichtbaren<br>
+              entdeckst du das unsichtbare Innere.
+            </div>
+            <div class="stanza">
+              Ich schaukle in Liebe.<br>
+              Ich gleite zwischen den bunten Blumen…<br>
+              Rhythmisch atmend,<br>
+              fühle ihre Wärme und Frische...
+            </div>
+            <div class="stanza">
+              Das Liebkoisen der Brise<br>
+              auf der Sanftheit meiner seidenen Haut...<br>
+              Versunken in der Freude der Ekstase...<br>
+              Im rhythmischen und repetitiven Pendel...
+            </div>
+            <div class="stanza">
+              Zwischen dem Tanz von Blumen, Schmetterlingen<br>
+              und Libellen im Herzen...<br>
+              In dem ich die Sonne am strahlenden Tag küsse.<br>
+              In dem ich den Mond in der Sternennacht erreiche.
+            </div>
+            <div class="stanza">
+              Ich atme ein und seufze.<br>
+              Ich betrete eine andere Dimension.<br>
+              In der Schwingung unendlicher Freude<br>
+              In der Ewigkeit des Augenblicks.
+            </div>
+            <div class="stanza">
+              Wo die Langsamkeit in der Schnelligkeit geschieht...<br>
+              Ich fühle mich wie eine leuchtende Sternschnuppe...<br>
+              Ich atme ein und seufze.<br>
+              Mein Eros öffnet sich und erotisiert den Moment...
+            </div>
+            <div class="stanza">
+              Ich vergesse die Vergangenheit der Melancholie.<br>
+              Alles ist der Glanz des Feuers meines brillanten und göttlichen Seins...<br>
+              Überfließend vor Leidenschaft zwischen den Galaxien.<br>
+              Alles ist orangefarbenes Licht in meinen geschlossenen Augen.
+            </div>
+            <div class="stanza">
+              In den Ohren die Stille des Meeres...<br>
+              Und meine Seele erreicht das mystische Lieben der Liebe...<br>
+              Liebe zur Poesie...
+            </div>
+            <div class="stanza">
+              Göttliche und heilige Liebe.<br>
+              Intensität, Ewigkeit und endlose Freude.<br>
+              Es ist die Frau in der Freude.<br>
+              Ich bin die Frau in Ekstase.
+            </div>
+          </div>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="frances language">
+          <h1 class="handwritten" style="color: #FFD700;">L'Escarpolette de l'Extase</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Dans l’aquarelle, tu ne peux voir que l’apparence...<br>
+              Une femme nue et belle<br>
+              Glissant dans les airs, les cheveux au vent<br>
+              Sur une balançoire originale de guirlandes multicolores...
+            </div>
+            <div class="stanza">
+              En allant au-delà du visible,<br>
+              tu découvres l’intérieur invisible.
+            </div>
+            <div class="stanza">
+              Je me balance en amour.<br>
+              Je glisse parmi les fleurs colorées…<br>
+              Respirant rythmiquement,<br>
+              sentant leur chaleur et leur fraîcheur...
+            </div>
+            <div class="stanza">
+              La caresse de la brise<br>
+              sur la douceur de ma peau de soie...<br>
+              Plongée dans la joie de l’extase...<br>
+              Dans le pendule rythmique et répétitif...
+            </div>
+            <div class="stanza">
+              Parmi la danse des fleurs, des papillons<br>
+              et des libellules dans le cœur...<br>
+              Où j'embrasse le soleil par un jour radieux.<br>
+              Où j'atteins la lune dans la nuit étoilée.
+            </div>
+            <div class="stanza">
+              J'inspire et je soupire.<br>
+              J'entre dans une autre dimension.<br>
+              Dans la vibration de la joie infinie<br>
+              Dans l'éternité de l'instant.
+            </div>
+            <div class="stanza">
+              Où la lenteur se produit dans la rapidité...<br>
+              Je me sens comme une étoile filante lumineuse...<br>
+              J'inspire et je soupire.<br>
+              Mon éros s'ouvre en érotisant le moment...
+            </div>
+            <div class="stanza">
+              J'oublie le passé de mélancolie.<br>
+              Tout est l’éclat du feu de mon être brillant et divin...<br>
+              Débordant de passion parmi les galaxies.<br>
+              Tout n'est que lumière orangée dans mes yeux clos.
+            </div>
+            <div class="stanza">
+              Dans les oreilles, le silence de la mer...<br>
+              Et mon âme atteint le mystique aimer l’amour...<br>
+              Amour de poésie...
+            </div>
+            <div class="stanza">
+              Amour divin et sacré.<br>
+              Intensité, éternité et joie sans fin.<br>
+              C'est la femme dans la joie.<br>
+              Je suis la femme en extase.
+            </div>
+          </div>
+        </div>
+
+        <!-- JAPANESE -->
+        <div class="japones language">
+          <h1 class="handwritten" style="color: #FFD700;">恍惚のブランコ</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              水彩画の中で、あなたに読み取れるのは外見だけ……<br>
+              若く美しい一人の裸婦<br>
+              風に髪をなびかせ、空を滑るように舞う<br>
+              色とりどりの花輪に彩られた、独創的なブランコに乗って……
+            </div>
+            <div class="stanza">
+              目に見える境界を越えたとき、<br>
+              あなたは見えない内なる世界を発見する。
+            </div>
+            <div class="stanza">
+              私は愛の中で揺れる。<br>
+              色彩豊かな花々の間を滑り抜ける……<br>
+              リズムを刻む吸息と吐息、<br>
+              その温もりと清々しさを感じながら……
+            </div>
+            <div class="stanza">
+              絹のような肌の柔らかさを撫でる<br>
+              そよ風の愛撫……<br>
+              恍惚の歓喜に深く沈み込み……<br>
+              リズミカルに繰り返される振り子の中で……
+            </div>
+            <div class="stanza">
+              花々と蝶、そして心躍る<br>
+              蜻蛉たちが舞い踊る中で……<br>
+              輝く昼には太陽に接吻し、<br>
+              星降る夜には月にまで届く。
+            </div>
+            <div class="stanza">
+              息を吸い、そして溜息を漏らす。<br>
+              私は別の次元へと足を踏み入れる。<br>
+              無限の歓喜という鼓動の中で、<br>
+              この瞬間の永劫の中で。
+            </div>
+            <div class="stanza">
+              速さの中に静寂が宿るとき……<br>
+              私は光り輝く流れ星になったような心地がする……<br>
+              息を吸い、そして溜息を漏らす。<br>
+              私のエロスが開花し、この瞬間を官能で満たしていく……
+            </div>
+            <div class="stanza">
+              憂鬱な過去は忘れ去った。<br>
+              すべては、輝かしく神聖な私の存在が放つ炎の煌めき……<br>
+              銀河の間で溢れ出す情熱。<br>
+              閉じた瞳の裏側には、ただオレンジ色の光が満ちている。
+            </div>
+            <div class="stanza">
+              耳の奥には、海の静寂が響き……<br>
+              私の魂は、神秘的な「愛を愛すること」へと至る……<br>
+              詩という名の愛へ……
+            </div>
+            <div class="stanza">
+              神聖で気高い愛。<br>
+              その激しさ、永遠、そして終わることのない喜び。<br>
+              それは歓喜に包まれた女。<br>
+              私は恍惚の中に生きる女。
+            </div>
+          </div>
+        </div>
+
+        <!-- PORTUGUESE -->
+        <div class="portuges language">
+          <h1 class="handwritten" style="color: #FFD700;">O Balanço do Êxtase</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Na aquarela você pode apenas ver a aparência...<br>
+              Uma mulher nua e bela<br>
+              Deslizando pelo ar, com os cabelos ao vento<br>
+              Num balanço original de guirlandas multicoloridas...
+            </div>
+            <div class="stanza">
+              Indo além do visível,<br>
+              descobres o interior invisível.
+            </div>
+            <div class="stanza">
+              Balanço em amor.<br>
+              Deslizo entre as flores coloridas…<br>
+              Ritmicamente respirando,<br>
+              sentindo seu calor e frescor...
+            </div>
+            <div class="stanza">
+              A carícia da brisa<br>
+              na suavidade da minha pele de seda...<br>
+              Mergulhada no gozo do êxtase...<br>
+              No pêndulo rítmico e repetitivo...
+            </div>
+            <div class="stanza">
+              Entre a dança de flores, borboletas<br>
+              e libélulas no coração...<br>
+              Em que beijo o sol no dia radiante.<br>
+              Em que alcanço a lua na noite estrellada.
+            </div>
+            <div class="stanza">
+              Inspiro e suspiro.<br>
+              Entro em outra dimensão.<br>
+              Na vibração do gozo infinito<br>
+              Na eternidade do instante.
+            </div>
+            <div class="stanza">
+              Onde a lentidão acontece na rapidez...<br>
+              Sinto-me uma estrela cadente luminosa...<br>
+              Inspiro e suspiro.<br>
+              Abre-se o meu eros erotizando o momento...
+            </div>
+            <div class="stanza">
+              Esqueço o passado de melancolia.<br>
+              Tudo é fulgor do fogo do meu ser brilhante e divino...<br>
+              Transbordando paixão entre as galáxias.<br>
+              Tudo é luz de cor laranja nos meus olhos fechados.
+            </div>
+            <div class="stanza">
+              Nos ouvidos o silêncio do mar...<br>
+              E minha alma chega ao místico amar o amor...<br>
+              Amor de poesia...
+            </div>
+            <div class="stanza">
+              Amor divino e sagrado.<br>
+              Intensidade, eternidade e gozo sem fin.<br>
+              É a mulher no gozo.<br>
+              Sou a mulher em êxtase.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Music Section Placeholder -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4 text-warning">
+          <i class="fab fa-spotify text-success mr-2"></i>
+          <span class="spanish language">Música Sugerida (Próximamente)</span>
+          <span class="english language">Suggested Music (Coming Soon)</span>
+          <span class="italian language">Musica Suggerita (Prossimamente)</span>
+          <span class="chinese language">建议音乐（即将推出）</span>
+          <span class="arabic language">الموسيقى المقترحة (قريباً)</span>
+          <span class="russian language">Предлагаемая музыка (Скоро)</span>
+          <span class="aleman language">Empfohlene Musik (Demnächst)</span>
+          <span class="frances language">Musique suggérée (Bientôt)</span>
+          <span class="japones language">おすすめの音楽（間もなく）</span>
+          <span class="portuges language">Música Sugerida (Em breve)</span>
+        </h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-9 mb-4">
+            <div id="spotify-player-container">
+              <div class="p-5 rounded"
+                style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,215,0,0.3);">
+                <i class="fab fa-spotify fa-3x mb-3 text-success"></i>
+                <p>El reproductor se activará cuando la música esté disponible.</p>
+              </div>
+              <iframe id="spotify-iframe" style="border-radius:12px; display:none;" src="" width="100%" height="152"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="container mt-5">
+          <h2 class="handwritten text-light align-middle text-center text-danger">
+            <i class="fab fa-youtube text-danger mr-2"></i>
+            <span class="spanish language">Video Explicativo (Próximamente)</span>
+            <span class="english language">Explanatory Video (Soon)</span>
+            <span class="italian language">Video Esplicativo (Presto)</span>
+            <span class="chinese language">讲解视频（即将推出）</span>
+            <span class="arabic language">فيديو توضيحي (قريباً)</span>
+            <span class="russian language">Пояснительное видео (Скоро)</span>
+            <span class="aleman language">Erklärvideo (Demnächst)</span>
+            <span class="frances language">Vidéo explicative (Bientôt)</span>
+            <span class="japones language">解説動画（近日公開）</span>
+            <span class="portuges language">Vídeo Explicativo (Em breve)</span>
+          </h2>
+          <div class="video-container" style="background: rgba(0,0,0,0.3); border: 1px dashed rgba(255,255,255,0.1);">
+            <div class="p-5 text-muted">La esencia del columpio en video llegará pronto.</div>
+          </div>
+        </div>
+
+        <!-- Comic Section Placeholder -->
+        <div class="container mt-5 mb-5 text-center">
+          <h2 class="handwritten text-light mb-4">
+            <span class="spanish language">El Poema en Imágenes</span>
+            <span class="english language">The Poem in Images</span>
+            <span class="italian language">Il Poema in Immagini</span>
+            <span class="chinese language">图片中的诗</span>
+            <span class="arabic language">القصيدة في صور</span>
+            <span class="russian language">Стихотворение в картинках</span>
+            <span class="aleman language">Das Gedicht in Bildern</span>
+            <span class="frances language">Le poème en images</span>
+            <span class="japones language">画像で見る詩</span>
+            <span class="portuges language">O Poema em Imagens</span>
+          </h2>
+          <img id="comic-image" src="comic_escstasy/comic_espanol.png" class="img-fluid rounded shadow-lg"
+            alt="Arte del poema" style="max-height: 800px; border: 1px solid #333; display:block; margin: 0 auto;"
+            onerror="this.style.display='none';">
+        </div>
+
+    </section>
+
   </div>
 
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Swing of Ecstasy</div>
-        <div class="spanish language" style="display: none;">Columpio del éxtasis</div>
-        <div class="italian language" style="display: none;">Altalena dell'estasi</div>
-        <div class="chinese language" style="display: none;">狂喜的秋千</div>
-        <div class="arabic language" style="display: none;">أرجوحة النشوة</div>
-
-      </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">A passionate and poetic journey into the ecstasy of love.</div>
-        <div class="spanish language" style="display: none;">Un viaje apasionado y poético hacia el éxtasis del amor.
-        </div>
-        <div class="italian language" style="display: none;">Un viaggio appassionato e poetico nell'estasi dell'amore.
-        </div>
-        <div class="chinese language" style="display: none;">一次激情而诗意的爱情狂喜之旅。</div>
-        <div class="arabic language" style="display: none;">رحلة شاعرية ومليئة بالعشق إلى نشوة الحب.</div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Swing of Ecstasy</div>
-        <div class="spanish language" style="display: none;">Columpio del éxtasis</div>
-        <div class="italian language" style="display: none;">Altalena dell'estasi</div>
-        <div class="chinese language" style="display: none;">狂喜的秋千</div>
-        <div class="arabic language" style="display: none;">أرجوحة النشوة</div>
-
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Swing of Ecstasy</p>
-          <br>
-          <p>In the watercolor, you can only see the appearance...</p>
-          <p>A beautiful naked woman</p>
-          <p>Sliding through the air, her hair blowing in the wind</p>
-          <p>On an original swing of multicolored garlands...</p>
-          <br>
-          <p>Going beyond the visible,</p>
-          <p>you discover the invisible interior</p>
-          <br>
-          <p>I swing in love.</p>
-          <p>I slide among the colorful flowers...</p>
-          <p>Rhythmically breathing,</p>
-          <p>feeling its warmth and freshness...</p>
-          <br>
-          <p>The caress of the breeze</p>
-          <p>on the softness of my silky skin...</p>
-          <p>Immersed in the joy of ecstasy...</p>
-          <p>In the rhythmic and repetitive pendulum...</p>
-          <p>Among the dance of flowers, butterflies</p>
-          <p>and dragonflies in the heart...</p>
-          <p>Where I kiss the sun on a radiant day.</p>
-          <p>Where I reach the moon on a starry night.</p>
-          <br>
-          <p>I inhale and sigh</p>
-          <p>I enter another dimension</p>
-          <p>In the vibration of infinite joy</p>
-          <p>In the eternity of the moment</p>
-          <p>Where slowness happens in speed...</p>
-          <br>
-          <p>I feel like a luminous shooting star...</p>
-          <p>I inhale and sigh</p>
-          <p>My eros opens, eroticizing the moment...</p>
-          <p>I forget the melancholic past</p>
-          <p>Everything is the blaze of my brilliant and divine being...</p>
-          <p>Overflowing with passion among the galaxies</p>
-          <p>Everything is orange light in my closed eyes</p>
-          <p>In my ears, the silence of the sea...</p>
-          <p>And my soul reaches the mystical loving of love...</p>
-          <p>Love of poetry...</p>
-          <br>
-          <p>Divine and sacred love</p>
-          <p>Intensity, eternity, and endless joy.</p>
-          <br>
-          <p>It's the woman in joy</p>
-          <p>I am the woman in ecstasy</p>
-
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Columpio del éxtasis</p>
-          <br>
-          <p>En la acuarela tú puedes solo ver la apariencia...</p>
-          <p>Una mujer desnuda y bella</p>
-          <p>Deslizándose por el aire, con sus cabellos al viento</p>
-          <p>En un original columpio de guirnaldas multicolores...</p>
-          <br>
-          <p>Yendo más allá de lo visible,</p>
-          <p>descubres el interior invisible</p>
-          <br>
-          <p>Me columpio en amor.</p>
-          <p>Me deslizo entre las flores de colores…</p>
-          <p>Rítmicamente respirando,</p>
-          <p>sintiendo su calidez y frescura...</p>
-          <br>
-          <p>La caricia de la brisa</p>
-          <p>en la suavidad de mi piel de seda...</p>
-          <p>Sumida en el gozo del éxtasis...</p>
-          <p>En el péndulo rítmico y repetitivo...</p>
-          <p>Entre el baile de flores, mariposas</p>
-          <p>y libélulas en corazón...</p>
-          <p>En el que beso el sol en el radiante día.</p>
-          <p>En el que alcanzó la luna en la noche estrellada.</p>
-          <br>
-          <p>Inspiro y suspiro</p>
-          <p>Entro en otra dimensión</p>
-          <p>En la vibración del gozo infinito</p>
-          <p>En la eternidad del instante</p>
-          <p>Donde sucede la lentitud en la rapidez...</p>
-          <br>
-          <p>Me siento una estrella fugaz luminosa...</p>
-          <p>Inspiro y suspiro</p>
-          <p>Se abre mi eros erotizando el momento...</p>
-          <p>Olvido el pasado de melancolía</p>
-          <p>Todo es fulgor del fuego de mi ser brillante y divino...</p>
-          <p>Rebosando pasión entre las galaxias</p>
-          <p>Todo es luz de color naranja en mis ojos cerrados</p>
-          <p>En los oídos el silencio del mar...</p>
-          <p>Y mi alma llega al místico amar el amor...</p>
-          <p>Amor de poesía...</p>
-          <br>
-          <p>Amor divino y sagrado</p>
-          <p>Intensidad, eternidad y gozo sin fin.</p>
-          <br>
-          <p>Es la mujer en gozo</p>
-          <p>Soy la mujer en éxtasis</p>
-
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Altalena dell'estasi</p>
-          <br>
-          <p>Nell'acquerello puoi solo vedere l'apparenza...</p>
-          <p>Una donna nuda e bella</p>
-          <p>Scivolando per l'aria, con i capelli al vento</p>
-          <p>Su un'altalena originale di ghirlande multicolori...</p>
-          <br>
-          <p>Andando oltre il visibile,</p>
-          <p>scopri l'interno invisibile</p>
-          <br>
-          <p>Mi altaleno nell'amore.</p>
-          <p>Scivolo tra i fiori colorati...</p>
-          <p>Respirando ritmicamente,</p>
-          <p>sentendo il suo calore e freschezza...</p>
-          <br>
-          <p>La carezza della brezza</p>
-          <p>sulla morbidezza della mia pelle di seta...</p>
-          <p>Immersa nella gioia dell'estasi...</p>
-          <p>Nel pendolo ritmico e ripetitivo...</p>
-          <p>Tra il ballo dei fiori, farfalle</p>
-          <p>e libellule nel cuore...</p>
-          <p>Dove bacio il sole in un giorno radioso.</p>
-          <p>Dove raggiungo la luna in una notte stellata.</p>
-          <br>
-          <p>Inspiro e sospiro</p>
-          <p>Entro in un'altra dimensione</p>
-          <p>Nella vibrazione della gioia infinita</p>
-          <p>Nell'eternità dell'istante</p>
-          <p>Dove la lentezza accade nella velocità...</p>
-          <br>
-          <p>Mi sento una luminosa stella cadente...</p>
-          <p>Inspiro e sospiro</p>
-          <p>Il mio eros si apre, erotizzando il momento...</p>
-          <p>Dimentico il passato malinconico</p>
-          <p>Tutto è splendore del mio essere brillante e divino...</p>
-          <p>Straripando di passione tra le galassie</p>
-          <p>Tutto è luce arancione nei miei occhi chiusi</p>
-          <p>Nelle mie orecchie, il silenzio del mare...</p>
-          <p>E la mia anima raggiunge l'amore mistico dell'amore...</p>
-          <p>Amore di poesia...</p>
-          <br>
-          <p>Amore divino e sacro</p>
-          <p>Intensità, eternità e gioia infinita.</p>
-          <br>
-          <p>È la donna in gioia</p>
-          <p>Sono la donna in estasi</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>狂喜的秋千</p>
-          <br>
-          <p>在水彩画中，你只能看到外表...</p>
-          <p>一个美丽的裸体女人</p>
-          <p>在空中滑行，头发随风飘扬</p>
-          <p>在一个多彩花环的独特秋千上...</p>
-          <br>
-          <p>超越可见的，</p>
-          <p>你发现了不可见的内在</p>
-          <br>
-          <p>我在爱中荡秋千。</p>
-          <p>我在五彩斑斓的花丛中滑行...</p>
-          <p>有节奏地呼吸，</p>
-          <p>感受它的温暖和清新...</p>
-          <br>
-          <p>微风的抚摸</p>
-          <p>在我丝滑的皮肤上...</p>
-          <p>沉浸在狂喜的喜悦中...</p>
-          <p>在有节奏的重复摆动中...</p>
-          <p>在花朵、蝴蝶和</p>
-          <p>蜻蜓的舞蹈中...</p>
-          <p>我在光辉灿烂的日子里亲吻太阳。</p>
-          <p>我在繁星点点的夜晚到达月亮。</p>
-          <br>
-          <p>我吸气并叹息</p>
-          <p>我进入另一个维度</p>
-          <p>在无限喜悦的振动中</p>
-          <p>在瞬间的永恒中</p>
-          <p>在快速中发生的缓慢中...</p>
-          <br>
-          <p>我觉得自己像一颗明亮的流星...</p>
-          <p>我吸气并叹息</p>
-          <p>我的爱欲打开，激发了时刻...</p>
-          <p>我忘记了忧郁的过去</p>
-          <p>一切都是我辉煌而神圣的存在的火焰...</p>
-          <p>在银河系中充满激情</p>
-          <p>一切都是闭眼中橙色的光</p>
-          <p>在我的耳朵里，海的寂静...</p>
-          <p>而我的灵魂到达了神秘的爱爱...</p>
-          <p>爱情的诗...</p>
-          <br>
-          <p>神圣和崇高的爱情</p>
-          <p>强度、永恒和无尽的喜悦。</p>
-          <br>
-          <p>这是女人的喜悦</p>
-          <p>我是女人的狂喜</p>
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>أرجوحة النشوة</p>
-          <br>
-          <p>في لوحة الألوان المائية، لا يمكنك سوى رؤية المظهر...</p>
-          <p>امرأة جميلة عارية</p>
-          <p>تنزلق في الهواء، وشعرها يتطاير في الريح</p>
-          <p>على أرجوحة فريدة من أكاليل الألوان المتعددة...</p>
-          <br>
-          <p>عند الذهاب إلى ما هو أبعد من المرئي،</p>
-          <p>تكتشف الداخل غير المرئي</p>
-          <br>
-          <p>أتأرجح في الحب.</p>
-          <p>أنزلق بين الزهور الملونة...</p>
-          <p>أتنفس بإيقاع،</p>
-          <p>وأشعر بدفئها ونضارتها...</p>
-          <br>
-          <p>لمسة النسيم</p>
-          <p>على نعومة بشرتي الحريرية...</p>
-          <p>منغمسة في متعة النشوة...</p>
-          <p>في البندول الإيقاعي المتكرر...</p>
-          <p>بين رقصة الزهور، الفراشات</p>
-          <p>واليعاسيب في القلب...</p>
-          <p>حيث أقبل الشمس في يوم مشرق.</p>
-          <p>وحيث أصل إلى القمر في ليلة مليئة بالنجوم.</p>
-          <br>
-          <p>أستنشق وأتنهد</p>
-          <p>أدخل في بُعد آخر</p>
-          <p>في اهتزاز الفرح اللامتناهي</p>
-          <p>في أبدية اللحظة</p>
-          <p>حيث يحدث البطء في السرعة...</p>
-          <br>
-          <p>أشعر وكأنني نجمة ساقطة مضيئة...</p>
-          <p>أستنشق وأتنهد</p>
-          <p>يفتح لي إيروسي، مثيراً اللحظة...</p>
-          <p>أنسى الماضي الكئيب</p>
-          <p>كل شيء هو توهج من ناري الساطعة والإلهية...</p>
-          <p>مغمور بالشغف بين المجرات</p>
-          <p>كل شيء هو ضوء برتقالي في عيني المغلقتين</p>
-          <p>وفي أذني صمت البحر...</p>
-          <p>وتصل روحي إلى حب حب الحب المميز...</p>
-          <p>حب الشعر...</p>
-          <br>
-          <p>حب إلهي ومقدس</p>
-          <p>كثافة، أبدية وفرحة بلا نهاية.</p>
-          <br>
-          <p>هي المرأة في الفرح</p>
-          <p>أنا المرأة في النشوة</p>
-
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

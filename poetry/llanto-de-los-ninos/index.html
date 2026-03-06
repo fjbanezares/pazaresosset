@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>El Llanto de los Niños - Paz Arés Osset</title>
+  <link rel="icon" type="image/png" href="../../favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
+      </a>
+      <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+        <i class="fab fa-spotify mr-2" style="font-size: 1.2rem;"></i>
+        <span id="audio-button-text">Escuchar Música</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;"
+            alt="Paz Arés Osset">
+        </a>
+
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">El Llanto de los Niños</div>
+          <div class="english language">The Cry of the Children</div>
+          <div class="italian language">Il Pianto dei Bambini</div>
+          <div class="chinese language">孩子们的哭声</div>
+          <div class="arabic language">بكاء الأطفال</div>
+          <div class="russian language">Плач Детей</div>
+          <div class="aleman language">Das Weinen der Kinder</div>
+          <div class="frances language">Le Pleur des Enfants</div>
+          <div class="japones language">子供たちの涙</div>
+          <div class="portuges language">O Choro das Crianças</div>
+        </h1>
+
+        <div class="lead">
+          <div class="spanish language">Un poema conmovedor sobre el clamor por la paz en un mundo en conflicto.</div>
+          <div class="english language">A heartfelt poem about the cry for peace in a world of conflict.</div>
+          <div class="italian language">Una poesia toccante sul grido per la pace in un mondo in conflitto.</div>
+          <div class="chinese language">一首关于各冲突世界中和平呼声的感人诗歌。</div>
+          <div class="arabic language">قصيدة مؤثرة عن الصرخة من أجل السلام في عالم مليء بالصراعات.</div>
+          <div class="russian language">Трогательное стихотворение о призыве к миру в мире конфликтов.</div>
+          <div class="aleman language">Ein herzergreifendes Gedicht über den Ruf nach Frieden in einer Welt voller
+            Konflikte.</div>
+          <div class="frances language">Un poème émouvant sur le cri pour la paix dans un monde en conflit.</div>
+          <div class="japones language">紛争の世界での平和への叫びを綴った、心に響く詩。</div>
+          <div class="portuges language">Um poema tocante sobre o clamor pela paz num mundo em conflito.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="multilingual-description py-5" style="background-color: transparent;">
+      <div class="container text-center">
+
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #FFD700;">El Llanto de los Niños</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Se oye el clamor<br>
+              del llanto de los niños<br>
+              con su ritmo repetitivo<br>
+              en tímbricos gritos<br>
+              no war, war, war.
+            </div>
+            <div class="stanza">
+              Nos comunican<br>
+              allí como aquí<br>
+              ¡dejad la guerra<br>
+              cread la paz!
+            </div>
+            <div class="stanza">
+              Árboles genealógicos<br>
+              de guerras entre ancestros<br>
+              nos recuerdan:<br>
+              dejad la vida en paz.
+            </div>
+            <div class="stanza">
+              No, war, war, war.
+            </div>
+            <div class="stanza">
+              El llanto de los niños<br>
+              demanda soluciones<br>
+              a este teatro del mundo<br>
+              engañoso... mentiroso
+            </div>
+            <div class="stanza">
+              ¿quién continúa a favor de este circo?
+            </div>
+            <div class="stanza">
+              Los sabios niños<br>
+              mientras lloran nos recuerdan<br>
+              no war, war, war<br>
+              ¡Qué los ángeles<br>
+              con sus laúdes y violines,<br>
+              guitarras y cascabeles<br>
+              rodeen a los infantes!<br>
+              No la infantería y las armas.
+            </div>
+            <div class="stanza">
+              Todos unidos en alta vibración<br>
+              creemos y realicemos<br>
+              ya, aquí y ahora<br>
+              el espíritu de amor
+            </div>
+            <div class="stanza">
+              ¡Qué canten los niños!<br>
+              ¡Qué dancen y jueguen<br>
+              con risa contagiosa!<br>
+              ¡Qué enseñen<br>
+              a andar en amor<br>
+              y el dulzor de la paz!
+            </div>
+            <div class="stanza">
+              Recuerda<br>
+              tú fuiste una hermosa criatura<br>
+              disfrutabas de la naturaleza pura<br>
+              de las caricias del agua, del sol,<br>
+              del viento, de las flores y animales<br>
+              es tan fácil disfrutar la vida<br>
+              como un niño
+            </div>
+            <div class="stanza">
+              No dejes que haya guerra<br>
+              instaura la paz<br>
+              paz de corazón<br>
+              paz, paz, paz en cada respiración
+            </div>
+            <div class="stanza">
+              Sí, paz, paz, paz
+            </div>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #FFD700;">The Cry of the Children</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              The cry is heard<br>
+              of the children’s weeping<br>
+              with its repetitive rhythm<br>
+              in timbral shouts:<br>
+              no war, war, war.
+            </div>
+            <div class="stanza">
+              They communicate to us,<br>
+              there as here:<br>
+              stop the war,<br>
+              create peace!
+            </div>
+            <div class="stanza">
+              Genealogical trees<br>
+              of wars between ancestors<br>
+              remind us:<br>
+              leave life in peace.
+            </div>
+            <div class="stanza">
+              No, war, war, war.
+            </div>
+            <div class="stanza">
+              The cry of the children<br>
+              demands solutions<br>
+              to this theater of the world,<br>
+              deceitful... lying.
+            </div>
+            <div class="stanza">
+              Who continues to favor this circus?
+            </div>
+            <div class="stanza">
+              The wise children,<br>
+              while they weep, remind us:<br>
+              no war, war, war.<br>
+              May the angels,<br>
+              with their lutes and violins,<br>
+              guitars and bells,<br>
+              surround the infants!<br>
+              Not infantry and weapons.
+            </div>
+            <div class="stanza">
+              All united in high vibration,<br>
+              let us create and realize,<br>
+              now, here and now,<br>
+              the spirit of love.
+            </div>
+            <div class="stanza">
+              Let the children sing!<br>
+              Let them dance and play<br>
+              with contagious laughter!<br>
+              Let them teach<br>
+              how to walk in love<br>
+              and the sweetness of peace!
+            </div>
+            <div class="stanza">
+              Remember,<br>
+              you were a beautiful creature,<br>
+              you enjoyed pure nature,<br>
+              the caresses of water, of the sun,<br>
+              of the wind, of flowers and animals.<br>
+              It is so easy to enjoy life<br>
+              like a child.
+            </div>
+            <div class="stanza">
+              Do not let there be war,<br>
+              establish peace,<br>
+              peace of heart,<br>
+              peace, peace, peace in every breath.
+            </div>
+            <div class="stanza">
+              Yes, peace, peace, peace.
+            </div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #FFD700;">Il Pianto dei Bambini</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Si ode il clamore<br>
+              del pianto dei bambini<br>
+              con il suo ritmo ripetitivo<br>
+              in grida timbriche:<br>
+              no war, war, war.
+            </div>
+            <div class="stanza">
+              Ci comunicano<br>
+              lì come qui:<br>
+              fermate la guerra<br>
+              create la pace!
+            </div>
+            <div class="stanza">
+              Alberi genealogici<br>
+              di guerre tra antenati<br>
+              ci ricordano:<br>
+              lasciate la vita in pace.
+            </div>
+            <div class="stanza">
+              No, war, war, war.
+            </div>
+            <div class="stanza">
+              Il pianto dei bambini<br>
+              chiede soluzioni<br>
+              a questo teatro del mondo<br>
+              ingannevole... bugiardo.
+            </div>
+            <div class="stanza">
+              Chi continua a favorire questo circo?
+            </div>
+            <div class="stanza">
+              I saggi bambini<br>
+              mentre piangono ci ricordano:<br>
+              no war, war, war.<br>
+              Che gli angeli,<br>
+              con i loro liuti e violini,<br>
+              chitarre e campanelle,<br>
+              circondino i piccoli!<br>
+              Non la fanteria e le armi.
+            </div>
+            <div class="stanza">
+              Tutti uniti in alta vibrazione,<br>
+              creiamo e realizziamo<br>
+              già, qui e ora<br>
+              lo spirito dell'amore.
+            </div>
+            <div class="stanza">
+              Che i bambini cantino!<br>
+              Che danzino e giochino<br>
+              con risate contagiose!<br>
+              Che insegnino<br>
+              a camminare nell'amore<br>
+              e la dolcezza della pace!
+            </div>
+            <div class="stanza">
+              Ricorda,<br>
+              eri una creatura bellissima,<br>
+              ti godevi la natura pura,<br>
+              le carezze dell'acqua, del sole,<br>
+              del vento, dei fiori e degli animali.<br>
+              È così facile godersi la vita<br>
+              come un bambino.
+            </div>
+            <div class="stanza">
+              Non lasciare che ci sia la guerra,<br>
+              instaura la pace,<br>
+              pace nel cuore,<br>
+              pace, pace, pace in ogni respiro.
+            </div>
+            <div class="stanza">
+              Sì, pace, pace, pace.
+            </div>
+          </div>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="frances language">
+          <h1 class="handwritten" style="color: #FFD700;">Le Pleur des Enfants</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              On entend la clameur<br>
+              du pleur des enfants<br>
+              avec son rythme répétitif<br>
+              dans des cris timbraux :<br>
+              no war, war, war.
+            </div>
+            <div class="stanza">
+              Ils nous communiquent,<br>
+              là-bas comme ici :<br>
+              arrêtez la guerre,<br>
+              créez la paix !
+            </div>
+            <div class="stanza">
+              Arbres généalogiques<br>
+              de guerres entre ancêtres<br>
+              nous rappellent :<br>
+              laissez la vie en paix.
+            </div>
+            <div class="stanza">
+              No, war, war, war.
+            </div>
+            <div class="stanza">
+              Le pleur des enfants<br>
+              exige des solutions<br>
+              à ce théâtre du monde,<br>
+              trompeur... menteur.
+            </div>
+            <div class="stanza">
+              Qui continue à favoriser ce cirque ?
+            </div>
+            <div class="stanza">
+              Les enfants sages,<br>
+              pendant qu'ils pleurent, nous rappellent :<br>
+              no war, war, war.<br>
+              Que les anges,<br>
+              avec leurs luths et violons,<br>
+              guitares et grelots,<br>
+              entourent les nourrissons !<br>
+              Pas l'infanterie et les armes.
+            </div>
+            <div class="stanza">
+              Tous unis en haute vibration,<br>
+              créons et réalisons,<br>
+              déjà, ici et maintenant,<br>
+              l'esprit d'amour.
+            </div>
+            <div class="stanza">
+              Que les enfants chantent !<br>
+              Que les enfants dansent et jouent<br>
+              avec un rire contagieux !<br>
+              Qu'ils enseignent<br>
+              à marcher dans l'amour<br>
+              et la douceur de la paix !
+            </div>
+            <div class="stanza">
+              Souviens-toi,<br>
+              tu étais une créature magnifique,<br>
+              tu profitais de la nature pure,<br>
+              des caresses de l'eau, du soleil,<br>
+              du vent, des fleurs et des animaux.<br>
+              C'est si facile de profiter de la vie<br>
+              comme un enfant.
+            </div>
+            <div class="stanza">
+              Ne laisse pas la guerre s'installer,<br>
+              instaure la paix,<br>
+              la paix du cœur,<br>
+              la paix, la paix, la paix à chaque respiration.
+            </div>
+            <div class="stanza">
+              Oui, la paix, la paix, la paix.
+            </div>
+          </div>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="aleman language">
+          <h1 class="handwritten" style="color: #FFD700;">Das Weinen der Kinder</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Man hört das Geschrei,<br>
+              das Weinen der Kinder,<br>
+              mit seinem repetitiven Rhythmus,<br>
+              in klangvollen Schreien:<br>
+              no war, war, war.
+            </div>
+            <div class="stanza">
+              Sie teilen uns mit,<br>
+              dort wie hier:<br>
+              Hört auf mit dem Krieg,<br>
+              schafft Frieden!
+            </div>
+            <div class="stanza">
+              Stammbäume von Kriegen<br>
+              zwischen Ahnen erinnern uns daran:<br>
+              Lasst das Leben in Frieden.
+            </div>
+            <div class="stanza">
+              No, war, war, war.
+            </div>
+            <div class="stanza">
+              Das Weinen der Kinder<br>
+              fordert Lösungen<br>
+              für dieses Welttheater,<br>
+              täuschend... lügnerisch.
+            </div>
+            <div class="stanza">
+              Wer unterstützt diesen Zirkus weiterhin?
+            </div>
+            <div class="stanza">
+              Die weisen Kinder,<br>
+              während sie weinen, erinnern sie uns:<br>
+              no war, war, war.<br>
+              Mögen die Engel,<br>
+              mit ihren Lauten und Violinen,<br>
+              Gitarren und Glöckchen,<br>
+              die Kleinkinder umgeben!<br>
+              Nicht die Infanterie und die Waffen.
+            </div>
+            <div class="stanza">
+              Alle vereint in hoher Schwingung,<br>
+              lasst uns erschaffen und verwirklichen,<br>
+              jetzt, hier und jetzt,<br>
+              den Geist der Liebe.
+            </div>
+            <div class="stanza">
+              Lasst die Kinder singen!<br>
+              Lasst sie tanzen und spielen<br>
+              mit ansteckendem Lachen!<br>
+              Lasst sie uns lehren,<br>
+              in Liebe zu wandeln<br>
+              und die Süße des Friedens zu spüren!
+            </div>
+            <div class="stanza">
+              Erinnere dich,<br>
+              du warst ein wunderschönes Geschöpf,<br>
+              du hast die reine Natur genossen,<br>
+              das Liebkoisen des Wassers, der Sonne,<br>
+              des Windes, der Blumen und der Tiere.<br>
+              Es ist so einfach, das Leben zu genießen,<br>
+              wie ein Kind.
+            </div>
+            <div class="stanza">
+              Lass keinen Krieg zu,<br>
+              stifte Frieden,<br>
+              Frieden im Herzen,<br>
+              Frieden, Frieden, Frieden bei jedem Atemzug.
+            </div>
+            <div class="stanza">
+              Ja, Frieden, Frieden, Frieden.
+            </div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #FFD700;">Плач детей</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Слышен крик<br>
+              плача детей<br>
+              с его повторяющимся ритмом<br>
+              в звонких воплях:<br>
+              no war, war, war.
+            </div>
+            <div class="stanza">
+              Они сообщают нам,<br>
+              там, как и здесь:<br>
+              Остановите войну,<br>
+              созидайте мир!
+            </div>
+            <div class="stanza">
+              Генеалогические древа<br>
+              войн между предками<br>
+              напоминают нам:<br>
+              оставьте жизнь в покое.
+            </div>
+            <div class="stanza">
+              No, war, war, war.
+            </div>
+            <div class="stanza">
+              Плач детей<br>
+              требует решений<br>
+              этому театру мира,<br>
+              обманчивому... лживому.
+            </div>
+            <div class="stanza">
+              Кто продолжает поддерживать этот цирк?
+            </div>
+            <div class="stanza">
+              Мудрые дети,<br>
+              плача, напоминают нам:<br>
+              no war, war, war.<br>
+              Пусть ангелы<br>
+              со своими лютнями и скрипками,<br>
+              гитарами и колокольчиками<br>
+              окружают младенцев!<br>
+              Не пехота и оружие.
+            </div>
+            <div class="stanza">
+              Все вместе в высоких вибрациях<br>
+              создадим и воплотим уже,<br>
+              здесь и сейчас<br>
+              дух любви.
+            </div>
+            <div class="stanza">
+              Пусть дети поют!<br>
+              Пусть танцуют и играют<br>
+              с заразительным смехом!<br>
+              Пусть научат<br>
+              ходить в любви<br>
+              и сладости мира!
+            </div>
+            <div class="stanza">
+              Помни,<br>
+              ты был прекрасным созданием,<br>
+              ты наслаждался чистой природой,<br>
+              ласками воды, солнца,<br>
+              ветра, цветов и животных.<br>
+              Так легко наслаждаться жизнью,<br>
+              как ребенок.
+            </div>
+            <div class="stanza">
+              Не допускай войны,<br>
+              устанавливай мир,<br>
+              мир в сердце,<br>
+              мир, мир, мир в каждом вздохе.
+            </div>
+            <div class="stanza">
+              Да, мир, мир, мир.
+            </div>
+          </div>
+        </div>
+
+        <!-- PORTUGUESE -->
+        <div class="portuges language">
+          <h1 class="handwritten" style="color: #FFD700;">O Choro das Crianças</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              Ouve-se o clamor<br>
+              do choro das crianças<br>
+              com seu ritmo repetitivo<br>
+              em gritos tímbricos:<br>
+              no war, war, war.
+            </div>
+            <div class="stanza">
+              Comunicam-nos,<br>
+              lá como aqui:<br>
+              deixem a guerra,<br>
+              criem a paz!
+            </div>
+            <div class="stanza">
+              Árvores genealógicas<br>
+              de guerras entre ancestrais<br>
+              nos lembram:<br>
+              deixem a vida em paz.
+            </div>
+            <div class="stanza">
+              No, war, war, war.
+            </div>
+            <div class="stanza">
+              O choro das crianças<br>
+              exige soluções<br>
+              para este teatro do mundo<br>
+              enganoso... mentiroso.
+            </div>
+            <div class="stanza">
+              Quem continua a favor deste circo?
+            </div>
+            <div class="stanza">
+              As sábias crianças,<br>
+              enquanto choram nos lembram:<br>
+              no war, war, war.<br>
+              Que os anjos,<br>
+              com seus alaúdes e violinos,<br>
+              guitarras e guizos,<br>
+              rodeiem os infantes!<br>
+              Não a infantaria e as armas.
+            </div>
+            <div class="stanza">
+              Todos unidos em alta vibração<br>
+              criemos e realizemos<br>
+              já, aqui e agora<br>
+              o espírito de amor.
+            </div>
+            <div class="stanza">
+              Que as crianças cantem!<br>
+              Que dancem e brinquem<br>
+              com riso contagiante!<br>
+              Que ensinem<br>
+              a caminhar no amor<br>
+              e na doçura da paz!
+            </div>
+            <div class="stanza">
+              Lembra-te,<br>
+              tu foste uma criatura linda,<br>
+              desfrutavas da natureza pura,<br>
+              das carícias da água, do sol,<br>
+              do vento, das flores e dos animais.<br>
+              É tão fácil desfrutar a vida<br>
+              como uma criança.
+            </div>
+            <div class="stanza">
+              Não deixes que haja guerra,<br>
+              instaura a paz,<br>
+              paz de coração,<br>
+              paz, paz, paz em cada respiração.
+            </div>
+            <div class="stanza">
+              Sim, paz, paz, paz.
+            </div>
+          </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="chinese language">
+          <h1 class="handwritten" style="color: #FFD700;">孩子们的哭声</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              听到了呼声<br>
+              孩子们的哭泣<br>
+              伴随着重复的节奏<br>
+              在音调的喊声中：<br>
+              不要战争，战争，战争。
+            </div>
+            <div class="stanza">
+              他们告诉我们，<br>
+              那里和这里：<br>
+              停止战争，<br>
+              创造和平！
+            </div>
+            <div class="stanza">
+              家谱中<br>
+              祖先间的战争<br>
+              提醒我们：<br>
+              让生命归于和平。
+            </div>
+            <div class="stanza">
+              不，不要战争，战争，战争。
+            </div>
+            <div class="stanza">
+              孩子们的哭声<br>
+              在寻求解决方案<br>
+              对这个世界的剧场，<br>
+              欺骗的... 撒谎的。
+            </div>
+            <div class="stanza">
+              谁在继续支持这个马戏团？
+            </div>
+            <div class="stanza">
+              智慧的孩子们<br>
+              在哭泣时提醒我们：<br>
+              不要战争，战争，战争。<br>
+              让天使们，<br>
+              带着鲁特琴和小提琴，<br>
+              吉和铃铛，<br>
+              包围这些婴孩！<br>
+              而不是步兵和武器。
+            </div>
+            <div class="stanza">
+              让我们在高频振动中团结一致<br>
+              共同创造并实现<br>
+              现在，就在这里，在此刻<br>
+              爱的精神。
+            </div>
+            <div class="stanza">
+              让孩子们歌唱！<br>
+              让他们跳舞嬉戏，<br>
+              带着传染性的笑声！<br>
+              让他们教导<br>
+              如何行走在爱中<br>
+              以及和平的甜蜜！
+            </div>
+            <div class="stanza">
+              记住，<br>
+              你曾是个美丽的生命，<br>
+              享受着纯净的自然，<br>
+              享受着水、阳光、<br>
+              微风、花朵和动物的爱抚。<br>
+              享受生活是如此简单，<br>
+              就像个孩子。
+            </div>
+            <div class="stanza">
+              不要让战争存在，<br>
+              建立和平，<br>
+              心中的和平，<br>
+              每一次呼吸中都是和平，和平，和平。
+            </div>
+            <div class="stanza">
+              是的，和平，和平，和平。
+            </div>
+          </div>
+        </div>
+
+        <!-- JAPANESE -->
+        <div class="japones language">
+          <h1 class="handwritten" style="color: #FFD700;">子供たちの涙</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              叫びが聞こえる<br>
+              子供たちの泣き声<br>
+              繰り返されるリズムで<br>
+              音色豊かな叫びとともに：<br>
+              戦争はいらない、いらない、いらない。
+            </div>
+            <div class="stanza">
+              彼らは私たちに伝えている<br>
+              あそこでもここでも：<br>
+              戦争をやめて<br>
+              平和を創って！
+            </div>
+            <div class="stanza">
+              先祖たちの<br>
+              戦争の家系図が<br>
+              私たちに思い出させる：<br>
+              人生を安らかにしておいて。
+            </div>
+            <div class="stanza">
+              いや、戦争はいらない、いらない、いらない。
+            </div>
+            <div class="stanza">
+              子供たちの涙は<br>
+              解決を求めている<br>
+              この世界という演劇に<br>
+              欺瞞に満ちた... 嘘つきな。
+            </div>
+            <div class="stanza">
+              誰がこのサーカスを支持し続けるのか？
+            </div>
+            <div class="stanza">
+              賢い子供たちは<br>
+              泣きながら私たちに思い出させる：<br>
+              戦争はいらない、いらない、いらない。<br>
+              天使たちが、<br>
+              リュートやバイオリン、<br>
+              ギターや鈴を手に、<br>
+              子供たちを囲みますように！<br>
+              歩兵や武器ではなく。
+            </div>
+            <div class="stanza">
+              高い波動の中で皆が一つになり<br>
+              今、ここで、この瞬間に<br>
+              創り出し、実現しよう<br>
+              愛の精神を。
+            </div>
+            <div class="stanza">
+              子供たちに歌わせよう！<br>
+              子供たちに踊り、遊ばせよう<br>
+              その伝染する笑い声とともに！<br>
+              彼らに教えてもらおう<br>
+              愛の中を歩む方法と<br>
+              平和の甘美さを！
+            </div>
+            <div class="stanza">
+              思い出して、<br>
+              あなたはかつて美しい生き物だった<br>
+              清らかな自然を楽しんでいた<br>
+              水や太陽、<br>
+              風や花、動物たちの愛撫を。<br>
+              人生を楽しむのは、<br>
+              子供のようにこんなにも簡単なこと。
+            </div>
+            <div class="stanza">
+              戦争をさせてはいけない、<br>
+              平和を築こう、<br>
+              心の平和を、<br>
+              呼吸の一つひとつに、平和、平和、平和を。
+            </div>
+            <div class="stanza">
+              そう、平和、平和、平和を。
+            </div>
+          </div>
+        </div>
+
+        <!-- ARABIC -->
+        <div class="arabic language">
+          <h1 class="handwritten" style="color: #FFD700;">بكاء الأطفال</h1>
+          <div class="poem-text">
+            <div class="stanza">
+              يسمع النداء<br>
+              بكاء الأطفال<br>
+              مع إيقاعهم المتكرر<br>
+              في صرخات طنينية :<br>
+              لا للحرب، لا للحرب.
+            </div>
+            <div class="stanza">
+              يتواصلون معنا<br>
+              هناك كما هنا :<br>
+              أوقفوا الحرب<br>
+              اصنعوا السلام !
+            </div>
+            <div class="stanza">
+              شجرات العائلة<br>
+              من الحروب بين الأجداد<br>
+              تذكرنا :<br>
+              اتركوا الحياة بسلام.
+            </div>
+            <div class="stanza">
+              لا، لا للحرب، لا للحرب.
+            </div>
+            <div class="stanza">
+              بكاء الأطفال<br>
+              يطالب بحلول<br>
+              لهذا المسرح العالمي<br>
+              المخادع... الكاذب.
+            </div>
+            <div class="stanza">
+              من يستمر في دعم هذا السيرك ؟
+            </div>
+            <div class="stanza">
+              الأطفال الحكماء<br>
+              بينما يبكون يذكروننا :<br>
+              لا للحرب، لا للحرب.<br>
+              لتكن الملائكة،<br>
+              بعيدانهم وكمانهم،<br>
+              جيتاراتهم وأجراسهم،<br>
+              تحيط بالأطفال !<br>
+              ليس المشاة والأسلحة.
+            </div>
+            <div class="stanza">
+              جميعنا متحدون في اهتزاز عالي<br>
+              لنخلق ونحقق<br>
+              الآن، هنا والآن<br>
+              روح الحب.
+            </div>
+            <div class="stanza">
+              دع الأطفال يغنون !<br>
+              دعهم يرقصون ويلعبون<br>
+              بضحكة معدية !<br>
+              دعهم يعلمون<br>
+              كيف يمشون في الحب<br>
+              وحلاوة السلام !
+            </div>
+            <div class="stanza">
+              تذكر،<br>
+              كنت مخلوقًا جميلًا،<br>
+              تستمتع بالطبيعة البكر،<br>
+              بمداعبة الماء، الشمس،<br>
+              الرياح، الزهور والحيوانات.<br>
+              من السهل الاستمتاع بالحياة<br>
+              مثل طفل.
+            </div>
+            <div class="stanza">
+              لا تدع هناك حرب،<br>
+              أنشئ السلام،<br>
+              سلام القلب،<br>
+              سلام، سلام، سلام في كل نفس.
+            </div>
+            <div class="stanza">
+              نعم، سلام، سلام، سلام.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Music Section -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4 text-warning">
+          <i class="fab fa-spotify text-success mr-2"></i>
+          <span class="spanish language">Música Sugerida (Próximamente)</span>
+          <span class="english language">Suggested Music (Coming Soon)</span>
+          <span class="italian language">Musica Suggerita (Prossimamente)</span>
+          <span class="chinese language">建议音乐（即将推出）</span>
+          <span class="arabic language">الموسيقى المقترحة (قريباً)</span>
+          <span class="russian language">Предлагаемая музыка (Скоро)</span>
+          <span class="aleman language">Empfohlene Musik (Demnächst)</span>
+          <span class="frances language">Musique suggérée (Bientôt)</span>
+          <span class="japones language">おすすめの音楽（間もなく）</span>
+          <span class="portuges language">Música Sugerida (Em breve)</span>
+        </h2>
+        <p>El reproductor se activará cuando la música esté disponible.</p>
+      </div>
+
+      <!-- Video Section -->
+      <div class="container mt-5">
+        <h2 class="handwritten text-light align-middle text-center text-danger">
+          <i class="fab fa-youtube text-danger mr-2"></i>
+          <span class="spanish language">Video Explicativo (Próximamente)</span>
+          <span class="english language">Explanatory Video (Soon)</span>
+        </h2>
+        <div class="video-container" style="background: rgba(0,0,0,0.3); border: 1px dashed rgba(255,255,255,0.1);">
+          <div class="p-5 text-muted">El video llegará pronto.</div>
+        </div>
+      </div>
+
+      <!-- Comic Section -->
+      <div class="container mt-5 mb-5 text-center">
+        <h2 class="handwritten text-light mb-4 text-info">
+          <i class="fas fa-palette mr-2"></i>
+          <span class="spanish language">El Poema en Imágenes</span>
+          <span class="english language">The Poem in Images</span>
+          <span class="italian language">Il Poema in Immagini</span>
+          <span class="chinese language">图片中的诗</span>
+          <span class="arabic language">القصيدة في صور</span>
+          <span class="russian language">Стихотворение в картинках</span>
+          <span class="aleman language">Das Gedicht in Bildern</span>
+          <span class="frances language">Le poème en images</span>
+          <span class="japones language">画像で見る詩</span>
+          <span class="portuges language">O Poema em Imagens</span>
+        </h2>
+        <div id="comic-container" class="comic-strip-wrapper">
+          <img id="comic-image" src="comic.png" class="img-fluid rounded shadow-lg" alt="Arte del poema"
+            style="max-height: 1200px; border: 2px solid rgba(255,215,0,0.5); display:block; margin: 0 auto;">
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="base.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

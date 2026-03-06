@@ -1,76 +1,153 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-//document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
-    document.querySelectorAll('.language').forEach(function (element) {
-      element.style.display = 'none';
-    });
+  // --- Initialize Spanish as default ---
+  document.querySelectorAll('.language').forEach(function (element) {
+    element.style.display = 'none';
+  });
+  document.querySelectorAll('.spanish').forEach(function (element) {
+    element.style.display = 'block';
+  });
+  const langSelect = document.getElementById('language-select');
+  if (langSelect) langSelect.value = 'spanish';
 
-    // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
+  // --- Language Selector ---
+  if (langSelect) {
+    langSelect.addEventListener('change', function () {
+      const selectedLanguage = this.value;
+      document.querySelectorAll('.language').forEach(function (element) {
+        element.style.display = 'none';
+      });
+      document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
+        element.style.display = 'block';
+      });
+
+      const imageMap = {
+        'spanish': 'comic_escstasy/comic_espanol.png',
+        'english': 'comic_escstasy/comic_ingles.png',
+        'italian': 'comic_escstasy/comic_italiano.png',
+        'chinese': 'comic_escstasy/comic_chino.png',
+        'arabic': 'comic_escstasy/comic_arabe.png',
+        'russian': 'comic_escstasy/comic_ruso.png',
+        'aleman': 'comic_escstasy/comic_aleman.png',
+        'frances': 'comic_escstasy/comic_frances.png',
+        'japones': 'comic_escstasy/comic_japones.png',
+        'portuges': 'comic_escstasy/comic_portuges.png'
+      };
+
+      const audioButtonTexts = {
+        'spanish': 'Escuchar Música',
+        'english': 'Listen to Music',
+        'italian': 'Ascolta la Musica',
+        'chinese': '听音乐',
+        'arabic': 'استمع إلى الموسيقى',
+        'russian': 'Слушать музыку',
+        'aleman': 'Musik hören',
+        'frances': 'Écouter la musique',
+        'japones': '音楽を聴く',
+        'portuges': 'Ouvir música'
+      };
+
+      const comicImage = document.getElementById('comic-image');
+      if (comicImage && imageMap[selectedLanguage]) {
+        comicImage.src = imageMap[selectedLanguage];
+        comicImage.style.display = 'block';
+      }
+      const audioButtonText = document.getElementById('audio-button-text');
+      if (audioButtonText) {
+        audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
+      }
     });
+  }
+
+  // --- 1. Background Transition on Scroll (Sunset to Cosmic) ---
+  window.addEventListener('scroll', function () {
+    const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+
+    // Darkened overlay transition
+    const r = Math.floor(scrollPercent * 20);
+    const g = Math.floor(scrollPercent * 10);
+    const b = Math.floor(scrollPercent * 40);
+
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   });
 
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
-  var zoomImages = document.querySelectorAll('.zoom-image');
+  // --- 2. Scroll Reveal Animation for Stanzas ---
+  const observerOptions = {
+    threshold: 0.1
+  };
 
-  // Recorre todas las imágenes
-  zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
-    var isZoomed = false;
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      }
+    });
+  }, observerOptions);
 
-    // Función para realizar el zoom en la imagen
-    function zoomImage() {
-      if (isZoomed) {
-        image.style.transform = 'scale(1)';
-        isZoomed = false;
-      } else {
-        image.style.transform = 'scale(1.5)';
-        isZoomed = true;
+  document.querySelectorAll('.stanza').forEach(stanza => {
+    revealObserver.observe(stanza);
+  });
+
+  // --- 3. Canvas Effects (Golden Cosmic Dust) ---
+  const canvas = document.getElementById('effects-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width, height;
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.alpha = Math.random() * 0.5 + 0.1;
+        this.color = Math.random() > 0.5 ? '255, 215, 0' : '255, 165, 0'; // Gold or Orange
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.alpha -= 0.002;
+
+        if (this.alpha <= 0 || this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
       }
     }
 
-    // Asigna el evento touchstart (toque) a la imagen
-    image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
+    const particles = [];
+    for (let i = 0; i < 150; i++) {
+      particles.push(new Particle());
+    }
 
-      // Establece un temporizador para reducir el zoom después de 3 segundos
-      setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
-      }, 3000);
-    });
-  });
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
 
-  ////
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
 
-
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });
