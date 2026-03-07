@@ -12,18 +12,64 @@ document.addEventListener('DOMContentLoaded', function () {
     iso.layout();
   });
 
-  // Filter functions
-  var filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var filterValue = btn.getAttribute('data-filter');
-      iso.arrange({ filter: filterValue });
+  // --- Filter Dropdown Logic ---
+  const filterBtn = document.getElementById('filter-dropdown-btn');
+  const filterMenu = document.getElementById('filter-menu');
+  const filterOptions = document.querySelectorAll('.filter-option');
+  let activeFilters = [];
 
-      // Update button state
-      filterBtns.forEach(b => b.classList.remove('is-checked'));
-      btn.classList.add('is-checked');
+  // Toggle dropdown
+  if (filterBtn) {
+    filterBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      filterMenu.classList.toggle('show');
+    });
+  }
+
+  // Close when clicking outside
+  document.addEventListener('click', function () {
+    if (filterMenu) filterMenu.classList.remove('show');
+  });
+
+  // Filtering Logic
+  filterOptions.forEach(function (opt) {
+    opt.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const val = opt.getAttribute('data-filter');
+
+      if (val === '*') {
+        activeFilters = []; // Select All
+        filterOptions.forEach(o => o.classList.remove('active'));
+        opt.classList.add('active');
+        iso.arrange({ filter: '*' });
+      } else {
+        const index = activeFilters.indexOf(val);
+        if (index > -1) {
+          activeFilters.splice(index, 1);
+          opt.classList.remove('active');
+        } else {
+          activeFilters.push(val);
+          opt.classList.add('active');
+        }
+
+        // Uncheck "All"
+        document.querySelector('.filter-option[data-filter="*"]').classList.remove('active');
+
+        // If nothing selected, go back to '*'
+        if (activeFilters.length === 0) {
+          iso.arrange({ filter: '*' });
+          document.querySelector('.filter-option[data-filter="*"]').classList.add('active');
+        } else {
+          iso.arrange({ filter: activeFilters.join('') });
+        }
+      }
     });
   });
+
+  // Init "Todo" as active
+  const allOption = document.querySelector('.filter-option[data-filter="*"]');
+  if (allOption) allOption.classList.add('active');
+
 
   // Language management
   const languageSelect = document.getElementById('languageSelect');

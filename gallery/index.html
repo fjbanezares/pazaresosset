@@ -43,50 +43,42 @@
       data-pt="O Universo de Paz">Universo de Paz</span>
   </a>
 
-  <header class="jumbotron text-center">
-    <div class="container">
-      <a class="brand" href="../index.html"><img src="../logopazares.png" width="100" alt="Logo"></a>
-      <h1 class="jumbotron-heading mt-4" data-es="Galería Artística" data-en="Artistic Gallery"
-        data-it="Galleria Artistica" data-ru="Художественная галерея" data-zh="艺术画廊" data-ar="معرض فني"
-        data-de="Kunstgalerie" data-fr="Galerie Artistique" data-ja="芸術ギャラリー" data-pt="Galeria Artística">Galería
-        Artística</h1>
-      <p class="lead text-muted" data-es="Explora las dimensiones del ser a través del color y la forma."
-        data-en="Explore the dimensions of being through color and form."
-        data-it="Esplora le dimensioni dell'essere attraverso il colore e la forma."
-        data-ru="Исследуйте измерения бытия через цвет и форму." data-zh="通过色彩和形态探索生命的维度。"
-        data-ar="استكشف أبعاد الكينونة من خلال اللون والشكل."
-        data-de="Entdecke die Dimensionen des Seins durch Farbe und Form."
-        data-fr="Explorez les dimensions de l'être à travers la couleur et la forme." data-ja="色と形を通して存在の次元を探求する。"
-        data-pt="Explore as dimensões do ser através da cor e da forma.">Explora las dimensiones del ser a través del
-        color y la forma.</p>
+  <header class="compact-header px-1">
+    <div class="header-main-row px-2">
+      <div class="header-left">
+        <h1 class="gallery-title" data-es="Galería" data-en="Gallery" data-it="Galleria" data-ru="Галерея"
+          data-zh="画廊" data-ar="معرض" data-de="Galerie" data-fr="Galerie" data-ja="ギャラリー" data-pt="Galeria">Galería</h1>
+        
+        <div class="filter-container">
+          <div id="filter-wrapper" style="position: relative;">
+            <button id="filter-dropdown-btn" class="filter-dropdown-btn">
+              <i class="fas fa-filter"></i>
+              <span data-es="Filtrar" data-en="Filter" data-it="Filtra" data-ru="Фильтр" data-zh="筛选" data-ar="تصفية"
+                data-de="Filtern" data-fr="Filtrer" data-ja="フィルター" data-pt="Filtrar">Filtrar</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div id="filter-menu" class="filter-menu">
+              <div class="filter-option" data-filter="*"><span data-es="Todo" data-en="Show All" data-it="Tutti" data-ru="Все" data-zh="全部" data-ar="الكل" data-de="Alle" data-fr="Tout" data-ja="すべて" data-pt="Tudo">Todo</span></div>
+              <div class="filter-option" data-filter=".spiritual"><span data-es="Espiritual" data-en="Spiritual" data-it="Spirituale" data-ru="Духовный" data-zh="精神" data-ar="روحي" data-de="Spirituell" data-fr="Spirituel" data-ja="精神的" data-pt="Espiritual">Espiritual</span></div>
+              <div class="filter-option" data-filter=".landscape"><span data-es="Paisaje" data-en="Landscape" data-it="Paesaggio" data-ru="Пейзаж" data-zh="风景" data-ar="منظر طبيعي" data-de="Landschaft" data-fr="Paysage" data-ja="風景" data-pt="Paizagem">Paisaje</span></div>
+              <div class="filter-option" data-filter=".oil"><span data-es="Óleo" data-en="Oil Painting" data-it="Olio" data-ru="Масло" data-zh="油画" data-ar="زيتي" data-de="Ölgemälde" data-fr="Peinture à l'huile" data-ja="油絵" data-pt="Óleo">Óleo</span></div>
+              <div class="filter-option" data-filter=".watercolor"><span data-es="Acuarela" data-en="Watercolor" data-it="Acquerello" data-ru="Акварель" data-zh="水彩" data-ar="ألوان مائية" data-de="Aquarell" data-fr="Aquarelle" data-ja="水彩画" data-pt="Aquarela">Acuarela</span></div>
+              <div class="filter-option" data-filter=".engraving"><span data-es="Grabado" data-en="Engraving" data-it="Incisione" data-ru="Гравюра" data-zh="雕刻" data-ar="نقش" data-de="Gravur" data-fr="Gravure" data-ja="版画" data-pt="Gravura">Grabado</span></div>
+              <div class="filter-option" data-filter=".acrylic"><span data-es="Acrílico" data-en="Acrylic" data-it="Acrilico" data-ru="Акрил" data-zh="丙烯" data-ar="أكريليك" data-de="Acryl" data-fr="Acrylique" data-ja="アクリル画" data-pt="Acrílico">Acrílico</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-right">
+        <a class="brand" href="../index.html"><img src="../logopazares.png" alt="Logo" style="width: 50px;"></a>
+      </div>
     </div>
   </header>
 
-  <main class="container-fluid px-5">
-    <!-- Filter Group -->
-    <div class="filter-button-group">
-      <button class="filter-btn is-checked" data-filter="*" data-es="Todo" data-en="Show All" data-it="Tutti"
-        data-ru="Все" data-zh="全部" data-ar="الكل" data-de="Alle" data-fr="Tout" data-ja="すべて"
-        data-pt="Tudo">Todo</button>
-      <button class="filter-btn" data-filter=".spiritual" data-es="Espiritual" data-en="Spiritual" data-it="Spirituale"
-        data-ru="Духовный" data-zh="精神" data-ar="روحي" data-de="Spirituell" data-fr="Spirituel" data-ja="精神的"
-        data-pt="Espiritual">Espiritual</button>
-      <button class="filter-btn" data-filter=".landscape" data-es="Paisaje" data-en="Landscape" data-it="Paesaggio"
-        data-ru="Пейзаж" data-zh="风景" data-ar="منظر طبيعي" data-de="Landschaft" data-fr="Paysage" data-ja="風景"
-        data-pt="Paizagem">Paisaje</button>
-      <button class="filter-btn" data-filter=".oil" data-es="Óleo" data-en="Oil Painting" data-it="Olio" data-ru="Масло"
-        data-zh="油画" data-ar="زيتي" data-de="Ölgemälde" data-fr="Peinture à l'huile" data-ja="油絵"
-        data-pt="Óleo">Óleo</button>
-      <button class="filter-btn" data-filter=".watercolor" data-es="Acuarela" data-en="Watercolor" data-it="Acquerello"
-        data-ru="Акварель" data-zh="水彩" data-ar="ألوان مائية" data-de="Aquarell" data-fr="Aquarelle" data-ja="水彩画"
-        data-pt="Aquarela">Acuarela</button>
-      <button class="filter-btn" data-filter=".engraving" data-es="Grabado" data-en="Engraving" data-it="Incisione"
-        data-ru="Гравюра" data-zh="雕刻" data-ar="نقش" data-de="Gravur" data-fr="Gravure" data-ja="版画"
-        data-pt="Gravura">Grabado</button>
-      <button class="filter-btn" data-filter=".acrylic" data-es="Acrílico" data-en="Acrylic" data-it="Acrilico"
-        data-ru="Акрил" data-zh="丙烯" data-ar="أكريليك" data-de="Acryl" data-fr="Acrylique" data-ja="アクリル画"
-        data-pt="Acrílico">Acrílico</button>
-    </div>
+  <main class="container-fluid">
+
+
+
 
     <!-- Gallery Grid -->
     <div class="gallery-grid">
