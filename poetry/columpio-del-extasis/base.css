@@ -96,6 +96,64 @@ body {
   text-align: right;
 }
 
+.painting-teaser-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #FFD700 !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.2) !important;
+}
+
+.painting-card-link {
+  text-decoration: none !important;
+  display: block;
+}
+
+.painting-teaser-card p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.album-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.album-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  border-color: #1DB954;
+  /* Spotify Green */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(29, 185, 84, 0.2);
+}
+
+.album-cover {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.album-info {
+  padding: 20px;
+}
+
+.album-title {
+  font-family: 'Philosopher', sans-serif;
+  color: #FFD700;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.album-artist {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 #language-select {
   background: rgba(0, 0, 0, 0.5);
   color: white;

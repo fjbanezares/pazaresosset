@@ -1,134 +1,155 @@
-.gallery {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -webkit-column-width: 33%;
-  -moz-column-width: 33%;
-  column-width: 33%;
-}
-
-.gallery .pics {
-  -webkit-transition: all 350ms ease;
-  transition: all 350ms ease;
-}
-
-.gallery .animation {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-@media (max-width: 450px) {
-  .gallery {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
-    -webkit-column-width: 100%;
-    -moz-column-width: 100%;
-    column-width: 100%;
-  }
-}
-
-@media (max-width: 400px) {
-  .btn.filter {
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-  }
+:root {
+  --gold: #ffd700;
+  --dark-bg: #0a0a0b;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-main: #e0e0e0;
 }
 
 body {
-  /* background-color: #ef8172; */
-  background-color: mintcream;
+  background-color: var(--dark-bg);
+  color: var(--text-main);
+  font-family: 'Philosopher', sans-serif;
+  margin: 0;
 }
 
 .jumbotron {
-  background-color: mintcream;
-  color: black;
-}
-
-.jumbotron h1 {
-  margin-top: 20px;
-  font-family: 'Monoton', cursive;
-  color: magenta;
-
-}
-
-@media (min-width: 768px) {
-  .jumbotron {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-}
-
-.jumbotron p:last-child {
-  margin-bottom: 0;
+  background: linear-gradient(180deg, #000 0%, #0a0a0b 100%);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 80px 0;
 }
 
 .jumbotron-heading {
-  font-weight: 300;
-}
-
-.jumbotron .container {
-  max-width: 40rem;
-}
-
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
-
-
-@media (max-width: 576px) {
-  .modal-dialog-fullscreen {
-    max-width: none;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-
-  .modal-dialog-fullscreen .modal-content {
-    height: 100%;
-    border: 0;
-    border-radius: 0;
-  }
-
-  .modal-dialog-fullscreen .modal-body {
-    overflow-y: auto;
-  }
-}
-
-.modal-dialog-fullscreen .form-check-label {
-  font-size: 2rem;
-  /* Ajusta el tamaño del texto según sea necesario */
-  display: inline-block;
-  margin-left: 2em;
-}
-
-.modal-dialog-fullscreen .form-check-input {
-  width: 2em;
-  /* Ajusta el tamaño del checkbox según sea necesario */
-  height: 2em;
-  /* Ajusta el tamaño del checkbox según sea necesario */
-  position: absolute;
-}
-
-/* Ajusta el tamaño del botón y el texto dentro del botón */
-.btn-lg {
-  padding: 1rem 2rem;
-  /* Aumenta el padding para hacer el botón más grande */
+  font-family: 'Lemonada', cursive;
+  color: var(--gold);
   font-size: 3rem;
-  /* Aumenta el tamaño del texto dentro del botón */
+  letter-spacing: 2px;
 }
 
-/* Asegúrate de que los botones sean de ancho completo en pantallas pequeñas */
-@media (max-width: 576px) {
-  .btn-lg {
-    width: 100%;
-    margin-bottom: 1rem;
-    /* Añade un margen en la parte inferior para separar los botones */
+/* Isotope Grid */
+.gallery-grid {
+  width: 100%;
+  margin: 0 -12px;
+  /* Offset the larger item padding */
+}
+
+.grid-item {
+  width: 33.333%;
+  /* 3 columns */
+  padding: 12px;
+  /* Slightly less separation but still breathing */
+  box-sizing: border-box;
+  background: transparent;
+  /* Remove background so padding acts as gap */
+  border: none;
+  /* 3 columns */
+  /* margin-bottom: 2%; */
+  /* Removed as padding handles separation */
+  /* border-radius: 12px; */
+  /* Moved to .item-content */
+  /* overflow: hidden; */
+  /* Moved to .item-content */
+  /* background: var(--glass-bg); */
+  /* Moved to .item-content */
+  /* border: 1px solid var(--glass-border); */
+  /* Moved to .item-content */
+  /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  /* Moved to .item-content */
+}
+
+.grid-item .item-content {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.grid-item:hover .item-content {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  /* Glow effect */
+  border-color: var(--gold);
+}
+
+@media (max-width: 991px) {
+  .grid-item {
+    width: 50%;
   }
+}
+
+@media (max-width: 576px) {
+  .grid-item {
+    width: 100%;
+  }
+}
+
+.grid-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Filter Buttons */
+.filter-button-group {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter-btn {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.is-checked {
+  background: var(--gold);
+  color: black;
+  border-color: var(--gold);
+}
+
+.linktree-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: rgba(255, 215, 0, 0.1);
+  backdrop-filter: blur(15px);
+  color: var(--gold);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  z-index: 1050;
+  text-decoration: none !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  width: auto;
+}
+
+.linktree-btn:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: var(--gold);
+  color: black;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+}
+
+.linktree-btn i {
+  font-size: 1.1rem;
 }

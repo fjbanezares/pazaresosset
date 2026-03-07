@@ -1,76 +1,45 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
+function setLanguage(lang) {
+  // Normalize language code
+  const langMap = {
+    'spanish': 'es', 'english': 'en', 'italian': 'it', 'russian': 'ru',
+    'chinese': 'zh', 'arabic': 'ar', 'german': 'de', 'french': 'fr',
+    'japanese': 'ja', 'portuguese': 'pt', 'aleman': 'de', 'frances': 'fr',
+    'japones': 'ja', 'portugues': 'pt'
+  };
 
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
+  const targetLang = langMap[lang] || lang;
+  localStorage.setItem('selectedLanguage', targetLang);
+
+  const elements = document.querySelectorAll('.language');
+  elements.forEach(el => {
+    if (el.classList.contains(targetLang)) {
+      // Use empty string to revert to default (often inline for spans) or block if needed
+      el.style.display = el.tagName.toLowerCase() === 'span' ? 'inline' : 'block';
+      el.classList.add('animate-fade');
+      // For Arabic, set RTL
+      if (targetLang === 'ar') document.body.style.direction = 'rtl';
+      else document.body.style.direction = 'ltr';
+    } else {
+      el.style.display = 'none';
+      el.classList.remove('animate-fade');
+    }
+  });
 }
 
-document.querySelector(".buttonAudio").addEventListener("click", pepito);
+document.addEventListener('DOMContentLoaded', () => {
+  const languageSelect = document.getElementById('language-select');
+  let savedLang = localStorage.getItem('selectedLanguage') || 'es';
 
+  // Handle migration from old 'spanish' etc to 'es'
+  if (savedLang === 'spanish') savedLang = 'es';
+  if (savedLang.length > 2 && savedLang !== 'portuguese' && savedLang !== 'russian') {
+    // Basic mapping if needed, but let's just default to es if it's weird
+  }
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
-    document.querySelectorAll('.language').forEach(function (element) {
-      element.style.display = 'none';
-    });
+  languageSelect.value = savedLang;
+  setLanguage(savedLang);
 
-    // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
-    });
+  languageSelect.addEventListener('change', (e) => {
+    setLanguage(e.target.value);
   });
-
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
-  var zoomImages = document.querySelectorAll('.zoom-image');
-
-  // Recorre todas las imágenes
-  zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
-    var isZoomed = false;
-
-    // Función para realizar el zoom en la imagen
-    function zoomImage() {
-      if (isZoomed) {
-        image.style.transform = 'scale(1)';
-        isZoomed = false;
-      } else {
-        image.style.transform = 'scale(1.5)';
-        isZoomed = true;
-      }
-    }
-
-    // Asigna el evento touchstart (toque) a la imagen
-    image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
-
-      // Establece un temporizador para reducir el zoom después de 3 segundos
-      setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
-      }, 3000);
-    });
-  });
-
-  ////
-
-
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });

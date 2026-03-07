@@ -1,246 +1,379 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>El Columpio del Éxtasis.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>El Columpio del Éxtasis - Paz Arés Osset</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="womaninlove.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-    </select>
-  </div>
+  <div id="stars-container"></div>
 
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;"
-          alt="Paz Arés Osset, the Artist">
+  <header class="painting-header">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a href="../../index.html" class="logo-link">
+        <img src="../../logopazares.png" alt="Paz Arés Osset" class="logo-img">
       </a>
-      <h1 class="jumbotron-heading">
-        <div class="english language">The Swing of Ecstasy</div>
-        <div class="spanish language" style="display: none;">El Columpio del Éxtasis</div>
-        <div class="italian language" style="display: none;">L'Altalena dell'Estasi</div>
-        <div class="chinese language" style="display: none;">狂喜的秋千</div>
-      </h1>
 
-      <p class="lead text-muted">
-      <div class="english language">This work captures a woman in love, flowing as she swings between earth, water, air,
-        and
-        fire.</div>
-
-      <div class="spanish language" style="display: none;">Esta obra capta a una mujer enamorada, fluyendo mientras se
-        balancea entre tierra, agua, aire y fuego.</div>
-
-      <div class="italian language" style="display: none;">Quest'opera cattura una donna innamorata, che fluisce mentre
-        oscilla tra terra, acqua, aria e fuoco.</div>
-
-      <div class="chinese language" style="display: none;">这项作品捕捉到了一个恋爱中的女人，她在地球、水、空气和火之间流动摇摆。</div>
-    </div>
-    </p>
-    </div>
-  </section>
-
-
-  <section class="main-image">
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
-          <img src="womaninlove.jpeg" class="w3-hover-grayscale" width="100%" style="border:30px solid white;">
-          <!-- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_images_hover_eff -->
-        </div>
-
+      <div class="d-flex align-items-center" style="gap: 15px;">
+        <a href="../../gallery/index.html" class="btn btn-outline-gold d-none d-md-flex align-items-center">
+          <i class="fas fa-palette mr-2"></i>
+          <span class="spanish language">Galería</span>
+          <span class="english language" style="display:none;">Gallery</span>
+          <span class="italian language" style="display:none;">Galleria</span>
+        </a>
+        <select id="language-select" class="custom-select-gold">
+          <option value="spanish">🇪🇸 Español</option>
+          <option value="english">🇺🇸 English</option>
+          <option value="italian">🇮🇹 Italiano</option>
+          <option value="chinese">🇨🇳 中文</option>
+          <option value="arabic">🇦🇪 العربية</option>
+          <option value="russian">🇷🇺 Русский</option>
+          <option value="aleman">🇩🇪 Deutsch</option>
+          <option value="frances">🇫🇷 Français</option>
+          <option value="japones">🇯🇵 日本語</option>
+          <option value="portuges">🇵🇹 Português</option>
+        </select>
       </div>
-
     </div>
-  </section>
-  <!-- Rest of the HTML here... -->
+  </header>
 
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>
-              <div class="english language">Technique: Watercolor</div>
-              <div class="spanish language" style="display: none;">Técnica: Acuarela</div>
-              <div class="italian language" style="display: none;">Tecnica: Acquerello</div>
-              <div class="chinese language" style="display: none;">技术：水彩</div>
-            </li>
-            <li>
-              <div class="english language">Size: 30x40 cm</div>
-              <div class="spanish language" style="display: none;">Tamaño: 30x40 cm</div>
-              <div class="italian language" style="display: none;">Dimensioni: 30x40 cm</div>
-              <div class="chinese language" style="display: none;">尺寸：30x40厘米</div>
-            </li>
-            <li>
-              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
-              <div class="spanish language" style="display: none;">Lugar de Creación: Escuela de Bellas Artes de Madrid
-              </div>
-              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
-              </div>
-              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
-            </li>
-            <li>
-              <div class="english language">Current Location: Private Collection Madrid</div>
-              <div class="spanish language" style="display: none;">Ubicación Actual: Colección Privada Madrid</div>
-              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
-              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
-            </li>
-          </ul>
-
-        </div>
-        <div class="col-6 md audio" style="display:none;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
+  <main class="container py-5">
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 text-center mb-4 mb-lg-0">
+        <div class="painting-wrapper animate__animated animate__fadeIn">
+          <img src="womaninlove.jpeg" alt="El Columpio del Éxtasis" class="img-fluid painting-main-img"
+            id="painting-img">
+          <div class="painting-frame"></div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="multilingual-description">
+      <div class="col-lg-6">
+        <div class="painting-info-card animate__animated animate__fadeInRight">
+          <h1 class="painting-title">
+            <span class="spanish language">El Columpio del Éxtasis</span>
+            <span class="english language" style="display:none;">The Swing of Ecstasy</span>
+            <span class="italian language" style="display:none;">L'Altalena dell'Estasi</span>
+            <span class="chinese language" style="display:none;">狂喜的秋千</span>
+            <span class="arabic language" style="display:none;">أرجوحة النشوة</span>
+            <span class="russian language" style="display:none;">Качели Экстаза</span>
+            <span class="aleman language" style="display:none;">Die Schaukel der Ekstase</span>
+            <span class="frances language" style="display:none;">L'Escarpolette de l'Extase</span>
+            <span class="japones language" style="display:none;">恍惚のブランコ</span>
+            <span class="portuges language" style="display:none;">O Balanço do Êxtase</span>
+          </h1>
+
+          <div class="painting-meta mt-3">
+            <div class="meta-item">
+              <i class="fas fa-brush color-gold mr-2"></i>
+              <span class="spanish language">Técnica: Acuarela</span>
+              <span class="english language" style="display:none;">Technique: Watercolor</span>
+              <span class="italian language" style="display:none;">Tecnica: Acquerello</span>
+              <span class="chinese language" style="display:none;">技术：水彩</span>
+              <span class="arabic language" style="display:none;">التقنية: ألوان مائية</span>
+              <span class="russian language" style="display:none;">Техника: Акварель</span>
+              <span class="aleman language" style="display:none;">Technik: Aquarell</span>
+              <span class="frances language" style="display:none;">Technique : Aquarelle</span>
+              <span class="japones language" style="display:none;">技法：水彩</span>
+              <span class="portuges language" style="display:none;">Técnica: Aguarela</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-expand-arrows-alt color-gold mr-2"></i>
+              <span>30 x 40 cm</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-map-marker-alt color-gold mr-2"></i>
+              <span class="spanish language">Colección Privada, Madrid</span>
+              <span class="english language" style="display:none;">Private Collection, Madrid</span>
+              <span class="italian language" style="display:none;">Collezione Privata, Madrid</span>
+              <span class="chinese language" style="display:none;">私人收藏, 马德里</span>
+              <span class="arabic language" style="display:none;">مجموعة خاصة، مدريد</span>
+              <span class="russian language" style="display:none;">Частная коллекция, Мадрид</span>
+              <span class="aleman language" style="display:none;">Privatsammlung, Madrid</span>
+              <span class="frances language" style="display:none;">Collection privée, Madrid</span>
+              <span class="japones language" style="display:none;">プライベートコレクション、マ德里</span>
+              <span class="portuges language" style="display:none;">Coleção Privada, Madrid</span>
+            </div>
+          </div>
+
+          <div class="painting-brief mt-4">
+            <p class="lead italic text-light">
+              <span class="spanish language">"Una mujer enamorada, fluyendo entre los elementos."</span>
+              <span class="english language" style="display:none;">"A woman in love, flowing between the
+                elements."</span>
+              <span class="italian language" style="display:none;">"Una donna innamorata, che fluisce tra gli
+                elementi."</span>
+              <span class="chinese language" style="display:none;">"一位恋爱中的女性，在元素之间流动。"</span>
+              <span class="arabic language" style="display:none;">"امرأة عاشقة، تتدفق بين العناصر."</span>
+              <span class="russian language" style="display:none;">"Влюбленная женщина, парящая между стихиями."</span>
+              <span class="aleman language" style="display:none;">"Eine verliebte Frau, die zwischen den Elementen
+                fließt."</span>
+              <span class="frances language" style="display:none;">"Une femme amoureuse, glissant entre les
+                éléments."</span>
+              <span class="japones language" style="display:none;">"要素の間を流れる、恋する女性。"</span>
+              <span class="portuges language" style="display:none;">"Uma mulher apaixonada, fluindo entre os
+                elementos."</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POEM CROSS-REFERENCE CARD -->
+    <div class="row mb-5">
+      <div class="col-12 animate__animated animate__fadeInUp">
+        <a href="../../poetry/columpio-del-extasis/index.html" class="poem-ref-card">
+          <div class="d-flex align-items-center">
+            <div class="poem-icon-box">
+              <i class="fas fa-feather-alt"></i>
+            </div>
+            <div class="ml-4">
+              <h4 class="m-0 mb-1 gold-text handwritten" style="font-size: 1.8rem;">
+                <span class="spanish language">Obra Relacionada: El Poema</span>
+                <span class="english language" style="display:none;">Related Work: The Poem</span>
+                <span class="italian language" style="display:none;">Opera Correlata: Il Poema</span>
+                <span class="chinese language" style="display:none;">相关作品：诗歌</span>
+                <span class="arabic language" style="display:none;">عمل ذو صلة: القصيدة</span>
+                <span class="russian language" style="display:none;">Связанная работа: Стихотворение</span>
+                <span class="aleman language" style="display:none;">Verwandtes Werk: Das Gedicht</span>
+                <span class="frances language" style="display:none;">Œuvre associée : Le poème</span>
+                <span class="japones language" style="display:none;">関連作品：詩</span>
+                <span class="portuges language" style="display:none;">Obra Relacionada: O Poema</span>
+              </h4>
+              <p class="m-0 text-light opacity-8">
+                <span class="spanish language">Esta pintura inspiró los versos de 'El Columpio del Éxtasis'. Haz clic
+                  para leerlo.</span>
+                <span class="english language" style="display:none;">This painting inspired the verses of 'The Swing of
+                  Ecstasy'. Click to read it.</span>
+                <span class="italian language" style="display:none;">Questo dipinto ha ispirato i versi de 'L'Altalena
+                  dell'Estasi'. Clicca per leggerlo.</span>
+                <span class="chinese language" style="display:none;">这幅画激发了《狂喜的秋千》的诗句。点击阅读。</span>
+                <span class="arabic language" style="display:none;">ألهمت هذه اللوحة أبيات "أرجوحة النشوة". انقر
+                  للقراءة.</span>
+                <span class="russian language" style="display:none;">Эта картина вдохновила стихи «Качели Экстаза».
+                  Нажмите, чтобы прочитать.</span>
+                <span class="aleman language" style="display:none;">Dieses Gemälde inspirierte die Verse von 'Die
+                  Schaukel der Ekstase'. Zum Lesen klicken.</span>
+                <span class="frances language" style="display:none;">Cette peinture a inspiré les vers de
+                  'L'Escarpolette de l'Extase'. Cliquez pour lire.</span>
+                <span class="japones language" style="display:none;">この絵は「恍惚のブランコ」の詩句にインスピレーションを与えました。クリックして読む。</span>
+                <span class="portuges language" style="display:none;">Esta pintura inspirou os versos de 'O Balanço do
+                  Êxtase'. Clique para ler.</span>
+              </p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right ml-auto gold-text"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="painting-description-card p-4 p-md-5 animate__animated animate__fadeIn">
+          <h2 class="handwritten text-center color-gold mb-5" style="font-size: 2.5rem;">
+            <span class="spanish language">Análisis Artístico</span>
+            <span class="english language" style="display:none;">Artistic Analysis</span>
+            <span class="italian language" style="display:none;">Analisi Artistica</span>
+            <span class="chinese language" style="display:none;">艺术分析</span>
+            <span class="arabic language" style="display:none;">التحليل الفني</span>
+            <span class="russian language" style="display:none;">Художественный анализ</span>
+            <span class="aleman language" style="display:none;">Künstlerische Analyse</span>
+            <span class="frances language" style="display:none;">Analyse artistique</span>
+            <span class="japones language" style="display:none;">芸術的分析</span>
+            <span class="portuges language" style="display:none;">Análise Artística</span>
+          </h2>
+
+          <div class="description-content">
+            <!-- SPANISH -->
+            <div class="spanish language">
+              <p>La obra que nos ocupa es una creación excepcional de la talentosa artista Paz Arés Osset, quien ha
+                sabido plasmar magistralmente en esta acuarela las emociones y sensaciones trascendentales que
+                experimenta al columpiarse. A través de su depurada habilidad artística, la autora nos invita a
+                sumergirnos en un mundo donde el misticismo y la ligereza convergen, evocando momentos de una profunda y
+                necesaria conexión con lo divino.</p>
+              <p>Esta pieza no es solo una representación visual; es el alma gemela de su poema <strong>'El Columpio del
+                  Éxtasis'</strong>. Mientras que en los versos la artista reclama el fin de la oscuridad y el comienzo
+                de la luz, en esta pintura esa luz se manifiesta físicamente a través de una paleta vibrante y etérea.
+                La técnica de la acuarela permite transmitir esa sensación de fluidez absoluta que se vive al deslizarse
+                por el aire en un columpio orgánico, tejido con hojas verdes y flores que parecen latir con vida propia.
+                Los trazos delicados dotan al cuadro de una atmósfera de ensueño, transportando al espectador a ese
+                estado de suspensión donde las ataduras terrestres desaparecen.</p>
+              <p>En esta representación, Paz Arés se dibuja a sí misma en un instante de comunión total con la
+                naturaleza y lo infinito. El gesto de echar la cabeza hacia atrás, permitiendo que el cabello flote
+                libre como su propio espíritu, simboliza el desprendimiento de lo material. Es aquí donde reside el
+                propósito fundamental de su arte: <strong>la liberación del ser humano</strong>. A través de este
+                balanceo sagrado, la artista conecta con un plano superior, logrando una meditación activa donde lo
+                humano se funde con lo divino, trascendiendo fronteras y dogmas.</p>
+              <p>Esta obra es un testimonio de la visión de Paz Arés sobre la <strong>fusión de las
+                  espiritualidades</strong>. Al integrar elementos de la naturaleza en una danza armoniosa, el cuadro
+                actúa como un puente hacia la paz universal. Nos recuerda que la inspiración y la espiritualidad laten
+                en los momentos más cotidianos y puros de la vida. Es un canto a la libertad del espíritu y a la
+                capacidad del arte para elevar la conciencia humana.</p>
+            </div>
+
+            <!-- ENGLISH -->
+            <div class="english language" style="display:none;">
+              <p>This work is an exceptional creation by the talented artist Paz Arés Osset, who has masterfully
+                captured the transcendental emotions and sensations of swinging in this watercolor. Through her refined
+                artistic skill, the author invites us to immerse ourselves in a world where mysticism and lightness
+                converge, evoking moments of deep and necessary connection with the divine.</p>
+              <p>This piece is not just a visual representation; it is the soulmate of her poem <strong>'The Swing of
+                  Ecstasy'</strong>. While the verses call for the end of darkness and the beginning of light, in this
+                painting that light manifests physically through a vibrant and ethereal palette. The watercolor
+                technique transmits the sensation of absolute fluidity experienced when sliding through the air on an
+                organic swing, woven with green leaves and flowers that seem to pulse with life.</p>
+              <p>Paz Arés depicts herself in a moment of total communion with nature and the infinite. The gesture of
+                tilting her head back, allowing her hair to float freely like her own spirit, symbolizes the detachment
+                from the material world. Here lies the fundamental purpose of her art: <strong>the liberation of the
+                  human being</strong>. Through this sacred balancing, the artist connects with a higher plane,
+                achieving an active meditation where the human merges with the divine.</p>
+              <p>This work testifies to Paz Arés's vision of the <strong>fusion of spiritualities</strong>. By
+                integrating elements of nature into a harmonious dance, the painting acts as a bridge toward universal
+                peace. It is a hymn to the freedom of the spirit and the capacity of art to elevate human consciousness.
+              </p>
+            </div>
+
+            <!-- ITALIAN -->
+            <div class="italian language" style="display:none;">
+              <p>Quest'opera è un'eccezionale creazione della talentuosa artista Paz Arés Osset, che ha saputo catturare
+                magistralmente in questo acquerello le emozioni e le sensazioni trascendentali provate durante
+                l'altalena. Attraverso la sua raffinata abilità artistica, l'autrice ci invita a immergerci in un mondo
+                dove misticismo e leggerezza convergono, evocando momenti di profonda e necessaria connessione con il
+                divino.</p>
+              <p>Questo pezzo è l'anima gemella del suo poema <strong>'L'Altalena dell'Estasi'</strong>. La tecnica
+                dell'acquerello trasmette la sensazione di fluidità assoluta vissuta scivolando nell'aria su un'altalena
+                organica, intrecciata con foglie verdi e fiori vibranti. Paz Arés ritrae se stessa in un momento di
+                totale comunione con la natura e l'infinito. Il gesto di inclinare la testa all'indietro simboleggia il
+                distacco dal materiale: lo scopo fondamentale della sua arte è <strong>la liberazione dell'essere
+                  umano</strong>.</p>
+              <p>L'opera testimonia la visione di Paz Arés sulla <strong>fusione delle spiritualità</strong>, agendo
+                come un ponte verso la pace universale e ricordandoci che la spiritualità pulsa nei momenti più puri
+                della vita.</p>
+            </div>
+
+            <!-- CHINESE -->
+            <div class="chinese language" style="display:none;">
+              <p>这件作品是才华横溢的艺术家 Paz Arés Osset
+                的非凡创作，她以高超的技艺在这幅水彩画中捕捉到了荡秋千时的超脱情感与感受。通过她精湛的艺术技巧，作者邀请我们沉浸在一个神秘与轻盈交汇的世界中，唤起与神圣深度连接的时刻。</p>
+              <p>这幅画不仅是视觉呈现，更是她诗作<strong>《狂喜的秋千》</strong>的灵魂伴侣。水彩技法传达了在绿叶和鲜花织成的有机秋千上划过空气时的绝对流动感。Paz Arés
+                描绘了自己与自然及无限全然融合的时刻。抬头仰望、长发随心灵自由飘动的姿态，象征着对物质世界的超脱：这正是她艺术的核心目的——<strong>人类的解放</strong>。</p>
+              <p>这部作品见证了关于<strong>灵性融合</strong>的愿景。通过将自然元素融入和谐的舞蹈中，这幅画成为了通往世界和平的桥梁，提醒我们灵性跳动在生命最纯净的瞬间。</p>
+            </div>
+
+            <!-- ARABIC -->
+            <div class="arabic language" style="display:none;">
+              <p>هذا العمل هو إبداع استثنائي للفنانة الموهوبة باز آريس أوسيت، التي استطاعت ببراعة تجسيد المشاعر
+                والأحاسيس المتعالية للتأرجح في هذه اللوحة المائية. من خلال مهارتها الفنية الرفيعة، تدعونا المؤلفة
+                للانغماس في عالم يلتقي فيه التصوف والخفة، مستحضرة لحظات من التواصل العميق والضروري مع الإلهي.</p>
+              <p>هذه القطعة هي الروح التوأم لقصيدتها <strong>'أرجوحة النشوة'</strong>. تنقل تقنية الألوان المائية
+                إحساسًا بالانسيابية المطلقة التي نختبرها عند الانزلاق في الهواء على أرجوحة عضوية منسوجة من الأوراق
+                الخضراء والزهور. تصور باز آريس نفسها في لحظة اتصال كامل مع الطبيعة واللانهاية. ترمز لفتة إمالة رأسها
+                للخلف إلى التحرر من المادة، حيث يكمن الهدف الأساسي لفنها: <strong>تحرير الكائن البشري</strong>.</p>
+              <p>يشهد هذا العمل على رؤية الفنانة حول <strong>دمج الروحانيات</strong>، حيث يعمل كجسر نحو السلام العالمي
+                ويذكرنا بأن الروحانية تنبض في أنقى لحظات الحياة.</p>
+            </div>
+
+            <!-- RUSSIAN -->
+            <div class="russian language" style="display:none;">
+              <p>Эта работа — исключительное творение талантливой художницы Пас Арес Оссет, которая мастерски
+                запечатлела в этой акварели трансцендентные эмоции и ощущения от качания на качелях. Через свое
+                изысканное художественное мастерство автор приглашает нас погрузиться в мир, где мистицизм и легкость
+                сходятся воедино.</p>
+              <p>Это произведение — душа-двойник ее стихотворения <strong>«Качели Экстаза»</strong>. Техника акварели
+                передает ощущение абсолютной текучести при скольжении по воздуху на органических качелях, сплетенных из
+                листьев и цветов. Пас Арес изображает себя в момент полного слияния с природой и бесконечностью. Жест
+                запрокинутой головы символизирует отрешенность от материального: фундаментальная цель ее искусства —
+                <strong>освобождение человеческого существа</strong>.
+              </p>
+              <p>Эта работа свидетельствует о видении Пас Арес относительно <strong>слияния духовных путей</strong>,
+                выступая мостом к всеобщему миру и напоминая о том, что божественное пульсирует в самых чистых моментах
+                жизни.</p>
+            </div>
+
+            <!-- ALEMAN -->
+            <div class="aleman language" style="display:none;">
+              <p>Dieses Werk ist eine außergewöhnliche Schöpfung der talentierten Künstlerin Paz Arés Osset, die die
+                transzendentalen Emotionen und Empfindungen des Schaukelns in diesem Aquarell meisterhaft eingefangen
+                hat. Die Autorin lädt uns ein, in eine Welt einzutauchen, in der Mystik und Leichtigkeit konvergieren.
+              </p>
+              <p>Dieses Stück ist die Seelenverwandte ihres Gedichts <strong>'Die Schaukel der Ekstase'</strong>. Die
+                Aquarelltechnik vermittelt das Gefühl absoluter Fluidität beim Gleiten durch die Luft auf einer Schaukel
+                aus Blättern und Blumen. Paz Arés stellt sich in einem Moment der totalen Gemeinschaft mit der Natur und
+                dem Unendlichen dar. Die Geste, den Kopf in den Nacken zu legen, symbolisiert die Loslösung vom
+                Materiellen: der Zweck ihrer Kunst ist <strong>die Befreiung des Menschen</strong>.</p>
+              <p>Das Werk bezeugt Paz Arés' Vision der <strong>Verschmelzung der Spiritualitäten</strong> und dient als
+                Brücke zum universellen Frieden.</p>
+            </div>
+
+            <!-- FRANCES -->
+            <div class="frances language" style="display:none;">
+              <p>Cette œuvre est une création exceptionnelle de l'artiste talentueuse Paz Arés Osset, qui a su capturer
+                magistralement dans cette aquarelle les émotions transcendantales du balancement. L'auteure nous invite
+                à plonger dans un monde où mysticisme et légèreté convergent, évoquant une connexion profonde avec le
+                divin.</p>
+              <p>Cette pièce est l'âme sœur de son poème <strong>'L'Escarpolette de l'Extase'</strong>. La technique de
+                l'aquarelle transmet cette sensation de fluidité absolue sur une balançoire organique tissée de feuilles
+                et de fleurs. Paz Arés se représente dans un moment de communion totale avec la nature. Le geste de
+                rejeter la tête en arrière symbolise le détachement de la matière : le but fondamental de son art est
+                <strong>la libération de l'être humain</strong>.
+              </p>
+              <p>L'œuvre témoigne de la vision de Paz Arés sur la <strong>fusion des spiritualités</strong>, agissant
+                comme un pont vers la paix universelle.</p>
+            </div>
+
+            <!-- JAPONES -->
+            <div class="japones language" style="display:none;">
+              <p>この作品は、才能あるアーティスト
+                パス・アレス・オセットによる卓越した創作であり、水彩画の中にブランコに乗った時の超越的な感情と感覚を見事に捉えています。神秘主義と軽やかさが交差する世界へと私たちを誘い、神聖なものとの深いつながりを呼び起こします。
+              </p>
+              <p>
+                この作品は、彼女の詩<strong>『恍惚のブランコ』</strong>の魂の双子です。水彩の技法は、葉と花で編まれた有機的なブランコで宙を滑る時の、絶対的な流動性を伝えます。パス・アレスは、自然と無限との完全な交感の瞬間を描いています。頭を後ろに倒し、精神のように髪を自由に漂わせる仕草は、物質からの離脱を象徴しています。これこそが彼女の芸術の根本的な目的である<strong>「人間の解放」</strong>なのです。
+              </p>
+              <p>この作品は、<strong>精神性の融合</strong>という彼女のビジョンを証言しており、世界平和への架け架け橋として機能しています。</p>
+            </div>
+
+            <!-- PORTUGUES -->
+            <div class="portuges language" style="display:none;">
+              <p>Esta obra é uma criação excepcional da talentosa artista Paz Arés Osset, que soube plasmar
+                magistralmente nesta aguarela as emoções transcendentais do balouçar. A autora convida-nos a mergulhar
+                num mundo onde o misticismo e a leveza convergem, evocando uma profunda conexão com o divino.</p>
+              <p>Esta peça é a alma gémea do seu poema <strong>'O Balanço do Êxtase'</strong>. A técnica da aguarela
+                transmite a sensação de fluidez absoluta vivida ao deslizar pelo ar num baloiço orgânico de folhas e
+                flores. Paz Arés desenha-se num instante de comunhão total con a natureza e o infinito. O gesto de
+                inclinar a cabeça para trás simboliza o desprendimento do material: o propósito fundamental da sua arte
+                é <strong>a libertação do ser humano</strong>.</p>
+              <p>A obra testemunha a visão de Paz Arés sobre a <strong>fusão das espiritualidades</strong>, agindo como
+                uma ponte para a paz universal.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="painting-footer py-5 text-center">
     <div class="container">
-      <h2>
-        <div class="english language">Description</div>
-        <div class="spanish language" style="display: none;">Descripción</div>
-        <div class="italian language" style="display: none;">Descrizione</div>
-        <div class="chinese language" style="display: none;">描述</div>
-      </h2>
-
-      <div class="english language">
-        <!-- English description here -->
-        <p>The work at hand is an exceptional creation of the talented artist Paz Arés Osset, who has masterfully
-          captured on
-          canvas the emotions and sensations experienced while swinging. Through her artistic skill, the author invites
-          us to
-          immerse ourselves in a world full of mysticism and lightness, evoking moments of deep connection with the
-          divine.</p>
-
-        <p>The watercolor technique, chosen by the artist, is perfect for conveying the sensation of lightness and
-          fluidity
-          experienced when sliding through the air on a swing made of green leaves and colorful flowers. The use of
-          colors and
-          the delicate, restless strokes lend a dreamlike atmosphere to the painting, conveying to the viewer the
-          sensation of
-          being suspended in the air, free from earthly ties.</p>
-
-        <p>In this piece, the artist represents herself in a moment of absolute communion with nature and the
-          transcendental. As
-          she tilts her head back and feels her hair floating like her spirit, the artist manages to connect with a
-          higher
-          plane, in a meditation united with the divine. This work is undoubtedly a testament to the greatness of art
-          and the
-          human being's ability to find inspiration and spirituality in the simplest and most everyday moments of life.
-        </p>
-
-        <p>Paz Arés Osset's painting is a hymn to the beauty and freedom of the human spirit, and her ability to capture
-          on
-          canvas the most intimate and universal experiences makes this work a unique gem within the contemporary
-          Spanish
-          artistic landscape.</p>
-
-
+      <div class="social-icons mb-4">
+        <a href="https://www.instagram.com/pazaresosset/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/user/pazaresosset"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/pazaresosset"><i class="fab fa-twitter"></i></a>
       </div>
-
-      <div class="spanish language" style="display: none;">
-        <!-- Spanish description here -->
-        <p>La obra que nos ocupa es una creación excepcional de la talentosa artista Paz Arés Osset, que ha sabido
-          plasmar
-          magistralmente en un lienzo las emociones y sensaciones que experimenta al columpiarse. A través de su
-          habilidad
-          artística, la autora nos invita a sumergirnos en un mundo lleno de misticismo y ligereza, evocando momentos de
-          profunda conexión con lo divino.</p>
-
-        <p>La técnica de acuarela, elegida por la artista, es perfecta para transmitir la sensación de ligereza y
-          fluidez que se
-          experimenta al deslizarse por el aire en un columpio hecho de hojas verdes y flores de colores. El uso de los
-          colores
-          y los trazos delicados e inquietos aportan una atmósfera de ensueño al cuadro, transmitiendo al espectador la
-          sensación de estar suspendido en el aire, libre de las ataduras terrenales.</p>
-
-        <p>En esta pieza, la artista se representa a sí misma en un momento de absoluta comunión con la naturaleza y lo
-          trascendental. Al echar la cabeza hacia atrás y sentir su cabello flotando como su espíritu, la artista logra
-          conectar
-          con un plano superior, en una meditación unida a lo divino. Esta obra es sin duda un testimonio de la grandeza
-          del
-          arte y la capacidad del ser humano para encontrar inspiración y espiritualidad en los momentos más cotidianos
-          y
-          simples de la vida.</p>
-
-        <p>El cuadro de Paz Arés Osset es un canto a la belleza y a la libertad del espíritu humano, y su habilidad para
-          plasmar
-          en un lienzo las experiencias más íntimas y universales convierte a esta obra en una joya única dentro del
-          panorama
-          artístico contemporáneo español.</p>
-      </div>
-
-      <div class="italian language" style="display: none;">
-        <!-- Italian description here -->
-        <p>L'opera che ci occupa è una creazione eccezionale dell'artista di talento Paz Arés Osset, che ha saputo
-          catturare
-          magistralmente su tela le emozioni e le sensazioni provate durante l'altalena. Attraverso la sua abilità
-          artistica,
-          l'autrice ci invita a immergerci in un mondo pieno di misticismo e leggerezza, evocando momenti di profonda
-          connessione con il divino.</p>
-
-        <p>La tecnica dell'acquerello, scelta dall'artista, è perfetta per trasmettere la sensazione di leggerezza e
-          fluidità
-          provata quando si scivola nell'aria su un'altalena fatta di foglie verdi e fiori colorati. L'uso dei colori e
-          dei
-          tratti delicati e inquieti conferiscono un'atmosfera da sogno al quadro, trasmettendo allo spettatore la
-          sensazione di
-          essere sospeso nell'aria, libero dai legami terreni.</p>
-
-        <p>In questo pezzo, l'artista si rappresenta in un momento di assoluta comunione con la natura e il
-          trascendentale.
-          Inclinando la testa all'indietro e sentendo i suoi capelli fluttuare come il suo spirito, l'artista riesce a
-          connettersi con un piano superiore, in una meditazione unita al divino. Quest'opera è senza dubbio una
-          testimonianza
-          della grandezza dell'arte e della capacità dell'essere umano di trovare ispirazione e spiritualità nei momenti
-          più
-          semplici e quotidiani della vita.</p>
-
-        <p>Il dipinto di Paz Arés Osset è un inno alla bellezza e alla libertà dello spirito umano, e la sua capacità di
-          catturare su tela le esperienze più intime e universali rende quest'opera un gioiello unico nel panorama
-          artistico
-          contemporaneo spagnolo.</p>
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-
-
-      </div>
+      <p class="copyright">&copy; 2026 Paz Arés Osset. <span class="spanish language">Todos los derechos
+          reservados.</span><span class="english language" style="display:none;">All rights reserved.</span></p>
     </div>
-  </section>
-
+  </footer>
 
   <script src="womaninlove.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>

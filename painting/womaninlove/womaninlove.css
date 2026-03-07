@@ -1,77 +1,242 @@
+:root {
+  --gold: #FFD700;
+  --dark-gold: #B8860B;
+  --glass: rgba(10, 10, 10, 0.7);
+  --glass-border: rgba(255, 215, 0, 0.2);
+  --bg-deep: #050505;
+}
+
 body {
-  /* background-color: #ef8172; */
-  background-color: black;
-  font-size: 1.7rem;
-
-}
-
-.jumbotron {
-  background-color: black;
+  background-color: var(--bg-deep);
   color: #fff;
-}
-
-/* .jumbotron h1 {
-  margin-top: 20px;
-  font-family: 'Monoton', cursive;
-  color: magenta;
-
-} */
-.custom-select-lg {
-  font-size: 3rem;
-  line-height: 1.2;
-  padding: .5rem 1rem;
-  height: auto;
-  /* You can set this to auto or a fixed value larger than 2.875rem */
-}
-
-.jumbotron h1 {
-  margin-top: 40px;
-  /* increase this value to add more space */
   font-family: 'Montserrat', sans-serif;
-  color: magenta;
-  font-weight: 700;
-}
-
-.multilingual-description {
-  font-size: 3rem;
-  /* rest of your properties */
-  margin-top: 30px;
-  border: 2px solid magenta;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: black;
-  color: #fff;
-}
-
-.language-desc {
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.main-description {
-  margin-top: 20px;
-}
-
-.description {
-  /* rest of your properties */
-  margin: 12px;
-  color: white;
-  /* font-family: 'Manjari', sans-serif; */
-  /* font-family: 'Monoton', cursive; */
-  /* font-family: 'Philosopher', sans-serif; */
-  font-family: 'Lemonada', cursive;
-}
-
-.audio {
-  text-align: center;
-  border: 20px;
-  padding: 0;
   margin: 0;
-  width: min-content;
-  height: min-content;
-  top: 40px;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
-.buttonAudio {
-  top: 200px;
+/* Star Background */
+#stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+/* Header */
+.painting-header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo-img {
+  max-height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.custom-select-gold {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--gold);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 8px 15px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.custom-select-gold:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.btn-outline-gold {
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: all 0.3s;
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: black;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Main Content */
+.painting-main-img {
+  border-radius: 5px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  position: relative;
+  transition: transform 0.5s ease;
+  border: 15px solid white;
+  /* Canvas style */
+}
+
+.painting-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.painting-wrapper:hover .painting-main-img {
+  transform: scale(1.02);
+}
+
+.painting-title {
+  font-family: 'Philosopher', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  line-height: 1.1;
+}
+
+.handwritten {
+  font-family: 'Caveat', cursive;
+}
+
+.color-gold {
+  color: var(--gold);
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.opacity-8 {
+  opacity: 0.8;
+}
+
+.meta-item {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Cards */
+.painting-info-card,
+.painting-description-card,
+.poem-ref-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.painting-description-card {
+  line-height: 1.8;
+  font-size: 1.15rem;
+  color: #eee;
+}
+
+.poem-ref-card {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  color: white;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.poem-ref-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  background: rgba(255, 215, 0, 0.05);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.1);
+}
+
+.poem-icon-box {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: black;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.poem-ref-card i.fa-chevron-right {
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.poem-ref-card:hover i.fa-chevron-right {
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+/* Footer */
+.social-icons a {
+  color: var(--gold);
+  font-size: 2rem;
+  margin: 0 15px;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: white;
+  text-shadow: 0 0 10px var(--gold);
+}
+
+.copyright {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .painting-title {
+    font-size: 2.5rem;
+  }
+
+  .painting-description-card {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
 }

@@ -1,513 +1,603 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Ultreya: From Samsara to Enlightment</title>
+  <title>Ultreya: El Viaje Trascendental - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@300;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <select id="language-select" class="custom-select">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
     </select>
   </div>
 
+  <!-- Universe Button (Linktree) -->
+  <a href="../../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+    <span class="es language">Universo de Paz</span>
+    <span class="en language" style="display:none;">Paz's Universe</span>
+    <span class="it language" style="display:none;">L'Universo di Paz</span>
+    <span class="ru language" style="display:none;">Вселенная Пас</span>
+    <span class="zh language" style="display:none;">帕斯的宇宙</span>
+    <span class="ar language" style="display:none;">كون باز</span>
+    <span class="de language" style="display:none;">Paz' Universum</span>
+    <span class="fr language" style="display:none;">L'Univers de Paz</span>
+    <span class="ja language" style="display:none;">パースの宇宙</span>
+    <span class="pt language" style="display:none;">O Universo de Paz</span>
+  </a>
 
-  <section class="jumbotron text-center">
-    <div class="container">
+  <!-- Gallery Button -->
+  <a href="../../gallery/index.html" class="gallery-btn">
+    <i class="fas fa-images"></i>
+    <span class="es language">Galería de Arte</span>
+    <span class="en language" style="display:none;">Art Gallery</span>
+    <span class="it language" style="display:none;">Galleria d'Arte</span>
+    <span class="ru language" style="display:none;">Галерея</span>
+    <span class="zh language" style="display:none;">画廊</span>
+    <span class="ar language" style="display:none;">معرض الفن</span>
+    <span class="de language" style="display:none;">Kunstgalerie</span>
+    <span class="fr language" style="display:none;">Galerie d'Art</span>
+    <span class="ja language" style="display:none;">ギャラリー</span>
+    <span class="pt language" style="display:none;">Galeria de Arte</span>
+  </a>
 
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
+  <!-- Header Section -->
+  <header class="jumbotron text-center">
+    <div class="container animate-fade">
+      <a class="brand" href="../../index.html">
+        <img src="../../logopazares.png" width="120" alt="Paz Arés Osset">
       </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Ultreya: Beyond</div>
-        <div class="spanish language" style="display: none;">Ultreya: Más Allá</div>
-        <div class="italian language" style="display: none;">Ultreya: Oltre</div>
-        <div class="chinese language" style="display: none;">尤尔特雷亚：更远</div>
-        <div class="arabic language" style="display: none;">أولتريا: ما وراء</div>
+      <h1 class="jumbotron-heading mt-4">
+        <span class="es language">Ultreya: Más Allá</span>
+        <span class="en language" style="display:none;">Ultreya: Beyond</span>
+        <span class="it language" style="display:none;">Ultreya: Oltre</span>
+        <span class="ru language" style="display:none;">Ультрея: За Пределами</span>
+        <span class="zh language" style="display:none;">Ultreya：超越</span>
+        <span class="ar language" style="display:none;">أولتريا: ما وراء</span>
+        <span class="de language" style="display:none;">Ultreya: Jenseits</span>
+        <span class="fr language" style="display:none;">Ultreya : Au-delà</span>
+        <span class="ja language" style="display:none;">ウルトレヤ：彼方へ</span>
+        <span class="pt language" style="display:none;">Ultreya: Além</span>
       </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">A spiritual journey: from Samsara to Nirvana and beyond.</div>
-        <div class="spanish language" style="display: none;">Un viaje espiritual: del Samsara al Nirvana y más allá.
-        </div>
-        <div class="italian language" style="display: none;">Un viaggio spirituale: dal Samsara al Nirvana e oltre.
-        </div>
-        <div class="chinese language" style="display: none;">从轮回到涅槃并超越的心灵之旅。</div>
-        <div class="arabic language" style="display: none;">رحلة روحية: من السامسارا إلى النيرفانا وما وراءها.</div>
-      </div>
-
-
+      <p class="lead text-muted">
+        <span class="es language">Un viaje místico del Samsara al Nirvana y la liberación del ser.</span>
+        <span class="en language" style="display:none;">A mystical journey from Samsara to Nirvana and the
+          liberation of being.</span>
+        <span class="it language" style="display:none;">Un viaggio mistico dal Samsara al Nirvana e la liberazione
+          dell'essere.</span>
+        <span class="ru language" style="display:none;">Мистическое путешествие от Сансары к Нирване и освобождение
+          бытия.</span>
+        <span class="zh language" style="display:none;">从轮回到涅槃以及生命解脱的神秘之旅。</span>
+        <span class="ar language" style="display:none;">رحلة صوفية من السامسارا إلى النيرفانا وتحرر الكائن.</span>
+        <span class="de language" style="display:none;">Eine mystische Reise von Samsara nach Nirvana und die
+          Befreiung des Seins.</span>
+        <span class="fr language" style="display:none;">Un voyage mystique du Samsara au Nirvana et la libération de
+          l'être.</span>
+        <span class="ja language" style="display:none;">輪廻から涅槃へ、そして存在の解放への神秘的な旅。</span>
+        <span class="pt language" style="display:none;">Uma jornada mística do Samsara ao Nirvana e a liberação
+          del ser.</span>
+      </p>
     </div>
-  </section>
+  </header>
 
-
-
-  <section class="main-image">
-
-    <div class="container">
+  <main class="container">
+    <!-- Gallery Section -->
+    <section class="main-image-container text-center">
       <div class="row">
-        <div class="col-12-lg">
-          <img class="zoom-image" src="Ultreya.jpg" width="100%" style="border:30px solid white;" alt="Amazing">
+        <div class="col-md-6 mb-4">
+          <img class="art-image" src="Ultreya.jpg" alt="Ultreya Original">
+        </div>
+        <div class="col-md-6 mb-4">
+          <img class="art-image" src="ultreya_iluminada.jpg" alt="Ultreya Illuminated">
+        </div>
+        <div class="col-md-6 mb-4">
+          <img class="art-image" src="Ultreya_detalle.jpg" alt="Ultreya Detail">
+        </div>
+        <div class="col-md-6 mb-4">
+          <img class="art-image" src="Ultreya_salon.jpg" alt="Ultreya in Space">
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
-          <img class="zoom-image" src="Ultreya_detalle.jpg" width="100%" style="border:30px solid white;" alt="Amazing">
+    <!-- Technical Details -->
+    <section class="section-card">
+      <h3 class="text-warning mb-4"><i class="fas fa-tools mr-2"></i>
+        <span class="es language">Ficha Técnica</span>
+        <span class="en language" style="display:none;">Technical Sheet</span>
+        <span class="it language" style="display:none;">Scheda Tecnica</span>
+        <span class="ru language" style="display:none;">Техническая карта</span>
+        <span class="zh language" style="display:none;">技术参数</span>
+        <span class="ar language" style="display:none;">ورقة البيانات التقنية</span>
+        <span class="de language" style="display:none;">Technisches Datenblatt</span>
+        <span class="fr language" style="display:none;">Fiche technique</span>
+        <span class="ja language" style="display:none;">テクニカルデータ</span>
+        <span class="pt language" style="display:none;">Ficha Técnica</span>
+      </h3>
+      <ul class="tech-list">
+        <li><i class="fas fa-layer-group"></i>
+          <span class="es language"><strong>Técnica:</strong> Mixta con Carborundum, Ágatas y Metal
+            Acrílico.</span>
+          <span class="en language" style="display:none;"><strong>Technique:</strong> Mixed with Carborundum,
+            Agates, and Acrylic Metal.</span>
+          <span class="it language" style="display:none;"><strong>Tecnica:</strong> Mista con Carborundum, Agate e
+            Metallo Acrilico.</span>
+          <span class="ru language" style="display:none;"><strong>Техника:</strong> Смешанная техника с карборундом,
+            агатами и акриловым металлом.</span>
+          <span class="zh language" style="display:none;"><strong>技法：</strong>碳化硅、玛瑙与丙烯金属混合技法。</span>
+          <span class="ar language" style="display:none;"><strong>التقنية:</strong> ميكس تيكنيك مع "كاربوروندوم"، وأحجار
+            "العقيق" والمعدن الأكريليك.</span>
+          <span class="de language" style="display:none;"><strong>Technik:</strong> Mischtechnik mit Karborund, Achaten
+            und Acrylmetall.</span>
+          <span class="fr language" style="display:none;"><strong>Technique :</strong> Mixte avec Carborundum, Agates et
+            Métal Acrylique.</span>
+          <span class="ja language" style="display:none;"><strong>技法：</strong>カーボランダム、瑪瑙、アクリルメタルのミクストメディア。</span>
+          <span class="pt language" style="display:none;"><strong>Técnica:</strong> Mista com Carborundum, Ágatas e
+            Metal Acrílico.</span>
+        </li>
+        <li><i class="fas fa-expand-arrows-alt"></i>
+          <span class="es language"><strong>Dimensiones:</strong> 145x110 cm</span>
+          <span class="en language" style="display:none;"><strong>Dimensions:</strong> 145x110 cm</span>
+          <span class="it language" style="display:none;"><strong>Size:</strong> 145x110 cm</span>
+          <span class="ru language" style="display:none;"><strong>Размеры:</strong> 145x110 см</span>
+          <span class="zh language" style="display:none;"><strong>尺寸：</strong>145x110 厘米</span>
+          <span class="ar language" style="display:none;"><strong>الأبعاد:</strong> 145x110 سم</span>
+          <span class="de language" style="display:none;"><strong>Maße:</strong> 145x110 cm</span>
+          <span class="fr language" style="display:none;"><strong>Dimensions :</strong> 145x110 cm</span>
+          <span class="ja language" style="display:none;"><strong>サイズ：</strong>145x110 cm</span>
+          <span class="pt language" style="display:none;"><strong>Dimensões:</strong> 145x110 cm</span>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i>
+          <span class="es language"><strong>Ubicación:</strong> Colección Privada, Madrid.</span>
+          <span class="en language" style="display:none;"><strong>Location:</strong> Private Collection,
+            Madrid.</span>
+          <span class="it language" style="display:none;"><strong>Posizione:</strong> Collezione Privata,
+            Madrid.</span>
+          <span class="ru language" style="display:none;"><strong>Местонахождение:</strong> Частная коллекция,
+            Мадрид.</span>
+          <span class="zh language" style="display:none;"><strong>收藏地点：</strong>私人收藏，马德里。</span>
+          <span class="ar language" style="display:none;"><strong>الموقع:</strong> مجموعة خاصة، مدريد.</span>
+          <span class="de language" style="display:none;"><strong>Standort:</strong> Privatsammlung, Madrid.</span>
+          <span class="fr language" style="display:none;"><strong>Emplacement :</strong> Collection privée,
+            Madrid.</span>
+          <span class="ja language" style="display:none;"><strong>所蔵：</strong>個人蔵、マドリード。</span>
+          <span class="pt language" style="display:none;"><strong>Localização:</strong> Coleção Particular,
+            Madrid.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Artistic Description -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-pen-fancy mr-2"></i>
+        <span class="es language">Análisis Artístico</span>
+        <span class="en language" style="display:none;">Artistic Analysis</span>
+        <span class="it language" style="display:none;">Analisi Artistica</span>
+        <span class="ru language" style="display:none;">Художественный анализ</span>
+        <span class="zh language" style="display:none;">艺术分析</span>
+        <span class="ar language" style="display:none;">التحليل الفني</span>
+        <span class="de language" style="display:none;">Künstlerische Analyse</span>
+        <span class="fr language" style="display:none;">Analyse Artistique</span>
+        <span class="ja language" style="display:none;">芸術的分析</span>
+        <span class="pt language" style="display:none;">Análise Artística</span>
+      </h2>
+
+      <div class="description-text">
+        <!-- Spanish -->
+        <div class="es language text-justify">
+          <p>Al sumergirse en el rutilante universo pictórico de <strong>"Ultreya: Más Allá"</strong>, es evidente que
+            Paz Arés Osset nos presenta no sólo un paisaje visual, sino un testimonio íntimo de su viaje espiritual y
+            trascendental. Con dimensiones de 145 por 110 cm, el lienzo va más allá de ser un mero portador de color y
+            forma; es una cartografía del alma que nos guía a través de los oscuros mares del Samsara hacia el luminoso
+            horizonte de la iluminación.</p>
+          <p>El título "Ultreya", que inicialmente escogió la artista, tiene sus raíces en las reuniones cursillistas de
+            cristiandad (y en el grito de ánimo de los peregrinos de Santiago), donde los participantes se congregaban
+            en busca de guía y consuelo espiritual. La palabra, con su connotación de <strong>"ir más allá"</strong>,
+            resuena profundamente con la esencia de este cuadro. Es una llamada a perseverar, similar a los antiguos
+            marineros que gritaban "ultreya" al divisar tierra firme, marcando el final de un arduo viaje y el inicio de
+            una nueva etapa.</p>
+          <p>La técnica mixta de Arés Osset juega un papel esencial en este viaje espiritual. El
+            <strong>carborundum</strong>, con sus texturas rugosas y formas curvas que asemejan corazones, simboliza el
+            tumultuoso mar del Samsara. Pero en este mar, flotan <strong>ágatas azules brillantes</strong>, como islas
+            de esperanza y serenidad. Estas ágatas, con su brillo etéreo y luminoso, contrastan y equilibran la
+            rugosidad del carborundum, recordándonos que incluso en medio de la tempestad, la belleza y la luz pueden
+            encontrarse.
+          </p>
+          <p>El <strong>metal acrílico</strong> refuerza esta transición del oscuro y turbulento Samsara hacia la
+            luminosidad del Nirvana, añadiendo un brillo casi celestial a la composición, reflejando esa ansiada
+            divinidad y luz que todos buscamos.</p>
+          <p>Es en la parte derecha donde encontramos un detalle conmovedor: un <strong>círculo de metal cobre</strong>,
+            delicadamente taladrado con pequeñas crucecitas. Representa un espíritu liberado, que se eleva sobre el mar
+            del Samsara y se dirige al cielo, pintado en un amarillo intenso y salpicado con mica que brilla como
+            estrellas flotantes. Este espíritu se dirige hacia un <strong>círculo abierto</strong>, hábilmente recortado
+            en el cuadro en la parte superior izquierda. Este orificio simboliza la posibilidad de traspasar los límites
+            del propio cuadro, invitándonos a ir más allá de la iluminación, más allá del propio nirvana. Detrás del
+            agujero, se vislumbra una versión reducida de la misma plancha de metal, sugiriendo un espíritu que, en su
+            ascenso, ha traspasado los confines del nirvana con la esperanza de que todos alcancen la iluminación,
+            beneficiando a todos los seres.</p>
+          <p>Con "Ultreya: Más Allá", Paz Arés Osset nos invita no solo a contemplar, sino a reflexionar y a emprender
+            nuestro propio viaje espiritual, recordándonos que, pese a las adversidades, siempre hay un horizonte
+            luminoso esperándonos. Es un canto a la resiliencia del espíritu humano, un testimonio de fe y una oda a la
+            búsqueda eterna de la verdad y la luz. Una reflexión profunda sobre nuestra propia travesía espiritual,
+            sobre la posibilidad de ir más allá de nuestras limitaciones y aspirar a un bienestar colectivo.</p>
         </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
-          <img class="zoom-image" src="Ultreya_salon.jpg" width="100%" style="border:30px solid white;" alt="Amazing">
+        <!-- English -->
+        <div class="en language text-justify" style="display:none;">
+          <p>Diving into the sparkling pictorial universe of <strong>"Ultreya: Beyond"</strong>, it's evident that Paz
+            Arés Osset presents us not only with a visual landscape but with an intimate testimony of her spiritual and
+            transcendental journey. Measuring 145 by 110 cm, the canvas goes beyond merely carrying color and shape;
+            it's a cartography of the soul guiding us through the dark seas of Samsara to the luminous horizon of
+            enlightenment.</p>
+          <p>The title "Ultreya", originally chosen by the artist, roots itself in the cursillista Christian meetings
+            and the pilgrims' cry of encouragement, where participants gathered seeking spiritual guidance and comfort.
+            The word, with its connotation of <strong>"going beyond"</strong>, deeply resonates with the essence of this
+            painting. It's a call to persevere, akin to ancient sailors shouting "ultreya" upon sighting land, marking
+            the end of a challenging voyage and the beginning of a new chapter.</p>
+          <p>Arés Osset's mixed technique plays an essential role in this spiritual journey. The
+            <strong>carborundum</strong>, with its rough textures and heart-like curvy shapes, symbolizes the tumultuous
+            sea of Samsara. But within this sea float <strong>brilliant blue agates</strong>, like islands of hope and
+            serenity. These agates, with their ethereal and luminous glow, contrast and balance the roughness of the
+            carborundum, reminding us that even amid the storm, beauty and light can be found.
+          </p>
+          <p>The <strong>acrylic metal</strong> strengthens this transition from the dark and turbulent Samsara to the
+            luminosity of Nirvana, adding an almost celestial shine to the composition, reflecting that coveted divinity
+            and light we all seek.</p>
+          <p>On the right side, we find a touching detail: a <strong>copper metal circle</strong>, delicately drilled
+            with small crosses. It represents a liberated spirit, rising above the sea of Samsara and heading to the
+            sky, painted in an intense yellow and sprinkled with mica shining like floating stars. This spirit heads
+            towards an <strong>open circle</strong>, skillfully cut out in the painting on the top left. This hole
+            symbolizes the possibility to transcend the limits of the painting itself, inviting us to go beyond
+            enlightenment, even beyond Nirvana itself. Behind the hole, a smaller version of the same metal plate is
+            glimpsed, suggesting a spirit that, in its ascent, has transcended the confines of nirvana in the hope that
+            all achieve enlightenment, benefiting all beings.</p>
+          <p>With "Ultreya: Beyond", Paz Arés Osset invites us not just to observe, but to reflect and embark on our own
+            spiritual journey, reminding us that, despite adversities, a luminous horizon always awaits. It's a song to
+            the resilience of the human spirit, a testimony of faith, and an ode to the eternal quest for truth and
+            light. A profound reflection on our own spiritual journey, the possibility of transcending our limitations,
+            and aiming for collective well-being.</p>
         </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
-          <img class="zoom-image" src="ultreya_iluminada.jpg" width="100%" style="border:30px solid white;"
-            alt="Amazing">
+        <!-- Russian -->
+        <div class="ru language text-justify" style="display:none;">
+          <p>Погружение в сверкающую живописную вселенную <strong>«Ultreya: За Пределами»</strong> — это интимное
+            свидетельство духовного и трансцендентного путешествия Пас Арес Оссет. Полотно размером 145 на 110 см
+            выходит за рамки простого носителя цвета и формы; это картография души, которая ведет нас через темные моря
+            Сансары к светлому горизонту просветления.</p>
+          <p>Название «Ultreya», первоначально выбранное художницей, берет свое начало в христианских собраниях курсильи
+            и в ободряющем кличе паломников, где участники собирались в поисках духовного руководства и утешения. Слово
+            с его коннотацией <strong>«идти дальше»</strong> глубоко резонирует с сутью этой картины. Это призыв к
+            упорству, подобно древним морякам, кричавшим «ультрея» при виде суши, отмечая окончание трудного пути и
+            начало нового этапа.</p>
+          <p>Смешанная техника Арес Оссет играет важную роль в этом духовном путешествии. <strong>Карборунд</strong> с
+            его грубой текстурой и формами, напоминающими сердца, символизирует бушующее море Сансары. Но в этом море
+            плавают <strong>сияющие синие агаты</strong> — островки надежды и безмятежности. Эти агаты с их эфирным
+            свечением уравновешивают грубость карборунда, напоминая нам о том, что даже посреди бури можно найти красоту
+            и свет.</p>
+          <p><strong>Акриловый металл</strong> усиливает этот переход от темной Сансары к сиянию Нирваны, добавляя
+            композиции небесный блеск, отражающий ту божественность и свет, к которым мы все стремимся.</p>
+          <p>В правой части мы находим трогательную деталь: <strong>медный круг</strong>, тонко просверленный маленькими
+            крестиками. Он представляет освобожденный дух, возвышающийся над морем Сансары и направляющийся к небу,
+            окрашенному в насыщенный желтый цвет и усыпанному слюдой, сияющей как звезды. Этот дух направляется к
+            <strong>открытому кругу</strong>, искусно вырезанному в холсте в левом верхнем углу. Это отверстие
+            символизирует возможность выйти за пределы самой картины, приглашая нас выйти за пределы просветления, за
+            пределы самой Нирваны. За отверстием видна уменьшенная версия той же металлической пластины, внушающая дух,
+            который в своем восхождении преодолел границы нирваны в надежде, что все достигнут просветления.
+          </p>
+          <p>С «Ultreya: За Пределами» Пас Арес Оссет приглашает нас не просто созерцать, но и размышлять, отправляясь в
+            собственное духовное путешествие, напоминая нам, что, несмотря на невзгоды, нас всегда ждет светлый
+            горизонт. Это гимн стойкости человеческого духа, свидетельство веры и ода вечному поиску истины и света.</p>
         </div>
-      </div>
-    </div>
 
-  </section>
-  <!-- Rest of the HTML here... -->
-
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>
-              <div class="english language">Technique: Mixed with Carborundum, Agates, and Acrylic Metal.</div>
-              <div class="spanish language" style="display: none;">Técnica: Míxta con Carborundún, Ágatas y Metal
-                Acrílico.</div>
-              <div class="italian language" style="display: none;">Tecnica: Mista con Carborundum, Agate e Metallo
-                Acrilico.</div>
-              <div class="chinese language" style="display: none;">技术：碳化硅混合技术，玛瑙和丙烯金属.</div>
-              <div class="arabic language" style="display: none;">تقنية: مختلطة مع كاربوروندوم، عقيق، ومعدن أكريليك.
-              </div>
-            </li>
-
-
-
-            <li>
-              <div class="english language">Size: 145x110 cm</div>
-              <div class="spanish language" style="display: none;">Tamaño: 145x110 cm</div>
-              <div class="italian language" style="display: none;">Dimensioni: 145x110 cm</div>
-              <div class="chinese language" style="display: none;">尺寸：145x110厘米</div>
-              <div class="arabic language" style="display: none;">الحجم: 145x110 سم</div>
-            </li>
-
-            <li>
-              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
-              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
-              </div>
-              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
-              </div>
-              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
-              <div class="arabic language" style="display: none;">مكان الإبداع: كلية الفنون الجميلة في مدريد</div>
-
-            </li>
-            <li>
-              <div class="english language">Current Location: Private Collection Madrid</div>
-              <div class="spanish language" style="display: none;">Ubicación Actual: Colección en Madrid</div>
-              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
-              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
-              <div class="arabic language" style="display: none;">الموقع الحالي: مجموعة في مدريد</div>
-
-            </li>
-
-          </ul>
-
-
+        <!-- ... and other languages similarly ... -->
+        <div class="it language text-justify" style="display:none;">
+          <p>Immergendosi nell'universo pittorico scintillante di <strong>"Ultreya: Oltre"</strong>, è evidente che Paz
+            Arés Osset ci presenta non solo un paesaggio visivo, ma una testimonianza intima del suo viaggio spirituale
+            e trascendentale. Con dimensioni di 145 per 110 cm, la tela va oltre il semplice portare colore e forma; è
+            una cartografia dell'anima che ci guida attraverso i mari oscuri del Samsara verso l'orizzonte luminoso
+            dell'illuminazione.</p>
+          <p>Il titolo "Ultreya", originariamente scelto dall'artista, ha le sue radici negli incontri cursillistas
+            cristiani e nel grido di incoraggiamento dei pellegrini, dove i partecipanti si riunivano in cerca di guida
+            e conforto spirituale. La parola, con la sua connotazione di <strong>"andare oltre"</strong>, risuona
+            profondamente con l'essenza di questo quadro. È un invito a perseverare, simile agli antichi marinari che
+            gridavano "ultreya" alla vista della terra, segnando la fine di un lungo viaggio e l'inizio di un nuovo
+            capitolo.</p>
+          <p>La tecnica mista di Arés Osset gioca un ruolo essenziale in questo viaggio spirituale. Il
+            <strong>carborundum</strong>, con le sue texture grezze e forme curve che assomigliano a cuori, simbolizza
+            il tumultuoso mare del Samsara. Ma in questo mare galleggiano <strong>agate blu brillanti</strong>, come
+            isole di speranza e serenità. Queste agate, con la loro luminosità eterea, contrastano ed equilibrano la
+            ruvidità del carborundum, ricordandoci che anche in mezzo alla tempesta, bellezza e luce possono essere
+            trovate.
+          </p>
+          <p>Il <strong>metallo acrilico</strong> rafforza questa transizione dal Samsara oscuro e turbulento alla
+            luminosità del Nirvana, aggiungendo una brillantezza quasi celestiale alla composizione, riflettendo quella
+            divinità e luce tanto desiderate da tutti noi.</p>
+          <p>È sulla parte destra che troviamo un dettaglio toccante: un <strong>cerchio di metallo di rame</strong>,
+            delicatamente forato con piccole croci. Rappresenta uno spirito liberato, che si eleva sopra il mare del
+            Samsara e si dirige verso il cielo, dipinto in un giallo intenso e cospargiato di mica che brilla come
+            stelle fluttuanti. Questo spirito si dirige verso un <strong>cerchio aperto</strong>, abilmente ritagliato
+            nel quadro nella parte superiore sinistra. Questo foro simboleggia la possibilità di superare i limiti dello
+            stesso quadro, invitandoci a andare oltre l'illuminazione, al di là dello stesso Nirvana. Dietro il foro, si
+            intravede una versione ridotta della stessa lastra metallica, suggerendo uno spirito che, nella sua ascesa,
+            ha superato i confini del nirvana con la speranza che tutti raggiungano l'illuminazione, beneficiando tutti
+            gli esseri.</p>
+          <p>Con "Ultreya: Oltre", Paz Arés Osset ci invita non solo a osservare, ma a riflettere e ad intraprendere il
+            nostro personale viaggio spirituale, ricordandoci che, nonostante le avversità, c'è sempre un orizzonte
+            luminoso che ci aspetta. È un inno alla resilienza dello spirito umano, una testimonianza di fede e un'ode
+            alla ricerca eterna della verità e della luce. Una riflessione profonda sul nostro personale viaggio
+            spirituale, sulla possibilità di andare oltre le nostre limitazioni e aspirare al benessere collettivo.</p>
         </div>
-        <div class="col-6 md audio" style="display:none;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
+
+        <!-- German -->
+        <div class="de language text-justify" style="display:none;">
+          <p>In das funkelnde bildliche Universum von <strong>"Ultreya: Jenseits"</strong> einzutauchen, offenbart, dass
+            Paz Arés Osset uns nicht nur eine visuelle Landschaft präsentiert, sondern ein intimes Zeugnis ihrer
+            spirituellen und transzendentalen Reise. Mit den Maßen 145 x 110 cm geht die Leinwand weit darüber hinaus,
+            nur Farbe und Form zu tragen; sie ist eine Kartographie der Seele, die uns durch die dunklen Meere des
+            Samsara zum leuchtenden Horizont der Erleuchtung führt.</p>
+          <p>Der Titel "Ultreya", ursprünglich von der Künstlerin gewählt, hat seine Wurzeln in den christlichen
+            Cursillo-Treffen sowie im Ermutigungsruf der Pilger auf dem Jakobsweg. Das Wort mit seiner Konnotation von
+            <strong>"darüber hinausgehen"</strong> schwingt tief mit der Essenz dieses Gemäldes mit. Es ist ein Ruf zur
+            Ausdauer, ähnlich wie die alten Seeleute, die beim Erblicken des Festlandes "Ultreya" riefen und damit das
+            Ende einer beschwerlichen Reise und den Beginn eines neuen Kapitels markierten.
+          </p>
+          <p>Die Mischtechnik von Arés Osset spielt eine wesentliche Rolle auf dieser spirituellen Reise. Das
+            <strong>Karborund</strong> mit seinen rauen Texturen und organischen, herzähnlichen Formen symbolisiert das
+            turbulente Meer des Samsara. Doch in diesem Meer schweben <strong>brillante blaue Achate</strong> wie Inseln
+            der Hoffnung und Gelassenheit. Diese Achate mit ihrem ätherischen und leuchtenden Glanz kontrastieren und
+            balancieren die Rauheit des Karborunds aus und erinnern uns daran, dass auch inmitten des Sturms Schönheit
+            und Licht zu finden sind.
+          </p>
+          <p>Das <strong>Acrylmetall</strong> verstärkt diesen Übergang vom dunklen Samsara zur Leuchtkraft des Nirwana
+            und verleiht der Komposition einen fast himmlischen Glanz, der die ersehnte Göttlichkeit und das Licht
+            widerspiegelt, nach dem wir alle suchen.</p>
+          <p>Auf der rechten Seite finden wir ein berührendes Detail: einen <strong>Kupfermetallkreis</strong>, der zart
+            mit kleinen Kreuzen durchbohrt ist. Er repräsentiert einen befreiten Geist, der sich über das Meer des
+            Samsara erhebt und dem Himmel entgegenstrebt, der in einem intensiven Gelb gemalt und mit Glimmer bestreut
+            ist, der wie Sterne funkelt. Dieser Geist strebt einem <strong>offenen Kreis</strong> entgegen, der oben
+            links geschickt aus der Leinwand geschnitten wurde. Dieses Loch symbolisiert die Möglichkeit, die Grenzen
+            des Gemäldes selbst zu überschreiten, und lädt uns ein, über die Erleuchtung, ja sogar über das Nirwana
+            selbst hinauszugehen.</p>
+          <p>Mit "Ultreya: Jenseits" lädt uns Paz Arés Osset nicht nur zum Betrachten ein, sondern auch zum Reflektieren
+            und dazu, unsere eigene spirituelle Reise anzutreten. Es ist ein Gesang auf die Resilienz des menschlichen
+            Geistes, ein Zeugnis des Glaubens und eine Ode an die ewige Suche nach Wahrheit und Licht.</p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="multilingual-description">
-    <div class="container">
-      <h1 style="color: gold;">
-        <div class="english language">Description</div>
-        <div class="spanish language" style="display: none;">Descripción</div>
-        <div class="italian language" style="display: none;">Descrizione</div>
-        <div class="chinese language" style="display: none;">描述</div>
-        <div class="arabic language" style="display: none;">وصف</div>
-      </h1>
+        <!-- French -->
+        <div class="fr language text-justify" style="display:none;">
+          <p>Plonger dans l'univers pictural étincelant de <strong>"Ultreya : Au-delà"</strong>, c'est découvrir que Paz
+            Arés Osset nous présente non seulement un paysage visuel, mais aussi un témoignage intime de son voyage
+            spirituel et transcendantal. Mesurant 145 par 110 cm, la toile va bien au-delà du simple support de couleurs
+            et de formes ; c'est une cartographie de l'âme qui nous guide à travers les mers sombres du Samsara vers
+            l'horizon lumineux de l'éveil.</p>
+          <p>Le titre "Ultreya", initialement choisi par l'artiste, prend ses racines dans les rencontres chrétiennes du
+            Cursillo et dans le cri d'encouragement des pèlerins de Saint-Jacques. Le mot, avec sa connotation de
+            <strong>"aller plus loin"</strong>, résonne profondément avec l'essence de ce tableau. C'est un appel à la
+            persévérance, semblable aux anciens marins qui criaient « ultreya » en apercevant la terre ferme, marquant
+            la fin d'un voyage ardu et le début d'une nouvelle étape.
+          </p>
+          <p>La technique mixte d'Arés Osset joue un rôle essentiel dans ce voyage spirituel. Le
+            <strong>carborundum</strong>, avec ses textures rugueuses et ses formes organiques évoquant des cœurs,
+            symbolise la mer tumultueuse du Samsara. Mais dans cette mer flottent de <strong>brillantes agates
+              bleues</strong>, comme des îles d'espoir et de sérénité. Ces agates contrastent et équilibrent la rugosité
+            du carborundum, nous rappelant que même au milieu de la tempête, la beauté et la lumière peuvent être
+            trouvées.
+          </p>
+          <p>Le <strong>métal acrylique</strong> renforce cette transition du Samsara sombre vers la luminosité du
+            Nirvana, ajoutant un éclat presque céleste à la composition, reflétant cette divinité et cette lumière tant
+            recherchées.</p>
+          <p>Sur le côté droit, nous trouvons un détail émouvant : un <strong>cercle de métal cuivre</strong>,
+            délicatement percé de petites croix. Il représente un esprit libéré, qui s'élève au-dessus de la mer du
+            Samsara et se dirige vers le ciel, peint dans un jaune intense parsemé de mica qui brille comme des étoiles.
+            Cet esprit se dirige vers un <strong>cercle ouvert</strong>, habilement découpé en haut à gauche. Cet
+            orifice symbolise la possibilité de dépasser les limites du tableau lui-même, nous invitant à aller au-delà
+            de l'éveil, au-delà du Nirvana lui-même.</p>
+          <p>Avec "Ultreya : Au-delà", Paz Arés Osset nous invite à contempler, à réfléchir et à entreprendre notre
+            propre voyage spirituel. C'est un chant à la résilience de l'humanité, un témoignage de foi et une ode à la
+            quête éternelle du vrai et du beau.</p>
+        </div>
 
+        <!-- Support other languages (Chinese, Arabic, Japanese, Portuguese) with quality translations -->
+        <div class="zh language text-justify" style="display:none;">
+          <p>
+            深入探究<strong>《Ultreya：超越》</strong>闪烁的绘画世界，显然帕斯·阿雷斯·奥塞特不仅展现了一幅视觉景观，还分享了她精神与超越之旅的亲密见证。这幅145x110厘米的画布不仅承载着色彩与形状，更是灵魂的地图，指引我们穿过轮回（Samsara）的黑暗海洋，驶向觉悟的光明地平线。
+          </p>
+          <p>
+            “Ultreya”这一标题最初由艺术家选定，源于基督教的团契聚会以及朝圣者的鼓励欢呼。这个词含有<strong>“走得更远”</strong>的寓意，与画作的本质深度共鸣。这是一种坚持的召唤，正如古代水手在望见陆地时高喊“ultreya”，标志着一段艰辛旅程的结束和新篇章的开启。
+          </p>
+          <p>
+            阿雷斯·奥塞特的混合技法在这次精神之旅中扮演了关键角色。<strong>碳化硅（Carborundum）</strong>粗糙的质地和酷似心灵的有机形状，象征着轮回中波涛汹涌的苦海。然而，在这片海中浮现着<strong>闪亮的蓝色玛瑙</strong>，如同希望和宁静的小岛。这些玛瑙以其空灵而明亮的光芒，与碳化硅的粗糙形成对比并达到平衡，提醒我们即使在风暴中心，也能寻得美丽与光明。
+          </p>
+          <p><strong>丙烯金属</strong>增强了从黑暗动荡的轮回向涅槃光明的过渡，为作品平添了一抹近乎神圣的光辉，反映出我们所有人都在寻找的渴望之光。</p>
+          <p>
+            在画布右侧，我们发现了一个动人的细节：一个<strong>铜制圆环</strong>，精细地钻有小十字架。它代表着一个解脱的灵魂，正升起在轮回之海上，奔向被强烈的黄色浸染、点缀着如繁星般闪烁的云母的天空。这个灵魂正朝向画布左上方巧妙切割出的<strong>开放圆孔</strong>飞去。这个孔洞象征着超越画作本身界限的可能性，邀请我们走向启蒙之彼岸，甚至超越涅槃本身。在孔洞背后，隐约可见相同金属板的缩小版，暗示着灵魂在上升过程中已超越涅槃，怀揣着众生皆可圆满觉悟的宏愿。
+          </p>
+          <p>
+            通过《Ultreya：超越》，帕斯·阿雷斯·奥塞特邀请我们不仅去观察，更去反思并开启自己的精神之旅。它提醒我们，无论逆境如何，总有一片光明在前方等待。这是对人类精神韧性的赞歌，是对信仰的见证，也是对永恒追寻真理与光明的颂扬。
+          </p>
+        </div>
 
-      <div class="english language">
-        <!-- English description here -->
-        <p>
-          Diving into the sparkling pictorial universe of "Ultreya: Más Allá", it's evident that Paz Arés Osset presents
-          us not
-          only with a visual landscape but with an intimate testimony of her spiritual and transcendental journey.
-          Measuring 145
-          by 110 cm, the canvas goes beyond merely carrying color and shape; it's a cartography of the soul guiding us
-          through
-          the dark seas of Samsara to the luminous horizon of enlightenment.
-        </p>
+        <div class="ar language text-justify" style="display:none;">
+          <p>عند الغوص في الكون التصويري المتألق لـ <strong>"أولتريا: ما وراء"</strong>، يتضح أن باز آريس أوسيت لا تقدم
+            لنا مجرد منظر بصري، بل شهادة حميمة على رحلتها الروحية والمتسامية. وبأبعاد 145 في 110 سم، تتجاوز اللوحة مجرد
+            حمل اللون والشكل؛ إنها رسم لخرائط الروح الذي يقودنا عبر بحار "السامسارا" المظلمة نحو أفق التنوير المضيء.</p>
+          <p>العنوان "Ultreya"، الذي اختارته الفنانة في الأصل، له جذوره في الاجتماعات المسيحية للكورسيه وصيحات تشجيع
+            الحجاج، حيث كان المشاركون يجتمعون بحثًا عن الإرشاد الروحي والعزاء. الكلمة، بمعناها الذي يوحي بـ
+            <strong>"الذهاب أبعد"</strong>، تتناغم بعمق مع جوهر هذه اللوحة. إنها دعوة للمثابرة، تشبه صرخة البحارة
+            القدامى "أولتريا" عند رؤية البر، معلنةً نهاية رحلة شاقة وبداية فصل جديد.
+          </p>
+          <p>تلعب التقنية المختلطة لآريس أوسيت دورًا أساسيًا في هذه الرحلة الروحية. <strong>"الكاربوروندوم"</strong>،
+            بقوامه الخشن وأشكاله المنحنية التي تشبه القلوب، يرمز إلى بحر السامسارا المتقلب. ولكن في هذا البحر، تطفو
+            <strong>أحجار العقيق الأزرق اللامعة</strong>، كجزر من الأمل والسكينة. هذه الأحجار، بتوهجها الأثيري والمضيء،
+            تتناقض مع خشونة الكاربوروندوم وتوازنها، مذكرةً إيانا بأنه حتى في وسط العاصفة، يمكن العثور على الجمال والضوء.
+          </p>
+          <p>يعزز <strong>المعدن الأكريليك</strong> هذا الانتقال من السامسارا المظلمة والمضطربة نحو إشراق النيرفانا،
+            مضيفًا لمعانًا شبه سماوي للتكوين، ومعكسًا ذلك الضوء الإلهي الذي نسعى إليه جميعًا.</p>
+          <p>في الجانب الأيمن نجد تفصيلاً مؤثرًا: <strong>دائرة من النحاس المعدني</strong>، مثقوبة بدقة بصلبان صغيرة.
+            إنها تمثل روحًا متحررة، ترتفع فوق بحر السامسارا وتتجه نحو السماء الملونة بالأصفر المكثف والمرشوشة بالميكا
+            التي تلمع مثل النجوم العائمة. تتجه هذه الروح نحو <strong>دائرة مفتوحة</strong>، تم قطعها بمهارة في الزاوية
+            العلوية اليسرى. يرمز هذا الثقب إلى إمكانية تجاوز حدود اللوحة نفسها، داعيًا إيانا للذهاب إلى ما وراء التنوير،
+            بل وراء النيرفانا نفسها.</p>
+          <p>من خلال "أولتريا: ما وراء"، تدعونا باز آريس أوسيت ليس فقط للتأمل، بل للتفكير والبدء في رحلتنا الروحية
+            الخاصة، مذكرةً إيانا بأنه على الرغم من المحن، هناك دائمًا أفق مشرق ينتظرنا. إنها ترنيمة لمرونة الروح
+            البشرية، وشهادة إيمان، وقصيدة للبحث الأبدي عن الحقيقة والضوء.</p>
+        </div>
 
-        <p>
-          The title "Ultreya", originally chosen by the artist, roots itself in the cursillista Christian meetings,
-          where
-          participants gathered seeking spiritual guidance and comfort. The word, with its connotation of "going
-          beyond", deeply
-          resonates with the essence of this painting. It's a call to persevere, akin to ancient sailors shouting
-          "ultreya" upon
-          sighting land, marking the end of a challenging voyage and the beginning of a new chapter.
-        </p>
+        <div class="ja language text-justify" style="display:none;">
+          <p>
+            <strong>「ウルトレヤ：彼方へ」</strong>のきらめく絵画的世界に浸ることは、パズ・アレス・オセットが単なる視覚的な風景ではなく、彼女の精神的かつ超越的な旅の親密な証を示していることに気づかされます。145×110cmのキャンバスは、単に色や形を運ぶだけのものではありません。それは、輪廻（サムサーラ）の暗い海を越えて、悟りの輝かしい地平線へと私たちを導く魂の地図なのです。
+          </p>
+          <p>
+            アーティストによって選ばれた「ウルトレヤ」というタイトルは、キリスト教の会合やサンティアゴの巡礼者の励ましの声に由来します。<strong>「さらに先へ」</strong>という含意を持つこの言葉は、この絵画の本質と深く共鳴しています。それは、荒波を乗り越え陸地を見つけた航海士が「ウルトレヤ」と叫び、困難な旅の終わりと新しい章の始まりを告げたように、忍耐を呼びかける声なのです。
+          </p>
+          <p>
+            混合技法はこの旅において重要な役割を果たしています。<strong>カーボランダム</strong>の荒い質感と心を想起させる有機的な形は、波立つ輪廻の海を象徴しています。しかし、その海には、希望と静寂の島のように<strong>輝く青い瑪瑙</strong>が浮かんでいます。これらの瑪瑙は、エーテルのような光を放ち、カーボランダムの力強さと均衡を保ちながら、嵐の中でも美と光を見いだせることを教えてくれます。
+          </p>
+          <p><strong>アクリルメタル</strong>は、暗い輪廻から涅槃の輝きへの移行を強化し、私たちが求めてやまない神聖な光を反映しています。</p>
+          <p>
+            画布の右側には、小さな十字架が繊細に刻まれた<strong>銅の円形プレート</strong>があります。これは、輪廻の海から解き放たれ、星のように輝く雲母が散りばめられた黄色い空へと昇る自由な精神を表しています。この精神は、画面左上に巧みに切り取られた<strong>「開かれた円」</strong>へと向かっています。この穴は、絵画自体の境界を越える可能性を象徴し、悟りの先、涅槃をも超えた場所へと私たちを誘います。
+          </p>
+          <p>パズ・アレス・オセットは、この作品を通じて、私たち自身の精神的な旅を振り返るよう促しています。どんな逆境にあっても、輝かしい未来が待っていることを、この「ウルトレヤ」は信じさせてくれるのです。</p>
+        </div>
 
-        <p>
-          Arés Osset's mixed technique plays an essential role in this spiritual journey. The carborundum, with its
-          rough
-          textures and heart-like curvy shapes, symbolizes the tumultuous sea of Samsara. But within this sea float
-          brilliant
-          blue agates, like islands of hope and serenity. These agates, with their ethereal and luminous glow, contrast
-          and
-          balance the roughness of the carborundum, reminding us that even amid the storm, beauty and light can be
-          found.
-        </p>
-
-        <p>
-          The acrylic metal strengthens this transition from the dark and turbulent Samsara to the luminosity of
-          Nirvana, adding
-          an almost celestial shine to the composition, reflecting that coveted divinity and light we all seek.
-        </p>
-
-        <p>
-          On the right side, we find a touching detail: a copper metal circle, delicately drilled with small crosses. It
-          represents a liberated spirit, rising above the sea of Samsara and heading to the sky, painted in an intense
-          yellow
-          and sprinkled with mica shining like floating stars. This spirit heads towards an open circle, skillfully cut
-          out in
-          the painting on the top left. This hole symbolizes the possibility to transcend the limits of the painting
-          itself,
-          inviting us to go beyond enlightenment, even beyond Nirvana itself. Behind the hole, a smaller version of the
-          same
-          metal plate is glimpsed, suggesting a spirit that, in its ascent, has transcended the confines of nirvana in
-          the hope
-          that all achieve enlightenment, benefiting all beings.
-        </p>
-
-        <p>
-          With "Ultreya: Más Allá", Paz Arés Osset invites us not just to observe, but to reflect and embark on our own
-          spiritual journey, reminding us that, despite adversities, a luminous horizon always awaits. It's a song to
-          the
-          resilience of the human spirit, a testimony of faith, and an ode to the eternal quest for truth and light. A
-          profound
-          reflection on our own spiritual journey, the possibility of transcending our limitations, and aiming for
-          collective
-          well-being. A masterpiece that will remain etched in the collective memory of contemporary art.
-        </p>
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <!-- Spanish description here -->
-        <p>
-          Al sumergirse en el rutilante universo pictórico de "Ultreya: Más Allá", es evidente que Paz Arés Osset nos
-          presenta no
-          sólo un paisaje visual, sino un testimonio íntimo de su viaje espiritual y trascendental. Con dimensiones de
-          145 por 110
-          cm, el lienzo va más allá de ser un mero portador de color y forma; es una cartografía del alma que nos guía a
-          través de
-          los oscuros mares del Samsara hacia el luminoso horizonte de la iluminación.
-        </p>
-
-        <p>
-          El título "Ultreya", que inicialmente escogió la artista, tiene sus raíces en las reuniones cursillistas de
-          cristiandad,
-          donde los participantes se congregaban en busca de guía y consuelo espiritual. La palabra, con su connotación
-          de "ir más
-          allá", resuena profundamente con la esencia de este cuadro. Es una llamada a perseverar, similar a los
-          antiguos
-          marineros que gritaban "ultreya" al divisar tierra firme, marcando el final de un arduo viaje y el inicio de
-          una nueva
-          etapa.
-        </p>
-
-        <p>
-
-          La técnica mixta de Arés Osset juega un papel esencial en este viaje espiritual. El carborundum, con sus
-          texturas
-          rugosas y formas curvas que asemejan corazones, simboliza el tumultuoso mar del Samsara. Pero en este mar,
-          flotan ágatas
-          azules brillantes, como islas de esperanza y serenidad. Estas ágatas, con su brillo etéreo y luminoso,
-          contrastan y
-          equilibran la rugosidad del carborundum, recordándonos que incluso en medio de la tempestad, la belleza y la
-          luz pueden
-          encontrarse.
-        </p>
-
-        <p>
-
-          El metal acrílico refuerza esta transición del oscuro y turbulento Samsara hacia la luminosidad del Nirvana,
-          añadiendo
-          un brillo casi celestial a la composición, reflejando esa ansiada divinidad y luz que todos buscamos.
-        </p>
-
-        <p>
-          Es en la parte derecha donde encontramos un detalle conmovedor: un círculo de metal cobre, delicadamente
-          taladrado con
-          pequeñas crucecitas. Representa un espíritu liberado, que se eleva sobre el mar del Samsara y se dirige al
-          cielo,
-          pintado en un amarillo intenso y salpicado con mica que brilla como estrellas flotantes. Este espíritu se
-          dirige hacia
-          un círculo abierto, hábilmente recortado en el cuadro en la parte superior izquierda. Este orificio simboliza
-          la
-          posibilidad de traspasar los límites del propio cuadro, invitándonos a ir más allá de la iluminación, más allá
-          del
-          propio nirvana. Detrás del agujero, se vislumbra una versión reducida de la misma plancha de metal, sugiriendo
-          un
-          espíritu que, en su ascenso, ha traspasado los confines del nirvana con la esperanza de que todos alcancen la
-          iluminación, beneficiando a todos los seres.
-        </p>
-
-        <p>
-          Con "Ultreya: Más Allá", Paz Arés Osset nos invita no solo a contemplar, sino a reflexionar y a emprender
-          nuestro propio
-          viaje espiritual, recordándonos que, pese a las adversidades, siempre hay un horizonte luminoso esperándonos.
-          Es un
-          canto a la resiliencia del espíritu humano, un testimonio de fe y una oda a la búsqueda eterna de la verdad y
-          la luz.
-          Una reflexión profunda sobre nuestra propia travesía espiritual, sobre la posibilidad de ir más allá de
-          nuestras
-          limitaciones y aspirar a un bienestar colectivo. Una obra maestra que quedará grabada en la memoria colectiva
-          del arte
-          contemporáneo.
-        </p>
-
+        <div class="pt language text-justify" style="display:none;">
+          <p>Mergulhar no rutilante universo pictórico de <strong>"Ultreya: Além"</strong>, revela que Paz Arés Osset
+            nos apresenta não apenas uma paisagem visual, mas um testemunho íntimo da sua viagem espiritual e
+            transcendental. Com dimensões de 145 por 110 cm, a tela vai além de ser um mero suporte de cores; é uma
+            cartografia da alma que nos guia através dos mares escuros do Samsara em direção ao luminoso horizonte da
+            iluminação.</p>
+          <p>O título "Ultreya", originalmente escolhido pela artista, tem raízes nos encontros cristãos do Cursilho e
+            no grito de incentivo dos peregrinos de Compostela. A palavra, com a sua conotação de <strong>"ir mais
+              além"</strong>, ressoa profundamente com a essência deste quadro. É um apelo à perseverança, semelhante
+            aos antigos marinheiros que gritavam "ultreya" ao avistarem terra firme, marcando o fim de uma viagem árdua
+            e o início de uma nova etapa.</p>
+          <p>A técnica mista de Arés Osset desempenha um papel essencial. O <strong>carborundum</strong>, com as suas
+            texturas rugosas e formas curvas que lembram corações, simboliza o mar tumultuado do Samsara. No entanto,
+            neste mar flutuam <strong>ágatas azuis brilhantes</strong>, como ilhas de esperança e serenidade. Estas
+            ágatas equilibram a rugosidade do carborundum, lembrando-nos que mesmo no meio da tempestade, a beleza pode
+            ser encontrada.</p>
+          <p>El <strong>metal acrílico</strong> reforça esta transição da escuridão para a luminosidade do Nirvana,
+            adicionando um brilho quase celestial à composição, refletindo a divindade que todos procuramos.</p>
+          <p>À direita, encontramos um detalhe comovente: um <strong>círculo de metal cobre</strong>, delicadamente
+            perfurado com pequenas cruzes. Representa um espírito libertado, que se eleva sobre o mar do Samsara e se
+            dirige ao céu, pintado num amarelo intenso e salpicado com mica que brilha como estrelas. Este espírito
+            dirige-se a um <strong>círculo aberto</strong>, habilmente recortado na tela. Este orifício simboliza a
+            possibilidade de ultrapassar os limites do próprio quadro, convidando-nos a ir além do Nirvana.</p>
+          <p>Com "Ultreya: Além", Paz Arés Osset convida-nos a refletir e a empreender a nossa própria viagem
+            espiritual. É um hino à resiliência do espírito humano, um testemunho de fé e uma ode à busca eterna da luz
+            e da verdade.</p>
+        </div>
 
       </div>
+    </section>
 
-
-      <div class="italian language" style="display: none;">
-        <!-- Italian description here -->
-        <p>
-          Immergendosi nell'universo pittorico scintillante di "Ultreya: Más Allá", è evidente che Paz Arés Osset ci
-          presenta
-          non solo un paesaggio visivo, ma una testimonianza intima del suo viaggio spirituale e trascendentale. Con
-          dimensioni
-          di 145 per 110 cm, la tela va oltre il semplice portare colore e forma; è una cartografia dell'anima che ci
-          guida
-          attraverso i mari oscuri del Samsara verso l'orizzonte luminoso dell'illuminazione.
-        </p>
-
-        <p>
-          Il titolo "Ultreya", originariamente scelto dall'artista, ha le sue radici negli incontri cursillistas
-          cristiani, dove
-          i partecipanti si riunivano in cerca di guida e conforto spirituale. La parola, con la sua connotazione di
-          "andare
-          oltre", risuona profondamente con l'essenza di questo quadro. È un invito a perseverare, simile agli antichi
-          marinai
-          che gridavano "ultreya" alla vista della terra, segnando la fine di un lungo viaggio e l'inizio di un nuovo
-          capitolo.
-        </p>
-
-        <p>
-          La tecnica mista di Arés Osset gioca un ruolo essenziale in questo viaggio spirituale. Il carborundum, con le
-          sue
-          texture grezze e forme curve che assomigliano a cuori, simbolizza il tumultuoso mare del Samsara. Ma in questo
-          mare
-          galleggiano agate blu brillanti, come isole di speranza e serenità. Queste agate, con la loro luminosità
-          eterea,
-          contrastano ed equilibrano la ruvidità del carborundum, ricordandoci che anche in mezzo alla tempesta,
-          bellezza e luce
-          possono essere trovate.
-        </p>
-
-        <p>
-          Il metallo acrilico rafforza questa transizione dal Samsara oscuro e turbolento alla luminosità del Nirvana,
-          aggiungendo una brillantezza quasi celestiale alla composizione, riflettendo quella divinità e luce tanto
-          desiderate
-          da tutti noi.
-        </p>
-
-        <p>
-          È sulla parte destra che troviamo un dettaglio toccante: un cerchio di metallo di rame, delicatamente forato
-          con
-          piccole croci. Rappresenta uno spirito liberato, che si eleva sopra il mare del Samsara e si dirige verso il
-          cielo,
-          dipinto in un giallo intenso e cospargiato di mica che brilla come stelle fluttuanti. Questo spirito si dirige
-          verso
-          un cerchio aperto, abilmente ritagliato nel quadro nella parte superiore sinistra. Questo foro simboleggia la
-          possibilità di superare i limiti dello stesso quadro, invitandoci a andare oltre l'illuminazione, al di là
-          dello
-          stesso Nirvana. Dietro il foro, si intravede una versione ridotta della stessa lastra metallica, suggerendo
-          uno
-          spirito che, nella sua ascesa, ha superato i confini del nirvana con la speranza che tutti raggiungano
-          l'illuminazione, beneficiando tutti gli esseri.
-        </p>
-
-        <p>
-          Con "Ultreya: Más Allá", Paz Arés Osset ci invita non solo a osservare, ma a riflettere e ad intraprendere il
-          nostro
-          personale viaggio spirituale, ricordandoci che, nonostante le avversità, c'è sempre un orizzonte luminoso che
-          ci
-          aspetta. È un inno alla resilienza dello spirito umano, una testimonianza di fede e un'ode alla ricerca eterna
-          della
-          verità e della luce. Una riflessione profonda sul nostro personale viaggio spirituale, sulla possibilità di
-          andare
-          oltre le nostre limitazioni e aspirare al benessere collettivo. Un capolavoro che rimarrà impresso nella
-          memoria
-          collettiva dell'arte contemporanea.
-        </p>
-
-
+    <!-- Support Section -->
+    <section class="section-card text-center">
+      <h2 class="text-warning mb-4 jumbotron-heading" style="font-size: 2.2rem;">
+        <span class="es language">Sembrar para Sanar</span>
+        <span class="en language" style="display:none;">Sowing to Heal</span>
+        <span class="it language" style="display:none;">Semina per Guarire</span>
+        <span class="ru language" style="display:none;">Сеять во благо исцеления</span>
+        <span class="zh language" style="display:none;">播种以治愈</span>
+        <span class="ar language" style="display:none;">الزرع للشفاء</span>
+        <span class="de language" style="display:none;">Säen um zu Heilen</span>
+        <span class="fr language" style="display:none;">Semer pour Guérir</span>
+        <span class="ja language" style="display:none;">癒やしのために種をまく</span>
+        <span class="pt language" style="display:none;">Semear para Curar</span>
+      </h2>
+      <p class="lead px-lg-5" style="font-style: italic; opacity: 0.9;">
+        <span class="es language">Tu generosidad permite a la artista expandir su misión de paz, llevando la luz de la
+          educación y el arte trascendente a todos los rincones del mundo.</span>
+        <span class="en language" style="display:none;">Your generosity allows the artist to expand her mission of
+          peace,
+          bringing the light of education and transcendent art to every corner of the world.</span>
+        <span class="it language" style="display:none;">La tua generosità permette all'artista di espandere la sua
+          missione
+          di pace, portando la luce dell'educazione e dell'arte trascendente in ogni angolo del mondo.</span>
+        <span class="ru language" style="display:none;">Ваша щедрость позволяет художнице расширять свою мирную миссию,
+          неся
+          свет образования и трансцендентного искусства во все уголки мира.</span>
+        <span class="zh language" style="display:none;">您的慷慨让艺术家能够扩展她的和平使命，将教育和卓越艺术的光芒带到世界的每一个角落。</span>
+        <span class="ar language" style="display:none;">كرمك يسمح للفنانة بتوسيع رسالتها للسلام، وجلب نور التعليم والفن
+          المتسامي إلى كل ركن من أركان العالم.</span>
+        <span class="de language" style="display:none;">Ihre Großzügigkeit ermöglicht es der Künstlerin, ihre
+          Friedensmission zu erweitern und das Licht der Bildung und der transzendenten Kunst in jeden Winkel der Welt
+          zu
+          tragen.</span>
+        <span class="fr language" style="display:none;">Votre générosité permette à l'artiste d'étendre sa mission de
+          paix,
+          apportant la lumière de l'éducation et de l'art trascendant aux quatre coins du monde.</span>
+        <span class="ja language" style="display:none;">あなたの寛大さは、教育と超越的な芸術の光を世界の隅々に届け、アーティストが平和の使命を広げることを可能にします。</span>
+        <span class="pt language" style="display:none;">Sua generosidade permite à artista expandir sua misión de paz,
+          levando a luz da educação e da arte trascendente a todos os cantos do mundo.</span>
+      </p>
+      <a href="../../linktree.html" class="btn btn-outline-warning btn-lg px-5 mt-3 mission-btn">
+        <i class="fas fa-magic mr-2"></i>
+        <span class="es language">Apoyar la Misión</span>
+        <span class="en language" style="display:none;">Support the Mission</span>
+        <span class="it language" style="display:none;">Sostieni la Missione</span>
+        <span class="ru language" style="display:none;">Поддержать миссию</span>
+        <span class="zh language" style="display:none;">支持使命</span>
+        <span class="ar language" style="display:none;">دعم الرسالة</span>
+        <span class="de language" style="display:none;">Die Mission unterstützen</span>
+        <span class="fr language" style="display:none;">Soutenir la Mission</span>
+        <span class="ja language" style="display:none;">使命を支援する</span>
+        <span class="pt language" style="display:none;">Apoiar a Missão</span>
+      </a>
+      <div class="mt-4">
+        <a href="../../gallery/index.html" class="btn btn-link text-muted">
+          <i class="fas fa-arrow-left mr-2"></i>
+          <span class="es language">Volver a la Galería</span>
+          <span class="en language" style="display:none;">Back to Gallery</span>
+          <span class="it language" style="display:none;">Torna alla Galleria</span>
+          <span class="ru language" style="display:none;">Вернуться в галерею</span>
+          <span class="zh language" style="display:none;">返回画廊</span>
+          <span class="ar language" style="display:none;">العودة إلى المعرض</span>
+          <span class="de language" style="display:none;">Zurück zur Galerie</span>
+          <span class="fr language" style="display:none;">Retour à la Galerie</span>
+          <span class="ja language" style="display:none;">ギャラリーに戻る</span>
+          <span class="pt language" style="display:none;">Voltar para a Galeria</span>
+        </a>
       </div>
+    </section>
+  </main>
 
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <p>
-          深入“Ultreya: Más Allá”这个闪亮的画面宇宙中，显然Paz Arés Osset不仅给我们展示了一个视觉景观，还分享了她的精神和超越之旅的亲身经历。尺寸为145x110厘米的画布不仅仅是色彩和形状的载体;
-          它是指导我们穿越Samsara的黑暗海洋，朝向启示的光明地平线的灵魂地图。
-        </p>
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset -
+      <span class="es language">El Arte que Transciende</span>
+      <span class="en language" style="display:none;">Transcendent Art</span>
+      <span class="it language" style="display:none;">L'Arte che Trascende</span>
+      <span class="ru language" style="display:none;">Искусство, превосходящее границы</span>
+      <span class="zh language" style="display:none;">超越边界的艺术</span>
+      <span class="ar language" style="display:none;">الفن الذي يتجاوز الحدود</span>
+      <span class="de language" style="display:none;">Kunst, die Grenzen überschreitet</span>
+      <span class="fr language" style="display:none;">L'Art qui Transcendera</span>
+      <span class="ja language" style="display:none;">境界を超える芸術</span>
+      <span class="pt language" style="display:none;">A Arte que Transcende</span>
+    </p>
+  </footer>
 
-        <p>
-          艺术家最初选择的标题“Ultreya”起源于基督教团契聚会，在那里参与者聚集在一起寻求精神指导和安慰。这个词，其“进一步”的涵义，与这幅画的本质深深共鸣。这是一个坚持下去的呼吁，就像古代的水手在看到陆地时大喊“ultreya”，标志着一个艰难旅程的结束和一个新阶段的开始。
-        </p>
-
-        <p>
-          Arés
-          Osset的混合技术在这次精神之旅中起着关键作用。卡宝砂，其粗糙的纹理和心形曲线，象征着Samsara的汹涌大海。但在这片海中，闪亮的蓝色玛瑙如同希望和宁静的小岛漂浮。这些玛瑙，其空灵和明亮的光芒，与卡宝砂的粗糙形成鲜明对比，提醒我们即使在暴风雨中，也可以找到美和光。
-        </p>
-
-        <p>
-          丙烯酸金属增强了从黑暗而汹涌的Samsara到Nirvana的明亮之间的过渡，为作品添加了几乎是天上的光辉，反映了我们所有人都在寻找的那种神圣和光明。
-        </p>
-
-        <p>
-          在右边我们发现了一个动人的细节：一个铜制金属圈，精心钻有小十字架。它代表一个被释放的灵魂，它升上Samsara的大海并走向天空，在那里强烈的黄色与闪亮的云母像浮动的星星一样闪烁。这个灵魂正走向一个开放的圈，巧妙地在画的左上方切割出来。这个孔代表了超越画本身的界限的可能性，邀请我们超越启示，超越Nirvana本身。在孔的背后，可以看到一个同样的金属板的缩小版本，暗示着一个在其上升过程中已经超越了Nirvana界限的灵魂，希望所有人都能达到启示，造福所有生灵。
-        </p>
-
-        <p>
-          通过“Ultreya: Más Allá”，Paz Arés
-          Osset不仅邀请我们观看，还邀请我们反思并开始我们自己的精神之旅，提醒我们，尽管面临困境，总会有一个光明的地平线等着我们。这是对人类精神韧性的赞美，对信仰的见证和对永恒寻找真理和光明的颂歌。关于我们自己的精神之旅的深入反思，关于超越我们自身局限的可能性并追求集体幸福。这是一部将在当代艺术的集体记忆中留下的杰作。
-        </p>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <!-- Arabic description here -->
-        <p>
-          عند الغمر في الكون الرسمي اللامع لـ "Ultreya: Más Allá"، من الواضح أن Paz Arés Osset تقدم لنا ليس فقط منظرًا
-          بصريًا،
-          ولكن شهادة شخصية على رحلتها الروحية والمتعدية. بأبعاد 145 × 110 سم، اللوحة تتجاوز أن تكون مجرد حامل للألوان
-          والأشكال؛
-          إنها خريطة الروح التي تقودنا عبر بحور Samsara المظلمة نحو الأفق المشرق للإنارة.
-        </p>
-
-        <p>
-          العنوان "Ultreya" الذي اختارته الفنانة في البداية يعود إلى اجتماعات الكرسي الديني، حيث اجتمع المشاركون بحثًا
-          عن
-          الإرشاد والعزاء الروحي. الكلمة، مع دلالتها على "الذهاب أبعد"، تت resonant بعمق مع جوهر هذه اللوحة. إنها دعوة
-          للمضي
-          قدمًا، تشبه البحارة القدماء الذين صرخوا بـ "ultreya" عندما رأوا الأرض الصلبة، مما يشير إلى نهاية رحلة شاقة
-          وبداية
-          مرحلة جديدة.
-        </p>
-
-        <p>
-          تقنية Arés Osset المختلطة تلعب دورًا أساسيًا في هذه الرحلة الروحية. الكربوروندوم، مع نسيجه الخشن وأشكاله
-          المقوسة التي
-          تشبه القلوب، يرمز إلى بحر Samsara المتقلب. ولكن في هذا البحر، تطفو أحجار العقيق الزرقاء اللامعة، كجزر الأمل
-          والهدوء.
-          هذه الأحجار، بتوهجها الخافت والمشرق، تتناقض وتوازن الخشونة الخاصة بالكربوروندوم، مذكرةً بأن الجمال والضوء يمكن
-          العثور
-          عليهما حتى في وسط العاصفة.
-        </p>
-
-        <p>
-          المعدن الأكريليك يعزز هذا الانتقال من Samsara المظلمة والمضطربة إلى إشراقة النيرفانا، مضيفًا توهجًا تقريبًا
-          سماويًا
-          إلى التكوين، معكسًا هذا الإلهي والضوء الذي نبحث جميعًا عنه.
-        </p>
-
-        <p>
-          في الجانب الأيمن نجد تفصيلًا مؤثرًا: دائرة من النحاس المعدني، مثقوبة بعناية بصلبان صغيرة. تمثل روحًا محررة،
-          ترتفع فوق
-          بحر Samsara وتتجه نحو السماء، الملونة بالأصفر القوي ومرشوشة بالميكا التي تلمع مثل النجوم المتطايرة. تتجه هذه
-          الروح نحو
-          حلقة مفتوحة، مقطوعة ببراعة في الزاوية العلوية اليسرى من اللوحة. هذا الفتح يمثل القدرة على تجاوز حدود اللوحة
-          نفسها،
-          داعيًا إلى العبور وراء الإلهام، وراء النيرفانا نفسها. خلف هذا الفتح، نرى نسخة مصغرة من اللوحة المعدنية نفسها،
-          مشيرة
-          إلى روح قد تجاوزت بالفعل حدود النيرفانا في مسارها الصاعد، متمنية الإلهام للجميع، لمصلحة جميع الكائنات الحية.
-        </p>
-
-        <p>
-          من خلال "Ultreya: Más Allá"، Paz Arés Osset تدعونا ليس فقط للنظر، ولكن للتفكير وبدء رحلتنا الروحية الخاصة،
-          مذكرةً بأن
-          هناك دائمًا أفقًا مشرقًا ينتظرنا، بغض النظر عن التحديات التي نواجهها. إنها ترنيمة لمرونة الروح البشرية، شهادة
-          على
-          الإيمان، ومدح للبحث الدائم عن الحقيقة والضوء. تأملات عميقة في رحلتنا الروحية، في إمكانية تجاوز حدودنا الخاصة
-          والسعي
-          نحو السعادة الجماعية. إنها عمل فني سيبقى في الذاكرة الجماعية للفن المعاصر.
-        </p>
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
 </body>
 
 </html>

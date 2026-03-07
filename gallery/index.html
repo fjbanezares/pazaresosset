@@ -1,407 +1,384 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Gallery Paz Arés Osset.</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <script src="index.js" charset="utf-8"></script>
+  <title>Galería de Arte - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../favicon.ico" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="index.css">
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <!-- Isotope & ImagesLoaded -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
-  <main role="main">
+  <!-- Language Selector -->
+  <div class="position-fixed d-flex justify-content-end p-3" style="right: 0; top: 0; z-index: 1001;">
+    <select id="languageSelect" class="custom-select bg-dark text-white border-secondary">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
+    </select>
+  </div>
 
-    <section class="jumbotron text-center">
-      <div class="container">
-        <a class="brand" href="https://www.pazaresosset.es"><img src="../logopazares.png"
-            style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-        <h1 class="jumbotron-heading" data-en="Filter Categories" data-es="Filtrar Categorías"
-          data-it="Filtra Categorie" data-zh="筛选类别" data-ar="تصفية الفئات">
-          Filter Categories
-        </h1>
-        <!-- Language Selection -->
+  <!-- Universe Button -->
+  <a href="../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+    <span data-es="Universo de Paz" data-en="Paz's Universe" data-it="Universo di Paz" data-ru="Вселенная Пас"
+      data-zh="帕斯的宇宙" data-ar="كون باز" data-de="Paz' Universum" data-fr="L'Univers de Paz" data-ja="パースの宇宙"
+      data-pt="O Universo de Paz">Universo de Paz</span>
+  </a>
 
-        <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-          <select id="languageSelect" class="custom-select-lg">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="it">Italiano</option>
-            <option value="zh">中文</option>
-            <option value="ar">العربية</option>
-          </select>
-        </div>
+  <header class="jumbotron text-center">
+    <div class="container">
+      <a class="brand" href="../index.html"><img src="../logopazares.png" width="100" alt="Logo"></a>
+      <h1 class="jumbotron-heading mt-4" data-es="Galería Artística" data-en="Artistic Gallery"
+        data-it="Galleria Artistica" data-ru="Художественная галерея" data-zh="艺术画廊" data-ar="معرض فني"
+        data-de="Kunstgalerie" data-fr="Galerie Artistique" data-ja="芸術ギャラリー" data-pt="Galeria Artística">Galería
+        Artística</h1>
+      <p class="lead text-muted" data-es="Explora las dimensiones del ser a través del color y la forma."
+        data-en="Explore the dimensions of being through color and form."
+        data-it="Esplora le dimensioni dell'essere attraverso il colore e la forma."
+        data-ru="Исследуйте измерения бытия через цвет и форму." data-zh="通过色彩和形态探索生命的维度。"
+        data-ar="استكشف أبعاد الكينونة من خلال اللون والشكل."
+        data-de="Entdecke die Dimensionen des Seins durch Farbe und Form."
+        data-fr="Explorez les dimensions de l'être à travers la couleur et la forme." data-ja="色と形を通して存在の次元を探求する。"
+        data-pt="Explore as dimensões do ser através da cor e da forma.">Explora las dimensiones del ser a través del
+        color y la forma.</p>
+    </div>
+  </header>
 
+  <main class="container-fluid px-5">
+    <!-- Filter Group -->
+    <div class="filter-button-group">
+      <button class="filter-btn is-checked" data-filter="*" data-es="Todo" data-en="Show All" data-it="Tutti"
+        data-ru="Все" data-zh="全部" data-ar="الكل" data-de="Alle" data-fr="Tout" data-ja="すべて"
+        data-pt="Tudo">Todo</button>
+      <button class="filter-btn" data-filter=".spiritual" data-es="Espiritual" data-en="Spiritual" data-it="Spirituale"
+        data-ru="Духовный" data-zh="精神" data-ar="روحي" data-de="Spirituell" data-fr="Spirituel" data-ja="精神的"
+        data-pt="Espiritual">Espiritual</button>
+      <button class="filter-btn" data-filter=".landscape" data-es="Paisaje" data-en="Landscape" data-it="Paesaggio"
+        data-ru="Пейзаж" data-zh="风景" data-ar="منظر طبيعي" data-de="Landschaft" data-fr="Paysage" data-ja="風景"
+        data-pt="Paizagem">Paisaje</button>
+      <button class="filter-btn" data-filter=".oil" data-es="Óleo" data-en="Oil Painting" data-it="Olio" data-ru="Масло"
+        data-zh="油画" data-ar="زيتي" data-de="Ölgemälde" data-fr="Peinture à l'huile" data-ja="油絵"
+        data-pt="Óleo">Óleo</button>
+      <button class="filter-btn" data-filter=".watercolor" data-es="Acuarela" data-en="Watercolor" data-it="Acquerello"
+        data-ru="Акварель" data-zh="水彩" data-ar="ألوان مائية" data-de="Aquarell" data-fr="Aquarelle" data-ja="水彩画"
+        data-pt="Aquarela">Acuarela</button>
+      <button class="filter-btn" data-filter=".engraving" data-es="Grabado" data-en="Engraving" data-it="Incisione"
+        data-ru="Гравюра" data-zh="雕刻" data-ar="نقش" data-de="Gravur" data-fr="Gravure" data-ja="版画"
+        data-pt="Gravura">Grabado</button>
+      <button class="filter-btn" data-filter=".acrylic" data-es="Acrílico" data-en="Acrylic" data-it="Acrilico"
+        data-ru="Акрил" data-zh="丙烯" data-ar="أكريليك" data-de="Acryl" data-fr="Acrylique" data-ja="アクリル画"
+        data-pt="Acrílico">Acrílico</button>
+    </div>
 
-        <!-- Trigger modal -->
-        <button type="button" id="selectCategoriesButton" class="btn btn-primary btn-lg" data-toggle="modal"
-          data-target="#categoryModal" data-en="Select Categories" data-es="Seleccionar Categorías"
-          data-it="Seleziona Categorie" data-zh="选择类别" data-ar="اختر الفئات">
-          Select Categories
-        </button>
-        <button id="resetButton" class="btn btn-secondary btn-lg" data-en="Reset" data-es="Reiniciar" data-it="Reset"
-          data-zh="重置" data-ar="إعادة تعيين">
-          Reset
-        </button>
-
-      </div>
-    </section>
-    <!-- Modal -->
-
-    <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="categoryModalLabel" data-en="Select Categories" data-es="Seleccionar Categorías"
-              data-it="Seleziona Categorie" data-zh="选择类别" data-ar="اختر الفئات">
-              Select Categories
-            </h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="spiritual-pics" id="spiritualCheckbox">
-              <label class="form-check-label" for="spiritualCheckbox" data-en="Spiritual" data-es="Espiritual"
-                data-it="Spirituali" data-zh="精神" data-ar="روحاني">
-                Spiritual
-              </label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="landscape" id="landscapeCheckbox">
-              <label class="form-check-label" for="landscapeCheckbox" data-en="Landscape" data-es="Paisaje"
-                data-it="Paesaggio" data-zh="风景画" data-ar="منظر طبيعي">
-                Landscape
-              </label>
-            </div>
-
-
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="oil-painting" id="oilCheckbox">
-              <label class="form-check-label" for="oilCheckbox" data-en="Oil Painting" data-es="Pintura al Óleo"
-                data-it="Pittura a Olio" data-zh="油画" data-ar="رسم زيتي">
-                Oil Painting
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="watercolor" id="watercolorCheckbox">
-              <label class="form-check-label" for="watercolorCheckbox" data-en="Watercolor" data-es="Acuarela"
-                data-it="Acquarello" data-zh="水彩画" data-ar="الألوان المائية">
-                Watercolor
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="acrylic" id="acrylicCheckbox">
-              <label class="form-check-label" for="acrylicCheckbox" data-en="Acrylic" data-es="Acrílico"
-                data-it="Acrilico" data-zh="丙烯" data-ar="أكريليك">
-                Acrylic
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="colourful" id="colourfulCheckbox">
-              <label class="form-check-label" for="colourfulCheckbox" data-en="Colourful" data-es="Colorido"
-                data-it="Colorato" data-zh="多彩" data-ar="ملون">
-                Colourful
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="engraving" id="engravingCheckbox">
-              <label class="form-check-label" for="engravingCheckbox" data-en="Engraving" data-es="Grabado"
-                data-it="Incisione" data-zh="雕刻" data-ar="النقش">
-                Engraving
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input filter" type="checkbox" value="all" id="allCheckbox">
-              <label class="form-check-label" for="allCheckbox" data-en="All" data-es="Todos" data-it="Tutti"
-                data-zh="所有" data-ar="الكل">
-                All
-              </label>
-            </div>
-
-            <!-- Add more categories as needed -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <!-- Ultreya -->
+      <div class="grid-item spiritual mixed">
+        <div class="item-content">
+          <a href="../painting/ultreya/index.html">
+            <img src="images/ultreya_iluminada.jpg" alt="Ultreya">
+          </a>
         </div>
       </div>
+
+      <!-- Woman in Love -->
+      <div class="grid-item spiritual watercolor love">
+        <div class="item-content">
+          <a href="../painting/womaninlove/index.html">
+            <img src="womaninlove.jpeg" alt="Woman in Love">
+          </a>
+        </div>
+      </div>
+
+      <!-- Nomada / Unveiling -->
+      <div class="grid-item spiritual oil">
+        <div class="item-content">
+          <a href="../painting/un-veiling/index.html">
+            <img src="un-veiling.jpeg" alt="Unveiling">
+          </a>
+        </div>
+      </div>
+
+      <!-- Aphrodite -->
+      <div class="grid-item spiritual classical">
+        <div class="item-content">
+          <a href="../painting/aphrodite/index.html">
+            <img src="afrodita.jpg" alt="Aphrodite">
+          </a>
+        </div>
+      </div>
+
+      <!-- Fusion -->
+      <div class="grid-item spiritual engraving">
+        <div class="item-content">
+          <a href="../painting/fusion/index.html">
+            <img src="images/fusiondereligionsaguatinta.jpg" alt="Fusion">
+          </a>
+        </div>
+      </div>
+
+      <!-- Woman's Body -->
+      <div class="grid-item figurative">
+        <div class="item-content">
+          <a href="../painting/womansbody/index.html">
+            <img src="images/womanbody2.jpg" alt="Woman Body">
+          </a>
+        </div>
+      </div>
+
+      <!-- Creation -->
+      <div class="grid-item spiritual abstract">
+        <div class="item-content">
+          <a href="../painting/Creation/index.html">
+            <img src="images/impresionante.jpg" alt="Creation">
+          </a>
+        </div>
+      </div>
+
+      <!-- God -->
+      <div class="grid-item spiritual classical">
+        <div class="item-content">
+          <a href="../painting/god/index.html">
+            <img src="images/god2.jpg" alt="God">
+          </a>
+        </div>
+      </div>
+
+      <!-- Twilight -->
+      <div class="grid-item landscape oil">
+        <div class="item-content">
+          <a href="../painting/twilight/index.html">
+            <img src="images/crepusculo.jpg" alt="Twilight">
+          </a>
+        </div>
+      </div>
+
+      <!-- Intense Blue -->
+      <div class="grid-item abstract energetic">
+        <div class="item-content">
+          <a href="../painting/intense-blue/index.html">
+            <img src="images/deepblue.jpg" alt="Deep Blue">
+          </a>
+        </div>
+      </div>
+
+      <!-- Colorful Couple -->
+      <div class="grid-item acrylic colorful">
+        <div class="item-content">
+          <a href="../painting/parejadecolor/index.html">
+            <img src="images/parejadecolor.jpeg" alt="Colorful Couple">
+          </a>
+        </div>
+      </div>
+
+      <!-- Owl -->
+      <div class="grid-item spiritual engraving">
+        <div class="item-content">
+          <a href="../painting/owl/index.html">
+            <img src="images/owl.jpg" alt="Owl">
+          </a>
+        </div>
+      </div>
+
+      <!-- Fairies -->
+      <div class="grid-item spiritual ink">
+        <div class="item-content">
+          <a href="../painting/hadas/index.html">
+            <img src="images/hadas.jpg" alt="Hadas">
+          </a>
+        </div>
+      </div>
+
+      <!-- Tao -->
+      <div class="grid-item spiritual engraving">
+        <div class="item-content">
+          <a href="../painting/tao/index.html">
+            <img src="images/yinyanpaz.jpg" alt="Tao">
+          </a>
+        </div>
+      </div>
+
+      <!-- Out of the cave -->
+      <div class="grid-item spiritual symbolic">
+        <div class="item-content">
+          <a href="../painting/saliendo-de-la-cueva/index.html">
+            <img src="images/saliendodelacueva.jpg" alt="Cave">
+          </a>
+        </div>
+      </div>
+
+      <!-- Avila -->
+      <div class="grid-item landscape watercolor">
+        <div class="item-content">
+          <a href="../painting/avila-desde-el-puente/index.html">
+            <img src="images/aviladesdeelpuente.jpg" alt="Avila">
+          </a>
+        </div>
+      </div>
+
+      <!-- Peace in fire -->
+      <div class="grid-item spiritual energetic">
+        <div class="item-content">
+          <a href="../painting/pazenelfuego/index.html">
+            <img src="images/pazenelfuego.jpg" alt="Fire">
+          </a>
+        </div>
+      </div>
+
+      <!-- Giro femenino -->
+      <div class="grid-item spiritual movement">
+        <div class="item-content">
+          <a href="../painting/giro-femenino/index.html">
+            <img src="images/mujer_giros.jpg" alt="Giro">
+          </a>
+        </div>
+      </div>
+
+      <!-- Ilusiones -->
+      <div class="grid-item spiritual symbolic">
+        <div class="item-content">
+          <a href="../painting/ilusiones/index.html">
+            <img src="images/Ilusiones1.jpg" alt="Ilusiones">
+          </a>
+        </div>
+      </div>
+
+      <!-- Petite Magicians -->
+      <div class="grid-item spiritual magical">
+        <div class="item-content">
+          <a href="../painting/petite-magicians/index.html">
+            <img src="images/small_magicians.jpeg" alt="Magicians">
+          </a>
+        </div>
+      </div>
+
+      <!-- Flight of Poetry -->
+      <div class="grid-item spiritual movement">
+        <div class="item-content">
+          <a href="../painting/vuelo-de-la-poesia/index.html">
+            <img src="images/vuelo_de_la_poesia.jpg" alt="Vuelo">
+          </a>
+        </div>
+      </div>
+
+      <!-- Whispers of Olympus -->
+      <div class="grid-item spiritual classical">
+        <div class="item-content">
+          <a href="../painting/susurros-olimpo/index.html">
+            <img src="images/susurros_olimpo.jpeg" alt="Whispers">
+          </a>
+        </div>
+      </div>
+
+      <!-- Christ -->
+      <div class="grid-item spiritual classical">
+        <div class="item-content">
+          <a href="../painting/cristo/index.html">
+            <img src="images/Cristo.jpg" alt="Christ">
+          </a>
+        </div>
+      </div>
+
+      <!-- Mantra BAM -->
+      <div class="grid-item spiritual symbolic">
+        <div class="item-content">
+          <a href="../painting/mantra-bam/index.html">
+            <img src="images/BAM.jpg" alt="Mantra">
+          </a>
+        </div>
+      </div>
+
+      <!-- Dance of Mystic Soul -->
+      <div class="grid-item spiritual movement">
+        <div class="item-content">
+          <a href="../painting/danza-alma-mistica/index.html">
+            <img src="images/camino-verdad-y-vida.jpg" alt="Dance">
+          </a>
+        </div>
+      </div>
+
+      <!-- Violin -->
+      <div class="grid-item spiritual music">
+        <div class="item-content">
+          <a href="../painting/violin/index.html">
+            <img src="images/violin.jpg" alt="Violin">
+          </a>
+        </div>
+      </div>
+
+      <!-- Portal Azul -->
+      <div class="grid-item spiritual energetic">
+        <div class="item-content">
+          <a href="../painting/portal-azul/index.html">
+            <img src="images/Espiral Azul-EDIT.jpg" alt="Portal">
+          </a>
+        </div>
+      </div>
+
+      <!-- Still Life Bottle -->
+      <div class="grid-item figurative pastel">
+        <div class="item-content">
+          <a href="../painting/bodegon-botella/index.html">
+            <img src="images/pastel-bodegon-botella.jpg" alt="Bodegon">
+          </a>
+        </div>
+      </div>
+
+      <!-- Still Life Apple -->
+      <div class="grid-item figurative pastel">
+        <div class="item-content">
+          <a href="../painting/bodegon-limon/index.html">
+            <img src="images/bodegon-manzanas-EDIT.jpg" alt="Bodegon Apple">
+          </a>
+        </div>
+      </div>
+
+      <!-- Duo Hearts -->
+      <div class="grid-item spiritual love">
+        <div class="item-content">
+          <a href="../painting/duo-corazones/index.html">
+            <img src="images/dos corazones ventana.jpg" alt="Hearts">
+          </a>
+        </div>
+      </div>
+
+      <!-- Duo Faces -->
+      <div class="grid-item spiritual connection">
+        <div class="item-content">
+          <a href="../painting/duo-caras/index.html">
+            <img src="images/dos caras.jpg" alt="Faces">
+          </a>
+        </div>
+      </div>
     </div>
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-
-
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-    <!-- Grid row -->
-    <div class="gallery" id="gallery">
-
-
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/soleila/"><img class="img-fluid" src="images/soleila-EDIT.jpg" alt="Soleila"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation  love watercolor spiritual-pics all">
-        <a href="../painting/womaninlove/index.html"><img class="img-fluid" src="womaninlove.jpeg" alt="Swing Love"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation oil-painting spiritual-pics all">
-        <a href="../painting/un-veiling/index.html"><img class="img-fluid" src="un-veiling.jpeg" alt="Nomad Love"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation spiritual-pics all">
-        <a href="../painting/aphrodite/index.html"><img class="img-fluid" src="afrodita.jpg" alt="Goddes"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all Engraving spiritual-pics">
-        <a href="../painting/fusion"><img class="img-fluid" src="images/fusiondereligionsaguatinta.jpg"
-            alt="Wa are one"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all">
-        <a href="../painting/womansbody/index.html"><img class="img-fluid" src="images/womanbody2.jpg"
-            alt="Card image cap"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all">
-        <a href="../painting/Creation"><img class="img-fluid" src="images/impresionante.jpg" alt="Card image cap"></a>
-
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <!-- <div class="mb-3 pics animation all 2">  -->
-      <div class=" mb-3 pics animation all">
-        <a href="../painting/god"><img class="img-fluid" src="images/god2.jpg" alt="Card image cap"></a>
-
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all pepe">
-        <a href="../painting/twilight"><img class="img-fluid" src="images/crepusculo.jpg" alt="Card image cap"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all">
-        <a href="../painting/intense-blue"><img class="img-fluid" src="images/deepblue.jpg" alt="Card image cap"></a>
-      </div>
-      <!-- Grid column -->
-
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all Acrylic Colourful ">
-        <a href="../painting/parejadecolor"><img class="img-fluid" src="images/parejadecolor.jpeg"
-            alt="Card image cap"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all Engraving spiritual-pics ">
-        <a href="../painting/owl"><img class="img-fluid" src="images/owl.jpg" alt="Owl of wisdom"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all ink spiritual-pics ">
-        <a href="../painting/hadas"><img class="img-fluid" src="images/hadas.jpg" alt="Fairies dancing"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all Engraving spiritual-pics ">
-        <a href="../painting/tao"><img class="img-fluid" src="images/yinyanpaz.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/ultreya"><img class="img-fluid" src="images/ultreya_iluminada.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/saliendo-de-la-cueva"><img class="img-fluid" src="images/saliendodelacueva.jpg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all landscape spiritual-pics ">
-        <a href="../painting/avila-desde-el-puente/"><img class="img-fluid" src="images/aviladesdeelpuente.jpg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/pazenelfuego/"><img class="img-fluid" src="images/pazenelfuego.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/giro-femenino/"><img class="img-fluid" src="images/mujer_giros.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/ilusiones/"><img class="img-fluid" src="images/Ilusiones1.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/petite-magicians/"><img class="img-fluid" src="images/small_magicians.jpeg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/vuelo-de-la-poesia/"><img class="img-fluid" src="images/vuelo_de_la_poesia.jpg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/susurros-olimpo/"><img class="img-fluid" src="images/susurros_olimpo.jpeg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/cristo/"><img class="img-fluid" src="images/Cristo.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/mantra-bam/"><img class="img-fluid" src="images/BAM.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/danza-alma-mistica/"><img class="img-fluid" src="images/camino-verdad-y-vida.jpg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/violin/"><img class="img-fluid" src="images/violin.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/portal-azul/"><img class="img-fluid" src="images/Espiral Azul-EDIT.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/bodegon-botella/"><img class="img-fluid" src="images/pastel-bodegon-botella.jpg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/bodegon-limon/"><img class="img-fluid" src="images/bodegon-manzanas-EDIT.jpg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/duo-corazones/"><img class="img-fluid" src="images/dos corazones ventana.jpg"
-            alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="mb-3 pics animation all  spiritual-pics ">
-        <a href="../painting/duo-caras/"><img class="img-fluid" src="images/dos caras.jpg" alt="Balance"></a>
-      </div>
-      <!-- Grid column -->
-
-
-
-
-
-    </div>
-    <!-- Grid row -->
-
-
   </main>
-  <script>
-    // Place the JavaScript code heredocument.getElementById('languageSelect').addEventListener('change', function() {
-    document.getElementById('languageSelect').addEventListener('change', function () {
-      var selectedLanguage = this.value;
-      updateLanguage(selectedLanguage);
-    });
 
-    function updateLanguage(language) {
-      var elementsToUpdate = document.querySelectorAll(
-        '.modal-body .form-check-label, #selectCategoriesButton, #resetButton, .jumbotron-heading, #categoryModalLabel'
-      );
-      elementsToUpdate.forEach(function (element) {
-        element.textContent = element.getAttribute('data-' + language);
-      });
-    }
-  </script>
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset - <span data-es="El Arte que Transciende" data-en="Transcendent Art"
+        data-it="L'Arte che Trascende" data-ru="Искусство, превосходящее границы" data-zh="超越边界的艺术"
+        data-ar="الفن الذي يتجاوز الحدود" data-de="Kunst, die Grenzen überschreitet" data-fr="L'Art qui Transcendera"
+        data-ja="境界を超える芸術" data-pt="A Arte que Transcende">El Arte que Transciende</span></p>
+  </footer>
 
-
-
-
-  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
