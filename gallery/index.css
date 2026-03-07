@@ -74,13 +74,15 @@ body {
 
 @media (max-width: 991px) {
   .grid-item {
-    width: 50%;
+    width: 33.333%;
   }
 }
 
 @media (max-width: 576px) {
   .grid-item {
-    width: 100%;
+    width: 33.333%;
+    padding: 6px;
+    /* Slightly tighter on tiny screens */
   }
 }
 

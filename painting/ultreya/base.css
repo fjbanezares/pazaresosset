@@ -88,7 +88,14 @@ body {
 .description-text {
   font-size: 1.2rem;
   line-height: 1.8;
-  text-align: justify;
+  text-align: left;
+  /* Homogeneous spacing requested */
+}
+
+/* Specific for Right-to-Left languages like Arabic */
+[dir="rtl"] .description-text,
+[dir="rtl"] .jumbotron-heading {
+  text-align: right;
 }
 
 /* Universe Button */
