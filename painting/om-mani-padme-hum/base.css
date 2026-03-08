@@ -176,10 +176,16 @@ body::after {
 .description-text {
   font-size: 1.15rem;
   line-height: 1.9;
-  text-align: justify;
+  text-align: left;
   color: #cccccd;
   max-width: 900px;
   margin: 0 auto;
+}
+
+[dir="rtl"] .description-text,
+.ar.language {
+  text-align: right !important;
+  direction: rtl;
 }
 
 .description-text p {
