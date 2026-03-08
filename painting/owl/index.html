@@ -1,546 +1,659 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Ecos de Sabiduría Celestial</title>
+  <title>Ecos de Sabiduría Celestial - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
-  <link rel="stylesheet" href="owl.css">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="base.css">
 </head>
-
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <select id="language-select" class="custom-select">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
     </select>
   </div>
+  <!-- Universe & Gallery Buttons -->
+  <a href="../../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+        <span class="es language">Universo de Paz</span>
+        <span class="en language" style="display:none;">Universe of Peace</span>
+        <span class="it language" style="display:none;">Universo di Pace</span>
+        <span class="ru language" style="display:none;">Вселенная мира</span>
+        <span class="zh language" style="display:none;">和平宇宙</span>
+        <span class="ar language" style="display:none;">عالم السلام</span>
+        <span class="de language" style="display:none;">Universum des Friedens</span>
+        <span class="fr language" style="display:none;">Univers de Paix</span>
+        <span class="ja language" style="display:none;">平和の宇宙</span>
+        <span class="pt language" style="display:none;">Universo de Paz</span>
+  </a>
+  <a href="../../gallery/index.html" class="gallery-btn">
+    <i class="fas fa-th"></i>
+        <span class="es language">Galería</span>
+        <span class="en language" style="display:none;">Gallery</span>
+        <span class="it language" style="display:none;">Galleria</span>
+        <span class="ru language" style="display:none;">Галерея</span>
+        <span class="zh language" style="display:none;">画廊</span>
+        <span class="ar language" style="display:none;">معرض</span>
+        <span class="de language" style="display:none;">Galerie</span>
+        <span class="fr language" style="display:none;">Galerie</span>
+        <span class="ja language" style="display:none;">ギャラリー</span>
+        <span class="pt language" style="display:none;">Galeria</span>
+  </a>
 
-
-  <section class="jumbotron text-center">
+  <header class="jumbotron">
     <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
       <h1 class="jumbotron-heading">
-        <div class="english language">Echoes of Celestial Wisdom</div>
-        <div class="spanish language" style="display: none;">Ecos de Sabiduría Celestial</div>
-        <div class="italian language" style="display: none;">Echi di Saggezza Celestiale</div>
-        <div class="chinese language" style="display: none;">天体智慧的回声</div>
+        <span class="es language">Ecos de Sabiduría Celestial</span>
+        <span class="en language" style="display:none;">Echoes of Heavenly Wisdom</span>
+        <span class="it language" style="display:none;">Echi della saggezza celeste</span>
+        <span class="ru language" style="display:none;">Отголоски Небесной Мудрости</span>
+        <span class="zh language" style="display:none;">天上智慧的回响</span>
+        <span class="ar language" style="display:none;">أصداء الحكمة السماوية</span>
+        <span class="de language" style="display:none;">Echos der himmlischen Weisheit</span>
+        <span class="fr language" style="display:none;">Échos de la sagesse céleste</span>
+        <span class="ja language" style="display:none;">天の知恵の響き</span>
+        <span class="pt language" style="display:none;">Ecos da Sabedoria Celestial</span>
       </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">Dance of Wisdom, Symphony of the Cosmos, and the Owl's Mystical Embrace.</div>
-        <div class="spanish language" style="display: none;">Danza de la Sabiduría, Sinfonía del Cosmos, y el Abrazo
-          Místico
-          del Búho.</div>
-        <div class="italian language" style="display: none;">Danza della Saggezza, Sinfonia del Cosmo, e l'Abbraccio
-          Mistico
-          del Gufo.</div>
-        <div class="chinese language" style="display: none;">智慧的舞蹈，宇宙的交响曲，和猫头鹰的神秘拥抱。</div>
-      </div>
-
-
+      <p class="lead" style="color: var(--gold); opacity: 0.9;">
+        <span class="es language">Danza de la Sabiduría, Sinfonía del Cosmos, y el Abrazo Místico del Búho.</span>
+        <span class="en language" style="display:none;">Dance of Wisdom, Symphony of the Cosmos, and the Mystical Embrace of the Owl.</span>
+        <span class="it language" style="display:none;">Danza della Saggezza, Sinfonia del Cosmo e Abbraccio Mistico del Gufo.</span>
+        <span class="ru language" style="display:none;">Танец мудрости, Симфония космоса и мистические объятия совы.</span>
+        <span class="zh language" style="display:none;">智慧之舞、宇宙交响曲、猫头鹰的神秘拥抱。</span>
+        <span class="ar language" style="display:none;">رقصة الحكمة، وسيمفونية الكون، واحتضان البومة الغامض.</span>
+        <span class="de language" style="display:none;">Tanz der Weisheit, Symphonie des Kosmos und die mystische Umarmung der Eule.</span>
+        <span class="fr language" style="display:none;">Danse de la sagesse, Symphonie du cosmos et Étreinte mystique du hibou.</span>
+        <span class="ja language" style="display:none;">知恵のダンス、コスモスのシンフォニー、フクロウの神秘的な抱擁。</span>
+        <span class="pt language" style="display:none;">Dança da Sabedoria, Sinfonia do Cosmos e o Abraço Místico da Coruja.</span>
+      </p>
     </div>
-  </section>
+  </header>
 
+  <main class="container">
+    <section class="main-image-container text-center pb-5">
+      <img class="art-image zoom-image" style="transition: transform 0.3s; cursor: zoom-in;" src="grabado-owl.jpg" alt="Ecos de Sabiduría Celestial">
+    </section>
 
+    <!-- Ficha Técnica -->
+    <section class="section-card">
+      <h3 class="text-warning mb-4"><i class="fas fa-info-circle mr-2"></i>
+        <span class="es language">Ficha Técnica</span>
+        <span class="en language" style="display:none;">Technical Sheet</span>
+        <span class="it language" style="display:none;">Scheda Tecnica</span>
+        <span class="ru language" style="display:none;">Технический лист</span>
+        <span class="zh language" style="display:none;">技术表</span>
+        <span class="ar language" style="display:none;">ورقة فنية</span>
+        <span class="de language" style="display:none;">Technisches Datenblatt</span>
+        <span class="fr language" style="display:none;">Fiche technique</span>
+        <span class="ja language" style="display:none;">テクニカルシート</span>
+        <span class="pt language" style="display:none;">Ficha Técnica</span>
+      </h3>
+      <ul class="tech-list">
+        <li><i class="fas fa-paint-brush"></i>
+        <span class="es language"><strong>Técnica:</strong> Grabado.</span>
+        <span class="en language" style="display:none;"><strong>Technique:</strong> Engraving.</span>
+        <span class="it language" style="display:none;"><strong>Tecnica:</strong> Incisione.</span>
+        <span class="ru language" style="display:none;"><strong>Техника:</strong> Гравировка.</span>
+        <span class="zh language" style="display:none;"><strong>技术：</strong>雕刻。</span>
+        <span class="ar language" style="display:none;"><strong>التقنية:</strong> النقش.</span>
+        <span class="de language" style="display:none;"><strong>Technik:</strong> Gravur.</span>
+        <span class="fr language" style="display:none;"><strong>Technique :</strong> Gravure.</span>
+        <span class="ja language" style="display:none;"><strong>テクニック:</strong> 彫刻。</span>
+        <span class="pt language" style="display:none;"><strong>Técnica:</strong> Gravura.</span>
+        </li>
+        <li><i class="fas fa-expand-arrows-alt"></i>
+        <span class="es language"><strong>Tamaño:</strong> 10x18 cm.</span>
+        <span class="en language" style="display:none;"><strong>Size:</strong> 10x18 cm.</span>
+        <span class="it language" style="display:none;"><strong>Dimensioni:</strong> 10x18 cm.</span>
+        <span class="ru language" style="display:none;"><strong>Размер:</strong> 10х18 см.</span>
+        <span class="zh language" style="display:none;"><strong>尺寸：</strong>10x18 厘米。</span>
+        <span class="ar language" style="display:none;"><strong>الحجم:</strong> 10×18 سم.</span>
+        <span class="de language" style="display:none;"><strong>Größe:</strong> 10x18 cm.</span>
+        <span class="fr language" style="display:none;"><strong>Dimensions :</strong> 10x18 cm.</span>
+        <span class="ja language" style="display:none;"><strong>サイズ:</strong> 10x18 cm。</span>
+        <span class="pt language" style="display:none;"><strong>Tamanho:</strong> 10x18 cm.</span>
+        </li>
+        <li><i class="fas fa-university"></i>
+        <span class="es language"><strong>Lugar de Creación:</strong> Facultad de Bellas Artes en Madrid.</span>
+        <span class="en language" style="display:none;"><strong>Place of Creation:</strong> Faculty of Fine Arts in Madrid.</span>
+        <span class="it language" style="display:none;"><strong>Luogo di creazione:</strong> Facoltà di Belle Arti di Madrid.</span>
+        <span class="ru language" style="display:none;"><strong>Место создания:</strong> Факультет изящных искусств в Мадриде.</span>
+        <span class="zh language" style="display:none;"><strong>创作地点：</strong>马德里美术学院。</span>
+        <span class="ar language" style="display:none;"><strong>مكان الإنشاء:</strong> كلية الفنون الجميلة بمدريد.</span>
+        <span class="de language" style="display:none;"><strong>Ort der Schöpfung:</strong> Fakultät für Bildende Künste in Madrid.</span>
+        <span class="fr language" style="display:none;"><strong>Lieu de création :</strong> Faculté des Beaux-Arts de Madrid.</span>
+        <span class="ja language" style="display:none;"><strong>創作場所:</strong> マドリードの美術学部。</span>
+        <span class="pt language" style="display:none;"><strong>Local de Criação:</strong> Faculdade de Belas Artes de Madrid.</span>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i>
+        <span class="es language"><strong>Ubicación Actual:</strong> Colección Privada en Madrid.</span>
+        <span class="en language" style="display:none;"><strong>Current Location:</strong> Private Collection in Madrid.</span>
+        <span class="it language" style="display:none;"><strong>Posizione attuale:</strong> Collezione privata a Madrid.</span>
+        <span class="ru language" style="display:none;"><strong>Текущее местоположение:</strong> Частная коллекция в Мадриде.</span>
+        <span class="zh language" style="display:none;"><strong>当前位置：</strong>马德里私人收藏。</span>
+        <span class="ar language" style="display:none;"><strong>الموقع الحالي:</strong> مجموعة خاصة في مدريد.</span>
+        <span class="de language" style="display:none;"><strong>Aktueller Standort:</strong> Privatsammlung in Madrid.</span>
+        <span class="fr language" style="display:none;"><strong>Emplacement actuel :</strong> Collection privée à Madrid.</span>
+        <span class="ja language" style="display:none;"><strong>現在の場所:</strong> マドリッドの個人コレクション。</span>
+        <span class="pt language" style="display:none;"><strong>Localização Atual:</strong> Coleção Privada em Madrid.</span>
+        </li>
+      </ul>
+    </section>
 
-  <section class="main-image">
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
-          <img src="grabado-owl.jpg" class="w3-hover-grayscale" width="100%" style="border:30px solid white;">
-          <!-- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_images_hover_eff -->
+    <!-- Análisis Crítico -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-feather-alt mr-2"></i>
+        <span class="es language">Análisis Crítico</span>
+        <span class="en language" style="display:none;">Critical Analysis</span>
+        <span class="it language" style="display:none;">Analisi critica</span>
+        <span class="ru language" style="display:none;">Критический анализ</span>
+        <span class="zh language" style="display:none;">批判性分析</span>
+        <span class="ar language" style="display:none;">التحليل النقدي</span>
+        <span class="de language" style="display:none;">Kritische Analyse</span>
+        <span class="fr language" style="display:none;">Analyse critique</span>
+        <span class="ja language" style="display:none;">批判的分析</span>
+        <span class="pt language" style="display:none;">Análise Crítica</span>
+      </h2>
+      <div class="description-text">
+        <div class="es language">
+          <p>En un santuario de maravillas, en el abrazo sagrado del arte, les invito a adentrarse en la vastedad del lienzo que despliega ante ustedes una obra maestra sin parangón. Permitan que mis palabras fluyan con la pasión y la elocuencia que sólo la esencia del arte puede evocar, mientras les guío por los senderos inexplorados de esta creación sublime.</p>
+          <p>Contemplen el búho, emblema ancestral de la sabiduría, con sus ojos que resplandecen como luceros cósmicos, adentrándose en las profundidades del conocimiento universal. Pero aquí, en esta obra que trasciende lo ordinario, el búho se yergue en medio de dos lunas celestiales, cada una en su propio ciclo de crecimiento y mengua. Esta fusión divina nos invita a meditar sobre la dualidad de la existencia y la armonía intrínseca que yace en los misterios del cosmos.</p>
+          <p>La maestría consumada de Paz Arés Osset se revela en cada trazo, en cada detalle cautivador de esta composición. Las plumas del búho, inmaculadamente representadas, nos transportan a un reino de belleza etérea. Cada pluma, un poema visual, acaricia nuestros sentidos con su delicadeza y textura. Es una sinfonía de formas y patrones, una danza de la realidad y la fantasía entrelazadas en un abrazo celestial.</p>
+          <p>Pero hay más, mucho más. Una esfera suspendida, como un faro celeste, se desliza de la luna más alta. Es un cascabel esférico que cobra vida, emanando un encanto místico y un eco sutil. Su sonido reverbera en los recovecos del alma, recordándonos la espiritualidad y la armonía sagrada. Es una invitación a escuchar el ritmo cósmico, a estar presentes y conscientes en nuestra existencia.</p>
+          <p>La escena se despliega en una noche envuelta en sombras, pero iluminada por la radiante presencia de las lunas. El búho, en su postura meditativa, irradia una calma trascendental en la oscuridad. En su silencio sagrado, elabora la esencia misma de la sabiduría, preparado para iluminar al mundo con su resplandor.</p>
+          <p>A través de esta obra maestra, Paz Arés Osset nos invita a explorar la inteligencia, la sabiduría y la meditación nocturna bajo el abrazo de la luna. Nos guía hacia la búsqueda de la iluminación en los rincones más profundos de nuestro ser, invitándonos a descubrir nuestra propia esencia y a danzar en la sinfonía de la existencia.</p>
+          <p>No duden en preservar esta obra en el sagrado recinto de vuestra colección, pues su valor va más allá de lo material. Que su presencia sea un faro en vuestras vidas, iluminando el camino hacia la contemplación estética y la comprensión profunda del arte.</p>
+          <p>Gracias por acompañarme en este viaje hacia la apreciación del arte. Que las alas de la inspiración les guíen a través de los horizontes ilimitados del arte.</p>
+        </div>
+
+        <div class="en language" style="display:none;">
+          <p>In a sanctuary of wonders, in the sacred embrace of art, I invite you to enter the vastness of the canvas that unfolds before you an unparalleled masterpiece. Allow my words to flow with the passion and eloquence that only the essence of art can evoke, as I guide you along the unexplored paths of this sublime creation.</p>
+          <p>Behold the owl, ancient emblem of wisdom, with its eyes that shine like cosmic stars, entering the depths of universal knowledge. But here, in this work that transcends the ordinary, the owl stands in the middle of two celestial moons, each in its own cycle of waxing and waning. This divine fusion invites us to meditate on the duality of existence and the intrinsic harmony that lies in the mysteries of the cosmos.</p>
+          <p>The consummate mastery of Paz Arés Osset is revealed in every stroke, in every captivating detail of this composition. The owl's immaculately rendered feathers transport us to a realm of ethereal beauty. Each feather, a visual poem, caresses our senses with its delicacy and texture. It is a symphony of shapes and patterns, a dance of reality and fantasy intertwined in a heavenly embrace.</p>
+          <p>But there is more, much more. A suspended sphere, like a celestial beacon, slides from the highest moon. It is a spherical rattle that comes to life, emanating a mystical charm and subtle echo. Its sound reverberates in the recesses of the soul, reminding us of spirituality and sacred harmony. It is an invitation to listen to the cosmic rhythm, to be present and conscious in our existence.</p>
+          <p>The scene unfolds in a night shrouded in shadows, but illuminated by the radiant presence of the moons. The owl, in its meditative posture, radiates a transcendental calm in the darkness. In its sacred silence, it crafts the very essence of wisdom, ready to illuminate the world with its radiance.</p>
+          <p>Through this masterpiece, Paz Arés Osset invites us to explore intelligence, wisdom and nocturnal meditation under the embrace of the moon. It guides us towards the search for enlightenment in the deepest corners of our being, inviting us to discover our own essence and dance in the symphony of existence.</p>
+          <p>Do not hesitate to preserve this work in the sacred precinct of your collection, as its value goes beyond the material. May his presence be a beacon in your lives, illuminating the path toward aesthetic contemplation and deep understanding of art.</p>
+          <p>Thank you for joining me on this journey towards art appreciation. May the wings of inspiration guide you through the limitless horizons of art.</p>
+        </div>
+
+        <div class="it language" style="display:none;">
+          <p>In un santuario delle meraviglie, nel sacro abbraccio dell'arte, ti invito ad entrare nella vastità della tela che si schiude davanti a te un capolavoro senza pari. Lasciate che le mie parole fluiscano con la passione e l'eloquenza che solo l'essenza dell'arte può evocare, mentre vi guido lungo i sentieri inesplorati di questa sublime creazione.</p>
+          <p>Ecco la civetta, antico emblema della saggezza, con i suoi occhi che brillano come stelle cosmiche, entrare nelle profondità della conoscenza universale. Ma qui, in quest’opera che trascende l’ordinario, il gufo si trova nel mezzo di due lune celesti, ciascuna nel proprio ciclo di crescita e declino. Questa fusione divina ci invita a meditare sulla dualità dell'esistenza e sull'armonia intrinseca che risiede nei misteri del cosmo.</p>
+          <p>La consumata maestria di Paz Arés Osset si rivela in ogni tratto, in ogni dettaglio accattivante di questa composizione. Le piume impeccabili del gufo ci trasportano in un regno di bellezza eterea. Ogni piuma, una poesia visiva, accarezza i nostri sensi con la sua delicatezza e consistenza. È una sinfonia di forme e motivi, una danza di realtà e fantasia intrecciate in un abbraccio paradisiaco.</p>
+          <p>Ma c'è di più, molto di più. Una sfera sospesa, come un faro celeste, scivola dalla luna più alta. È un sonaglio sferico che prende vita, emanando un fascino mistico e un'eco sottile. Il suo suono risuona nei recessi dell'anima, ricordandoci la spiritualità e la sacra armonia. È un invito ad ascoltare il ritmo cosmico, ad essere presenti e consapevoli nella nostra esistenza.</p>
+          <p>La scena si svolge in una notte avvolta nell'ombra, ma illuminata dalla radiosa presenza delle lune. Il gufo, nella sua postura meditativa, irradia una calma trascendentale nell'oscurità. Nel suo sacro silenzio, crea l'essenza stessa della saggezza, pronta a illuminare il mondo con il suo splendore.</p>
+          <p>Attraverso questo capolavoro, Paz Arés Osset ci invita a esplorare l'intelligenza, la saggezza e la meditazione notturna sotto l'abbraccio della luna. Ci guida verso la ricerca dell'illuminazione negli angoli più profondi del nostro essere, invitandoci a scoprire la nostra essenza e a danzare nella sinfonia dell'esistenza.</p>
+          <p>Non esitate a preservare quest'opera nel recinto sacro della vostra collezione, poiché il suo valore va oltre il materiale. Possa la sua presenza essere un faro nelle vostre vite, illuminando il percorso verso la contemplazione estetica e la profonda comprensione dell'arte.</p>
+          <p>Grazie per esserti unito a me in questo viaggio verso l'apprezzamento dell'arte. Possano le ali dell'ispirazione guidarti attraverso gli orizzonti illimitati dell'arte.</p>
+        </div>
+
+        <div class="ru language" style="display:none;">
+          <p>В святилище чудес, в священных объятиях искусства, я приглашаю вас войти в необъятность холста, раскрывающего перед вами беспрецедентный шедевр. Позвольте моим словам течь со страстью и красноречием, которые может вызвать только суть искусства, пока я веду вас по неизведанным путям этого возвышенного творения.</p>
+          <p>Взгляните на сову, древнюю эмблему мудрости, с глазами, сияющими, как космические звезды, входящую в глубины вселенского знания. Но здесь, в этой работе, выходящей за рамки обыденности, сова стоит посреди двух небесных лун, каждая из которых находится в своем собственном цикле прироста и убывания. Это божественное слияние приглашает нас медитировать о двойственности существования и внутренней гармонии, заключенной в тайнах космоса.</p>
+          <p>Непревзойденное мастерство Пас Ареса Оссета раскрывается в каждом штрихе, в каждой пленительной детали этой композиции. Безупречно прорисованные перья совы переносят нас в царство неземной красоты. Каждое перо – визуальное стихотворение – ласкает наши чувства своей нежностью и текстурой. Это симфония форм и узоров, танец реальности и фантазии, переплетенных в небесных объятиях.</p>
+          <p>Но это еще не все. Подвешенная сфера, словно небесный маяк, скользит с самой высокой луны. Это сферическая погремушка, которая оживает, излучая мистическое очарование и тонкое эхо. Его звучание отзывается в глубинах души, напоминая нам о духовности и священной гармонии. Это приглашение прислушаться к космическому ритму, присутствовать и осознавать свое существование.</p>
+          <p>Сцена разворачивается в ночи, окутанной тенями, но освещенной сияющим присутствием лун. Сова в своей медитативной позе излучает в темноте трансцендентное спокойствие. В своей священной тишине он творит саму суть мудрости, готовую осветить мир своим сиянием.</p>
+          <p>Посредством этого шедевра Пас Арес Оссет приглашает нас исследовать интеллект, мудрость и ночную медитацию в объятиях луны. Он ведет нас к поиску просветления в самых глубоких уголках нашего существа, приглашая нас раскрыть нашу собственную сущность и танцевать в симфонии существования.</p>
+          <p>Без колебаний сохраните эту работу в священном месте своей коллекции, поскольку ее ценность выходит за рамки материала. Пусть его присутствие станет маяком в вашей жизни, освещающим путь к эстетическому созерцанию и глубокому пониманию искусства.</p>
+          <p>Спасибо, что присоединились ко мне на этом пути к пониманию искусства. Пусть крылья вдохновения проведут вас через безграничные горизонты искусства.</p>
+        </div>
+
+        <div class="zh language" style="display:none;">
+          <p>在奇迹的圣殿中，在艺术的神圣怀抱中，我邀请您进入广阔的画布，在您面前展开无与伦比的杰作。让我的言语充满只有艺术本质才能唤起的激情和雄辩，引导您沿着这一崇高创作的未探索之路前进。</p>
+          <p>看哪，猫头鹰，古代智慧的象征，它的眼睛像宇宙星星一样闪闪发光，进入普遍知识的深处。但在这幅超越寻常的作品中，猫头鹰站在两颗天卫星的中间，每颗卫星都有自己的盈亏周期。这种神圣的融合邀请我们思考存在的二元性以及宇宙奥秘中的内在和谐。</p>
+          <p>帕斯·阿雷斯·奥塞特的精湛技艺在这部作品的每一个笔触、每一个迷人的细节中都得到体现。猫头鹰完美呈现的羽毛将我们带入空灵之美的境界。每一根羽毛都是一首视觉诗，以其精致和质感抚摸着我们的感官。它是形状和图案的交响曲，是现实与幻想在天堂的拥抱中交织在一起的舞蹈。</p>
+          <p>但还有更多、更多。一个悬浮的球体，就像天上的灯塔一样，从最高的月亮上滑落。这是一种栩栩如生的球形拨浪鼓，散发着神秘的魅力和微妙的回声。它的声音在灵魂深处回响，提醒我们灵性和神圣的和谐。这是聆听宇宙节奏的邀请，是在我们存在中临在并有意识的邀请。</p>
+          <p>场景发生在笼罩在阴影中的夜晚，但被月亮的光芒照亮。猫头鹰以冥想的姿势在黑暗中散发出超然的平静。在其神圣的寂静中，它孕育着智慧的精髓，准备用它的光芒照亮世界。</p>
+          <p>通过这部杰作，帕斯·阿雷斯·奥塞特邀请我们在月亮的怀抱下探索智慧、智慧和夜间冥想。它引导我们寻找生命最深处的启蒙，邀请我们发现自己的本质，并在存在的交响乐中起舞。</p>
+          <p>请毫不犹豫地将这件作品保存在您收藏的神圣领域，因为它的价值超越了材料。愿他的存​​在成为你生命中的一盏灯塔，照亮你通往审美沉思和对艺术深刻理解的道路。</p>
+          <p>感谢您与我一起踏上这段艺术欣赏之旅。愿灵感的翅膀带您飞向艺术的无限视野。</p>
+        </div>
+
+        <div class="ar language" style="display:none;">
+          <p>في حرم العجائب، في أحضان الفن المقدس، أدعوك للدخول إلى اتساع اللوحة القماشية التي تتكشف أمامك تحفة فنية لا مثيل لها. اسمح لكلماتي أن تتدفق بالعاطفة والبلاغة التي لا يمكن أن يثيرها إلا جوهر الفن، بينما أرشدك على طول المسارات غير المستكشفة لهذا الإبداع السامي.</p>
+          <p>أنظر إلى البومة، شعار الحكمة القديم، بعينيها اللتين تتلألأ كالنجوم الكونية، تدخل أعماق المعرفة الكونية. لكن هنا، في هذا العمل الذي يتجاوز المألوف، تقف البومة وسط قمرين سماويين، كل منهما في دورته الخاصة من التزايد والتضاؤل. يدعونا هذا الاندماج الإلهي إلى التأمل في ثنائية الوجود والتناغم الجوهري الذي يكمن في أسرار الكون.</p>
+          <p>يتم الكشف عن الإتقان التام لعطر Paz Arés Osset في كل لمسة، وفي كل تفاصيل آسرة لهذا التكوين. ينقلنا ريش البومة المرسوم بطريقة صحيحة إلى عالم من الجمال الأثيري. كل ريشة، قصيدة بصرية، تداعب حواسنا برقتها وملمسها. إنها سيمفونية من الأشكال والأنماط، رقصة من الواقع والخيال متشابكة في حضن سماوي.</p>
+          <p>ولكن هناك المزيد والمزيد. كرة معلقة، مثل منارة سماوية، تنزلق من أعلى القمر. إنها خشخشة كروية تنبض بالحياة، وتنبعث منها سحر غامض وصدى خفي. يتردد صدى صوته في أعماق الروح، ليذكرنا بالروحانية والوئام المقدس. إنها دعوة للاستماع إلى الإيقاع الكوني، لنكون حاضرين وواعيين في وجودنا.</p>
+          <p>يتكشف المشهد في ليل يكتنفه الظلال، لكنه مضاء بحضور الأقمار المشع. البومة، في وضعيتها التأملية، تشع بالهدوء المتعالي في الظلام. في صمتها المقدس، تصوغ جوهر الحكمة، وعلى استعداد لإلقاء الضوء على العالم بإشعاعها.</p>
+          <p>من خلال هذه التحفة الفنية، يدعونا باز آريس أوسيت لاستكشاف الذكاء والحكمة والتأمل الليلي تحت حضن القمر. إنه يرشدنا نحو البحث عن التنوير في أعمق أركان كياننا، ويدعونا إلى اكتشاف جوهرنا والرقص في سيمفونية الوجود.</p>
+          <p>لا تتردد في الحفاظ على هذا العمل في المنطقة المقدسة لمجموعتك، حيث أن قيمته تتجاوز المادة. نرجو أن يكون حضوره منارة في حياتكم، تنير الطريق نحو التأمل الجمالي والفهم العميق للفن.</p>
+          <p>شكرًا لانضمامك إلي في هذه الرحلة نحو تقدير الفن. أتمنى أن ترشدك أجنحة الإلهام عبر آفاق الفن اللامحدودة.</p>
+        </div>
+
+        <div class="de language" style="display:none;">
+          <p>In einem Heiligtum der Wunder, in der heiligen Umarmung der Kunst, lade ich Sie ein, die Weite der Leinwand zu betreten, die vor Ihnen ein unvergleichliches Meisterwerk entfaltet. Lassen Sie meine Worte mit der Leidenschaft und Beredsamkeit fließen, die nur das Wesen der Kunst hervorrufen kann, während ich Sie auf den unerforschten Pfaden dieser erhabenen Schöpfung führe.</p>
+          <p>Schauen Sie, wie die Eule, das uralte Symbol der Weisheit, mit ihren Augen, die wie kosmische Sterne leuchten, in die Tiefen des universellen Wissens vordringt. Aber hier, in diesem Werk, das über das Gewöhnliche hinausgeht, steht die Eule inmitten zweier Himmelsmonde, von denen jeder seinen eigenen Zyklus von zunehmendem und abnehmendem Wachstum durchläuft. Diese göttliche Verschmelzung lädt uns ein, über die Dualität der Existenz und die innere Harmonie zu meditieren, die in den Geheimnissen des Kosmos liegt.</p>
+          <p>Die vollendete Meisterschaft von Paz Arés Osset zeigt sich in jedem Strich, in jedem faszinierenden Detail dieser Komposition. Die makellos wiedergegebenen Federn der Eule entführen uns in ein Reich ätherischer Schönheit. Jede Feder, ein visuelles Gedicht, streichelt unsere Sinne mit ihrer Zartheit und Textur. Es ist eine Symphonie aus Formen und Mustern, ein Tanz aus Realität und Fantasie, die in einer himmlischen Umarmung miteinander verflochten sind.</p>
+          <p>Aber es gibt noch mehr, viel mehr. Eine schwebende Kugel gleitet wie ein himmlisches Leuchtfeuer vom höchsten Mond herab. Es ist eine kugelförmige Rassel, die zum Leben erwacht und einen mystischen Charme und ein subtiles Echo ausstrahlt. Sein Klang hallt in den Tiefen der Seele wider und erinnert uns an Spiritualität und heilige Harmonie. Es ist eine Einladung, auf den kosmischen Rhythmus zu hören, in unserer Existenz präsent und bewusst zu sein.</p>
+          <p>Die Szene spielt sich in einer Nacht ab, die in Schatten gehüllt ist, aber von der strahlenden Präsenz der Monde erhellt wird. Die Eule strahlt in ihrer meditativen Haltung eine transzendentale Ruhe in der Dunkelheit aus. In seiner heiligen Stille erschafft es die Essenz der Weisheit und ist bereit, die Welt mit seinem Glanz zu erleuchten.</p>
+          <p>Mit diesem Meisterwerk lädt uns Paz Arés Osset ein, Intelligenz, Weisheit und nächtliche Meditation unter der Umarmung des Mondes zu erforschen. Es führt uns auf die Suche nach Erleuchtung in den tiefsten Winkeln unseres Seins und lädt uns ein, unsere eigene Essenz zu entdecken und in der Symphonie der Existenz zu tanzen.</p>
+          <p>Zögern Sie nicht, dieses Werk im heiligen Bereich Ihrer Sammlung aufzubewahren, denn sein Wert geht über das Material hinaus. Möge seine Anwesenheit ein Leuchtfeuer in Ihrem Leben sein und den Weg zur ästhetischen Kontemplation und zum tiefen Verständnis der Kunst erhellen.</p>
+          <p>Vielen Dank, dass Sie mich auf dieser Reise zur Wertschätzung der Kunst begleitet haben. Mögen die Flügel der Inspiration Sie durch die grenzenlosen Horizonte der Kunst führen.</p>
+        </div>
+
+        <div class="fr language" style="display:none;">
+          <p>Dans un sanctuaire de merveilles, dans l'étreinte sacrée de l'art, je vous invite à entrer dans l'immensité de la toile qui déroule devant vous un chef-d'œuvre sans précédent. Laissez mes mots couler avec la passion et l’éloquence que seule l’essence de l’art peut évoquer, tandis que je vous guide sur les chemins inexplorés de cette sublime création.</p>
+          <p>Contemplez la chouette, ancien emblème de la sagesse, avec ses yeux qui brillent comme des étoiles cosmiques, pénétrant dans les profondeurs de la connaissance universelle. Mais ici, dans cette œuvre qui transcende l’ordinaire, la chouette se tient au milieu de deux lunes célestes, chacune dans son propre cycle de croissance et de déclin. Cette fusion divine nous invite à méditer sur la dualité de l'existence et l'harmonie intrinsèque qui réside dans les mystères du cosmos.</p>
+          <p>La maîtrise consommée de Paz Arés Osset se révèle dans chaque trait, dans chaque détail captivant de cette composition. Les plumes impeccablement rendues du hibou nous transportent dans un royaume de beauté éthérée. Chaque plume, poème visuel, caresse nos sens par sa délicatesse et sa texture. C'est une symphonie de formes et de motifs, une danse de réalité et de fantaisie mêlées dans une étreinte céleste.</p>
+          <p>Mais il y a bien plus encore. Une sphère suspendue, telle une balise céleste, glisse depuis la plus haute lune. C'est un hochet sphérique qui prend vie, dégageant un charme mystique et un écho subtil. Son son résonne dans les recoins de l'âme, nous rappelant la spiritualité et l'harmonie sacrée. C'est une invitation à écouter le rythme cosmique, à être présent et conscient dans notre existence.</p>
+          <p>La scène se déroule dans une nuit enveloppée d’ombres, mais éclairée par la présence radieuse des lunes. La chouette, dans sa posture méditative, dégage un calme transcendantal dans l'obscurité. Dans son silence sacré, il façonne l’essence même de la sagesse, prête à illuminer le monde de son éclat.</p>
+          <p>A travers ce chef-d'œuvre, Paz Arés Osset nous invite à explorer l'intelligence, la sagesse et la méditation nocturne sous l'étreinte de la lune. Il nous guide vers la recherche de l’illumination au plus profond de notre être, nous invitant à découvrir notre propre essence et à danser dans la symphonie de l’existence.</p>
+          <p>N'hésitez pas à conserver cette œuvre dans l'enceinte sacrée de votre collection, car sa valeur dépasse le matériau. Que sa présence soit un phare dans vos vies, éclairant le chemin vers la contemplation esthétique et une compréhension profonde de l’art.</p>
+          <p>Merci de vous joindre à moi dans ce voyage vers l’appréciation de l’art. Que les ailes de l'inspiration vous guident à travers les horizons illimités de l'art.</p>
+        </div>
+
+        <div class="ja language" style="display:none;">
+          <p>驚異の聖域で、芸術の神聖な抱擁の中で、比類のない傑作が目の前に広がる広大なキャンバスの中へお入りください。芸術の本質だけが呼び起こすことができる情熱と雄弁さを込めて、私の言葉をこの崇高な創造物の未踏の道に沿って案内してください。</p>
+          <p>古代の知恵の象徴であるフクロウを見てください。その目は宇宙の星のように輝き、普遍的な知識の深みに入り込んでいます。しかし、ここでは、日常を超越したこの作品において、フクロウは、それぞれ独自の満ち欠けの周期をもつ 2 つの天の月の真ん中に立っています。この神聖な融合は、存在の二元性と宇宙の神秘に潜む本質的な調和について瞑想するよう私たちを誘います。</p>
+          <p>パズ・アレ・オセットの完璧な熟練は、この作品のあらゆるストローク、あらゆる魅惑的な細部に現れています。フクロウの完璧に表現された羽は、私たちを幻想的な美しさの領域に連れて行きます。視覚的な詩である羽の一枚一枚が、その繊細さと質感で私たちの感覚を撫でます。それは形とパターンの交響曲であり、天国のような抱擁の中で絡み合った現実と幻想のダンスです。</p>
+          <p>しかし、それだけではありません。天の標識のような吊り下げられた球体が、最も高い月から滑り落ちます。生命を吹き込まれた球状のガラガラで、神秘的な魅力と微妙な響きを放ちます。その音は魂の奥底に響き渡り、私たちに精神性と神聖な調和を思い出させます。それは宇宙のリズムに耳を傾け、私たちの存在を意識して存在することへの招待状です。</p>
+          <p>場面は影に覆われているが、月の輝く存在によって照らされている夜に展開します。瞑想的な姿勢をとったフクロウは、暗闇の中で超越的な静けさを放ちます。神聖な沈黙の中で、それはまさに知恵の本質を作り上げ、その輝きで世界を照らす準備ができています。</p>
+          <p>パズ・アレ・オセットは、この傑作を通して、月に抱かれながら知性、知恵、そして夜の瞑想を探求するよう私たちを誘います。それは私たちを私たちの存在の最も深い隅にある悟りの探求へと導き、私たち自身の本質を発見し、存在の交響曲の中で踊るように誘います。</p>
+          <p>この作品の価値は資料を超えていますので、ご遠慮なく神聖なコレクションとして保存してください。彼の存在があなたの人生の灯台となり、美的熟考と芸術への深い理解への道を照らしますように。</p>
+          <p>芸術鑑賞への旅にご参加いただきありがとうございます。インスピレーションの翼があなたを芸術の無限の地平へと導きますように。</p>
+        </div>
+
+        <div class="pt language" style="display:none;">
+          <p>Num santuário de maravilhas, no abraço sagrado da arte, convido-vos a entrar na vastidão da tela que se desenrola diante de vós uma obra-prima sem igual. Permita que minhas palavras fluam com a paixão e a eloquência que só a essência da arte pode evocar, enquanto eu o guio pelos caminhos inexplorados desta sublime criação.</p>
+          <p>Contemple a coruja, antigo emblema da sabedoria, com seus olhos que brilham como estrelas cósmicas, adentrando as profundezas do conhecimento universal. Mas aqui, nesta obra que transcende o comum, a coruja está no meio de duas luas celestiais, cada uma em seu próprio ciclo de aumento e diminuição. Esta fusão divina convida-nos a meditar sobre a dualidade da existência e a harmonia intrínseca que reside nos mistérios do cosmos.</p>
+          <p>A mestria consumada de Paz Arés Osset revela-se em cada traço, em cada detalhe cativante desta composição. As penas imaculadamente reproduzidas da coruja nos transportam para um reino de beleza etérea. Cada pena, um poema visual, acaricia os nossos sentidos com a sua delicadeza e textura. É uma sinfonia de formas e padrões, uma dança de realidade e fantasia entrelaçadas num abraço celestial.</p>
+          <p>Mas há mais, muito mais. Uma esfera suspensa, como um farol celestial, desliza da lua mais alta. É um chocalho esférico que ganha vida, emanando um encanto místico e um eco sutil. Seu som reverbera nos recônditos da alma, lembrando-nos da espiritualidade e da harmonia sagrada. É um convite a ouvir o ritmo cósmico, a estar presente e consciente na nossa existência.</p>
+          <p>A cena se desenrola numa noite envolta em sombras, mas iluminada pela presença radiante das luas. A coruja, em sua postura meditativa, irradia uma calma transcendental na escuridão. No seu silêncio sagrado, ela cria a própria essência da sabedoria, pronta para iluminar o mundo com o seu brilho.</p>
+          <p>Através desta obra-prima, Paz Arés Osset nos convida a explorar a inteligência, a sabedoria e a meditação noturna sob o abraço da lua. Guia-nos na busca da iluminação nos recantos mais profundos do nosso ser, convidando-nos a descobrir a nossa própria essência e a dançar na sinfonia da existência.</p>
+          <p>Não hesite em preservar esta obra no recinto sagrado do seu acervo, pois seu valor vai além do material. Que a sua presença seja um farol nas vossas vidas, iluminando o caminho para a contemplação estética e a compreensão profunda da arte.</p>
+          <p>Obrigado por se juntar a mim nesta jornada em direção à apreciação da arte. Que as asas da inspiração o guiem pelos horizontes ilimitados da arte.</p>
         </div>
 
       </div>
+    </section>
 
-    </div>
-
-  </section>
-  <!-- Rest of the HTML here... -->
-
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>
-              <div class="english language">Technique: Engraving</div>
-              <div class="spanish language" style="display: none;">Técnica: Grabado</div>
-              <div class="italian language" style="display: none;">Tecnica: Incisione</div>
-              <div class="chinese language" style="display: none;">技术：雕刻</div>
-            </li>
-
-            <li>
-              <div class="english language">Size: 10x18 cm</div>
-              <div class="spanish language" style="display: none;">Tamaño: 10x18 cm</div>
-              <div class="italian language" style="display: none;">Dimensioni: 10x18 cm</div>
-              <div class="chinese language" style="display: none;">尺寸：10x18厘米</div>
-            </li>
-            <li>
-              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
-              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
-              </div>
-              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
-              </div>
-              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
-            </li>
-            <li>
-              <div class="english language">Current Location: Private Collection Madrid</div>
-              <div class="spanish language" style="display: none;">Ubicación Actual: Colección en Madrid</div>
-              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
-              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
-            </li>
-
-          </ul>
-
-
+    <!-- Poesía -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-book-open mr-2"></i>
+        <span class="es language">Poesía y Reflexión</span>
+        <span class="en language" style="display:none;">Poetry and Reflection</span>
+        <span class="it language" style="display:none;">Poesia e riflessione</span>
+        <span class="ru language" style="display:none;">Поэзия и размышления</span>
+        <span class="zh language" style="display:none;">诗歌与反思</span>
+        <span class="ar language" style="display:none;">الشعر والتأمل</span>
+        <span class="de language" style="display:none;">Poesie und Reflexion</span>
+        <span class="fr language" style="display:none;">Poésie et réflexion</span>
+        <span class="ja language" style="display:none;">詩と思索</span>
+        <span class="pt language" style="display:none;">Poesia e Reflexão</span>
+      </h2>
+      <div class="description-text">
+        <div class="es language">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              En la noche estrellada, un búho se eleva en vuelo,<br/>
+              entre las lunas que brillan con su resplandor más bello.<br/>
+              Sus ojos despiertos, en busca de sabiduría y verdad,<br/>
+              guiando mi espíritu en esta trascendental eternidad.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Las plumas del búho, delicadas y llenas de encanto,<br/>
+              pintan un lienzo divino, revelando un mensaje santo.<br/>
+              En cada trazo se esconde el gozo del alma en vuelo,<br/>
+              y encuentro en su mirada el éxtasis del ser que anhelo.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Un cascabel cuelga en la luna, un eco sutil en el aire,<br/>
+              recordándome la esencia del espíritu, de amar sin cesar.<br/>
+              Su sonido reverbera, invitándome a la presencia consciente,<br/>
+              a danzar en armonía con la divinidad presente.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              En la noche oscura, iluminada por lunas serenas,<br/>
+              el búho medita, buscando la plenitud en cada escena.<br/>
+              Me sumerjo en su paz, en la quietud de mi propio ser,<br/>
+              encontrando en la introspección el gozo que ansío tener.<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>Esta obra trasciende las fronteras de lo tangible y real, es un reflejo del anhelo del espíritu, profundo y vital. Encuentro en ella la búsqueda del gozo del ser interior, un recordatorio de que la sabiduría es el mayor tesoro.</p>
+            <p>Que esta poesía transmita la esencia de mi experiencia, que capture el éxtasis del espíritu en su esencia más pura. Que inspire a otros a buscar el gozo en su propio ser, y a manifestar la trascendencia en cada amanecer.</p>
+          </div>
         </div>
-        <div class="col-6 md audio" style="display:none;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
+
+        <div class="en language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              In the starry night, an owl rises in flight,<br/>
+              among the moons that shine with their most beautiful brilliance.<br/>
+              His eyes awake, in search of wisdom and truth,<br/>
+              guiding my spirit in this transcendental eternity.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              The owl's feathers, delicate and full of charm,<br/>
+              They paint a divine canvas, revealing a holy message.<br/>
+              In each stroke the joy of the soul in flight is hidden,<br/>
+              and I find in his gaze the ecstasy of the being I long for.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              A bell hangs on the moon, a subtle echo in the air,<br/>
+              reminding me of the essence of the spirit, of loving without ceasing.<br/>
+              Its sound reverberates, inviting me to conscious presence,<br/>
+              to dance in harmony with the present divinity.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              In the dark night, illuminated by serene moons,<br/>
+              the owl meditates, seeking plenitude in each scene.<br/>
+              I immerse myself in his peace, in the stillness of my own being,<br/>
+              finding in introspection the joy I long to have.<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>This work transcends the borders of the tangible and real, it is a reflection of the longing of the spirit, deep and vital. I find in it the search for the joy of the inner being, a reminder that wisdom is the greatest treasure.</p>
+            <p>May this poetry transmit the essence of my experience, may it capture the ecstasy of the spirit in its purest essence. May it inspire others to seek joy in their own being, and to manifest transcendence in every dawn.</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="multilingual-description">
-    <div class="container">
-      <h1 style="color: gold;">
-        <div class="english language">Description</div>
-        <div class="spanish language" style="display: none;">Descripción</div>
-        <div class="italian language" style="display: none;">Descrizione</div>
-        <div class="chinese language" style="display: none;">描述</div>
-      </h1>
+        <div class="it language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              Nella notte stellata una civetta si alza in volo,<br/>
+              tra le lune che brillano del loro splendore più bello.<br/>
+              I suoi occhi sono svegli, alla ricerca della saggezza e della verità,<br/>
+              guidando il mio spirito in questa eternità trascendentale.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Le piume del gufo, delicate e piene di fascino,<br/>
+              Dipingono una tela divina, rivelando un messaggio sacro.<br/>
+              In ogni colpo è nascosta la gioia dell'anima in volo,<br/>
+              e trovo nel suo sguardo l'estasi dell'essere che desidero.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Una campana pende sulla luna, un'eco sottile nell'aria,<br/>
+              ricordandomi l'essenza dello spirito, dell'amare senza sosta.<br/>
+              Il suo suono risuona, invitandomi alla presenza cosciente,<br/>
+              danzare in armonia con la divinità presente.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Nella notte oscura, illuminata da lune serene,<br/>
+              il gufo medita, cercando la pienezza in ogni scena.<br/>
+              Mi immergo nella sua pace, nella quiete del mio stesso essere,<br/>
+              trovando nell'introspezione la gioia che desidero avere.<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>Quest'opera trascende i confini del tangibile e del reale, è un riflesso del desiderio dello spirito, profondo e vitale. Trovo in esso la ricerca della gioia dell'essere interiore, un promemoria che la saggezza è il tesoro più grande.</p>
+            <p>Possa questa poesia trasmettere l'essenza della mia esperienza, possa catturare l'estasi dello spirito nella sua essenza più pura. Possa ispirare gli altri a cercare la gioia nel proprio essere e a manifestare la trascendenza in ogni alba.</p>
+          </div>
+        </div>
 
-      <div class="english language">
-        <!-- English description here -->
-        <p>In a sanctuary of wonders, in the sacred embrace of art, I invite you to delve into the vastness of the
-          canvas which
-          unfolds before you a peerless masterpiece. Allow my words to flow with the passion and eloquence that only the
-          essence
-          of art can evoke, as I guide you through the unexplored paths of this sublime creation.</p>
+        <div class="ru language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              В звездную ночь в полет поднимается сова,<br/>
+              среди лун, сияющих своим самым прекрасным блеском.<br/>
+              Его глаза просыпаются в поисках мудрости и истины,<br/>
+              направляя свой дух в этой трансцендентной вечности.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Перья совы, нежные и очаровательные,<br/>
+              Они рисуют божественное полотно, раскрывающее священное послание.<br/>
+              В каждом мазке сокрыта радость полета души,<br/>
+              и я нахожу в его взгляде экстаз того существа, которого я жажду.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              На луне висит колокол, в воздухе раздается едва уловимое эхо,<br/>
+              напоминая мне о сути духа, о непрестанной любви.<br/>
+              Его звук звучит эхом, приглашая меня к сознательному присутствию,<br/>
+              танцевать в гармонии с настоящей божественностью.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              В темной ночи, освещенной безмятежными лунами,<br/>
+              сова медитирует, ища полноты в каждой сцене.<br/>
+              Я погружаюсь в его покой, в тишину своего существа,<br/>
+              находя в самоанализе радость, которую я так жажду иметь.<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>Эта работа выходит за границы осязаемого и реального, она является отражением стремлений духа, глубоких и жизненных. Я нахожу в нем поиск радости внутреннего существа, напоминание о том, что мудрость – величайшее сокровище.</p>
+            <p>Пусть эта поэзия передаст суть моего опыта, пусть она уловит экстаз духа в его чистейшей сути. Пусть это вдохновит других искать радость в собственном существе и проявлять трансцендентность в каждом рассвете.</p>
+          </div>
+        </div>
 
-        <p>Behold the owl, the ancestral emblem of wisdom, with eyes that shine like cosmic stars, delving into the
-          depths of
-          universal knowledge. But here, in this work that transcends the ordinary, the owl stands amidst two celestial
-          moons,
-          each in their own cycle of waxing and waning. This divine fusion invites us to ponder the duality of existence
-          and the
-          inherent harmony that lies in the mysteries of the cosmos.</p>
-        <p>The consummate mastery of Paz Arés Osset is revealed in every stroke, in every captivating detail of this
-          composition. The owl's feathers, immaculately represented, transport us to a realm of ethereal beauty. Each
-          feather, a
-          visual poem, caresses our senses with its delicacy and texture. It is a symphony of shapes and patterns, a
-          dance of
-          reality and fantasy intertwined in a celestial embrace.</p>
-        <p>
-          But there is more, much more. A suspended sphere, like a celestial beacon, glides from the higher moon. It's a
-          spherical bell that comes alive, emanating a mystical charm and a subtle echo. Its sound reverberates in the
-          corners
-          of the soul, reminding us of spirituality and sacred harmony. It is an invitation to listen to the cosmic
-          rhythm, to
-          be present and aware in our existence.
-        </p>
-        <p>
-          The scene unfolds on a night wrapped in shadows, but illuminated by the radiant presence of the moons. The
-          owl, in its
-          meditative stance, radiates a transcendental calm in the darkness. In its sacred silence, it elaborates the
-          very
-          essence of wisdom, ready to illuminate the world with its glow.
-        </p>
-        <p>
-          Through this masterpiece, Paz Arés Osset invites us to explore intelligence, wisdom, and night-time meditation
-          under
-          the embrace of the moon. She guides us towards the search for enlightenment in the deepest corners of our
-          being,
-          inviting us to discover our own essence and dance in the symphony of existence.
-        </p>
-        <p>
-          Do not hesitate to preserve this work in the sacred precinct of your collection, for its value goes beyond the
-          material. May its presence be a beacon in your lives, lighting the path to aesthetic contemplation and deep
-          understanding of art.
-        </p>
-        <p>
-          Thank you for accompanying me on this journey towards the appreciation of art. May the wings of inspiration
-          guide you
-          through the unlimited horizons of art.
-        </p>
+        <div class="zh language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              星夜里，一只猫头鹰飞翔，<br/>
+              在闪耀着最美丽光彩的月亮之中。<br/>
+              他的眼睛清醒，寻找智慧和真理，<br/>
+              在这超然的永恒中引导我的精神。<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              猫头鹰的羽毛，精致又充满魅力，<br/>
+              他们描绘了一幅神圣的画布，揭示了神圣的信息。<br/>
+              每一笔都隐藏着灵魂飞翔的喜悦，<br/>
+              我在他的目光中找到了我所渴望的狂喜。<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              月亮上挂着一口钟，空中有微妙的回声，<br/>
+              让我想起精神的本质，永不停息的爱。<br/>
+              它的声音回响，邀请我有意识地存在，<br/>
+              与当下的神性和谐共舞。<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              漆黑的夜里，月光照耀下，<br/>
+              猫头鹰冥想，在每个场景中寻求充实。<br/>
+              我沉浸在他的平静中，沉浸在我自己存在的宁静中，<br/>
+              在内省中找到我渴望拥有的快乐。<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>这部作品超越了有形和真实的界限，它是精神渴望的反映，深刻而充满活力。我在其中发现了对内心快乐的追寻，提醒我智慧是最伟大的财富。</p>
+            <p>愿这首诗传达我的经历的本质，愿它捕捉到精神最纯粹的狂喜。愿它激励其他人在自己的存在中寻求快乐，并在每个黎明中表现出超越。</p>
+          </div>
+        </div>
 
-      </div>
+        <div class="ar language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              في الليل المرصع بالنجوم، تحلق بومة،<br/>
+              بين الأقمار التي تتألق بأجمل تألقها.<br/>
+              استيقظت عيناه بحثًا عن الحكمة والحقيقة،<br/>
+              توجيه روحي في هذه الأبدية المتعالية.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              ريش البومة رقيق ومليء بالسحر<br/>
+              إنهم يرسمون لوحة إلهية، ويكشفون عن رسالة مقدسة.<br/>
+              في كل ضربة تختفي متعة الروح بالهروب،<br/>
+              وأجد في نظرته نشوة الكائن الذي أشتاق إليه.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              جرس معلق على القمر، صدى خفي في الهواء،<br/>
+              يذكرني بجوهر الروح، المحبة بلا انقطاع.<br/>
+              يتردد صدى صوته، ويدعوني إلى الحضور الواعي،<br/>
+              للرقص في وئام مع الألوهية الحاضرة.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              في الليل المظلم تضيئه الاقمار الهادئة<br/>
+              تتأمل البومة بحثًا عن الامتلاء في كل مشهد.<br/>
+              أغمر نفسي في سلامه، في سكون كياني،<br/>
+              العثور في الاستبطان على الفرح الذي أشتاق إليه.<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>يتجاوز هذا العمل حدود الملموس والحقيقي، فهو انعكاس لشوق الروح العميق والحيوي. أجد فيه البحث عن متعة الكينونة الداخلية، تذكيرًا بأن الحكمة هي الكنز الأعظم.</p>
+            <p>عسى أن ينقل هذا الشعر جوهر تجربتي، عسى أن يجسد نشوة الروح في أنقى جوهرها. نرجو أن تلهم الآخرين للبحث عن الفرح في كيانهم، وإظهار السمو في كل فجر.</p>
+          </div>
+        </div>
 
-      <div class="spanish language" style="display: none;">
-        <!-- Spanish description here -->
-        <p>En un santuario de maravillas, en el abrazo sagrado del arte, les invito a adentrarse en la vastedad del
-          lienzo que
-          despliega ante ustedes una obra maestra sin parangón. Permitan que mis palabras fluyan con la pasión y la
-          elocuencia que
-          sólo la esencia del arte puede evocar, mientras les guío por los senderos inexplorados de esta creación
-          sublime.
-        </p>
+        <div class="de language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              In der sternenklaren Nacht erhebt sich eine Eule im Flug,<br/>
+              unter den Monden, die in ihrem schönsten Glanz erstrahlen.<br/>
+              Seine Augen erwachen, auf der Suche nach Weisheit und Wahrheit,<br/>
+              Ich leite meinen Geist in dieser transzendentalen Ewigkeit.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Die Federn der Eule, zart und voller Charme,<br/>
+              Sie malen eine göttliche Leinwand und enthüllen eine heilige Botschaft.<br/>
+              In jedem Schlag verbirgt sich die Freude der fliegenden Seele,<br/>
+              und ich finde in seinem Blick die Ekstase des Wesens, nach dem ich mich sehne.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Auf dem Mond hängt eine Glocke, ein subtiles Echo in der Luft,<br/>
+              Erinnert mich an die Essenz des Geistes, daran, ohne Unterlass zu lieben.<br/>
+              Sein Klang hallt nach und lädt mich zur bewussten Präsenz ein,<br/>
+              im Einklang mit der gegenwärtigen Göttlichkeit zu tanzen.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              In der dunklen Nacht, beleuchtet von ruhigen Monden,<br/>
+              Die Eule meditiert und sucht in jeder Szene nach Fülle.<br/>
+              Ich tauche ein in seinen Frieden, in die Stille meines eigenen Wesens,<br/>
+              In der Selbstbeobachtung die Freude finden, nach der ich mich sehne.<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>Dieses Werk überschreitet die Grenzen des Greifbaren und Realen, es ist eine Widerspiegelung der Sehnsucht des Geistes, tief und lebendig. Ich finde darin die Suche nach der Freude des inneren Wesens, eine Erinnerung daran, dass Weisheit der größte Schatz ist.</p>
+            <p>Möge diese Poesie die Essenz meiner Erfahrung vermitteln, möge sie die Ekstase des Geistes in ihrer reinsten Essenz einfangen. Möge es andere dazu inspirieren, Freude an ihrem eigenen Wesen zu suchen und in jedem Morgengrauen Transzendenz zu manifestieren.</p>
+          </div>
+        </div>
 
-        <p>Contemplen el búho, emblema ancestral de la sabiduría, con sus ojos que resplandecen como luceros cósmicos,
-          adentrándose
-          en las profundidades del conocimiento universal. Pero aquí, en esta obra que trasciende lo ordinario, el búho
-          se yergue
-          en medio de dos lunas celestiales, cada una en su propio ciclo de crecimiento y mengua. Esta fusión divina nos
-          invita a
-          meditar sobre la dualidad de la existencia y la armonía intrínseca que yace en los misterios del cosmos.</p>
+        <div class="fr language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              Dans la nuit étoilée, une chouette s'élève en vol,<br/>
+              parmi les lunes qui brillent de leur plus bel éclat.<br/>
+              Ses yeux éveillés, à la recherche de sagesse et de vérité,<br/>
+              guider mon esprit dans cette éternité transcendantale.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Les plumes de la chouette, délicates et pleines de charme,<br/>
+              Ils peignent une toile divine, révélant un message sacré.<br/>
+              Dans chaque coup se cache la joie de l'âme en vol,<br/>
+              et je retrouve dans son regard l'extase de l'être auquel je désire.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Une cloche suspendue sur la lune, un subtil écho dans l'air,<br/>
+              me rappelant l'essence de l'esprit, d'aimer sans cesse.<br/>
+              Son son résonne, m'invitant à une présence consciente,<br/>
+              danser en harmonie avec la divinité présente.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Dans la nuit noire, éclairée par des lunes sereines,<br/>
+              la chouette médite, cherchant la plénitude dans chaque scène.<br/>
+              Je m'immerge dans sa paix, dans le calme de mon propre être,<br/>
+              trouver dans l'introspection la joie que j'aspire à avoir.<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>Cette œuvre transcende les frontières du tangible et du réel, elle est le reflet du désir de l'esprit, profond et vital. J'y retrouve la recherche de la joie de l'être intérieur, un rappel que la sagesse est le plus grand trésor.</p>
+            <p>Que cette poésie transmette l'essence de mon expérience, qu'elle capte l'extase de l'esprit dans son essence la plus pure. Puisse-t-il inspirer les autres à rechercher la joie dans leur propre être et à manifester la transcendance à chaque aube.</p>
+          </div>
+        </div>
 
+        <div class="ja language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              星降る夜にフクロウが飛び立ちます<br/>
+              最も美しい輝きを放つ月の間で。<br/>
+              彼の目は目覚め、知恵と真実を求めています。<br/>
+              この超越的な永遠の中で私の精神を導きます。<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              繊細で魅力に満ちたフクロウの羽<br/>
+              彼らは神聖なキャンバスを描き、神聖なメッセージを明らかにします。<br/>
+              それぞれのストロークには、飛翔する魂の喜びが隠されています。<br/>
+              そして私は彼の視線の中に、私が憧れていた存在のエクスタシーを見出しました。<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              <br/>
+              月に鐘がぶら下がっており、微妙な音が空気に響きます。<br/>
+              精神の本質、絶え間なく愛することを思い出させてくれます。<br/>
+              その音が響き渡り、私を意識的な存在へと誘います。<br/>
+              現在の神性と調和して踊ること。<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              暗い夜に、穏やかな月に照らされて<br/>
+              フクロウは瞑想し、それぞれのシーンに豊かさを求めます。<br/>
+              私は彼の平安と私自身の存在の静けさに浸ります。<br/>
+              内省の中で、私が望んでいた喜びを見つけます。<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>この作品は、有形と現実の境界を超え、深く生命力のある精神の憧れを反映しています。私はそこに、内なる存在の喜びの探求、そして知恵が最大の宝物であることを思い出させてくれます。</p>
+            <p>この詩が私の経験の本質を伝え、精神のエクスタシーを最も純粋な本質でとらえることができますように。それが他の人たちに、自分自身の存在に喜びを求め、夜明けごとに超越性を明らかにするよう促すことができますように。</p>
+          </div>
+        </div>
 
-        <p>La maestría consumada de Paz Arés Osset se revela en cada trazo, en cada detalle cautivador de esta
-          composición. Las
-          plumas del búho, inmaculadamente representadas, nos transportan a un reino de belleza etérea. Cada pluma, un
-          poema
-          visual, acaricia nuestros sentidos con su delicadeza y textura. Es una sinfonía de formas y patrones, una
-          danza de la
-          realidad y la fantasía entrelazadas en un abrazo celestial.</p>
-
-        <p>
-          Pero hay más, mucho más. Una esfera suspendida, como un faro celeste, se desliza de la luna más alta. Es un
-          cascabel
-          esférico que cobra vida, emanando un encanto místico y un eco sutil. Su sonido reverbera en los recovecos del
-          alma,
-          recordándonos la espiritualidad y la armonía sagrada. Es una invitación a escuchar el ritmo cósmico, a estar
-          presentes y
-          conscientes en nuestra existencia.
-        </p>
-
-        <p>
-          La escena se despliega en una noche envuelta en sombras, pero iluminada por la radiante presencia de las
-          lunas. El búho,
-          en su postura meditativa, irradia una calma trascendental en la oscuridad. En su silencio sagrado, elabora la
-          esencia
-          misma de la sabiduría, preparado para iluminar al mundo con su resplandor.
-        </p>
-
-        <p>
-          A través de esta obra maestra, Paz Arés Osset nos invita a explorar la inteligencia, la sabiduría y la
-          meditación
-          nocturna bajo el abrazo de la luna. Nos guía hacia la búsqueda de la iluminación en los rincones más profundos
-          de
-          nuestro ser, invitándonos a descubrir nuestra propia esencia y a danzar en la sinfonía de la existencia.
-        </p>
-
-        <p>
-          No duden en preservar esta obra en el sagrado recinto de vuestra colección, pues su valor va más allá de lo
-          material.
-          Que su presencia sea un faro en vuestras vidas, iluminando el camino hacia la contemplación estética y la
-          comprensión
-          profunda del arte.
-        </p>
-
-        <p>
-          Gracias por acompañarme en este viaje hacia la apreciación del arte. Que las alas de la inspiración les guíen
-          a través
-          de los horizontes ilimitados del arte.
-        </p>
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-        <!-- Italian description here -->
-        <p>In un santuario di meraviglie, nell'abbraccio sacro dell'arte, vi invito ad addentrarvi nella vastità della
-          tela che
-          si dispiega davanti a voi come un capolavoro senza paragoni. Lasciate che le mie parole fluiscono con la
-          passione e
-          l'eloquenza che solo l'essenza dell'arte può evocare, mentre vi guido attraverso i sentieri inesplorati di
-          questa
-          creazione sublime.</p>
-
-        <p>Contemplate il gufo, emblema ancestrale della saggezza, con occhi che brillano come stelle cosmiche,
-          immergendosi
-          nelle profondità della conoscenza universale. Ma qui, in quest'opera che trascende l'ordinario, il gufo si
-          erge in
-          mezzo a due lune celesti, ciascuna nel proprio ciclo di crescita e decrescita. Questa fusione divina ci invita
-          a
-          riflettere sulla dualità dell'esistenza e sull'armonia intrinseca che risiede nei misteri del cosmo.</p>
-        <p>La consumata maestria di Paz Arés Osset si rivela in ogni tratto, in ogni dettaglio affascinante di questa
-          composizione. Le piume del gufo, immacolatamente rappresentate, ci trasportano in un regno di bellezza eterea.
-          Ogni
-          piuma, una poesia visiva, accarezza i nostri sensi con la sua delicatezza e texture. È una sinfonia di forme e
-          modelli, una danza di realtà e fantasia intrecciate in un abbraccio celestiale.</p>
-        <p>
-          Ma c'è di più, molto di più. Una sfera sospesa, come un faro celeste, scivola dalla luna più alta. È un
-          campanello
-          sferico che prende vita, emanando un fascino mistico e un eco sottile. Il suo suono risuona negli angoli
-          dell'anima,
-          ricordandoci la spiritualità e l'armonia sacra. È un invito ad ascoltare il ritmo cosmico, ad essere presenti
-          e
-          consapevoli nella nostra esistenza.
-        </p>
-        <p>
-          La scena si svolge in una notte avvolta nell'ombra, ma illuminata dalla presenza radiante delle lune. Il gufo,
-          nella
-          sua posa meditativa, irradia una calma trascendentale nell'oscurità. Nel suo sacro silenzio, elabora l'essenza
-          stessa
-          della saggezza, pronto ad illuminare il mondo con il suo splendore.
-        </p>
-        <p>
-          Attraverso questo capolavoro, Paz Arés Osset ci invita a esplorare l'intelligenza, la saggezza e la
-          meditazione
-          notturna sotto l'abbraccio della luna. Ci guida verso la ricerca dell'illuminazione nei luoghi più profondi
-          del nostro
-          essere, invitandoci a scoprire la nostra essenza e a danzare nella sinfonia dell'esistenza.
-        </p>
-        <p>
-          Non esitate a conservare quest'opera nel recinto sacro della vostra collezione, perché il suo valore va oltre
-          il
-          materiale. Possa la sua presenza essere un faro nelle vostre vite, illuminando il cammino verso la
-          contemplazione
-          estetica e la profonda comprensione dell'arte.
-        </p>
-        <p>
-          Grazie per avermi accompagnato in questo viaggio verso l'apprezzamento dell'arte. Possano le ali
-          dell'ispirazione
-          guidarvi attraverso gli orizzonti illimitati dell'arte.
-        </p>
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <p>在奇迹的圣所中，艺术的神圣拥抱中，我邀请您深入画布的广阔，它在您面前展开一部无与伦比的杰作。让我的话语流动，带着只有艺术本质才能唤起的激情和雄辩，我将带领您穿越这个崇高创作的未探索之路。</p>
-
-        <p>
-          看那只猫头鹰，它是智慧的古老象征，眼睛闪烁着像宇宙之星的光芒，深入了解普遍的知识。但在这部超越平凡的作品中，猫头鹰站在两个天上的月亮之间，每个月亮都在自己的增长和消退周期中。这种神圣的融合邀请我们思考存在的二元性和宇宙奥秘中固有的和谐。
-        </p>
-        <p>Paz Arés
-          Osset的精湛技艺在每一笔、每一令人着迷的细节中都体现出来。猫头鹰的羽毛，被完美地表现出来，带我们进入一个空灵的美的领域。每一根羽毛，一首视觉的诗，以其细腻和质感抚慰我们的感官。这是形状和模式的交响乐，现实与幻想交织在天上的拥抱中的舞蹈。
-        </p>
-        <p>
-          但是，还有更多，更多的。一个悬浮的球体，像一个天上的灯塔，从更高的月亮滑落下来。这是一个球形的铃铛，它活了起来，散发出神秘的魅力和微妙的回声。它的声音在灵魂的角落中回荡，提醒我们的是灵性和神圣的和谐。这是一次听取宇宙节奏的邀请，要活在现在，要对我们的存在有意识。
-        </p>
-        <p>
-          场景在一个被阴影包围的夜晚展开，但被月亮的辉煌存在所照亮。猫头鹰，以其冥想的姿势，在黑暗中散发出超然的平静。在其神圣的沉默中，它阐述着智慧的本质，准备以其光芒照亮世界。
-        </p>
-        <p>
-          通过这部杰作，Paz Arés Osset邀请我们探索智力、智慧和在月亮的拥抱下的夜间冥想。她引导我们寻找我们生命深处的启示，邀请我们发现自己的本质，在存在的交响乐中舞蹈。
-        </p>
-        <p>
-          请不要犹豫，将这部作品保留在你们收藏的神圣场地中，因为其价值超越了物质。愿它的存在成为你们生活的灯塔，照亮你们走向审美沉思和深入理解艺术的道路。
-        </p>
-        <p>
-          感谢你们陪我一起走向艺术欣赏的旅程。愿灵感的翅膀引导你们穿越艺术的无限地平线。
-        </p>
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <section class="multilingual-description">
-    <div class="container">
-      <h1 style="color: gold;">
-        <div class="english language">Poetry</div>
-        <div class="spanish language" style="display: none;">Poesía</div>
-        <div class="italian language" style="display: none;">Poesia</div>
-        <div class="chinese language" style="display: none;">诗歌</div>
-      </h1>
-
-
-      <div class="english language">
-        <!-- English description here -->
-
-        <p>In the starlit night, an owl takes flight,
-          amidst moons that shine with their most beautiful light.
-          Its eyes wide awake, in search of wisdom and truth,
-          guiding my spirit in this transcendent eternity.
-        </p>
-
-        <p>The owl's feathers, delicate and full of charm,
-          paint a divine canvas, revealing a holy message.
-          In each stroke hides the joy of the soul in flight,
-          and in its gaze, I find the ecstasy of the being I long to be.
-        </p>
-
-        <p>A bell hangs in the moon, a subtle echo in the air,
-          reminding me of the essence of the spirit, of ceaseless love.
-          Its sound reverberates, inviting me to conscious presence,
-          to dance in harmony with the divinity present.
-        </p>
-
-        <p>In the dark night, illuminated by serene moons,
-          the owl meditates, seeking fulfillment in each scene.
-          I immerse myself in its peace, in the quietude of my own being,
-          finding in introspection the joy I yearn to have.
-        </p>
-
-        <p>This work transcends the borders of the tangible and real,
-          it is a reflection of the spirit's longing, profound and vital.
-          In it, I find the pursuit of the inner self's joy,
-          a reminder that wisdom is the greatest treasure.
-        </p>
-
-        <p>May this poetry convey the essence of my experience,
-          may it capture the ecstasy of the spirit in its purest essence.
-          May it inspire others to seek joy in their own being,
-          and to manifest transcendence in each dawn.
-        </p>
-
+        <div class="pt language" style="display:none;">
+          <div class="poem-content" style="color: var(--gold); font-style: italic; font-size: 1.15em; padding: 20px; border-left: 3px solid var(--gold); background: rgba(0,0,0,0.2); margin-bottom: 25px;">
+            <p style="margin-bottom: 1em;">
+              Na noite estrelada, uma coruja levanta voo,<br/>
+              entre as luas que brilham com seu mais belo brilho.<br/>
+              Seus olhos despertam, em busca da sabedoria e da verdade,<br/>
+              guiando meu espírito nesta eternidade transcendental.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              As penas da coruja, delicadas e cheias de charme,<br/>
+              Eles pintam uma tela divina, revelando uma mensagem sagrada.<br/>
+              Em cada golpe se esconde a alegria da alma em fuga,<br/>
+              e encontro em seu olhar o êxtase do ser que anseio.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Um sino pendurado na lua, um eco sutil no ar,<br/>
+              lembrando-me da essência do espírito, de amar sem cessar.<br/>
+              Seu som reverbera, me convidando à presença consciente,<br/>
+              dançar em harmonia com a divindade presente.<br/>
+            </p>
+            <p style="margin-bottom: 1em;">
+              Na noite escura, iluminada por luas serenas,<br/>
+              a coruja medita, buscando a plenitude em cada cena.<br/>
+              Mergulho na sua paz, na quietude do meu próprio ser,<br/>
+              encontrando na introspecção a alegria que anseio ter.<br/>
+            </p>
+          </div>
+          <hr style="border-color: var(--glass-border); margin: 30px 0;">
+          <div class="poem-comments" style="color: var(--light-text); font-style: normal; font-size: 1.05em;">
+            <p>Esta obra transcende as fronteiras do tangível e do real, é um reflexo do anseio do espírito, profundo e vital. Encontro nele a busca pela alegria do ser interior, um lembrete de que a sabedoria é o maior tesouro.</p>
+            <p>Que esta poesia transmita a essência da minha experiência, que capte o êxtase do espírito em sua mais pura essência. Que inspire outros a buscar a alegria em seu próprio ser e a manifestar a transcendência a cada amanhecer.</p>
+          </div>
+        </div>
 
       </div>
+    </section>
+  </main>
 
-      <div class="spanish language" style="display: none;">
-        <!-- Spanish description here -->
-        <p>En la noche estrellada, un búho se eleva en vuelo,
-          entre las lunas que brillan con su resplandor más bello.
-          Sus ojos despiertos, en busca de sabiduría y verdad,
-          guiando mi espíritu en esta trascendental eternidad.
-        </p>
-
-        <p>Las plumas del búho, delicadas y llenas de encanto,
-          pintan un lienzo divino, revelando un mensaje santo.
-          En cada trazo se esconde el gozo del alma en vuelo,
-          y encuentro en su mirada el éxtasis del ser que anhelo.
-        </p>
-
-        <p>Un cascabel cuelga en la luna, un eco sutil en el aire,
-          recordándome la esencia del espíritu, de amar sin cesar.
-          Su sonido reverbera, invitándome a la presencia consciente,
-          a danzar en armonía con la divinidad presente.
-        </p>
-
-        <p>En la noche oscura, iluminada por lunas serenas,
-          el búho medita, buscando la plenitud en cada escena.
-          Me sumerjo en su paz, en la quietud de mi propio ser,
-          encontrando en la introspección el gozo que ansío tener.
-        </p>
-
-        <p>Esta obra trasciende las fronteras de lo tangible y real,
-          es un reflejo del anhelo del espíritu, profundo y vital.
-          Encuentro en ella la búsqueda del gozo del ser interior,
-          un recordatorio de que la sabiduría es el mayor tesoro.
-        </p>
-
-
-        <p>Que esta poesía transmita la esencia de mi experiencia,
-          que capture el éxtasis del espíritu en su esencia más pura.
-          Que inspire a otros a buscar el gozo en su propio ser,
-          y a manifestar la trascendencia en cada amanecer.
-        </p>
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-        <!-- Italian description here -->
-        <p>Nella notte stellata, un gufo prende il volo,
-          tra le lune che brillano con la loro luce più bella.
-          I suoi occhi ben svegli, in cerca di saggezza e verità,
-          guidano il mio spirito in questa trascendentale eternità.
-        </p>
-
-        <p>Le piume del gufo, delicate e piene di fascino,
-          dipingono una tela divina, rivelando un messaggio sacro.
-          In ogni tratto si nasconde la gioia dell'anima in volo,
-          e nel suo sguardo, trovo l'estasi dell'essere che anelo.
-        </p>
-
-        <p>Un campanello pende nella luna, un eco sottile nell'aria,
-          ricordandomi l'essenza dello spirito, dell'amore incessante.
-          Il suo suono riecheggia, invitandomi alla presenza consapevole,
-          a danzare in armonia con la divinità presente.
-        </p>
-
-        <p>Nella notte oscura, illuminata da lune serene,
-          il gufo medita, cercando la pienezza in ogni scena.
-          Mi immergo nella sua pace, nella quiete del mio essere,
-          trovando nell'introspezione la gioia che anelo avere.
-        </p>
-
-        <p>Quest'opera trascende i confini del tangibile e del reale,
-          è un riflesso del desiderio dello spirito, profondo e vitale.
-          In essa, trovo la ricerca della gioia del sé interiore,
-          un promemoria che la saggezza è il tesoro più grande.
-        </p>
-
-        <p>Che questa poesia possa trasmettere l'essenza della mia esperienza,
-          che possa catturare l'estasi dello spirito nella sua essenza più pura.
-          Che possa ispirare altri a cercare la gioia nel loro proprio essere,
-          e a manifestare la trascendenza in ogni alba.
-        </p>
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <p>在星光闪烁的夜晚，一只猫头鹰展翅飞翔，
-          在月亮的辉煌下闪耀着美丽的光芒。
-          它的双眼睁开，追寻着智慧和真理，
-          引领着我的灵魂进入这超凡的永恒。
-        </p>
-
-        <p>猫头鹰的羽毛，纤细而迷人，
-          绘制出一幅神圣的画布，揭示了圣洁的信息。
-          在每一笔中隐藏着灵魂在飞翔中的喜悦，
-          在它的目光中，我找到了渴望成为的那种狂喜。
-        </p>
-
-        <p>一个铃铛悬挂在月亮上，空气中传来微妙的回响，
-          提醒我灵魂的本质，无尽的爱。
-          它的声音回荡着，邀请我进入觉知的存在，
-          与当下的神性共舞，和谐交融。
-        </p>
-
-        <p>在黑暗的夜晚，被宁静的月亮照亮，
-          猫头鹰沉思，寻求每个场景的满足。
-          我沉浸在它的平和中，自我的宁静之中，
-          在自省中找到我渴望拥有的喜悦。
-        </p>
-
-        <p>这个作品超越了有形和真实的边界，
-          它是灵魂渴望的反映，深邃而重要。
-          我在其中找到了对内在自我的喜悦的追求，
-          这是智慧是最伟大的财富的提醒。
-        </p>
-
-        <p>愿这首诗传达我经历的本质，
-          捕捉到灵魂最纯粹的狂喜。
-          愿它激励他人在自己的存在中寻求喜悦，
-          在每个黎明中显现超凡的境界。
-        </p>
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <!-- js here -->
-  <script src="owl.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset -         <span class="es language">Arte y Trascendencia</span>
+        <span class="en language" style="display:none;">Art and Transcendence</span>
+        <span class="it language" style="display:none;">Arte e trascendenza</span>
+        <span class="ru language" style="display:none;">Искусство и трансцендентность</span>
+        <span class="zh language" style="display:none;">艺术与超越</span>
+        <span class="ar language" style="display:none;">الفن والتجاوز</span>
+        <span class="de language" style="display:none;">Kunst und Transzendenz</span>
+        <span class="fr language" style="display:none;">Art et transcendance</span>
+        <span class="ja language" style="display:none;">芸術と超越性</span>
+        <span class="pt language" style="display:none;">Arte e Transcendência</span></p>
+  </footer>
+  <script src="base.js"></script>
 </body>
-
 </html>

@@ -1,71 +1,278 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Woman´s Body</title>
+  <title>Cuerpo de Mujer - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="womansbody.css">
-
-
-
 </head>
 
 <body>
-  <section class="jumbotron text-center">
-    <div class="container">
-      <a class="brand" href=#><img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-      <h1 class="jumbotron-heading">Woman's body</h1>
-      <p class="lead text-muted">Sensuality and feelings expressed through this charcoil piece of Paz.</p>
-      <!-- <p>
-        <a class="btn btn-primary my-2" href="../../index.html" role="button">Main Page</a>
-      </p> -->
-    </div>
-  </section>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <select id="language-select" class="custom-select">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
+    </select>
+  </div>
 
-  <section class="main-image">
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
-          <img src="cuerpodemujer.jpg" class="w3-hover-grayscale" width="100%" style="border:30px solid white;">
-          <!-- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_images_hover_eff -->
+  <!-- Universe & Gallery Buttons -->
+  <a href="../../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+    <span class="es language">Universo de Paz</span>
+    <span class="en language" style="display:none;">Paz's Universe</span>
+    <span class="it language" style="display:none;">Universo di Paz</span>
+    <span class="ru language" style="display:none;">Вселенная Пас</span>
+    <span class="zh language" style="display:none;">帕斯的宇宙</span>
+    <span class="ar language" style="display:none;">كون باز</span>
+    <span class="de language" style="display:none;">Paz' Universum</span>
+    <span class="fr language" style="display:none;">L'Univers de Paz</span>
+    <span class="ja language" style="display:none;">パースの宇宙</span>
+    <span class="pt language" style="display:none;">O Universo de Paz</span>
+  </a>
+
+  <a href="../../gallery/index.html" class="gallery-btn">
+    <i class="fas fa-th"></i>
+    <span class="es language">Galería</span>
+    <span class="en language" style="display:none;">Gallery</span>
+    <span class="it language" style="display:none;">Galleria</span>
+    <span class="ru language" style="display:none;">Галерея</span>
+    <span class="zh language" style="display:none;">画廊</span>
+    <span class="ar language" style="display:none;">المعرض</span>
+    <span class="de language" style="display:none;">Galerie</span>
+    <span class="fr language" style="display:none;">Galerie</span>
+    <span class="ja language" style="display:none;">ギャラリー</span>
+    <span class="pt language" style="display:none;">Galeria</span>
+  </a>
+
+  <header class="jumbotron">
+    <div class="container animate-fade">
+      <h1 class="jumbotron-heading">
+        <span class="es language">Cuerpo de Mujer</span>
+        <span class="en language" style="display:none;">Woman's Body</span>
+        <span class="it language" style="display:none;">Corpo di Donna</span>
+        <span class="ru language" style="display:none;">Женское тело</span>
+        <span class="zh language" style="display:none;">女人体</span>
+        <span class="ar language" style="display:none;">جسد امرأة</span>
+        <span class="de language" style="display:none;">Frauenkörper</span>
+        <span class="fr language" style="display:none;">Corps de Femme</span>
+        <span class="ja language" style="display:none;">女の身体</span>
+        <span class="pt language" style="display:none;">Corpo de Mulher</span>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Main Image Section -->
+    <section class="main-image-container text-center">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <img class="art-image" src="cuerpodemujer.jpg" alt="Woman's Body charcoal painting">
         </div>
-
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Technical Sheet Card -->
+    <section class="section-card">
+      <h3 class="text-warning mb-4">
+        <span class="es language"><i class="fas fa-info-circle mr-2"></i> Ficha Técnica</span>
+        <span class="en language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> Technical Sheet</span>
+        <span class="it language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> Scheda Tecnica</span>
+        <span class="ru language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> Техническая карта</span>
+        <span class="zh language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> 技术参数</span>
+        <span class="ar language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> ورقة البيانات
+          التقنية</span>
+        <span class="de language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> Technisches
+          Datenblatt</span>
+        <span class="fr language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> Fiche technique</span>
+        <span class="ja language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> テクニカルデータ</span>
+        <span class="pt language" style="display:none;"><i class="fas fa-info-circle mr-2"></i> Ficha Técnica</span>
+      </h3>
+      <ul class="tech-list">
+        <li><i class="fas fa-paint-brush"></i>
+          <span class="es language"><strong>Técnica:</strong> Carboncillo sobre Papel</span>
+          <span class="en language" style="display:none;"><strong>Technique:</strong> Charcoal on Paper</span>
+          <span class="it language" style="display:none;"><strong>Tecnica:</strong> Carboncino su carta</span>
+          <span class="ru language" style="display:none;"><strong>Техника:</strong> Уголь на бумаге</span>
+          <span class="zh language" style="display:none;"><strong>技法：</strong>纸上木炭画</span>
+          <span class="ar language" style="display:none;"><strong>التقنية:</strong> فحم على ورق</span>
+          <span class="de language" style="display:none;"><strong>Technik:</strong> Kohle auf Papier</span>
+          <span class="fr language" style="display:none;"><strong>Technique :</strong> Fusain sur papier</span>
+          <span class="ja language" style="display:none;"><strong>技法：</strong>紙に木炭</span>
+          <span class="pt language" style="display:none;"><strong>Técnica:</strong> Carvão sobre papel</span>
+        </li>
+        <li><i class="fas fa-expand-arrows-alt"></i>
+          <span class="es language"><strong>Dimensiones:</strong> 75 x 100 cm</span>
+          <span class="en language" style="display:none;"><strong>Dimensions:</strong> 75 x 100 cm</span>
+          <span class="it language" style="display:none;"><strong>Dimensioni:</strong> 75 x 100 cm</span>
+          <span class="ru language" style="display:none;"><strong>Размеры:</strong> 75 x 100 см</span>
+          <span class="zh language" style="display:none;"><strong>尺寸：</strong>75 x 100 厘米</span>
+          <span class="ar language" style="display:none;"><strong>الأبعاد:</strong> 75 × 100 سم</span>
+          <span class="de language" style="display:none;"><strong>Maße:</strong> 75 x 100 cm</span>
+          <span class="fr language" style="display:none;"><strong>Dimensions :</strong> 75 x 100 cm</span>
+          <span class="ja language" style="display:none;"><strong>サイズ：</strong>75 x 100 cm</span>
+          <span class="pt language" style="display:none;"><strong>Dimensões:</strong> 75 x 100 cm</span>
+        </li>
+        <li><i class="fas fa-university"></i>
+          <span class="es language"><strong>Origen:</strong> Facultad de Bellas Artes de Madrid</span>
+          <span class="en language" style="display:none;"><strong>Origin:</strong> Faculty of Fine Arts of
+            Madrid</span>
+          <span class="it language" style="display:none;"><strong>Origine:</strong> Facoltà di Belle Arti di
+            Madrid</span>
+          <span class="ru language" style="display:none;"><strong>Происхождение:</strong> Факультет изящных искусств
+            Мадрида</span>
+          <span class="zh language" style="display:none;"><strong>来源：</strong>马德里艺术学院</span>
+          <span class="ar language" style="display:none;"><strong>الأصل:</strong> كلية الفنون الجميلة في مدريد</span>
+          <span class="de language" style="display:none;"><strong>Herkunft:</strong> Fakultät für Schöne Künste von
+            Madrid</span>
+          <span class="fr language" style="display:none;"><strong>Origine :</strong> Faculté des Beaux-Arts de
+            Madrid</span>
+          <span class="ja language" style="display:none;"><strong>出身：</strong>マドリード美術学部</span>
+          <span class="pt language" style="display:none;"><strong>Origem:</strong> Faculdade de Belas Artes de
+            Madrid</span>
+        </li>
+      </ul>
+    </section>
 
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>Technique: Charcoil</li>
-            <li>size: 75x100 cm / 30x40 inches</li>
-            <li>Creation Place: Fine Arts School of Madrid</li>
-            <li>Current Location: Private Collection Madrid</li>
-          </ul>
-
+    <!-- Artistic Analysis Section -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-feather-alt mr-2"></i>
+        <span class="es language">Análisis Crítico</span>
+        <span class="en language" style="display:none;">Critical Analysis</span>
+        <span class="it language" style="display:none;">Analisi Critica</span>
+        <span class="ru language" style="display:none;">Критический анализ</span>
+        <span class="zh language" style="display:none;">批判性分析</span>
+        <span class="ar language" style="display:none;">التحليل النقدي</span>
+        <span class="de language" style="display:none;">Kritische Analyse</span>
+        <span class="fr language" style="display:none;">Analyse critique</span>
+        <span class="ja language" style="display:none;">批評的分析</span>
+        <span class="pt language" style="display:none;">Análise Crítica</span>
+      </h2>
+      <div class="description-text">
+        <div class="es language">
+          <p>En <strong>"Cuerpo de Mujer"</strong>, Paz Arés Osset nos sumerge en una exploración formal y emocional del
+            desnudo femenino realizada durante su etapa formativa en la <strong>Facultad de Bellas Artes de
+              Madrid</strong>. La técnica del carboncillo, manejada con una maestría que oscila entre el trazo
+            arquitectónico y la suavidad del difumino, no solo describe la anatomía, sino que captura la vulnerabilidad
+            y la fuerza inherente a la figura humana.</p>
+          <p>La obra destaca por su juego de luces y sombras, donde el negro profundo del carbón dialoga con la luz que
+            emana del soporte, creando una tridimensionalidad que trasciende el papel para convertirse en un testimonio
+            vibrante de la belleza en su forma más pura. Es una pieza que respira sensualidad capturada a través de la
+            mirada académica pero profundamente personal de la artista.</p>
         </div>
-        <div class="col-6 md audio">
-
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-
+        <div class="en language" style="display:none;">
+          <p>In <strong>'Woman's Body'</strong>, Paz Arés Osset immerses us in a formal and emotional exploration of the
+            female nude, created during her formative years at the <strong>Faculty of Fine Arts in Madrid</strong>. The
+            charcoal technique, handled with mastery that oscillates between architectural strokes and the softness of
+            blending, not only describes the anatomy but captures the vulnerability and strength inherent in the human
+            figure.</p>
+          <p>The work stands out for its interplay of light and shadow, where the deep black of the carbon dialogues
+            with the light emanating from the support, creating a three-dimensionality that transcends the paper to
+            become a vibrant testimony of beauty in its purest form.</p>
+        </div>
+        <div class="it language" style="display:none;">
+          <p>In <strong>'Corpo di Donna'</strong>, Paz Arés Osset ci immerge in un'esplorazione formale ed emotiva del
+            nudo femminile realizzata durante la sua fase formativa presso la <strong>Facoltà di Belle Arti di
+              Madrid</strong>. La tecnica del carboncino, gestita con una maestria che oscilla tra il tratto
+            architettonico e la morbidezza dello sfumato, non solo descrive l'anatomia, ma cattura la vulnerabilità e la
+            forza inerente alla figura umana.</p>
+          <p>L'opera si distingue per il suo gioco di luci e ombre, dove il nero profondo del carbone dialoga con la
+            luce che emana dal supporto, creando una tridimensionalità che trasciende la carta per diventare una
+            vibrante testimonianza della bellezza nella sua forma più pura.</p>
+        </div>
+        <div class="ru language" style="display:none;">
+          <p>В работе <strong>«Женское тело»</strong> Пас Арес Оссет погружает нас в формальное и эмоциональное
+            исследование женской наготы, созданное в годы её обучения на <strong>факультете изящных искусств в
+              Мадриде</strong>. Техника рисования углем, выполненная с мастерством, колеблющимся между архитектурным
+            штрихом и мягкостью растушевки, не только описывает анатомию, но и улавливает уязвимость и силу, присущие
+            человеческой фигуре.</p>
+          <p>Произведение выделяется игрой света и тени, где глубокий черный цвет угля вступает в диалог со светом,
+            исходящим от основы, создавая трехмерность, которая выходит за пределы бумаги, становясь ярким
+            свидетельством красоты в её чистейшем виде.</p>
+        </div>
+        <div class="zh language" style="display:none;">
+          <p>
+            在<strong>《女人体》</strong>中，帕斯·阿雷斯·奥塞特带我们进入了她在<strong>马德里美术学院</strong>学习期间创作的女性裸体的形式与情感探索。木炭画技法在建筑线条的严谨与晕染的柔和之间游刃有余，不仅描绘了解剖结构，更捕捉到了人体固有的脆弱与力量。
+          </p>
+          <p>作品以光影的交错而著称，黑炭的深邃与衬托出的光亮进行对话，创造出一种超越纸张的立体感，成为了美最纯粹形式下的生命见证。</p>
+        </div>
+        <div class="ar language" style="display:none;">
+          <p>في <strong>"جسد امرأة"</strong>، تغمسنا باز أريس أوسيت في استكشاف شكلي وعاطفي للجسد الأنثوي العاري الذي تم
+            إبداعه خلال سنوات تكوينها في <strong>كلية الفنون الجميلة في مدريد</strong>. تقنية الفحم، التي تم التعامل
+            معها ببراعة تراوح بين الخطوط المعمارية ونعومة التظليل، لا تصف التشريح فحسب، بل تلتقط الضعف والقوة المتأصلين
+            في الشكل البشري.</p>
+          <p>يبرز العمل بتفاعله بين الضوء والظلال، حيث يتحاور سواد الكربون العميق مع الضوء المنبعث من السطح، مما يخلق
+            أبعاداً ثلاثية تتجاوز الورق لتصبح شهادة نابضة بالحياة على الجمال في أنقى صوره.</p>
+        </div>
+        <div class="de language" style="display:none;">
+          <p>In <strong>'Frauenkörper'</strong> taucht Paz Arés Osset uns in eine formale und emotionale Erkundung des
+            weiblichen Akts ein, die während ihrer Ausbildungszeit an der <strong>Fakultät für Schöne Künste in
+              Madrid</strong> entstand. Die Kohletechnik, die mit einer Meisterschaft gehandhabt wird, die zwischen
+            architektonischem Strich und der Weichheit der Schattierung schwankt, beschreibt nicht nur die Anatomie,
+            sondern fängt die Verletzlichkeit und Stärke ein, die der menschlichen Figur innegreift.</p>
+          <p>Das Werk besticht durch sein Spiel von Licht und Schatten, in dem das tiefe Schwarz der Kohle mit dem vom
+            Untergrund ausgehenden Licht dialogisiert und eine Dreidimensionalität schafft, die über das Papier
+            hinausgeht und zu einem lebendigen Zeugnis der Schönheit in ihrer reinsten Form wird.</p>
+        </div>
+        <div class="fr language" style="display:none;">
+          <p>Dans <strong>'Corps de Femme'</strong>, Paz Arés Osset nous plonge dans une exploration formelle et
+            émotionnelle du nu féminin réalisée lors de sa phase de formation à la <strong>Faculté des Beaux-Arts de
+              Madrid</strong>. La technique du fusain, maniée avec une maîtrise qui oscille entre le trait architectural
+            et la douceur de l'estompe, ne décrit pas seulement l'anatomie, mais capture la vulnérabilité et la force
+            inhérentes à la figure humaine.</p>
+          <p>L'œuvre se distingue par son jeu d'ombres et de lumières, où le noir profond du fusain dialogue avec la
+            lumière qui émane du support, créant une tridimensionnalité qui transcende le papier pour devenir un vibrant
+            témoignage de la beauté dans sa forme la plus pure.</p>
+        </div>
+        <div class="ja language" style="display:none;">
+          <p>
+            <strong>『女の身体』</strong>において、パス・アレス・オセットは、<strong>マドリード美術学部</strong>での修行時代に制作された女性の裸体の形式的・感情的な探求へと私たちを誘います。建築的な描線と、ぼかしの柔らかさの間で揺れ動く熟練した木炭技法は、単なる解剖学的記述に留まらず、人間に備わった脆弱さと強さを捉えています。
+          </p>
+          <p>本作は光と影の相互作用が際立っており、木炭の深い黒が支持体から放たれる光と対話し、紙を超越した立体感を生み出し、最も純粋な形での美の力強い証言となっています。</p>
+        </div>
+        <div class="pt language" style="display:none;">
+          <p>Em <strong>'Corpo de Mulher'</strong>, Paz Arés Osset submerge-nos numa exploração formal e emocional do nu
+            feminino realizada durante a sua etapa formativa na <strong>Faculdade de Belas Artes de Madrid</strong>. A
+            técnica do carvão, manuseada com uma mestria que oscila entre o traço arquitetónico e a suavidade do
+            esfumado, não só descreve a anatomia, mas captura a vulnerabilidade e a força inerentes à figura humana.</p>
+          <p>A obra destaca-se pelo seu jogo de luzes e sombras, onde o negro profundo do carvão dialoga com la luz que
+            emana do suporte, criando uma tridimensionalidade que trasciende o papel para se tornar um vibrante
+            testemunho da beleza na sua forma mais pura.</p>
+        </div>
       </div>
-    </div>
-    </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset - <span class="es language">Arte y Trascendencia</span>
+      <span class="en language" style="display:none;">Art and Transcendence</span>
+      <span class="it language" style="display:none;">Arte e Trascendenza</span>
+      <span class="ru language" style="display:none;">Искусство и трансцендентность</span>
+      <span class="zh language" style="display:none;">艺术与超越</span>
+      <span class="ar language" style="display:none;">الفن والمتسامي</span>
+      <span class="de language" style="display:none;">Kunst und Transzendenz</span>
+      <span class="fr language" style="display:none;">Art et Transcendance</span>
+      <span class="ja language" style="display:none;">芸術と超越</span>
+      <span class="pt language" style="display:none;">Arte e Transcendência</span>
+    </p>
+  </footer>
 
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="womansbody.js"></script>
 </body>
 
 </html>

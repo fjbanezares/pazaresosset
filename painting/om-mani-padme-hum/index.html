@@ -1,627 +1,754 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Dance of Fire and Brilliance</title>
+  <title>Om Mani Padme Hum - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
+  <div class="language-selector">
+    <select id="language-select" class="custom-select">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
     </select>
   </div>
+  <a href="../../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+    <span class="es language">Universo de Paz</span>
+    <span class="en language" style="display:none;">Universe of Peace</span>
+    <span class="it language" style="display:none;">Universo di Pace</span>
+    <span class="ru language" style="display:none;">Вселенная мира</span>
+    <span class="zh language" style="display:none;">和平宇宙</span>
+    <span class="ar language" style="display:none;">عالم السلام</span>
+    <span class="de language" style="display:none;">Universum des Friedens</span>
+    <span class="fr language" style="display:none;">Univers de Paix</span>
+    <span class="ja language" style="display:none;">平和の宇宙</span>
+    <span class="pt language" style="display:none;">Universo de Paz</span>
+  </a>
+  <a href="../../gallery/index.html" class="gallery-btn">
+    <i class="fas fa-th"></i>
+    <span class="es language">Galería</span>
+    <span class="en language" style="display:none;">Gallery</span>
+    <span class="it language" style="display:none;">Galleria</span>
+    <span class="ru language" style="display:none;">Галерея</span>
+    <span class="zh language" style="display:none;">画廊</span>
+    <span class="ar language" style="display:none;">معرض</span>
+    <span class="de language" style="display:none;">Galerie</span>
+    <span class="fr language" style="display:none;">Galerie</span>
+    <span class="ja language" style="display:none;">ギャラリー</span>
+    <span class="pt language" style="display:none;">Galeria</span>
+  </a>
 
-
-  <section class="jumbotron text-center">
+  <header class="jumbotron">
     <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Om Mani Padme Hum</div>
-        <div class="spanish language" style="display: none;">Om Mani Padme Hum</div>
-        <div class="italian language" style="display: none;">Om Mani Padme Hum</div>
-        <div class="chinese language" style="display: none;">唵嘛呢叭咪吽</div>
-        <div class="arabic language" style="display: none;">أوم ماني بادمي هوم</div>
+      <h1 class="jumbotron-heading" style="color: var(--gold); font-family: 'Philosopher', sans-serif;">
+        <span class="es language">Om Mani Padme Hum</span>
+        <span class="en language" style="display:none;">Om Mani Padme Hum</span>
+        <span class="it language" style="display:none;">Om Mani Padme Hum</span>
+        <span class="ru language" style="display:none;">Ом Мани Падме Хум</span>
+        <span class="zh language" style="display:none;">唵嘛呢呗美吽</span>
+        <span class="ar language" style="display:none;">أوم ماني بادمي هوم</span>
+        <span class="de language" style="display:none;">Om Mani Padme Hum</span>
+        <span class="fr language" style="display:none;">Om Mani Padmé Hum</span>
+        <span class="ja language" style="display:none;">オム・マニ・パドメ・ハム</span>
+        <span class="pt language" style="display:none;">Om Mani Padme Hum</span>
       </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">Om Mani Padme Hum: A Spiritual Expression in Artistic Form.</div>
-        <div class="spanish language" style="display: none;">Om Mani Padme Hum: Una expresión espiritual en forma
-          artística.
-        </div>
-        <div class="italian language" style="display: none;">Om Mani Padme Hum: Un'espressione spirituale in forma
-          artistica.
-        </div>
-        <div class="chinese language" style="display: none;">唵嘛呢叭咪吽：艺术形式中的精神表达</div>
-        <div class="arabic language" style="display: none;">أوم ماني بادمي هوم: تعبير روحي في شكل فني.</div>
-      </div>
-
-
+      <p class="lead" style="color: var(--light-text); filter: brightness(1.2);">
+        <span class="es language">Una exquisita expresión espiritual en forma artística y un legado de compasión budista
+          para América.</span>
+        <span class="en language" style="display:none;">An exquisite spiritual expression in artistic form and a legacy
+          of Buddhist compassion for America.</span>
+        <span class="it language" style="display:none;">Una squisita espressione spirituale in forma artistica e
+          un'eredità di compassione buddista per l'America.</span>
+        <span class="ru language" style="display:none;">Изысканное духовное выражение в художественной форме и наследие
+          буддийского сострадания к Америке.</span>
+        <span class="zh language" style="display:none;">以艺术形式展现精致的精神表达，传承佛教对美国的慈悲之心。</span>
+        <span class="ar language" style="display:none;">تعبير روحي رائع في شكل فني وإرث من الرحمة البوذية
+          لأمريكا.</span>
+        <span class="de language" style="display:none;">Ein exquisiter spiritueller Ausdruck in künstlerischer Form und
+          ein Vermächtnis buddhistischen Mitgefühls für Amerika.</span>
+        <span class="fr language" style="display:none;">Une expression spirituelle exquise sous forme artistique et un
+          héritage de compassion bouddhiste pour l’Amérique.</span>
+        <span class="ja language" style="display:none;">芸術的な形での絶妙な精神的表現であり、アメリカに対する仏教の慈悲の遺産です。</span>
+        <span class="pt language" style="display:none;">Uma expressão espiritual requintada em forma artística e um
+          legado de compaixão budista pela América.</span>
+      </p>
     </div>
-  </section>
+  </header>
 
+  <main class="container">
+    <section class="main-image-container text-center pb-5">
+      <img class="art-image zoom-image" style="transition: transform 0.3s; cursor: zoom-in;"
+        src="OH MANE PADME HUM en.jpg" alt="Om Mani Padme Hum">
+    </section>
 
+    <!-- Ficha Técnica -->
+    <section class="section-card">
+      <h3 class="text-warning mb-4"><i class="fas fa-info-circle mr-2"></i>
+        <span class="es language">Ficha Técnica</span>
+        <span class="en language" style="display:none;">Technical Sheet</span>
+        <span class="it language" style="display:none;">Scheda Tecnica</span>
+        <span class="ru language" style="display:none;">Технический лист</span>
+        <span class="zh language" style="display:none;">技术表</span>
+        <span class="ar language" style="display:none;">ورقة فنية</span>
+        <span class="de language" style="display:none;">Technisches Datenblatt</span>
+        <span class="fr language" style="display:none;">Fiche technique</span>
+        <span class="ja language" style="display:none;">テクニカルシート</span>
+        <span class="pt language" style="display:none;">Ficha Técnica</span>
+      </h3>
+      <ul class="tech-list">
+        <li><i class="fas fa-paint-brush"></i>
+          <span class="es language"><strong>Técnica:</strong> Aguafuerte y Aguatinta.</span>
+          <span class="en language" style="display:none;"><strong>Technique:</strong> Etching and Aquatint.</span>
+          <span class="it language" style="display:none;"><strong>Tecnica:</strong> Acquaforte e Acquatinta.</span>
+          <span class="ru language" style="display:none;"><strong>Техника:</strong> Офорт и акватинта.</span>
+          <span class="zh language" style="display:none;"><strong>技术：</strong>蚀刻和凹版。</span>
+          <span class="ar language" style="display:none;"><strong>التقنية:</strong> النقش والأكواتينت.</span>
+          <span class="de language" style="display:none;"><strong>Technik:</strong> Radierung und Aquatinta.</span>
+          <span class="fr language" style="display:none;"><strong>Technique :</strong> Eau-forte et Aquatinte.</span>
+          <span class="ja language" style="display:none;"><strong>テクニック:</strong> エッチングとアクアティント。</span>
+          <span class="pt language" style="display:none;"><strong>Técnica:</strong> Gravura e Aquatinta.</span>
+        </li>
+        <li><i class="fas fa-expand-arrows-alt"></i>
+          <span class="es language"><strong>Tamaño:</strong> 33x26 cm.</span>
+          <span class="en language" style="display:none;"><strong>Size:</strong> 33x26 cm.</span>
+          <span class="it language" style="display:none;"><strong>Dimensioni:</strong> 33x26 cm.</span>
+          <span class="ru language" style="display:none;"><strong>Размер:</strong> 33х26 см.</span>
+          <span class="zh language" style="display:none;"><strong>尺寸：</strong>33x26 厘米。</span>
+          <span class="ar language" style="display:none;"><strong>الحجم:</strong> 33×26 سم.</span>
+          <span class="de language" style="display:none;"><strong>Größe:</strong> 33x26 cm.</span>
+          <span class="fr language" style="display:none;"><strong>Dimensions :</strong> 33x26 cm.</span>
+          <span class="ja language" style="display:none;"><strong>サイズ:</strong> 33x26 cm。</span>
+          <span class="pt language" style="display:none;"><strong>Tamanho:</strong> 33x26 cm.</span>
+        </li>
+        <li><i class="fas fa-university"></i>
+          <span class="es language"><strong>Lugar de Creación:</strong> Facultad de Bellas Artes de Madrid.</span>
+          <span class="en language" style="display:none;"><strong>Place of Creation:</strong> Faculty of Fine Arts of
+            Madrid.</span>
+          <span class="it language" style="display:none;"><strong>Luogo di creazione:</strong> Facoltà di Belle Arti di
+            Madrid.</span>
+          <span class="ru language" style="display:none;"><strong>Место создания:</strong> Факультет изящных искусств
+            Мадрида.</span>
+          <span class="zh language" style="display:none;"><strong>创作地点：</strong>马德里美术学院。</span>
+          <span class="ar language" style="display:none;"><strong>مكان الإنشاء:</strong> كلية الفنون الجميلة
+            بمدريد.</span>
+          <span class="de language" style="display:none;"><strong>Ort der Schöpfung:</strong> Fakultät für Bildende
+            Künste in Madrid.</span>
+          <span class="fr language" style="display:none;"><strong>Lieu de création :</strong> Faculté des Beaux-Arts de
+            Madrid.</span>
+          <span class="ja language" style="display:none;"><strong>創作場所:</strong> マドリッド美術学部。</span>
+          <span class="pt language" style="display:none;"><strong>Local de Criação:</strong> Faculdade de Belas Artes de
+            Madrid.</span>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i>
+          <span class="es language"><strong>Ubicación Actual:</strong> Colección Privada. No disponible en el mercado
+            abierto. Se considerarán con seriedad propuestas superiores a 10.000€ procedentes de mecenas y
+            coleccionistas que entiendan y valoren su significado universal y espiritual.</span>
+          <span class="en language" style="display:none;"><strong>Current Location:</strong> Private Collection. Not
+            available on the open market. Proposals over €10,000 from patrons and collectors who understand and value
+            its universal and spiritual significance will be seriously considered.</span>
+          <span class="it language" style="display:none;"><strong>Posizione attuale:</strong> Collezione privata. Non
+            disponibile sul mercato aperto. Saranno prese in seria considerazione le proposte superiori a 10.000 euro
+            provenienti da mecenati e collezionisti che comprendono e apprezzano il suo significato universale e
+            spirituale.</span>
+          <span class="ru language" style="display:none;"><strong>Текущее местоположение:</strong> Частная коллекция.
+            Недоступно на открытом рынке. Предложения на сумму более 10 000 евро от меценатов и коллекционеров, которые
+            понимают и ценят его универсальное и духовное значение, будут серьезно рассмотрены.</span>
+          <span class="zh language"
+            style="display:none;"><strong>当前位置：</strong>私人收藏。无法在公开市场上获得。理解并重视其普遍和精神意义的赞助人和收藏家提出的超过 10,000
+            欧元的提案将得到认真考虑。</span>
+          <span class="ar language" style="display:none;"><strong>الموقع الحالي:</strong> مجموعة خاصة. غير متوفر في
+            السوق المفتوحة. سيتم النظر بجدية في المقترحات التي تزيد قيمتها عن 10000 يورو من المستفيدين وجامعي الأعمال
+            الذين يفهمون ويقدرون أهميتها العالمية والروحية.</span>
+          <span class="de language" style="display:none;"><strong>Aktueller Standort:</strong> Privatsammlung. Nicht auf
+            dem freien Markt erhältlich. Vorschläge über 10.000 € von Mäzenen und Sammlern, die seine universelle und
+            spirituelle Bedeutung verstehen und wertschätzen, werden ernsthaft berücksichtigt.</span>
+          <span class="fr language" style="display:none;"><strong>Emplacement actuel :</strong> Collection privée. Non
+            disponible sur le marché libre. Les propositions supérieures à 10 000 € émanant de mécènes et de
+            collectionneurs qui comprennent et apprécient sa signification universelle et spirituelle seront
+            sérieusement étudiées.</span>
+          <span class="ja language" style="display:none;"><strong>現在の場所:</strong>
+            個人コレクション。公開市場では入手できません。その普遍的かつ精神的な重要性を理解し、評価するパトロンやコレクターからの10,000ユーロを超える提案は真剣に検討されます。</span>
+          <span class="pt language" style="display:none;"><strong>Localização Atual:</strong> Coleção Privada. Não
+            disponível no mercado aberto. Propostas superiores a 10.000€ de mecenas e colecionadores que compreendem e
+            valorizam o seu significado universal e espiritual serão seriamente consideradas.</span>
+        </li>
+      </ul>
+    </section>
 
-  <section class="main-image">
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
+    <!-- Análisis Crítico -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-feather-alt mr-2"></i>
+        <span class="es language">Análisis Crítico</span>
+        <span class="en language" style="display:none;">Critical Analysis</span>
+        <span class="it language" style="display:none;">Analisi critica</span>
+        <span class="ru language" style="display:none;">Критический анализ</span>
+        <span class="zh language" style="display:none;">批判性分析</span>
+        <span class="ar language" style="display:none;">التحليل النقدي</span>
+        <span class="de language" style="display:none;">Kritische Analyse</span>
+        <span class="fr language" style="display:none;">Analyse critique</span>
+        <span class="ja language" style="display:none;">批判的分析</span>
+        <span class="pt language" style="display:none;">Análise Crítica</span>
+      </h2>
+      <div class="description-text">
+        <div class="es language">
+          <p>Paz Arés Osset, abrazando firmemente su vocación de artista y su sabiduría como maestra budista, canaliza
+            de forma magistral toda su profunda devoción espiritual en la impecable creación del grabado 'Om Mani Padme
+            Hum'. Esta obra fundamental va mucho más allá de las virtudes plásticas del aguatinta para convertirse en
+            una encarnación vívida del sagrado mantra que invoca el despertar de la compasión infinita y la verdadera
+            sabiduría; nobles principios que la sagrada figura de Avalokiteshvara representa y que se manifiestan en la
+            tierra a través del amor compasivo, la paz bondadosa y la empatía inquebrantable hacia todos los seres
+            sintientes.</p>
+          <p>A la inigualable belleza de sus trazos e incisiones sobre el metal, se suma un acto de desprendimiento
+            asombroso: en un gesto de soberana generosidad y con el fin noble de contribuir a la consolidación del
+            budismo en el continente americano, Paz ha donado expresamente cincuenta grabados de esta misma obra como
+            firme apoyo para la edificación constructiva y espiritual de nuevos templos y monasterios (estupas) budistas
+            a lo largo de América. Así, su ofrenda artística ha trascendido las galerías terrenales para ascender al
+            rango de imperecedero legado espiritual. Este gesto majestuoso no busca únicamente auspiciar la propagación
+            y difusión vital de la doctrina budista entre los occidentales, sino irradiar a cada instante y encender sin
+            cesar una luminosa promesa donde el firme deseo de total felicidad interior y la completa y sosegada paz se
+            expandan irrefrenablemente hacia cada esquina ignorada y sombría de nuestro mundo contemporáneo.</p>
+          <p>Estas nobles estampas, meticulosamente grabadas e imbuidas íntimamente por la inmaculada energía
+            vibracional contenida en los sonidos del 'Om Mani Padme Hum', traspasan ampliamente el umbral material del
+            arte clásico para erigirse hoy en radiantes emisarias de los valores de la verdadera serenidad; un hondo
+            mensaje espiritual viviente de paz cósmica exenta de sufrimiento que Paz Arés Osset brinda gratuitamente a
+            nuestra existencia. Se sabe que, en las puras aguas benditas de la clásica iconografía budista, la
+            encarnación suprema de la Piedad y Buda de la Compasión (conocido majestuosamente en la lengua del Tíbet
+            como Chenrezig), es tradicional y solemnemente concebido en inmaculado color blanco —metáfora ineludible de
+            la inmensa luz sanadora que, en su esplendor, diluye las perversas penumbras cegadoras de la aflicción
+            humana—. Ese color, a través de sus infinitos brazos dispuestos eternamente a interceder, sosteniendo a cada
+            ser de este lado o del otro de los confines del Samsara, recuerda al observador atento y silente del grabado
+            que compasión e iluminación jamás pueden entenderse ni vivirse de modo independiente.</p>
+          <p>El mantra sánscrito 'Om Mani Padme Hum' —cuyo significado poético suele destilarse como 'La joya en el
+            loto'— rige soberanamente dentro de los marcos compositivos del oscuro aguatinta, erigiendo una deliberada y
+            serena simetría mandala, fiel a las enseñanzas orgánicas en espiral del sagrado Dharma. Cada sílaba
+            resonante de su lectura tántrica constituye un indispensable escalón seguro sobre el sinuoso camino ascente
+            encaminado al despertar global.</p>
+          <p>Estas vibraciones de la obra de Paz permean el entramado de cada ser, transformando con rotunda firmeza y
+            paso inquebrantable los oscuros venenos del alma en el codiciado brillo liberador.</p>
+          <p>Como se ha detallado ampliamente en textos canónicos, las seis místicas sílabas se encuentran firmemente
+            asignadas a pulir gradualmente hasta la total extirpación respectiva el dañino ego individual, la corrosiva
+            e ignorante envidia paralizante, el insaciable e incontrolable deseo enfermizo pernicioso, los ciegos muros
+            de los arcaicos prejuicios egoístas, las férreas redes asfixiantes de posesiones efímeras vanas y
+            finalmente, el paralizante odioso rechazo instintivo repulsivo destructor hostil. Frente al grabado, el
+            sagrado y perenne rezo interior implora porque cese el desamparo; un eco de honda misericordia y sanador
+            sosiego para todo ser sentiente; erigiéndose pues como un silencioso bastión y recordatorio vivo en la era
+            moderna que revela lo grandiosa y magna que se vuelve verdaderamente un alma liberada de prejuicios, y una
+            inteligencia despierta, templada al calor incesante del Amor Incondicional.</p>
+          <p>La decisión y férreo deseo materializado de haber efectuado el donativo en las extensas y distantes
+            llanuras de Norteamérica para favorecer un cobijo doctrinal de gran envergadura (Dana Paramita – perfección
+            y excelencia en la espléndida generosidad de los actos sin miramientos) nos ejemplifica lúcidamente uno de
+            los Seis Grandes Perfeccionamientos (Paramitas), pasos obligados que sabiamente cultivan los honorables
+            Bodhisattvas. Al ver tan bella muestra expuesta de la interconexión mística asombrosa manifestada
+            hermosamente entre el rotundo perfeccionismo técnico incisivo detallista meditativo artesanal aplicado de
+            continuo en el arduo proceso creativo exigente e implacable de estampación calcográfica que demanda
+            forzosamente la plancha maestra, y sus connotaciones sagradas y divinas sublimes entrelazadas circulares y
+            concéntricas como la rueda imbatible del Dharma que todo fenómeno entrelaza; 'Om Mani Padme Hum' trasciende
+            con holgura excelsa su valioso soporte material, posicionándose sin lugar a discusión en todo el mundo, como
+            una ventana directa infinita abierta de par en par mediante el exquisito aguatinta que diluirá
+            instantáneamente como rocío toda carga y estrés tóxicos de cualquier turbado espectador atestado, para
+            simplemente conceder a manos llenas regocijo afable, gozo insondable y sanación bondadosa de espíritu
+            compasivo a perpetuidad imperecedera universal inestimable e incuantificable invaluable.</p>
+        </div>
 
+        <div class="en language" style="display:none;">
+          <p>Paz Arés Osset, firmly embracing her vocation as an artist and her wisdom as a Buddhist teacher,
+            masterfully channels all her deep spiritual devotion in the impeccable creation of the engraving 'Om Mani
+            Padme Hum'. This seminal work goes far beyond the plastic virtues of aquatint to become a vivid embodiment
+            of the sacred mantra that invokes the awakening of infinite compassion and true wisdom; noble principles
+            that the sacred figure of Avalokiteshvara represents and that are manifested on earth through compassionate
+            love, kind peace and unwavering empathy towards all sentient beings.</p>
+          <p>Added to the unparalleled beauty of its lines and incisions on the metal is an astonishing act of
+            selflessness: in a gesture of sovereign generosity and with the noble goal of contributing to the
+            consolidation of Buddhism on the American continent, Paz has expressly donated fifty engravings of this same
+            work as firm support for the constructive and spiritual construction of new Buddhist temples and monasteries
+            (stupas) throughout America. Thus, his artistic offering has transcended earthly galleries to rise to the
+            rank of imperishable spiritual legacy. This majestic gesture does not only seek to sponsor the vital
+            propagation and dissemination of the Buddhist doctrine among Westerners, but to radiate at every moment and
+            ceaselessly ignite a luminous promise where the firm desire for total inner happiness and complete and calm
+            peace expand irrepressibly towards every ignored and gloomy corner of our contemporary world.</p>
+          <p>These noble prints, meticulously engraved and intimately imbued with the immaculate vibrational energy
+            contained in the sounds of 'Om Mani Padme Hum', widely cross the material threshold of classical art to
+            become today radiant emissaries of the values ​​of true serenity; a deep living spiritual message of cosmic
+            peace free of suffering that Paz Arés Osset freely provides to our existence. It is known that, in the pure
+            holy waters of classical Buddhist iconography, the supreme incarnation of Piety and the Buddha of Compassion
+            (majestically known in the language of Tibet as Chenrezig), is traditionally and solemnly conceived in
+            immaculate white - an inescapable metaphor for the immense healing light that, in its splendor, dilutes the
+            perverse blinding glooms of human affliction. That color, through its infinite arms eternally ready to
+            intercede, supporting each being on this side or the other of the confines of Samsara, reminds the attentive
+            and silent observer of the engraving that compassion and enlightenment can never be understood or lived
+            independently.</p>
+          <p>The Sanskrit mantra 'Om Mani Padme Hum'—whose poetic meaning is often distilled as 'The Jewel in the
+            Lotus'—rules sovereignly within the compositional frameworks of dark aquatint, erecting a deliberate and
+            serene mandala symmetry, faithful to the spiraling organic teachings of the sacred Dharma. Each resonant
+            syllable of its tantric reading constitutes an indispensable safe step on the sinuous ascending path towards
+            global awakening.</p>
+          <p>These vibrations of the work of Peace permeate the fabric of each being, transforming with resounding
+            firmness and unwavering pace the dark poisons of the soul into the coveted liberating brilliance.</p>
+          <p>As has been extensively detailed in canonical texts, the six mystical syllables are firmly assigned to
+            gradually polish to the respective total extirpation of the harmful individual ego, the corrosive and
+            ignorant paralyzing envy, the insatiable and uncontrollable unhealthy pernicious desire, the blind walls of
+            archaic selfish prejudices, the iron suffocating networks of vain ephemeral possessions and finally, the
+            paralyzing hateful rejection. instinctive repulsive hostile destroyer. In front of the engraving, the sacred
+            and perennial inner prayer implores that the helplessness cease; an echo of deep mercy and healing peace for
+            every sentient being; thus standing as a silent bastion and living reminder in the modern era that reveals
+            how great and magnificent a soul freed from prejudices, and an awakened intelligence, tempered by the
+            incessant heat of Unconditional Love, truly becomes.</p>
+          <p>The decision and iron desire materialized to have made the donation in the extensive and distant plains of
+            North America to favor a doctrinal shelter of great magnitude (Dana Paramita – perfection and excellence in
+            the splendid generosity of unremarkable acts) lucidly exemplifies one of the Six Great Perfections
+            (Paramitas), obligatory steps that the honorable Bodhisattvas wisely cultivate. Seeing such a beautiful
+            display of the amazing mystical interconnection beautifully manifested between the resounding technical
+            perfectionism, incisive detail, meditative craftsmanship, continuously applied in the arduous, demanding and
+            relentless creative process of intaglio printing that the master plate necessarily demands, and its sublime
+            sacred and divine connotations intertwined circular and concentric like the unbeatable wheel of the Dharma
+            that all phenomena intertwine; 'Om Mani Padme Hum' transcends with sublime ease its valuable material
+            support, positioning itself without question throughout the world, as an infinite direct window wide open
+            through the exquisite aquatint that will instantly dilute like dew all toxic burden and stress of any
+            disturbed crowded spectator, to simply grant to full hands gracious joy, unfathomable joy and kind healing
+            of compassionate spirit in imperishable perpetuity universal inestimable and unquantifiable invaluable.</p>
+        </div>
 
-          <img class="zoom-image" src="OH MANE PADME HUM en.jpg" width="100%" style="border:30px solid white;"
-            alt="Amazing">
+        <div class="it language" style="display:none;">
+          <p>Paz Arés Osset, abbracciando fermamente la sua vocazione di artista e la sua saggezza di insegnante
+            buddista, canalizza magistralmente tutta la sua profonda devozione spirituale nella creazione impeccabile
+            dell'incisione 'Om Mani Padme Hum'. Quest'opera fondamentale va ben oltre le virtù plastiche dell'acquatinta
+            per diventare una vivida incarnazione del sacro mantra che invoca il risveglio dell'infinita compassione e
+            della vera saggezza; nobili principi che la sacra figura di Avalokiteshvara rappresenta e che si manifestano
+            sulla terra attraverso l'amore compassionevole, la pace gentile e l'incrollabile empatia verso tutti gli
+            esseri senzienti.</p>
+          <p>Alla bellezza senza pari delle sue linee e delle incisioni sul metallo si aggiunge uno stupefacente atto di
+            altruismo: in un gesto di sovrana generosità e con il nobile obiettivo di contribuire al consolidamento del
+            Buddismo nel continente americano, Paz ha espressamente donato cinquanta incisioni di questa stessa opera
+            come fermo sostegno alla costruzione costruttiva e spirituale di nuovi templi e monasteri buddisti (stupa)
+            in tutta l'America. Pertanto, la sua offerta artistica ha trasceso le gallerie terrene per elevarsi al rango
+            di eredità spirituale imperitura. Questo gesto maestoso non cerca solo di sponsorizzare la vitale
+            propagazione e diffusione della dottrina buddista tra gli occidentali, ma di irradiare in ogni momento e
+            accendere incessantemente una promessa luminosa dove il fermo desiderio di totale felicità interiore e di
+            pace completa e calma si espande incontenibile verso ogni angolo ignorato e tetro del nostro mondo
+            contemporaneo.</p>
+          <p>Queste nobili stampe, meticolosamente incise e intimamente impregnate dell'immacolata energia vibrazionale
+            contenuta nei suoni di 'Om Mani Padme Hum', varcano ampiamente la soglia materiale dell'arte classica per
+            divenire oggi radiosi emissari dei valori della vera serenità; un messaggio spirituale profondo e vivo di
+            pace cosmica libera dalla sofferenza che Paz Arés Osset offre liberamente alla nostra esistenza. È noto che,
+            nelle purissime acque sante dell'iconografia buddista classica, l'incarnazione suprema della Pietà e del
+            Buddha della Compassione (maestosamente conosciuto nella lingua tibetana come Chenrezig), è tradizionalmente
+            e solennemente concepita nel bianco immacolato - metafora ineludibile dell'immensa luce risanatrice che, nel
+            suo splendore, diluisce le perverse tenebre accecanti dell'umana afflizione. Quel colore, attraverso le sue
+            braccia infinite eternamente pronte a intercedere, sostenendo ogni essere da questa o dall'altra parte dei
+            confini del Samsara, ricorda all'osservatore attento e silenzioso dell'incisione che la compassione e
+            l'illuminazione non possono mai essere comprese o vissute in modo indipendente.</p>
+          <p>Il mantra sanscrito "Om Mani Padme Hum" - il cui significato poetico è spesso distillato come "Il gioiello
+            nel loto" - regna sovrano all'interno delle strutture compositive dell'acquatinta scura, erigendo una
+            deliberata e serena simmetria del mandala, fedele agli insegnamenti organici a spirale del sacro Dharma.
+            Ogni sillaba risonante della sua lettura tantrica costituisce un indispensabile passo sicuro nel sinuoso
+            sentiero ascendente verso il risveglio globale.</p>
+          <p>Queste vibrazioni dell'Opera della Pace permeano il tessuto di ciascun essere, trasformando con risonante
+            fermezza e ritmo incrollabile gli oscuri veleni dell'anima nell'ambito splendore liberatore.</p>
+          <p>Come ampiamente dettagliato nei testi canonici, le sei sillabe mistiche sono fermamente destinate a
+            lucidare gradualmente fino alla rispettiva totale estirpazione del dannoso ego individuale, dell'invidia
+            corrosiva e ignorante, paralizzante, dell'insaziabile e incontrollabile desiderio malsano e pernicioso,
+            delle mura cieche degli arcaici pregiudizi egoistici, delle ferree reti soffocanti di vani e effimeri
+            possedimenti e, infine, del paralizzante rifiuto odioso. distruttore ostile, istintivo e ripugnante. Davanti
+            all'incisione, la sacra e perenne preghiera interiore implora che cessi l'impotenza; un'eco di profonda
+            misericordia e di pace risanatrice per ogni essere senziente; rappresentando così un bastione silenzioso e
+            un promemoria vivente nell'era moderna che rivela quanto grande e magnifica diventi veramente un'anima
+            liberata dai pregiudizi e un'intelligenza risvegliata, temperata dal calore incessante dell'Amore
+            Incondizionato.</p>
+          <p>La decisione e il ferreo desiderio concretizzatosi di aver effettuato la donazione nelle estese e lontane
+            pianure del Nord America per favorire un rifugio dottrinale di grande portata (Dana Paramita – perfezione ed
+            eccellenza nella splendida generosità di atti insignificanti) esemplifica lucidamente una delle Sei Grandi
+            Perfezioni (Paramitas), passi obbligati che gli onorevoli Bodhisattva saggiamente coltivano. Vedere una così
+            bella dimostrazione della straordinaria interconnessione mistica magnificamente manifestata tra il clamoroso
+            perfezionismo tecnico, i dettagli incisivi, l'artigianato meditativo, continuamente applicati nell'arduo,
+            esigente e implacabile processo creativo della stampa calcografica che la lastra principale richiede
+            necessariamente, e le sue sublimi connotazioni sacre e divine intrecciate circolari e concentriche come
+            l'imbattibile ruota del Dharma che tutti i fenomeni intrecciano; "Om Mani Padme Hum" trascende con sublime
+            facilità il suo prezioso supporto materiale, posizionandosi senza dubbio in tutto il mondo, come un'infinita
+            finestra diretta spalancata attraverso la squisita acquatinta che diluirà istantaneamente come rugiada tutto
+            il fardello tossico e lo stress di qualsiasi spettatore disturbato e affollato, per concedere semplicemente
+            a mani piene la gioia benevola, la gioia insondabile e la gentile guarigione dello spirito compassionevole
+            nell'imperituro perpetuità universale inestimabile e inestimabile inestimabile.</p>
+        </div>
 
+        <div class="ru language" style="display:none;">
+          <p>Паз Арес Осет, твердо придерживаясь своего призвания художника и мудрости буддийского учителя, мастерски
+            направляет всю свою глубокую духовную преданность в безупречном создании гравюры «Ом Мани Падме Хум». Эта
+            плодотворная работа выходит далеко за рамки пластических достоинств акватинты и становится ярким воплощением
+            священной мантры, призывающей к пробуждению бесконечного сострадания и истинной мудрости; благородные
+            принципы, которые представляет священная фигура Авалокитешвары и которые проявляются на земле через
+            сострадательную любовь, добрый мир и непоколебимое сочувствие ко всем чувствующим существам.</p>
+          <p>К беспрецедентной красоте линий и насечек на металле добавляется удивительный акт самоотверженности: в
+            жесте суверенной щедрости и с благородной целью внести вклад в консолидацию буддизма на американском
+            континенте Паз специально пожертвовал пятьдесят гравюр этой же работы в качестве твердой поддержки
+            конструктивного и духовного строительства новых буддийских храмов и монастырей (ступ) по всей Америке. Таким
+            образом, его художественное творчество вышло за пределы земных галерей и возвысилось до ранга нетленного
+            духовного наследия. Этот величественный жест призван не только способствовать жизненно важной пропаганде и
+            распространению буддийской доктрины среди жителей Запада, но и излучать в каждый момент и непрерывно
+            зажигать светящееся обещание, в котором твердое стремление к полному внутреннему счастью и полному и
+            спокойному миру неудержимо распространяется на каждый игнорируемый и мрачный уголок нашего современного
+            мира.</p>
+          <p>Эти благородные гравюры, тщательно выгравированные и глубоко пропитанные безупречной вибрационной энергией,
+            содержащейся в звуках «Ом Мани Падме Хум», широко пересекают материальный порог классического искусства и
+            сегодня становятся сияющими посланниками ценностей истинного спокойствия; глубокое живое духовное послание
+            космического мира, свободного от страданий, которое Пас Арес Оссет свободно предоставляет нашему
+            существованию. Известно, что в чистых святых водах классической буддийской иконографии высшее воплощение
+            Благочестия и Будда Сострадания (величественно известный на тибетском языке как Ченрезиг) традиционно и
+            торжественно зарождается в безупречном белом цвете - неизбежной метафоре огромного исцеляющего света,
+            который в своем великолепии разбавляет извращенный ослепляющий мрак человеческого страдания. Этот цвет
+            своими бесконечными руками, вечно готовыми заступиться, поддерживая каждое существо по ту или иную сторону
+            границ Сансары, напоминает внимательному и молчаливому наблюдателю о гравюре о том, что сострадание и
+            просветление никогда не могут быть поняты или прожиты независимо друг от друга.</p>
+          <p>Санскритская мантра «Ом Мани Падме Хум», поэтический смысл которой часто называют «Драгоценность в лотосе»,
+            властно господствует в композиционных рамках темной акватинты, создавая продуманную и безмятежную симметрию
+            мандалы, верную спиральным органическим учениям священной Дхармы. Каждый звучный слог тантрического
+            прочтения представляет собой незаменимый безопасный шаг на извилистом восходящем пути к глобальному
+            пробуждению.</p>
+          <p>Эти вибрации работы Мира пронизывают ткань каждого существа, с звучной твердостью и непоколебимой скоростью
+            превращая темные яды души в желанный освобождающий блеск.</p>
+          <p>Как подробно описано в канонических текстах, шесть мистических слогов твердо назначены для постепенного
+            полного искоренения вредного индивидуального эго, разъедающей и невежественной, парализующей зависти,
+            ненасытного и неконтролируемого нездорового пагубного желания, слепых стен архаических эгоистических
+            предрассудков, железных удушающих сетей тщетных эфемерных владений и, наконец, парализующего ненавистного
+            желания. отказ. инстинктивный отталкивающий разрушитель противника. Перед гравюрой священная и вечная
+            внутренняя молитва умоляет прекратить беспомощность; эхо глубокого милосердия и исцеляющего мира для каждого
+            живого существа; таким образом, он является безмолвным бастионом и живым напоминанием в современную эпоху,
+            показывающим, насколько великой и великолепной на самом деле становится душа, свободная от предрассудков, и
+            пробудившийся разум, закаленный непрекращающимся жаром Безусловной Любви.</p>
+          <p>Материализованное решение и железное желание сделать пожертвование на обширных и далеких равнинах Северной
+            Америки в пользу доктринального прибежища огромной величины (Дана Парамита – совершенство и превосходство в
+            великолепной щедрости ничем не примечательных действий) наглядно иллюстрирует одно из Шести Великих
+            Совершенств (Парамитас), обязательных шагов, которые мудро культивируют почтенные Бодхисаттвы. Видя такую
+            ​​прекрасную демонстрацию удивительной мистической взаимосвязи, прекрасно проявляющейся между оглушительным
+            техническим перфекционизмом, острыми деталями, медитативным мастерством, постоянно применяемым в тяжелом,
+            требовательном и неустанном творческом процессе глубокой печати, которого обязательно требует мастер-форма,
+            и ее возвышенными священными и божественными коннотациями, переплетающимися по кругу и концентрически, как
+            непобедимое колесо Дхармы, в котором переплетаются все явления; «Ом Мани Падме Хум» с возвышенной легкостью
+            превосходит свое ценное материальное обеспечение, безоговорочно позиционируя себя во всем мире, как
+            бесконечное прямое окно, распахнутое настежь изысканной акватинтой, мгновенно разбавляющей, как роса, всю
+            ядовитую тяжесть и стресс любого встревоженного многолюдного зрителя, чтобы просто подарить полным рукам
+            благодатную радость, непостижимую радость и доброе исцеление сострадательного духа в нетленном вечности
+            всеобщей неоценимой и неисчислимо бесценной.</p>
+        </div>
 
+        <div class="zh language" style="display:none;">
+          <p>帕斯·阿雷斯·奥塞特 (Paz Arés Osset) 坚定地拥抱自己作为艺术家的使命和作为佛教导师的智慧，巧妙地将她所有深厚的精神奉献精神融入到雕刻“Om Mani Padme
+            Hum”的完美创作中。这幅开创性的作品远远超出了凹版印刷的可塑性优点，成为神圣咒语的生动体现，唤起了无限慈悲和真正智慧的觉醒；观世音菩萨神圣形象所代表的崇高原则，通过对所有众生的慈悲之爱、仁慈和平和坚定不移的同情心在地球上体现出来。
+          </p>
+          <p>
+            除了无与伦比的金属线条和切口之美之外，还有令人惊叹的无私行为：出于主权慷慨的姿态，并怀着为巩固美洲大陆佛教做出贡献的崇高目标，帕兹明确捐赠了五十幅同一作品的版画，作为对全美新佛教寺庙和寺院（佛塔）建设性和精神建设的坚定支持。因此，他的艺术作品已经超越了尘世的画廊，上升到了不朽的精神遗产的地位。这一庄严的姿态不仅旨在促进佛教教义在西方人中的重要传播和传播，而且时刻散发着光芒，不断点燃一种光明的承诺，使对内心完全幸福和完全平静和平的坚定渴望不可抑制地扩展到我们当代世界每一个被忽视和阴暗的角落。
+          </p>
+          <p>
+            这些高贵的版画经过精心雕刻，并紧密地融入了“唵嘛呢呗美吽”声音中所包含的完美振动能量，广泛跨越了古典艺术的物质门槛，成为当今真正宁静价值观的光辉使者；帕斯·阿雷斯·奥塞特无偿地为我们的存在提供了宇宙和平、没有痛苦的深刻而生动的精神信息。众所周知，在古典佛教图像的纯净圣水中，虔诚和慈悲的佛陀（在藏语中庄严地称为观世音菩萨）的最高化身，传统上庄严地以完美无瑕的白色构想——这是一个不可避免的隐喻，象征着巨大的治愈之光，其辉煌可以冲淡人类苦难中反常的、令人眼花缭乱的阴暗。这种颜色，通过它永远准备好调解的无限手臂，支持轮回这一边或另一边的每个众生，提醒细心而沉默的观察者注意雕刻，慈悲和启蒙永远无法被理解或独立生活。
+          </p>
+          <p>
+            梵文咒语“唵嘛呢呗美吽”（其诗意通常被提炼为“莲花中的宝石”）在深色凹版画的构图框架内占据主导地位，建立了一个刻意而宁静的曼荼罗对称性，忠实于神圣佛法的螺旋式有机教义。其密宗读物中的每一个共鸣音节都是通往全球觉醒的蜿蜒上升道路上不可或缺的安全步骤。
+          </p>
+          <p>这些和平工作的振动渗透到每个存在的结构中，以巨大的坚定性和坚定不移的步伐将灵魂的黑暗毒药转化为令人垂涎的解放光辉。</p>
+          <p>
+            正如经典文本中所详细描述的那样，这六个神秘的音节被坚定地指定为逐步彻底消灭有害的个人自我、腐蚀性和无知的麻痹性嫉妒、无法满足和无法控制的不健康的有害欲望、古老的自私偏见的盲目墙壁、虚荣的短暂财产的令人窒息的铁网，以及最后，麻痹性的仇恨拒绝。本能的令人厌恶的敌对驱逐舰。在雕刻前，神圣而永恒的内心祈祷祈求无助停止；为每一个有情众生带来深深的慈悲和治愈的平安；因此，它在现代成为一座无声的堡垒和活生生的提醒，揭示了一个摆脱偏见的灵魂和一个觉醒的智慧，在无条件的爱的持续热度的锤炼下，真正变得多么伟大和壮丽。
+          </p>
+          <p>
+            在北美广阔而遥远的平原上进行捐赠以支持一个伟大的教义庇护所的决定和钢铁般的愿望实现了（布施波罗密多——在平凡行为的辉煌布施中的完美和卓越）清楚地例证了六大波罗蜜（波罗密多）之一，即尊敬的菩萨明智地修行的必修步骤。如此美丽地展示了令人惊叹的神秘相互联系，完美地体现了响亮的技术完美主义、敏锐的细节、冥想的工艺，不断应用于凹版印刷所需的艰苦、苛刻和不懈的创作过程，以及其崇高神圣和神圣的内涵，像所有现象交织在一起的无与伦比的法轮一样，圆形和同心地交织在一起；
+            “唵嘛呢呗美吽”以崇高的轻松超越了其宝贵的物质支持，毫无疑问地将自己定位在世界各地，作为一扇通过精致的凹画敞开的无限直接窗口，它将像露水一样立即稀释任何不安的拥挤观众的所有有毒负担和压力，简单地给予满手仁慈的喜悦，深不可测的喜悦和慈悲精神的善意治愈，以不朽的永恒，普遍的不可估量和无法量化的无价之宝。
+          </p>
+        </div>
+
+        <div class="ar language" style="display:none;">
+          <p>تتبنى باز أريس أوسيت دعوتها كفنانة وحكمتها كمعلمة بوذية، وتوجه ببراعة كل تفانيها الروحي العميق في الإبداع
+            الذي لا تشوبه شائبة لنقش "Om Mani Padme Hum". يذهب هذا العمل الأساسي إلى ما هو أبعد من الفضائل البلاستيكية
+            للأكواتينت ليصبح تجسيدًا حيًا للشعار المقدس الذي يستحضر إيقاظ الرحمة اللامتناهية والحكمة الحقيقية؛ المبادئ
+            النبيلة التي تمثلها شخصية أفالوكيتيشفارا المقدسة والتي تتجلى على الأرض من خلال الحب الرحيم والسلام اللطيف
+            والتعاطف الذي لا يتزعزع تجاه جميع الكائنات الحية.</p>
+          <p>يضاف إلى الجمال الذي لا مثيل له لخطوطه وشقوقه على المعدن عمل مذهل من نكران الذات: في لفتة من الكرم السيادي
+            ومع الهدف النبيل المتمثل في المساهمة في تعزيز البوذية في القارة الأمريكية، تبرع باز صراحةً بخمسين نقشًا من
+            هذا العمل نفسه كدعم قوي للبناء البناء والروحي للمعابد والأديرة البوذية الجديدة (ستوبا) في جميع أنحاء أمريكا.
+            وهكذا تجاوزت عروضه الفنية الأروقة الأرضية لترتقي إلى مرتبة الإرث الروحي الذي لا يفنى. لا تسعى هذه اللفتة
+            المهيبة إلى رعاية النشر الحيوي ونشر العقيدة البوذية بين الغربيين فحسب، بل تسعى أيضًا إلى أن تشع في كل لحظة
+            وتشعل بلا توقف وعدًا مضيءًا حيث تتوسع الرغبة الأكيدة في السعادة الداخلية الكاملة والسلام الكامل والهادئ بشكل
+            لا يمكن كبته نحو كل ركن مهمل وكئيب من عالمنا المعاصر.</p>
+          <p>هذه المطبوعات النبيلة، المنقوشة بدقة والمشبعة بشكل وثيق بالطاقة الاهتزازية النقية الموجودة في أصوات "Om
+            Mani Padme Hum"، تعبر على نطاق واسع العتبة المادية للفن الكلاسيكي لتصبح اليوم مبعوثين مشعين لقيم الصفاء
+            الحقيقي؛ رسالة روحية حية عميقة للسلام الكوني الخالي من المعاناة التي يوفرها باز آريس أوسيت لوجودنا بحرية. من
+            المعروف أنه في المياه المقدسة النقية للأيقونات البوذية الكلاسيكية، يتم تصوير التجسيد الأسمى للتقوى وبوذا
+            الرحمة (المعروف في لغة التبت باسم تشينريزيغ) بشكل تقليدي ومهيب باللون الأبيض النقي - استعارة لا مفر منها
+            للضوء الشافي الهائل الذي، في بهائه، يخفف ظلمات الآلام البشرية الضارة. هذا اللون، من خلال أذرعه اللانهائية
+            المستعدة دائمًا للتوسط، ودعم كل كائن على هذا الجانب أو ذاك من حدود سامسارا، يذكر المراقب اليقظ والصامت
+            بالنقش الذي لا يمكن أبدًا فهم الرحمة والتنوير أو العيش بشكل مستقل.</p>
+          <p>الشعار السنسكريتي "Om Mani Padme Hum" - الذي غالبًا ما يتم تقطير معناه الشعري باسم "الجوهرة في اللوتس" -
+            يحكم بشكل سيادي ضمن الأطر التركيبية للأكواتينت الداكن، مما يؤدي إلى إقامة تناسق ماندالا متعمد وهادئ، مخلص
+            للتعاليم العضوية المتصاعدة للدارما المقدسة. يشكل كل مقطع لفظي رنان من قراءته التانترا خطوة آمنة لا غنى عنها
+            على الطريق الصاعد المتعرج نحو الصحوة العالمية.</p>
+          <p>تتخلل اهتزازات عمل السلام نسيج كل كائن، وتحول بحزم مدوٍ وإيقاع لا يتزعزع سموم الروح المظلمة إلى التألق
+            المتحرر المرغوب.</p>
+          <p>كما تم تفصيله على نطاق واسع في النصوص الكنسية، تم تعيين المقاطع الستة الغامضة بشكل ثابت للتلميع التدريجي
+            للاستئصال الكامل للأنا الفردية الضارة، والحسد المسبب للتآكل والجاهل، والرغبة الخبيثة غير الصحية التي لا يمكن
+            السيطرة عليها، والجدران العمياء للتحيزات الأنانية القديمة، والشبكات الخانقة الحديدية للممتلكات الزائلة
+            الزائلة، وأخيرًا، الكراهية المشلولة. الرفض. مدمرة عدائية غريزية مثيرة للاشمئزاز. أمام النقش، تطلب الصلاة
+            الداخلية المقدسة والدائمة أن يتوقف العجز؛ صدى الرحمة العميقة والسلام الشافي لكل كائن واعي؛ وهكذا يقف كمعقل
+            صامت وتذكير حي في العصر الحديث يكشف مدى عظمة وروعة الروح المتحررة من التحيزات، والذكاء المستيقظ، الذي تلطفه
+            حرارة الحب غير المشروط المستمرة.</p>
+          <p>إن القرار والرغبة الحديدية المتجسدتين في التبرع في سهول أمريكا الشمالية الواسعة والبعيدة لصالح ملجأ عقائدي
+            عظيم الحجم (دانا باراميتا - الكمال والتميز في الكرم الرائع للأفعال غير الملحوظة) تمثل بوضوح إحدى الكمالات
+            الستة العظيمة (باراميتاس)، وهي خطوات إلزامية ينميها البوديساتفا المحترمون بحكمة. رؤية مثل هذا العرض الجميل
+            للترابط الغامض المذهل الذي يتجلى بشكل جميل بين الكمال الفني المدوي، والتفاصيل الثاقبة، والحرفية التأملية،
+            والتي يتم تطبيقها باستمرار في العملية الإبداعية الشاقة والمتطلبة والتي لا هوادة فيها للطباعة الغائرة التي
+            تتطلبها اللوحة الرئيسية بالضرورة، وتتشابك دلالاتها المقدسة والإلهية السامية بشكل دائري ومتحد المركز مثل عجلة
+            الدارما التي لا تقبل المنافسة والتي تتشابك جميع الظواهر؛ "Om Mani Padme Hum" يتخطى بسهولة فائقة دعمه المادي
+            القيم، ويضع نفسه دون أدنى شك في جميع أنحاء العالم، كنافذة مباشرة لا نهائية مفتوحة على مصراعيها من خلال الماء
+            الرائع الذي سيخفف على الفور مثل الندى كل العبء السام والضغط لأي متفرج مزدحم مضطرب، ليمنح ببساطة الأيدي
+            الكاملة فرحة كريمة، وفرح لا يسبر غوره وشفاء لطيف للروح الرحيمة في أبدية لا تفنى، عالمية لا تقدر بثمن ولا
+            يمكن قياسها. لا تقدر بثمن.</p>
+        </div>
+
+        <div class="de language" style="display:none;">
+          <p>Paz Arés Osset, die ihre Berufung als Künstlerin und ihre Weisheit als buddhistische Lehrerin fest
+            vertritt, bündelt meisterhaft ihre ganze tiefe spirituelle Hingabe in der makellosen Kreation der Gravur „Om
+            Mani Padme Hum“. Dieses bahnbrechende Werk geht weit über die plastischen Vorzüge der Aquatinta hinaus und
+            wird zu einer lebendigen Verkörperung des heiligen Mantras, das das Erwachen von unendlichem Mitgefühl und
+            wahrer Weisheit hervorruft; edle Prinzipien, die die heilige Figur von Avalokiteshvara repräsentiert und die
+            sich auf der Erde durch mitfühlende Liebe, gütigen Frieden und unerschütterliches Einfühlungsvermögen
+            gegenüber allen fühlenden Wesen manifestieren.</p>
+          <p>Zu der unvergleichlichen Schönheit seiner Linien und Einschnitte auf dem Metall kommt ein erstaunlicher Akt
+            der Selbstlosigkeit hinzu: In einer Geste souveräner Großzügigkeit und mit dem edlen Ziel, zur Festigung des
+            Buddhismus auf dem amerikanischen Kontinent beizutragen, hat Paz ausdrücklich fünfzig Stiche desselben Werks
+            als feste Unterstützung für den konstruktiven und spirituellen Bau neuer buddhistischer Tempel und Klöster
+            (Stupas) in ganz Amerika gespendet. So hat sein künstlerisches Angebot die Grenzen irdischer Galerien
+            überschritten und den Rang eines unvergänglichen spirituellen Erbes erreicht. Diese majestätische Geste
+            zielt nicht nur darauf ab, die lebenswichtige Verbreitung und Verbreitung der buddhistischen Lehre unter
+            Westlern zu fördern, sondern soll in jedem Moment ein leuchtendes Versprechen ausstrahlen und unaufhörlich
+            entzünden, in dem sich der feste Wunsch nach völligem innerem Glück und vollständigem und ruhigem Frieden
+            unbändig in jeden ignorierten und düsteren Winkel unserer heutigen Welt ausdehnt.</p>
+          <p>Diese edlen Drucke, sorgfältig graviert und tief durchdrungen von der makellosen Schwingungsenergie, die in
+            den Klängen von „Om Mani Padme Hum“ enthalten ist, überschreiten bei weitem die materielle Schwelle der
+            klassischen Kunst und werden heute zu strahlenden Botschaftern der Werte wahrer Gelassenheit; eine tief
+            lebendige spirituelle Botschaft des kosmischen Friedens ohne Leiden, die Paz Arés Osset unserer Existenz
+            freiwillig schenkt. Es ist bekannt, dass in den reinen heiligen Gewässern der klassischen buddhistischen
+            Ikonographie die höchste Inkarnation der Frömmigkeit und des Buddha des Mitgefühls (in der tibetischen
+            Sprache majestätisch Chenrezig genannt) traditionell und feierlich in makellosem Weiß empfangen wird – eine
+            unausweichliche Metapher für das immense heilende Licht, das in seiner Pracht die perversen, blendenden
+            Düsternisse menschlichen Leids verwischt. Diese Farbe erinnert den aufmerksamen und stillen Betrachter an
+            die Gravur, dass Mitgefühl und Erleuchtung niemals unabhängig voneinander verstanden oder gelebt werden
+            können.</p>
+          <p>Das Sanskrit-Mantra „Om Mani Padme Hum“ – dessen poetische Bedeutung oft als „Das Juwel im Lotus“
+            destilliert wird – herrscht souverän im kompositorischen Rahmen der dunklen Aquatinta und schafft eine
+            bewusste und gelassene Mandala-Symmetrie, getreu den spiralförmigen organischen Lehren des heiligen Dharma.
+            Jede klangvolle Silbe seiner tantrischen Lesart stellt einen unverzichtbaren sicheren Schritt auf dem
+            gewundenen, aufsteigenden Weg zum globalen Erwachen dar.</p>
+          <p>Diese Schwingungen des Werkes des Friedens durchdringen das Gefüge jedes einzelnen Wesens und verwandeln
+            mit widerhallender Festigkeit und unerschütterlichem Tempo die dunklen Gifte der Seele in den begehrten
+            befreienden Glanz.</p>
+          <p>Wie in kanonischen Texten ausführlich dargelegt wurde, sind die sechs mystischen Silben fest zugeordnet, um
+            nach und nach die jeweilige völlige Ausrottung des schädlichen individuellen Egos, des zersetzenden und
+            ignoranten lähmenden Neids, des unersättlichen und unkontrollierbaren ungesunden verderblichen Verlangens,
+            der blinden Mauern archaischer selbstsüchtiger Vorurteile, der eisernen erstickenden Netzwerke eitler,
+            vergänglicher Besitztümer und schließlich des zu polieren lähmende hasserfüllte Ablehnung. instinktiver,
+            abstoßender feindlicher Zerstörer. Vor der Gravur fleht das heilige und immerwährende innere Gebet darum,
+            dass die Hilflosigkeit aufhört; ein Echo tiefer Barmherzigkeit und heilenden Friedens für jedes fühlende
+            Wesen; Damit dient es als stille Bastion und lebendige Erinnerung in der modernen Zeit, die offenbart, wie
+            großartig und großartig eine von Vorurteilen befreite Seele und eine erwachte Intelligenz, gemildert durch
+            die unaufhörliche Hitze der bedingungslosen Liebe, wirklich werden.</p>
+          <p>Die Entscheidung und der eiserne Wunsch, die Spende in den weiten und fernen Ebenen Nordamerikas zu
+            tätigen, um einen doktrinären Zufluchtsort von großem Ausmaß zu fördern (Dana Paramita – Vollkommenheit und
+            Exzellenz in der großartigen Großzügigkeit unauffälliger Taten), veranschaulichen klar eine der sechs großen
+            Vollkommenheiten (Paramitas), obligatorische Schritte, die die ehrenwerten Bodhisattvas mit Bedacht
+            kultivieren. Eine so schöne Darstellung der erstaunlichen mystischen Verbindung zu sehen, die sich wunderbar
+            manifestiert zwischen dem durchschlagenden technischen Perfektionismus, den prägnanten Details, der
+            meditativen Handwerkskunst, die kontinuierlich im mühsamen, anspruchsvollen und unerbittlichen kreativen
+            Prozess des Tiefdrucks angewendet wird, den die Meisterplatte notwendigerweise erfordert, und seinen
+            erhabenen heiligen und göttlichen Konnotationen, die kreisförmig und konzentrisch miteinander verflochten
+            sind wie das unschlagbare Rad des Dharma, das alle Phänomene miteinander verflochten; „Om Mani Padme Hum“
+            überschreitet mit erhabener Leichtigkeit seine wertvolle materielle Unterstützung und positioniert sich ohne
+            Frage auf der ganzen Welt als ein unendliches, direktes, weit geöffnetes Fenster durch die exquisite
+            Aquatinta, das sofort wie Tau alle giftigen Belastungen und den Stress eines gestörten, überfüllten
+            Zuschauers auflöst, um den vollen Händen einfach gnädige Freude, unergründliche Freude und gütige Heilung
+            des mitfühlenden Geistes in unvergänglicher Ewigkeit zu schenken, universell, unschätzbar und nicht
+            quantifizierbar und unschätzbar wertvoll.</p>
+        </div>
+
+        <div class="fr language" style="display:none;">
+          <p>Paz Arés Osset, embrassant fermement sa vocation d'artiste et sa sagesse d'enseignante bouddhiste, canalise
+            magistralement toute sa profonde dévotion spirituelle dans la création impeccable de la gravure « Om Mani
+            Padme Hum ». Cette œuvre phare va bien au-delà des vertus plastiques de l’aquatinte pour devenir une
+            incarnation vivante du mantra sacré qui invoque l’éveil de la compassion infinie et de la vraie sagesse ;
+            les nobles principes que représente la figure sacrée d'Avalokiteshvara et qui se manifestent sur terre à
+            travers un amour compatissant, une paix bienveillante et une empathie inébranlable envers tous les êtres
+            sensibles.</p>
+          <p>À la beauté inégalée de ses lignes et incisions sur le métal s'ajoute un étonnant acte d'abnégation : dans
+            un geste de générosité souveraine et dans le noble objectif de contribuer à la consolidation du bouddhisme
+            sur le continent américain, Paz a expressément fait don de cinquante gravures de cette même œuvre comme
+            soutien ferme à la construction constructive et spirituelle de nouveaux temples et monastères bouddhistes
+            (stupas) dans toute l'Amérique. Ainsi, son offre artistique a transcendé les galeries terrestres pour
+            s’élever au rang d’héritage spirituel impérissable. Ce geste majestueux ne cherche pas seulement à parrainer
+            la propagation et la diffusion vitales de la doctrine bouddhiste parmi les Occidentaux, mais à rayonner à
+            chaque instant et à enflammer sans cesse une promesse lumineuse où le ferme désir d'un bonheur intérieur
+            total et d'une paix complète et calme s'étend de manière irrépressible vers tous les coins ignorés et
+            sombres de notre monde contemporain.</p>
+          <p>Ces nobles estampes, minutieusement gravées et intimement imprégnées de l'énergie vibratoire immaculée
+            contenue dans les sons de 'Om Mani Padme Hum', franchissent largement le seuil matériel de l'art classique
+            pour devenir aujourd'hui de rayonnants émissaires des valeurs de véritable sérénité ; un message spirituel
+            profond et vivant de paix cosmique sans souffrance que Paz Arés Osset fournit librement à notre existence.
+            On sait que, dans les eaux saintes pures de l’iconographie bouddhiste classique, l’incarnation suprême de la
+            Piété et du Bouddha de la Compassion (majestueusement connue dans la langue du Tibet sous le nom de
+            Chenrezig), est traditionnellement et solennellement conçue dans un blanc immaculé – une métaphore
+            incontournable de l’immense lumière curative qui, dans sa splendeur, dilue les ténèbres perverses et
+            aveuglantes de l’affliction humaine. Cette couleur, à travers ses bras infinis éternellement prêts à
+            intercéder, soutenant chaque être de ce côté ou de l'autre des confins du Samsara, rappelle à l'observateur
+            attentif et silencieux de la gravure que la compassion et l'illumination ne peuvent jamais être comprises ou
+            vécues indépendamment.</p>
+          <p>Le mantra sanskrit « Om Mani Padme Hum » – dont la signification poétique est souvent distillée comme « Le
+            joyau dans le lotus » – règne souverainement dans les cadres de composition de l'aquatinte sombre, érigeant
+            une symétrie de mandala délibérée et sereine, fidèle aux enseignements organiques en spirale du Dharma
+            sacré. Chaque syllabe résonante de sa lecture tantrique constitue une étape sûre et indispensable sur le
+            chemin ascendant sinueux vers l’éveil global.</p>
+          <p>Ces vibrations du travail de Paix imprègnent le tissu de chaque être, transformant avec une fermeté
+            retentissante et un rythme inébranlable les sombres poisons de l’âme en l’éclat libérateur convoité.</p>
+          <p>Comme cela a été largement détaillé dans les textes canoniques, les six syllabes mystiques sont fermement
+            assignées à polir progressivement jusqu'à l'extirpation totale respective de l'ego individuel nuisible, de
+            l'envie paralysante corrosive et ignorante, du désir pernicieux malsain insatiable et incontrôlable, des
+            murs aveugles des préjugés égoïstes archaïques, des réseaux de fer suffocants de vaines possessions
+            éphémères et enfin, du rejet haineux paralysant. destroyer hostile répulsif instinctif. Devant la gravure,
+            la prière intérieure sacrée et éternelle implore que cesse l'impuissance ; un écho de profonde miséricorde
+            et de paix curative pour chaque être sensible ; se dressant ainsi comme un bastion silencieux et un rappel
+            vivant à l’ère moderne qui révèle à quel point une âme libérée des préjugés et une intelligence éveillée,
+            tempérée par la chaleur incessante de l’Amour Inconditionnel, deviennent vraiment grandes et magnifiques.
+          </p>
+          <p>La décision et le désir de fer qui se sont matérialisés d’avoir fait un don dans les vastes et lointaines
+            plaines d’Amérique du Nord pour favoriser un refuge doctrinal de grande ampleur (Dana Paramita – perfection
+            et excellence dans la splendide générosité d’actes banals) illustre avec lucidité l’une des Six Grandes
+            Perfections (Paramitas), étapes obligatoires que les honorables Bodhisattvas cultivent sagement. Voir une si
+            belle démonstration de l'étonnante interconnexion mystique magnifiquement manifestée entre le
+            perfectionnisme technique retentissant, les détails incisifs, l'artisanat méditatif, continuellement
+            appliqués dans le processus créatif ardu, exigeant et implacable de l'impression en taille-douce qu'exige
+            nécessairement la plaque maîtresse, et ses sublimes connotations sacrées et divines entrelacées circulaires
+            et concentriques comme la roue imbattable du Dharma que tous les phénomènes entrelacent ; "Om Mani Padme
+            Hum" transcende avec une facilité sublime son précieux support matériel, se positionnant sans aucun doute à
+            travers le monde, comme une fenêtre directe infinie grande ouverte à travers l'aquatinte exquise qui diluera
+            instantanément comme la rosée tout le fardeau toxique et le stress de tout spectateur dérangé et bondé, pour
+            simplement accorder aux mains pleines une joie gracieuse, une joie insondable et une aimable guérison de
+            l'esprit compatissant dans une perpétuité impérissable, universelle, inestimable et inquantifiable,
+            inestimable.</p>
+        </div>
+
+        <div class="ja language" style="display:none;">
+          <p>
+            パズ・アレ・オセットは、芸術家としての使命と仏教教師としての知恵をしっかりと受け入れ、その深い精神的献身をすべて見事に彫刻「オム・マニ・パドメ・フム」の非の打ちどころのない作品に注ぎ込んでいます。この独創的な作品は、アクアチントの造形的な美徳をはるかに超えて、無限の慈悲と真の知恵の目覚めを呼び起こす神聖なマントラを鮮やかに具体化したものとなっています。観世音菩薩の神聖な姿が表し、慈悲深い愛、優しい平和、そしてすべての衆生に対する揺るぎない共感を通じて地球上に現れる高貴な原則。
+          </p>
+          <p>
+            金属のラインと切り込みの比類のない美しさに加えて、驚くべき無私無欲の行為が表れています。主権的な寛大さの表れであり、アメリカ大陸における仏教の定着に貢献するという崇高な目標を掲げて、パスはアメリカ全土の新しい仏教寺院と僧院（ストゥーパ）の建設的かつ精神的な建設への確固たる支援として、この同じ作品の彫刻
+            50
+            点を明示的に寄贈しました。このようにして、彼の芸術作品は地上のギャラリーを超えて、不滅の精神的遺産の地位にまで上り詰めました。この荘厳な行為は、西洋人の間での仏教の教義の重要な普及と普及を後援しようとするだけでなく、あらゆる瞬間に輝き、絶え間なく輝かしい約束を灯し、内なる完全な幸福と完全で穏やかな平和への確固たる願望が、現代世界の無視され暗い隅々に向けて抑えられないほど拡大することを目指しています。
+          </p>
+          <p>
+            これらの高貴な版画は、細心の注意を払って彫刻され、「オム・マニ・パドメ・ハム」の音に含まれる純粋な振動エネルギーが密接に染み込んでおり、古典芸術の物質的な敷居を広く超え、今日では真の静けさの価値を輝かせる使者となっています。パス・アレ・オセットが私たちの存在に無償で提供してくれる、苦しみのない宇宙の平和という深く生きたスピリチュアルなメッセージです。古典的な仏教図像の清らかな聖水の中で、敬虔と慈悲の仏陀（チベットの言語ではチェンレジグとして堂々と知られている）の最高の化身は、伝統的かつ厳粛に真っ白な白で構想されていることが知られています。これは、その素晴らしさの中で、人間の苦しみの倒錯したまばゆいばかりの暗闇を薄める巨大な癒しの光の避けられない比喩です。その色は、その無限の腕を通して永遠に執り成す準備ができており、サムサーラの境界のこちら側または反対側の各存在をサポートし、注意深く静かに彫刻を観察する人に、慈悲と悟りは決して理解することも、独立して生きることもできないということを思い出させます。
+          </p>
+          <p>サンスクリット語のマントラ「オム マニ パドメ フム」は、その詩的な意味が「蓮の中の宝石」として蒸留されることがよくありますが、ダーク
+            アクアチントの構成枠組みの中で主権的に支配し、神聖なダルマの螺旋を描く有機的な教えに忠実な、意図的で穏やかなマンダラの対称性を構築しています。タントラの朗読の共鳴する各音節は、世界的な目覚めに向けて曲がりくねった上昇路に不可欠な安全な一歩を構成します。
+          </p>
+          <p>平和の働きのこれらの振動は各存在の構造に浸透し、響き渡る堅さと揺るぎないペースで魂の暗い毒を切望される解放的な輝きに変えます。</p>
+          <p>正典で詳細に説明されているように、6
+            つの神秘的な音節は、有害な個人のエゴ、腐食性で無知で麻痺するような嫉妬、飽くなき制御不能な不健康で有害な欲望、古風で利己的な偏見の盲壁、むなしい一時的な所有物の窒息するような鉄のネットワーク、そして最後に、麻痺するような憎悪の、それぞれの完全な根絶に徐々に磨きをかけるようにしっかりと割り当てられています。拒否。本能的に反発する敵対的な破壊者。彫刻の前では、神聖で永遠に続く内なる祈りが、無力感がなくなるように懇願しています。あらゆる知覚存在に対する深い慈悲と癒しの平安の響き。このようにして、現代において沈黙の要塞として、そして生きた思い出として立っており、偏見から解放された魂と、無条件の愛の絶え間ない熱によって鍛えられた目覚めた知性が、いかに偉大で素晴らしいものになるかを明らかにしています。
+          </p>
+          <p>北米の遠く離れた広大な平原で、大規模な教義上の保護施設（ダナ・パラミタ –
+            目立たない行為の見事な寛大さにおける完璧さと卓越性）を支持するために寄付をしたという決断と鉄の願望は、名誉ある菩薩が賢明に培う必須のステップである六大完璧（パラミタ）の1つを明確に例示しています。マスタープレートが必然的に要求する、困難で要求の厳しい凹版印刷の創造的なプロセスで継続的に適用される、響きわたる技術的完璧主義、鋭いディテール、瞑想的な職人技と、その崇高な神聖で神聖な内包が、すべての現象が絡み合う無敵のダルマの輪のように円形および同心円状に絡み合う、驚くべき神秘的な相互関係のこのような美しい表示を見るのです。
+            「オム・マニ・パドメ・フム」は、貴重な物質的サポートを崇高な容易さで超越し、疑問の余地なく世界中に自らを位置づけ、絶妙なアクアチントを通して大きく開かれた無限の直接の窓として、心を乱す混雑した観客のすべての有毒な重荷とストレスを即座に露のように薄め、不滅の永遠の普遍的な計り知れない、計り知れない慈悲深い喜び、計り知れない喜び、思いやりのある精神の優しい癒しを両手に与えるだけです。貴重な。
+          </p>
+        </div>
+
+        <div class="pt language" style="display:none;">
+          <p>Paz Arés Osset, abraçando firmemente a sua vocação de artista e a sua sabedoria de professora budista,
+            canaliza com maestria toda a sua profunda devoção espiritual na impecável criação da gravura 'Om Mani Padme
+            Hum'. Este trabalho seminal vai muito além das virtudes plásticas da água-tinta para se tornar uma
+            encarnação vívida do mantra sagrado que invoca o despertar da compaixão infinita e da verdadeira sabedoria;
+            nobres princípios que a figura sagrada de Avalokiteshvara representa e que se manifestam na terra através do
+            amor compassivo, da paz bondosa e da empatia inabalável para com todos os seres sencientes.</p>
+          <p>À beleza incomparável de suas linhas e incisões no metal soma-se um surpreendente ato de abnegação: num
+            gesto de generosidade soberana e com o nobre objetivo de contribuir para a consolidação do Budismo no
+            continente americano, Paz doou expressamente cinquenta gravuras desta mesma obra como firme apoio à
+            construção construtiva e espiritual de novos templos e mosteiros budistas (stupas) em toda a América. Assim,
+            a sua oferta artística transcendeu as galerias terrenas para ascender à categoria de legado espiritual
+            imperecível. Este gesto majestoso não procura apenas patrocinar a propagação e disseminação vital da
+            doutrina budista entre os ocidentais, mas irradiar a cada momento e acender incessantemente uma promessa
+            luminosa onde o desejo firme de felicidade interior total e de paz completa e calma se expande
+            irreprimivelmente para cada canto ignorado e sombrio do nosso mundo contemporâneo.</p>
+          <p>Estas nobres gravuras, meticulosamente gravadas e intimamente imbuídas da imaculada energia vibracional
+            contida nos sons de 'Om Mani Padme Hum', atravessam amplamente o limiar material da arte clássica para se
+            tornarem hoje emissários radiantes dos valores da verdadeira serenidade; uma mensagem espiritual viva e
+            profunda de paz cósmica livre de sofrimento que Paz Arés Osset proporciona gratuitamente à nossa existência.
+            É sabido que, nas águas sagradas puras da iconografia budista clássica, a encarnação suprema da Piedade e do
+            Buda da Compaixão (majestosamente conhecido na língua do Tibete como Chenrezig), é tradicional e solenemente
+            concebida em branco imaculado - uma metáfora inescapável da imensa luz curativa que, no seu esplendor, dilui
+            as trevas perversas e ofuscantes da aflição humana. Essa cor, através dos seus braços infinitos eternamente
+            prontos a interceder, apoiando cada ser deste ou daquele lado dos confins do Samsara, lembra ao observador
+            atento e silencioso da gravura que a compaixão e a iluminação nunca podem ser compreendidas ou vividas de
+            forma independente.</p>
+          <p>O mantra sânscrito 'Om Mani Padme Hum' - cujo significado poético é muitas vezes destilado como 'A Jóia no
+            Lótus' - rege soberanamente dentro das estruturas composicionais da água-tinta escura, erigindo uma simetria
+            de mandala deliberada e serena, fiel aos ensinamentos orgânicos em espiral do Dharma sagrado. Cada sílaba
+            ressonante de sua leitura tântrica constitui um passo seguro indispensável no sinuoso caminho ascendente em
+            direção ao despertar global.</p>
+          <p>Essas vibrações do trabalho da Paz permeiam a estrutura de cada ser, transformando com firmeza retumbante e
+            ritmo inabalável os venenos sombrios da alma no cobiçado brilho libertador.</p>
+          <p>Como foi amplamente detalhado nos textos canônicos, as seis sílabas místicas são firmemente atribuídas para
+            polir gradualmente até a respectiva extirpação total do ego individual nocivo, da inveja paralisante
+            corrosiva e ignorante, do desejo pernicioso insaciável e incontrolável, doentio, das paredes cegas dos
+            preconceitos egoístas arcaicos, das redes sufocantes de ferro das posses vãs e efêmeras e, finalmente, da
+            rejeição odiosa e paralisante. destruidor hostil instintivo e repulsivo. Diante da gravura, a sagrada e
+            perene oração interior implora que cesse o desamparo; um eco de profunda misericórdia e paz curadora para
+            cada ser senciente; permanecendo assim como um bastião silencioso e um lembrete vivo na era moderna que
+            revela quão grande e magnífica se torna verdadeiramente uma alma livre de preconceitos e uma inteligência
+            desperta, temperada pelo calor incessante do Amor Incondicional.</p>
+          <p>A decisão e o desejo férreo materializados de ter feito a doação nas extensas e distantes planícies da
+            América do Norte para favorecer um abrigo doutrinário de grande magnitude (Dana Paramita – perfeição e
+            excelência na esplêndida generosidade de atos banais) exemplifica lucidamente uma das Seis Grandes
+            Perfeições (Paramitas), passos obrigatórios que os honrados Bodhisattvas cultivam sabiamente. Vendo uma
+            exibição tão bela da incrível interconexão mística belamente manifestada entre o retumbante perfeccionismo
+            técnico, o detalhe incisivo, o artesanato meditativo, continuamente aplicado no árduo, exigente e implacável
+            processo criativo de impressão em talhe-doce que a placa mestra necessariamente exige, e suas sublimes
+            conotações sagradas e divinas entrelaçadas circulares e concêntricas como a roda imbatível do Dharma que
+            todos os fenômenos se entrelaçam; 'Om Mani Padme Hum' transcende com sublime facilidade seu valioso suporte
+            material, posicionando-se sem questionamento em todo o mundo, como uma janela infinita direta e aberta
+            através da requintada água-tinta que diluirá instantaneamente como orvalho toda carga tóxica e estresse de
+            qualquer espectador lotado e perturbado, para simplesmente conceder a mãos cheias alegria graciosa, alegria
+            insondável e cura gentil do espírito compassivo em perpetuidade imperecível, universal, inestimável e
+            inquantificável, inestimável.</p>
         </div>
 
       </div>
-
-    </div>
-
-
-  </section>
-  <!-- Rest of the HTML here... -->
-
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>
-              <div class="english language">Technique: Etching and Aquatint.</div>
-              <div class="spanish language" style="display: none;">Técnica: Aguafuerte y Aguatinta.</div>
-              <div class="italian language" style="display: none;">Tecnica: Acquaforte e Acquatinta.</div>
-              <div class="chinese language" style="display: none;">技术：蚀刻和水彩。</div>
-              <div class="arabic language" style="display: none;">تقنية: النقش والأكواتينت.</div>
-            </li>
-
-
-            <li>
-              <div class="english language">Size: 33x26 cm</div>
-              <div class="spanish language" style="display: none;">Tamaño: 33x26 cm</div>
-              <div class="italian language" style="display: none;">Dimensioni: 33x26 cm</div>
-              <div class="chinese language" style="display: none;">尺寸：33x26厘米</div>
-              <div class="arabic language" style="display: none;">الحجم: 33x26 سم</div>
-            </li>
-            <li>
-              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
-              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
-              </div>
-              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
-              </div>
-              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
-              <div class="arabic language" style="display: none;">مكان الإبداع: كلية الفنون الجميلة في مدريد</div>
-
-            </li>
-            <li>
-              <div class="english language">This work is currently part of a private collection and not available on the
-                open
-                market. However, serious offers over €10,000 from collectors who wish to honor and value its artistic
-                and cultural
-                significance will be considered.</div>
-              <div class="spanish language" style="display: none;">Esta obra es actualmente parte de una colección
-                privada, fuera
-                del alcance del mercado abierto. Sin embargo, se considerarán con seriedad propuestas superiores a los
-                10,000 euros
-                por parte de coleccionistas que deseen honrar y valorar su significado artístico y cultural.</div>
-              <div class="italian language" style="display: none;">Questa opera è attualmente parte di una collezione
-                privata e non
-                disponibile sul mercato aperto. Tuttavia, verranno considerate serie offerte oltre i 10.000 euro da
-                parte di
-                collezionisti che desiderano onorare e valorizzare il suo significato artistico e culturale.</div>
-              <div class="chinese language" style="display: none;">
-                此作品目前是私人收藏的一部分，未在公开市场上出售。然而，将严肃考虑收藏家提出的超过10,000欧元的报价，这些收藏家希望尊重并珍视其艺术和文化意义。</div>
-              <div class="arabic language" style="display: none;">هذا العمل حاليًا جزء من مجموعة خاصة وغير متاح في السوق
-                المفتوح.
-                ومع ذلك، سيتم النظر بجدية في العروض التي تزيد عن 10,000 يورو من الجامعين الذين يرغبون في تكريم وتقدير
-                أهميته الفنية
-                والثقافية.</div>
-            </li>
-
-          </ul>
-
-
-        </div>
-        <div class="col-6 md audio" style="display:none;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="multilingual-description">
-    <div class="container">
-      <h1 style="color: gold;">
-        <div class="english language">Description</div>
-        <div class="spanish language" style="display: none;">Descripción</div>
-        <div class="italian language" style="display: none;">Descrizione</div>
-        <div class="chinese language" style="display: none;">描述</div>
-        <div class="arabic language" style="display: none;">وصف</div>
-      </h1>
-
-
-      <div class="english language">
-        <!-- English description here -->
-        <p>Paz Ares Osset, as an artist and Buddhist teacher, channels her spiritual practice into the creation of the
-          engraving
-          "Om Mani Padme Hum". This work encapsulates the essence of the mantra that invokes compassion and wisdom,
-          principles
-          that Avalokiteshvara represents, manifesting through peace and kindness towards all beings. With generosity
-          that
-          reflects her deep connection with Buddhism, Ares Osset has donated fifty of these works to support the
-          construction of
-          Buddhist temples in America, a gift that transcends art to become a spiritual legacy.</p>
-
-        <p>This act of sharing is not just a gesture of support for the expansion of Buddhism in the West, but also a
-          spread of
-          the desire for happiness and peace to extend to every corner. The prints, imbued with the spirit of "Om Mani
-          Padme
-          Hum", go beyond mere images; they are bearers of a living message of love and serenity that Ares Osset offers
-          to the
-          world.</p>
-
-        <p>The Buddha of Compassion, Avalokiteshvara (in Tibetan, Chenrezig), is traditionally depicted in Buddhist
-          iconography
-          in white color, symbolizing the purity and light that dispels the darkness of suffering. White, therefore, is
-          not just
-          a color, but a symbol of the purifying essence of Avalokiteshvara that reminds us that compassion and peace
-          are
-          intrinsically connected. This deity is often represented with multiple arms, holding a lotus, and with a
-          serene face,
-          representing the vastness of his compassion and his willingness to act for the benefit of all beings. In his
-          form as
-          the White Buddha, Avalokiteshvara promises liberation from the six realms of samsara and offers his help to
-          all
-          without exception, reflecting the universal reach of Buddhist compassion.</p>
-
-        <p>The mantra "Om Mani Padme Hum", traditionally associated with purity and spiritual upliftment, is represented
-          in this
-          engraving with deliberate symmetry that refers to the cyclic nature of life according to the Dharma. Each
-          syllable of
-          the mantra is a step on the path to enlightenment, a vibration that resonates throughout the universe and
-          within the
-          heart of every being.</p>
-
-        <p>"Om Mani Padme Hum", often translated as "the jewel in the lotus", is a six-syllable Sanskrit mantra
-          associated with
-          the bodhisattva of compassion, Avalokiteshvara.</p>
-
-        <p>Each syllable is understood to purify the ego, jealousy, uncontrolled desire, ignorance and prejudice,
-          possessions,
-          and hatred, respectively. The complete mantra is often spiritually interpreted by practitioners as a deep wish
-          for all
-          beings to feel happiness and be freed from suffering. It encompasses the essence of Buddhist teaching which is
-          to
-          transform the mind and heart to achieve enlightenment, and it is a constant reminder of the power of
-          compassion and
-          wisdom within each being.</p>
-
-        <p>The choice of white to represent Avalokiteshvara as mentioned is symbolic and profound. In Buddhist
-          iconography,
-          white conveys purity and transcendence, often representing the overcoming of all obstacles towards
-          enlightenment. This
-          color, absent from the engraving's spectrum, is present in its essence and purpose, in the light emanating
-          from acts
-          of compassion, and in the pure intention behind the creation of the work.</p>
-
-        <p>The act of donating an edition for the construction of temples in North America reflects the perfection of
-          generosity
-          (Dana Paramita), one of the six perfections (Paramitas) that Bodhisattvas must cultivate on their path to
-          awakening.
-          The generosity of sharing art with such sacred meaning has the potential to plant seeds of Dharma in the
-          hearts of
-          those who come into contact with it, offering a mental and spiritual refuge and perhaps, guiding towards
-          enlightenment.</p>
-
-        <p>From an artistic perspective, the engraving stands out for its ability to fuse spiritual symbolism and
-          technical
-          mastery. The contemplative nature of the mantra is reflected in the precision and meditation required in the
-          engraving
-          process. This piece is not just an object of visual contemplation but also a catalyst for meditation and inner
-          reflection. The attention to detail and dedication in each stroke are palpable, serving as a visual parallel
-          to the
-          repetitions of the mantra in meditative practice.</p>
-
-        <p>The circular structure of the design, emulating the Dharma wheel, guides the gaze in a continuous movement,
-          symbolizing the incessant nature of samsara and the perpetual practice towards nirvana. Each of the symbols
-          and the
-          way they interlace within the space of the engraving speak of the interconnection of all phenomena, the
-          inherent
-          emptiness of all forms, and the interdependence that is fundamental in the Buddhist understanding of the
-          universe.</p>
-
-        <p>"Om Mani Padme Hum" by Paz Arés Osset is more than an engraving; it is an act of devotion, an offering to the
-          world,
-          and a reflection of the path that the artist walks. This work can be seen as a bridge between internal
-          contemplation
-          and external expression, between the individual path towards enlightenment and the collective contribution
-          towards
-          universal peace. In its presence, fears and stress dissolve, leaving in their place the peace that arises from
-          unconditional and compassionate love.</p>
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <!-- Spanish description here -->
-        <p>Paz Ares Osset, como artista y maestra budista, canaliza su práctica espiritual en la creación del grabado
-          "Om Mani
-          Padme Hum". Esta obra encapsula la esencia del mantra que invoca compasión y sabiduría, principios que
-          Avalokiteshvara
-          representa, manifestándose a través de la paz y la bondad hacia todos los seres. Con una generosidad que
-          refleja su
-          profunda conexión con el budismo, Ares Osset ha donado cincuenta de estas obras para apoyar la edificación de
-          templos
-          budistas en América, un regalo que trasciende el arte para convertirse en un legado espiritual.</p>
-
-        <p>Este acto de compartir no es solo un gesto de apoyo a la expansión del budismo en Occidente, sino también una
-          difusión del deseo de que la felicidad y la paz se extiendan a cada rincón. Las estampas, imbuidas con el
-          espíritu del
-          "Om Mani Padme Hum", van más allá de ser meras imágenes; son portadoras de un mensaje viviente de amor y
-          serenidad que
-          Ares Osset ofrece al mundo.</p>
-
-        <p>El Buda de la Compasión, Avalokiteshvara (en tibetano, Chenrezig), se representa tradicionalmente en la
-          iconografía
-          budista con un color blanco, simbolizando la pureza y la luz que disipa la oscuridad del sufrimiento. El
-          blanco, por
-          tanto, no es solo un color, sino un símbolo de la esencia purificadora de Avalokiteshvara que nos recuerda que
-          la
-          compasión y la paz están intrínsecamente conectadas. Esta deidad es a menudo representada con múltiples
-          brazos,
-          sosteniendo un loto, y con un rostro sereno, representando la vastedad de su compasión y su disposición a
-          actuar en
-          beneficio de todos los seres. En su forma como el Buda Blanco, Avalokiteshvara promete la liberación de los
-          seis
-          reinos del samsara y ofrece su ayuda a todos sin excepción, lo que refleja el alcance universal de la
-          compasión
-          budista.</p>
-
-        <p>El mantra "Om Mani Padme Hum", tradicionalmente asociado con la pureza y la elevación espiritual, está
-          representado
-          en este grabado con una deliberada simetría que remite a la naturaleza cíclica de la vida según el Dharma.
-          Cada sílaba
-          del mantra es un paso en el camino hacia la iluminación, una vibración que resuena en el universo y dentro del
-          corazón
-          de cada ser.</p>
-
-        <p>"Om Mani Padme Hum", traducido a menudo como "la joya en el loto", es un mantra de seis sílabas en sánscrito
-          asociado
-          con el bodhisattva de la compasión, Avalokiteshvara.</p>
-
-        <p>Cada sílaba se entiende que purifica el ego, la envidia, el deseo incontrolado, la ignorancia y los
-          prejuicios, las
-          posesiones y el odio, respectivamente. El mantra completo es a menudo interpretado espiritualmente por los
-          practicantes como un deseo profundo de que todos los seres sientan la felicidad y se liberen del sufrimiento.
-          Encierra
-          la esencia de la enseñanza budista que es transformar la mente y el corazón para alcanzar la iluminación, y es
-          un
-          recordatorio constante del poder de la compasión y la sabiduría que se encuentra dentro de cada ser.</p>
-
-        <p>La elección del blanco para representar a Avalokiteshvara como dijimos es simbólica y profunda. En la
-          iconografía
-          budista, el blanco transmite pureza y trascendencia, representando a menudo la superación de todos los
-          obstáculos
-          hacia la iluminación. Este color, ausente del espectro del grabado, está presente en su esencia y propósito,
-          en la luz
-          que emana de las acciones de compasión y en la intención pura detrás de la creación de la obra.</p>
-
-        <p>
-          El acto de donar una edición para la construcción de templos en América del Norte refleja la perfección de la
-          generosidad (Dana Paramita), uno de los seis perfeccionamientos (Paramitas) que los Bodhisattvas deben
-          cultivar en su
-          camino hacia el despertar. La generosidad de compartir arte con un significado tan sagrado tiene el potencial
-          de sembrar
-          semillas de Dharma en el corazón de aquellos que entran en contacto con él, ofreciendo un refugio mental y
-          espiritual y
-          tal vez, guiando hacia la iluminación.</p>
-
-        <p>Desde una perspectiva artística, el grabado destaca por su capacidad para fusionar simbolismo espiritual y
-          maestría
-          técnica. La naturaleza contemplativa del mantra se ve reflejada en la precisión y la meditación requerida en
-          el proceso
-          de grabado. Esta pieza no solo es un objeto de contemplación visual sino también un catalizador para la
-          meditación y la
-          reflexión interior. La atención al detalle y la dedicación en cada trazo son palpables, sirviendo como un
-          paralelo
-          visual a las repeticiones del mantra en la práctica meditativa.</p>
-
-        <p>La estructura circular del diseño, que emula la rueda del Dharma, guía la mirada en un movimiento continuo,
-          simbolizando
-          la naturaleza incesante del samsara y la práctica perpetua hacia el nirvana. Cada uno de los símbolos y la
-          forma en que
-          se entrelazan dentro del espacio del grabado hablan de la interconexión de todos los fenómenos, del vacío
-          inherente a
-          todas las formas y de la interdependencia que es fundamental en la comprensión budista del universo.</p>
-
-        <p>"Om Mani Padme Hum" de Paz Arés Osset es más que un grabado; es un acto de devoción, una ofrenda al mundo y
-          un reflejo
-          de la senda que la artista recorre. Este trabajo puede verse como un puente entre la contemplación interna y
-          la
-          expresión externa, entre el sendero individual hacia la iluminación y la contribución colectiva hacia la paz
-          universal.
-          En su presencia, se disuelven los miedos y el estrés, dejando en su lugar la paz que surge del amor
-          incondicional y
-          compasivo.</p>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-        <!-- Italian description here -->
-        <p>Paz Ares Osset, come artista e insegnante buddista, canalizza la sua pratica spirituale nella creazione
-          dell'incisione "Om Mani Padme Hum". Quest'opera incapsula l'essenza del mantra che invoca compassione e
-          saggezza,
-          principi rappresentati da Avalokiteshvara, manifestandosi attraverso la pace e la bontà verso tutti gli
-          esseri. Con
-          una generosità che riflette il suo profondo legame con il buddismo, Ares Osset ha donato cinquanta di queste
-          opere per
-          sostenere l'edificazione di templi buddisti in America, un regalo che trascende l'arte per diventare
-          un'eredità
-          spirituale.</p>
-
-        <p>Questo atto di condivisione non è solo un gesto di supporto all'espansione del buddismo in Occidente, ma
-          anche la
-          diffusione del desiderio che la felicità e la pace si estendano in ogni angolo. Le stampe, impregnate dello
-          spirito di
-          "Om Mani Padme Hum", vanno oltre il semplice essere immagini; sono portatrici di un messaggio vivente di amore
-          e
-          serenità che Ares Osset offre al mondo.</p>
-
-        <p>Il Buddha della Compassione, Avalokiteshvara (in tibetano, Chenrezig), è tradizionalmente rappresentato
-          nell'iconografia buddista con il colore bianco, simbolizzando la purezza e la luce che dissipa l'oscurità
-          della
-          sofferenza. Il bianco, quindi, non è solo un colore, ma un simbolo dell'essenza purificatrice di
-          Avalokiteshvara che
-          ci ricorda che la compassione e la pace sono intrinsecamente collegate. Questa divinità è spesso raffigurata
-          con
-          molteplici braccia, tenendo un loto e con un viso sereno, rappresentando l'immensità della sua compassione e
-          la sua
-          disponibilità ad agire a beneficio di tutti gli esseri. Nella sua forma come Buddha Bianco, Avalokiteshvara
-          promette
-          la liberazione dai sei regni del samsara e offre il suo aiuto a tutti senza eccezione, riflettendo la portata
-          universale della compassione buddista.</p>
-
-        <p>Il mantra "Om Mani Padme Hum", tradizionalmente associato alla purezza e all'elevazione spirituale, è
-          rappresentato
-          in questa incisione con una simmetria deliberata che rimanda alla natura ciclica della vita secondo il Dharma.
-          Ogni
-          sillaba del mantra è un passo sul cammino verso l'illuminazione, una vibrazione che risuona nell'universo e
-          nel cuore
-          di ogni essere.</p>
-
-        <p>"Om Mani Padme Hum", spesso tradotto come "il gioiello nel loto", è un mantra di sei sillabe in sanscrito
-          associato
-          al bodhisattva della compassione, Avalokiteshvara.</p>
-
-        <p>Ogni sillaba si intende che purifichi l'ego, l'invidia, il desiderio incontrollabile, l'ignoranza e i
-          pregiudizi, le
-          possesioni e l'odio, rispettivamente. L'intero mantra è spesso interpretato spiritualmente dai praticanti come
-          un
-          profondo desiderio che tutti gli esseri possano sentire la felicità e liberarsi dalla sofferenza. Incapsula
-          l'essenza
-          dell'insegnamento buddista che è trasformare la mente e il cuore per raggiungere l'illuminazione, ed è un
-          costante
-          promemoria del potere di compassione e saggezza che si trova in ogni essere.</p>
-
-        <p>La scelta del bianco per rappresentare Avalokiteshvara come detto è simbolica e profonda. Nell'iconografia
-          buddista,
-          il bianco trasmette purezza e trascendenza, rappresentando spesso il superamento di tutti gli ostacoli verso
-          l'illuminazione. Questo colore, assente dallo spettro dell'incisione, è presente nella sua essenza e scopo,
-          nella luce
-          che emana dalle azioni di compassione e nell'intenzione pura dietro la creazione dell'opera.</p>
-
-        <p>L'atto di donare un'edizione per la costruzione di templi in Nord America riflette la perfezione della
-          generosità
-          (Dana Paramita), uno dei sei perfezionamenti (Paramitas) che i Bodhisattvas devono coltivare nel loro cammino
-          verso il
-          risveglio. La generosità di condividere l'arte con un significato così sacro ha il potenziale di piantare semi
-          di
-          Dharma nel cuore di coloro che vengono a contatto con essa, offrendo un rifugio mentale e spirituale e, forse,
-          guidando verso l'illuminazione.</p>
-
-        <p>Da una prospettiva artistica, l'incisione si distingue per la sua capacità di fondere simbolismo spirituale e
-          maestria tecnica. La natura contemplativa del mantra si riflette nella precisione e nella meditazione
-          richiesta nel
-          processo di incisione. Questo pezzo non è solo un oggetto di contemplazione visiva ma anche un catalizzatore
-          per la
-          meditazione e la riflessione interiore. L'attenzione al dettaglio e la dedizione in ogni tratto sono
-          palpabili,
-          servendo come parallelo visivo alle ripetizioni del mantra nella pratica meditativa.</p>
-
-        <p>La struttura circolare del disegno, che emula la ruota del Dharma, guida lo sguardo in un movimento continuo,
-          simboleggiando la natura incessante del samsara e la pratica perpetua verso il nirvana. Ogni simbolo e il modo
-          in cui
-          si intrecciano nello spazio dell'incisione parlano dell'interconnessione di tutti i fenomeni, del vuoto
-          intrinseco a
-          tutte le forme e dell'interdipendenza che è fondamentale nella comprensione buddista dell'universo.</p>
-
-        <p>"Om Mani Padme Hum" di Paz Arés Osset è più di un'incisione; è un atto di devozione, un'offerta al mondo e un
-          riflesso del percorso che l'artista percorre. Questo lavoro può essere visto come un ponte tra la
-          contemplazione
-          interna e l'espressione esterna, tra il cammino individuale verso l'illuminazione e il contributo collettivo
-          verso la
-          pace universale. Nella sua presenza, si dissolvono paure e stress, lasciando al loro posto la pace che nasce
-          dall'amore incondizionato e compassionevole.</p>
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <p>Paz Ares Osset 作为一名艺术家和佛教老师，将她的精神实践融入到“Om Mani Padme
-          Hum”版画的创作中。这件作品封装了这个唤起慈悲和智慧的咒语的本质，这些原则是Avalokiteshvara所代表的，通过对所有生灵的和平与善意显现出来。Ares Osset
-          出于她与佛教的深厚连接，慷慨地捐赠了五十幅这样的作品，以支持在美洲建造佛教寺庙，这份礼物超越了艺术，成为了一份精神遗产。</p>
-
-        <p>这种分享行为不仅仅是对佛教在西方扩展的支持，也是希望幸福和和平传播到每一个角落的愿望的传播。这些版画，注入了“Om Mani Padme Hum”的精神，不仅仅是图片；它们传递着Ares Osset
-          提供给世界的爱与宁静的活生生的信息。</p>
-
-        <p>
-          慈悲佛Avalokiteshvara（藏语中称为Chenrezig），在佛教图像学中传统上以白色呈现，象征着净化和光明，驱散苦难的黑暗。因此，白色不仅仅是一种颜色，而是Avalokiteshvara净化本质的象征，提醒我们慈悲与和平是内在相连的。这位神祇通常被描绘为多臂，手持莲花，面带宁静之相，代表他的慈悲广大，愿意造福所有众生。作为白佛，Avalokiteshvara承诺解脱六道轮回，并向所有人无一例外地提供帮助，反映了佛教慈悲的普遍性。
-        </p>
-
-        <p>咒语“Om Mani Padme Hum”，传统上与纯洁和精神提升相关联，在这幅版画中以故意的对称性表示，这回应了根据达摩生活循环性的自然。咒语的每个音节都是通往启蒙之路的一步，是在宇宙中以及每个生灵心中共鸣的振动。
-        </p>
-
-        <p>“Om Mani Padme Hum”，通常被翻译为“莲花中的珠宝”，是一个与慈悲菩萨Avalokiteshvara相关的六音节梵文咒语。</p>
-
-        <p>
-          每个音节被理解为分别净化自我、嫉妒、无法控制的欲望、无知和偏见、财物和憎恨。整个咒语经常被修行者精神上解释为一个深切的愿望，希望所有生灵都感受到幸福并从苦难中解脱。它包含了佛教教义的精髓，即转化心灵和心智以达到启蒙，并且是对每个生灵内在的慈悲和智慧力量的不断提醒。
-        </p>
-
-        <p>
-          正如我们所说，选择白色来代表Avalokiteshvara是具有象征意义和深远意义的。在佛教图像学中，白色传达了纯净和超越，常常代表着克服通向启蒙的所有障碍。这种颜色，虽然在版画的色谱中缺失，却在其本质和目的中存在，在慈悲行为散发的光明以及创作作品背后的纯洁意图中呈现。
-        </p>
-
-        <p>为北美的寺庙建设捐赠版画的行为反映了完美的慷慨（Dana
-          Paramita），这是菩萨在觉醒道路上必须修习的六种完善之一。以如此神圣意义分享艺术的慷慨有潜力在接触它的人心中种下法的种子，提供一个心灵和精神的避难所，也许，引导他们走向启蒙。</p>
-
-        <p>
-          从艺术角度来看，这幅版画因其融合精神象征和技术掌握能力而脱颖而出。咒语的沉思性质反映在版画过程所需的精确度和冥想上。这件作品不仅仅是一个视觉沉思的对象，也是冥想和内省的催化剂。每一笔的关注和奉献都是可感知的，作为修行中咒语重复的视觉平行。
-        </p>
-
-        <p>设计的圆形结构，模仿法轮，以持续的运动引导视线，象征着轮回的不息本质和朝向涅槃的持续修行。版画空间内各个符号及其交织方式讲述了所有现象的相互联系、所有形式的固有空性以及佛教对宇宙理解中基本的相互依存性。</p>
-
-        <p>“Om Mani Padme Hum”由Paz Arés
-          Osset创作，不仅仅是一幅版画；它是一种奉献行为，一份赠予世界的礼物，以及艺术家走过的道路的反映。这项工作可以被视为内在沉思与外在表达之间、个人通往启蒙之路与集体贡献于普遍和平之间的桥梁。在其存在下，恐惧和压力消散，取而代之的是源自无条件慈爱和同情的平静。
-        </p>
-
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <!-- Arabic description here -->
-        <p>باز أريس أوسيت، كفنانة ومعلمة بوذية، تنقل ممارستها الروحية إلى خلق النقش "أوم ماني بادمي هوم". هذا العمل
-          يحتوي على
-          جوهر الطابع الذي يستدعي الرحمة والحكمة، المبادئ التي يمثلها أفالوكيتيشفارا، والتي تظهر من خلال السلام واللطف
-          تجاه جميع
-          الكائنات. بكرم يعكس اتصالها العميق بالبوذية، تبرعت أريس أوسيت بخمسين من هذه الأعمال لدعم بناء المعابد البوذية
-          في
-          أمريكا، وهدية تتجاوز الفن لتصبح إرثاً روحياً.</p>
-
-        <p>هذا العمل من المشاركة ليس فقط بمثابة دعم لانتشار البوذية في الغرب، ولكن أيضاً نشر رغبة في أن تمتد السعادة
-          والسلام إلى
-          كل زاوية. الطبعات، الممتلئة بروح "أوم ماني بادمي هوم"، تتجاوز كونها مجرد صور؛ فهي تحمل رسالة حية من الحب
-          والسكينة التي
-          تقدمها أريس أوسيت للعالم.</p>
-
-        <p>يتم تمثيل بوذا الرحمة، أفالوكيتيشفارا (بالتبتية، تشينريزي)، تقليدياً في الأيقونات البوذية بلون أبيض، يرمز إلى
-          النقاء
-          والضوء الذي يبدد ظلمات المعاناة. الأبيض، لذلك، ليس مجرد لون، بل رمز لجوهر تنقية أفالوكيتيشفارا الذي يذكرنا بأن
-          الرحمة
-          والسلام مرتبطان جوهرياً. غالباً ما يصور هذا الإله بعدة ذراعين، يحمل زهرة لوتس، وبوجه هادئ، يمثل سعة رحمته
-          واستعداده
-          للتصرف لمصلحة جميع الكائنات. في شكله كبوذا الأبيض، يعد أفالوكيتيشفارا بالتحرير من العوالم الستة للسامسارا
-          ويقدم
-          مساعدته للجميع دون استثناء، ما يعكس النطاق العالمي للرحمة البوذية.</p>
-
-        <p>المانترا "أوم ماني بادمي هوم"، المرتبط تقليدياً بالنقاء والرفعة الروحية، ممثلة في هذا النقش بتناظر متعمد يشير
-          إلى
-          طبيعة الحياة الدورية حسب الدارما. كل مقطع من المانترا هو خطوة في الطريق إلى النور، واهتزاز يتردد في الكون
-          وداخل قلب كل
-          كائن.</p>
-
-        <p>"أوم ماني بادمي هوم"، الذي يترجم غالباً كـ "الجوهرة في اللوتس"، هو مانترا من ست مقاطع باللغة السنسكريتية
-          مرتبط
-          ببوديساتفا الرحمة، أفالوكيتيشفارا.</p>
-
-        <p>يُفهم أن كل مقطع ينقي الأنا، الحسد، الرغبة اللامحدودة، الجهل والتحيزات، الممتلكات والكراهية، على التوالي.
-          المانترا
-          الكامل غالباً ما يُفسر روحانياً من قبل الممارسين كرغبة عميقة في أن يشعر جميع الكائنات بالسعادة ويتحرروا من
-          المعاناة.
-          يضم جوهر التعليم البوذي الذي يتحول فيه العقل والقلب لتحقيق النور، وهو تذكير دائم بقوة الرحمة والحكمة التي تكمن
-          في كل
-          كائن.</p>
-
-        <p>اختيار اللون الأبيض لتمثيل أفالوكيتيشفارا كما ذكرنا هو رمزي وعميق. في الأيقونات البوذية، ينقل الأبيض النقاء
-          والتجاوز،
-          يمثل غالباً التغلب على جميع العقبات نحو النور. هذا اللون، غير موجود في طيف النقش، موجود في جوهره وغرضه، في
-          النور الذي
-          ينبعث من أفعال الرحمة وفي النية النقية وراء خلق العمل.</p>
-
-        <p>عملية التبرع بإصدار لبناء المعابد في أمريكا الشمالية تعكس كمال السخاء (دانا باراميتا)، أحد الستة كمالات
-          (باراميتاس)
-          التي يجب أن يزرعها البوديساتفات في طريقهم نحو الاستيقاظ. سخاء المشاركة في الفن بمعنى مقدس له القدرة على زرع
-          بذور
-          الدارما في قلوب أولئك الذين يتواصلون معه، ويقدم ملجأً عقلياً وروحياً وربما يقود إلى النور.</p>
-
-        <p>من منظور فني، يبرز النقش بقدرته على دمج الرمزية الروحية والمهارة الفنية. الطبيعة التأملية للمانترا تنعكس في
-          الدقة
-          والتأمل المطلوب في عملية النقش. هذه القطعة ليست فقط كائناً للتأمل البصري ولكن أيضاً عاملاً محفزاً للتأمل
-          والتفكير
-          الداخلي. الاهتمام بالتفاصيل والإخلاص في كل ضربة قلم ملموس، ويخدم كموازاة بصرية لتكرارات المانترا في الممارسة
-          التأملية.
-        </p>
-
-        <p>البنية الدائرية للتصميم، التي تحاكي عجلة الدارما، توجه النظر في حركة مستمرة، مما يرمز إلى طبيعة السامسارا
-          المستمرة
-          والممارسة المستمرة نحو النيرفانا. كل من الرموز والطريقة التي تتداخل بها داخل مساحة النقش تتحدث عن الترابط بين
-          جميع
-          الظواهر، الفراغ المتأصل في جميع الأشكال والترابط الذي هو أساسي في فهم البوذية للكون.</p>
-
-        <p>"أوم ماني بادمي هوم" لباز أريس أوسيت أكثر من مجرد نقش؛ إنها فعل تقوى، تقدمة للعالم وانعكاس للمسار الذي تسلكه
-          الفنانة.
-          يمكن اعتبار هذا العمل كجسر بين التأمل الداخلي والتعبير الخارجي، بين المسار الفردي نحو النور والمساهمة الجماعية
-          نحو
-          السلام العالمي. في وجوده، تذوب المخاوف والتوتر، تاركة في مكانها السلام الذي ينبع من الحب اللامشروط والرحيم.
-        </p>
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
+    </section>
+  </main>
+
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset - <span class="es language">Arte y Trascendencia</span>
+      <span class="en language" style="display:none;">Art and Transcendence</span>
+      <span class="it language" style="display:none;">Arte e trascendenza</span>
+      <span class="ru language" style="display:none;">Искусство и трансцендентность</span>
+      <span class="zh language" style="display:none;">艺术与超越</span>
+      <span class="ar language" style="display:none;">الفن والتجاوز</span>
+      <span class="de language" style="display:none;">Kunst und Transzendenz</span>
+      <span class="fr language" style="display:none;">Art et transcendance</span>
+      <span class="ja language" style="display:none;">芸術と超越性</span>
+      <span class="pt language" style="display:none;">Arte e Transcendência</span>
+    </p>
+  </footer>
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
 </body>
 
 </html>

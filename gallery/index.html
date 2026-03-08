@@ -46,9 +46,9 @@
   <header class="compact-header px-1">
     <div class="header-main-row px-2">
       <div class="header-left">
-        <h1 class="gallery-title" data-es="Galería" data-en="Gallery" data-it="Galleria" data-ru="Галерея"
-          data-zh="画廊" data-ar="معرض" data-de="Galerie" data-fr="Galerie" data-ja="ギャラリー" data-pt="Galeria">Galería</h1>
-        
+        <h1 class="gallery-title" data-es="Galería" data-en="Gallery" data-it="Galleria" data-ru="Галерея" data-zh="画廊"
+          data-ar="معرض" data-de="Galerie" data-fr="Galerie" data-ja="ギャラリー" data-pt="Galeria">Galería</h1>
+
         <div class="filter-container">
           <div id="filter-wrapper" style="position: relative;">
             <button id="filter-dropdown-btn" class="filter-dropdown-btn">
@@ -58,20 +58,47 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div id="filter-menu" class="filter-menu">
-              <div class="filter-option" data-filter="*"><span data-es="Todo" data-en="Show All" data-it="Tutti" data-ru="Все" data-zh="全部" data-ar="الكل" data-de="Alle" data-fr="Tout" data-ja="すべて" data-pt="Tudo">Todo</span></div>
-              <div class="filter-option" data-filter=".spiritual"><span data-es="Espiritual" data-en="Spiritual" data-it="Spirituale" data-ru="Духовный" data-zh="精神" data-ar="روحي" data-de="Spirituell" data-fr="Spirituel" data-ja="精神的" data-pt="Espiritual">Espiritual</span></div>
-              <div class="filter-option" data-filter=".landscape"><span data-es="Paisaje" data-en="Landscape" data-it="Paesaggio" data-ru="Пейзаж" data-zh="风景" data-ar="منظر طبيعي" data-de="Landschaft" data-fr="Paysage" data-ja="風景" data-pt="Paizagem">Paisaje</span></div>
-              <div class="filter-option" data-filter=".oil"><span data-es="Óleo" data-en="Oil Painting" data-it="Olio" data-ru="Масло" data-zh="油画" data-ar="زيتي" data-de="Ölgemälde" data-fr="Peinture à l'huile" data-ja="油絵" data-pt="Óleo">Óleo</span></div>
-              <div class="filter-option" data-filter=".watercolor"><span data-es="Acuarela" data-en="Watercolor" data-it="Acquerello" data-ru="Акварель" data-zh="水彩" data-ar="ألوان مائية" data-de="Aquarell" data-fr="Aquarelle" data-ja="水彩画" data-pt="Aquarela">Acuarela</span></div>
-              <div class="filter-option" data-filter=".engraving"><span data-es="Grabado" data-en="Engraving" data-it="Incisione" data-ru="Гравюра" data-zh="雕刻" data-ar="نقش" data-de="Gravur" data-fr="Gravure" data-ja="版画" data-pt="Gravura">Grabado</span></div>
-              <div class="filter-option" data-filter=".acrylic"><span data-es="Acrílico" data-en="Acrylic" data-it="Acrilico" data-ru="Акрил" data-zh="丙烯" data-ar="أكريليك" data-de="Acryl" data-fr="Acrylique" data-ja="アクリル画" data-pt="Acrílico">Acrílico</span></div>
+              <div class="filter-option" data-filter="*"><span data-es="Todo" data-en="Show All" data-it="Tutti"
+                  data-ru="Все" data-zh="全部" data-ar="الكل" data-de="Alle" data-fr="Tout" data-ja="すべて"
+                  data-pt="Tudo">Todo</span></div>
+              <div class="filter-option" data-filter=".spiritual"><span data-es="Espiritual" data-en="Spiritual"
+                  data-it="Spirituale" data-ru="Духовный" data-zh="精神" data-ar="روحي" data-de="Spirituell"
+                  data-fr="Spirituel" data-ja="精神的" data-pt="Espiritual">Espiritual</span></div>
+              <div class="filter-option" data-filter=".landscape"><span data-es="Paisaje" data-en="Landscape"
+                  data-it="Paesaggio" data-ru="Пейзаж" data-zh="风景" data-ar="منظر طبيعي" data-de="Landschaft"
+                  data-fr="Paysage" data-ja="風景" data-pt="Paizagem">Paisaje</span></div>
+              <div class="filter-option" data-filter=".figurative"><span data-es="Figurativo" data-en="Figurative"
+                  data-it="Figurativo" data-ru="Фигуративный" data-zh="具象" data-ar="تشكيلي" data-de="Figurativ"
+                  data-fr="Figuratif" data-ja="具象" data-pt="Figurativo">Figurativo</span></div>
+              <div class="filter-option" data-filter=".nude"><span data-es="Desnudo" data-en="Nude" data-it="Nudo"
+                  data-ru="Ню" data-zh="裸体" data-ar="عاري" data-de="Akt" data-fr="Nu" data-ja="ヌード"
+                  data-pt="Nude">Desnudo</span></div>
+              <div class="filter-option" data-filter=".oil"><span data-es="Óleo" data-en="Oil Painting" data-it="Olio"
+                  data-ru="Масло" data-zh="油画" data-ar="زيتي" data-de="Ölgemälde" data-fr="Peinture à l'huile"
+                  data-ja="油絵" data-pt="Óleo">Óleo</span></div>
+              <div class="filter-option" data-filter=".watercolor"><span data-es="Acuarela" data-en="Watercolor"
+                  data-it="Acquerello" data-ru="Акварель" data-zh="水彩" data-ar="ألوان مائية" data-de="Aquarell"
+                  data-fr="Aquarelle" data-ja="水彩画" data-pt="Aquarela">Acuarela</span></div>
+              <div class="filter-option" data-filter=".charcoal"><span data-es="Carboncillo" data-en="Charcoal"
+                  data-it="Carboncino" data-ru="Уголь" data-zh="木炭画" data-ar="فحم" data-de="Kohlezeichnung"
+                  data-fr="Fusain" data-ja="木炭画" data-pt="Carvão">Carboncillo</span></div>
+              <div class="filter-option" data-filter=".collage"><span data-es="Collage" data-en="Collage"
+                  data-it="Collage" data-ru="Коллаж" data-zh="拼贴" data-ar="كولاج" data-de="Collage" data-fr="Collage"
+                  data-ja="コラージュ" data-pt="Collage">Collage</span></div>
+              <div class="filter-option" data-filter=".engraving"><span data-es="Grabado" data-en="Engraving"
+                  data-it="Incisione" data-ru="Гравюра" data-zh="雕刻" data-ar="نقش" data-de="Gravur" data-fr="Gravure"
+                  data-ja="版画" data-pt="Gravura">Grabado</span></div>
+              <div class="filter-option" data-filter=".acrylic"><span data-es="Acrílico" data-en="Acrylic"
+                  data-it="Acrilico" data-ru="Акрил" data-zh="丙烯" data-ar="أكريليك" data-de="Acryl" data-fr="Acrylique"
+                  data-ja="アクリル画" data-pt="Acrílico">Acrílico</span></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="header-right">
-        <a class="brand" href="../index.html"><img src="../logopazares.png" alt="Logo" style="width: 50px;"></a>
-      </div>
+    </div>
+    <div class="header-right">
+      <a class="brand" href="../index.html"><img src="../logopazares.png" alt="Logo" style="width: 50px;"></a>
+    </div>
     </div>
   </header>
 
@@ -100,17 +127,26 @@
         </div>
       </div>
 
-      <!-- Nomada / Unveiling -->
-      <div class="grid-item spiritual oil">
+      <!-- Nomada / Desvelamiento -->
+      <div class="grid-item spiritual figurative oil">
         <div class="item-content">
-          <a href="../painting/un-veiling/index.html">
-            <img src="un-veiling.jpeg" alt="Unveiling">
+          <a href="../painting/desvelamiento/index.html">
+            <img src="un-veiling.jpeg" alt="Desvelamiento">
+          </a>
+        </div>
+      </div>
+
+      <!-- Revelacion -->
+      <div class="grid-item spiritual figurative oil">
+        <div class="item-content">
+          <a href="../painting/revelacion/index.html">
+            <img src="../painting/revelacion/revelacion.png" alt="Revelacion">
           </a>
         </div>
       </div>
 
       <!-- Aphrodite -->
-      <div class="grid-item spiritual classical">
+      <div class="grid-item spiritual classical figurative nude">
         <div class="item-content">
           <a href="../painting/aphrodite/index.html">
             <img src="afrodita.jpg" alt="Aphrodite">
@@ -128,7 +164,7 @@
       </div>
 
       <!-- Woman's Body -->
-      <div class="grid-item figurative">
+      <div class="grid-item figurative nude charcoal">
         <div class="item-content">
           <a href="../painting/womansbody/index.html">
             <img src="images/womanbody2.jpg" alt="Woman Body">
@@ -146,7 +182,7 @@
       </div>
 
       <!-- God -->
-      <div class="grid-item spiritual classical">
+      <div class="grid-item spiritual classical figurative">
         <div class="item-content">
           <a href="../painting/god/index.html">
             <img src="images/god2.jpg" alt="God">
@@ -236,7 +272,7 @@
       </div>
 
       <!-- Giro femenino -->
-      <div class="grid-item spiritual movement">
+      <div class="grid-item spiritual movement collage oil">
         <div class="item-content">
           <a href="../painting/giro-femenino/index.html">
             <img src="images/mujer_giros.jpg" alt="Giro">
@@ -308,7 +344,7 @@
       </div>
 
       <!-- Violin -->
-      <div class="grid-item spiritual music">
+      <div class="grid-item spiritual figurative oil">
         <div class="item-content">
           <a href="../painting/violin/index.html">
             <img src="images/violin.jpg" alt="Violin">
@@ -357,6 +393,33 @@
         <div class="item-content">
           <a href="../painting/duo-caras/index.html">
             <img src="images/dos caras.jpg" alt="Faces">
+          </a>
+        </div>
+      </div>
+
+      <!-- Retrato Javier -->
+      <div class="grid-item figurative portrait">
+        <div class="item-content">
+          <a href="../painting/retrato-javier/index.html">
+            <img src="../painting/retrato-javier/javier.jpg" alt="Retrato de Javier">
+          </a>
+        </div>
+      </div>
+
+      <!-- Retrato David -->
+      <div class="grid-item figurative portrait">
+        <div class="item-content">
+          <a href="../painting/retrato-david/index.html">
+            <img src="../painting/retrato-david/david.jpg" alt="Retrato de David">
+          </a>
+        </div>
+      </div>
+
+      <!-- Autorretrato -->
+      <div class="grid-item figurative portrait spiritual">
+        <div class="item-content">
+          <a href="../painting/autorretrato/index.html">
+            <img src="../painting/autorretrato/selfportrait.jpg" alt="Autorretrato">
           </a>
         </div>
       </div>

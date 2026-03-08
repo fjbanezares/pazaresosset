@@ -1,623 +1,730 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Flight of Poetry</title>
+  <title>Vuelo de la Poesía - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <select id="language-select" class="custom-select">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
     </select>
   </div>
 
+  <!-- Universe & Gallery Buttons -->
+  <a href="../../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+    <span class="es language">Universo de Paz</span>
+    <span class="en language" style="display:none;">Paz's Universe</span>
+    <span class="it language" style="display:none;">Universo di Paz</span>
+    <span class="ru language" style="display:none;">Вселенная Пас</span>
+    <span class="zh language" style="display:none;">帕斯的宇宙</span>
+    <span class="ar language" style="display:none;">كون باز</span>
+    <span class="de language" style="display:none;">Paz' Universum</span>
+    <span class="fr language" style="display:none;">L'Univers de Paz</span>
+    <span class="ja language" style="display:none;">パースの宇宙</span>
+    <span class="pt language" style="display:none;">O Universo de Paz</span>
+  </a>
 
-  <section class="jumbotron text-center">
+  <a href="../../gallery/index.html" class="gallery-btn">
+    <i class="fas fa-th"></i>
+    <span class="es language">Galería</span>
+    <span class="en language" style="display:none;">Gallery</span>
+    <span class="it language" style="display:none;">Galleria</span>
+    <span class="ru language" style="display:none;">Галерея</span>
+    <span class="zh language" style="display:none;">画廊</span>
+    <span class="ar language" style="display:none;">المعرض</span>
+    <span class="de language" style="display:none;">Galerie</span>
+    <span class="fr language" style="display:none;">Galerie</span>
+    <span class="ja language" style="display:none;">ギャラリー</span>
+    <span class="pt language" style="display:none;">Galeria</span>
+  </a>
+
+  <header class="jumbotron">
     <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
       <h1 class="jumbotron-heading">
-        <div class="english language">Flight of Poetry</div>
-        <div class="spanish language" style="display: none;">Vuelo de la Poesía</div>
-        <div class="italian language" style="display: none;">Volo della Poesia</div>
-        <div class="chinese language" style="display: none;">诗的飞翔</div>
-        <div class="arabic language" style="display: none;">رحلة الشعر</div>
-
+        <span class="es language">Vuelo de la Poesía</span>
+        <span class="en language" style="display:none;">Flight of Poetry</span>
+        <span class="it language" style="display:none;">Volo della Poesia</span>
+        <span class="ru language" style="display:none;">Полет поэзии</span>
+        <span class="zh language" style="display:none;">诗的飞翔</span>
+        <span class="ar language" style="display:none;">رحلة الشعر</span>
+        <span class="de language" style="display:none;">Flug der Poesie</span>
+        <span class="fr language" style="display:none;">Vol de la Poésie</span>
+        <span class="ja language" style="display:none;">詩の飛翔</span>
+        <span class="pt language" style="display:none;">Voo da Poesia</span>
       </h1>
-
-      <div class="lead text-muted">
-        <div class="english language">Eternal Echoes: Where Celestial Meets Terrestrial in the Dance of Poetry.</div>
-        <div class="spanish language" style="display: none;">Ecos Eternos: Donde lo Celestial se Encuentra con lo
-          Terrenal en la
-          Danza de la Poesía.</div>
-        <div class="italian language" style="display: none;">Echi Eterni: Dove il Celestiale Incontra il Terrestre nella
-          Danza
-          della Poesia.</div>
-        <div class="chinese language" style="display: none;">永恒的回声：诗歌的舞蹈中天地相遇。</div>
-        <div class="arabic language" style="display: none;">أصداء أبدية: حيث يلتقي السماوي بالأرضي في رقصة الشعر.</div>
-
-      </div>
-
+      <p class="lead" style="color: var(--gold); opacity: 0.9;">
+        <span class="es language">Ecos Eternos: Donde lo Celestial se Encuentra con lo Terrenal</span>
+        <span class="en language" style="display:none;">Eternal Echoes: Where Celestial Meets Terrestrial</span>
+        <span class="it language" style="display:none;">Echi Eterni: Dove il Celestiale Incontra il Terrestre</span>
+        <span class="ru language" style="display:none;">Вечные отголоски: где небесное встречается с земным</span>
+        <span class="zh language" style="display:none;">永恒的回声：天地交汇之处</span>
+        <span class="ar language" style="display:none;">أصداء أبدية: حيث يلتقي السماوي بالأرضي</span>
+        <span class="de language" style="display:none;">Ewiges Echo: Wo das Himmlische auf das Irdische trifft</span>
+        <span class="fr language" style="display:none;">Échos Éternels : Là où le Céleste rencontre le Terrestre</span>
+        <span class="ja language" style="display:none;">永遠の残響：天上と地上の交差点</span>
+        <span class="pt language" style="display:none;">Ecos Eternos: Onde o Celestial encontra o Terrestre</span>
+      </p>
     </div>
-  </section>
+  </header>
 
+  <main class="container">
+    <section class="main-image-container text-center">
+      <img class="art-image" src="vuelo_de_la_poesia.jpg" alt="Vuelo de la Poesía">
+    </section>
 
+    <!-- Ficha Técnica -->
+    <section class="section-card">
+      <h3 class="text-warning mb-4"><i class="fas fa-info-circle mr-2"></i>
+        <span class="es language">Ficha Técnica</span>
+        <span class="en language" style="display:none;">Technical Sheet</span>
+        <span class="it language" style="display:none;">Scheda Tecnica</span>
+        <span class="ru language" style="display:none;">Техническая карта</span>
+        <span class="zh language" style="display:none;">技术参数</span>
+        <span class="ar language" style="display:none;">ورقة البيانات التقنية</span>
+        <span class="de language" style="display:none;">Technisches Datenblatt</span>
+        <span class="fr language" style="display:none;">Fiche technique</span>
+        <span class="ja language" style="display:none;">テクニカルデータ</span>
+        <span class="pt language" style="display:none;">Ficha Técnica</span>
+      </h3>
+      <ul class="tech-list">
+        <li><i class="fas fa-paint-brush"></i>
+          <span class="es language"><strong>Técnica:</strong> Collage con piezas de madera y óleo sobre acrílico</span>
+          <span class="en language" style="display:none;"><strong>Technique:</strong> Collage with wooden pieces and oil
+            on acrylic</span>
+          <span class="it language" style="display:none;"><strong>Tecnica:</strong> Collage con pezzi di legno e olio su
+            acrilico</span>
+          <span class="ru language" style="display:none;"><strong>Техника:</strong> Коллаж с деревянными деталями и
+            маслом на акриле</span>
+          <span class="zh language" style="display:none;"><strong>技法：</strong>木片拼贴，丙烯油画</span>
+          <span class="ar language" style="display:none;"><strong>التقنية:</strong> كولاج بقطع خشبية وزيت على
+            أكريليك</span>
+          <span class="de language" style="display:none;"><strong>Technik:</strong> Collage mit Holzstücken und Öl auf
+            Acryl</span>
+          <span class="fr language" style="display:none;"><strong>Technique :</strong> Collage avec pièces de bois et
+            huile sur acrylique</span>
+          <span class="ja language" style="display:none;"><strong>技法：</strong>木片コラージュ、アクリル油彩</span>
+          <span class="pt language" style="display:none;"><strong>Técnica:</strong> Collage com peças de madeira e óleo
+            sobre acrílico</span>
+        </li>
+        <li><i class="fas fa-expand-arrows-alt"></i>
+          <span class="es language"><strong>Tamaño:</strong> Diámetro 111 cm</span>
+          <span class="en language" style="display:none;"><strong>Size:</strong> Diameter 111 cm</span>
+          <span class="it language" style="display:none;"><strong>Dimensioni:</strong> Diametro 111 cm</span>
+          <span class="ru language" style="display:none;"><strong>Размер:</strong> Диаметр 111 см</span>
+          <span class="zh language" style="display:none;"><strong>尺寸：</strong>直径111厘米</span>
+          <span class="ar language" style="display:none;"><strong>الحجم:</strong> قطر 111 سم</span>
+          <span class="de language" style="display:none;"><strong>Größe:</strong> 111 cm Durchmesser</span>
+          <span class="fr language" style="display:none;"><strong>Taille :</strong> Diamètre 111 cm</span>
+          <span class="ja language" style="display:none;"><strong>サイズ：</strong>直径111 cm</span>
+          <span class="pt language" style="display:none;"><strong>Tamanho:</strong> Diâmetro 111 cm</span>
+        </li>
+        <li><i class="fas fa-university"></i>
+          <span class="es language"><strong>Lugar de Creación:</strong> Facultad de Bellas Artes en Madrid</span>
+          <span class="en language" style="display:none;"><strong>Creation Place:</strong> Faculty of Fine Arts in
+            Madrid</span>
+          <span class="it language" style="display:none;"><strong>Luogo di Creazione:</strong> Accademia di Belle Arti
+            di Madrid</span>
+          <span class="ru language" style="display:none;"><strong>Место создания:</strong> Факультет изящных искусств в
+            Мадриде</span>
+          <span class="zh language" style="display:none;"><strong>创作地点：</strong>马德里美术学院</span>
+          <span class="ar language" style="display:none;"><strong>مكان الإنشاء:</strong> كلية الفنون الجميلة في
+            مدريد</span>
+          <span class="de language" style="display:none;"><strong>Entstehungsort:</strong> Fakultät für Schöne Künste in
+            Madrid</span>
+          <span class="fr language" style="display:none;"><strong>Lieu de création :</strong> Faculté des Beaux-Arts de
+            Madrid</span>
+          <span class="ja language" style="display:none;"><strong>創作場所：</strong>マドリード美術学部</span>
+          <span class="pt language" style="display:none;"><strong>Lugar de Criação:</strong> Faculdade de Belas Artes de
+            Madrid</span>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i>
+          <span class="es language"><strong>Ubicación Actual:</strong> Colección en Madrid</span>
+          <span class="en language" style="display:none;"><strong>Current Location:</strong> Private Collection in
+            Madrid</span>
+          <span class="it language" style="display:none;"><strong>Ubicazione Attuale:</strong> Collezione privata a
+            Madrid</span>
+          <span class="ru language" style="display:none;"><strong>Текущее положение:</strong> Частная коллекция в
+            Мадриде</span>
+          <span class="zh language" style="display:none;"><strong>当前位置：</strong>马德里私人收藏</span>
+          <span class="ar language" style="display:none;"><strong>الموقع الحالي:</strong> مجموعة خاصة في مدريد</span>
+          <span class="de language" style="display:none;"><strong>Aktueller Standort:</strong> Privatsammlung in
+            Madrid</span>
+          <span class="fr language" style="display:none;"><strong>Emplacement actuel :</strong> Collection privée à
+            Madrid</span>
+          <span class="ja language" style="display:none;"><strong>現在の場所：</strong>マドリードの個人蔵</span>
+          <span class="pt language" style="display:none;"><strong>Localização Atual:</strong> Coleção particular em
+            Madrid</span>
+        </li>
+      </ul>
+    </section>
 
-  <section class="main-image">
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
-          <img class="zoom-image" src="vuelo_de_la_poesia.jpg" width="100%" style="border:30px solid white;"
-            alt="Amazing">
+    <!-- El Poema en las Maderitas -->
+    <section class="section-card text-center">
+      <h3 class="text-warning mb-4"><i class="fas fa-feather-alt mr-2"></i>
+        <span class="es language">El Poema en las Maderitas</span>
+        <span class="en language" style="display:none;">The Poem on Wood Pieces</span>
+        <span class="it language" style="display:none;">Il Poema sui Pezzetti di Legno</span>
+        <span class="ru language" style="display:none;">Поэма на деревянных дощечках</span>
+        <span class="zh language" style="display:none;">木片上的诗</span>
+        <span class="ar language" style="display:none;">القصيدة على قطع الخشب</span>
+        <span class="de language" style="display:none;">Das Gedicht auf Holzstücken</span>
+        <span class="fr language" style="display:none;">Le Poème sur des pièces de bois</span>
+        <span class="ja language" style="display:none;">木の断片に記された詩</span>
+        <span class="pt language" style="display:none;">O Poema em pedaços de madeira</span>
+      </h3>
+      <div class="poem-container">
+
+        <div class="es language">
+          <div class="poem-line">Me preguntas si te quiero</div>
+          <div class="poem-line">¿Qué te puedo contestar?</div>
+          <div class="poem-line">Pregúntaselo a la luna</div>
+          <div class="poem-line">que alumbra en la inmensidad.</div>
+          <div class="poem-line">Pregúntaselo a la encina</div>
+          <div class="poem-line">que sola en el campo está.</div>
+          <div class="poem-line">Al bosquecillo escondido</div>
+          <div class="poem-line">o al río en su caminar.</div>
+          <div class="poem-line">¿Qué te importan las palabras</div>
+          <div class="poem-line">cuando segura tú estás?</div>
+          <div class="poem-line">¡Que nadie así te ha querido</div>
+          <div class="poem-line">y nadie así te querrá!</div>
         </div>
-      </div>
-    </div>
 
-
-
-
-  </section>
-  <!-- Rest of the HTML here... -->
-
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>
-              <div class="english language">Technique: Collage with wooden pieces and oil on acrylic.</div>
-              <div class="spanish language" style="display: none;">Técnica: Collage con piezas de madera y óleo sobre
-                acrílico.</div>
-              <div class="italian language" style="display: none;">Tecnica: Collage con pezzi di legno e olio su
-                acrilico.</div>
-              <div class="chinese language" style="display: none;">技术：木片拼贴和丙烯酸油画.</div>
-              <div class="arabic language" style="display: none;">تقنية: كولاج بقطع خشبية وزيت على أكريليك.</div>
-
-            </li>
-
-
-            <li>
-              <div class="english language">Size: Diameter 111 cm</div>
-              <div class="spanish language" style="display: none;">Tamaño: Diámetro 111 cm</div>
-              <div class="italian language" style="display: none;">Dimensioni: Diametro 111 cm</div>
-              <div class="chinese language" style="display: none;">尺寸：直径111厘米</div>
-              <div class="arabic language" style="display: none;">الحجم: قطر 111 سم</div>
-
-
-            </li>
-            <li>
-              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
-              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
-              </div>
-              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
-              </div>
-              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
-              <div class="arabic language" style="display: none;">مكان الإبداع: كلية الفنون الجميلة في مدريد</div>
-
-            </li>
-            <li>
-              <div class="english language">Current Location: Private Collection Madrid</div>
-              <div class="spanish language" style="display: none;">Ubicación Actual: Colección en Madrid</div>
-              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid</div>
-              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏</div>
-              <div class="arabic language" style="display: none;">الموقع الحالي: مجموعة في مدريد</div>
-
-            </li>
-
-          </ul>
-
-
+        <div class="en language" style="display:none;">
+          <div class="poem-line">You ask me if I love you</div>
+          <div class="poem-line">What can I answer you?</div>
+          <div class="poem-line">Ask the moon</div>
+          <div class="poem-line">that shines in the immensity.</div>
+          <div class="poem-line">Ask the oak tree</div>
+          <div class="poem-line">that stands alone in the field.</div>
+          <div class="poem-line">Ask the hidden grove</div>
+          <div class="poem-line">or the river in its journey.</div>
+          <div class="poem-line">What do words matter to you</div>
+          <div class="poem-line">when you are so sure?</div>
+          <div class="poem-line">No one has loved you like this</div>
+          <div class="poem-line">and no one ever will!</div>
         </div>
-        <div class="col-6 md audio" style="display:none;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
+
+        <div class="it language" style="display:none;">
+          <div class="poem-line">Mi chiedi se ti amo</div>
+          <div class="poem-line">Cosa posso risponderti?</div>
+          <div class="poem-line">Chiedilo alla luna</div>
+          <div class="poem-line">che illumina l'immensità.</div>
+          <div class="poem-line">Chiedilo al leccio</div>
+          <div class="poem-line">che solo nel campo sta.</div>
+          <div class="poem-line">Al boschetto nascosto</div>
+          <div class="poem-line">o al fiume nel suo cammino.</div>
+          <div class="poem-line">Cosa ti importano le parole</div>
+          <div class="poem-line">quando sei così sicura?</div>
+          <div class="poem-line">Perché nessuno ti ha mai amata così</div>
+          <div class="poem-line">e nessuno mai ti amerà!</div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="multilingual-description">
-    <div class="container">
-      <h1 style="color: gold;">
-        <div class="english language">Description</div>
-        <div class="spanish language" style="display: none;">Descripción</div>
-        <div class="italian language" style="display: none;">Descrizione</div>
-        <div class="chinese language" style="display: none;">描述</div>
-        <div class="arabic language" style="display: none;">وصف</div>
-      </h1>
-
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>You ask me if I love you</p>
-          <p>What can I answer?</p>
-          <br>
-          <p>Ask the moon</p>
-          <p>that illuminates the vastness.</p>
-          <br>
-          <p>Ask the oak</p>
-          <p>that stands alone in the field.</p>
-          <br>
-          <p>To the hidden grove</p>
-          <p>or to the river in its course.</p>
-          <br>
-
-          <p>Why do words matter</p>
-          <p>when you are certain?</p>
-          <br>
-
-          <p>No one has loved you like this</p>
-          <p>and no one ever will!</p>
+        <div class="ru language" style="display:none;">
+          <div class="poem-line">Ты спрашиваешь, люблю ли я тебя</div>
+          <div class="poem-line">Что я могу тебе ответить?</div>
+          <div class="poem-line">Спроси у луны</div>
+          <div class="poem-line">что светит в безбрежности.</div>
+          <div class="poem-line">Спроси у дуба</div>
+          <div class="poem-line">что одиноко стоит в поле.</div>
+          <div class="poem-line">У скрытой рощи</div>
+          <div class="poem-line">или у реки в её течении.</div>
+          <div class="poem-line">Зачем тебе слова</div>
+          <div class="poem-line">если ты так уверена?</div>
+          <div class="poem-line">Ведь никто так тебя не любил</div>
+          <div class="poem-line">и никто никогда не полюбит!</div>
         </div>
-        <br>
 
-        <p>From the first glance at "Flight of Poetry," one is instantly captivated, taken on a journey that crosses the
-          borders
-          between the earthly and the divine. María Paz Arés Osset, with her inclination toward circular forms, envelops
-          us in
-          an ethereal embrace and whispers secrets of the cosmos.</p>
-
-        <p>The choice of the circle, a shape with no beginning or end, is not random; it is a clear symbol of perpetuity
-          and the
-          continuous flow of the universe. María Paz demonstrates with it a keen affinity and understanding of Eastern
-          conceptions of the universe and life.</p>
-
-        <p>Imagine standing in front of a clean, warm, and welcoming wooden circle. In its center, thin logs rise like
-          towers of
-          an ancient city, and on them, with the delicacy and depth of ink, a poetry shines. "You ask me if I love you,
-          What can
-          I answer?". Each verse of this poetry, which glides down the wood, is like a river of emotions that overflows,
-          and you
-          find yourself swimming in its deep waters, seeking answers in the moon, in the oak, and in the hidden grove.
-        </p>
-
-        <p>The wooden base, sturdy and earthly, serves as a canvas where the amorous poetry stands as the soul of the
-          work. This
-          collage of thin logs in the center becomes a sort of pulpit from which poetry declares its essence. The choice
-          of ink
-          adds depth, an evocation of ancient traditions and the permanence of writing through the centuries.</p>
-
-        <p>The game of photocopies of woods is clever and brilliant. Ah! That illusion, where for an instant it deceives
-          us,
-          making us believe that what we see is what really is. But María Paz challenges us, tells us to look closer, to
-          question our perception.</p>
-
-        <p>But wait! There's more. A mirror writing unfolds whimsically over the logs. "Ask the moon that illuminates
-          the
-          vastness." Is that not what Alice found in Wonderland? An inverted reality that required a mirror to be
-          understood.
-          And here, in this act, María Paz invites us to be like Alice, to look through the mirror and discover the
-          magic that
-          hides in reflection. This play of perceptions, where the real and the illusory get confused, is a challenge to
-          the
-          viewer to question their own reality and the limits of their perception.</p>
-
-        <p>The incorporation of mirror writing is, in my opinion, the masterful touch of this work. It is a clear nod to
-          "Alice
-          in Wonderland," inviting us to go beyond the limits of our reality, to see beyond the obvious, and to discover
-          the
-          hidden universe behind reflections. This choice also suggests that love, like poetry, has multiple faces and
-          perspectives, and that only those willing to look beyond will capture its true essence.</p>
-
-        <p>And just when you think you have understood the work, the gold envelops you. That bright and radiant gold,
-          reminiscent of the glorious Byzantine churches, like a halo that surrounds the entire work. Ah, poetry! As
-          María Paz
-          rightly identifies, "No one has loved you like this and no one ever will," it is that divine glow that, like
-          gold,
-          connects us with the eternal.</p>
-
-        <p>"Flight of Poetry" is not merely a work of art; it's an experience, a chant of eternal love, a door to
-          another
-          dimension where the earthly meets the divine. It is a testimony that poetry, and the love it embodies, knows
-          no
-          finitude. And as long as we are willing to look beyond, we will always find poetry in the eternal flight of
-          the
-          universe.</p>
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Me preguntas si te quiero</p>
-          <p>¿Qué te puedo contestar?</p>
-          <br>
-          <p>Pregúntaselo a la luna</p>
-          <p>que alumbra en la inmensidad.</p>
-          <br>
-          <p>Pregúntaselo a la encina</p>
-          <p>que sola en el campo está.</p>
-          <br>
-          <p>Al bosquecillo escondido</p>
-          <p>o al río en su caminar.</p>
-          <br>
-          <p>¿Qué te importan las palabras</p>
-          <p>cuando segura tù estás?</p>
-          <br>
-          <p>¡Qué nadie así te ha querido</p>
-          <p>y nadie así te querrá!</p>
+        <div class="zh language" style="display:none;">
+          <div class="poem-line">你问我是否爱你</div>
+          <div class="poem-line">我能回答你什么？</div>
+          <div class="poem-line">去问月亮</div>
+          <div class="poem-line">照亮广阔的月亮。</div>
+          <div class="poem-line">去问橡树</div>
+          <div class="poem-line">独自站在田野中。</div>
+          <div class="poem-line">去问隐藏的小树林</div>
+          <div class="poem-line">或河流在其过程中。</div>
+          <div class="poem-line">为什么话语对你重要</div>
+          <div class="poem-line">当你如此确信？</div>
+          <div class="poem-line">没有人像这样爱过你</div>
+          <div class="poem-line">也没有人会这样爱你！</div>
         </div>
-        <br>
 
-        <p>Desde el primer vistazo a "Vuelo de la Poesía", uno es instantáneamente cautivado, llevado en un viaje que
-          cruza las
-          fronteras entre lo terrenal y lo divino. María Paz Arés Osset, con su inclinación hacia las formas circulares,
-          nos
-          envuelve en un abrazo etéreo y nos susurra secretos del cosmos.</p>
+        <div class="ar language" style="display:none;">
+          <div class="poem-line">تسألني إذا كنت أحبك</div>
+          <div class="poem-line">ماذا يمكنني أن أجيبك؟</div>
+          <div class="poem-line">اسأل القمر</div>
+          <div class="poem-line">الذي يضيء بالفسحة.</div>
+          <div class="poem-line">اسأل شجرة البلوط</div>
+          <div class="poem-line">التي تقف وحيدة في الحقل.</div>
+          <div class="poem-line">إلى الحقل المختبئ</div>
+          <div class="poem-line">أو إلى النهر في مساره.</div>
+          <div class="poem-line">لماذا تهمك الكلمات</div>
+          <div class="poem-line">وأنتِ متيقنة؟</div>
+          <div class="poem-line">لم يحبك أحد هكذا</div>
+          <div class="poem-line">ولن يحبك أحد أبدًا!</div>
+        </div>
 
-        <p>La elección del círculo, una figura sin principio ni fin, no es aleatoria; es un claro símbolo de la
-          perpetuidad y el
-          continuo flujo del universo. María Paz demuestra con ello una afinidad y comprensión aguda de las concepciones
-          orientales del universo y la vida.
-        </p>
+        <div class="de language" style="display:none;">
+          <div class="poem-line">Du fragst mich, ob ich dich liebe</div>
+          <div class="poem-line">Was kann ich dir antworten?</div>
+          <div class="poem-line">Frag den Mond</div>
+          <div class="poem-line">der die Unermesslichkeit erhellt.</div>
+          <div class="poem-line">Frag die Eiche</div>
+          <div class="poem-line">die allein auf dem Feld steht.</div>
+          <div class="poem-line">Den verborgenen Hain</div>
+          <div class="poem-line">oder den Fluss auf seinem Lauf.</div>
+          <div class="poem-line">Was zählen Worte für dich</div>
+          <div class="poem-line">wenn du dir so sicher bist?</div>
+          <div class="poem-line">Niemand hat dich so geliebt</div>
+          <div class="poem-line">und niemand wird es je tun!</div>
+        </div>
 
+        <div class="fr language" style="display:none;">
+          <div class="poem-line">Tu me demandes si je t'aime</div>
+          <div class="poem-line">Que puis-je te répondre ?</div>
+          <div class="poem-line">Demande-le à la lune</div>
+          <div class="poem-line">qui éclaire l'immensité.</div>
+          <div class="poem-line">Demande-le au chêne</div>
+          <div class="poem-line">qui se tient seul dans le champ.</div>
+          <div class="poem-line">Au petit bois caché</div>
+          <div class="poem-line">ou à la rivière dans sa course.</div>
+          <div class="poem-line">Que t'importent les mots</div>
+          <div class="poem-line">quand tu es si certaine ?</div>
+          <div class="poem-line">Personne ne t'a aimée ainsi</div>
+          <div class="poem-line">et personne ne t'aimera jamais !</div>
+        </div>
 
-        <p>Imagine estar parado frente a un círculo de madera pulcra, cálido y acogedor. En su centro, troncos finos se
-          elevan como
-          torres de una ciudad ancestral, y en ellos, con la delicadeza y profundidad de la tinta china, resplandece una
-          poesía.
-          "Me preguntas si te quiero, ¿Qué te puedo contestar?". Cada verso de esta poesía, que se desliza por la
-          madera, es como
-          un río de emociones que se desborda, y te encuentras nadando en sus aguas profundas, buscando respuestas en la
-          luna, en
-          la encina y en el bosque escondido.</p>
+        <div class="ja language" style="display:none;">
+          <div class="poem-line">私を愛しているかと問うのなら</div>
+          <div class="poem-line">私は何と答えよう？</div>
+          <div class="poem-line">月に聞いてみて</div>
+          <div class="poem-line">広大さを照らす月に。</div>
+          <div class="poem-line">樫の木に聞いてみて</div>
+          <div class="poem-line">野原にぽつんと立つ樫に。</div>
+          <div class="poem-line">隠れた木立に</div>
+          <div class="poem-line">あるいは流れゆく川に。</div>
+          <div class="poem-line">言葉など何になろう</div>
+          <div class="poem-line">あなたが確信しているのなら。</div>
+          <div class="poem-line">誰もあなたをこれほど愛さなかった</div>
+          <div class="poem-line">そしてこれからも誰もいないでしょう！</div>
+        </div>
 
-        <p>La base de madera, robusta y terrenal, sirve como lienzo donde la poesía amorosa se erige como el alma de la
-          obra. Este
-          collage de troncos finos en el centro se convierte en una suerte de púlpito desde donde la poesía declama su
-          esencia. La
-          elección de la tinta china añade profundidad, una evocación a antiguas tradiciones y la permanencia de la
-          escritura a
-          través de los siglos.</p>
-
-        <p>El juego de las fotocopias de maderas es astuto y brillante. ¡Ah! Esa ilusión, donde por un instante nos
-          engaña,
-          haciéndonos creer que lo que vemos es lo que realmente es. Pero María Paz nos reta, nos dice que miremos más
-          de cerca,
-          que cuestionemos nuestra percepción.
-        </p>
-
-        <p>Pero, ¡espera! Hay algo más. Una escritura en espejo que se despliega caprichosamente sobre los troncos.
-          "Pregúntaselo a
-          la luna que alumbra en la inmensidad". ¿No es eso lo que Alicia encontró en el País de las Maravillas? Una
-          realidad
-          invertida que requería un espejo para ser comprendida. Y aquí, en este acto, María Paz nos invita a ser como
-          Alicia, a
-          mirar a través del espejo y descubrir la magia que se oculta en el reflejo. Este juego de percepciones, donde
-          lo real y
-          lo ilusorio se confunden, es un desafío al espectador para que cuestione su propia realidad y los límites de
-          su
-          percepción.</p>
-
-        <p>La incorporación de la escritura en espejo es, en mi opinión, el toque magistral de esta obra. Es un claro
-          guiño a
-          "Alicia en el País de las Maravillas", invitándonos a traspasar los límites de nuestra realidad, a ver más
-          allá de lo
-          obvio y a descubrir el universo escondido que se oculta detrás de los reflejos. Esta elección también sugiere
-          que el
-          amor, al igual que la poesía, tiene múltiples caras y perspectivas, y que solo aquellos dispuestos a mirar más
-          allá
-          podrán captar su verdadera esencia.</p>
-
-        <p>Y justo cuando piensas que has comprendido la obra, el dorado te envuelve. Ese brillante y radiante dorado,
-          reminiscente
-          de las gloriosas iglesias bizantinas, como un halo que circunda toda la obra. ¡Ah, la poesía! Como bien lo
-          identifica
-          María Paz, "¡Qué nadie así te ha querido y nadie así te querrá!", es ese resplandor divino que, al igual que
-          el dorado,
-          nos conecta con lo eterno.</p>
-
-        <p>"Vuelo de la Poesía" no es simplemente una obra de arte; es una experiencia, un canto de amor eterno, una
-          puerta a otra
-          dimensión donde lo terrenal se encuentra con lo divino. Es un testimonio de que la poesía, y el amor que
-          encarna, no
-          conoce de finitud. Y mientras estemos dispuestos a mirar más allá, siempre encontraremos poesía en el vuelo
-          eterno del
-          universo.</p>
+        <div class="pt language" style="display:none;">
+          <div class="poem-line">Perguntas-me se te quero</div>
+          <div class="poem-line">O que te posso responder?</div>
+          <div class="poem-line">Pergunta à lua</div>
+          <div class="poem-line">que ilumina na imensidão.</div>
+          <div class="poem-line">Pergunta à azinheira</div>
+          <div class="poem-line">que sozinha no campo está.</div>
+          <div class="poem-line">Ao bosque escondido</div>
+          <div class="poem-line">ou ao rio no seu caminhar.</div>
+          <div class="poem-line">Que te importam as palavras</div>
+          <div class="poem-line">quando segura tu estás?</div>
+          <div class="poem-line">Que ninguém assim te amou</div>
+          <div class="poem-line">e ninguém assim te amará!</div>
+        </div>
 
       </div>
+    </section>
 
+    <!-- Análisis Crítico - FULL TRANSLATIONS FOR ALL LANGUAGES -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-feather-alt mr-2"></i>
+        <span class="es language">Análisis Crítico</span>
+        <span class="en language" style="display:none;">Critical Analysis</span>
+        <span class="it language" style="display:none;">Analisi Critica</span>
+        <span class="ru language" style="display:none;">Критический анализ</span>
+        <span class="zh language" style="display:none;">批判性分析</span>
+        <span class="ar language" style="display:none;">التحليل النقدي</span>
+        <span class="de language" style="display:none;">Kritische Analyse</span>
+        <span class="fr language" style="display:none;">Analyse Critique</span>
+        <span class="ja language" style="display:none;">批評的分析</span>
+        <span class="pt language" style="display:none;">Análise Crítica</span>
+      </h2>
+      <div class="description-text">
 
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Mi chiedi se ti amo</p>
-          <p>Cosa posso rispondere?</p>
-          <br>
-          <p>Chiedilo alla luna</p>
-          <p>che illumina l'immensità.</p>
-          <br>
-          <p>Chiedilo alla quercia</p>
-          <p>che sta sola nel campo.</p>
-          <br>
-          <p>Al boschetto nascosto</p>
-          <p>o al fiume nel suo corso.</p>
-          <br>
-          <p>Perché importano le parole</p>
-          <p>quando sei certa?</p>
-          <br>
-          <p>Nessuno ti ha mai amato così</p>
-          <p>e nessuno mai ti amerà!</p>
-        </div>
-        <br>
-
-        <p>Dal primo sguardo a "Volo della Poesia", si è immediatamente catturati, portati in un viaggio che
-          attraversa le
-          frontiere tra il terreno e il divino. María Paz Arés Osset, con la sua inclinazione verso le forme circolari,
-          ci
-          avvolge in un abbraccio etereo e ci sussurra segreti del cosmo.</p>
-
-        <p>La scelta del cerchio, una figura senza inizio né fine, non è casuale; è un chiaro simbolo della
-          perpetuità e del
-          flusso continuo dell'universo. María Paz dimostra con ciò un'affinità e una comprensione acuta delle
-          concezioni
-          orientali dell'universo e della vita.
-        </p>
-
-        <p>Immagina di stare di fronte a un cerchio di legno lucido, caldo e accogliente. Al suo centro, sottili tronchi
-          si
-          innalzano come
-          torri di una città antica, e su di essi, con la delicatezza e la profondità dell'inchiostro cinese, risplende
-          una
-          poesia.
-          "Mi chiedi se ti amo, cosa posso rispondere?". Ogni verso di questa poesia, che scorre sul legno, è come
-          un fiume di emozioni che trabocca, e ti ritrovi a nuotare nelle sue acque profonde, cercando risposte nella
-          luna,
-          nell'
-          encina e nel bosco nascosto.</p>
-
-        <p>La base di legno, robusta e terrena, funge da tela dove la poesia amorosa si erge come l'anima dell'
-          opera. Questo
-          collage di sottili tronchi al centro diventa una sorta di pulpito da cui la poesia declama la sua
-          essenza. La
-          scelta dell'inchiostro cinese aggiunge profondità, un'evocazione di antiche tradizioni e la permanenza della
-          scrittura
-          attraverso i secoli.</p>
-
-        <p>Il gioco delle fotocopie di legni è astuto e brillante. Ah! Quell'illusione, dove per un istante ci
-          inganna,
-          facendoci credere che ciò che vediamo sia ciò che realmente è. Ma María Paz ci sfida, ci dice di guardare più
-          da vicino,
-          di mettere in discussione la nostra percezione.
-        </p>
-
-        <p>Ma, aspetta! C'è qualcosa in più. Una scrittura in specchio che si dispiega capricciosamente sui tronchi.
-          "Chiedilo alla
-          luna che illumina nell'immensità". Non è questo ciò che Alice ha trovato nel Paese delle Meraviglie? Una
-          realtà
-          invertita che richiedeva uno specchio per essere compresa. E qui, in questo atto, María Paz ci invita ad
-          essere come
-          Alice, a
-          guardare attraverso lo specchio e scoprire la magia nascosta nel riflesso. Questo gioco di percezioni, dove
-          il reale e
-          l'illusorio si confondono, è una sfida allo spettatore per mettere in dubbio la propria realtà e i limiti
-          della
-          sua
-          percezione.</p>
-
-        <p>L'integrazione della scrittura in specchio è, a mio parere, il tocco magistrale di quest'opera. È un chiaro
-          cenno a
-          "Alice nel Paese delle Meraviglie", invitandoci a superare i confini della nostra realtà, a vedere oltre
-          l'ovvio e a scoprire l'universo nascosto che si cela dietro i riflessi. Questa scelta suggerisce anche
-          che l'
-          amore, come la poesia, ha molteplici facce e prospettive, e che solo chi è disposto a guardare oltre
-          potrà coglierne l'essenza vera.</p>
-
-        <p>E proprio quando pensi di aver compreso l'opera, l'oro ti avvolge. Quel brillante e radiante oro,
-          reminiscenza
-          delle gloriose chiese bizantine, come un alone che circonda tutta l'opera. Ah, la poesia! Come bene la
-          identifica
-          María Paz, "Nessuno ti ha amato così e nessuno ti amerà così!", è quel bagliore divino che, come l'oro,
-          ci collega con l'eterno.</p>
-
-        <p>"Volo della Poesia" non è semplicemente un'opera d'arte; è un'esperienza, un canto d'amore eterno, una
-          porta verso un'altra
-          dimensione dove il terreno incontra il divino. È una testimonianza che la poesia, e l'amore che
-          incarna, non
-          conosce fine. E finché saremo disposti a guardare oltre, troveremo sempre poesia nel volo
-          eterno dell'universo.</p>
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>你问我是否爱你</p>
-          <p>我能回答什么？</p>
-          <br>
-          <p>去问月亮</p>
-          <p>照亮广阔的月亮。</p>
-          <br>
-          <p>去问橡树</p>
-          <p>独自站在田野中。</p>
-          <br>
-          <p>去问隐藏的小树林</p>
-          <p>或河流在其过程中。</p>
-          <br>
-          <p>为什么话语重要</p>
-          <p>当你是确定的？</p>
-          <br>
-          <p>没有人像这样爱过你</p>
-          <p>也没有人会这样爱你！</p>
-        </div>
-        <br>
-
-        <p>从第一眼看到“诗的飞翔”，人就会立刻被迷住，带入一段穿越尘世与神圣之间边界的旅程。María Paz Arés Osset偏爱圆形，
-          她以此包围我们，给我们带来空灵的拥抱，并低语宇宙的秘密。</p>
-
-        <p>选择圆形，一个没有开始也没有结束的图形，并非偶然；它是永恒与宇宙持续流动的明显象征。María Paz通过此表达出她对东方宇宙和生命观念的深刻理解和亲近。
-        </p>
-
-        <p>想象一下，你站在一个光滑、温暖、舒适的木质圆圈前。在它的中心，细长的树干犹如古城的塔楼高耸，
-          其上用中国墨水的细腻和深邃，绽放着一首诗。“你问我是否爱你，我该如何回答？”。这首诗的每一行，随着木头的纹理流淌，宛如情感的河流溢出，你在其中游泳，深处的水域中寻找着月亮、橡树和隐藏的森林里的答案。</p>
-
-        <p>坚实而朴实的木质基座，作为爱情诗歌展现的画布，成为作品的灵魂。
-          中央的细长树干拼贴，仿佛一个讲坛，诗歌在此吟唱其精髓。选择中国墨水增添了深度，唤起古老传统的回响，以及文字通过世纪的持久性。</p>
-
-        <p>木材复印的妙用聪明且灿烂。啊！那错觉，让我们一瞬间相信所见即为真实。但María Paz挑战我们，要求我们更仔细地观察，质疑我们的感知。
-        </p>
-
-        <p>但是，等等！还有更多。在树干上随意展开的镜像文字。
-          “询问在广阔中照亮的月亮”。这不正是爱丽丝在仙境中发现的吗？一种需要镜子才能理解的颠倒现实。在此，María
-          Paz邀请我们像爱丽丝一样，透过镜子观察，发现隐藏在反射中的魔法。这种现实与幻觉交织的感知游戏，挑战观众质疑自己的现实和感知的界限。</p>
-
-        <p>
-          我认为，加入镜像文字是这件作品的巧妙之处。它明显是对《爱丽丝梦游仙境》的致敬，邀请我们超越现实界限，看到显而易见之外，发现隐藏在反射后的宇宙。这个选择也暗示，爱情和诗歌一样，有多种面貌和视角，只有那些愿意深入探索的人，才能领会其真实的精髓。
-        </p>
-
-        <p>正当你以为已经理解了作品，金色的光环将你包围。那闪耀而灿烂的金色，
-          让人想起辉煌的拜占庭教堂，如同环绕整个作品的光环。啊，诗歌！正如María Paz所指出的，“没有人这样爱过你，也不会有人这样爱你！”就是那神圣的光辉，像金色一样，将我们与永恒相连。</p>
-
-        <p>“诗的飞翔”不仅仅是一件艺术作品；它是一次体验，一首永恒的爱歌，一扇通往另一个维度的门，尘世与神圣相遇。它证明了诗歌和它所承载的爱情不受时间限制。只要我们愿意深入探索，就总能在宇宙永恒的飞翔中找到诗歌。</p>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>تسألني إذا كنت أحبك</p>
-          <p>ماذا يمكنني أن أجيب؟</p>
-          <br>
-          <p>اسأل القمر</p>
-          <p>الذي يضيء الفسحة.</p>
-          <br>
-          <p>اسأل البلوط</p>
-          <p>الذي يقف وحيدًا في الحقل.</p>
-          <br>
-          <p>إلى الحقل المخفي</p>
-          <p>أو إلى النهر في مجراه.</p>
-          <br>
-
-          <p>لماذا تهم الكلمات</p>
-          <p>عندما تكون متأكدًا؟</p>
-          <br>
-
-          <p>لم يحبك أحد مثل هذا</p>
-          <p>ولن يحبك أحد أبدًا!</p>
-
+        <!-- Spanish (Source) -->
+        <div class="es language">
+          <p>Desde el primer vistazo a <strong>"Vuelo de la Poesía"</strong>, uno es instantáneamente cautivado, llevado
+            en un viaje que cruza las fronteras entre lo terrenal y lo divino. María Paz Arés Osset, con su inclinación
+            hacia las formas circulares, nos envuelve en un abrazo etéreo y nos susurra secretos del cosmos.</p>
+          <p>La elección del círculo, una figura sin principio ni fin, no es aleatoria; es un claro símbolo de la
+            perpetuidad y el continuo flujo del universo. María Paz demuestra con ello una afinidad y comprensión aguda
+            de las concepciones orientales del universo y la vida.</p>
+          <p>Imagine estar parado frente a un círculo de madera pulcra, cálido y acogedor. En su centro, troncos finos
+            se elevan como torres de una ciudad ancestral, y en ellos, con la delicadeza y profundidad de la tinta
+            china, resplandece una poesía. <em>"Me preguntas si te quiero, ¿Qué te puedo contestar?"</em>. Cada verso de
+            esta poesía, que se desliza por la madera, es como un río de emociones que se desborda, y te encuentras
+            nadando en sus aguas profundas, buscando respuestas en la luna, en la encina y en el bosque escondido.</p>
+          <p>La base de madera, robusta y terrenal, sirve como lienzo donde la poesía amorosa se erige como el alma de
+            la obra. Este collage de troncos finos en el centro se convierte en una suerte de púlpito desde donde la
+            poesía declama su esencia. La elección de la tinta china añade profundidad, una evocación a antiguas
+            tradiciones y la permanencia de la escritura a través de los siglos.</p>
+          <p>El juego de las fotocopias de maderas es astuto y brillante. ¡Ah! Esa ilusión, donde por un instante nos
+            engaña, haciéndonos creer que lo que vemos es lo que realmente es. Pero María Paz nos reta, nos dice que
+            miremos más de cerca, que cuestionemos nuestra percepción.</p>
+          <p>Pero, ¡espera! Hay algo más. Una escritura en espejo que se despliega caprichosamente sobre los troncos.
+            <em>"Pregúntaselo a la luna que alumbra en la inmensidad"</em>. ¿No es eso lo que Alicia encontró en el País
+            de las Maravillas? Una realidad invertida que requería un espejo para ser comprendida. Y aquí, en este acto,
+            María Paz nos invita a ser como Alicia, a mirar a través del espejo y descubrir la magia que se oculta en el
+            reflejo. Este juego de percepciones, donde lo real y lo ilusorio se confunden, es un desafío al espectador
+            para que cuestione su propia realidad y los límites de su percepción.</p>
+          <p>La incorporación de la escritura en espejo es, en mi opinión, el toque magistral de esta obra. Es un claro
+            guiño a <strong>"Alicia en el País de las Maravillas"</strong>, invitándonos a traspasar los límites de
+            nuestra realidad, a ver más allá de lo obvio y a descubrir el universo escondido que se oculta detrás de los
+            reflejos. Esta elección también sugiere que el amor, al igual que la poesía, tiene múltiples caras y
+            perspectivas, y que solo aquellos dispuestos a mirar más allá podrán captar su verdadera esencia.</p>
+          <p>Y justo cuando piensas que has comprendido la obra, el dorado te envuelve. Ese brillante y radiante dorado,
+            reminiscente de las gloriosas iglesias bizantinas, como un halo que circunda toda la obra. ¡Ah, la poesía!
+            Como bien lo identifica María Paz, <em>"¡Qué nadie así te ha querido y nadie así te querrá!"</em>, es ese
+            resplandor divino que, al igual que el dorado, nos conecta con lo eterno.</p>
+          <p><strong>"Vuelo de la Poesía"</strong> no es simplemente una obra de arte; es una experiencia, un canto de
+            amor eterno, una puerta a otra dimensión donde lo terrenal se encuentra con lo divino. Es un testimonio de
+            que la poesía, y el amor que encarna, no conoce de finitud. Y mientras estemos dispuestos a mirar más allá,
+            siempre encontraremos poesía en el vuelo eterno del universo.</p>
         </div>
 
+        <!-- English -->
+        <div class="en language" style="display:none;">
+          <p>From the first glance at <strong>"Flight of Poetry"</strong>, one is instantly captivated, taken on a
+            journey across the borders between the earthly and the divine. María Paz Arés Osset, with her inclination
+            toward circular forms, envelops us in an ethereal embrace and whispers secrets of the cosmos.</p>
+          <p>The choice of the circle, a figure with no beginning or end, is not random; it is a clear symbol of
+            perpetuity and the continuous flow of the universe. María Paz demonstrates with this a keen affinity and
+            understanding of Eastern conceptions of the universe and life.</p>
+          <p>Imagine standing in front of a warm, welcoming wooden circle. At its center, thin logs rise like towers of
+            an ancient city, and on them, with the delicacy and depth of Chinese ink, poetry shines. <em>"You ask me if
+              I love you, what can I answer?"</em>. Each verse of this poetry, sliding over the wood, is like a river of
+            emotions overflowing, and you find yourself swimming in its deep waters, seeking answers in the moon, in the
+            oak tree, and in the hidden grove.</p>
+          <p>The sturdy, earthly wooden base serves as a canvas where amorous poetry is erected as the soul of the work.
+            This collage of fine logs in the center becomes a sort of pulpit from which poetry declares its essence. The
+            choice of Chinese ink adds depth, an evocation of ancient traditions and the permanence of writing through
+            the centuries.</p>
+          <p>The play of wood photocopies is clever and brilliant. Ah! That illusion, where for a moment it tricks us,
+            making us believe that what we see is what truly is. But María Paz challenges us, tells us to look closer,
+            to question our perception.</p>
+          <p>But wait! There is more. A mirror writing unwinds whimsically over the logs. <em>"Ask the moon that shines
+              in the immensity"</em>. Is that not what Alice found in Wonderland? An inverted reality that required a
+            mirror to be understood. And here, in this act, María Paz invites us to be like Alice, to look through the
+            mirror and discover the magic hidden in the reflection. This play of perceptions, where the real and the
+            illusory blur, is a challenge for the spectator to question their own reality and the limits of their
+            perception.</p>
+          <p>The incorporation of mirror writing is, in my opinion, the masterful touch of this piece. It is a clear nod
+            to <strong>"Alice in Wonderland"</strong>, inviting us to transcend the limits of our reality, to look
+            beyond the obvious, and to discover the hidden universe behind the reflections. This choice also suggests
+            that love, like poetry, has multiple faces and perspectives, and only those willing to look further can
+            grasp its true essence.</p>
+          <p>And just when you think you have understood the work, the gold envelops you. That bright, radiant gold,
+            reminiscent of glorious Byzantine churches, acts as a halo surrounding the entire piece. Ah, poetry! As
+            María Paz aptly identifies, <em>"For no one has loved you like this, and no one ever will!"</em>, it is that
+            divine glow which, like the gold, connects us with the eternal.</p>
+          <p><strong>"Flight of Poetry"</strong> is not simply an artwork; it is an experience, a chant of eternal love,
+            a door to another dimension where the earthly meets the divine. It is a testimony that poetry, and the love
+            it embodies, knows no finitude. And as long as we are willing to look beyond, we will always find poetry in
+            the eternal flight of the universe.</p>
+        </div>
 
-        <p>من النظرة الأولى إلى "رحلة الشعر"، يُسحر المرء على الفور، مُنقادًا في رحلة تعبر حدود الأرضي والإلهي. ماريا
-          باز آريس
-          أوسيت، بميلها نحو الأشكال الدائرية،
-          تحتضننا في أحضان أثيرية وتهمس لنا بأسرار الكون.</p>
+        <!-- Italian -->
+        <div class="it language" style="display:none;">
+          <p>Al primo sguardo a <strong>"Volo della Poesia"</strong>, si viene immediatamente catturati, portati in un
+            viaggio che attraversa le frontiere tra il terreno e il divino. María Paz Arés Osset, con la sua
+            inclinazione per le forme circolari, ci avvolge in un abbraccio etereo e ci sussurra i segreti del cosmo.
+          </p>
+          <p>La scelta del cerchio, una figura senza inizio né fine, non è casuale; è un chiaro simbolo della perpetuità
+            e del flusso continuo dell'universo. María Paz dimostra con ciò un'affinità e una comprensione acuta delle
+            concezioni orientali dell'universo e della vita.</p>
+          <p>Immagina di trovarti di fronte a un cerchio di legno pulito, caldo e accogliente. Al suo centro, tronchi
+            sottili si innalzano come torri di un'antica città, e su di essi, con la delicatezza e la profondità
+            dell'inchiostro cinese, risplende una poesia. <em>"Mi chiedi se ti amo, cosa posso rispondere?"</em>. Ogni
+            verso di questa poesia, che scivola sul legno, è come un fiume di emozioni che straripa, e ti ritrovi a
+            nuotare nelle sue acque profonde, cercando risposte nella luna, nel leccio e nel bosco nascosto.</p>
+          <p>La base di legno, robusta e terrena, funge da tela in cui la poesia d'amore si erge a fondamento
+            dell'opera. Questo collage di tronchi sottili al centro diventa una sorta di pulpito da cui la poesia
+            declama la sua essenza. La scelta dell'inchiostro cinese aggiunge profondità, un richiamo ad antiche
+            tradizioni e alla permanenza della scrittura attraverso i secoli.</p>
+          <p>Il gioco delle fotocopie di legno è astuto e brillante. Ah! Quell'illusione, in cui per un momento ci
+            inganna, facendoci credere che ciò che vediamo sia la realtà. Ma María Paz ci sfida, ci invita a guardare
+            più da vicino, a mettere in discussione la nostra percezione.</p>
+          <p>Ma aspetta! C'è di più. Una scrittura a specchio si dispiega capricciosamente sui tronchi. <em>"Chiedilo
+              alla luna che illumina nell'immensità"</em>. Non è forse quello che Alice trovò nel Paese delle
+            Meraviglie? Una realtà capovolta che richiedeva uno specchio per essere compresa. E qui, in questo atto,
+            María Paz ci invita a essere come Alice, a guardare attraverso lo specchio e scoprire la magia nascosta nel
+            riflesso. Questo gioco di percezioni è una sfida per lo spettatore a interrogarsi sulla propria realtà.</p>
+          <p>L'integrazione della scrittura a specchio è, a mio avviso, il tocco magistrale di quest'opera. È un chiaro
+            richiamo ad <strong>"Alice nel Paese delle Meraviglie"</strong>, invitandoci a superare i limiti della
+            nostra realtà, a guardare oltre l'ovvio e a scoprire l'universo nascosto dietro i riflessi. Questo
+            suggerisce anche che l'amore, come la poesia, ha molteplici volti e prospettive.</p>
+          <p>E proprio quando pensi di aver compreso l'opera, l'oro ti avvolge. Quell'oro brillante e radioso, che
+            ricorda le gloriose chiese bizantine, come un'aureola che circonda l'intera opera. Ah, la poesia!
+            <em>"Perché nessuno ti ha mai amata così, e nessuno mai ti amerà!"</em> È quel bagliore divino che ci
+            connette all'eterno.</p>
+          <p><strong>"Volo della Poesia"</strong> non è semplicemente un'opera d'arte; è un'esperienza, un canto d'amore
+            eterno, una porta verso un'altra dimensione in cui il terrestre incontra il divino.</p>
+        </div>
 
-        <p>اختيار الدائرة، وهي شكل بلا بداية ولا نهاية، ليس عشوائيًا؛ إنه رمز واضح للأبدية والتدفق المستمر للكون.
-          ماريا
-          باز
-          تُظهر بذلك تقاربًا وفهمًا عميقًا للمفاهيم الشرقية عن الكون والحياة.
-        </p>
+        <!-- Russian -->
+        <div class="ru language" style="display:none;">
+          <p>С первого взгляда на <strong>«Полет поэзии»</strong> зритель мгновенно оказывается заворожен и отправляется
+            в путешествие, пересекающее границы между земным и божественным. Мария Пас Арес Оссет, с ее склонностью к
+            круговым формам, окутывает нас неземными объятиями и шепчет тайны космоса.</p>
+          <p>Выбор круга, фигуры без начала и конца, не случаен; это ясный символ вечности и непрерывного потока
+            вселенной. Мария Пас демонстрирует этим глубокое понимание восточных концепций вселенной и жизни.</p>
+          <p>Представьте себе, что вы стоите перед чистым, теплым и уютным деревянным кругом. В его центре тонкие бревна
+            возвышаются, как башни древнего города, и на них с нежностью и глубиной китайской туши сияет поэзия. <em>«Ты
+              спрашиваешь, люблю ли я тебя, что я могу ответить?»</em>. Каждая строка этой поэзии, скользящая по дереву,
+            подобна реке переполняющих эмоций, и вы обнаруживаете, что плывете в ее глубоких водах, ища ответы у луны, у
+            дуба и в скрытой роще.</p>
+          <p>Деревянная основа, прочная и земная, служит холстом, на котором любовная поэзия возвышается как душа
+            произведения. Этот коллаж из тонких бревен в центре становится своего рода кафедрой, с которой поэзия
+            провозглашает свою сущность. Выбор китайской туши добавляет глубины, пробуждая древние традиции и
+            постоянство письма через века.</p>
+          <p>Игра с фотокопиями дерева остроумна и блестяща. Ах! Эта иллюзия, где на мгновение она обманывает нас,
+            заставляя верить, что мы видим то, что есть на самом деле. Но Мария Пас бросает нам вызов, просит
+            присмотреться, подвергнуть сомнению наше восприятие.</p>
+          <p>Но подождите! Есть кое-что еще. Зеркальное письмо причудливо разворачивается на бревнах. <em>«Спроси луну,
+              что светит в безбрежности»</em>. Не это ли нашла Алиса в Стране чудес? Перевернутую реальность, требующую
+            зеркала для понимания. И здесь Мария Пас приглашает нас стать Алисой, заглянуть в зеркало и открыть магию в
+            отражении.</p>
+          <p>Использование зеркального письма — это, на мой взгляд, мастерский штрих произведения. Это явный кивок в
+            сторону <strong>«Алисы в Стране чудес»</strong>, приглашающий нас переступить границы нашей реальности,
+            выйти за пределы очевидного. Этот выбор также предполагает, что у любви, как и у поэзии, множество лиц и
+            перспектив.</p>
+          <p>И когда вы думаете, что поняли произведение, вас окутывает золото. Это блестящее золото, напоминающее
+            великолепные византийские церкви, как ореол. <em>«Ибо никто так тебя не любил, и никто никогда так не
+              полюбит!»</em>. Это божественное сияние связывает нас с вечностью.</p>
+          <p><strong>«Полет поэзии»</strong> — это не просто произведение искусства; это опыт, гимн вечной любви, дверь
+            в другое измерение, где земное встречается с божественным.</p>
+        </div>
 
-        <p>تخيل أنك واقف أمام دائرة من الخشب الأملس، دافئة ومرحبة. في مركزها، ترتفع جذوع رفيعة كأبراج مدينة قديمة،
-          وعليها، برقة
-          وعمق حبر الصين، تتألق قصيدة.
-          "تسألني إذا كنت أحبك، ماذا يمكنني أن أجيب؟". كل بيت من هذه القصيدة، المنسابة على الخشب، كنهر من المشاعر
-          يفيض،
-          وتجد
-          نفسك تسبح في مياهها العميقة، باحثًا عن إجابات في القمر، والبلوط، والغابة المخفية.</p>
+        <!-- Chinese -->
+        <div class="zh language" style="display:none;">
+          <p>从第一眼看到<strong>“诗的飞翔”</strong>，人就会立刻被迷住，带入一段穿越尘世与神圣之间边界的旅程。帕斯·阿雷斯·奥塞特（María Paz Arés
+            Osset）偏爱圆形，她以此包围我们，给我们带来空灵的拥抱，并低语宇宙的秘密。</p>
+          <p>圆形的选取并非偶然，它是一个没有起点和终点的图形；它是宇宙永恒与持续流动的明确象征。玛丽亚·帕斯展示了她对东方宇宙观和生命观的敏锐亲和力与深刻理解。</p>
+          <p>
+            想象一下，站在一个洁净、温暖、宜人的木质圆圈前。在它的中心，细长的木块如古城塔楼般耸立，其上以中国水墨的细腻与深邃书写着诗句：<em>“你问我是否爱你，我该如何回答？”</em>。诗中的每一行都在木块上滑过，宛如溢出的情感之河，你发现自己游弋在深水中，在月亮、橡树和隐藏的小树林中寻找答案。
+          </p>
+          <p>坚实而朴实的木质基座作为画布，抒情诗在此竖立，成为作品的灵魂。中心细长木块的拼贴成为一种布道坛，诗歌在此宣告其本质。中国水墨的运用增加了深度，唤起了古老的传统和几个世纪以来书写的持久性。</p>
+          <p>木材影印件的视觉游戏既机智又精妙。那种幻觉在瞬间欺骗了我们，让我们相信所见即真实。但玛丽亚·帕斯挑战我们，让我们靠近看，质疑我们的感知。</p>
+          <p>
+            但是，等一下！还有更多。镜像文字在木块上随意展开。<em>“去问照亮广阔的月亮吧”</em>。这不正是爱丽丝在梦游仙境中所发现的吗？一个颠倒的现实，需要一面镜子才能被理解。在这里，玛丽亚·帕斯邀请我们像爱丽丝一样，透过镜子发现隐藏在反射中的魔力。这种感知的游戏对观众来说是一个挑战。
+          </p>
+          <p>
+            在我看来，镜像文字的加入是这件作品的神来之笔。这是对<strong>《爱丽丝梦游仙境》</strong>的明确致敬，邀请我们超越现实的界限，去发现隐藏在反射背后的宇宙。这一选择也暗示了爱情和诗歌一样，多面且多视角，只有愿意用心去看的人才能把握其真谛。
+          </p>
+          <p>就在你认为已经理解作品时，金色包围了你。那种灿烂夺目的金色，让人联想到辉煌的拜占庭教堂，如同环绕整个作品的光环。啊，诗歌！正如玛丽亚·帕斯所言，<em>“因为没有人像这样爱过你，也没有人会这样爱你！”</em>
+            这是那种神圣的光芒，将我们与永恒联系在一起。</p>
+          <p><strong>“诗的飞翔”</strong>不仅是一件艺术品，更是一种体验，一首永恒的爱之颂歌，通往尘世与神圣相遇的另一个维度的门户。</p>
+        </div>
 
-        <p>القاعدة الخشبية، القوية والأرضية، تعمل كلوحة يقف عليها الشعر العاطفي كروح للعمل. هذا الكولاج من الجذوع
-          الرفيعة في
-          المركز يصبح بمثابة منبر يعلن منه الشعر جوهره. اختيار الحبر الصيني يضيف عمقًا، تذكيرًا بالتقاليد القديمة
-          وديمومة
-          الكتابة عبر القرون.</p>
+        <!-- Arabic -->
+        <div class="ar language" style="display:none;">
+          <p>منذ النظرة الأولى إلى <strong>"رحلة الشعر"</strong>، يُسحر المرء على الفور برحلة عبر الحدود بين الأرضي
+            والإلهي. ماريا باز آريس أوسيت، بميلها نحو الأشكال الدائرية، تحتضننا في عناق أثيري وتهمس لنا بأسرار الكون.
+          </p>
+          <p>اختيار الدائرة، وهي شكل بلا بداية ولا نهاية، ليس عشوائيًا؛ إنه رمز واضح للأبدية والتدفق المستمر للكون.
+            تُظهر ماريا باز من خلال ذلك تفنناً وفهماً عميقاً للمفاهيم الشرقية للكون والحياة.</p>
+          <p>تخيل أنك تقف أمام دائرة خشبية نظيفة ودافئة ومرحبة. في وسطها، ترتفع جذوع رفيعة كأبراج مدينة قديمة، وفوقها،
+            برقة وعمق الحبر الصيني، تتألق قصيدة. <em>"تسألني إذا كنت أحبك، ماذا يمكنني أن أجيب؟"</em>. كل بيت من هذه
+            القصيدة، الذي ينزلق على الخشب، يشبه نهراً من المشاعر التي تفيض، وتجد نفسك تسبح في مياهه العميقة، تبحث عن
+            إجابات في القمر، في شجرة البلوط، وفي الغابة المخفية.</p>
+          <p>القاعدة الخشبية المتينة والأرضية بمثابة قماش يقف عليه الشعر العاطفي كروح العمل. هذا الكولاج من الجذوع
+            الدقيقة في الوسط يصبح نوعاً من المنبر الذي يعلن منه الشعر جوهره. يضيف اختيار الحبر الصيني عمقًا، وهو استحضار
+            للتقاليد القديمة وديمومة الكتابة عبر القرون.</p>
+          <p>لعبة الصور المنسوخة للخشب ذكية ورائعة. آه! هذا الوهم، حيث تخدعنا للحظة، وتجعلنا نعتقد أن ما نراه هو ما هو
+            عليه حقًا. لكن ماريا باز تتحدانا، وتخبرنا أن ننظر عن كثب، وأن نشكك في إدراكنا.</p>
+          <p>لكن انتظر! هناك المزيد. كتابة معكوسة تتكشف بشكل متقلب على الجذوع. <em>"اسأل القمر الذي يضيء في
+              الفسحة"</em>. أليس هذا ما وجدته أليس في بلاد العجائب؟ واقع مقلوب يتطلب مرآة لفهمه. وهنا، في هذا العمل،
+            تدعونا ماريا باز لنكون مثل أليس، لننظر من خلال المرآة ونكتشف السحر المخبأ في الانعكاس.</p>
+          <p>إن دمج الكتابة المعكوسة هو، في رأيي، اللمسة البارعة لهذه القطعة. إنها إيماءة واضحة إلى <strong>"أليس في
+              بلاد العجائب"</strong>، تدعونا لتجاوز حدود واقعنا، وللنظر إلى ما وراء ما هو واضح، واكتشاف الكون الخفي وراء
+            الانعكاسات. يشير هذا الاختيار أيضًا إلى أن الحب، مثل الشعر، له وجوه ووجهات نظر متعددة.</p>
+          <p>ومباشرة عندما تعتقد أنك فهمت العمل، يحيط بك الذهب. هذا الذهب اللامع والمشرق، الذي يذكرنا بالكنائس البيزنطية
+            المجيدة، كأنه هالة تحيط بالقطعة بأكملها. آه أيها الشعر! كما تحددها ماريا باز بشكل مناسب، <em>"لم يحبك أحد
+              هكذا، ولن يحبك أحد أبدًا!"</em>، إنه ذلك الوهج الإلهي الذي يربطنا بالأبدية.</p>
+          <p><strong>"رحلة الشعر"</strong> ليست مجرد عمل فني؛ إنها تجربة، أغنية حب أبدي، باب إلى بُعد آخر حيث يلتقي
+            الأرضي بالإلهي.</p>
+        </div>
 
-        <p>لعبة نسخ الخشب ماكرة ولامعة. آه! هذه الوهم، حيث للحظة يخدعنا، مما يجعلنا نعتقد أن ما نراه هو الواقع. لكن
-          ماريا باز
-          تتحدانا، تطلب منا أن ننظر عن كثب، أن نشكك في إدراكنا.
-        </p>
+        <!-- German -->
+        <div class="de language" style="display:none;">
+          <p>Vom ersten Blick an zieht <strong>"Flug der Poesie"</strong> den Betrachter in seinen Bann und nimmt ihn
+            mit auf eine Reise über die Grenzen zwischen dem Irdischen und dem Göttlichen. María Paz Arés Osset umhüllt
+            uns mit kreisförmigen Formen in einer ätherischen Umarmung und flüstert uns Geheimnisse des Kosmos zu.</p>
+          <p>Die Wahl des Kreises, einer Form ohne Anfang und Ende, ist nicht zufällig; er ist ein klares Symbol für die
+            Beständigkeit und den kontinuierlichen Fluss des Universums. María Paz beweist damit ein feines Verständnis
+            für östliche Konzepte von Universum und Leben.</p>
+          <p>Stellen Sie sich vor, Sie stehen vor einem warmen, einladenden Holzkreis. In seiner Mitte ragen feine
+            Stämme wie Türme einer alten Stadt empor, auf denen mit der Zartheit und Tiefe chinesischer Tusche Poesie
+            erstrahlt. <em>"Du fragst mich, ob ich dich liebe, was kann ich antworten?"</em>. Jeder Vers, der über das
+            Holz gleitet, ist wie ein überfließender Fluss der Emotionen, und man schwimmt in seinen tiefen Wassern und
+            sucht Antworten beim Mond, bei der Eiche und im verborgenen Hain.</p>
+          <p>Die robuste, irdische Holzbasis dient als Leinwand, auf der sich Liebeslyrik als Seele des Werks erhebt.
+            Diese Collage aus feinen Stämmen in der Mitte wird zu einer Art Kanzel, von der aus die Poesie ihre Essenz
+            verkündet. Die Wahl der chinesischen Tusche verleiht Tiefe und erinnert an alte Traditionen und die
+            Beständigkeit der Schrift durch die Jahrhunderte.</p>
+          <p>Das Spiel mit Holzfotokopien ist klug und brillant. Ah! Diese Illusion, die uns einen Moment lang täuscht
+            und uns glauben lässt, das Gesehene sei die Wahrheit. Aber María Paz fordert uns auf, genauer hinzusehen und
+            unsere Wahrnehmung zu hinterfragen.</p>
+          <p>Aber warten Sie! Da ist noch mehr. Eine Spiegelschrift entfaltet sich skurril über die Stämme. <em>"Frag
+              den Mond, der in der Unermesslichkeit scheint"</em>. War es nicht das, was Alice im Wunderland fand? Eine
+            umgekehrte Realität, die einen Spiegel braucht, um verstanden zu werden. María Paz lädt uns ein, wie Alice
+            durch den Spiegel zu schauen und die im Spiegelbild verborgene Magie zu entdecken.</p>
+          <p>Die Einbeziehung von Spiegelschrift ist der meisterhafte Touch dieses Stücks. Es ist eine klare Anspielung
+            auf <strong>"Alice im Wunderland"</strong> und lädt uns ein, die Grenzen unserer Realität zu überschreiten.
+            Diese Wahl suggeriert auch, dass die Liebe, genau wie die Poesie, viele Gesichter und Perspektiven hat.</p>
+          <p>Und gerade wenn man denkt, man habe das Werk verstanden, umhüllt einen Gold. Dieses leuchtende Gold, das an
+            glorreiche byzantinische Kirchen erinnert, umgibt das gesamte Werk wie ein Heiligenschein. Ah, Poesie! Wie
+            María Paz zutreffend bemerkt: <em>"Denn niemand hat dich so geliebt, und niemand wird es jemals tun!"</em>
+            Es ist dieser göttliche Glanz, der uns mit der Ewigkeit verbindet.</p>
+          <p><strong>"Flug der Poesie"</strong> ist nicht nur ein Kunstwerk; es ist eine Erfahrung, ein ewiger
+            Liebesgesang, eine Tür zu einer anderen Dimension, wo das Irdische auf das Göttliche trifft.</p>
+        </div>
 
-        <p>ولكن، انتظر! هناك المزيد. كتابة معكوسة تنتشر بشكل متقلب على الجذوع.
-          "اسأل القمر الذي يضيء في الفضاء الواسع". أليس هذا ما وجدته أليس في بلاد العجائب؟ واقع معكوس يتطلب مرآة
-          لفهمه.
-          وهنا، في
-          هذا العمل، تدعونا ماريا باز لنكون مثل أليس، لننظر من خلال المرآة ونكتشف السحر الكامن في الانعكاس. هذه اللعبة
-          من
-          الإدراكات، حيث يختلط الواقعي بالوهمي، هي تحدٍ للمشاهد ليشكك في واقعه وحدود إدراكه.</p>
+        <!-- French Full Translation -->
+        <div class="fr language" style="display:none;">
+          <p>Dès le premier regard sur <strong>"Vol de la Poésie"</strong>, on est instantanément captivé, transporté
+            dans un voyage qui traverse les frontières entre le terrestre et le divin. María Paz Arés Osset, avec son
+            inclination pour les formes circulaires, nous enveloppe d'une étreinte éthérée et nous murmure les secrets
+            du cosmos.</p>
+          <p>Le choix du cercle, une figure sans début ni fin, n'est pas aléatoire ; c'est un symbole clair de
+            perpétuité et du flux continu de l'univers. María Paz démontre ainsi une affinité et une compréhension aiguë
+            des conceptions orientales de l'univers et de la vie.</p>
+          <p>Imaginez-vous devant un cercle de bois propre, chaleureux et accueillant. En son centre, de fins troncs
+            s'élèvent comme les tours d'une cité ancestrale, et sur eux, avec la délicatesse et la profondeur de l'encre
+            de Chine, resplendit une poésie. <em>"Tu me demandes si je t'aime, que puis-je te répondre ?"</em>. Chaque
+            vers de cette poésie, qui glisse sur le bois, est comme un fleuve d'émotions qui déborde, et vous vous
+            retrouvez nageant dans ses eaux profondes, cherchant des réponses dans la lune, le chêne et le bois caché.
+          </p>
+          <p>La base en bois, robuste et terrestre, sert de toile où la poésie amoureuse s'érige comme l'âme de l'œuvre.
+            Ce collage de fins troncs au centre devient une sorte de chaire d'où la poésie déclame son essence. Le choix
+            de l'encre de Chine ajoute de la profondeur, une évocation des traditions anciennes et de la permanence de
+            l'écriture à travers les siècles.</p>
+          <p>Le jeu des photocopies de bois est astucieux et brillant. Ah ! Cette illusion, où un instant elle nous
+            trompe, nous faisant croire que ce que nous voyons est ce qui est réellement. Mais María Paz nous met au
+            défi, nous dit de regarder de plus près, de questionner notre perception.</p>
+          <p>Mais attendez ! Il y a plus. Une écriture en miroir qui se déploie capricieusement sur les troncs.
+            <em>"Demande-le à la lune qui éclaire l'immensité"</em>. N'est-ce pas ce qu'Alice a trouvé au Pays des
+            Merveilles ? Une réalité inversée qui nécessitait un miroir pour être comprise. Ici, María Paz nous invite à
+            être comme Alice, à regarder à travers le miroir et à découvrir la magie qui se cache dans le reflet. Ce jeu
+            de perceptions est un défi pour le spectateur.</p>
+          <p>L'incorporation de l'écriture en miroir est la touche magistrale de cette œuvre. C'est un clin d'œil clair
+            à <strong>"Alice au Pays des Merveilles"</strong>, nous invitant à dépasser les limites de notre réalité et
+            à découvrir l'univers caché derrière les reflets. Cette élection suggère également que l'amour, tout comme
+            la poésie, a de multiples visages.</p>
+          <p>Et juste quand vous pensez avoir compris l'œuvre, l'or vous enveloppe. Cet or brillant et radieux,
+            rappelant les glorieuses églises byzantines, comme un halo qui entoure toute l'œuvre. <em>"Personne ne t'a
+              aimée ainsi et personne ne t'aimera jamais !"</em> C'est cet éclat divin qui nous connecte à l'éternel.
+          </p>
+          <p><strong>"Vol de la Poésie"</strong> n'est pas simplement une œuvre d'art ; c'est une expérience, un chant
+            d'amour éternel, une porte vers une autre dimension où le terrestre rencontre le divin.</p>
+        </div>
 
-        <p>دمج الكتابة المعكوسة هو، في رأيي، لمسة الإبداع في هذا العمل. إنه إيماءة واضحة إلى "أليس في بلاد العجائب"،
-          مدعوة إيانا
-          لتجاوز حدود واقعنا، لرؤية ما وراء الواضح، واكتشاف الكون المخفي الذي يكمن وراء الانعكاسات. هذا الاختيار يوحي
-          أيضًا بأن
-          الحب، مثل الشعر، له وجوه ومنظورات متعددة، وأنه فقط من يرغب في النظر إلى ما هو أبعد سيتمكن من إدراك جوهره
-          الحقيقي.</p>
+        <!-- Japanese -->
+        <div class="ja language" style="display:none;">
+          <p>
+            <strong>『詩の飛翔』</strong>を一目見た瞬間、人は地上と神性の境界を越える旅へと誘われ、心を奪われます。パス・アレス・オセットは、宇宙の永遠と流転の象徴である円形の造形を通じて、私たちを空想的な抱擁で包み込み、宇宙の秘密を囁きます。
+          </p>
+          <p>始まりも終わりもない円が選ばれたのは、決して偶然ではありません。それは宇宙の永遠性と絶え間ない流れの明確な象徴です。マリア・パスはこの選択を通じて、東洋的な宇宙観と生命観への深い親和性と理解を示しています。</p>
+          <p>
+            温もりのある、心地よい木の円の前に立つ自分を想像してください。その中央には、古代都市の塔のように細い丸太がそびえ立ち、その上に中国の墨の繊細さと深みを持って詩が輝いています。<em>「私を愛しているかと問うのなら、私は何と答えよう？」</em>。木肌を滑るように刻まれた詩の一行一行は、溢れ出す感情の川のようで、あなたは月の光、樫の木、そして隠された木立の中に答えを求めながら、その深い水の中を泳いでいることに気づくでしょう。
+          </p>
+          <p>
+            頑丈で大地を感じさせる木の基座は、愛の詩が作品の魂として立ち上がるためのキャンバスです。中央にある細い丸太のコラージュは、詩がその本質を宣言する一種の説教壇となります。墨の選択は深みを加え、古代の伝統と何世紀にもわたる文字の永続性を喚起させます。
+          </p>
+          <p>
+            木材のコピーを使用した視覚的なゲームは巧妙で素晴らしいものです。ああ！その錯覚は、私たちが目にしているものが真実であると信じ込ませ、一瞬私たちを騙します。しかしマリア・パスは、もっと近くで見て、自分自身の認識を疑うようにと私たちに挑発します。
+          </p>
+          <p>
+            しかし、待ってください！まだ先があります。丸太の上には、気まぐれに鏡文字が展開されています。<em>「広大さを照らす月に聞いてみて」</em>。これはアリスが不思議の国で見つけたものではないでしょうか？理解するために鏡を必要とする逆転した現実。ここでマリア・パスは、アリスのようになり、鏡を通して反射の中に隠された魔法を発見するよう私たちに誘います。現実と幻想が入り混じるこの認識のゲームは、鑑賞者が自身の現実を問い直すための挑戦なのです。
+          </p>
+          <p>
+            鏡文字の使用は、私の意見では、この作品の傑出したアプローチです。これは<strong>『不思議の国のアリス』</strong>への明らかなオマージュであり、私たちの現実の限界を越え、目に見えるもの以上のことを見つめ、反射の裏に隠された宇宙を発見するようにと誘うものです。この選択はまた、愛には詩と同じように多様な顔と視点があり、より深く見ようとする者だけがその真の要質を捉えることができるということを示唆しています。
+          </p>
+          <p>
+            そして、作品を理解したと思ったその時、金色があなたを包みます。栄光に満ちたビザンチン教会を思わせる、その明るく輝く金色は、作品全体を囲む後光のようです。ああ、詩よ！マリア・パスが適切に表現しているように、<em>「誰もあなたをこれほど愛さなかった、そしてこれからも誰もいないでしょう！」</em>。永遠と私たちを結びつけるのは、この金のような神聖な輝きなのです。
+          </p>
+          <p><strong>『詩の飛翔』</strong>は単なる芸術作品ではありません。それは経験であり、永遠の愛の賛歌であり、地上と神性が交わる異次元への扉なのです。愛と诗には限界がないことの証明です。</p>
+        </div>
 
-        <p>وعندما تعتقد أنك قد فهمت العمل، يغمرك الذهب. ذلك الذهب اللامع والمشع، يذكر بكنائس البيزنطية المجيدة، كهالة
-          تحيط
-          بالعمل بأكمله. آه، الشعر! كما تحدده جيدًا ماريا باز، "لم يحبك أحد هكذا ولن يحبك أحد أبدًا!"، هو ذلك البريق
-          الإلهي
-          الذي، مثل الذهب، يربطنا بالأبدية.</p>
-
-        <p>ليس "رحلة الشعر" مجرد عمل فني؛ إنها تجربة، ترنيمة حب أبدية، بوابة إلى بُعد آخر حيث يلتقي الأرضي بالإلهي.
-          إنها
-          شهادة
-          على أن الشعر، والحب الذي يجسده، لا يعرف النهاية. وطالما نحن مستعدون للنظر إلى ما هو أبعد، سنجد دائمًا الشعر
-          في
-          الرحلة
-          الأبدية للكون.</p>
-
-
+        <!-- Portuguese -->
+        <div class="pt language" style="display:none;">
+          <p>Desde o primeiro olhar para <strong>"Voo da Poesia"</strong>, somos instantaneamente cativados, levados
+            numa viagem que cruza as fronteiras entre o terreno e o divino. María Paz Arés Osset, com a sua inclinação
+            para as formas circulares, envolve-nos num abraço etéreo e sussurra-nos segredos do cosmos.</p>
+          <p>A escolha do círculo, uma figura sem princípio nem fim, não é aleatória; é um símbolo claro da perpetuidade
+            e do contínuo fluxo do universo. María Paz demonstra com isto uma afinidade e compreensão aguda das
+            conceções orientais do universo e da vida.</p>
+          <p>Imagine estar diante de um círculo de madeira limpa, quente e acolhedor. No seu centro, troncos finos
+            elevam-se como torres de uma cidade ancestral, e neles, com a delicadeza e profundidade da tinta da China,
+            resplandece uma poesia. <em>"Perguntas-me se te quero, o que te posso responder?"</em>. Cada verso desta
+            poesia, que desliza pela madeira, é como um rio de emoções que transborda, voltando-se a encontrar a nadar
+            nas suas águas profundas, buscando respostas na lua, na azinheira e no bosque escondido.</p>
+          <p>A base de madeira, robusta e terrena, serve como tela onde a poesia amorosa se ergue como a alma da obra.
+            Este collage de troncos finos no centro converte-se numa espécie de púlpito de onde a poesia declama a sua
+            essência. A escolha da tinta da China acrescenta profundidade, uma evocação de antigas tradições e da
+            permanência da escrita através dos séculos.</p>
+          <p>O jogo das fotocópias de madeiras é astuto e brilhante. Ah! Essa ilusão, onde por um instante nos engana,
+            fazendo-nos crer que o que vemos é o que realmente é. Mas María Paz desafia-nos, diz-nos para olharmos mais
+            de perto, para questionarmos a nossa perceção.</p>
+          <p>Mas espera! Há algo mais. Uma escrita em espelho que se desenrola caprichosamente sobre os troncos.
+            <em>"Pergunta à lua que ilumina na imensidão"</em>. Não é isso o que Alice encontrou no País das Maravilhas?
+            Uma realidade invertida que requeria um espelho para ser compreendida. Aqui, María Paz convida-nos a ser
+            como Alice, a olhar através do espelho e descobrir a magia que se oculta no reflexo.</p>
+          <p>A incorporação da escrita em espelho é, na minha opinião, o toque magistral desta obra. É um aceno claro a
+            <strong>"Alice no País das Maravilhas"</strong>, convidando-nos a ultrapassar os limites da nossa realidade,
+            ver além do óbvio e a descobrir o universo oculto atrás dos reflexos. Esta escolha também sugere que o amor,
+            tal como a poesia, tem múltiplas faces e perspetivas.</p>
+          <p>E justo quando pensas que compreendeste a obra, o dourado envolve-te. Esse brilhante e radiante dourado,
+            reminiscente das gloriosas igrejas bizantinas como um halo em torno da obra. <em>"Pois ninguém assim te amou
+              e ninguém assim te amará!"</em> É esse resplendor divino que nos conecta com o eterno.</p>
+          <p><strong>"Voo da Poesia"</strong> não é simplesmente uma obra de arte; é uma experiência, um canto de amor
+            eterno, uma porta para outra dimensão onde o terreno se encontra com o divino. Um testemunho de que a poesia
+            não conhece limites.</p>
+        </div>
 
       </div>
+    </section>
+  </main>
 
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset - <span class="es language">Arte y Trascendencia</span>
+      <span class="en language" style="display:none;">Art and Transcendence</span>
+      <span class="it language" style="display:none;">Arte e Trascendenza</span>
+      <span class="ru language" style="display:none;">Искусство и трансцендентность</span>
+      <span class="zh language" style="display:none;">艺术与超越</span>
+      <span class="ar language" style="display:none;">الفن والمتسامي</span>
+      <span class="de language" style="display:none;">Kunst und Transzendenz</span>
+      <span class="fr language" style="display:none;">Art et Transcendance</span>
+      <span class="ja language" style="display:none;">芸術と超越</span>
+      <span class="pt language" style="display:none;">Arte e Transcendência</span>
+    </p>
+  </footer>
 
-    </div>
-  </section>
-
-  <!-- js here -->
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
 </body>
 
 </html>

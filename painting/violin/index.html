@@ -1,510 +1,521 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Silencio en Clave de Luz</title>
+  <title>Silencio en Clave de Luz - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <select id="language-select" class="custom-select">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
     </select>
   </div>
 
+  <!-- Universe & Gallery Buttons -->
+  <a href="../../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+    <span class="es language">Universo de Paz</span>
+    <span class="en language" style="display:none;">Paz's Universe</span>
+    <span class="it language" style="display:none;">Universo di Paz</span>
+    <span class="ru language" style="display:none;">Вселенная Пас</span>
+    <span class="zh language" style="display:none;">帕斯的宇宙</span>
+    <span class="ar language" style="display:none;">كون باز</span>
+    <span class="de language" style="display:none;">Paz' Universum</span>
+    <span class="fr language" style="display:none;">L'Univers de Paz</span>
+    <span class="ja language" style="display:none;">パースの宇宙</span>
+    <span class="pt language" style="display:none;">O Universo de Paz</span>
+  </a>
 
-  <section class="jumbotron text-center">
+  <a href="../../gallery/index.html" class="gallery-btn">
+    <i class="fas fa-th"></i>
+    <span class="es language">Galería</span>
+    <span class="en language" style="display:none;">Gallery</span>
+    <span class="it language" style="display:none;">Galleria</span>
+    <span class="ru language" style="display:none;">Галерея</span>
+    <span class="zh language" style="display:none;">画廊</span>
+    <span class="ar language" style="display:none;">المعرض</span>
+    <span class="de language" style="display:none;">Galerie</span>
+    <span class="fr language" style="display:none;">Galerie</span>
+    <span class="ja language" style="display:none;">ギャラリー</span>
+    <span class="pt language" style="display:none;">Galeria</span>
+  </a>
+
+  <header class="jumbotron">
     <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
       <h1 class="jumbotron-heading">
-        <div class="english language">Silence in Key of Light</div>
-        <div class="spanish language" style="display: none;">Silencio en Clave de Luz</div>
-        <div class="italian language" style="display: none;">Silenzio in Chiave di Luce</div>
-        <div class="chinese language" style="display: none;">光之钥中的寂静</div>
-        <div class="arabic language" style="display: none;">الصمت في مفتاح الضوء</div>
+        <span class="es language">Silencio en Clave de Luz</span>
+        <span class="en language" style="display:none;">Silence in Key of Light</span>
+        <span class="it language" style="display:none;">Silenzio in Chiave di Luce</span>
+        <span class="ru language" style="display:none;">Тишина в ключе света</span>
+        <span class="zh language" style="display:none;">光之钥中的寂静</span>
+        <span class="ar language" style="display:none;">الصمت في مفتاح الضوء</span>
+        <span class="de language" style="display:none;">Stille im Schlüssel des Lichts</span>
+        <span class="fr language" style="display:none;">Silence en Clé de Lumière</span>
+        <span class="ja language" style="display:none;">光の鍵の中の沈黙</span>
+        <span class="pt language" style="display:none;">Silêncio em Clave de Luz</span>
       </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">Silence in Key of Light: A violin rests under a soft glow, inviting contemplation.
-        </div>
-        <div class="spanish language" style="display: none;">Silencio en Clave de Luz: Un violín reposa bajo un suave
-          resplandor, invitando a la contemplación.</div>
-        <div class="italian language" style="display: none;">Silenzio in Chiave di Luce: Un violino riposa sotto una
-          luce
-          soffusa, invitando alla contemplazione.</div>
-        <div class="chinese language" style="display: none;">光之钥中的寂静：小提琴在柔和的光芒下静静地躺着，引人深思。</div>
-        <div class="arabic language" style="display: none;">الصمت في مفتاح الضوء: الكمان يستريح تحت ضوء خافت، يدعو
-          للتأمل.
-        </div>
-      </div>
-
-
+      <p class="lead" style="color: var(--gold); opacity: 0.9;">
+        <span class="es language">Un violín reposa bajo un suave resplandor, invitando a la contemplación.</span>
+        <span class="en language" style="display:none;">A violin rests under a soft glow, inviting contemplation.</span>
+        <span class="it language" style="display:none;">Un violino riposa sotto una luce soffusa, invitando alla
+          contemplazione.</span>
+        <span class="ru language" style="display:none;">Скрипка покоится под мягким светом, приглашая к
+          созерцанию.</span>
+        <span class="zh language" style="display:none;">小提琴在柔和的光芒下静静地躺着，引人深思。</span>
+        <span class="ar language" style="display:none;">الكمان يستريح تحت ضوء خافت، يدعو للتأمل.</span>
+        <span class="de language" style="display:none;">Eine Geige ruht in sanftem Licht und lädt zur Kontemplation
+          ein.</span>
+        <span class="fr language" style="display:none;">Un violon repose sous une douce lueur, invitant à la
+          contemplation.</span>
+        <span class="ja language" style="display:none;">柔らかい光の下に置かれたバイオリンが、深い思索へといざなう。</span>
+        <span class="pt language" style="display:none;">Um violino repousa sob um suave esplendor, convidando à
+          contemplação.</span>
+      </p>
     </div>
-  </section>
+  </header>
 
+  <main class="container">
+    <section class="main-image-container text-center">
+      <img class="art-image zoom-image" style="transition: transform 0.3s; cursor: zoom-in;" src="violin.jpg"
+        alt="Silencio en Clave de Luz">
+    </section>
 
+    <!-- Ficha Técnica -->
+    <section class="section-card">
+      <h3 class="text-warning mb-4"><i class="fas fa-info-circle mr-2"></i>
+        <span class="es language">Ficha Técnica</span>
+        <span class="en language" style="display:none;">Technical Sheet</span>
+        <span class="it language" style="display:none;">Scheda Tecnica</span>
+        <span class="ru language" style="display:none;">Техническая карта</span>
+        <span class="zh language" style="display:none;">技术参数</span>
+        <span class="ar language" style="display:none;">ورقة البيانات التقنية</span>
+        <span class="de language" style="display:none;">Technisches Datenblatt</span>
+        <span class="fr language" style="display:none;">Fiche technique</span>
+        <span class="ja language" style="display:none;">テクニカルデータ</span>
+        <span class="pt language" style="display:none;">Ficha Técnica</span>
+      </h3>
+      <ul class="tech-list">
+        <li><i class="fas fa-paint-brush"></i>
+          <span class="es language"><strong>Técnica:</strong> Óleo sobre lienzo</span>
+          <span class="en language" style="display:none;"><strong>Technique:</strong> Oil on canvas</span>
+          <span class="it language" style="display:none;"><strong>Tecnica:</strong> Olio su tela</span>
+          <span class="ru language" style="display:none;"><strong>Техника:</strong> Масло, холст</span>
+          <span class="zh language" style="display:none;"><strong>技法：</strong>布面油画</span>
+          <span class="ar language" style="display:none;"><strong>التقنية:</strong> زيت على قماش</span>
+          <span class="de language" style="display:none;"><strong>Technik:</strong> Öl auf Leinwand</span>
+          <span class="fr language" style="display:none;"><strong>Technique :</strong> Huile sur toile</span>
+          <span class="ja language" style="display:none;"><strong>技法：</strong>キャンバスに油彩</span>
+          <span class="pt language" style="display:none;"><strong>Técnica:</strong> Óleo sobre tela</span>
+        </li>
+        <li><i class="fas fa-expand-arrows-alt"></i>
+          <span class="es language"><strong>Tamaño:</strong> 60x40 cm</span>
+          <span class="en language" style="display:none;"><strong>Size:</strong> 60x40 cm</span>
+          <span class="it language" style="display:none;"><strong>Dimensioni:</strong> 60x40 cm</span>
+          <span class="ru language" style="display:none;"><strong>Размер:</strong> 60x40 см</span>
+          <span class="zh language" style="display:none;"><strong>尺寸：</strong>60x40 厘米</span>
+          <span class="ar language" style="display:none;"><strong>الحجم:</strong> 60x40 سم</span>
+          <span class="de language" style="display:none;"><strong>Größe:</strong> 60x40 cm</span>
+          <span class="fr language" style="display:none;"><strong>Taille :</strong> 60x40 cm</span>
+          <span class="ja language" style="display:none;"><strong>サイズ：</strong>60x40 cm</span>
+          <span class="pt language" style="display:none;"><strong>Tamanho:</strong> 60x40 cm</span>
+        </li>
+        <li><i class="fas fa-university"></i>
+          <span class="es language"><strong>Lugar de Creación:</strong> Facultad de Bellas Artes en Madrid</span>
+          <span class="en language" style="display:none;"><strong>Creation Place:</strong> Fine Arts School of
+            Madrid</span>
+          <span class="it language" style="display:none;"><strong>Luogo di Creazione:</strong> Accademia di Belle Arti
+            di Madrid</span>
+          <span class="ru language" style="display:none;"><strong>Место создания:</strong> Факультет изящных искусств в
+            Мадриде</span>
+          <span class="zh language" style="display:none;"><strong>创作地点：</strong>马德里美术学院</span>
+          <span class="ar language" style="display:none;"><strong>مكان الإنشاء:</strong> كلية الفنون الجميلة في
+            مدريد</span>
+          <span class="de language" style="display:none;"><strong>Entstehungsort:</strong> Fakultät für Schöne Künste in
+            Madrid</span>
+          <span class="fr language" style="display:none;"><strong>Lieu de création :</strong> Faculté des Beaux-Arts de
+            Madrid</span>
+          <span class="ja language" style="display:none;"><strong>創作場所：</strong>マドリード美術学部</span>
+          <span class="pt language" style="display:none;"><strong>Lugar de Criação:</strong> Faculdade de Belas Artes de
+            Madrid</span>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i>
+          <span class="es language"><strong>Ubicación Actual:</strong> Colección Privada en Madrid. No está a la venta,
+            pero se valorarán ofertas superiores a 1.000.000 € por parte de quienes realmente valoren sus
+            principios.</span>
+          <span class="en language" style="display:none;"><strong>Current Location:</strong> Private Collection Madrid.
+            Not for sale, but offers over 1,000,000 € will be considered by individuals who truly value its
+            principles.</span>
+          <span class="it language" style="display:none;"><strong>Ubicazione Attuale:</strong> Collezione Privata
+            Madrid. Non in vendita, ma si considereranno offerte superiori a 1.000.000 di euro da parte di persone che
+            ne valorizzino i principi.</span>
+          <span class="ru language" style="display:none;"><strong>Текущее положение:</strong> Частная коллекция, Мадрид.
+            Не продается, но предложения свыше 1 000 000 евро будут рассмотрены от тех, кто ценит её Принципы.</span>
+          <span class="zh language"
+            style="display:none;"><strong>当前位置：</strong>马德里私人收藏。非卖品，但如果出价超过1,000,000欧元，且买家珍视其精神内核，我们将予以考虑。</span>
+          <span class="ar language" style="display:none;"><strong>الموقع الحالي:</strong> مجموعة خاصة في مدريد. ليست
+            للبيع، لكن ستُؤخذ بعين الاعتبار العروض التي تتجاوز قيمتها 1,000,000 يورو من قبل من يقدرون مبادئها.</span>
+          <span class="de language" style="display:none;"><strong>Aktueller Standort:</strong> Privatsammlung in Madrid.
+            Unverkäuflich, aber Gebote über 1.000.000 € von Liebhabern, die die Prinzipien schätzen, werden
+            erwogen.</span>
+          <span class="fr language" style="display:none;"><strong>Emplacement actuel :</strong> Collection privée à
+            Madrid. Non à vendre, mais les offres supérieures à 1 000 000 € seront examinées pour ceux qui estiment ses
+            principes.</span>
+          <span class="ja language"
+            style="display:none;"><strong>現在の場所：</strong>マドリードの個人蔵。非売品ですが、その本質を理解される方からの1,000,000ユーロ以上のオファーは検討します。</span>
+          <span class="pt language" style="display:none;"><strong>Localização Atual:</strong> Coleção Privada em Madrid.
+            Não está à venda, porém serão consideradas propostas acima de 1.000.000 € por quem genuinamente valorize os
+            seus princípios.</span>
+        </li>
+      </ul>
+    </section>
 
-  <section class="main-image">
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
+    <!-- Análisis Crítico -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-feather-alt mr-2"></i>
+        <span class="es language">Análisis Crítico</span>
+        <span class="en language" style="display:none;">Critical Analysis</span>
+        <span class="it language" style="display:none;">Analisi Critica</span>
+        <span class="ru language" style="display:none;">Критический анализ</span>
+        <span class="zh language" style="display:none;">批判性分析</span>
+        <span class="ar language" style="display:none;">التحليل النقدي</span>
+        <span class="de language" style="display:none;">Kritische Analyse</span>
+        <span class="fr language" style="display:none;">Analyse Critique</span>
+        <span class="ja language" style="display:none;">批評的分析</span>
+        <span class="pt language" style="display:none;">Análise Crítica</span>
+      </h2>
+      <div class="description-text">
 
+        <!-- Spanish (Source) -->
+        <div class="es language">
+          <p>Esta majestuosa pintura de Paz Arés, fechada en 1985, destaca por su composición profundamente evocadora y
+            su uso cálido de la luz y el color. La escena está dominada por un violín y su arco, dispuestos con suma
+            delicadeza sobre un estuche abierto y acompañados de una antigua lámpara de aceite. Esta magistral
+            disposición no es en absoluto casual; tiene el propósito de sugerir no sólo la forma física del instrumento,
+            sino de invocar su alma melódica, creando una atmósfera especialmente atractiva.</p>
+          <p>El enfoque sobre el violín, situado centralmente y bañado por la luz suave y dorada de la lámpara, invita
+            al espectador a contemplar la deslumbrante belleza de su artesanía: las curvas envolventes de la madera, el
+            sutil brillo de las cuerdas y la textura levemente desgastada del arco. Cada detalle ha sido resaltado de
+            tal manera que casi podemos escuchar la música que podría llegar a producir. La tenue luz de la lámpara no
+            solo ilumina el instrumento en el vacío, sino que añade una calidad casi mística a la escena, como si
+            estuviéramos presenciando un momento sagrado e íntimo en la silenciosa vigilia de un músico.</p>
+          <p>La artista ha mantenido siempre un fuerte vínculo existencial con las artes musicales, formándose desde su
+            infancia en disciplinas como el canto, la guitarra clásica y el fagot, además de participar activamente en
+            diversos coros a lo largo de su vida. En esta obra eligió representar el violín, un instrumento cuyo sonido
+            humano, profundo y resonante resalta por su belleza intrínseca y su emotiva complejidad poética.</p>
+          <p>Adicionalmente, esta obra se alinea por completo con su enfoque como educadora. Arés busca de manera
+            constante fusionar la enseñanza tradicional con las artes para hacer el aprendizaje más creativo, humano y
+            ameno. En sus clases, no era raro que un alumno trajera un instrumento musical en vivo para acompañar la
+            lectura conjunta de poemas o para representar enseñanzas teatrales. De este modo, lograba transformar el
+            aula en un auténtico espacio de expresión artística.</p>
+          <p>La paleta de colores empleada es rica pero sabiamente sobria, dominada por marrones cálidos, tonos tierra y
+            ámbar resplandeciente, creando una sugestiva atmósfera de clasicismo y serena nostalgia. El fondo,
+            deliberadamente difuminado, dirige la atención directamente hacia los objetos iluminados, demostrando un
+            perfecto equilibrio orgánico del foco lumínico.</p>
+          <p>Por último, el sugerente título, <em>"Silencio en Clave de Luz"</em>, conecta íntimamente con el
+            persistente enfoque de Arés en la introspección personal y la meditación; elementos que han definido tanto
+            su enriquecedora vida privada como su pedagogía. La sabia referencia a la "clave" revela una sólida
+            fundamentación en la técnica musical, mientras que el "silencio" y la "luz" simbolizan inequívocamente la
+            ansiada paz interior y la iluminación espiritual del ser humano.</p>
+        </div>
 
-          <img class="zoom-image" src="violin.jpg" width="100%" style="border:20px solid white;" alt="Amazing">
+        <!-- English -->
+        <div class="en language" style="display:none;">
+          <p>This majestic painting by Paz Arés, dated 1985, stands out for its deeply evocative composition and its
+            warm use of light and color. The scene is dominated by a violin and its bow, delicately arranged over an
+            open case and accompanied by a vintage oil lamp. This masterful arrangement is by no means accidental; it is
+            intended to suggest not only the instrument's physical form but to summon its melodic soul, establishing a
+            profoundly appealing atmosphere.</p>
+          <p>The focus on the violin, centrally placed and bathed in the soft, golden light of the lamp, invites the
+            viewer to contemplate the dazzling beauty of its craftsmanship: the enveloping wood curves, the subtle gleam
+            of the strings, and the slightly worn texture of the bow. Every detail is highlighted so vividly that we can
+            almost hear the music it might produce. The faint lamplight not only illuminates the instrument within a
+            gentle void but adds an almost mystical quality to the scene, as if we were witnessing a sacred, intimate
+            moment during a musician's silent vigil.</p>
+          <p>The artist has always kept a strong existential bond with musical arts, having trained since childhood in
+            disciplines such as signing, classical guitar, and the bassoon, while also participating in various choirs.
+            In this piece, she chose to depict the violin, an instrument whose deeply human, resonant tone is defined by
+            its intrinsic beauty and complex poetic emotion.</p>
+          <p>Furthermore, this artwork fully aligns with her focus as an educator. Arés constantly seeks to merge
+            traditional teaching with the arts to make learning more creative, human, and enjoyable. In her classes, it
+            was not uncommon for a student to bring a live musical instrument to accompany poetry readings or to act out
+            lessons. By doing this, she managed to transform a regular classroom into an authentic space for artistic
+            expression.</p>
+          <p>The color palette employed is rich yet wisely restrained, dominated by warm browns, earth tones, and
+            resplendent amber, generating a suggestive atmosphere of classicism and serene nostalgia. The deliberately
+            blurred background guides the viewer's attention straight to the illuminated objects, illustrating a
+            perfect, organic balance of focus.</p>
+          <p>Finally, the evocative title, <em>"Silence in Key of Light"</em>, connects closely with Arés's abiding
+            emphasis on personal introspection and meditation—concepts that have deeply defined her private life as well
+            as her pedagogy. The "key" reference gracefully reveals a solid foundation in musical technique, whereas the
+            "silence" and the "light" unequivocally symbolize the longed-for inner peace and humanity’s spiritual
+            enlightenment.</p>
+        </div>
 
+        <!-- Italian -->
+        <div class="it language" style="display:none;">
+          <p>Questo maestoso dipinto di Paz Arés, datato 1985, si distingue per la sua composizione profondamente
+            evocativa e l'uso caldo di luce e colore. La scena è dominata da un violino e il suo archetto, delicatamente
+            posati in una custodia aperta, accanto a una vecchia lampada a olio. Questa magistrale disposizione non è
+            affatto casuale; intende suggerire non solo la forma fisica dello strumento, ma evocarne l'anima melodica,
+            creando un'atmosfera particolarmente affascinante.</p>
+          <p>L'attenzione sul violino, al centro della tela e bagnato dalla luce dorata della lampada, invita lo
+            spettatore a contemplare la straordinaria bellezza del suo artigianato: le curve avvolgenti del legno, il
+            lieve bagliore delle corde e la trama leggermente consunta dell'archetto. Ogni dettaglio è esaltato in modo
+            tale da farci quasi udire la musica che potrebbe sprigionare. La luce fioca non fa che aggiungere una
+            qualità quasi mistica, come se stessimo assistendo a un momento intimo e sacro nella vigilia silenziosa di
+            un musicista.</p>
+          <p>L'artista ha sempre mantenuto un profondo legame con le arti musicali, studiando canto, chitarra classica e
+            fagotto sin da bambina, oltre ad aver preso parte a numerosi cori. In quest'opera, ha scelto di
+            rappresentare il violino proprio per il suo suono profondo, umano e risonante, simbolo di intrinseca
+            bellezza e pura poesia.</p>
+          <p>In aggiunta, l'opera si allinea perfettamente alla vocazione pedagogica di Arés, che cerca costantemente di
+            fondere l'insegnamento tradizionale con le discipline artistiche. Nelle sue lezioni accadeva spesso che un
+            allievo suonasse uno strumento dal vivo per accompagnare poesie o presentazioni teatrali, trasformando così
+            l'aula in un autentico spazio d'espressione.</p>
+          <p>La paletta cromatica è ricca ma sapientemente sobria, dominata da caldi marroni, sfumature di terra e
+            ambra, generando una suggestiva atmosfera d'altri tempi. Lo sfondo volutamente sfocato fa convergere lo
+            sguardo del fruitore sugli oggetti luminosi con grande equilibrio.</p>
+          <p>Infine, il titolo, <em>"Silenzio in Chiave di Luce"</em>, esplicita l'inclinazione introspettiva della
+            pittrice, la quale fa riferimento al termine "chiave" (musicale) come espressione di profonda tecnica,
+            mentre il "silenzio" unito alla "luce" invoca inequivocabilmente l'ambita pace interiore ed emancipazione
+            spirituale.</p>
+        </div>
 
+        <!-- Russian -->
+        <div class="ru language" style="display:none;">
+          <p>Эта величественная картина Пас Арес, датированная 1985 годом, выделяется своей глубоко выразительной
+            композицией, а также теплым использованием света и цвета. В центре композиции — скрипка и ее смычок,
+            деликатно лежащие в открытом футляре рядом со старинной масляной лампой. Эта мастерская расстановка отнюдь
+            не случайна; её цель не только в том, чтобы передать телесную форму инструмента, но и в том, чтобы возродить
+            его мелодическую душу, создавая чарующую атмосферу.</p>
+          <p>Фокусировка на скрипке, расположенной в центре и залитой мягким золотистым светом лампы, приглашает зрителя
+            созерцать невероятную красоту ручной работы: плавные изгибы дерева, тонкий блеск струн и слегка потертую
+            текстуру смычка. Каждая деталь подчеркнута так живо, что мы почти можем услышать ту музыку, которую он
+            способен создать. Тусклый свет придает сцене почти мистическое звучание — словно мы наблюдаем сокровенное
+            мгновение безмолвного бдения музыканта.</p>
+          <p>Художница всегда сохраняла прочную экзистенциальную связь с музыкальным искусством. Она с детства обучалась
+            пению, классической гитаре и фаготу, а также пела в различных хорах. В данном произведении Арес выбрала
+            скрипку, звук которой, глубокий и резонирующий, кажется ей совершенным воплощением красоты и поэтической
+            многогранности.</p>
+          <p>Более того, эта картина полностью соответствует ее педагогической концепции. Арес неизменно стремится
+            объединить традиционное образование с искусством, чтобы сделать обучение более свободным и человечным. На ее
+            занятиях студенты нередко приносили живые инструменты для сопровождения чтения стихов, превращая класс в
+            настоящее пространство творческого самовыражения.</p>
+          <p>Цветовая палитра богата, но при этом разумно сдержанна, с преобладанием теплых коричневых и янтарных
+            оттенков. Намеренно размытый фон направляет внимание зрителя прямо на освещенные объекты, демонстрируя
+            органичный баланс света и тени.</p>
+          <p>И наконец, выразительное название <em>«Тишина в ключе света»</em> тесно связано с фокусом художницы на
+            внутренней интроспекции. Указание на «ключ» метафорически отсылает к музыкальной грамоте, в то время как
+            сочетание «тишины» и «света» однозначно символизирует долгожданный покой и духовное озарение души.</p>
+        </div>
+
+        <!-- Chinese -->
+        <div class="zh language" style="display:none;">
+          <p>帕兹·阿雷斯（Paz
+            Arés）1985年的这幅宏伟画作，以其深刻而引人深思的构图和对光影与色彩的温暖运用而脱颖而出。画面的中心是一把小提琴和琴弓，它们被极其轻柔地放置在一个敞开的琴盒上，旁边立着一盏古老的油灯。这种巧妙的安排绝非偶然，其用意不仅是展示乐器的物理形态，更是为了唤起其旋律的灵魂，创造出一种极具吸引力的氛围。
+          </p>
+          <p>
+            画面焦点集中于一把位于上方并沐浴在柔软金光中的小提琴，这邀请观者仔细观看那精湛的工艺美景：包裹般的木质曲线、琴弦发出的微弱光芒以及琴弓上略显磨损的纹理。每一个细节都被生动地刻画出来，几乎让人能直接听见琴声。油灯昏暗的光不仅照亮了乐器，更为场景增添了近乎神秘的质感，仿佛我们正在见证一位音乐家在寂静的守夜中某个神圣又私密的瞬间。
+          </p>
+          <p>
+            这位艺术家一生都与音乐艺术保持着极深的情感羁绊，她从小就接受声乐、古典吉他和巴松管的训练，并参与过各类合唱团。而在这件作品中，她选择了小提琴——这种乐器富有极其人性、深邃且具有共鸣感的音色，在她看来，这是内在美和诗意情感复杂性的完美象征。
+          </p>
+          <p>
+            不仅如此，这件作品也完全符合她作为一名教育者的理念。阿雷斯不断寻求将传统教学与艺术融合，以使学习过程更具创造性、更富有人情味。在她的课堂上，学生带真实乐器来配合诗歌朗诵或进行戏剧扮演屡见不鲜。借由此法，她成功地将普通教室变成了一个展现艺术的真实空间。
+          </p>
+          <p>画作的色彩极其丰富同时也克制有度，以温暖的棕色、大地色与金色琥珀色为主，营造出一种带有古典主义与宁静怀旧气息的氛围。背景被刻意模糊处理，直接将观众的注意力转移到受光物体上，体现了完美的光影平衡。</p>
+          <p>
+            最后，极其富有诗意的画名——<em>“光之钥中的寂静”</em>，与阿雷斯一直以来强调的“内省与冥想”主题紧密相连。标题中对（音乐）“钥／谱号”的提及暗示了坚实的技法根基，而“寂静”与“光辉”的结合，则明确地象征着人类内心的宁静以及崇高的精神觉醒。
+          </p>
+        </div>
+
+        <!-- Arabic -->
+        <div class="ar language" style="display:none;">
+          <p>تبرز هذه اللوحة المهيبة لباز آريس، والمؤرخة في عام 1985، بفضل تكوينها المثير والمؤثر، واستخدامها الدافئ
+            للون وللแสง. يهيمن على المشهد كمان وقوسه، تم وضعهما برقة متناهية فوق حقيبة مفتوحة، برفقة مصباح زيتي عتيق.
+            هذا الترتيب المتقن ليس صدفة على الإطلاق؛ بل يهدف لتقديم روح الألحان الموسيقية وليس فقط إظهار الشكل المادي
+            للآلة، مكوناً أجواءً جذابة للغاية.</p>
+          <p>تسليط الضوء على الكمان، المتمركز في اللوحة والمغمور بالضوء الذهبي الخافت، يدعو الناظرين للتأمل في جمال
+            صناعته المبهر: انحناءات الخشب الناعمة، بريق الأوتار الخافت والملمس المتآكل قليلاً للقوس. كل التفاصيل تم
+            إبرازها بحيث نكاد نسمع الألحان، وتضفي إضاءة المصباح الهادئة طابعاً شبه ملائكي أو صوفي، وكأننا نشهد لحظة
+            حميمة صامتة.</p>
+          <p>لطالما امتدت روابط الفنانة العميقة تجاه فنون الموسيقى، حيث تدربت في صغرها على الغناء والغيتار الكلاسيكي
+            والباسون، بالإضافة لانخراطها في جوقات متعددة. واختارت الكمان هنا لأن نبرته الإنسانية العميقة تعتبرها تجسيداً
+            للجمال الداخلي والشعر البليغ.</p>
+          <p>وعلاوة على ذلك، يتماشى هذا العمل الفني مع مسيرتها التربوية كمعلمة، حيث تدمج التدريس التقليدي مع الفنون لجعل
+            التعليم أكثر متعة وإبداعاً. في فصولها الدراسية، كان الطلاب يعزفون الموسيقى الحية لمرافقة قراءة القصائد،
+            محوّلة الفصل إلى مسرح للإبداع.</p>
+          <p>لوحة الألوان غنية ومدروسة للغاية، يغلب عليها البني الدافئ وألوان الأرض والكهرمان المتوهج، مما يبعث على جو
+            كلاسيكي حنيني. الخلفية مشوشة بشكل مقصود لتركيز الانتباه كلياً على الأشياء المضيئة.</p>
+          <p>في الختام، يرتبط العنوان، <em>"الصمت في مفتاح الضوء"</em>، بتأملات آريس حول الهدوء الداخلي. الإشارة إلى
+            المفتاح الموسيقي يقابلها إتقان تقني، بينما يرمز "الصمت" مع "الضوء" إلى الطمأنينة المنشودة وإشراقة الروح
+            الإنسانية العظيمة.</p>
+        </div>
+
+        <!-- German -->
+        <div class="de language" style="display:none;">
+          <p>Dieses prächtige Gemälde von Paz Arés aus dem Jahr 1985 zeichnet sich durch seine tiefgreifend evokative
+            Komposition und die sehr warme Nutzung von Licht und Farbe aus. Im Zentrum der Szene liegt eine Violine samt
+            Bogen zart auf einem geöffneten Kasten gebettet, neben der eine antike Öllampe steht. Diese meisterhafte
+            Anordnung ist keineswegs zufällig entstanden; sie soll vielmehr die melodische Seele des Instruments
+            heraufbeschwören und nicht nur seine rein physische Form erfassen.</p>
+          <p>Der visuelle Fokus liegt direkt auf der Geige, umhüllt vom sanften, goldenen Lampenlicht, welches den
+            Betrachter förmlich einlädt, die atemberaubende Handwerkskunst zu bestaunen: Die weichen Rundungen des
+            Holzes, der dezente Glanz der Saiten und die abgenutzte Textur des Bogens. Jedes feine Detail wird so
+            lebendig hervorgehoben, als könne man sogleich die Melodien hören, die dieses Instrument hervorzubringen
+            vermag. Das Halbdunkel verleiht der Szene eine fast mystische Stille, als wären wir Zeugen einer heiligen
+            Andacht.</p>
+          <p>Die Künstlerin war der Musik zeitlebens existenziell verbunden und bildete sich schon in der Kindheit in
+            Gesang, klassischer Gitarre und Fagott aus. Nicht umsonst wählte sie für dieses Werk die Geige, deren
+            tiefer, menschlicher und resonanter Klang in ihren Augen die höchste intrinsische Schönheit und poetische
+            Komplexität repräsentiert.</p>
+          <p>Das Werk spiegelt darüber hinaus ihren edukativen Ansatz als Lehrerin eindrucksvoll wider. Arés sucht
+            stets, klassische Lehrinhalte mit künstlerischen Ausdrucksformen zu verschmelzen, um den Unterricht
+            kreativer und greifbarer zu machen. Sehr oft brachten ihre Schüler zur Untermalung von Gedichten lebendige
+            Instrumente in den Unterricht – so wandelte sie das Klassenzimmer in einen Raum echter künstlerischer
+            Entfaltung um.</p>
+          <p>Die verwendete Farbpalette ist reich, obschon sehr beherrscht, dominiert von warmen Brauntönen sowie einem
+            glühenden Bernstein, was ein starkes Gefühl von Klassizismus und nostalgischer Ruhe aufkommen lässt. Der
+            unscharf gehaltene Hintergrund konzentriert den gesamten Blick raffiniert auf den Lichtpunkt.</p>
+          <p>Der eindrucksvolle Titel, <em>"Stille im Schlüssel des Lichts"</em>, zitiert Arés' Neigung zur meditativen
+            Introspektion. Die Bezugnahme auf den musikalischen "Schlüssel" fungiert als Fundament auf Ebene der
+            Techniken, während die Begriffe "Stille" und "Licht" eindeutig für den inneren Frieden und die spirituelle
+            Erleuchtung der Menschheit stehen.</p>
+        </div>
+
+        <!-- French -->
+        <div class="fr language" style="display:none;">
+          <p>Cette majestueuse peinture de Paz Arés, datée de 1985, se distingue de prime abord par sa composition
+            profondément évocatrice et son traitement particulièrement chaud de la lumière et de la couleur. La scène
+            est dominée par un violon et son archet, placés avec une immense délicatesse sur un étui ouvert, le tout
+            accompagné d'une vieille lampe à huile. Cette présentation très mesurée n’est en rien le fruit du hasard ;
+            elle entend non seulement représenter la forme physique de l’instrument, mais surtout en invoquer l’âme
+            mélodique, instaurant une atmosphère extrêmement magnétique.</p>
+          <p>L’accent mis sur le violon, en position centrale et baigné d'une fine lumière dorée, nous invite
+            chaleureusement à admirer son magnifique artisanat : la courbe enveloppante du bois, l'éclat subtil des
+            cordes et la texture légèrement érodée de l'archet. Chaque détail est tellement saillant que l'on jurerait
+            deviner la musique prête à s’en échapper. L’éclairage ajoute un caractère presque mystique au recueillement,
+            comme lors de la veillée intime et sacrée d’un musicien.</p>
+          <p>L'artiste a toujours entretenu un attachement existentiel envers les arts musicaux, elle s'est d'ailleurs
+            formée dès son plus jeune âge au chant, à la guitare classique ou encore au basson. Dans ce tableau, elle a
+            opté pour le violon, un instrument au timbre profondément humain dont la sonorité exprime l'essence même de
+            la beauté et de l'émotion poétique.</p>
+          <p>À cet égard, cette œuvre s'inscrit pleinement dans la démarche pédagogique de Mme Arés, éducatrice de
+            conviction. Elle n'a eu de cesse d'allier l'enseignement traditionnel et les arts vivants pour asseoir une
+            méthode créative, ludique et inclusive. Il n'était pas rare que ses élèves étudient la littérature tout en
+            l'accompagnant d'un instrument de musique, réussissant ainsi à métamorphoser la salle de classe classique en
+            véritable sanctuaire d’expression artistique.</p>
+          <p>La palette colorimétrique, généreuse mais empreinte de grande sobriété, est dominée par des teintes de
+            terre, un camaïeu de bruns chauds et d'ambres éclatants qui imposent une atmosphère nostalgique et
+            classique. L'arrière-plan, magnifiquement flouté, redirige de manière organique toute l'attention de l'œil
+            humain vers les formes illuminées au centre.</p>
+          <p>En somme, le titre lui-même, <em>« Silence en Clé de Lumière »</em>, traduit un lien organique permanent
+            avec la tendance à l'introspection de l’auteure. La « clé » (musicale) dénote clairement sa base technique
+            formelle, tandis que le « silence » couplé à la « lumière » renvoie immuablement à cette paix spirituelle
+            tant recherchée par le genre humain.</p>
+        </div>
+
+        <!-- Japanese -->
+        <div class="ja language" style="display:none;">
+          <p>
+            パス・アレスによる1985年のこの壮大な絵画は、感情を深く揺さぶるような構図と、光と色彩の温かい用法が際立っています。開かれたケースの上にそっと置かれたバイオリンと弓、そしてその傍らに寄り添う古いオイルランプが主役の光景です。この見事な配置は決して偶然ではありません。それは単に楽器の物理的な形態を示すためだけでなく、そのメロディックな魂を呼び覚まし、極めて魅力的な雰囲気をつくり出すことを意図しています。
+          </p>
+          <p>
+            ランプの柔らかい黄金色の光に照らされたバイオリンへと鑑賞者の視線は自然と導かれ、その見事な職人技に見入ってしまいます。木の包み込むような曲線、弦の繊細な輝き、そして弓のわずかに使い込まれた質感など、どの細部をとっても今にも音楽が聴こえてきそうなほどにリアルです。ほのかな明かりがただ楽器を照らすだけでなく、シーン全体に神秘的な静けさをもたらしており、まるで音楽家の誰もいない神聖な祈りの時間を覗き見ているかのようです。
+          </p>
+          <p>
+            芸術家のパス・アレスは幼少期から歌唱、クラシックギター、ファゴットなどの専門的な訓練を受け、様々な合唱団にも参加するなど、常に音楽芸術との精神的なつながりを保ってきました。彼女がこの作品でバイオリンを選んだのは、その深く共鳴する人間味あふれる音色が、彼女にとって内在する美と詩的複雑性の完全なる象徴であるからです。
+          </p>
+          <p>
+            さらに、この作品は教育者としてのアプローチとも完全に一致しています。アレスは常に、学習をより創造的で楽しく人間的なものにするために、伝統的な教育法に芸術を統合することを探求し続けました。彼女の授業では、生徒たちが詩の朗読に合わせて実際に楽器を演奏することが珍しくありませんでした。そうすることで、普通の教室を純粋な芸術的表現空間へと変貌させていたのです。
+          </p>
+          <p>
+            色使いは豊かでありながらも計算された控えめさがあり、温かみのある茶色、アースカラー、そして輝くような琥珀色が支配的です。それにより、古典主義と静かなノスタルジーの雰囲気が見事に演出されています。意図的にぼかされた背景は、光の当たる対象へとダイレクトに注意を向けさせ、完璧で有機的なフォーカスのバランスを作り出しています。
+          </p>
+          <p>
+            最後に、<em>「光の鍵の中の沈黙」</em>という暗示的なタイトルは、アレスが生涯を通じて大切にしてきた自己内省や瞑想と密接に結びついています。音楽的な「鍵盤（音部記号）」というワードは、彼女の確かな音楽理論への下地を示唆し、一方「沈黙」と「光」の組み合わせは、人々が切望する内なる平和と精神的な啓蒙を間違いなく象徴しています。
+          </p>
+        </div>
+
+        <!-- Portuguese -->
+        <div class="pt language" style="display:none;">
+          <p>Esta majestosa pintura de Paz Arés, datada de 1985, destaca-se pela sua composição profundamente evocativa
+            e pelo uso afável da luz e da cor. A cena é dominada por um violino e o seu respetivo arco, dispostos com
+            suma delicadeza sobre um estojo aberto e acompanhados por uma clássica lamparina a óleo. Esta magistral
+            disposição não é de todo casual; o seu propósito principal é não só o de sugerir a forma física do
+            instrumento, senão invocar paralelamente a sua alma melódica, arquitetando assim uma atmosfera peculiarmente
+            atrativa.</p>
+          <p>O foco em torno do violino, centralizado e banhado pelo lume suave e dourado da lamparina, incita o
+            espectador a contemplar a sublime beleza do seu artesanato: as curvas envolventes da madeira natural, o
+            subtil cintilar das cordas e a textura ligeiramente gasta do próprio arco. Cada um destes pormenores foi
+            acentuado de tal forma viva que quase conseguimos vislumbrar e ouvir a música que o violino pudesse vir a
+            produzir. A parca luz que rompe as sombras não o ilumina num enorme vazio, outorgando antes uma qualidade
+            quase mística à cena, assemelhando-nos, enquanto observadores, que presenciamos um rito sagrado na secreta
+            vigília matutina de um génio criativo.</p>
+          <p>A artista ostentou e alimentou historicamente este laço existencial absoluto com as chamadas artes
+            musicais, instruindo-se desde a frágil infância em matérias de canto, guitarra clássica ibérica e fagote; a
+            sua intervenção nos diversos coros foi também muito ativa ao decurso de toda a sua vida profissional e
+            privada. Ao depararmo-nos com esta tela em particular, damos por justificada a sua elevação do violino a um
+            novo estatuto intocável entre instrumentos — fruto indubitável desse tal som incrivelmente humano, íntimo,
+            que brilha pela incontestável profundidade estética e complexidade poética que contém nas entranhas.</p>
+          <p>Mais ainda, este prodigioso quadro casa-se perfeitamente bem com todo o seu incansável enfoque letivo
+            exercido por longa data. Arés tem buscado incansavelmente aglomerar o mundo artístico à docência dita
+            estrutural em torno do pressuposto de potenciar a componente intelectual na sua variante criativa de
+            excelência. As salas letivas e a docência magistral comungavam por lá as artes, nomeadamente instrumentos a
+            ritmar uma poesia lida nos compêndios convencionais — tudo se metamorfoseando em arte expressiva e
+            aprendizagem in loco.</p>
+          <p>Já do ponto de vista da paleta monocromática usada, poderemos classificar as escolhas por ricas mas
+            prudentes aos nossos olhares cénicos. Os castanhos outonais da madeira, conjugados com as cores térreas e
+            com as manchas em âmbar iluminado resplandecem para o epicentro lumínico na escuridão nostálgica evocável e
+            difusa; gerando um absoluto sentido poético focado com soberana exatidão técnica formidável.</p>
+          <p>Por fim, não podemos fechar esta análise omitindo a reflexão explícita em torno do batismo da peça a que
+            intitularia <em>"Silêncio em Clave de Luz"</em>. Há nisto uma prova inquestionável de apego total ao seu
+            próprio reflexo contemplativo interiorizante bem presente noutras dimensões artísticas de Paz Arés; a menção
+            vocabular explícita ao som perante a "clave" denuncia base e formação musical erudita latente. De resto, é
+            no conluio entre o abismo total subjacente ao "silêncio" perante a salvação trazida a preceito sob forma da
+            dita "luz" divinal que nos transportam até à catarse emotiva libertadora no resgate metafórico da essência
+            de Ser em toda a linha do Homem moderno.</p>
         </div>
 
       </div>
+    </section>
+  </main>
+
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset - <span class="es language">Arte y Trascendencia</span>
+      <span class="en language" style="display:none;">Art and Transcendence</span>
+      <span class="it language" style="display:none;">Arte e Trascendenza</span>
+      <span class="ru language" style="display:none;">Искусство и трансцендентность</span>
+      <span class="zh language" style="display:none;">艺术与超越</span>
+      <span class="ar language" style="display:none;">الفن والمتسامي</span>
+      <span class="de language" style="display:none;">Kunst und Transzendenz</span>
+      <span class="fr language" style="display:none;">Art et Transcendance</span>
+      <span class="ja language" style="display:none;">芸術と超越</span>
+      <span class="pt language" style="display:none;">Arte e Transcendência</span>
+    </p>
+  </footer>
 
-    </div>
-
-
-  </section>
-  <!-- Rest of the HTML here... -->
-
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>
-              <div class="english language">Technique: Oil on canvas.</div>
-              <div class="spanish language" style="display: none;">Técnica: Óleo sobre lienzo.</div>
-              <div class="italian language" style="display: none;">Tecnica: Olio su tela.</div>
-              <div class="chinese language" style="display: none;">技术：油画布上的油画.</div>
-              <div class="arabic language" style="display: none;">تقنية: زيت على قماش.</div>
-            </li>
-
-
-            <li>
-              <div class="english language">Size: 60x40 cm</div>
-              <div class="spanish language" style="display: none;">Tamaño: 60x40 cm</div>
-              <div class="italian language" style="display: none;">Dimensioni: 60x40 cm</div>
-              <div class="chinese language" style="display: none;">尺寸：60x40厘米</div>
-              <div class="arabic language" style="display: none;">الحجم: 60x40 سم</div>
-            </li>
-
-            <li>
-              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
-              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
-              </div>
-              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
-              </div>
-              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
-              <div class="arabic language" style="display: none;">مكان الإبداع: كلية الفنون الجميلة في مدريد</div>
-
-            </li>
-            <li>
-              <div class="english language">Current Location: Private Collection Madrid. Not for sale, but offers over
-                1,000,000 euros
-                will be considered by individuals who truly value its principles.</div>
-              <div class="spanish language" style="display: none;">Ubicación Actual: Colección Privada en Madrid. No
-                está a la venta,
-                pero se valorarán ofertas superiores a 1,000,000 euros por parte de personas que realmente valoren sus
-                principios.
-              </div>
-              <div class="italian language" style="display: none;">Posizione Attuale: Collezione Privata Madrid. Non in
-                vendita, ma si
-                considereranno offerte superiori a 1.000.000 di euro da parte di persone che valorizzano veramente i
-                suoi principi.
-              </div>
-              <div class="chinese language" style="display: none;">当前位置：马德里私人收藏。非出售，但对超过100万欧元的报价，如果出价者真正重视其价值，将予以考虑。
-              </div>
-              <div class="arabic language" style="display: none;">الموقع الحالي: مجموعة خاصة في مدريد. ليست للبيع، لكن
-                سيتم النظر في
-                عروض تزيد عن 1,000,000 يورو من قبل الأشخاص الذين يقدرون حقًا مبادئها.</div>
-            </li>
-
-          </ul>
-
-
-        </div>
-        <div class="col-6 md audio" style="display:none;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="multilingual-description">
-    <div class="container">
-      <h1 style="color: gold;">
-        <div class="english language">Description</div>
-        <div class="spanish language" style="display: none;">Descripción</div>
-        <div class="italian language" style="display: none;">Descrizione</div>
-        <div class="chinese language" style="display: none;">描述</div>
-        <div class="arabic language" style="display: none;">وصف</div>
-      </h1>
-
-
-      <div class="english language">
-        <!-- English description here -->
-        <p>This painting by Paz Arés, dated 1985, is notable for its evocative composition and warm use of light and
-          color,
-          elements that make it especially attractive. The scene is dominated by a violin and its bow, delicately
-          arranged on an
-          open case, accompanied by an oil lamp. This arrangement is not accidental; it is intended to suggest not only
-          the
-          physical shape of the violin but also its melodic soul.</p>
-
-        <p>The focus on the violin, centrally positioned and bathed in the soft light of the lamp, invites viewers to
-          contemplate the beauty of its craftsmanship: the gentle curves of the wood, the shine of the strings, and the
-          worn
-          texture of the bow, each detail highlighted in a way that we can almost hear the music it could produce. The
-          lamp's
-          light not only illuminates the instrument but also adds an almost mystical quality to the scene, as if we were
-          witnessing a private and intimate moment in the life of a musician.</p>
-
-        <p>The artist Paz Arés has always had a strong connection with musical arts, having been trained from her
-          childhood in
-          disciplines such as singing, guitar, and bassoon, in addition to actively participating in various choirs.
-          However, in
-          this work, she chose to represent the violin, an instrument whose deep and resonant sound has always been
-          particularly
-          pleasing to her. This choice is not merely aesthetic, but reflects a deep emotional and sensory connection
-          with the
-          instrument, an element that, for her, symbolizes the beauty and complexity of music.</p>
-
-        <p>This work of art also aligns with her approach as an educator, where Arés continually seeks to merge
-          traditional
-          teaching with the arts to make learning more creative and enjoyable. Through her pedagogical practice, she
-          emphasizes
-          how the inclusion of the arts can elevate educational standards, making it more inclusive and dynamic. In her
-          classes,
-          it was not uncommon for a student to bring a musical instrument to accompany the reading of poems or
-          literature, or
-          even to represent teachings in theater, transforming the classroom into a space of artistic expression and
-          experiential learning.</p>
-
-        <p>This painting, therefore, is not only a celebration of music through the depiction of the violin under the
-          warm light
-          of a lamp but also reflects the educational philosophy of Paz Arés. The work invites viewers to perceive music
-          not
-          only as an art form but as a vehicle for learning and personal growth, echoing her own life dedicated to
-          teaching and
-          cultural enrichment of her students. In this sense, the painting transcends its visual beauty to become a
-          testimony to
-          the power of the arts to inspire and transform.</p>
-
-        <p>The color palette is rich yet subdued, dominated by warm browns and amber, which helps create an atmosphere
-          of
-          antiquity and nostalgia. The background, blurred and abstract, directs the viewer's attention to the
-          illuminated
-          objects, while providing enough texture and color variation to maintain visual interest without distracting.
-        </p>
-
-        <p>What makes this work particularly attractive is its ability to connect with viewers on an emotional level.
-          Observing
-          the painting, one can feel a connection to the tradition of classical music, a respect for craftsmanship, and
-          an
-          appreciation for moments of quiet and reflection. Paz Arés not only captures an image but also the essence of
-          music
-          and time, making this work a testament to the emotive power of visual art.</p>
-
-        <p>The title connects with Arés' focus on introspection and meditation, elements present in her personal life
-          and
-          pedagogy. The reference to the "key" suggests a foundation in musical theory, while "silence" and "light"
-          symbolize
-          inner peace and enlightenment.</p>
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <!-- Spanish description here -->
-        <p>Esta pintura de Paz Arés, fechada en 1985, destaca por su composición evocadora y su uso cálido de la luz y
-          el color,
-          elementos que la hacen especialmente atractiva. La escena está dominada por un violín y su arco, dispuestos
-          con
-          delicadeza sobre el estuche abierto, acompañados de una lámpara de aceite. Esta disposición no es casual;
-          tiene el
-          propósito de sugerir no sólo la forma física del violín, sino también su alma melódica.</p>
-
-        <p>El enfoque en el violín, situado centralmente y bañado por la luz suave de la lámpara, invita a los
-          espectadores a
-          contemplar la belleza de su artesanía: las curvas suaves de la madera, el brillo de las cuerdas y la textura
-          desgastada
-          del arco, cada detalle resaltado de manera que casi podemos oír la música que podría producir. La luz de la
-          lámpara no
-          solo ilumina el instrumento sino que también añade una calidad casi mística a la escena, como si estuviéramos
-          presenciando un momento privado e íntimo en la vida de un músico.</p>
-
-        <p>La artista Paz Arés siempre ha tenido un fuerte vínculo con las artes musicales, formándose desde su infancia
-          en
-          disciplinas como el canto, la guitarra y el fagot, además de participar activamente en diversos coros. Sin
-          embargo, en
-          esta obra, eligió representar el violín, instrumento cuyo sonido profundo y resonante siempre ha sido de su
-          particular
-          agrado. Esta elección no es meramente estética, sino que refleja una profunda conexión emocional y sensorial
-          con el
-          instrumento, un elemento que, para ella, simboliza la belleza y la complejidad de la música.</p>
-
-        <p>Esta obra de arte se alinea además con su enfoque como educadora, donde Arés busca constantemente fusionar la
-          enseñanza
-          tradicional con las artes para hacer el aprendizaje más creativo y ameno. A través de su práctica pedagógica,
-          enfatiza
-          cómo la inclusión de las artes puede elevar los estándares de educación, haciéndola más integradora y
-          dinámica. En sus
-          clases, no era raro que un alumno trajera un instrumento musical para acompañar la lectura de poemas o
-          literatura, o
-          incluso para representar en teatro las enseñanzas, transformando el aula en un espacio de expresión artística
-          y
-          aprendizaje vivencial.</p>
-
-        <p>Este cuadro, por tanto, no solo es una celebración de la música a través de la representación del violín bajo
-          la cálida
-          luz de una lámpara, sino también un reflejo de la filosofía educativa de Paz Arés. La obra invita a los
-          espectadores a
-          percibir la música no sólo como una forma de arte, sino como un vehículo de aprendizaje y crecimiento
-          personal, un eco
-          de su propia vida dedicada a la enseñanza y al enriquecimiento cultural de sus alumnos. En este sentido, la
-          pintura
-          trasciende su belleza visual para convertirse en un testimonio de la capacidad de las artes para inspirar y
-          transformar.</p>
-
-        <p>La paleta de colores es rica pero sobria, dominada por marrones cálidos y ámbar, lo que ayuda a crear una
-          atmósfera de
-          antigüedad y nostalgia. El fondo, difuminado y abstracto, dirige la atención del espectador hacia los objetos
-          iluminados, mientras proporciona suficiente textura y variación de color para mantener el interés visual sin
-          distraer.</p>
-
-        <p>Lo que hace que esta obra sea particularmente atractiva es su capacidad para conectar con los espectadores a
-          nivel
-          emocional. Al observar el cuadro, uno puede sentir una conexión con la tradición de la música clásica, un
-          respeto por la
-          habilidad artesanal y una apreciación por los momentos de quietud y reflexión. Paz Arés logra no solo capturar
-          una
-          imagen, sino también la esencia de la música y el tiempo, haciendo que esta obra sea un testimonio del poder
-          emotivo del
-          arte visual.</p>
-
-        <p>El título conecta con el enfoque de Arés en la introspección y la meditación, elementos presentes en su vida
-          personal y en su pedagogía. La referencia a la "clave" sugiere una fundamentación en la teoría musical,
-          mientras que el
-          "silencio" y la "luz" simbolizan la paz interior y la iluminación</p>
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-        <!-- Italian description here -->
-        <p>Questo dipinto di Paz Arés, datato 1985, si distingue per la sua composizione evocativa e l'uso caldo di luce
-          e
-          colore, elementi che lo rendono particolarmente attraente. La scena è dominata da un violino e il suo arco,
-          disposti
-          delicatamente su un astuccio aperto, accompagnati da una lampada ad olio. Questa disposizione non è casuale;
-          intende
-          suggerire non solo la forma fisica del violino, ma anche la sua anima melodica.</p>
-
-        <p>L'attenzione sul violino, posizionato centralmente e immerso nella luce soffusa della lampada, invita gli
-          spettatori
-          a contemplare la bellezza della sua artigianalità: le curve morbide del legno, la lucentezza delle corde e la
-          texture
-          consumata dell'arco, ogni dettaglio evidenziato in modo che possiamo quasi sentire la musica che potrebbe
-          produrre. La
-          luce della lampada non solo illumina lo strumento ma aggiunge anche una qualità quasi mistica alla scena, come
-          se
-          stessimo assistendo a un momento privato e intimo nella vita di un musicista.</p>
-
-        <p>L'artista Paz Arés ha sempre avuto un forte legame con le arti musicali, essendosi formata fin dall'infanzia
-          in
-          discipline come il canto, la chitarra e il fagotto, oltre a partecipare attivamente a vari cori. Tuttavia, in
-          quest'opera, ha scelto di rappresentare il violino, uno strumento il cui suono profondo e risonante è sempre
-          stato di
-          suo particolare gradimento. Questa scelta non è meramente estetica, ma riflette una profonda connessione
-          emotiva e
-          sensoriale con lo strumento, un elemento che, per lei, simboleggia la bellezza e la complessità della musica.
-        </p>
-
-        <p>Questa opera d'arte si allinea inoltre con il suo approccio come educatrice, dove Arés cerca continuamente di
-          fondere
-          l'insegnamento tradizionale con le arti per rendere l'apprendimento più creativo e piacevole. Attraverso la
-          sua
-          pratica pedagogica, enfatizza come l'inclusione delle arti possa elevare gli standard educativi, rendendoli
-          più
-          inclusivi e dinamici. Nelle sue lezioni, non era raro che uno studente portasse uno strumento musicale per
-          accompagnare la lettura di poesie o letteratura, o addirittura per rappresentare in teatro gli insegnamenti,
-          trasformando l'aula in uno spazio di espressione artistica e apprendimento esperienziale.</p>
-
-        <p>Questo quadro, quindi, non è solo una celebrazione della musica attraverso la rappresentazione del violino
-          sotto la
-          calda luce di una lampada, ma riflette anche la filosofia educativa di Paz Arés. L'opera invita gli spettatori
-          a
-          percepire la musica non solo come una forma d'arte, ma come un veicolo di apprendimento e crescita personale,
-          un'eco
-          della sua vita dedicata all'insegnamento e all'arricchimento culturale dei suoi studenti. In questo senso, il
-          dipinto
-          trascende la sua bellezza visiva per diventare una testimonianza del potere delle arti di ispirare e
-          trasformare.</p>
-
-        <p>La palette di colori è ricca ma sobria, dominata da toni caldi di marrone e ambra, che aiutano a creare
-          un'atmosfera
-          di antichità e nostalgia. Lo sfondo, sfocato e astratto, dirige l'attenzione dello spettatore sugli oggetti
-          illuminati, fornendo allo stesso tempo abbastanza texture e variazione di colore per mantenere l'interesse
-          visivo
-          senza distrarre.</p>
-
-        <p>Ciò che rende quest'opera particolarmente attraente è la sua capacità di connettersi con gli spettatori a
-          livello
-          emotivo. Osservando il quadro, si può sentire una connessione con la tradizione della musica classica, un
-          rispetto per
-          l'artigianalità e un apprezzamento per i momenti di quiete e riflessione. Paz Arés non cattura solo
-          un'immagine, ma
-          anche l'essenza della musica e del tempo, facendo di quest'opera una testimonianza del potere emotivo
-          dell'arte
-          visiva.</p>
-
-        <p>Il titolo si collega all'approccio di Arés all'introspezione e alla meditazione, elementi presenti nella sua
-          vita
-          personale e nella sua pedagogia. Il riferimento alla "chiave" suggerisce una base nella teoria musicale,
-          mentre il
-          "silenzio" e la "luce" simboleggiano la pace interiore e l'illuminazione.</p>
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <p>这幅由帕兹·阿雷斯（Paz
-          Arés）于1985年创作的画作以其引人入胜的构图和温暖的光线与色彩使用而著称，这些元素使其格外吸引人。场景以一把小提琴及其琴弓为主，巧妙地摆放在打开的琴盒上，旁边是一盏油灯。这种布置并非偶然；它旨在不仅表现小提琴的物理形态，还表达其旋律之魂。
-        </p>
-
-        <p>
-          画面聚焦于中央位置的小提琴，沐浴在灯光的柔和光芒中，邀请观众欣赏其工艺之美：木材的柔和曲线、琴弦的光泽和琴弓的磨损质感，每一个细节都被突出显示，让我们几乎可以听到它可能产生的音乐。灯光不仅照亮了乐器，还为场景增添了一种几乎是神秘的质感，仿佛我们正在见证一位音乐家生活中的一个私密而亲密的时刻。
-        </p>
-
-        <p>
-          艺术家帕兹·阿雷斯一直与音乐艺术有着强烈的联系，从儿时起就在歌唱、吉他和巴松管等领域接受训练，此外还积极参与各种合唱团。然而，在这件作品中，她选择了表现小提琴，这是一种她特别喜欢的声音深沉而共鸣的乐器。这种选择不仅是审美上的，而是反映了她与乐器的深刻情感和感官联系，对她来说，这象征着音乐的美丽与复杂性。
-        </p>
-
-        <p>
-          这件艺术作品还与她作为教育者的方式相符，阿雷斯不断寻求将传统教学与艺术融合，使学习更具创造性和愉悦性。通过她的教学实践，她强调艺术的融入能提升教育标准，使教育更具包容性和活力。在她的课堂上，学生携带乐器来伴随诗歌或文学作品的朗读，甚至在剧场中表现教学内容，都不是什么稀奇事，这将课堂变成了一个艺术表达和体验学习的空间。
-        </p>
-
-        <p>
-          因此，这幅画不仅是通过小提琴在温暖灯光下的表现来庆祝音乐，也反映了帕兹·阿雷斯的教育哲学。这件作品邀请观众将音乐视为一种艺术形式，也是学习和个人成长的工具，呼应了她一生致力于教育和学生文化充实的事业。从这个意义上说，这幅画超越了其视觉之美，成为艺术激发和变革力量的见证。
-        </p>
-
-        <p>色彩调色板丰富而内敛，以温暖的棕色和琥珀色为主，帮助营造一种古老和怀旧的氛围。背景虚化且抽象，引导观众的注意力集中于被照亮的物体，同时提供足够的纹理和色彩变化，以保持视觉兴趣而不分散注意力。</p>
-
-        <p>
-          这件作品特别吸引人的是它能够在情感层面与观众建立联系。观看这幅画时，人们可以感受到与古典音乐传统的联系，对工艺的尊重以及对宁静与反思时刻的欣赏。帕兹·阿雷斯不仅捕捉了一幅图像，还捕捉了音乐和时间的本质，使这件作品成为视觉艺术情感力量的见证。
-        </p>
-
-        <p>标题与阿雷斯在个人生活和教学中关注的内省和冥想相连。对“键”的提及暗示了音乐理论的基础，而“寂静”和“光明”象征着内心的平静与启迪。</p>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <!-- Arabic description here -->
-        <p>تتميز هذه اللوحة لباز آريس، المؤرخة في عام 1985، بتكوينها المثير واستخدامها الدافئ للضوء واللون، الأمر الذي
-          يجعلها
-          جذابة بشكل خاص. تهيمن على المشهد كمان وقوسه، مرتبان برقة على حقيبة مفتوحة، بجانب مصباح الزيت. هذا الترتيب ليس
-          عرضيًا؛
-          فهو يهدف إلى تقديم ليس فقط الشكل الفيزيائي للكمان ولكن أيضًا روحه اللحنية.</p>
-
-        <p>يدعو التركيز على الكمان، الموضوع في مركز المشهد والمغمور بضوء المصباح الناعم، المشاهدين للتأمل في جمال صنعته:
-          الانحناءات الناعمة للخشب، ولمعان الأوتار، والملمس المتآكل للقوس، يتم تسليط الضوء على كل تفصيل بطريقة تجعلنا
-          تقريبًا
-          نسمع الموسيقى التي يمكن أن تنتجها. إن ضوء المصباح لا يضيء الآلة فحسب، بل يضيف أيضًا جودة تقريبًا غامضة إلى
-          المشهد، كما
-          لو كنا نشهد لحظة خاصة وحميمة في حياة موسيقي.</p>
-
-        <p>لطالما كانت الفنانة باز آريس على اتصال وثيق بالفنون الموسيقية، حيث تلقت تدريبها منذ طفولتها في مجالات مثل
-          الغناء
-          والجيتار والباسون، بالإضافة إلى مشاركتها النشطة في العديد من الجوقات. ومع ذلك، في هذا العمل، اختارت تمثيل
-          الكمان،
-          الآلة التي كان صوتها العميق والصداح دائمًا ما يروق لها. هذه الاختيار ليس جماليًا فحسب، بل يعكس اتصالًا عاطفيًا
-          وحسيًا
-          عميقًا بالآلة، وهو عنصر يرمز، بالنسبة لها، إلى جمال وتعقيد الموسيقى.</p>
-
-        <p>تتماشى هذه القطعة الفنية أيضًا مع نهجها كمربية، حيث تسعى آريس باستمرار إلى دمج التدريس التقليدي مع الفنون
-          لجعل التعلم
-          أكثر إبداعًا ومتعة. من خلال ممارستها التعليمية، تؤكد على كيفية أن دمج الفنون يمكن أن يرفع من معايير التعليم،
-          مما يجعله
-          أكثر شمولية وديناميكية. في صفوفها، لم يكن من النادر أن يحضر طالب آلة موسيقية لمرافقة قراءة القصائد أو الأدب،
-          أو حتى
-          لتمثيل التعاليم في المسرح، مما يحول الفصل إلى مساحة للتعبير الفني والتعلم التجريبي.</p>
-
-        <p>وبالتالي، فإن هذه اللوحة ليست فقط احتفالًا بالموسيقى من خلال تصوير الكمان تحت ضوء المصباح الدافئ، بل إنها
-          تعكس أيضًا
-          فلسفة باز آريس التعليمية. تدعو العمل المشاهدين إلى إدراك الموسيقى ليس فقط كشكل من أشكال الفن، ولكن كوسيلة
-          للتعلم
-          والنمو الشخصي، مما يعكس حياتها المكرسة للتدريس والإثراء الثقافي لطلابها. من هذا المنظور، تتجاوز اللوحة جمالها
-          البصري
-          لتصبح شهادة على قوة الفنون في إلهام وتحويل الحياة.</p>
-
-        <p>تتميز لوحة الألوان بالثراء ولكنها مكبوتة، تهيمن عليها درجات البني الدافئ والكهرمان، مما يساعد على خلق جو من
-          العتيق
-          والحنين. الخلفية، المشوشة والمجردة، توجه انتباه المشاهد نحو الأجسام المضاءة، مع توفير ما يكفي من النسيج
-          والتنوع اللوني
-          للحفاظ على الاهتمام البصري دون تشتيت الانتباه.</p>
-
-        <p>ما يجعل هذا العمل جذابًا بشكل خاص هو قدرته على التواصل مع المشاهدين على المستوى العاطفي. عند مشاهدة اللوحة،
-          يمكن
-          للمرء أن يشعر بالاتصال بتقليد الموسيقى الكلاسيكية، واحترام الحرفية، وتقدير لحظات الهدوء والتأمل. باز آريس لا
-          تلتقط
-          صورة فحسب، بل تلتقط أيضًا جوهر الموسيقى والزمان، مما يجعل هذا العمل شهادة على القوة العاطفية للفن البصري.</p>
-
-        <p>يتصل العنوان بتركيز آريس على التأمل والتفكير، وهي عناصر موجودة في حياتها الشخصية ومنهجها التعليمي. الإشارة
-          إلى
-          "المفتاح" توحي بأساس في نظرية الموسيقى، بينما يرمز "الصمت" و"الضوء" إلى السلام الداخلي والتنوير.</p>
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
 
 </body>
 

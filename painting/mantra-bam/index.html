@@ -1,221 +1,268 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>BAM</title>
+  <title>Mantra Bam - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
-
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
+  <div class="language-selector">
+    <select id="language-select" class="custom-select">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
     </select>
   </div>
+  <a href="../../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+        <span class="es language">Universo de Paz</span>
+        <span class="en language" style="display:none;">Universe of Peace</span>
+        <span class="it language" style="display:none;">Universo di Pace</span>
+        <span class="ru language" style="display:none;">Вселенная мира</span>
+        <span class="zh language" style="display:none;">和平宇宙</span>
+        <span class="ar language" style="display:none;">عالم السلام</span>
+        <span class="de language" style="display:none;">Universum des Friedens</span>
+        <span class="fr language" style="display:none;">Univers de Paix</span>
+        <span class="ja language" style="display:none;">平和の宇宙</span>
+        <span class="pt language" style="display:none;">Universo de Paz</span>
+  </a>
+  <a href="../../gallery/index.html" class="gallery-btn">
+    <i class="fas fa-th"></i>
+        <span class="es language">Galería</span>
+        <span class="en language" style="display:none;">Gallery</span>
+        <span class="it language" style="display:none;">Galleria</span>
+        <span class="ru language" style="display:none;">Галерея</span>
+        <span class="zh language" style="display:none;">画廊</span>
+        <span class="ar language" style="display:none;">معرض</span>
+        <span class="de language" style="display:none;">Galerie</span>
+        <span class="fr language" style="display:none;">Galerie</span>
+        <span class="ja language" style="display:none;">ギャラリー</span>
+        <span class="pt language" style="display:none;">Galeria</span>
+  </a>
 
-
-  <section class="jumbotron text-center">
+  <header class="jumbotron">
     <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
       <h1 class="jumbotron-heading">
-        <div class="english language">BAM</div>
-        <div class="spanish language" style="display: none;">BAM</div>
-        <div class="italian language" style="display: none;">BAM</div>
-        <div class="chinese language" style="display: none;">班</div> <!-- "Bān" es una transliteración al chino -->
-        <div class="arabic language" style="display: none;">بام</div> <!-- "Bām" es una transliteración al árabe -->
+        <span class="es language">Mantra BAM</span>
+        <span class="en language" style="display:none;">BAM Mantra</span>
+        <span class="it language" style="display:none;">BAM Mantra</span>
+        <span class="ru language" style="display:none;">БАМ Мантра</span>
+        <span class="zh language" style="display:none;">BAM 咒语</span>
+        <span class="ar language" style="display:none;">بام تعويذة</span>
+        <span class="de language" style="display:none;">BAM-Mantra</span>
+        <span class="fr language" style="display:none;">Mantra BAM</span>
+        <span class="ja language" style="display:none;">BAMマントラ</span>
+        <span class="pt language" style="display:none;">Mantra BAM</span>
       </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">BAM: The Essence of Transcendence and Transformation.</div>
-        <div class="spanish language" style="display: none;">BAM: La Esencia de la Trascendencia y la Transformación.
-        </div>
-        <div class="italian language" style="display: none;">BAM: L'Essenza della Trascendenza e della Trasformazione.
-        </div>
-        <div class="chinese language" style="display: none;">BAM：超越与转化的本质</div>
-        <div class="arabic language" style="display: none;">BAM: جوهر التحول والتجاوز.</div>
-      </div>
-
+      <p class="lead" style="color: var(--gold); opacity: 0.9;">
+        <span class="es language">La Esencia de la Trascendencia y la Transformación Unificadora.</span>
+        <span class="en language" style="display:none;">The Essence of Transcendence and Unifying Transformation.</span>
+        <span class="it language" style="display:none;">L'essenza della trascendenza e della trasformazione unificante.</span>
+        <span class="ru language" style="display:none;">Сущность трансцендентности и объединяющей трансформации.</span>
+        <span class="zh language" style="display:none;">超越与统一转化的本质。</span>
+        <span class="ar language" style="display:none;">جوهر التعالي وتوحيد التحول.</span>
+        <span class="de language" style="display:none;">Die Essenz der Transzendenz und der vereinigenden Transformation.</span>
+        <span class="fr language" style="display:none;">L'essence de la transcendance et de la transformation unificatrice.</span>
+        <span class="ja language" style="display:none;">超越と統一変革の本質。</span>
+        <span class="pt language" style="display:none;">A Essência da Transcendência e da Transformação Unificadora.</span>
+      </p>
     </div>
-  </section>
+  </header>
 
+  <main class="container">
+    <section class="main-image-container text-center pb-5">
+      <img class="art-image zoom-image" style="transition: transform 0.3s; cursor: zoom-in;" src="BAM.jpg" alt="Mantra BAM">
+    </section>
 
+    <!-- Ficha Técnica -->
+    <section class="section-card">
+      <h3 class="text-warning mb-4"><i class="fas fa-info-circle mr-2"></i>
+        <span class="es language">Ficha Técnica</span>
+        <span class="en language" style="display:none;">Technical Sheet</span>
+        <span class="it language" style="display:none;">Scheda Tecnica</span>
+        <span class="ru language" style="display:none;">Технический лист</span>
+        <span class="zh language" style="display:none;">技术表</span>
+        <span class="ar language" style="display:none;">ورقة فنية</span>
+        <span class="de language" style="display:none;">Technisches Datenblatt</span>
+        <span class="fr language" style="display:none;">Fiche technique</span>
+        <span class="ja language" style="display:none;">テクニカルシート</span>
+        <span class="pt language" style="display:none;">Ficha Técnica</span>
+      </h3>
+      <ul class="tech-list">
+        <li><i class="fas fa-paint-brush"></i>
+        <span class="es language"><strong>Técnica:</strong> Aguafuerte y Aguatinta.</span>
+        <span class="en language" style="display:none;"><strong>Technique:</strong> Etching and Aquatint.</span>
+        <span class="it language" style="display:none;"><strong>Tecnica:</strong> Acquaforte e Acquatinta.</span>
+        <span class="ru language" style="display:none;"><strong>Техника:</strong> Офорт и акватинта.</span>
+        <span class="zh language" style="display:none;"><strong>技术：</strong>蚀刻和凹版。</span>
+        <span class="ar language" style="display:none;"><strong>التقنية:</strong> النقش والأكواتينت.</span>
+        <span class="de language" style="display:none;"><strong>Technik:</strong> Radierung und Aquatinta.</span>
+        <span class="fr language" style="display:none;"><strong>Technique :</strong> Eau-forte et Aquatinte.</span>
+        <span class="ja language" style="display:none;"><strong>テクニック:</strong> エッチングとアクアティント。</span>
+        <span class="pt language" style="display:none;"><strong>Técnica:</strong> Gravura e Aquatinta.</span>
+        </li>
+        <li><i class="fas fa-expand-arrows-alt"></i>
+        <span class="es language"><strong>Tamaño:</strong> 33x26 cm.</span>
+        <span class="en language" style="display:none;"><strong>Size:</strong> 33x26 cm.</span>
+        <span class="it language" style="display:none;"><strong>Dimensioni:</strong> 33x26 cm.</span>
+        <span class="ru language" style="display:none;"><strong>Размер:</strong> 33х26 см.</span>
+        <span class="zh language" style="display:none;"><strong>尺寸：</strong>33x26 厘米。</span>
+        <span class="ar language" style="display:none;"><strong>الحجم:</strong> 33×26 سم.</span>
+        <span class="de language" style="display:none;"><strong>Größe:</strong> 33x26 cm.</span>
+        <span class="fr language" style="display:none;"><strong>Dimensions :</strong> 33x26 cm.</span>
+        <span class="ja language" style="display:none;"><strong>サイズ:</strong> 33x26 cm。</span>
+        <span class="pt language" style="display:none;"><strong>Tamanho:</strong> 33x26 cm.</span>
+        </li>
+        <li><i class="fas fa-university"></i>
+        <span class="es language"><strong>Lugar de Creación:</strong> Facultad de Bellas Artes en Madrid, finalizado tras retiros en Ulverston.</span>
+        <span class="en language" style="display:none;"><strong>Place of Creation:</strong> Faculty of Fine Arts in Madrid, completed after retreats in Ulverston.</span>
+        <span class="it language" style="display:none;"><strong>Luogo di creazione:</strong> Facoltà di Belle Arti di Madrid, completata dopo i ritiri a Ulverston.</span>
+        <span class="ru language" style="display:none;"><strong>Место создания:</strong> Факультет изящных искусств в Мадриде, завершенный после ретритов в Ульверстоне.</span>
+        <span class="zh language" style="display:none;"><strong>创作地点：</strong>马德里美术学院，在阿尔弗斯顿静修后完成。</span>
+        <span class="ar language" style="display:none;"><strong>مكان الإنشاء:</strong> كلية الفنون الجميلة في مدريد، تم الانتهاء منها بعد الخلوات في أولفيرستون.</span>
+        <span class="de language" style="display:none;"><strong>Ort der Schöpfung:</strong> Fakultät für Bildende Künste in Madrid, abgeschlossen nach Exerzitien in Ulverston.</span>
+        <span class="fr language" style="display:none;"><strong>Lieu de création :</strong> Faculté des Beaux-Arts de Madrid, achevée après des retraites à Ulverston.</span>
+        <span class="ja language" style="display:none;"><strong>創作の場所:</strong> マドリードの美術学部、ウルバーストンでの修養を経て完成。</span>
+        <span class="pt language" style="display:none;"><strong>Local de Criação:</strong> Faculdade de Belas Artes de Madrid, concluída após retiros em Ulverston.</span>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i>
+        <span class="es language"><strong>Ubicación Actual:</strong> Colección Privada en Madrid. Esta obra se encuentra fuera del mercado abierto. Sin embargo, se considerarán con extrema seriedad propuestas superiores a los 10.000 euros por parte de coleccionistas que deseen honrar y salvaguardar su extraordinario significado artístico y espiritual.</span>
+        <span class="en language" style="display:none;"><strong>Current Location:</strong> Private Collection in Madrid. This work is outside the open market. However, proposals in excess of €10,000 will be considered extremely seriously by collectors wishing to honor and safeguard its extraordinary artistic and spiritual significance.</span>
+        <span class="it language" style="display:none;"><strong>Posizione attuale:</strong> Collezione privata a Madrid. Questo lavoro è fuori dal mercato aperto. Tuttavia, proposte superiori a 10.000 euro saranno prese in grande considerazione dai collezionisti che vorranno onorare e salvaguardare il suo straordinario significato artistico e spirituale.</span>
+        <span class="ru language" style="display:none;"><strong>Текущее местоположение:</strong> Частная коллекция в Мадриде. Эта работа находится за пределами открытого рынка. Однако предложения, превышающие 10 000 евро, будут рассматриваться крайне серьезно коллекционерами, желающими почтить и сохранить его исключительное художественное и духовное значение.</span>
+        <span class="zh language" style="display:none;"><strong>当前位置：</strong>马德里私人收藏。这项工作不在公开市场范围内。然而，希望尊重和维护其非凡艺术和精神意义的收藏家将极其认真地考虑超过 10,000 欧元的提案。</span>
+        <span class="ar language" style="display:none;"><strong>الموقع الحالي:</strong> مجموعة خاصة في مدريد. هذا العمل خارج السوق المفتوحة. ومع ذلك، سيتم النظر في المقترحات التي تزيد قيمتها عن 10000 يورو على محمل الجد من قبل هواة الجمع الراغبين في تكريم أهميتها الفنية والروحية الاستثنائية والحفاظ عليها.</span>
+        <span class="de language" style="display:none;"><strong>Aktueller Standort:</strong> Privatsammlung in Madrid. Diese Arbeit ist außerhalb des freien Marktes. Vorschläge über 10.000 Euro werden jedoch von Sammlern, die seine außergewöhnliche künstlerische und spirituelle Bedeutung würdigen und schützen möchten, äußerst ernst genommen.</span>
+        <span class="fr language" style="display:none;"><strong>Emplacement actuel :</strong> Collection privée à Madrid. Ce travail se situe en dehors du marché libre. Cependant, les propositions supérieures à 10 000 € seront considérées avec le plus grand sérieux par les collectionneurs souhaitant honorer et sauvegarder son extraordinaire signification artistique et spirituelle.</span>
+        <span class="ja language" style="display:none;"><strong>現在の場所:</strong> マドリッドの個人コレクション。この作品は公開市場の外にあります。ただし、10,000 ユーロを超える提案は、その並外れた芸術的および精神的重要性を尊重し保護したいと願うコレクターによって非常に真剣に検討されます。</span>
+        <span class="pt language" style="display:none;"><strong>Localização Atual:</strong> Coleção Privada em Madrid. Este trabalho está fora do mercado aberto. No entanto, propostas superiores a 10.000€ serão consideradas muito seriamente pelos colecionadores que desejam homenagear e salvaguardar o seu extraordinário significado artístico e espiritual.</span>
+        </li>
+      </ul>
+    </section>
 
-  <section class="main-image">
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
+    <!-- Análisis Crítico -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-feather-alt mr-2"></i>
+        <span class="es language">Análisis Crítico</span>
+        <span class="en language" style="display:none;">Critical Analysis</span>
+        <span class="it language" style="display:none;">Analisi critica</span>
+        <span class="ru language" style="display:none;">Критический анализ</span>
+        <span class="zh language" style="display:none;">批判性分析</span>
+        <span class="ar language" style="display:none;">التحليل النقدي</span>
+        <span class="de language" style="display:none;">Kritische Analyse</span>
+        <span class="fr language" style="display:none;">Analyse critique</span>
+        <span class="ja language" style="display:none;">批判的分析</span>
+        <span class="pt language" style="display:none;">Análise Crítica</span>
+      </h2>
+      <div class="description-text">
+        <div class="es language">
+          <p>El imponente grabado 'Mantra Bam', concebido magistralmente en aguafuerte y aguatinta, es mucho más que una exquisita exploración estética; constituye el testimonio vivo del profundo y revelador peregrinaje espiritual de Paz Arés Osset. Nacida y fundamentada en la fe cristiana, el alma inquieta de Paz nunca dejó de expandirse, abrazando con infinita devoción las ricas enseñanzas de Oriente hasta convertirse en maestra budista. Fue precisamente durante sus trascendentales retiros espirituales en la serena localidad inglesa de Ulverston —tierra que vio nacer al mítico icono del humor británico, Stan Laurel ('El Flaco')— donde la inspiración descendió como un relámpago místico, impulsándola a grabar en la matriz de esta obra el poderoso sonido primordial del 'Bam'.</p>
+          <p>A ojos de cualquier coleccionista sosegado o marchante de arte visionario, nos encontramos ante una pieza de una resonancia simbólica incalculable e histórica. La vibración de este grabado actúa como un monumental puente cósmico entre doctrinas que históricamente han caminado de forma separada. En un momento histórico en el que el turbulento mundo requiere la más sólida de las uniones, la incuestionable y pura misión de la artista resplandece aquí con urgencia asombrosa: las religiones y fes del globo terráqueo deben imperativamente darse la mano y aunar esfuerzos para iluminar juntas a la humanidad dolorida, en lugar de vivir de espaldas negando dogmáticamente y con inquina la validez ajena.</p>
+          <p>Esta sublime interacción de fes se hace eco, con inusitada dulzura y precisión arrolladora, de las inmortales e iluminadoras páginas del reverenciado y transgresor libro 'Cristo Viviente, Buda Viviente' del célebre y amado gran maestro zen Thich Nhat Hanh. Como el curso del agua que fluye libre y no busca competir beligerantemente contra la dura roca, sino cobijarla y abrazarla tiernamente, este majestuoso grabado fusiona en silencio el rico e incontestable simbolismo y la inamovible, serena solidez del budismo ancestral con el cálido amor redentor y universal de la inmensa tradición cristiana que habitó siempre latente en las raíces mismas de la autora y maestra espiritual. El símbolo sagrado 'Bam', esculpido con un vigor y pasión sobrecogedores sobre la inquebrantable e indomable plancha de metal, no es solo un remoto refugio esotérico y tántrico de sanación contra las abyectas penurias de la angustia moral, sino un infinito corazón latiendo con pulso unificador en el centro exacto y primordial de todas y cada una de nuestras encrucijadas terrenales y trascendentales.</p>
+          <p>El dichoso observador que se detiene estático y asombrado ante las ricas e intrincadas texturas ásperas del milenario aguatinta, perdiéndose de lleno entre sus inescrutables y profundas veladuras oscuras y los intensos misterios insondables de sus contrastes en claroscuro, sentirá irremediable, visceral y espiritualmente cómo las espesas y férreas barreras de los falsos conceptos limitantes se derrumban inevitablemente a pedazos como frágiles monumentos de arena bajo el azote de sus encendidos destellos iluminadores. La obra irradia en bloque una energía sanadora y unificadora verdaderamente colosal que desborda por mucho sus delicados centímetros de extensión y los mismos márgenes del marco. No estamos simplemente contemplando inerte e ignota tinta negra suspendida grácilmente sobre un lienzo inmaculado de blanco papel de algodón poroso; muy por el contrario, estamos presenciando emocionados un pacto visual vivo y en directo entre la inmensidad de Jesucristo y la pureza iluminada del propio Buda, nada menos que un sacrosanto acuerdo eterno firmado irrevocablemente y para la posteridad a través del delicado canal mediador de las manos laboriosas, sabias y sumamente maduras de una valiente mujer guerrera que, rompiendo toda traba dogmática, ha sabido de largo encontrar la definitiva y plácida morada de la ansiada paz global integrando sin esfuerzo alguno ambos colosales y venerables universos celestiales de sabiduría compasiva.</p>
+          <p>Poseer íntimamente en la actualidad esta obra de arte no constituye tan solo en ningún aspecto una simple transacción curatorial pasiva o meramente material destinada al frívolo coleccionismo acumulativo de salón; muy al contrario, se trata firmemente de aceptar gallardamente, de asimilar a fuego lento en la médula y de asumir íntegramente de facto la enorme responsabilidad tutelar así como el sobrecogedor privilegio estético incomparables de actuar como vigilante y enérgico celador y único encargado de custodiar, promover y pregonar a los cuatro vientos un mensaje indiscutible de amor revolucionario implacable capaz de sembrar a raudales y con aplastante convicción la total paz universal irrevocable e incondicional. Aquel que decida incorporar un día el insondable 'Mantra Bam' en su inabarcable galería particular para su deleite o posterior legado y conservación patrimonial, debe indiscutiblemente tener en consideración permanente la consciencia y consciencia cabal supremas acerca de la monumental envergadura mística en potencia incalculable que reposa sobre tan aparentemente inofensiva y sosegada placa oscura rectangular expuesta al ojo incrédulo. El valiente 'Mantra Bam' es, sin el más leve asomo de dura duda, un incombustible y avasallador faro inagotable de luz prístina incandescente que arranca de raíz cimientos, eleva hasta los mismos cielos los más variados compendios de la inmadura conciencia adormecida, un potente altavoz atronador que convoca sin compasión, clama y clama imperativamente incesantemente llamando a lo más valioso de todas aquellas dormitantes, dispersas o distraídas almas nobles de este frágil mundo a despertar del sombrío y apático ostracismo paralizante cotidiano en su vida ordinaria para abrazar fehacientemente y de golpe tan magno despertar colosal, la inquebrantable unificación compasiva general que forzosamente logrará purgar un mundo hostil; y que inmensamente dichoso y victorioso atesora perpetuamente inexpugnable encerrado pacientemente en el letargo eterno infinito y solemne de todas sus pequeñas y herméticas milimétricas maravillosas dimensiones físicas la sumamente incitante, incandescente y deslumbrante brillantez cegadora de luz invitadora tendente, suplicante y afable dispuesta a obrar sin vacilar animosamente alentando vigorosamente a construir por unísono global de una buena y única grandiosa ruidosa estruendosa vez sin paliativos por completo, en la indudable y gloriosa apoteosis universal de todos nuestros diversos caminos erráticos bifurcados a ciegas, el último templo monumental sinfónico, el sagrado, amplio irrepetible definitivo cobijo fraterno: el único inefable verdadero ansiado hogar espiritual magnánimo y universal lo suficientemente asombrosamente vasto e inconmensurablemente inmenso arquitecturalmente como para que las plurales representaciones dispares provenientes a coro sin fisuras de sin distinción todas y cada una de las religiones atesoradas fervorosamente abrazadas del milenar y vetusto sabio inmenso mundo que existan sobre estas fronteras que surcan la tierra, en conjunción majestuosa puedan serenamente a la vez concurrir al mismo insuperable instante en una única paz sincera exenta de bellezas doctrinales discordantes y reposadamente amigable fraternal a converger calmosamente sentarse juntas con regocijo a debatir cordialmente de brazos dados admirando amorosamente cara a cara y con plena ecuanimidad tolerante y empática a atisbar embelesadamente complacientemente deslumbradas conjuntas comulgares contemplar la misma idéntica inconmensurable bella luz diáfana y unívoca cegadora creadora eterna emanadora resplandeciente universal de verdad incuestionable suprema.</p>
+        </div>
 
+        <div class="en language" style="display:none;">
+          <p>The stunning print 'Mantra Bam', masterfully conceived in etching and aquatint, is much more than an exquisite aesthetic exploration; constitutes the living testimony of the profound and revealing spiritual pilgrimage of Paz Arés Osset. Born and founded in the Christian faith, Paz's restless soul never stopped expanding, embracing with infinite devotion the rich teachings of the East until she became a Buddhist teacher. It was precisely during her transcendental spiritual retreats in the serene English town of Ulverston - the land where the mythical icon of British humor, Stan Laurel ('El Flaco') was born - where inspiration descended like a mystical lightning, prompting her to record the powerful primordial sound of 'Bam' in the matrix of this work.</p>
+          <p>In the eyes of any calm collector or visionary art dealer, we are faced with a piece of incalculable symbolic and historical resonance. The vibration of this engraving acts as a monumental cosmic bridge between doctrines that have historically walked separately. At a historical moment in which the turbulent world requires the most solid of unions, the unquestionable and pure mission of the artist shines here with astonishing urgency: the religions and faiths of the globe must imperatively shake hands and join forces to illuminate together the suffering humanity, instead of living with their backs turned, dogmatically and spitefully denying the validity of others.</p>
+          <p>This sublime interplay of faiths echoes, with unusual sweetness and overwhelming precision, the immortal and illuminating pages of the revered and transgressive book 'Living Christ, Living Buddha' by the famous and beloved great Zen master Thich Nhat Hanh. Like the course of water that flows freely and does not seek to compete belligerently against the hard rock, but rather to shelter and embrace it tenderly, this majestic engraving silently fuses the rich and incontestable symbolism and the immovable, serene solidity of ancestral Buddhism with the warm redemptive and universal love of the immense Christian tradition that has always latently resided in the very roots of the author and spiritual teacher. The sacred symbol 'Bam', sculpted with overwhelming vigor and passion on the unbreakable and indomitable sheet of metal, is not only a remote esoteric and tantric healing refuge against the abject hardships of moral anguish, but an infinite heart beating with a unifying pulse at the exact and primordial center of each and every one of our earthly and transcendental crossroads.</p>
+          <p>The happy observer who stops static and amazed before the rich and intricate rough textures of the ancient aquatint, completely losing himself between its inscrutable and deep dark glazes and the intense unfathomable mysteries of its chiaroscuro contrasts, will irremediably feel, viscerally and spiritually, how the thick and iron barriers of the false limiting concepts inevitably collapse to pieces like fragile monuments of sand under the scourge of its fiery illuminating flashes. The work radiates as a block a truly colossal healing and unifying energy that far exceeds its delicate centimeters of extension and the very margins of the frame. We are not simply contemplating inert and unknown black ink suspended gracefully on an immaculate canvas of white porous cotton paper; Quite the contrary, we are excitedly witnessing a live and direct visual pact between the immensity of Jesus Christ and the illuminated purity of the Buddha himself, nothing less than an eternal sacrosanct agreement signed irrevocably and for posterity through the delicate mediating channel of the laborious, wise and extremely mature hands of a brave warrior woman who, breaking all dogmatic obstacles, has long known how to find the definitive and placid abode of the longed-for global peace by effortlessly integrating both. colossal and venerable celestial universes of compassionate wisdom.</p>
+          <p>Intimate possession of this work of art today does not constitute in any respect a simple passive or merely material curatorial transaction destined for frivolous cumulative salon collecting; Quite the contrary, it is firmly a matter of gallantly accepting, slowly assimilating into the marrow and fully de facto assuming the enormous tutelary responsibility as well as the overwhelming incomparable aesthetic privilege of acting as a vigilant and energetic guardian and the only one in charge of guarding, promoting and proclaiming to the four winds an indisputable message of implacable revolutionary love capable of sowing in abundance and with overwhelming conviction total irrevocable and unconditional universal peace. Whoever decides to one day incorporate the unfathomable 'Mantra Bam' in his unfathomable private gallery for his delight or subsequent legacy and heritage conservation, must unquestionably take into permanent consideration the supreme consciousness and full consciousness about the monumental mystical magnitude in incalculable power that rests on such an apparently harmless and calm dark rectangular plate exposed to the incredulous eye. The brave 'Mantra Bam' is, without the slightest hint of harsh doubt, a fireproof and overwhelming inexhaustible beacon of pristine incandescent light that uproots foundations, raises to the very heavens the most varied compendiums of the immature dormant consciousness, a powerful thunderous speaker that summons without compassion, cries and cries imperatively incessantly calling the most valuable of all those dozing, dispersed or distracted. noble souls of this fragile world to awaken from the gloomy and apathetic daily paralyzing ostracism in their ordinary life to reliably and suddenly embrace such a great colossal awakening, the unbreakable general compassionate unification that will necessarily manage to purge a hostile world; and that immensely happy and victorious treasures perpetually impregnable patiently locked in the infinite and solemn eternal lethargy of all its small and hermetic millimetric wonderful physical dimensions the extremely inciting, incandescent and dazzling blinding brilliance of inviting light tending, pleading and affable ready to act without hesitation gamely encouraging vigorously to build in global unison of a good and unique grand noisy thunderous once completely unmitigated, in the undoubted and glorious universal apotheosis of all our various blindly forking erratic paths, the last monumental symphonic temple, the sacred, wide unrepeatable definitive fraternal shelter: the only ineffable true longed-for magnanimous and universal spiritual home astonishingly vast enough and incommensurably immense architecturally so that the plural disparate representations coming in chorus without fissures of without distinction each and every one of the religions treasured fervently embraced of the ancient and ancient wise immense world that exist on these borders that cross the earth, in majestic conjunction can serenely at the same time concur at the same insurmountable moment in a single sincere peace free of discordant doctrinal beauties and restfully friendly fraternal to calmly converge sit together with joy to debate cordially with open arms lovingly admiring face face to face and with full equanimity, tolerant and empathetic, to gaze enthrallingly complacent dazzled joint communions contemplate the same identical incommensurable beautiful diaphanous and univocal light blinding eternal creator universal resplendent emanator of supreme unquestionable truth.</p>
+        </div>
 
-          <img class="zoom-image" src="BAM.jpg" width="100%" style="border:30px solid white;" alt="Amazing">
+        <div class="it language" style="display:none;">
+          <p>La splendida stampa 'Mantra Bam', magistralmente concepita in acquaforte e acquatinta, è molto più di una squisita esplorazione estetica; costituisce la testimonianza viva del profondo e rivelatore pellegrinaggio spirituale di Paz Arés Osset. Nata e fondata nella fede cristiana, l'anima inquieta di Paz non ha mai smesso di espandersi, abbracciando con infinita devozione i ricchi insegnamenti dell'Oriente fino a diventare insegnante buddista. Fu proprio durante i suoi ritiri spirituali trascendentali nella serena cittadina inglese di Ulverston - la terra dove nacque la mitica icona dell'umorismo britannico, Stan Laurel ("El Flaco") - che l'ispirazione discese come un fulmine mistico, spingendola a registrare il potente suono primordiale di "Bam" nella matrice di questo lavoro.</p>
+          <p>Agli occhi di qualsiasi collezionista pacato o mercante d'arte visionario, siamo di fronte a un pezzo di incalcolabile risonanza simbolica e storica. La vibrazione di questa incisione funge da monumentale ponte cosmico tra dottrine che storicamente hanno camminato separatamente. In un momento storico in cui il mondo turbolento richiede la più solida delle unioni, la missione indiscutibile e pura dell’artista risplende qui con sorprendente urgenza: le religioni e le fedi del globo devono imperativamente stringersi la mano e unire le forze per illuminare insieme l’umanità sofferente, invece di vivere voltando le spalle, negando dogmaticamente e dispettosamente la validità degli altri.</p>
+          <p>Questa sublime interazione di fedi riecheggia, con insolita dolcezza e travolgente precisione, le pagine immortali e illuminanti del venerato e trasgressivo libro "Cristo vivente, Buddha vivente" del famoso e amato grande maestro Zen Thich Nhat Hanh. Come il corso d'acqua che scorre libero e non cerca di competere bellicosamente con la dura roccia, ma piuttosto di ripararla e abbracciarla teneramente, questa maestosa incisione fonde silenziosamente il ricco e incontestabile simbolismo e l'inamovibile e serena solidità del Buddismo ancestrale con il caldo amore redentore e universale dell'immensa tradizione cristiana che da sempre risiede latente nelle radici stesse dell'autore e maestro spirituale. Il simbolo sacro 'Bam', scolpito con travolgente vigore e passione sull'indistruttibile e indomabile lastra di metallo, non è solo un remoto rifugio di guarigione esoterico e tantrico contro le abiette difficoltà dell'angoscia morale, ma un cuore infinito che batte con una pulsazione unificante nel centro esatto e primordiale di ognuno dei nostri bivi terreni e trascendentali.</p>
+          <p>Il felice osservatore che si ferma statico e stupito davanti alle ricche e intricate trame scabre dell'antica acquatinta, perdendosi completamente tra le sue imperscrutabili e profonde velature scure e gli intensi e insondabili misteri dei suoi contrasti chiaroscurali, sentirà irrimediabilmente, visceralmente e spiritualmente, come le spesse e ferree barriere dei falsi concetti limitanti crollino inevitabilmente in pezzi come fragili monumenti di sabbia sotto il flagello dei suoi infuocati bagliori illuminanti. L'opera irradia come un blocco un'energia curativa e unificante davvero colossale che supera di gran lunga i suoi delicati centimetri di estensione e i margini stessi della cornice. Non stiamo semplicemente contemplando l'inchiostro nero inerte e sconosciuto sospeso con grazia su una tela immacolata di carta di cotone bianco poroso; Al contrario, stiamo assistendo con emozione ad un patto visivo vivo e diretto tra l’immensità di Gesù Cristo e la purezza illuminata del Buddha stesso, niente di meno che un eterno sacrosanto accordo firmato irrevocabilmente e per i posteri attraverso il delicato canale di mediazione delle mani laboriose, sagge ed estremamente mature di una coraggiosa donna guerriera che, rompendo ogni ostacolo dogmatico, ha saputo da tempo trovare la definitiva e placida dimora dell’agognata pace globale integrando senza sforzo entrambe. colossali e venerabili universi celesti di compassionevole saggezza.</p>
+          <p>Il possesso intimo di quest'opera d'arte oggi non costituisce in alcun modo una semplice operazione curatoriale passiva o meramente materiale destinata al frivolo collezionismo cumulativo da salotto; Si tratta, al contrario, di accettare con fermezza e galanteria, di assimilarsi lentamente fino al midollo e di assumere pienamente di fatto l’enorme responsabilità tutelare nonché l’incomparabile e incomparabile privilegio estetico di agire come custode vigile ed energico e l’unico incaricato di custodire, promuovere e proclamare ai quattro venti un indiscutibile messaggio di implacabile amore rivoluzionario capace di seminare in abbondanza e con travolgente convinzione la pace universale totale, irrevocabile e incondizionata. Chiunque decida un giorno di incorporare l'insondabile "Mantra Bam" nella sua insondabile galleria privata per il suo diletto o per la successiva conservazione dell'eredità e del patrimonio, deve senza dubbio tenere in costante considerazione la coscienza suprema e la piena consapevolezza della monumentale grandezza mistica dal potere incalcolabile che poggia su una piastra rettangolare scura apparentemente innocua e calma esposta all'occhio incredulo. Il coraggioso "Mantra Bam" è, senza il minimo accenno di duro dubbio, un faro a prova di fuoco, travolgente, inesauribile di luce incandescente incontaminata che sradica le fondamenta, solleva fino al cielo i più vari compendi della coscienza immatura e dormiente, un potente oratore tonante che convoca senza compassione, grida e grida imperiosamente incessantemente chiamando il più prezioso di tutti coloro che sonnecchiano, dispersi o distratti. le anime nobili di questo mondo fragile a risvegliarsi dall'ostracismo paralizzante quotidiano cupo e apatico nella loro vita ordinaria per abbracciare in modo affidabile e improvviso un risveglio così grande e colossale, l'indistruttibile unificazione compassionevole generale che riuscirà necessariamente a epurare un mondo ostile; e che tesori immensamente felici e vittoriosi perennemente inespugnabili pazientemente chiusi nell'infinito e solenne letargo eterno di tutte le sue piccole ed ermetiche millimetriche meravigliose dimensioni fisiche la brillantezza estremamente incitante, incandescente e abbagliante di una luce invitante tendente, supplichevole e affabile pronta ad agire senza esitazione incoraggia coraggiosamente vigorosamente a costruire all'unisono globale di un buono ed unico gran fragoroso fragoroso un tempo del tutto non mitigato, nell'indubbia e gloriosa apoteosi universale di tutti i nostri vari sentieri erratici che si biforcano ciecamente, l'ultimo monumentale tempio sinfonico, il sacro, ampio e irripetibile definitivo rifugio fraterno: l'unica ineffabile vera agognata magnanima e universale dimora spirituale sorprendentemente vasta e incommensurabilmente immensa dal punto di vista architettonico affinché le plurali e disparate rappresentazioni confluiscano in coro senza fessure senza distinzione ciascuna delle religioni custodite con fervore abbracciate dell'antico e antico saggio immenso mondo che esistono su questi confini che attraversare la terra, in maestosa congiunzione possono serenamente allo stesso tempo concorrere nello stesso insormontabile momento in un'unica pace sincera priva di discordanti bellezze dottrinali e riposante amichevole fraterna convergere con calma sedersi insieme con gioia dibattere cordialmente a braccia aperte ammirando amorosamente faccia a faccia e con piena equanimità, tollerante ed empatico, guardare incantando compiaciuti abbagliati comunioni congiunte contemplare lo stesso identico incommensurabile bella luce diafana ed univoca accecante eterno creatore universale risplendente emanatore di suprema indiscutibile verità.</p>
+        </div>
 
+        <div class="ru language" style="display:none;">
+          <p>Потрясающая гравюра «Мантра Бам», мастерски задуманная в технике офорта и акватинты, — это нечто большее, чем изысканное эстетическое исследование; представляет собой живое свидетельство глубокого и показательного духовного паломничества Осета Паз Ареса. Рожденная и основанная в христианской вере, беспокойная душа Паз никогда не переставала расширяться, с бесконечной преданностью охватывая богатые учения Востока, пока она не стала буддийским учителем. Именно во время ее трансцендентного духовного уединения в безмятежном английском городке Алверстон - стране, где родился мифический символ британского юмора Стэн Лорел ("Эль Флако"), - куда мистической молнией снизошло вдохновение, побудившее ее записать мощное первозданное звучание "Бэма" в матрице этого произведения.</p>
+          <p>В глазах любого спокойного коллекционера или дальновидного арт-дилера мы сталкиваемся с неисчислимым символическим и историческим резонансом. Вибрация этой гравюры действует как монументальный космический мост между доктринами, которые исторически шли отдельно. В исторический момент, когда беспокойный мир требует самого прочного союза, неоспоримая и чистая миссия художника сияет здесь с поразительной актуальностью: религии и конфессии земного шара должны обязательно пожать друг другу руки и объединить силы, чтобы вместе осветить страдающее человечество, вместо того, чтобы жить, повернувшись спиной, догматично и злобно отрицая ценность других.</p>
+          <p>Эта возвышенная игра вероисповеданий с необычайной нежностью и ошеломляющей точностью перекликается с бессмертными и просветляющими страницами почитаемой и трансгрессивной книги «Живой Христос, Живой Будда» знаменитого и любимого великого мастера дзэн Тит Нат Хана. Подобно течению воды, которая течет свободно и не стремится воинственно соперничать с твердой скалой, а скорее укрыть и нежно обнять ее, эта величественная гравюра безмолвно сплавляет богатую и неоспоримую символику и недвижимую, безмятежную основательность исконного буддизма с теплой искупительной и всеобщей любовью огромной христианской традиции, всегда скрыто обитавшей в самых корнях автора и духовного учителя. Священный символ «Бам», вылепленный с ошеломляющей энергией и страстью на нерушимом и неукротимом листе металла, — это не только отдаленное эзотерическое и тантрическое исцеляющее убежище от жалких невзгод моральных страданий, но и бесконечное сердце, бьющееся объединяющим пульсом в точном и изначальном центре каждого из наших земных и трансцендентальных перекрестков.</p>
+          <p>Счастливый наблюдатель, останавливающийся в статике и изумленный перед богатыми и сложными шероховатыми фактурами древней акватинты, полностью теряющийся между ее непостижимыми и глубокими темными лессировками и напряженными непостижимыми тайнами ее светотеневых контрастов, непоправимо почувствует нутром и духовно, как толстые и железные преграды ложных ограничивающих концепций неизбежно разваливаются на куски, как хрупкие памятники из песка под натиском ее огненных озаряющих вспышек. Работа как блок излучает поистине колоссальную исцеляющую и объединяющую энергию, далеко превосходящую ее тонкие сантиметры протяженности и сами края кадра. Мы не просто созерцаем инертные и неизвестные черные чернила, изящно подвешенные на безупречном холсте из белой пористой хлопчатобумажной бумаги; Напротив, мы с волнением наблюдаем живой и прямой визуальный договор между необъятностью Иисуса Христа и сияющей чистотой самого Будды, не что иное, как вечное священное соглашение, подписанное безвозвратно и для потомков через тонкий посреднический канал трудолюбивых, мудрых и чрезвычайно зрелых рук храброй женщины-воина, которая, преодолевая все догматические препятствия, уже давно знает, как найти окончательную и спокойную обитель вожделенного глобального мира, легко интегрируя оба. колоссальные и почтенные небесные вселенные сострадательной мудрости.</p>
+          <p>Интимное владение этим произведением искусства сегодня ни в коем случае не представляет собой простую пассивную или просто материальную кураторскую сделку, предназначенную для легкомысленного накопительного салонного коллекционирования; Наоборот, речь идет о том, чтобы мужественно принять, медленно ассимилироваться до мозга костей и полностью де-факто принять на себя огромную опекунскую ответственность, а также ошеломляющую, несравненную эстетическую привилегию действовать как бдительный и энергичный опекун и единственный, кто отвечает за охрану, продвижение и провозглашение во все стороны непререкаемого послания непримиримой революционной любви, способной сеять в изобилии и с ошеломляющей убежденностью полный безвозвратный и безоговорочный всеобщий мир. Тот, кто решит однажды включить непостижимую «Мантру Бам» в свою непостижимую частную галерею для своего удовольствия или последующего наследия и сохранения наследия, должен, несомненно, постоянно принимать во внимание высшее сознание и полное осознание монументальной мистической величины и неисчислимой силы, которая покоится на такой, казалось бы, безобидной и спокойной темной прямоугольной пластине, открытой для недоверчивого глаза. Отважная «Мантра Бам» — это, без малейшего намека на суровое сомнение, огнеупорный и ошеломляющий неиссякаемый маяк первозданного раскаленного света, выкорчевывающий устои, возносящий к самым небесам самые разнообразные компендиумы незрелого дремлющего сознания, могучий громовой оратор, призывающий без сострадания, крики и вопли, повелительно беспрестанно призывающие самое ценное из всех дремлющих, рассеянных или рассеянных. благородным душам этого хрупкого мира пробудиться от мрачного и апатичного ежедневного парализующего остракизма в их обычной жизни, чтобы надежно и внезапно принять такое великое колоссальное пробуждение, нерушимое всеобщее сострадательное объединение, которое обязательно сумеет очистить враждебный мир; и эти безмерно счастливые и победоносные сокровища, вечно неприступные, терпеливо запертые в бесконечной и торжественной вечной летаргии всех своих маленьких и герметичных миллиметровых чудесных физических размеров, чрезвычайно возбуждающий, раскаленный и ослепляющий ослепительный блеск манящего света, заботящийся, умоляющий и приветливый, готовый действовать без колебаний, храбро побуждающий энергично строить в глобальном унисон доброго и уникального великого шумного грома, когда-то совершенно неограниченного, в несомненный и славный всеобщий апофеоз всех наших разнообразных, слепо разветвляющихся, ошибочных путей, последний монументальный симфонический храм, священный, широкий, неповторимый, окончательный братский приют: единственный невыразимый, истинный, желанный, великодушный и универсальный духовный дом, поразительно достаточно обширный и несоизмеримо огромный в архитектурном отношении, так что множественные разрозненные представления, входящие в хор без трещин, без различия каждой из религий заветные горячо объятые древним и древним мудрым необъятным миром, существующим на этих границах, пересекающих землю, в величественном соединении могут одновременно безмятежно сойтись в одном и том же непреодолимом моменте в едином искреннем мире, свободном от несогласных доктринальных красот и спокойно-дружеском братском спокойно сойтись вместе с радостью поспорить сердечно с распростертыми объятиями любовно любуясь лицом к лицу и с полной невозмутимостью, терпимыми и чуткими, взирать упоительно самодовольные ослепленные совместные причастия созерцают один и тот же несоизмеримо прекрасный, прозрачный и однозначный свет, ослепляющий вечного творца, вселенского сияющего излучателя высшей неоспоримой истины.</p>
+        </div>
 
+        <div class="zh language" style="display:none;">
+          <p>令人惊叹的版画“Mantra Bam”采用蚀刻和凹版技术精心构思，不仅仅是一次精致的美学探索；构成了帕斯·阿雷斯·奥塞特深刻而富有启发性的精神朝圣的活生生的见证。帕兹在基督教信仰中诞生和建立，她不安的灵魂从未停止扩张，以无限的奉献精神拥抱东方丰富的教义，直到她成为一名佛教老师。正是在她在宁静的英国小镇阿尔弗斯顿（英国幽默的神话偶像斯坦·劳雷尔（“El Flaco”）出生的土地）进行超然的精神静修期间，灵感像神秘的闪电一样降临，促使她在这部作品的矩阵中记录了“Bam”强大的原始声音。</p>
+          <p>在任何冷静的收藏家或有远见的艺术品经销商眼中，我们面临着一件具有不可估量的象征意义和历史共鸣的作品。这幅雕刻的振动在历史上各自行走的学说之间充当了一座巨大的宇宙桥梁。在这个动荡的世界需要最牢固的团结的历史时刻，艺术家无可置疑的纯粹使命在这里以惊人的紧迫性闪耀出来：全球的宗教和信仰必须握手言和，共同照亮受苦受难的人类，而不是背对背、教条地、恶意地否认他人的有效性。</p>
+          <p>这种崇高的信仰相互作用，以不同寻常的甜蜜和压倒性的精确性，呼应了著名和受人爱戴的伟大禅宗大师一行禅师所著的受人尊敬和超越的书《活着的基督，活佛》中不朽和富有启发性的书页。就像自由流淌的水道一样，并不寻求与坚硬的岩石进行激烈的竞争，而是温柔地庇护和拥抱它，这幅雄伟的雕刻默默地融合了丰富而无可争议的象征意义和祖传佛教不可动摇、宁静的坚固性，与始终潜伏在作者和精神导师的根基中的伟大基督教传统的温暖救赎和普遍热爱。神圣的符号“Bam”，以压倒性的活力和激情雕刻在坚不可摧、不屈不挠的金属板上，不仅是一个遥远的深奥和密宗治疗避难所，以抵御道德痛苦的悲惨苦难，而且是一颗无限的心脏，在我们每个尘世和超验十字路口的精确和原始的中心跳动着统一的脉搏。</p>
+          <p>快乐的观察者在古老的凹版画丰富而错综复杂的粗糙纹理前停下来，惊叹不已，完全迷失在其深不可测的深色釉料和明暗对比的强烈深不可测的神秘之中，他会在内心和精神上无可救药地感受到，错误的限制概念的厚重铁栅栏如何不可避免地在其炽热的闪光的鞭笞下崩溃，就像脆弱的沙子纪念碑一样。这件作品作为一个整体散发出一种真正巨大的治愈和统一的能量，远远超出了其微妙的厘米延伸和框架的边缘。我们不仅仅是在思考惰性和未知的黑色墨水优雅地悬浮在完美的白色多孔棉纸画布上；恰恰相反，我们兴奋地目睹了耶稣基督的伟大与佛陀本身的光明纯洁之间的生动而直接的视觉契约，无非是通过一位勇敢的女战士辛勤、明智和极其成熟的双手的微妙调解渠道，为子孙后代不可撤销地签署了一份永恒神圣的协议，她打破了所有教条障碍，早已知道如何通过毫不费力地将两者结合起来，找到渴望已久的全球和平的明确而平静的居所。广大尊贵的慈悲智慧天界。</p>
+          <p>如今，对这件艺术作品的亲密拥有在任何方面都不构成一种简单的被动或仅仅是物质性的策展交易，注定要用于琐碎的累积沙龙收藏；恰恰相反，它是坚决地勇敢地接受，慢慢地融入骨髓，完全事实上承担起巨大的监护责任，以及压倒性的、无与伦比的审美特权，作为一个警惕而充满活力的守护者，唯一负责守护、促进和向四风宣扬一种无可争议的、无情的革命之爱的信息，能够以压倒性的信念，播种大量的、不可撤销的、无条件的普遍和平。无论谁决定有一天将深不可测的“Mantra Bam”纳入他深不可测的私人画廊，以供他的喜悦或随后的遗产和遗产保护，毫无疑问，必须永久考虑至高意识和充分意识，关于不可估量的力量的巨大神秘力量，这种力量依赖于这样一个表面上无害且平静的黑色矩形板，暴露在怀疑的眼睛下。勇敢的“Mantra Bam”，毫无丝毫严厉的怀疑，是一盏防火的、压倒性的、取之不尽用之不竭的原始白炽灯塔，它连根拔起根基，将不成熟的休眠意识的最多样化的纲要提升到天堂，是一个强大的雷鸣般的扬声器，毫无同情心地召唤，呼喊和呼喊，命令式地不断召唤所有那些打瞌睡、分散或分心的人中最有价值的人。这个脆弱世界的高贵灵魂从日常生活中的阴郁和冷漠的、令人瘫痪的排斥中醒来，可靠地、突然地拥抱如此伟大的巨大觉醒，牢不可破的普遍同情统一，必然能够净化一个充满敌意的世界；无比快乐和胜利的宝藏，永远坚不可摧，耐心地锁定在其所有微小而密封的毫米级奇妙物理尺寸的无限和庄严永恒的昏睡中，极其激动人心、炽热和令人眼花缭乱的光辉，邀请光的照料，恳求和和蔼可亲，准备毫不犹豫地采取行动，勇敢地鼓励在全球统一中建立一个良好的和独特的盛大喧闹的雷鸣，一旦完全不受缓和，在毫无疑问，光荣的普遍神化是我们所有各种盲目分叉的不稳定路径，最后一座不朽的交响乐圣殿，神圣的，宽阔的，不可重复的明确的兄弟庇护所：唯一不可言喻的真正渴望的宽宏和普遍的精神家园，在建筑上令人惊讶地足够大和不可通约的巨大，以至于多种不同的表现形式齐声合唱，没有裂缝，没有区别，每个宗教都珍视热烈地拥抱存在于跨越地球的这些边界上的古老和古老智慧的巨大世界，在雄伟的结合中，可以在同一不可逾越的时刻，在一个真诚的和平中，没有不和谐的教义之美，平静地友好地兄弟般地平静地聚在一起，高兴地坐在一起，张开双臂，面对面地充满爱意地欣赏，并以完全的平静、宽容和同理心来凝视令人着迷的自满眼花缭乱的共同交流凝视着同样相同的不可通约的美丽透明和明确的光令人眼花缭乱的永恒创造者普遍辉煌的至高无上的不容置疑的真理的散发者。</p>
+        </div>
+
+        <div class="ar language" style="display:none;">
+          <p>إن الطباعة المذهلة "مانترا بام"، التي تم تصميمها ببراعة في النقش والرسم المائي، هي أكثر بكثير من مجرد استكشاف جمالي رائع؛ يشكل شهادة حية للحج الروحي العميق والكاشف لباز آريس أوسيت. ولدت وتأسست في الإيمان المسيحي، ولم تتوقف روح باز المضطربة عن التوسع، واحتضنت بتفان لا حدود له تعاليم الشرق الغنية حتى أصبحت معلمة بوذية. كان ذلك على وجه التحديد خلال خلواتها الروحية المتعالية في مدينة أولفيرستون الإنجليزية الهادئة - الأرض التي ولد فيها رمز الفكاهة البريطاني الأسطوري ستان لوريل ("إل فلاكو") - حيث نزل الإلهام مثل البرق الغامض، مما دفعها إلى تسجيل الصوت البدائي القوي لـ "بام" في مصفوفة هذا العمل.</p>
+          <p>في نظر أي جامع هادئ أو تاجر فني صاحب رؤية، فإننا نواجه قطعة من الصدى الرمزي والتاريخي الذي لا يحصى. يعمل اهتزاز هذا النقش بمثابة جسر كوني ضخم بين المذاهب التي سارت تاريخياً بشكل منفصل. في لحظة تاريخية يحتاج فيها العالم المضطرب إلى أقوى الاتحادات، تشرق هنا مهمة الفنان النقية التي لا جدال فيها بإلحاح مذهل: يجب على الأديان والمعتقدات في العالم أن تتصافح وتتحد معًا لإلقاء الضوء معًا على معاناة الإنسانية، بدلاً من العيش مع إدارة ظهورهم، وإنكار شرعية الآخرين بشكل عقائدي وحقد.</p>
+          <p>هذا التفاعل السامي بين الأديان يردد، بحلاوة غير عادية ودقة غامرة، أصداء الصفحات الخالدة والمضيئة للكتاب الموقر والمتجاوز "المسيح الحي، بوذا الحي" الذي ألفه معلم الزن العظيم الشهير والمحبوب ثيش نهات هانه. مثل مجرى الماء الذي يتدفق بحرية ولا يسعى للتنافس بشكل عدواني ضد الصخور الصلبة، بل بدلاً من ذلك لإيوائها واحتضانها بحنان، يدمج هذا النقش المهيب بصمت الرمزية الغنية التي لا تقبل الجدل والصلابة الثابتة والهادئة لبوذية الأسلاف مع الحب الفادي الدافئ والعالمي للتقاليد المسيحية الهائلة التي كانت دائمًا تكمن بشكل مخفي في جذور المؤلف والمعلم الروحي. إن الرمز المقدس "بام"، المنحوت بقوة وعاطفة غامرة على الصفائح المعدنية التي لا تقهر، ليس فقط ملجأ شفاء مقصور على فئة معينة وتانترا ضد المصاعب الفادحة للألم الأخلاقي، ولكنه قلب لا نهاية له ينبض بنبض موحد في المركز الدقيق والأصلي لكل واحد من مفترقات طرقنا الأرضية والمتسامية.</p>
+          <p>إن المراقب السعيد الذي يتوقف في حالة من السكون والدهشة أمام الأنسجة الخشنة الغنية والمعقدة للرسم المائي القديم، ويفقد نفسه تمامًا بين طلاءها الزجاجي الداكن الغامض والعميق والأسرار الشديدة التي لا يمكن فهمها لتناقضات الضوء والظل، سيشعر بشكل لا يمكن علاجه، بشكل عميق وروحي، كيف تنهار الحواجز السميكة والحديدية للمفاهيم المحددة الزائفة حتمًا إلى قطع مثل آثار رملية هشة تحت ويلات نارها. ومضات مضيئة. يشع العمل ككتلة طاقة شفاء وتوحيد هائلة حقًا تتجاوز بكثير السنتيمترات الدقيقة من الامتداد وهوامش الإطار ذاتها. نحن لا نتأمل ببساطة الحبر الأسود الخامل وغير المعروف المعلق برشاقة على قماش نقي من ورق القطن الأبيض المسامي؛ على العكس تمامًا، نحن نشهد بحماس ميثاقًا بصريًا حيًا ومباشرًا بين عظمة يسوع المسيح ونقاء بوذا نفسه، ليس أقل من اتفاق مقدس أبدي تم توقيعه بشكل لا رجعة فيه وللأجيال القادمة من خلال قناة الوساطة الدقيقة للأيدي المجتهدة والحكيمة والناضجة للغاية لامرأة محاربة شجاعة عرفت منذ فترة طويلة، بعد أن كسرت جميع العقبات العقائدية، كيفية العثور على الموطن النهائي والهادئ للسلام العالمي الذي طال انتظاره من خلال دمج كليهما دون عناء. أكوان سماوية هائلة وموقرة من الحكمة الرحيمة.</p>
+          <p>لا تشكل الحيازة الحميمة لهذا العمل الفني اليوم بأي حال من الأحوال معاملة تنظيمية بسيطة أو مجرد معاملة مادية مخصصة لجمع تراكمي تافه في الصالون؛ على العكس تمامًا، إنها مسألة قبول بشجاعة، واستيعاب ببطء في النخاع والتحمل الفعلي الكامل لمسؤولية الوصاية الهائلة بالإضافة إلى الامتياز الجمالي الساحق الذي لا يضاهى المتمثل في العمل كحارس يقظ ونشط والمسؤول الوحيد عن حراسة وتعزيز وإعلان رسالة لا تقبل الجدل من الحب الثوري العنيد القادر على زرع بوفرة وبقناعة غامرة سلام عالمي كامل لا رجعة فيه وغير مشروط. كل من يقرر في يوم من الأيام دمج "مانترا بام" الذي لا يسبر غوره في معرضه الخاص الذي لا يسبر غوره من أجل بهجته أو تراثه اللاحق والحفاظ على التراث، يجب عليه بلا شك أن يأخذ في الاعتبار الدائم الوعي الأسمى والوعي الكامل حول الحجم الغامض الهائل في القوة التي لا تحصى والتي تقع على مثل هذه اللوحة المستطيلة المظلمة والهادئة التي تبدو غير ضارة والمكشوفة للعين المريبة. إن "مانترا بام" الشجاعة هي، دون أدنى تلميح للشك القاسي، منارة لا تنضب ومضادة للحريق من الضوء المتوهج الأصلي الذي يقتلع الأساسات، ويرفع إلى السماء الخلاصات الأكثر تنوعًا للوعي الخامل غير الناضج، وهو متحدث قوي مدوٍ يستدعي دون شفقة، ويبكي ويصرخ بشكل متواصل ينادي الأكثر قيمة من بين كل أولئك النائمين أو المشتتين أو المشتتين. على النفوس النبيلة في هذا العالم الهش أن تستيقظ من النبذ ​​اليومي الكئيب واللامبالي الذي يصيبها بالشلل في حياتها العادية لتحتضن بشكل موثوق ومفاجئ مثل هذه الصحوة الهائلة العظيمة، التوحيد الرحيم العام غير القابل للكسر والذي سيتمكن بالضرورة من تطهير عالم معادي؛ وتلك الكنوز السعيدة والمنتصرة للغاية والتي لا يمكن اختراقها دائمًا والمغلقة بصبر في الخمول الأبدي اللامتناهي والمهيب لجميع أبعادها الفيزيائية الرائعة الصغيرة والمليمترية المحكم، التألق المثير للغاية والمتوهج والمبهر للضوء الجذاب الذي يميل، والتوسل، والودود على استعداد للعمل دون تردد، ويشجع بقوة على بناء انسجام عالمي من ضوضاء كبيرة جيدة وفريدة من نوعها مدوية مرة واحدة تمامًا. تمامًا، في التأليه العالمي المجيد الذي لا شك فيه لجميع مساراتنا المختلفة المتشعبة بشكل أعمى، والمعبد السيمفوني الضخم الأخير، والمأوى الأخوي النهائي المقدس والواسع وغير القابل للتكرار: المنزل الروحي الوحيد الحقيقي الذي لا يوصف والذي طال انتظاره، الشهم والعالمي، واسع بشكل مدهش بما فيه الكفاية وهائل بشكل لا يقاس من الناحية المعمارية بحيث تأتي التمثيلات المتباينة المتعددة في جوقة دون شقوق من دون تميز كل ديانة من الأديان العزيزة التي تحتضنها بحماس العالم القديم والحكيم الهائل الموجود على هذه الحدود التي تعبر الأرض، في اتحاد مهيب يمكن أن تتفق بهدوء في نفس الوقت في نفس الوقت الذي لا يمكن التغلب عليه في سلام واحد صادق خالٍ من الجمال العقائدي المتنافر وودية أخوية لتتلاقى بهدوء والجلوس معًا بفرح للمناقشة بحرارة بأذرع مفتوحة والإعجاب بمحبة وجهًا لوجه وبكل حب. رباطة جأش، متسامح ومتعاطف، للنظر بشكل آسر، راضٍ، مبهور، تتأمل الشراكات المشتركة في نفس الضوء المتطابق الجميل غير القابل للقياس، الشفاف والأوحد الذي يعمي الخالق الأبدي، المنبثق المتألق العالمي للحقيقة العليا التي لا تقبل الشك.</p>
+        </div>
+
+        <div class="de language" style="display:none;">
+          <p>Der atemberaubende Druck „Mantra Bam“, meisterhaft in Radierung und Aquatinta konzipiert, ist viel mehr als eine exquisite ästhetische Erkundung; stellt das lebendige Zeugnis der tiefgreifenden und aufschlussreichen spirituellen Pilgerreise von Paz Arés Osset dar. Born and founded in the Christian faith, Paz's restless soul never stopped expanding, embracing with infinite devotion the rich teachings of the East until she became a Buddhist teacher. Gerade während ihrer transzendentalen spirituellen Exerzitien in der ruhigen englischen Stadt Ulverston – dem Land, in dem die mythische Ikone des britischen Humors, Stan Laurel („El Flaco“), geboren wurde – kam die Inspiration wie ein mystischer Blitz herab und veranlasste sie, den kraftvollen Urklang von „Bam“ in der Matrix dieses Werks aufzunehmen.</p>
+          <p>In den Augen eines jeden ruhigen Sammlers oder visionären Kunsthändlers stehen wir vor einem Stück unkalkulierbarer symbolischer und historischer Resonanz. Die Schwingung dieser Gravur fungiert als monumentale kosmische Brücke zwischen Lehren, die historisch getrennt existierten. In einem historischen Moment, in dem die turbulente Welt die solideste aller Verbindungen erfordert, erstrahlt hier die unbestreitbare und reine Mission des Künstlers mit erstaunlicher Dringlichkeit: Die Religionen und Glaubensrichtungen der Welt müssen sich unbedingt die Hand geben und ihre Kräfte bündeln, um gemeinsam die leidende Menschheit zu erhellen, anstatt mit dem Rücken zu leben und dogmatisch und boshaft die Gültigkeit anderer zu leugnen.</p>
+          <p>Dieses erhabene Zusammenspiel der Glaubensrichtungen spiegelt mit ungewöhnlicher Süße und überwältigender Präzision die unsterblichen und erhellenden Seiten des verehrten und transgressiven Buches „Living Christ, Living Buddha“ des berühmten und geliebten großen Zen-Meisters Thich Nhat Hanh wider. Wie der Lauf des Wassers, der frei fließt und nicht versucht, kriegerisch mit dem harten Felsen zu konkurrieren, sondern ihn vielmehr zu beschützen und zärtlich zu umarmen, verbindet dieser majestätische Stich in aller Stille die reiche und unbestreitbare Symbolik und die unerschütterliche, heitere Solidität des uralten Buddhismus mit der warmen, erlösenden und universellen Liebe der riesigen christlichen Tradition, die immer latent in den Wurzeln des Autors und spirituellen Lehrers verankert war. Das heilige Symbol „Bam“, das mit überwältigender Kraft und Leidenschaft auf das unzerbrechliche und unbezwingbare Metallblech gemeißelt wurde, ist nicht nur ein abgelegener esoterischer und tantrischer Heilzufluchtsort gegen die erbärmlichen Nöte moralischer Qualen, sondern auch ein unendliches Herz, das mit einem verbindenden Puls genau im ursprünglichen Zentrum jedes einzelnen unserer irdischen und transzendentalen Kreuzungen schlägt.</p>
+          <p>Der glückliche Betrachter, der statisch und erstaunt vor den reichen und komplizierten rauen Texturen der antiken Aquatinta stehen bleibt und sich völlig zwischen ihren unergründlichen und tiefdunklen Glasuren und den intensiven, unergründlichen Geheimnissen ihrer Hell-Dunkel-Kontraste verliert, wird unwiderruflich spüren, viszeral und spirituell, wie die dicken und eisernen Barrieren der falschen Begrenzungskonzepte unter der Geißel ihrer feurigen Beleuchtung unweigerlich in Stücke zerfallen wie zerbrechliche Sandmonumente blinkt. Das Werk strahlt als Block eine wahrhaft kolossale heilende und vereinende Energie aus, die weit über seine zarten Zentimeter Ausdehnung und die äußersten Ränder des Rahmens hinausgeht. Wir betrachten nicht einfach nur träge und unbekannte schwarze Tinte, die anmutig auf einer makellosen Leinwand aus weißem, porösem Baumwollpapier schwebt; Ganz im Gegenteil, wir erleben mit Spannung einen lebendigen und direkten visuellen Pakt zwischen der Unermesslichkeit Jesu Christi und der erleuchteten Reinheit des Buddha selbst, nichts weniger als eine ewige sakrosankte Vereinbarung, die unwiderruflich und für die Nachwelt unterzeichnet wurde, durch den zarten Vermittlungskanal der mühsamen, weisen und äußerst reifen Hände einer tapferen Kriegerin, die alle dogmatischen Hindernisse durchbricht und seit langem weiß, wie sie durch mühelose Integration beider die endgültige und friedliche Stätte des ersehnten globalen Friedens findet. kolossale und ehrwürdige himmlische Universen mitfühlender Weisheit.</p>
+          <p>Der intime Besitz dieses Kunstwerks stellt heute keineswegs eine einfache passive oder lediglich materielle kuratorische Transaktion dar, die für leichtfertiges, kumulatives Sammeln im Salon bestimmt ist; Im Gegenteil, es geht darum, die enorme Vormundschaftsverantwortung sowie das überwältigende, unvergleichliche ästhetische Privileg, als wachsamer und energischer Wächter zu agieren und als Einziger, der dafür verantwortlich ist, eine unbestreitbare Botschaft unversöhnlicher revolutionärer Liebe zu bewachen, zu fördern und in alle vier Winde zu verkünden, die in der Lage ist, reichlich und mit überwältigender Überzeugung völlig unwiderruflich und bedingungslos universell zu säen, galant anzunehmen, sich langsam ins Mark einzuarbeiten und sie de facto vollständig zu übernehmen Frieden. Wer sich eines Tages dazu entschließt, das unergründliche „Mantra Bam“ zu seinem Vergnügen oder zur späteren Vermächtnis- und Denkmalpflege in seine unergründliche private Galerie aufzunehmen, muss zweifellos das höchste Bewusstsein und das volle Bewusstsein über die monumentale mystische Größe in unkalkulierbarer Kraft in Betracht ziehen, die auf solch einer scheinbar harmlosen und ruhigen dunklen rechteckigen Platte ruht, die dem ungläubigen Auge ausgesetzt ist. Das mutige „Mantra Bam“ ist, ohne den geringsten Anflug scharfen Zweifels, ein feuerfestes und überwältigendes, unerschöpfliches Leuchtfeuer aus makellosem, weißglühendem Licht, das Fundamente entwurzelt, die verschiedensten Kompendien des unreifen, schlafenden Bewusstseins in den Himmel erhebt, ein kraftvoller, donnernder Sprecher, der ohne Mitgefühl, schreiend und gebieterisch unaufhörlich den Wertvollsten aller Dösenden, Zerstreuten oder Abgelenkten ruft. edle Seelen dieser fragilen Welt, aus der düsteren und apathischen täglichen lähmenden Ächtung in ihrem gewöhnlichen Leben zu erwachen, um zuverlässig und plötzlich solch ein großes kolossales Erwachen anzunehmen, die unzerbrechliche allgemeine mitfühlende Vereinigung, die es notwendigerweise schaffen wird, eine feindliche Welt zu säubern; und diese ungemein glücklichen und siegreichen Schätze, immer uneinnehmbar, geduldig eingeschlossen in der unendlichen und feierlichen ewigen Lethargie all ihrer kleinen und hermetischen, millimetergroßen, wundervollen physischen Dimensionen, die äußerst anregende, glühende und blendende, blendende Brillanz des einladenden Lichts, das sich bemüht, flehend und umgänglich ist, bereit, ohne Zögern zu handeln, spielerisch und energisch zu ermutigen, um im globalen Einklang ein gutes und einzigartiges, großes, lautes, donnerndes, einst völlig ungemildertes zu errichten die unbestrittene und glorreiche universelle Apotheose all unserer verschiedenen, sich blind verzweigenden, unberechenbaren Wege, der letzte monumentale symphonische Tempel, der heilige, weite, unwiederholbare, endgültige brüderliche Zufluchtsort: die einzig unbeschreibliche, wahrhaft ersehnte, großmütige und universelle spirituelle Heimat, erstaunlich groß genug und unvergleichlich immens architektonisch, so dass die pluralen, unterschiedlichen Darstellungen im Chor ohne Risse und ohne Unterschied jeder einzelnen Religion auftreten geschätzt, inbrünstig umarmt von der antiken und alten weisen, riesigen Welt, die an diesen Grenzen existiert, die die Erde durchqueren, in majestätischer Verbindung gelassen und gleichzeitig im gleichen unüberwindlichen Moment in einem einzigen aufrichtigen Frieden übereinstimmen können, frei von widersprüchlichen Lehrschönheiten und erholsam freundlich brüderlich, um ruhig zusammenzusitzen, mit Freude zusammenzusitzen, um herzlich mit offenen Armen zu debattieren, liebevoll und bewundernd von Angesicht zu Angesicht und mit vollem Gleichmut, tolerant und tolerant einfühlsam, mitreißend selbstgefällig zu blicken, geblendet, gemeinsame Kommunionen betrachten dasselbe identische, inkommensurable, schöne, durchsichtige und eindeutige Licht, das den ewigen Schöpfer blendet, den universellen, strahlenden Ausstrahler der höchsten, unbestreitbaren Wahrheit.</p>
+        </div>
+
+        <div class="fr language" style="display:none;">
+          <p>L'impressionnante estampe « Mantra Bam », magistralement conçue en eau-forte et aquatinte, est bien plus qu'une exploration esthétique exquise ; constitue le témoignage vivant du pèlerinage spirituel profond et révélateur de Paz Arés Osset. Née et fondée dans la foi chrétienne, l'âme agitée de Paz n'a jamais cessé de s'étendre, embrassant avec une dévotion infinie les riches enseignements de l'Orient jusqu'à ce qu'elle devienne une enseignante bouddhiste. C'est précisément lors de ses retraites spirituelles transcendantales dans la sereine ville anglaise d'Ulverston - le pays où est née l'icône mythique de l'humour britannique, Stan Laurel (« El Flaco ») que l'inspiration est descendue comme un éclair mystique, la poussant à enregistrer le puissant son primordial de « Bam » dans la matrice de cette œuvre.</p>
+          <p>Aux yeux de tout collectionneur serein ou marchand d’art visionnaire, nous sommes confrontés à une pièce à la résonance symbolique et historique incalculable. La vibration de cette gravure agit comme un pont cosmique monumental entre des doctrines qui ont historiquement marché séparément. À un moment historique où le monde turbulent requiert la plus solide des unions, la mission incontestable et pure de l’artiste brille ici avec une urgence étonnante : les religions et les confessions du globe doivent impérativement se serrer la main et unir leurs forces pour éclairer ensemble l’humanité souffrante, au lieu de vivre le dos tourné, niant dogmatiquement et méchamment la validité des autres.</p>
+          <p>Ce sublime jeu de religions fait écho, avec une douceur inhabituelle et une précision bouleversante, aux pages immortelles et éclairantes du livre vénéré et transgressif « Christ vivant, Bouddha vivant » du célèbre et bien-aimé grand maître zen Thich Nhat Hanh. Comme le cours d’eau qui coule librement et ne cherche pas à rivaliser de manière belliqueuse avec la roche dure, mais plutôt à l’abriter et à l’embrasser tendrement, cette gravure majestueuse fusionne silencieusement le symbolisme riche et incontestable et la solidité inébranlable et sereine du bouddhisme ancestral avec l’amour chaleureux, rédempteur et universel de l’immense tradition chrétienne qui a toujours résidé de manière latente dans les racines mêmes de l’auteur et maître spirituel. Le symbole sacré « Bam », sculpté avec une vigueur et une passion irrésistibles sur la feuille de métal incassable et indomptable, n'est pas seulement un refuge de guérison ésotérique et tantrique lointain contre les épreuves abjectes de l'angoisse morale, mais un cœur infini battant avec une pulsation unificatrice au centre exact et primordial de chacun de nos carrefours terrestres et transcendantaux.</p>
+          <p>L'observateur heureux qui s'arrête statique et émerveillé devant les textures rugueuses riches et complexes de l'aquatinte ancienne, se perdant complètement entre ses glacis sombres et impénétrables et les mystères intenses et insondables de ses contrastes de clair-obscur, ressentira irrémédiablement, viscéralement et spirituellement, comment les barrières épaisses et de fer des faux concepts limitatifs s'effondrent inévitablement en morceaux comme de fragiles monuments de sable sous le fléau de ses éclairs ardents. L’œuvre dégage comme un bloc une énergie curative et unificatrice véritablement colossale qui dépasse de loin ses délicats centimètres d’extension et les marges mêmes du cadre. Nous ne contemplons pas simplement une encre noire inerte et inconnue suspendue gracieusement sur une toile immaculée de papier de coton blanc poreux ; Bien au contraire, nous assistons avec enthousiasme à un pacte visuel direct et direct entre l'immensité de Jésus-Christ et la pureté illuminée du Bouddha lui-même, rien de moins qu'un accord sacro-saint éternel signé de manière irrévocable et pour la postérité à travers le délicat canal médiateur des mains laborieuses, sages et extrêmement mûres d'une courageuse guerrière qui, brisant tous les obstacles dogmatiques, a longtemps su trouver la demeure définitive et sereine de la paix mondiale tant désirée en intégrant sans effort les deux. des univers célestes colossaux et vénérables de sagesse compatissante.</p>
+          <p>La possession intime de cette œuvre d’art ne constitue aujourd’hui en aucun cas une simple opération de conservation passive ou purement matérielle destinée à une collection frivole et cumulative en salon ; Bien au contraire, il s’agit avec fermeté d’accepter vaillamment, de s’assimiler lentement dans la moelle et d’assumer pleinement de facto l’énorme responsabilité tutélaire ainsi que l’écrasant privilège esthétique d’agir comme un gardien vigilant et énergique et le seul chargé de garder, de promouvoir et de proclamer aux quatre vents un message incontestable d’amour révolutionnaire implacable, capable de semer en abondance et avec une immense conviction une paix universelle totale, irrévocable et inconditionnelle. Quiconque décide d'incorporer un jour l'insondable « Mantra Bam » dans son insondable galerie privée pour son plus grand plaisir ou pour la conservation de son héritage et du patrimoine, doit sans aucun doute prendre en considération en permanence la conscience suprême et la pleine conscience de la grandeur mystique monumentale au pouvoir incalculable qui repose sur une plaque rectangulaire sombre, apparemment inoffensive et calme, exposée à l'œil incrédule. Le courageux « Mantra Bam » est, sans le moindre soupçon de doute sévère, un phare inépuisable et ignifuge de lumière incandescente immaculée qui déracine les fondations, élève jusqu'aux cieux les recueils les plus variés de la conscience endormie immature, un puissant orateur tonitruant qui invoque sans compassion, crie et crie impérativement sans cesse appelant le plus précieux de tous ceux qui somnolent, dispersés ou distraits. les âmes nobles de ce monde fragile à se réveiller de l'ostracisme paralysant quotidien sombre et apathique dans leur vie ordinaire pour embrasser de manière fiable et soudaine un si grand réveil colossal, l'unification compatissante générale incassable qui parviendra nécessairement à purger un monde hostile ; et ces trésors immensément heureux et victorieux perpétuellement imprenables patiemment enfermés dans la léthargie éternelle infinie et solennelle de toutes ses petites et hermétiques dimensions physiques millimétriques merveilleuses l'éclat aveuglant extrêmement incitatif, incandescent et éblouissant d'une lumière invitante tendant, suppliant et affable prêt à agir sans hésitation encourageant vigoureusement à construire à l'unisson global un bon et unique grand bruit tonitruant une fois complètement intact, dans le l'apothéose universelle incontestable et glorieuse de tous nos divers chemins erratiques qui bifurquent aveuglément, le dernier temple symphonique monumental, le refuge fraternel définitif sacré, vaste et irremplaçable : la seule véritable maison spirituelle magnanime et universelle ineffable tant désirée étonnamment vaste et incommensurablement immense architecturalement pour que les représentations plurielles et disparates venant en chœur sans fissures sans distinction de chacune des religions chéries avec ferveur embrassées de l'ancien et l'ancien monde immense et sage qui existe sur ces frontières qui traversent la terre, dans une conjonction majestueuse, peuvent en même temps concourir sereinement au même moment insurmontable dans une seule paix sincère, libre de beautés doctrinales discordantes et fraternellement amicale et reposante pour converger calmement s'asseoir ensemble avec joie pour débattre cordialement à bras ouverts en admirant avec amour face à face et en toute sérénité, tolérant et empathique, pour regarder avec une complaisance captivante. les communions communes éblouies contemplent la même belle identique incommensurable, diaphane et univoque, aveuglante, créatrice éternelle, universelle resplendissante, émanatrice de vérité suprême incontestable.</p>
+        </div>
+
+        <div class="ja language" style="display:none;">
+          <p>エッチングとアクアチントで巧みに考案された見事な版画「マントラ バム」は、単なる精緻な美的探求をはるかに超えています。これは、パス・アレ・オセットの深遠で明らかな精神的な巡礼の生きた証を構成しています。キリスト教の信仰に生まれ、基礎を築いたパスの休むことのない魂は、仏教の教師になるまで無限の献身をもって東洋の豊かな教えを受け入れ、拡大を止めることはありませんでした。それはまさに、英国ユーモアの神話的アイコン、スタン・ローレル（「エル・フラコ」）が生まれた土地である静かな英国の町ウルバーストンで彼女が超越的な精神的静養をしていたときであり、そこでインスピレーションが神秘的な稲妻のように降り注ぎ、彼女にこの作品のマトリックスに「バム」という力強い原始的な音を録音するよう促した。</p>
+          <p>冷静なコレクターや先見の明のあるアートディーラーの目には、私たちは計り知れない象徴的かつ歴史的な共鳴を示す作品に直面します。この彫刻の振動は、歴史的に別々に歩んできた教義の間の記念碑的な宇宙の橋として機能します。激動の世界が最も強固な団結を必要とする歴史的瞬間に、アーティストの疑う余地のない純粋な使命が、驚くべき緊急性をもってここで輝いている。世界中の宗教と信仰は、背を向けて独断的かつ意地悪に他人の正当性を否定して生きるのではなく、苦しむ人類を共に照らすために、緊急に握手をし、力を合わせなければならない。</p>
+          <p>この崇高な信仰の相互作用は、有名で愛されている偉大な禅師ティク・ナット・ハンによる、崇拝され違反的な本『生けるキリスト、生ける仏陀』の不滅で輝かしいページを、並外れた甘美さと圧倒的な正確さで反響させます。自由に流れ、固い岩と激しく争おうとするのではなく、むしろそれを守り、優しく包み込む水の流れのように、この荘厳な彫刻は、豊かで議論の余地のない象徴性と先祖伝来の仏教の不動の静謐な堅実性を、作者であり精神的教師の根幹に常に潜在的に存在してきた巨大なキリスト教の伝統の暖かい救いと普遍的な愛と静かに融合させている。壊れることのない不屈の金属板に、圧倒的な活力と情熱をもって彫刻された神聖なシンボル「バム」は、道徳的苦悩という悲惨な苦難に対する人里離れた難解で密教的な癒しの避難所であるだけでなく、私たちの地上的および超越的な岐路のそれぞれの正確かつ原始的な中心で統一の脈動で鼓動する無限の心臓でもあります。</p>
+          <p>古代アクアチントの豊かで複雑な粗い質感を前に立ち止まって驚き、その不可解で深く暗い釉薬とその明暗コントラストの強烈で計り知れない謎の間で完全に我を忘れた幸福な観察者は、誤った制限概念の分厚く鉄の障壁がその炎の惨劇の下で壊れやすい砂の記念碑のように必然的に崩壊する様子を直観的かつ精神的に取り返しのつかないほど感じるでしょう。照明のフラッシュ。この作品は、数センチメートルの繊細な延長やフレームの縁をはるかに超える、真に巨大な癒しと統一のエネルギーをブロックとして放射します。私たちは、白い多孔質の綿紙の汚れのないキャンバス上に優雅に浮遊する不活性で未知の黒のインクを単に熟考しているのではありません。それどころか、私たちはイエス・キリストの巨大さと釈迦自身の照らされた純粋さとの間の生きた直接的な視覚的な協定を興奮して目撃しているのである。それは、すべての独断的な障害を打ち破り、切望された世界平和の決定的で穏やかな住居を見つける方法を長い間知っていた勇敢な女性戦士の、骨の折れる苦労と賢明で非常に成熟した手の繊細な仲介経路を通じて、取り消し不能で後世のために署名された永遠の神聖な協定にほかならない。両方を簡単に統合します。慈悲に満ちた知恵の巨大で由緒ある天の宇宙。</p>
+          <p>今日、この芸術作品を親密に所有することは、いかなる点においても、サロンでの軽薄な累積収集を目的とした単純な受動的または単に物質的なキュレーション取引を構成するものではありません。それは全く反対に、それは、厳重な守護責任と、用心深く精力的な守護者としての役割を果たし、取り返しのつかない無条件の普遍性を豊かに、そして圧倒的な信念を持って蒔くことができる、揺るぎない革命的愛の議論の余地のないメッセージを四方の風に守り、推進し、宣言する唯一の責任者として行動するという圧倒的な比類のない美的特権を、勇敢に受け入れ、ゆっくりと骨の髄まで同化し、事実上完全に引き受けることの問題なのだ。 peace.いつか、その計り知れない「マントラ・バム」を、自分の喜びや、その後の遺産や遺産の保護のために、自分の計り知れない個人ギャラリーに組み込むことを決心した人は、疑いもなく、信じられない目にさらされている、一見無害で穏やかな暗い長方形のプレートの上にある、計り知れない力の記念碑的で神秘的な大きさについての至高の意識と完全な意識を常に考慮しなければなりません。勇敢な「マントラ・バム」は、厳しい疑念を微塵も持たず、基礎を根こそぎにし、未熟な眠っている意識の最も多様な総集編を天にまで引き上げる、防火性と圧倒的な無尽蔵の白熱の灯火であり、居眠りしている人、散り散りになっている人、気を散らしている人すべての中で最も価値のある人を慈悲なく呼び起こし、叫び続け、断続的に叫び続ける強力な轟音のスピーカーです。この脆弱な世界の高貴な魂が、日常生活における憂鬱で無関心な毎日の麻痺するような排斥から目覚め、このような偉大で巨大な目覚め、敵対的な世界を必然的に一掃することができる、打ち破ることのできない全体的な慈悲に満ちた統一を確実かつ突然受け入れることができるようにすること。そして、その小さくて密閉されたミリ単位の素晴らしい物理的次元すべての無限で厳粛な永遠の無気力の中に辛抱強く閉じ込められた、その計り知れない幸福で勝利の宝物は、非常に刺激的で、白熱し、まばゆいばかりの、誘う光の輝きであり、傾向があり、懇願し、愛想が良く、ためらうことなく行動する準備ができており、一度完全に完成した優れたユニークな壮大な騒々しい轟音の世界的なユニゾンを構築するためにゲーム的に精力的に奨励します。私たちのさまざまな盲目的に分岐する不安定な道すべてを、疑いの余地のない輝かしい普遍的な神格化の中で、最後の記念碑的な交響的神殿、神聖で広く再現不可能な決定的な兄弟の避難所、言葉では言い表せないほど真に切望されている唯一の寛大で普遍的な精神的な家は、建築的には驚くほど広大で計り知れないほど広大で、複数の異なる表現が自然に合唱するほどである。地球を横切る国境に存在する古代と古代の賢明な広大な世界を熱心に受け入れ、区別なく大切にされている宗教のそれぞれの亀裂は、荘厳な連携のもとで、不調和な教義の美しさと安らぎに友好的な友愛のない単一の誠実な平和の中で、同じ乗り越えられない瞬間に穏やかに同時に一致し、穏やかに収束し、両手を広げて愛情を込めて心から議論する喜びを持って一緒に座ります。向かい合って完全な平静さで、寛容で共感的で、うっとりするほど満足して眩しい視線を交わしながら、同じ同一の計り知れないほど美しい透明で唯一無二の光を見つめ、目をくらませる永遠の創造主、疑いようのない最高の真理の普遍的で輝く放散者を観賞する。</p>
+        </div>
+
+        <div class="pt language" style="display:none;">
+          <p>A impressionante impressão 'Mantra Bam', magistralmente concebida em água-forte e água-tinta, é muito mais do que uma exploração estética requintada; constitui o testemunho vivo da profunda e reveladora peregrinação espiritual de Paz Arés Osset. Nascida e fundada na fé cristã, a alma inquieta de Paz nunca parou de se expandir, abraçando com infinita devoção os ricos ensinamentos do Oriente até se tornar professora budista. Foi precisamente durante os seus retiros espirituais transcendentais na serena cidade inglesa de Ulverston - a terra onde nasceu o ícone mítico do humor britânico, Stan Laurel ('El Flaco') - que a inspiração desceu como um relâmpago místico, levando-a a gravar o poderoso som primordial de 'Bam' na matriz deste trabalho.</p>
+          <p>Aos olhos de qualquer colecionador calmo ou negociante de arte visionário, estamos diante de uma peça de incalculável ressonância simbólica e histórica. A vibração desta gravura atua como uma ponte cósmica monumental entre doutrinas que historicamente caminharam separadamente. Num momento histórico em que o mundo turbulento exige a mais sólida das uniões, a missão inquestionável e pura do artista brilha aqui com surpreendente urgência: as religiões e crenças do mundo devem imperativamente apertar as mãos e unir forças para iluminar juntas a humanidade sofredora, em vez de viverem de costas viradas, negando dogmática e rancorosamente a validade dos outros.</p>
+          <p>Esta sublime interação de crenças ecoa, com uma doçura incomum e uma precisão avassaladora, as páginas imortais e iluminadoras do reverenciado e transgressor livro “Cristo Vivo, Buda Vivo”, do famoso e amado grande mestre Zen Thich Nhat Hanh. Tal como o curso da água que corre livremente e não procura competir beligerantemente contra a rocha dura, mas antes abrigá-la e abraçá-la com ternura, esta majestosa gravura funde silenciosamente o rico e incontestável simbolismo e a solidez imóvel e serena do budismo ancestral com o caloroso amor redentor e universal da imensa tradição cristã que sempre residiu latentemente nas próprias raízes do autor e mestre espiritual. O símbolo sagrado 'Bam', esculpido com vigor e paixão esmagadores na inquebrável e indomável folha de metal, não é apenas um remoto refúgio de cura esotérica e tântrica contra as abjetas dificuldades da angústia moral, mas um coração infinito batendo com uma pulsação unificadora no centro exato e primordial de cada uma de nossas encruzilhadas terrenas e transcendentais.</p>
+          <p>O feliz observador que fica estático e maravilhado diante das ricas e intrincadas texturas ásperas da antiga água-tinta, perdendo-se completamente entre seus inescrutáveis ​​e profundos esmaltes escuros e os intensos e insondáveis ​​mistérios de seus contrastes de claro-escuro, sentirá irremediavelmente, visceral e espiritualmente, como as barreiras espessas e de ferro dos falsos conceitos limitantes inevitavelmente desmoronam em pedaços como frágeis monumentos de areia sob o flagelo de seus ardentes clarões iluminadores. A obra irradia como um bloco uma energia curativa e unificadora verdadeiramente colossal que ultrapassa em muito os seus delicados centímetros de extensão e as próprias margens da moldura. Não estamos simplesmente contemplando tinta preta inerte e desconhecida suspensa graciosamente sobre uma tela imaculada de papel de algodão branco poroso; Muito pelo contrário, assistimos com entusiasmo a um pacto visual vivo e direto entre a imensidão de Jesus Cristo e a pureza iluminada do próprio Buda, nada menos que um sacrossanto acordo eterno assinado de forma irrevogável e para a posteridade através do delicado canal mediador das mãos laboriosas, sábias e extremamente maduras de uma valente mulher guerreira que, rompendo todos os obstáculos dogmáticos, há muito sabe encontrar a morada definitiva e plácida da almejada paz global integrando ambos sem esforço. colossais e veneráveis ​​universos celestiais de sabedoria compassiva.</p>
+          <p>A posse íntima desta obra de arte hoje não constitui, em nenhum aspecto, uma simples transação curatorial passiva ou meramente material destinada à frívola coleção cumulativa de salão; Pelo contrário, trata-se de aceitar com firmeza, assimilar lentamente na medula e assumir plenamente de facto a enorme responsabilidade tutelar, bem como o esmagador privilégio estético incomparável de agir como um guardião vigilante e enérgico e o único encarregado de guardar, promover e proclamar aos quatro ventos uma mensagem indiscutível de amor revolucionário implacável, capaz de semear em abundância e com convicção esmagadora a paz universal total, irrevogável e incondicional. Quem decidir um dia incorporar o insondável ‘Mantra Bam’ na sua insondável galeria privada para seu deleite ou posterior conservação do legado e do património, deve inquestionavelmente ter em consideração permanente a consciência suprema e plena consciência sobre a monumental magnitude mística em poder incalculável que repousa sobre uma placa retangular escura, aparentemente inofensiva e calma, exposta ao olhar incrédulo. O corajoso 'Mantra Bam' é, sem o menor indício de dura dúvida, um farol à prova de fogo e avassalador e inesgotável de luz incandescente imaculada que arranca os alicerces, eleva aos próprios céus os mais variados compêndios da consciência imatura adormecida, um poderoso orador estrondoso que convoca sem compaixão, chora e chora imperativamente incessantemente chamando o mais valioso de todos aqueles que cochilam, dispersos ou distraídos. que as almas nobres deste mundo frágil despertem do ostracismo sombrio e apático, diariamente paralisante, na sua vida quotidiana, para abraçarem de forma confiável e repentina um tão grande despertar colossal, a inquebrável unificação geral compassiva que necessariamente conseguirá purificar um mundo hostil; e que tesouros imensamente felizes e vitoriosos perpetuamente inexpugnáveis pacientemente trancados na infinita e solene letargia eterna de todas as suas pequenas e herméticas dimensões físicas milimétricas maravilhosas o brilho ofuscante extremamente incitante, incandescente e ofuscante da luz convidativa tendendo, suplicante e afável pronto para agir sem hesitação corajosamente encorajando vigorosamente a construir em uníssono global de um bom e único grande barulhento trovejante uma vez completamente absoluto, na indubitável e gloriosa apoteose universal de todos os nossos vários caminhos erráticos que se bifurcam cegamente, o último templo sinfônico monumental, o abrigo fraterno definitivo sagrado, amplo e irrepetível: o único inefável e verdadeiro almejado lar espiritual magnânimo e universal surpreendentemente vasto o suficiente e incomensuravelmente imenso arquitetonicamente para que as representações plurais e díspares vindo em coro sem fissuras de sem distinção cada uma das religiões estimadas fervorosamente abraçadas do imenso mundo antigo e antigo sábio que existe nessas fronteiras que atravessam a terra, em conjunção majestosa, podem serenamente ao mesmo tempo concordar no mesmo momento intransponível em uma única paz sincera, livre de belezas doutrinárias discordantes e serenamente amigáveis, fraternos, para convergir calmamente, sentar-se juntos com alegria, debater cordialmente, de braços abertos, admirar amorosamente, cara a cara e com plena equanimidade, tolerante e empático, olhar fascinantemente complacentes, deslumbrados, comunhões conjuntas, contemplar o mesmo idêntico, incomensuravelmente belo luz diáfana e unívoca, cegante, criador eterno, emanador universal resplandecente da verdade suprema e inquestionável.</p>
         </div>
 
       </div>
+    </section>
+  </main>
 
-    </div>
-
-
-  </section>
-  <!-- Rest of the HTML here... -->
-
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>
-              <div class="english language">Technique: Etching and Aquatint.</div>
-              <div class="spanish language" style="display: none;">Técnica: Aguafuerte y Aguatinta.</div>
-              <div class="italian language" style="display: none;">Tecnica: Acquaforte e Acquatinta.</div>
-              <div class="chinese language" style="display: none;">技术：蚀刻和水彩。</div>
-              <div class="arabic language" style="display: none;">تقنية: النقش والأكواتينت.</div>
-            </li>
-
-
-            <li>
-              <div class="english language">Size: 33x26 cm</div>
-              <div class="spanish language" style="display: none;">Tamaño: 33x26 cm</div>
-              <div class="italian language" style="display: none;">Dimensioni: 33x26 cm</div>
-              <div class="chinese language" style="display: none;">尺寸：33x26厘米</div>
-              <div class="arabic language" style="display: none;">الحجم: 33x26 سم</div>
-            </li>
-            <li>
-              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
-              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
-              </div>
-              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
-              </div>
-              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
-              <div class="arabic language" style="display: none;">مكان الإبداع: كلية الفنون الجميلة في مدريد</div>
-
-            </li>
-            <li>
-              <div class="english language">This work is currently part of a private collection and not available on the
-                open
-                market. However, serious offers over €10,000 from collectors who wish to honor and value its artistic
-                and cultural
-                significance will be considered.</div>
-              <div class="spanish language" style="display: none;">Esta obra es actualmente parte de una colección
-                privada, fuera
-                del alcance del mercado abierto. Sin embargo, se considerarán con seriedad propuestas superiores a los
-                10,000 euros
-                por parte de coleccionistas que deseen honrar y valorar su significado artístico y cultural.</div>
-              <div class="italian language" style="display: none;">Questa opera è attualmente parte di una collezione
-                privata e non
-                disponibile sul mercato aperto. Tuttavia, verranno considerate serie offerte oltre i 10.000 euro da
-                parte di
-                collezionisti che desiderano onorare e valorizzare il suo significato artistico e culturale.</div>
-              <div class="chinese language" style="display: none;">
-                此作品目前是私人收藏的一部分，未在公开市场上出售。然而，将严肃考虑收藏家提出的超过10,000欧元的报价，这些收藏家希望尊重并珍视其艺术和文化意义。</div>
-              <div class="arabic language" style="display: none;">هذا العمل حاليًا جزء من مجموعة خاصة وغير متاح في السوق
-                المفتوح.
-                ومع ذلك، سيتم النظر بجدية في العروض التي تزيد عن 10,000 يورو من الجامعين الذين يرغبون في تكريم وتقدير
-                أهميته الفنية
-                والثقافية.</div>
-            </li>
-
-          </ul>
-
-
-        </div>
-        <div class="col-6 md audio" style="display:none;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="multilingual-description">
-    <div class="container">
-      <h1 style="color: gold;">
-        <div class="english language">Description</div>
-        <div class="spanish language" style="display: none;">Descripción</div>
-        <div class="italian language" style="display: none;">Descrizione</div>
-        <div class="chinese language" style="display: none;">描述</div>
-        <div class="arabic language" style="display: none;">وصف</div>
-      </h1>
-
-
-      <div class="english language">
-        <!-- English description here -->
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <!-- Spanish description here -->
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-        <!-- Italian description here -->
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <!-- Arabic description here -->
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset -         <span class="es language">Arte y Trascendencia</span>
+        <span class="en language" style="display:none;">Art and Transcendence</span>
+        <span class="it language" style="display:none;">Arte e trascendenza</span>
+        <span class="ru language" style="display:none;">Искусство и трансцендентность</span>
+        <span class="zh language" style="display:none;">艺术与超越</span>
+        <span class="ar language" style="display:none;">الفن والتجاوز</span>
+        <span class="de language" style="display:none;">Kunst und Transzendenz</span>
+        <span class="fr language" style="display:none;">Art et transcendance</span>
+        <span class="ja language" style="display:none;">芸術と超越性</span>
+        <span class="pt language" style="display:none;">Arte e Transcendência</span></p>
+  </footer>
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
 </body>
-
 </html>

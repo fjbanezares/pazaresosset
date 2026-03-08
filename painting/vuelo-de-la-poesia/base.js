@@ -1,76 +1,49 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
-    document.querySelectorAll('.language').forEach(function (element) {
-      element.style.display = 'none';
-    });
+  const languageSelect = document.getElementById('language-select');
 
-    // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
-    });
-  });
+  function setLanguage(lang) {
+    const normalizedLang = lang.split('-')[0].toLowerCase();
 
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
-  var zoomImages = document.querySelectorAll('.zoom-image');
+    // Proactively set Spanish if no valid language is selected or if explicitly requested
+    const targetLang = normalizedLang || 'es';
+    localStorage.setItem('selectedLanguage', targetLang);
 
-  // Recorre todas las imágenes
-  zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
-    var isZoomed = false;
+    const elements = document.querySelectorAll('.language');
 
-    // Función para realizar el zoom en la imagen
-    function zoomImage() {
-      if (isZoomed) {
-        image.style.transform = 'scale(1)';
-        isZoomed = false;
+    elements.forEach(el => {
+      if (el.classList.contains(targetLang)) {
+        const tag = el.tagName.toLowerCase();
+        if (tag === 'span') {
+          el.style.display = 'inline-block';
+        } else {
+          el.style.display = 'block';
+        }
       } else {
-        image.style.transform = 'scale(1.5)';
-        isZoomed = true;
+        el.style.display = 'none';
       }
+    });
+
+    if (targetLang === 'ar') {
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'ar';
+    } else {
+      document.documentElement.dir = 'ltr';
+      document.documentElement.lang = targetLang;
     }
 
-    // Asigna el evento touchstart (toque) a la imagen
-    image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
+    // Update the dropdown value to match the visual state
+    if (languageSelect) {
+      languageSelect.value = targetLang;
+    }
+  }
 
-      // Establece un temporizador para reducir el zoom después de 3 segundos
-      setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
-      }, 3000);
+  // Force Spanish as default if it's the first time or no preference is set
+  const savedLang = localStorage.getItem('selectedLanguage') || 'es';
+  setLanguage(savedLang);
+
+  if (languageSelect) {
+    languageSelect.addEventListener('change', function (e) {
+      setLanguage(e.target.value);
     });
-  });
-
-  ////
-
-
+  }
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });

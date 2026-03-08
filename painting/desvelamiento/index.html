@@ -1,509 +1,373 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Dance of Fire and Brilliance</title>
+  <title>Desvelamiento - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lemonada:wght@300;600&family=Montserrat:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <select id="language-select" class="custom-select">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇪 العربية</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
     </select>
   </div>
 
+  <!-- Universe & Gallery Buttons -->
+  <a href="../../linktree.html" class="linktree-btn">
+    <i class="fas fa-galactic-republic"></i>
+    <span class="es language">Universo de Paz</span>
+    <span class="en language" style="display:none;">Paz's Universe</span>
+    <span class="it language" style="display:none;">Universo di Paz</span>
+    <span class="ru language" style="display:none;">Вселенная Пас</span>
+    <span class="zh language" style="display:none;">帕斯的宇宙</span>
+    <span class="ar language" style="display:none;">كون باز</span>
+    <span class="de language" style="display:none;">Paz' Universum</span>
+    <span class="fr language" style="display:none;">L'Univers de Paz</span>
+    <span class="ja language" style="display:none;">パースの宇宙</span>
+    <span class="pt language" style="display:none;">O Universo de Paz</span>
+  </a>
 
-  <section class="jumbotron text-center">
+  <a href="../../gallery/index.html" class="gallery-btn">
+    <i class="fas fa-th"></i>
+    <span class="es language">Galería</span>
+    <span class="en language" style="display:none;">Gallery</span>
+    <span class="it language" style="display:none;">Galleria</span>
+    <span class="ru language" style="display:none;">Галерея</span>
+    <span class="zh language" style="display:none;">画廊</span>
+    <span class="ar language" style="display:none;">المعرض</span>
+    <span class="de language" style="display:none;">Galerie</span>
+    <span class="fr language" style="display:none;">Galerie</span>
+    <span class="ja language" style="display:none;">ギャラリー</span>
+    <span class="pt language" style="display:none;">Galeria</span>
+  </a>
+
+  <header class="jumbotron">
     <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
       <h1 class="jumbotron-heading">
-        <div class="english language">Desvelamiento</div>
-        <div class="spanish language" style="display: none;">Desvelamiento</div>
-        <div class="italian language" style="display: none;">Svelamento</div>
-        <div class="chinese language" style="display: none;">揭幕</div>
-        <div class="arabic language" style="display: none;">الكشف</div>
+        <span class="es language">Desvelamiento</span>
+        <span class="en language" style="display:none;">Unveiling</span>
+        <span class="it language" style="display:none;">Svelamento</span>
+        <span class="ru language" style="display:none;">Раскрытие</span>
+        <span class="zh language" style="display:none;">揭幕</span>
+        <span class="ar language" style="display:none;">التجلي</span>
+        <span class="de language" style="display:none;">Enthüllung</span>
+        <span class="fr language" style="display:none;">Dévoilement</span>
+        <span class="ja language" style="display:none;">ヴェールの脱ぎ捨て</span>
+        <span class="pt language" style="display:none;">Desvelamento</span>
       </h1>
+      <p class="lead" style="color: var(--gold); opacity: 0.9;">
+        <span class="es language">El descubrimiento personal tras arrancar las ataduras de tela y el miedo.</span>
+        <span class="en language" style="display:none;">Personal discovery after tearing away fabric bonds and
+          fear.</span>
+        <span class="it language" style="display:none;">La scoperta personale dopo aver strappato i legami di stoffa e
+          la paura.</span>
+        <span class="ru language" style="display:none;">Личное открытие после срыва тканевых пут и страха.</span>
+        <span class="zh language" style="display:none;">挣脱隐喻束缚后的心灵自我启示与发现。</span>
+        <span class="ar language" style="display:none;">الاكتشاف الشخصي بعد تمزيق قيود القماش والخوف والتفتح على
+          حريتك.</span>
+        <span class="de language" style="display:none;">Die spirituelle Erkenntnis nach dem Abstreifen von Gewändern und
+          Ängsten.</span>
+        <span class="fr language" style="display:none;">La découverte de soi par l'éclatement vertueux des liens de
+          tissu et de terreur.</span>
+        <span class="ja language" style="display:none;">内面への恐怖を取り去り、ヴェールを振り払った先にある悟り。</span>
+        <span class="pt language" style="display:none;">A incrível autodescoberta após estilhaçarem-se os tecidos e
+          temores seculares.</span>
+      </p>
 
-      <div class="lead text-muted">
-        <div class="english language">"Unveiling," a journey of liberation and discovery through tactile textures and a
-          dance
-          of pastel veils.</div>
-        <div class="spanish language" style="display: none;">"Desvelamiento," un viaje de liberación y descubrimiento a
-          través
-          de texturas táctiles y un baile de velos pastel.</div>
-        <div class="italian language" style="display: none;">"Svelamento," un viaggio di liberazione e scoperta
-          attraverso
-          texture tattili e un ballo di veli pastello.</div>
-        <div class="chinese language" style="display: none;">“揭幕”，通过触感纹理和柔和色彩的面纱之舞，展现解放与发现的旅程。</div>
-        <div class="arabic language" style="display: none;">"الكشف"، رحلة التحرر والاكتشاف من خلال النسيج التكتيلي ورقصة
-          الأحجبة الباستيل.</div>
+      <div class="text-center mt-4">
+        <a href="../revelacion/index.html" class="btn btn-outline-warning"
+          style="border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; padding: 10px 20px;">
+          <i class="fas fa-eye mr-2"></i>
+          <span class="es language">Ver obra hermana: Revelación</span>
+          <span class="en language" style="display:none;">View sister artwork: Revelation</span>
+          <span class="it language" style="display:none;">Vedere l'opera gemella: Rivelazione</span>
+          <span class="ru language" style="display:none;">Смотреть парную картину: Откровение</span>
+          <span class="zh language" style="display:none;">查看姐妹作品：启示</span>
+          <span class="ar language" style="display:none;">مشاهدة العمل الشقيق: الكشف</span>
+          <span class="de language" style="display:none;">Schwesterwerk ansehen: Offenbarung</span>
+          <span class="fr language" style="display:none;">Voir l'œuvre sœur : Révélation</span>
+          <span class="ja language" style="display:none;">姉妹作品を見る：啓示</span>
+          <span class="pt language" style="display:none;">Ver obra irmã: Revelação</span>
+        </a>
       </div>
-
-
     </div>
-  </section>
+  </header>
 
+  <main class="container">
+    <section class="main-image-container text-center pb-5">
+      <img class="art-image zoom-image" style="transition: transform 0.3s; cursor: zoom-in;" src="desvelamiento.jpg"
+        alt="Desvelamiento">
+    </section>
 
+    <!-- Ficha Técnica -->
+    <section class="section-card">
+      <h3 class="text-warning mb-4"><i class="fas fa-info-circle mr-2"></i>
+        <span class="es language">Ficha Técnica</span>
+        <span class="en language" style="display:none;">Technical Sheet</span>
+        <span class="it language" style="display:none;">Scheda Tecnica</span>
+        <span class="ru language" style="display:none;">Техническая карта</span>
+        <span class="zh language" style="display:none;">技术参数</span>
+        <span class="ar language" style="display:none;">ورقة البيانات التقنية</span>
+        <span class="de language" style="display:none;">Technisches Datenblatt</span>
+        <span class="fr language" style="display:none;">Fiche technique</span>
+        <span class="ja language" style="display:none;">テクニカルデータ</span>
+        <span class="pt language" style="display:none;">Ficha Técnica</span>
+      </h3>
+      <ul class="tech-list">
+        <li><i class="fas fa-paint-brush"></i>
+          <span class="es language"><strong>Técnica:</strong> Técnica mixta incluyendo acrílico, tela de escayola y
+            polvo de mármol.</span>
+          <span class="en language" style="display:none;"><strong>Technique:</strong> Mixed media including acrylic,
+            plaster cloth, and marble dust.</span>
+          <span class="it language" style="display:none;"><strong>Tecnica:</strong> Tecnica mista che include acrilico,
+            stoffa in gesso e polvere di marmo.</span>
+          <span class="ru language" style="display:none;"><strong>Техника:</strong> Смешанная техника (акрил, гипсовая
+            ткань и мраморная пыль).</span>
+          <span class="zh language" style="display:none;"><strong>技法：</strong>混合材料，包括丙烯、石膏布和大理石粉。</span>
+          <span class="ar language" style="display:none;"><strong>التقنية:</strong> تقنية مختلطة تشمل الأكريليك وقماش
+            الجص ومسحوق الرخام.</span>
+          <span class="de language" style="display:none;"><strong>Technik:</strong> Mischtechnik (Acryl, Gipsgewebe und
+            Marmorstaub).</span>
+          <span class="fr language" style="display:none;"><strong>Technique :</strong> Techniques mixtes (acrylique,
+            toile de plâtre et poudre de marbre).</span>
+          <span class="ja language" style="display:none;"><strong>技法：</strong>アクリル、石膏布、大理石の粉末を含むミクストメディア。</span>
+          <span class="pt language" style="display:none;"><strong>Técnica:</strong> Técnica mista incluindo acrílico,
+            tela de gesso e pó de mármore.</span>
+        </li>
+        <li><i class="fas fa-expand-arrows-alt"></i>
+          <span class="es language"><strong>Tamaño:</strong> 100x80 cm</span>
+          <span class="en language" style="display:none;"><strong>Size:</strong> 100x80 cm</span>
+          <span class="it language" style="display:none;"><strong>Dimensioni:</strong> 100x80 cm</span>
+          <span class="ru language" style="display:none;"><strong>Размер:</strong> 100x80 см</span>
+          <span class="zh language" style="display:none;"><strong>尺寸：</strong>100x80 厘米</span>
+          <span class="ar language" style="display:none;"><strong>الحجم:</strong> 100x80 سم</span>
+          <span class="de language" style="display:none;"><strong>Größe:</strong> 100x80 cm</span>
+          <span class="fr language" style="display:none;"><strong>Taille :</strong> 100x80 cm</span>
+          <span class="ja language" style="display:none;"><strong>サイズ：</strong>100x80 cm</span>
+          <span class="pt language" style="display:none;"><strong>Tamanho:</strong> 100x80 cm</span>
+        </li>
+        <li><i class="fas fa-university"></i>
+          <span class="es language"><strong>Lugar de Creación:</strong> Facultad de Bellas Artes en Madrid</span>
+          <span class="en language" style="display:none;"><strong>Creation Place:</strong> Fine Arts School of
+            Madrid</span>
+          <span class="it language" style="display:none;"><strong>Luogo di Creazione:</strong> Accademia di Belle Arti
+            di Madrid</span>
+          <span class="ru language" style="display:none;"><strong>Место создания:</strong> Факультет изящных искусств в
+            Мадриде</span>
+          <span class="zh language" style="display:none;"><strong>创作地点：</strong>马德里美术学院</span>
+          <span class="ar language" style="display:none;"><strong>مكان الإنشاء:</strong> كلية الفنون الجميلة في
+            مدريد</span>
+          <span class="de language" style="display:none;"><strong>Entstehungsort:</strong> Fakultät für Schöne Künste in
+            Madrid</span>
+          <span class="fr language" style="display:none;"><strong>Lieu de création :</strong> Faculté des Beaux-Arts de
+            Madrid</span>
+          <span class="ja language" style="display:none;"><strong>創作場所：</strong>マドリード美術学部</span>
+          <span class="pt language" style="display:none;"><strong>Lugar de Criação:</strong> Faculdade de Belas Artes de
+            Madrid</span>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i>
+          <span class="es language"><strong>Ubicación Actual:</strong> Colección Privada. No disponible en mercado, pero
+            se valoran ofertas superiores a 100.000 € por quienes honren su significado artístico.</span>
+          <span class="en language" style="display:none;"><strong>Current Location:</strong> Private Collection. Not for
+            sale on open market, but serious offers over €100,000 from collectors honoring its meaning are
+            valued.</span>
+          <span class="it language" style="display:none;"><strong>Ubicazione Attuale:</strong> Collezione privata. Non
+            in vendita, ma si valutano offerte superiori a 100.000 € da parte di chi ne onora il significato.</span>
+          <span class="ru language" style="display:none;"><strong>Текущее положение:</strong> Частная коллекция. Не
+            продается на открытом рынке, но рассматриваются предложения свыше 100 000 € от ценителей её смысла.</span>
+          <span class="zh language"
+            style="display:none;"><strong>当前位置：</strong>私人收藏。不在公开市场出售，但会慎重考虑珍视其艺术意义并出价100,000欧元以上的藏家。</span>
+          <span class="ar language" style="display:none;"><strong>الموقع الحالي:</strong> مجموعة خاصة. لا تعرض للبيع
+            ولكن ستؤخذ في الاعتبار عروض تزيد عن 100,000 يورو من قبل من يقدّرون معناها الفني.</span>
+          <span class="de language" style="display:none;"><strong>Aktueller Standort:</strong> Privatsammlung. Nicht
+            verkäuflich, aber Angebote über 100.000 € von Sammlern, die ihre künstlerische Bedeutung ehren, werden
+            erwogen.</span>
+          <span class="fr language" style="display:none;"><strong>Emplacement actuel :</strong> Collection Privée. Non
+            disponible sur le marché, mais les offres supérieures à 100 000 € émanant d'amateurs honorant sa
+            signification sont étudiées.</span>
+          <span class="ja language"
+            style="display:none;"><strong>現在の場所：</strong>プライベートコレクション。一般市場では非売品ですが、その芸術的意義を深く理解される方からの10万ユーロ以上のオファーは検討します。</span>
+          <span class="pt language" style="display:none;"><strong>Localização Atual:</strong> Coleção Privada.
+            Indisponível no mercado, contudo valorizam-se ofertas superiores a 100.000 € procedentes daqueles que
+            honrarem a sua essência.</span>
+        </li>
+      </ul>
+    </section>
 
-  <section class="main-image">
-    <div class="container">
-      <div class="row">
-        <div class="col-12-lg">
-
-
-          <img class="zoom-image" src="desvelamiento.jpg" width="100%" style="border:30px solid white;" alt="Amazing">
-
-
+    <!-- Análisis Crítico -->
+    <section class="section-card">
+      <h2 class="text-warning mb-4"><i class="fas fa-feather-alt mr-2"></i>
+        <span class="es language">Análisis Crítico</span>
+        <span class="en language" style="display:none;">Critical Analysis</span>
+        <span class="it language" style="display:none;">Analisi Critica</span>
+        <span class="ru language" style="display:none;">Критический анализ</span>
+        <span class="zh language" style="display:none;">批判性分析</span>
+        <span class="ar language" style="display:none;">التحليل النقدي</span>
+        <span class="de language" style="display:none;">Kritische Analyse</span>
+        <span class="fr language" style="display:none;">Analyse Critique</span>
+        <span class="ja language" style="display:none;">批評的分析</span>
+        <span class="pt language" style="display:none;">Análise Crítica</span>
+      </h2>
+      <div class="description-text">
+        <!-- ES -->
+        <div class="es language">
+          <p>"Desvelamiento", la obra que continúa y resuelve el diálogo visual iniciado en "Revelación", lleva al espectador al esperado clímax de la narrativa. Donde "Revelación" representaba la ocultación y la introspección bajo apretados turbantes y velos, "Desvelamiento" brilla como el acto liberador de descubrimiento y exposición. La artista teje la historia de una transformación metamórfica: los vientos han arrancado finalmente las ataduras de tela, que ahora yacen esparcidas por la arena seca en una vibrante danza de colores pastel lavados.</p>
+          <p>La técnica de textura mixta permanece fiel al estilo distintivo de Osset. El polvo de mármol y la tela de escayola impregnan la escena con una sensación táctil que añade una dimensión de aspereza en la tierra (pintada con tal habilidad que hace sentir el sofocante calor del desierto), contrastando agudamente con la suavidad de los velos y la fragilidad de la piel expuesta. Esta dualidad textual realza el dramatismo del desvelamiento: el abandono categórico de la rigidez en favor de la existencia auténtica.</p>
+          <p>La figura solitaria en la distancia habla de un viaje que continúa incluso después de que las máscaras han caído. La paleta de colores resalta los velos multicolores, enfatizando el contraste entre la libertad y el aislamiento. Estos velos abandonados aluden a un nuevo amanecer y sugieren un profundo alivio emocional, como si cada tejido desechado aliviara un enorme peso del alma de los caminantes, revelando posibilidades en la luz del conocimiento adquirido.</p>
+          <p>Este cuadro, "Desvelamiento", no es solo un eco de la búsqueda de la verdad; es la afirmación gozosa de haberla encontrado. La desnudez expuesta es una declaración audaz y triunfante, una proclamación de que la vulnerabilidad no es debilidad, sino la forma más pura de fuerza. En su estado desprotegido y auténtico, la humanidad redescubre su armonía intrínseca, libre por fin de la carga de las expectativas y pretensiones sociales, abriendo paso a una existencia guiada por el resplandor indiscutible de nuestra propia claridad y amor verdadero.</p>
+          <p>El caleidoscopio de colores bajo lo que se interpreta como la luz del entendimiento baña la escena con un optimismo cauteloso. No simboliza solo el final de un viaje, sino el inicio heroico de una etapa de crecimiento y exploración personal hacia la aceptación. En esta escena vemos la belleza de la evolución, la promesa de lo que florece al soltar las capas para reunirse para siempre con la verdad desnuda.</p>
+          <p>La pareja al centro-izquierda se muestra ahora completamente desnuda y despojada de sus barreras físicas, miedos infundados y expectativas culturales. Esta desnudez va más allá de lo carnal; representa un estado de extrema honradez y sinceridad emocional. Es un triunfo invencible del espíritu, el genuino coraje de enfrentarse al mundo en la esencia más pura, revelando una armonía inherente entre el ser humano y la naturaleza que solo aflora al derribar los muros artificiales.</p>
+          <p>La textura de la arena, lograda mediante esta técnica, contrasta con los cuerpos lisos y los velos sueltos, sugiriendo el arraigo físico en contraposición con la liberación espiritual. La figura que se aleja puede simbolizar el pasado que se deja atrás, las viejas versiones de uno mismo o de la sociedad, que continúan su camino mientras nos detenemos para revelar y reconocer nuestra verdad desnuda.</p>
+          <p>Emocionalmente, "Desvelamiento" es una odisea de alivio y renacimiento. Ofrece a quien la observa una pausa reflexiva: un espejo ante el cual uno puede cuestionar sus propios velos y la posibilidad liberadora de dejarlos caer, animando a un viaje personal hacia una existencia más abierta, lúcida y desprovista de miedos y prejuicios. Ambas composiciones nos invitan a reflexionar seriamente sobre las múltiples máscaras forzadas que solemos usar cada día, celebrando sin tapujos la sanadora euforia que experimentamos cuando nos atrevemos a presentarnos ante la inmensidad en nuestra forma más verdadera y plena.</p>
         </div>
 
-      </div>
-
-    </div>
-
-
-  </section>
-  <!-- Rest of the HTML here... -->
-
-  <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6-md description">
-          <ul>
-            <li>
-              <div class="english language" style="display: none;">Technique: Mixed media including acrylic, plaster
-                cloth, and
-                marble dust.</div>
-              <div class="spanish language">Técnica: Técnica mixta incluyendo acrílico, tela de escayola y polvo de
-                mármol.</div>
-              <div class="italian language" style="display: none;">Tecnica: Tecnica mista che include acrilico, stoffa
-                in gesso e
-                polvere di marmo.</div>
-              <div class="chinese language" style="display: none;">技术：混合材料，包括丙烯酸、石膏布和大理石粉。</div>
-              <div class="arabic language" style="display: none;">تقنية: تقنيات مختلطة تشمل الأكريليك، قماش الجبس، وغبار
-                الرخام.
-              </div>
-            </li>
-
-
-
-            <li>
-              <div class="english language">Size: 100x80 cm</div>
-              <div class="spanish language" style="display: none;">Tamaño: 100x80 cm</div>
-              <div class="italian language" style="display: none;">Dimensioni: 100x80 cm</div>
-              <div class="chinese language" style="display: none;">尺寸：100x80厘米</div>
-              <div class="arabic language" style="display: none;">الحجم: 100x80 سم</div>
-
-            </li>
-            <li>
-              <div class="english language">Creation Place: Fine Arts School of Madrid</div>
-              <div class="spanish language" style="display: none;">Lugar de Creación: Facultad de Bellas Artes en Madrid
-              </div>
-              <div class="italian language" style="display: none;">Luogo di Creazione: Scuola di Belle Arti di Madrid
-              </div>
-              <div class="chinese language" style="display: none;">创作地点：马德里美术学院</div>
-              <div class="arabic language" style="display: none;">مكان الإبداع: كلية الفنون الجميلة في مدريد</div>
-
-            </li>
-            <li>
-              <div class="english language">This work is currently part of a private collection and not available on the
-                open
-                market. However, serious offers over €100,000 from collectors who wish to honor and value its artistic
-                and cultural
-                significance will be considered.</div>
-              <div class="spanish language" style="display: none;">Esta obra es actualmente parte de una colección
-                privada, fuera
-                del alcance del mercado abierto. Sin embargo, se considerarán con seriedad propuestas superiores a los
-                100,000 euros
-                por parte de coleccionistas que deseen honrar y valorar su significado artístico y cultural.</div>
-              <div class="italian language" style="display: none;">Questa opera è attualmente parte di una collezione
-                privata e non
-                disponibile sul mercato aperto. Tuttavia, verranno considerate serie offerte oltre i 100.000 euro da
-                parte di
-                collezionisti che desiderano onorare e valorizzare il suo significato artistico e culturale.</div>
-              <div class="chinese language" style="display: none;">
-                此作品目前是私人收藏的一部分，未在公开市场上出售。然而，将严肃考虑收藏家提出的超过100,000欧元的报价，这些收藏家希望尊重并珍视其艺术和文化意义。</div>
-              <div class="arabic language" style="display: none;">هذا العمل حاليًا جزء من مجموعة خاصة وغير متاح في السوق
-                المفتوح.
-                ومع ذلك، سيتم النظر بجدية في العروض التي تزيد عن 100,000 يورو من الجامعين الذين يرغبون في تكريم وتقدير
-                أهميته الفنية
-                والثقافية.</div>
-            </li>
-          </ul>
-
-
+        <!-- EN -->
+        <div class="en language" style="display:none;">
+          <p>"Desvelamiento", the work that continues and resolves the visual dialogue begun in "Revelation", takes the viewer to the expected climax of the narrative. Where "Revelation" represented concealment and introspection under tight turbans and veils, "Unveiling" shines as the liberating act of discovery and exposure. The artist weaves the story of a metamorphic transformation: the winds have finally torn away the cloth bindings, which now lie scattered across the dry sand in a vibrant dance of washed pastel colors.</p>
+          <p>The mixed texture technique remains true to Osset's distinctive style. The marble dust and plaster cloth imbue the scene with a tactile sensation that adds a dimension of harshness to the earth (painted with such skill that it makes one feel the stifling heat of the desert), contrasting sharply with the softness of the veils and the fragility of the exposed skin. This textual duality enhances the drama of the revelation: the categorical abandonment of rigidity in favor of authentic existence.</p>
+          <p>The lone figure in the distance speaks of a journey that continues even after the masks have fallen. The color palette highlights the multicolored veils, emphasizing the contrast between freedom and isolation. These abandoned veils allude to a new dawn and suggest a deep emotional relief, as if each discarded fabric relieved an enormous weight from the souls of the walkers, revealing possibilities in the light of acquired knowledge.</p>
+          <p>This painting, "Unveiling," is not only an echo of the search for truth; It is the joyful affirmation of having found it. Exposed nudity is a bold and triumphant statement, a proclamation that vulnerability is not weakness, but the purest form of strength. In its unprotected and authentic state, humanity rediscovers its intrinsic harmony, finally free from the burden of social expectations and pretensions, making way for an existence guided by the indisputable radiance of our own clarity and true love.</p>
+          <p>The kaleidoscope of colors under what is interpreted as the light of understanding bathes the scene in cautious optimism. It not only symbolizes the end of a journey, but the heroic beginning of a stage of personal growth and exploration towards acceptance. In this scene we see the beauty of evolution, the promise of what blossoms as you drop the layers to forever reunite with the naked truth.</p>
+          <p>The couple on the center-left are now shown completely naked and stripped of their physical barriers, unfounded fears and cultural expectations. This nudity goes beyond the carnal; It represents a state of extreme honesty and emotional sincerity. It is an invincible triumph of the spirit, the genuine courage to face the world in its purest essence, revealing an inherent harmony between human beings and nature that only emerges when breaking down artificial walls.</p>
+          <p>The texture of the sand, achieved through this technique, contrasts with the smooth bodies and loose veils, suggesting physical rootedness as opposed to spiritual liberation. The receding figure can symbolize the past being left behind, the old versions of self or society, continuing on their path as we pause to reveal and acknowledge our naked truth.</p>
+          <p>Emotionally, "Unveiling" is an odyssey of relief and rebirth. It offers those who observe it a reflective pause: a mirror before which one can question their own veils and the liberating possibility of letting them fall, encouraging a personal journey towards a more open, lucid existence devoid of fears and prejudices. Both compositions invite us to seriously reflect on the many forced masks that we usually wear every day, openly celebrating the healing euphoria that we experience when we dare to present ourselves before immensity in our truest and fullest form.</p>
         </div>
-        <div class="col-6 md audio" style="display:none;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
+
+        <!-- IT -->
+        <div class="it language" style="display:none;">
+          <p>"Desvelamiento", l'opera che continua e risolve il dialogo visivo iniziato in "Revelation", porta lo spettatore al climax atteso della narrazione. Laddove "Rivelazione" rappresentava l'occultamento e l'introspezione sotto stretti turbanti e veli, "Unveiling" brilla come l'atto liberatorio di scoperta ed esposizione. L'artista tesse la storia di una trasformazione metamorfica: i venti hanno finalmente strappato le legature di stoffa, che ora giacciono sparse sulla sabbia asciutta in una vibrante danza di colori pastello lavati.</p>
+          <p>La tecnica della trama mista rimane fedele allo stile distintivo di Osset. La polvere di marmo e la tela di gesso infondono alla scena una sensazione tattile che aggiunge una dimensione di asprezza alla terra (dipinta con tale maestria da far sentire il caldo soffocante del deserto), in netto contrasto con la morbidezza dei veli e la fragilità della pelle esposta. Questa dualità testuale esalta la drammaticità della rivelazione: l'abbandono categorico della rigidità a favore dell'esistenza autentica.</p>
+          <p>La figura solitaria in lontananza parla di un viaggio che continua anche dopo che le maschere sono cadute. La palette cromatica mette in risalto i veli multicolori, sottolineando il contrasto tra libertà e isolamento. Questi veli abbandonati alludono a una nuova alba e suggeriscono un profondo sollievo emotivo, come se ogni tessuto scartato alleggerisse un peso enorme dalle anime dei camminatori, rivelando possibilità alla luce della conoscenza acquisita.</p>
+          <p>Questo dipinto, "Unveiling", non è solo un'eco della ricerca della verità; È la gioiosa affermazione di averlo trovato. La nudità esposta è un’affermazione audace e trionfante, una proclamazione che la vulnerabilità non è debolezza, ma la forma più pura di forza. Nel suo stato non protetto e autentico, l'umanità ritrova la sua intrinseca armonia, finalmente libera dal peso delle aspettative e delle pretese sociali, lasciando il posto a un'esistenza guidata dall'indiscutibile splendore della nostra stessa chiarezza e del vero amore.</p>
+          <p>Il caleidoscopio di colori sotto quella che viene interpretata come la luce della comprensione inonda la scena di cauto ottimismo. Non simboleggia solo la fine di un viaggio, ma l'inizio eroico di una fase di crescita personale ed esplorazione verso l'accettazione. In questa scena vediamo la bellezza dell'evoluzione, la promessa di ciò che sboccia quando si lasciano cadere gli strati per ricongiungersi per sempre con la nuda verità.</p>
+          <p>La coppia del centrosinistra viene ora mostrata completamente nuda e spogliata delle barriere fisiche, delle paure infondate e delle aspettative culturali. Questa nudità va oltre il carnale; Rappresenta uno stato di estrema onestà e sincerità emotiva. È un invincibile trionfo dello spirito, il coraggio genuino di affrontare il mondo nella sua essenza più pura, rivelando un'innata armonia tra l'essere umano e la natura che emerge solo quando si abbattono i muri artificiali.</p>
+          <p>La consistenza della sabbia, ottenuta attraverso questa tecnica, contrasta con i corpi lisci e i veli sciolti, suggerendo il radicamento fisico in contrapposizione alla liberazione spirituale. La figura che si allontana può simboleggiare il passato lasciato alle spalle, le vecchie versioni di sé o della società, che continuano il loro percorso mentre ci fermiamo per rivelare e riconoscere la nostra nuda verità.</p>
+          <p>Emotivamente, "Unveiling" è un'odissea di sollievo e rinascita. Offre a chi lo osserva una pausa riflessiva: uno specchio davanti al quale mettere in discussione i propri veli e la possibilità liberatoria di lasciarli cadere, incoraggiando un viaggio personale verso un'esistenza più aperta, lucida, priva di paure e pregiudizi. Entrambe le composizioni ci invitano a riflettere seriamente sulle tante maschere forzate che siamo soliti indossare ogni giorno, celebrando apertamente l'euforia curativa che proviamo quando osiamo presentarci davanti all'immensità nella nostra forma più vera e piena.</p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="multilingual-description">
-    <div class="container">
-      <h1 style="color: gold;">
-        <div class="english language">Description</div>
-        <div class="spanish language" style="display: none;">Descripción</div>
-        <div class="italian language" style="display: none;">Descrizione</div>
-        <div class="chinese language" style="display: none;">描述</div>
-        <div class="arabic language" style="display: none;">وصف</div>
-      </h1>
+        <!-- RU -->
+        <div class="ru language" style="display:none;">
+          <p>«Девеламиенто», произведение, продолжающее и разрешающее визуальный диалог, начатый в «Откровении», подводит зрителя к ожидаемой кульминации повествования. Если «Откровение» представляло собой сокрытие и самоанализ под плотными тюрбанами и завесами, «Разоблачение» сияет как освобождающий акт открытия и разоблачения. Художник ткет историю метаморфического превращения: ветер наконец сорвал тканевые переплеты, которые теперь разбросаны по сухому песку в ярком танце размытых пастельных тонов.</p>
+          <p>Техника смешанной фактуры остается верной самобытному стилю Осетии. Мраморная пыль и штукатурка придают сцене тактильное ощущение, которое придает жесткость земле (написанной с таким мастерством, что заставляет почувствовать удушающую жару пустыни), резко контрастируя с мягкостью вуалей и хрупкостью обнаженной кожи. Эта текстовая двойственность усиливает драматизм откровения: категорический отказ от жесткости в пользу подлинного существования.</p>
+          <p>Одинокая фигура вдалеке говорит о путешествии, которое продолжается даже после того, как маски упали. Цветовая палитра подчеркивает разноцветную вуаль, подчеркивающую контраст между свободой и изоляцией. Эти оставленные вуали намекают на новый рассвет и предполагают глубокое эмоциональное облегчение, как будто каждая выброшенная ткань сбрасывала огромный груз с душ ходоков, открывая возможности в свете приобретенных знаний.</p>
+          <p>Эта картина «Разоблачение» — не только отголосок поисков истины; Это радостное подтверждение того, что мы его нашли. Обнаженная нагота — это смелое и триумфальное заявление, провозглашение того, что уязвимость — это не слабость, а чистейшая форма силы. В своем незащищенном и подлинном состоянии человечество заново открывает свою внутреннюю гармонию, наконец-то освободившись от бремени социальных ожиданий и претензий, уступая место существованию, руководимому неоспоримым сиянием нашей собственной ясности и истинной любви.</p>
+          <p>Калейдоскоп цветов под светом понимания наполняет сцену осторожным оптимизмом. Он символизирует не только конец путешествия, но и героическое начало этапа личностного роста и поиска пути к принятию. В этой сцене мы видим красоту эволюции, обещание того, что расцветет, когда вы отбрасываете слои, чтобы навсегда воссоединиться с голой истиной.</p>
+          <p>Левоцентристская пара теперь показана полностью обнаженной и лишенной физических барьеров, необоснованных страхов и культурных ожиданий. Эта нагота выходит за рамки плотского; Оно представляет собой состояние предельной честности и эмоциональной искренности. Это непобедимый триумф духа, подлинное мужество взглянуть в лицо миру в его чистейшей сути, раскрывающее внутреннюю гармонию между человеком и природой, которая возникает только тогда, когда разрушаются искусственные стены.</p>
+          <p>Текстура песка, полученная с помощью этой техники, контрастирует с гладкими телами и рыхлой вуалью, предполагая физическую укорененность, а не духовное освобождение. Удаляющаяся фигура может символизировать то, что прошлое осталось позади, старые версии себя или общества, продолжающие свой путь, пока мы делаем паузу, чтобы раскрыть и признать нашу голую правду.</p>
+          <p>Эмоционально «Unveiling» — это одиссея облегчения и возрождения. Он предлагает тем, кто наблюдает за ним, паузу для размышления: зеркало, перед которым можно подвергнуть сомнению свои собственные покровы, и освобождающую возможность позволить им упасть, поощряя личное путешествие к более открытому, осознанному существованию, лишенному страхов и предрассудков. Обе композиции приглашают нас серьезно задуматься о многочисленных вынужденных масках, которые мы обычно носим каждый день, открыто прославляя целительную эйфорию, которую мы испытываем, когда осмеливаемся предстать перед необъятным в нашей самой истинной и полной форме.</p>
+        </div>
 
+        <!-- ZH -->
+        <div class="zh language" style="display:none;">
+          <p>《Desvelamiento》延续并解决了《启示录》中开始的视觉对话，将观众带入了预期的叙事高潮。 “启示”代表了在紧紧的头巾和面纱下的隐藏和内省，而“揭幕”则是发现和暴露的解放行为。艺术家编织了一个变质的故事：风最终撕开了布包边，它们现在散落在干燥的沙子上，以水洗柔和的色彩充满活力的舞蹈。</p>
+          <p>混合纹理技术仍然忠于奥塞特的独特风格。大理石灰尘和石膏布给场景注入了一种触感，为大地增添了一种粗糙的维度（绘画技巧如此之高，让人感受到沙漠令人窒息的炎热），与面纱的柔软和裸露皮肤的脆弱形成鲜明对比。这种文本的二元性增强了启示的戏剧性：彻底放弃僵化，转而支持真实的存在。</p>
+          <p>远处的孤独身影讲述着即使面具掉落后仍在继续的旅程。调色板突出了五彩面纱，强调自由与孤立之间的对比。这些废弃的面纱暗示着新的黎明，并暗示着一种深深的情感解脱，仿佛每一件废弃的织物都减轻了步行者灵魂的巨大负担，揭示了根据所获得的知识的可能性。</p>
+          <p>这幅画《揭开面纱》不仅是对真理探索的回响，也是对真理的探索的回响。这是找到它的喜悦的肯定。裸露的裸体是一种大胆而胜利的声明，宣告脆弱不是弱点，而是最纯粹的力量形式。在不受保护和真实的状态下，人类重新发现了其内在的和谐，最终摆脱了社会期望和自命不凡的负担，为一种由我们自己的清晰和真爱无可争议的光芒所引导的存在让路。</p>
+          <p>在被理解为理解之光的万花筒般的色彩下，场景沐浴在谨慎的乐观之中。它不仅象征着旅程的结束，而且象征着个人成长和探索接受阶段的英雄式开始。在这个场景中，我们看到了进化的美丽，当你抛开层层，与赤裸裸的真相永远重聚时，承诺会绽放出花朵。</p>
+          <p>中左翼的夫妇现在完全赤身裸体，消除了身体障碍、毫无根据的恐惧和文化期望。这种裸体超越了肉体的范畴；它代表了一种极度诚实和情感真诚的状态。这是一种不可战胜的精神胜利，是面对世界最纯粹本质的真正勇气，揭示了人与自然之间固有的和谐，只有在打破人造围墙时才会出现。</p>
+          <p>通过这种技术实现的沙子纹理与光滑的身体和松散的面纱形成鲜明对比，暗示着身体的扎根，而不是精神的解放。后退的人物象征着过去被抛在身后，旧版本的自我或社会，在我们停下来揭示和承认赤裸裸的真相时继续走在它们的道路上。</p>
+          <p>从情感上来说，《揭幕》是一次解脱和重生的冒险之旅。它为观察者提供了一个反思性的停顿：一面镜子，在这面镜子前，人们可以质疑自己的面纱以及让自己堕落的解放可能性，鼓励个人走向一种更加开放、清醒的存在，没有恐惧和偏见。这两首作品都邀请我们认真反思我们每天都戴着的许多强迫面具，公开庆祝当我们敢于以最真实和最完整的形式在浩瀚面前展现自己时所体验到的治愈性欣快感。</p>
+        </div>
 
-      <div class="english language">
-        <!-- English description here -->
+        <!-- AR -->
+        <div class="ar language" style="display:none;">
+          <p>"Desvelamiento"، العمل الذي يستمر ويحل الحوار البصري الذي بدأ في "الرؤيا"، يأخذ المشاهد إلى الذروة المتوقعة للسرد. حيث كان "الوحي" يمثل الإخفاء والاستبطان تحت العمائم الضيقة والحجاب، فإن "الكشف" يتألق باعتباره الفعل المحرر للاكتشاف والكشف. ينسج الفنان قصة التحول المتحول: لقد مزقت الرياح أخيرًا روابط القماش، التي أصبحت الآن متناثرة عبر الرمال الجافة في رقصة نابضة بالحياة من ألوان الباستيل المغسولة.</p>
+          <p>تظل تقنية النسيج المختلط وفية لأسلوب Osset المميز. يضفي غبار الرخام والقماش الجبسي على المشهد إحساسا ملموسا يضيف بعدا من القسوة إلى الأرض (مرسومة بمهارة تجعل المرء يشعر بحرارة الصحراء الخانقة)، في تناقض حاد مع نعومة الحجاب وهشاشة الجلد المكشوف. هذه الازدواجية النصية تعزز دراما الوحي: التخلي القاطع عن الجمود لصالح الوجود الأصيل.</p>
+          <p>يتحدث الشخص الوحيد في المسافة عن رحلة تستمر حتى بعد سقوط الأقنعة. تسلط لوحة الألوان الضوء على الحجاب متعدد الألوان، مع التركيز على التناقض بين الحرية والعزلة. تلمح هذه الحجب المهجورة إلى فجر جديد وتوحي بارتياح عاطفي عميق، كما لو أن كل قماش مهمل يخفف ثقلاً هائلاً عن أرواح السائرين، ويكشف عن إمكانيات في ضوء المعرفة المكتسبة.</p>
+          <p>هذه اللوحة "الكشف" ليست مجرد صدى للبحث عن الحقيقة؛ إنه التأكيد البهيج على العثور عليه. العري المكشوف هو بيان جريء ومنتصر، وإعلان أن الضعف ليس ضعفًا، ولكنه أنقى أشكال القوة. في حالتها الأصيلة وغير المحمية، تعيد البشرية اكتشاف انسجامها الجوهري، وتتحرر أخيرًا من عبء التوقعات والادعاءات الاجتماعية، مما يفسح المجال لوجود يسترشد بالإشعاع الذي لا جدال فيه لوضوحنا وحبنا الحقيقي.</p>
+          <p>مشهد الألوان تحت ما يتم تفسيره على أنه ضوء الفهم يغمر المشهد بتفاؤل حذر. إنه لا يرمز فقط إلى نهاية الرحلة، بل يرمز إلى البداية البطولية لمرحلة من النمو الشخصي والاستكشاف نحو القبول. في هذا المشهد نرى جمال التطور، والوعد بما يزدهر عندما تسقط الطبقات لتتحد إلى الأبد مع الحقيقة العارية.</p>
+          <p>يظهر الآن الزوجان من يسار الوسط عاريين تمامًا ومجردين من حواجزهما الجسدية ومخاوفهما التي لا أساس لها وتوقعاتهما الثقافية. هذا العري يتجاوز الجسدي. إنه يمثل حالة من الصدق الشديد والصدق العاطفي. إنه انتصار لا يقهر للروح، والشجاعة الحقيقية لمواجهة العالم في أنقى جوهره، ويكشف عن الانسجام المتأصل بين البشر والطبيعة الذي لا يظهر إلا عند تحطيم الجدران الاصطناعية.</p>
+          <p>يتناقض نسيج الرمال، الذي يتم تحقيقه من خلال هذه التقنية، مع الأجسام الملساء والحجاب الفضفاض، مما يشير إلى التجذر الجسدي بدلاً من التحرر الروحي. يمكن أن يرمز الشكل المتراجع إلى الماضي الذي تركه وراءنا، أو الإصدارات القديمة من الذات أو المجتمع، التي تستمر في طريقها بينما نتوقف للكشف عن حقيقتنا العارية والاعتراف بها.</p>
+          <p>عاطفياً، "الكشف" هو ملحمة من الراحة والولادة. إنه يوفر لمن يشاهده وقفة تأملية: مرآة يمكن للمرء أن يتساءل أمامها عن حجابه وإمكانية التحرر من تركه يسقط، مما يشجع رحلة شخصية نحو وجود أكثر انفتاحًا ووضوحًا وخاليًا من المخاوف والأحكام المسبقة. يدعونا كلا التركيبين إلى التفكير بجدية في العديد من الأقنعة القسرية التي نرتديها عادةً كل يوم، ونحتفل علنًا بنشوة الشفاء التي نختبرها عندما نجرؤ على تقديم أنفسنا أمام الضخامة في أصدق وأكمل أشكالنا.</p>
+        </div>
 
-        <p>"Unveiling," the work that continues the visual dialogue initiated by "Revelation," leads the viewer into a
-          new
-          chapter of the narrative. The artist Paz Arés Osset weaves the story of a transformation, both physical and
-          metaphorical. Where "Revelation" represents concealment and introspection, "Unveiling" shines as the act of
-          discovery
-          and exposure.</p>
+        <!-- DE -->
+        <div class="de language" style="display:none;">
+          <p>„Desvelamiento“, das Werk, das den in „Revelation“ begonnenen visuellen Dialog fortsetzt und auflöst, führt den Betrachter zum erwarteten Höhepunkt der Erzählung. Wo „Revelation“ Verborgenheit und Selbstbeobachtung unter engen Turbanen und Schleiern darstellte, erstrahlt „Unveiling“ als befreiender Akt der Entdeckung und Enthüllung. Der Künstler spinnt die Geschichte einer metamorphen Transformation: Der Wind hat endlich die Stoffbindungen weggerissen, die nun in einem lebendigen Tanz aus verwaschenen Pastellfarben über den trockenen Sand verstreut liegen.</p>
+          <p>Die Mischtexturtechnik bleibt dem unverwechselbaren Stil von Osset treu. Der Marmorstaub und das Gipstuch verleihen der Szene ein taktiles Gefühl, das der Erde eine Dimension der Härte verleiht (mit solcher Geschicklichkeit bemalt, dass man die drückende Hitze der Wüste spüren kann) und einen scharfen Kontrast zur Weichheit der Schleier und der Zerbrechlichkeit der freigelegten Haut bildet. Diese Textdualität verstärkt die Dramatik der Offenbarung: die kategorische Abkehr von der Starrheit zugunsten der authentischen Existenz.</p>
+          <p>Die einsame Gestalt in der Ferne spricht von einer Reise, die auch nach dem Fallen der Masken weitergeht. Die Farbpalette hebt die vielfarbigen Schleier hervor und betont den Kontrast zwischen Freiheit und Isolation. Diese verlassenen Schleier verweisen auf eine neue Morgendämmerung und suggerieren eine tiefe emotionale Erleichterung, als würde jeder weggeworfene Stoff eine enorme Last von den Seelen der Wanderer nehmen und im Lichte des erworbenen Wissens Möglichkeiten offenbaren.</p>
+          <p>Dieses Gemälde „Enthüllung“ ist nicht nur ein Echo der Suche nach Wahrheit; Es ist die freudige Bestätigung, es gefunden zu haben. Entblößte Nacktheit ist eine kühne und triumphale Aussage, eine Proklamation, dass Verletzlichkeit keine Schwäche, sondern die reinste Form der Stärke ist. In ihrem ungeschützten und authentischen Zustand entdeckt die Menschheit ihre innere Harmonie wieder, ist endlich frei von der Last gesellschaftlicher Erwartungen und Ansprüche und macht Platz für eine Existenz, die von der unbestreitbaren Ausstrahlung unserer eigenen Klarheit und wahren Liebe geleitet wird.</p>
+          <p>Das Kaleidoskop der Farben unter dem, was als Licht des Verstehens interpretiert wird, taucht die Szene in vorsichtigen Optimismus. Es symbolisiert nicht nur das Ende einer Reise, sondern auch den heroischen Beginn einer Phase des persönlichen Wachstums und der Suche nach Akzeptanz. In dieser Szene sehen wir die Schönheit der Evolution, das Versprechen dessen, was erblüht, wenn man die Schichten abwirft, um sich für immer mit der nackten Wahrheit zu vereinen.</p>
+          <p>Das Paar in der Mitte links wird nun völlig nackt und ohne physische Barrieren, unbegründete Ängste und kulturelle Erwartungen gezeigt. Diese Nacktheit geht über das Fleischliche hinaus; Es stellt einen Zustand äußerster Ehrlichkeit und emotionaler Aufrichtigkeit dar. Es ist ein unbesiegbarer Triumph des Geistes, der echte Mut, sich der Welt in ihrer reinsten Essenz zu stellen und eine inhärente Harmonie zwischen Mensch und Natur zu offenbaren, die nur dann zum Vorschein kommt, wenn künstliche Mauern niedergerissen werden.</p>
+          <p>Die durch diese Technik erzielte Textur des Sandes steht im Kontrast zu den glatten Körpern und losen Schleiern und suggeriert körperliche Verwurzelung statt spiritueller Befreiung. Die zurückweichende Figur kann symbolisieren, dass die Vergangenheit zurückgelassen wird, die alten Versionen des Selbst oder der Gesellschaft, die ihren Weg fortsetzen, während wir innehalten, um unsere nackte Wahrheit zu offenbaren und anzuerkennen.</p>
+          <p>Emotional ist „Unveiling“ eine Odyssee der Erleichterung und Wiedergeburt. Es bietet denjenigen, die es beobachten, eine reflektierende Pause: einen Spiegel, vor dem man seine eigenen Schleier hinterfragen kann und die befreiende Möglichkeit, sie fallen zu lassen, und der zu einer persönlichen Reise hin zu einem offeneren, klareren Leben ohne Ängste und Vorurteile anregt. Beide Kompositionen laden uns dazu ein, ernsthaft über die vielen Zwangsmasken nachzudenken, die wir normalerweise jeden Tag tragen, und zelebrieren offen die heilende Euphorie, die wir erleben, wenn wir es wagen, uns der Unermesslichkeit in unserer wahrsten und vollsten Form zu präsentieren.</p>
+        </div>
 
-        <p>Osset's technique remains true to her distinctive style, using a mix of textures that imbue the scene with an
-          almost
-          tangible tactile sensation. The veils, once tight around the figures, now lie scattered across the arid
-          terrain,
-          hinting at a liberation from the layers that previously concealed the truth. The earth, in shades of ochre and
-          sand,
-          stretches towards the horizon, painted with such skill that one might almost feel the sweltering heat of the
-          desert.
-        </p>
+        <!-- FR -->
+        <div class="fr language" style="display:none;">
+          <p>"Desvelamiento", l'œuvre qui poursuit et résout le dialogue visuel commencé dans "Révélation", emmène le spectateur au point culminant attendu du récit. Là où « Révélation » représentait la dissimulation et l'introspection sous des turbans et des voiles serrés, « Dévoilement » brille comme l'acte libérateur de découverte et d'exposition. L'artiste tisse l'histoire d'une transformation métamorphique : les vents ont finalement arraché les reliures en tissu, qui sont désormais éparpillées sur le sable sec dans une danse vibrante de couleurs pastel délavées.</p>
+          <p>La technique des textures mixtes reste fidèle au style distinctif d'Osset. La poussière de marbre et la toile de plâtre confèrent à la scène une sensation tactile qui ajoute une dimension de dureté à la terre (peinte avec un tel savoir-faire qu'elle fait ressentir la chaleur étouffante du désert), contrastant fortement avec la douceur des voiles et la fragilité de la peau exposée. Cette dualité textuelle renforce le drame de la révélation : l’abandon catégorique de la rigidité au profit de l’existence authentique.</p>
+          <p>Le personnage solitaire au loin parle d’un voyage qui se poursuit même après la chute des masques. La palette de couleurs met en valeur les voiles multicolores, soulignant le contraste entre liberté et isolement. Ces voiles abandonnés font allusion à une nouvelle aube et suggèrent un profond soulagement émotionnel, comme si chaque tissu jeté soulageait un énorme poids de l'âme des marcheurs, révélant des possibilités à la lumière des connaissances acquises.</p>
+          <p>Ce tableau, « Dévoilement », n'est pas seulement un écho à la recherche de la vérité ; C'est l'affirmation joyeuse de l'avoir trouvé. La nudité exposée est une déclaration audacieuse et triomphale, une proclamation que la vulnérabilité n’est pas une faiblesse, mais la forme la plus pure de force. Dans son état authentique et non protégé, l’humanité retrouve son harmonie intrinsèque, enfin libérée du fardeau des attentes et des prétentions sociales, ouvrant la voie à une existence guidée par le rayonnement incontestable de sa propre clarté et de son véritable amour.</p>
+          <p>Le kaléidoscope de couleurs sous ce qui est interprété comme la lumière de la compréhension baigne la scène dans un optimisme prudent. Il symbolise non seulement la fin d’un voyage, mais aussi le début héroïque d’une étape de croissance personnelle et d’exploration vers l’acceptation. Dans cette scène, nous voyons la beauté de l'évolution, la promesse de ce qui s'épanouit à mesure que vous abandonnez les couches pour retrouver à jamais la vérité nue.</p>
+          <p>Le couple de centre-gauche est désormais représenté complètement nu et débarrassé de ses barrières physiques, de ses peurs infondées et de ses attentes culturelles. Cette nudité dépasse le charnel ; Cela représente un état d’extrême honnêteté et de sincérité émotionnelle. C'est un triomphe invincible de l'esprit, le véritable courage d'affronter le monde dans sa plus pure essence, révélant une harmonie inhérente entre l'être humain et la nature qui n'émerge qu'en abattant les murs artificiels.</p>
+          <p>La texture du sable, obtenue grâce à cette technique, contraste avec les corps lisses et les voiles lâches, suggérant un enracinement physique par opposition à une libération spirituelle. La figure qui s'éloigne peut symboliser le passé laissé derrière nous, les anciennes versions de soi ou de la société, poursuivant leur chemin alors que nous nous arrêtons pour révéler et reconnaître notre vérité nue.</p>
+          <p>Émotionnellement, « Unveiling » est une odyssée de soulagement et de renaissance. Il offre à ceux qui l'observent une pause réflexive : un miroir devant lequel on peut s'interroger sur ses propres voiles et la possibilité libératrice de les laisser tomber, encourageant un voyage personnel vers une existence plus ouverte et lucide, sans peurs ni préjugés. Les deux compositions nous invitent à réfléchir sérieusement aux nombreux masques forcés que nous portons habituellement chaque jour, célébrant ouvertement l'euphorie curative que nous ressentons lorsque nous osons nous présenter devant l'immensité sous notre forme la plus vraie et la plus complète.</p>
+        </div>
 
-        <p>The solitary figure in the distance speaks of a journey that continues, even after the masks have fallen. The
-          color
-          palette, though restricted, highlights the multicolored veils, emphasizing the contrast between freedom and
-          isolation.
-          The veils, with their washed pastel colors, give the impression of a new dawn, of possibilities revealed in
-          the light
-          of acquired knowledge.</p>
+        <!-- JA -->
+        <div class="ja language" style="display:none;">
+          <p>「デスベラミエント」は、「黙示録」で始まった視覚的な対話を継続し解決する作品で、視聴者を物語の予想されるクライマックスへと連れて行きます。 「Revelation」がきつめのターバンとベールの下での隠蔽と内省を表現していたのに対し、「Unveiling」は発見と暴露という解放的な行為として輝いています。アーティストは、変容の物語を織り交ぜます。風がついに布の束縛を引き剥がし、今では洗いざらしたパステルカラーの活気に満ちたダンスの中で乾いた砂の上に散らばっています。</p>
+          <p>混合テクスチャ技術は、オセットの独特のスタイルに忠実です。大理石の粉塵と漆喰の布は、大地（砂漠の息の詰まるような熱を感じさせるほどの巧みな技で描かれている）に厳しさを一次元加える触感を場面に与え、ベールの柔らかさや露出した肌のもろさとははっきりと対照をなしている。このテキストの二重性は、真実の存在を支持して厳格さを断固として放棄するという、啓示のドラマを強化します。</p>
+          <p>遠くに見える孤独な人物は、仮面が落ちた後も続く旅を物語っています。カラー パレットは色とりどりのベールを強調し、自由と孤立の間のコントラストを強調します。これらの放棄されたベールは新たな夜明けを暗示し、あたかも廃棄された各布地がウォーカーの魂から巨大な重荷を解放したかのように、深い感情的な安堵を示唆し、獲得した知識に照らして可能性を明らかにします。</p>
+          <p>この絵「Unveiling」は、真実の探求を反映しているだけではありません。それはそれを見つけたという喜びの肯定です。露出したヌードは大胆かつ勝利を誇った声明であり、脆弱性は弱さではなく、最も純粋な形の強さであるという宣言です。保護されていない本物の状態で、人類は本質的な調和を再発見し、最終的に社会の期待や見栄の重荷から解放され、私たち自身の明晰さと真の愛の議論の余地のない輝きによって導かれる存在に道を切り開きます。</p>
+          <p>理解の光として解釈される色の万華鏡が、シーンを慎重な楽観主義で満たします。それは旅の終わりを象徴するだけでなく、受け入れに向けた個人の成長と探求の段階の英雄的な始まりを象徴しています。このシーンでは、進化の美しさ、層を落とすにつれて花開き、裸の真実と永遠に再会するという約束が見られます。</p>
+          <p>中道左派のカップルは現在、完全に裸で、物理的な障壁、根拠のない恐怖、文化的な期待を取り除かれて示されています。この裸体は肉欲を超えています。それは、極度の正直さと感情的な誠実さの状態を表します。それは精神の不屈の勝利であり、最も純粋な本質で世界に立ち向かう真の勇気であり、人工の壁を破壊するときにのみ現れる人間と自然の間の固有の調和を明らかにします。</p>
+          <p>この技術によって実現された砂の質感は、滑らかな体やゆるいベールと対照的で、精神的な解放とは対照的に、肉体的な根性を示唆しています。遠ざかっていく人物は、私たちが自分の裸の真実を明らかにし認識するために立ち止まるときに、置き去りにされた過去、自己や社会の古いバージョンを象徴する可能性があります。</p>
+          <p>感情的には、「Unveiling」は安堵と再生の冒険です。それは、それを観察する人々に、内省的な一時停止を提供します。その前で、人は自分自身のベールに疑問を持ち、それを脱がせる解放的な可能性を問うことができる鏡であり、恐怖や偏見のない、よりオープンで明晰な存在に向けた個人的な旅を奨励します。どちらの作品も、私たちが普段毎日かぶっている多くの強制的なマスクについて真剣に考えるよう促し、私たちが真の完全な姿で広大な世界の前にあえて自分自身を提示するときに経験する癒しの幸福感を公然と祝っています。</p>
+        </div>
 
-        <p>This painting, "Unveiling," is not just an echo of its predecessor but a powerful discourse on the evolution
-          of the
-          human spirit. In its simplicity, we find complexity; in its stillness, there is movement; in its silence,
-          there is a
-          profound narrative that resonates with anyone who has embarked on the arduous journey of self-discovery. With
-          "Unveiling," Arés Osset invites viewers to contemplate not only what has been revealed but also what is yet to
-          be
-          discovered.</p>
-
-        <p>The kaleidoscope of colors scattered over the sand in "Unveiling" invokes a cluster of emotions. The artist,
-          through
-          her mastery of texture, has brought each fold to life, infusing it with a vibration that seems to pulse with a
-          whisper
-          of newfound freedoms. The tones, soft yet firm, play between euphoria and serenity, suggesting emotional
-          relief, as if
-          each abandoned cloth alleviates a weight from the souls of the wanderers.</p>
-
-        <p>The couple at the center-left, now nude and free from their veils, represents a state of vulnerability and
-          authenticity. The nudity goes beyond the physical; it is a representation of emotional honesty, a stripping
-          away of
-          pretenses, and a confrontation with the purest essence of being. Their subtle presence, almost merged with the
-          landscape, is a powerful reminder of the inherent unity between humans and nature, a harmony that is fully
-          revealed
-          only when barriers fall.</p>
-
-        <p>The texture of the sand, crafted with the same mixed media technique that distinguishes Osset, adds a
-          dimension of
-          roughness that contrasts with the softness of the veils. This textural duality enhances the drama of the act
-          of
-          unveiling: the abandonment of rigidity in favor of a more authentic and full existence.</p>
-
-        <p>Emotionally, "Unveiling" is an odyssey towards acceptance. The colors, now bright under what can be
-          interpreted as
-          the light of understanding, bathe the scene with cautious optimism. It is not simply the end of a journey, but
-          the
-          beginning of a new stage of growth and exploration. In the couple, we see the possibility of rebirth, the
-          beauty of
-          personal evolution, and the promise of what can emerge when we leave behind our barriers and face the world in
-          our
-          truest and most naked form.</p>
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <!-- Spanish description here -->
-
-        <p>"Desvelamiento", la obra que continúa el diálogo visual iniciado por "Revelación", lleva al espectador a un
-          nuevo
-          capítulo de la narrativa. La artista Paz Arés Osset teje la historia de una transformación, tanto física como
-          metafórica. Donde "Revelación" representa la ocultación y la introspección, "Desvelamiento" brilla como el
-          acto de
-          descubrimiento y exposición. </p>
-
-
-        <p>La técnica de Osset permanece fiel a su estilo distintivo, utilizando una mezcla de texturas que impregnan la
-          escena con
-          una sensación táctil casi tangible. Los velos, una vez ceñidos a las figuras, ahora yacen dispersos por el
-          terreno
-          árido, insinuando una liberación de las capas que antes ocultaban la verdad. La tierra, en tonos de ocre y
-          arena, se
-          extiende hacia el horizonte, pintada con tal habilidad que uno podría casi sentir el calor sofocante del
-          desierto. </p>
-
-        <p>La figura solitaria en la distancia habla de un viaje que continúa, incluso después de que las máscaras hayan
-          caído. La
-          paleta de colores, aunque restringida, resalta los velos multicolores, enfatizando el contraste entre la
-          libertad y el
-          aislamiento. Los velos, con sus colores pastel lavados, dan la impresión de un nuevo amanecer, de
-          posibilidades que se
-          revelan en la luz del conocimiento adquirido. </p>
-
-        <p>Este cuadro, "Desvelamiento", no es solo un eco de su predecesor, sino un poderoso discurso sobre la
-          evolución del
-          espíritu humano. En su simplicidad, encontramos complejidad; en su quietud, hay movimiento; en su silencio,
-          hay un
-          relato profundo que resuena con cualquiera que haya emprendido el arduo viaje de autodescubrimiento. Con
-          "Desvelamiento", Arés Osset invita a los espectadores a contemplar no solo lo que se ha revelado, sino también
-          lo que
-          aún está por descubrir. </p>
-
-        <p>El caleidoscopio de colores que yacen dispersos sobre la arena en "Desvelamiento" invoca un cúmulo de
-          emociones. La
-          artista, a través de su maestría en la textura, ha dado vida a cada pliegue, infundiéndole una vibración que
-          parece
-          pulsar con un susurro de libertades recién encontradas. Las tonalidades, suaves pero firmes, juegan entre la
-          euforia y
-          la serenidad, y sugieren un alivio emocional, como si cada tela abandonada aliviara un peso del alma de los
-          caminantes. </p>
-
-        <p>La pareja al centro izquierda, ahora desnuda y libre de sus velos, representa un estado de vulnerabilidad y
-          autenticidad. La desnudez va más allá de lo físico; es una representación de la sinceridad emocional, un
-          despojo de las
-          pretensiones y un enfrentamiento con la esencia más pura del ser. Su presencia sutil, casi fusionada con el
-          paisaje, es
-          un poderoso recordatorio de la unidad inherente entre el ser humano y la naturaleza, una armonía que se revela
-          completamente solo cuando las barreras caen. </p>
-
-        <p>La textura de la arena, elaborada con la misma técnica mixta que distingue a Osset, añade una dimensión de
-          aspereza que
-          contrasta con la suavidad de los velos. Esta dualidad textural realza el dramatismo del acto de desvelamiento:
-          el
-          abandono de la rigidez en favor de una existencia más auténtica y plena. </p>
-
-        <p>Emocionalmente, "Desvelamiento" es una odisea hacia la aceptación. Los colores, ahora brillantes bajo lo que
-          se puede
-          interpretar como la luz del entendimiento, bañan la escena con un optimismo cauteloso. No es simplemente el
-          final de un
-          viaje, sino el inicio de una nueva etapa de crecimiento y exploración. En la pareja, vemos la posibilidad de
-          renacimiento, la belleza de la evolución personal y la promesa de lo que puede emerger cuando dejamos atrás
-          nuestras
-          barreras y nos enfrentamos al mundo en nuestra forma más verdadera y desnuda. </p>
-
+        <!-- PT -->
+        <div class="pt language" style="display:none;">
+          <p>“Desvelamiento”, obra que dá continuidade e resolve o diálogo visual iniciado em “Revelação”, leva o espectador ao esperado clímax da narrativa. Onde “Revelação” representava ocultação e introspecção sob turbantes e véus apertados, “Desvelar” brilha como o ato libertador de descoberta e exposição. A artista tece a história de uma transformação metamórfica: os ventos finalmente arrancaram as amarrações de tecido, que agora estão espalhadas pela areia seca numa dança vibrante de tons pastéis lavados.</p>
+          <p>A técnica de textura mista permanece fiel ao estilo distinto de Osset. O pó de mármore e o pano de gesso conferem à cena uma sensação táctil que acrescenta uma dimensão de aspereza à terra (pintada com tal habilidade que faz sentir o calor sufocante do deserto), contrastando fortemente com a suavidade dos véus e a fragilidade da pele exposta. Esta dualidade textual realça o drama da revelação: o abandono categórico da rigidez em favor da existência autêntica.</p>
+          <p>A figura solitária ao longe fala de uma jornada que continua mesmo depois que as máscaras caem. A paleta de cores destaca os véus multicoloridos, enfatizando o contraste entre liberdade e isolamento. Estes véus abandonados aludem a um novo amanhecer e sugerem um profundo alívio emocional, como se cada tecido descartado aliviasse um peso enorme na alma dos caminhantes, revelando possibilidades à luz do conhecimento adquirido.</p>
+          <p>Esta pintura, “Desvelamento”, não é apenas um eco da busca pela verdade; É a alegre afirmação de tê-lo encontrado. A nudez exposta é uma declaração ousada e triunfante, uma proclamação de que vulnerabilidade não é fraqueza, mas a forma mais pura de força. No seu estado desprotegido e autêntico, a humanidade redescobre a sua harmonia intrínseca, libertando-se finalmente do peso das expectativas e pretensões sociais, abrindo caminho para uma existência guiada pelo brilho indiscutível da nossa própria clareza e do verdadeiro amor.</p>
+          <p>O caleidoscópio de cores sob o que é interpretado como a luz da compreensão banha a cena com um otimismo cauteloso. Não simboliza apenas o fim de uma jornada, mas o início heróico de uma etapa de crescimento pessoal e exploração rumo à aceitação. Nesta cena vemos a beleza da evolução, a promessa do que floresce à medida que você abandona as camadas para se reunir para sempre com a verdade nua e crua.</p>
+          <p>O casal de centro-esquerda é agora mostrado completamente nu e despojado das suas barreiras físicas, medos infundados e expectativas culturais. Essa nudez vai além do carnal; Representa um estado de extrema honestidade e sinceridade emocional. É um triunfo invencível do espírito, a coragem genuína de enfrentar o mundo na sua mais pura essência, revelando uma harmonia inerente entre o ser humano e a natureza que só emerge quando se derrubam muros artificiais.</p>
+          <p>A textura da areia, conseguida através desta técnica, contrasta com os corpos lisos e véus soltos, sugerindo enraizamento físico em oposição à libertação espiritual. A figura que se afasta pode simbolizar o passado deixado para trás, as antigas versões do eu ou da sociedade, continuando o seu caminho enquanto fazemos uma pausa para revelar e reconhecer a nossa verdade nua e crua.</p>
+          <p>Emocionalmente, “Unveiling” é uma odisseia de alívio e renascimento. Oferece a quem o observa uma pausa reflexiva: um espelho diante do qual se pode questionar os próprios véus e a possibilidade libertadora de deixá-los cair, incentivando um percurso pessoal rumo a uma existência mais aberta, lúcida, desprovida de medos e preconceitos. Ambas as composições convidam-nos a refletir seriamente sobre as muitas máscaras forçadas que costumamos usar todos os dias, celebrando abertamente a euforia curativa que experimentamos quando ousamos apresentar-nos perante a imensidão na nossa forma mais verdadeira e plena.</p>
+        </div>
 
 
       </div>
+    </section>
+  </main>
 
+  <footer class="py-5 text-center text-muted border-top mt-5" style="border-color: var(--glass-border) !important;">
+    <p>&copy; 2024 Paz Arés Osset - <span class="es language">Arte y Trascendencia</span>
+      <span class="en language" style="display:none;">Art and Transcendence</span>
+      <span class="it language" style="display:none;">Arte e Trascendenza</span>
+      <span class="ru language" style="display:none;">Искусство и трансцендентность</span>
+      <span class="zh language" style="display:none;">艺术与超越</span>
+      <span class="ar language" style="display:none;">الفن والمتسامي</span>
+      <span class="de language" style="display:none;">Kunst und Transzendenz</span>
+      <span class="fr language" style="display:none;">Art et Transcendance</span>
+      <span class="ja language" style="display:none;">芸術と超越</span>
+      <span class="pt language" style="display:none;">Arte e Transcendência</span>
+    </p>
+  </footer>
 
-      <div class="italian language" style="display: none;">
-        <!-- Italian description here -->
-        <p>"Rivelazione," l'opera che continua il dialogo visivo iniziato da "Revelazione," conduce lo spettatore in un
-          nuovo
-          capitolo della narrazione. L'artista Paz Arés Osset intreccia la storia di una trasformazione, sia fisica che
-          metaforica. Dove "Revelazione" rappresenta la dissimulazione e l'introspezione, "Rivelazione" risplende come
-          l'atto di
-          scoperta ed esposizione.</p>
-
-        <p>La tecnica di Osset rimane fedele al suo stile distintivo, utilizzando un mix di texture che impregnano la
-          scena con
-          una sensazione tattile quasi tangibile. I veli, una volta stretti attorno alle figure, ora giacciono sparsi
-          sul
-          terreno arido, suggerendo una liberazione dagli strati che precedentemente nascondevano la verità. La terra,
-          nei toni
-          dell'ocra e della sabbia, si estende verso l'orizzonte, dipinta con tale abilità che si potrebbe quasi sentire
-          il
-          calore soffocante del deserto.</p>
-
-        <p>La figura solitaria in lontananza parla di un viaggio che continua, anche dopo che le maschere sono cadute.
-          La
-          palette di colori, sebbene limitata, mette in evidenza i veli multicolori, enfatizzando il contrasto tra
-          libertà e
-          isolamento. I veli, con i loro colori pastello sbiaditi, danno l'impressione di una nuova alba, di possibilità
-          rivelate alla luce della conoscenza acquisita.</p>
-
-        <p>Questo dipinto, "Rivelazione," non è solo un'eco del suo predecessore ma un potente discorso sull'evoluzione
-          dello
-          spirito umano. Nella sua semplicità, troviamo complessità; nella sua quiete, c'è movimento; nel suo silenzio,
-          c'è una
-          narrazione profonda che risuona con chiunque abbia intrapreso il difficile viaggio dell'autoscoperta. Con
-          "Rivelazione," Arés Osset invita gli spettatori a contemplare non solo ciò che è stato rivelato, ma anche ciò
-          che deve
-          ancora essere scoperto.</p>
-
-        <p>Il caleidoscopio di colori sparsi sulla sabbia in "Rivelazione" evoca un insieme di emozioni. L'artista,
-          attraverso
-          la sua maestria nelle texture, ha dato vita a ogni piega, infondendole una vibrazione che sembra pulsare con
-          un
-          sussurro di libertà appena trovate. Le tonalità, morbide ma decise, giocano tra l'euforia e la serenità,
-          suggerendo un
-          sollievo emotivo, come se ogni tessuto abbandonato alleviasse un peso dalle anime dei viandanti.</p>
-
-        <p>La coppia al centro a sinistra, ora nuda e libera dai suoi veli, rappresenta uno stato di vulnerabilità e
-          autenticità. La nudità va oltre il fisico; è una rappresentazione dell'onestà emotiva, uno spogliarsi delle
-          pretese e
-          un confronto con l'essenza più pura dell'essere. La loro presenza sottile, quasi fusa con il paesaggio, è un
-          potente
-          promemoria dell'unità intrinseca tra l'uomo e la natura, un'armonia che si rivela completamente solo quando le
-          barriere cadono.</p>
-
-        <p>La texture della sabbia, realizzata con la stessa tecnica mista che distingue Osset, aggiunge una dimensione
-          di
-          ruvidità che contrasta con la morbidezza dei veli. Questa dualità testurale esalta il dramma dell'atto di
-          rivelazione:
-          l'abbandono della rigidità a favore di un'esistenza più autentica e piena.</p>
-
-        <p>Emotivamente, "Rivelazione" è un'odissea verso l'accettazione. I colori, ora brillanti sotto quello che può
-          essere
-          interpretato come la luce della comprensione, bagnano la scena con un ottimismo cauto. Non è semplicemente la
-          fine di
-          un viaggio, ma l'inizio di una nuova fase di crescita ed esplorazione. Nella coppia, vediamo la possibilità di
-          rinascita, la bellezza dell'evoluzione personale e la promessa di ciò che può emergere quando lasciamo alle
-          spalle le
-          nostre barriere e affrontiamo il mondo nella nostra forma più vera e nuda.</p>
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <p>《揭幕》，这部作品继续了《启示》所开始的视觉对话，带领观众进入叙事的新章节。艺术家Paz Arés Osset编织了一段身体和隐喻上的转变故事。如果说《启示》代表着隐藏和内省，《揭幕》则熠熠生辉，作为发现和展露的行动。
-        </p>
-
-        <p>
-          Osset的技术忠于她的独特风格，使用了混合纹理，使场景充满了几乎可以触摸到的触觉感。原本紧绕在人物身上的面纱，现在散落在干燥的地面上，暗示着从先前隐藏真相的层面中解放出来。大地以赭石和沙色展开至地平线，画得如此娴熟，几乎可以感受到沙漠的酷热。
-        </p>
-
-        <p>远处孤独的身影讲述了一个继续进行的旅程，即使面具已经落下。尽管色彩调色板受限，但突出了多彩的面纱，强调了自由与孤立之间的对比。这些洗过的柔和色彩的面纱给人一种新的曙光印象，随着获得的知识之光揭示了可能性。</p>
-
-        <p>这幅画《揭幕》，不仅仅是其前作的回响，而是关于人类精神演化的有力论述。在它的简洁中，我们发现了复杂性；在它的静止中，有运动；在它的沉默中，有一个深刻的叙述，与任何开始自我发现艰辛旅程的人产生共鸣。通过《揭幕》，Arés
-          Osset邀请观众不仅仅是思考已经揭示的内容，还有仍然有待发现的东西。</p>
-
-        <p>
-          在《揭幕》中，散落在沙子上的彩色光谱唤起了一系列情感。艺术家通过她在质地上的精通，使每一个褶皱都栩栩如生，似乎与新发现的自由的低语一起脉动。色调柔和而坚定，在欢愉和宁静之间游走，暗示着情感上的释放，仿佛每一块被抛弃的布都减轻了行者灵魂的负担。
-        </p>
-
-        <p>
-          画面中央左侧的情侣，现在赤裸并摆脱了他们的面纱，代表了一种脆弱和真实的状态。这种裸露超越了物理层面；它是情感诚实的表现，是摒弃伪装和面对最纯粹的存在的一种对抗。他们的微妙存在，几乎与风景融为一体，是人与自然之间固有统一的有力提醒，这种和谐只有在障碍消除后才完全显露。
-        </p>
-
-        <p>沙子的质感，采用与Osset鲜明的混合媒介技术一致，增加了一种粗糙的维度，与面纱的柔软形成对比。这种质地的双重性增强了揭幕行为的戏剧性：放弃僵化，以追求更真实和充实的存在。</p>
-
-        <p>
-          在情感上，《揭幕》是走向接受的奥德赛。现在在可以解释为理解之光下明亮的色彩，给场景带来了谨慎的乐观。它不仅仅是旅程的结束，而是成长和探索新阶段的开始。在这对情侣中，我们看到了重生的可能性，个人演变的美丽，以及当我们抛开障碍，以最真实、最赤裸的形式面对世界时，可能涌现的前景的承诺。
-        </p>
-
-
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <!-- Arabic description here -->
-        <p>"الكشف"، العمل الذي يواصل الحوار البصري الذي بدأته "الإعلان"، يقود المشاهد إلى فصل جديد من السرد. تنسج
-          الفنانة باز
-          آريس أوسيت قصة تحول، جسدي ومجازي على حد سواء. حيث تمثل "الإعلان" الإخفاء والتأمل، تتألق "الكشف" كفعل الاكتشاف
-          والكشف.
-        </p>
-
-        <p>تظل تقنية أوسيت وفية لأسلوبها المميز، باستخدام مزيج من القوام التي تمنح المشهد إحساسًا تكتيلاً تقريبًا
-          ملموسًا.
-          الأقمشة، التي كانت محكمة حول الأشكال، تتناثر الآن عبر الأرض القاحلة، ملمحة إلى تحرير من الطبقات التي كانت تخفي
-          الحقيقة
-          سابقًا. الأرض، بألوان الأوكر والرمل، تمتد نحو الأفق، مرسومة بمهارة بحيث يمكن للمرء تقريبًا أن يشعر بحرارة
-          الصحراء
-          اللافحة.</p>
-
-        <p>الشخصية الوحيدة في البعد تتحدث عن رحلة تستمر، حتى بعد سقوط الأقنعة. لوحة الألوان، على الرغم من تقييدها، تبرز
-          الأقمشة
-          متعددة الألوان، مؤكدة على التناقض بين الحرية والعزلة. الأقمشة، بألوانها الباستيلية المغسولة، تعطي انطباعًا
-          بفجر جديد،
-          بإمكانيات تتكشف في ضوء المعرفة المكتسبة.</p>
-
-        <p>هذه اللوحة، "الكشف"، ليست مجرد صدى لسابقتها بل هي خطاب قوي حول تطور الروح الإنسانية. في بساطتها، نجد تعقيدًا؛
-          في
-          سكونها، هناك حركة؛ في صمتها، هناك سرد عميق يت resonates with anyone who has embarked on the arduous journey of
-          self-discovery. تدعو "الكشف"، أوسيت المشاهدين للتأمل ليس فقط فيما تم الكشف عنه ولكن أيضًا فيما لا يزال يتعين
-          اكتشافه.
-        </p>
-
-        <p>كليدوسكوب الألوان المتناثرة على الرمال في "الكشف" يثير مجموعة من المشاعر. الفنانة، من خلال إتقانها للملمس،
-          أحيت كل
-          طية، مملوءة بالاهتزاز الذي يبدو أنه ينبض مع همس الحريات المكتشفة حديثًا. الألوان، الناعمة ولكن الثابتة، تتنقل
-          بين
-          النشوة والسكينة، موحية بالراحة العاطفية، كما لو أن كل قماش متروك يخفف وزنًا من أرواح المسافرين.</p>
-
-        <p>الزوجان في وسط اليسار، الآن عاريان ومحرران من أقمشتهما، يمثلان حالة من الضعف والأصالة. العري يتجاوز الجسدي؛
-          إنه تمثيل
-          للصدق العاطفي، التخلص من الادعاءات والمواجهة مع أنقى جوهر الكائن. وجودهما الخفي، المندمج تقريبًا مع المنظر
-          الطبيعي، هو
-          تذكير قوي بالوحدة الجوهرية بين الإنسان والطبيعة، وهي تناغم يكشف عن نفسه بالكامل فقط عندما تسقط الحواجز.</p>
-
-        <p>نسيج الرمال، المصنوع بنفس تقنية الوسائط المختلطة التي تميز أوسيت، يضيف بعدًا من الخشونة يتناقض مع نعومة
-          الأقمشة. هذا
-          الثنائية النسيجية تعزز دراما فعل الكشف: التخلي عن الصرامة لصالح وجود أكثر أصالة وامتلاء.</p>
-
-        <p>عاطفياً، "الكشف" هي أوديسة نحو القبول. الألوان، التي أصبحت الآن مشرقة تحت ما يمكن تفسيره على أنه ضوء الفهم،
-          تغمر
-          المشهد بتفاؤل حذر. إنها ليست نهاية رحلة فحسب، بل بداية مرحلة جديدة من النمو والاستكشاف. في الزوجين، نرى
-          إمكانية
-          الولادة الجديدة، جمال التطور الشخصي، ووعد بما يمكن أن يظهر عندما نترك حواجزنا ونواجه العالم بأكثر أشكالنا
-          صدقًا
-          وعريًا.</p>
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
 
 </body>
 

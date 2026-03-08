@@ -1,41 +1,54 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
-    document.querySelectorAll('.language').forEach(function (element) {
-      element.style.display = 'none';
+  const languageSelect = document.getElementById('language-select');
+
+  function setLanguage(lang) {
+    const normalizedLang = lang.split('-')[0].toLowerCase();
+
+    // Proactively set Spanish if no valid language is selected or if explicitly requested
+    const targetLang = normalizedLang || 'es';
+    localStorage.setItem('selectedLanguage', targetLang);
+
+    const elements = document.querySelectorAll('.language');
+
+    elements.forEach(el => {
+      if (el.classList.contains(targetLang)) {
+        const tag = el.tagName.toLowerCase();
+        if (tag === 'span') {
+          el.style.display = 'inline-block';
+        } else {
+          el.style.display = 'block';
+        }
+      } else {
+        el.style.display = 'none';
+      }
     });
 
-    // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
-    });
-  });
+    if (targetLang === 'ar') {
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'ar';
+    } else {
+      document.documentElement.dir = 'ltr';
+      document.documentElement.lang = targetLang;
+    }
 
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
+    if (languageSelect) {
+      languageSelect.value = targetLang;
+    }
+  }
+
+  const savedLang = localStorage.getItem('selectedLanguage') || 'es';
+  setLanguage(savedLang);
+
+  if (languageSelect) {
+    languageSelect.addEventListener('change', function (e) {
+      setLanguage(e.target.value);
+    });
+  }
+
+  // Zoom logic
   var zoomImages = document.querySelectorAll('.zoom-image');
-
-  // Recorre todas las imágenes
   zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
     var isZoomed = false;
-
-    // Función para realizar el zoom en la imagen
     function zoomImage() {
       if (isZoomed) {
         image.style.transform = 'scale(1)';
@@ -45,32 +58,12 @@ document.addEventListener('DOMContentLoaded', function () {
         isZoomed = true;
       }
     }
-
-    // Asigna el evento touchstart (toque) a la imagen
     image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
-
-      // Establece un temporizador para reducir el zoom después de 3 segundos
+      event.preventDefault();
+      zoomImage();
       setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
+        zoomImage();
       }, 3000);
     });
   });
-
-  ////
-
-
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });
