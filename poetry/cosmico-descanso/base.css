@@ -1,95 +1,219 @@
-body {
-  /* background-color: #ef8172; */
-  background-color: black;
-  font-size: 1.7rem;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Caveat:wght@400;700&family=Playfair+Display:italic,wght@0,400;1,700&display=swap');
 
+body {
+  transition: background-color 1s ease;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color: white;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .jumbotron {
-  background-color: black;
+  background: transparent;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+  padding: 8rem 2rem 4rem 2rem;
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #fff, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 2.8rem !important;
+  margin-bottom: 10px;
+}
+
+.lead {
+  font-weight: 300;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Discreet Poem Support */
+.poem-text {
+  line-height: 1.8;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.25); /* More discreet as requested */
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  padding: 60px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  max-width: 900px;
 }
 
-/* .jumbotron h1 {
-  margin-top: 20px;
-  font-family: 'Monoton', cursive;
-  color: magenta;
-
-} */
-.custom-select-lg {
-  font-size: 3rem;
-  line-height: 1.2;
-  padding: .5rem 1rem;
-  height: auto;
-  /* You can set this to auto or a fixed value larger than 2.875rem */
+.stanza {
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
 }
 
-.jumbotron h1 {
+.stanza.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.poem-signature {
   margin-top: 40px;
-  /* increase this value to add more space */
-  font-family: 'Montserrat', sans-serif;
-  color: magenta;
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  color: gold;
+}
+
+/* Drawing Context Card */
+.drawing-context {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 40px;
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+
+.drawing-context:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Album Cards */
+.album-card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(12px);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.album-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  border-color: gold;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.album-cover {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.album-info {
+  padding: 20px;
+}
+
+.album-title {
+  font-family: 'Playfair Display', serif;
+  color: gold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
   font-weight: 700;
 }
 
-.multilingual-description {
-  font-size: 3rem;
-  /* rest of your properties */
-  margin-top: 30px;
-  border: 2px solid magenta;
-  border-radius: 10px;
+.album-artist {
+  color: #aaa;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Header Elements */
+.header-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
   padding: 20px;
-  background-color: black;
-  color: #fff;
+  gap: 15px;
 }
 
-.language-desc {
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.main-description {
-  margin-top: 20px;
-}
-
-.description {
-  /* rest of your properties */
-  margin: 12px;
+#language-select {
+  background: rgba(0, 0, 0, 0.6);
   color: white;
-  /* font-family: 'Manjari', sans-serif; */
-  /* font-family: 'Monoton', cursive; */
-  /* font-family: 'Philosopher', sans-serif; */
-  font-family: 'Lemonada', cursive;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 30px;
+  padding: 8px 15px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  outline: none;
+  font-size: 0.9rem;
 }
 
-.audio {
+.btn-premium {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+  text-decoration: none !important;
+}
+
+.btn-premium:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: gold;
+  color: gold;
+  transform: translateY(-2px);
+}
+
+.btn-spotify-nav {
+  background-color: #1DB954;
+  color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-spotify-nav:hover {
+  background-color: #1ed760;
+  color: white;
+}
+
+/* Video Section */
+.video-placeholder {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 80px 40px;
   text-align: center;
-  border: 20px;
-  padding: 0;
-  margin: 0;
-  width: min-content;
-  height: min-content;
-  top: 40px;
+  margin-top: 40px;
 }
 
-.buttonAudio {
-  top: 200px;
+.language {
+  display: none;
 }
 
-.zoom-container {
-  /* overflow: hidden; */
-
-  width: 50%;
-  /* or whatever width you want */
-  margin: 0 auto;
-  /* centers the element */
-
+.arabic {
+  direction: rtl;
 }
 
-.zoom-image {
-  transition: transform 0.9s ease;
-}
-
-.zoom-image:hover {
-  transform: scale(1.2);
+.arabic .poem-text {
+  text-align: right;
 }

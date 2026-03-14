@@ -46,6 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
         'portuges': 'Ouvir música'
       };
 
+      const spotifyMapping = {
+        'spanish': {
+          'album_link': 'https://open.spotify.com/intl-es/album/7EbYxl2hFKbFuWyjYlgnsh?si=cSaetHupSPijqDtQpjDwzQ',
+          'album_iframe': 'https://open.spotify.com/embed/album/7EbYxl2hFKbFuWyjYlgnsh?utm_source=generator'
+        }
+        // Other languages will fallback to Spanish for now
+      };
+
       const comicImage = document.getElementById('comic-image');
       if (comicImage && imageMap[selectedLanguage]) {
         comicImage.src = imageMap[selectedLanguage];
@@ -55,7 +63,40 @@ document.addEventListener('DOMContentLoaded', function () {
       if (audioButtonText) {
         audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
       }
+
+      // Update Spotify link and iframe
+      const spotifyLink = document.getElementById('spotify-link');
+      const spotifyIframe = document.getElementById('spotify-iframe');
+      const spotifyPlaceholder = document.getElementById('spotify-placeholder');
+      
+      const spotifyData = spotifyMapping[selectedLanguage] || spotifyMapping['spanish'];
+      
+      if (spotifyLink) {
+        spotifyLink.href = spotifyData.album_link;
+      }
+      
+      if (spotifyIframe) {
+        spotifyIframe.src = spotifyData.album_iframe;
+        spotifyIframe.style.display = 'block';
+        if (spotifyPlaceholder) spotifyPlaceholder.style.display = 'none';
+      }
     });
+  }
+
+  // --- Initial Spotify state ---
+  const initialSpotifyData = {
+    'album_link': 'https://open.spotify.com/intl-es/album/7EbYxl2hFKbFuWyjYlgnsh?si=cSaetHupSPijqDtQpjDwzQ',
+    'album_iframe': 'https://open.spotify.com/embed/album/7EbYxl2hFKbFuWyjYlgnsh?utm_source=generator'
+  };
+  const initialSpotifyLink = document.getElementById('spotify-link');
+  const initialSpotifyIframe = document.getElementById('spotify-iframe');
+  const initialSpotifyPlaceholder = document.getElementById('spotify-placeholder');
+  
+  if (initialSpotifyLink) initialSpotifyLink.href = initialSpotifyData.album_link;
+  if (initialSpotifyIframe) {
+    initialSpotifyIframe.src = initialSpotifyData.album_iframe;
+    initialSpotifyIframe.style.display = 'block';
+    if (initialSpotifyPlaceholder) initialSpotifyPlaceholder.style.display = 'none';
   }
 
   // --- 1. Background Transition on Scroll (Sunset to Cosmic) ---

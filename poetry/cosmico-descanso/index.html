@@ -1,292 +1,546 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>TITULO XXX</title>
+  <title>Cósmico Descanso - Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
+  <div class="header-nav">
+    <a href="../../linktree.html" class="btn-premium">
+      <i class="fas fa-link mr-2"></i>Linktree
+    </a>
+    <a href="#" class="btn-spotify-nav">
+      <i class="fab fa-spotify mr-2"></i>Escuchar
+    </a>
+    <select id="language-select">
+      <option value="spanish">🇪🇸 Español</option>
+      <option value="english">🇺🇸 English</option>
+      <option value="italian">🇮🇹 Italiano</option>
+      <option value="chinese">🇨🇳 中文</option>
+      <option value="arabic">🇦🇪 العربية</option>
+      <option value="russian">🇷🇺 Русский</option>
+      <option value="german">🇩🇪 Deutsch</option>
+      <option value="french">🇫🇷 Français</option>
+      <option value="japanese">🇯🇵 日本語</option>
+      <option value="portuguese">🇵🇹 Português</option>
     </select>
   </div>
 
-
   <section class="jumbotron text-center">
     <div class="container">
-
       <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
+        <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:10px; left:10px; width: 60px;" alt="Paz Arés Osset">
       </a>
 
-
       <h1 class="jumbotron-heading">
-        <div class="english language">Cosmic Rest</div>
-        <div class="spanish language" style="display: none;">Cósmico descanso</div>
-        <div class="italian language" style="display: none;">Riposo Cosmico</div>
-        <div class="chinese language" style="display: none;">宇宙的休憩</div>
-        <div class="arabic language" style="display: none;">راحة كونية</div>
-
+        <span class="spanish language">Cósmico Descanso</span>
+        <span class="english language">Cosmic Rest</span>
+        <span class="italian language">Riposo Cosmico</span>
+        <span class="chinese language">宇宙的休憩</span>
+        <span class="arabic language">راحة كونية</span>
+        <span class="russian language">Космический отдых</span>
+        <span class="german language">Kosmische Ruhe</span>
+        <span class="french language">Repos Cosmique</span>
+        <span class="japanese language">宇宙の休憩</span>
+        <span class="portuguese language">Descanso Cósmico</span>
       </h1>
 
-
-      <div class="lead text-muted">
-        <div class="english language">A serene poem about a graceful dancer, inspired by cosmic beauty.</div>
-        <div class="spanish language" style="display: none;">Un sereno poema sobre una bailarina, inspirada en la
-          belleza
-          cósmica.</div>
-        <div class="italian language" style="display: none;">Una serena poesia su una ballerina, ispirata alla bellezza
-          cosmica.
-        </div>
-        <div class="chinese language" style="display: none;">一首关于优雅舞者的宁静诗歌，灵感来自宇宙之美。</div>
-        <div class="arabic language" style="display: none;">قصيدة هادئة عن راقصة رشيقة، مستوحاة من جمال الكون.</div>
-
+      <div class="lead">
+        <span class="spanish language">Fragmentos de arte y poesía</span>
+        <span class="english language">Fragments of art and poetry</span>
+        <span class="italian language">Frammenti di arte e poesia</span>
+        <span class="chinese language">艺术与诗歌的片段</span>
+        <span class="arabic language">شظايا من الفن والشعر</span>
+        <span class="russian language">Фрагменты искусства и поэзии</span>
+        <span class="german language">Fragmente von Kunst und Poesie</span>
+        <span class="french language">Fragments d'art et de poésie</span>
+        <span class="japanese language">芸術と詩の断片</span>
+        <span class="portuguese language">Fragmentos de arte e poesia</span>
       </div>
-
-
-      <div class="english language" style="font-family: Arial, sans-serif; font-size: 14px; color: white;">
-        <p>"Cosmic Rest" is a poem by Paz Arés Osset, published in the book "Fragmentos de arte y poesía". It's inspired
-          by a
-          painting by María José S. Perea, depicting a graceful ballerina.</p>
-        <br>
-        <img src="cosmico-descanso.jpeg" alt="Cosmic Rest painting"
-          style="max-width: 66%; height: auto; border-color: aqua;  border-width: medium; border-style:solid;">
-      </div>
-
-      <div class="spanish language"
-        style="display: none; font-family: Arial, sans-serif; font-size: 14px; color: white;">
-        <p>"Cósmico descanso" es un poema de Paz Arés Osset, publicado en el libro "Fragmentos de arte y poesía". Está
-          inspirado en un cuadro de María José S. Perea, que muestra a una delicada bailarina.</p>
-        <br>
-        <img src="cosmico-descanso.jpeg" alt="Cosmic Rest painting"
-          style="max-width: 66%; height: auto; border-color: aqua;  border-width: medium; border-style:solid;">
-      </div>
-
-      <div class="italian language"
-        style="display: none; font-family: Arial, sans-serif; font-size: 14px; color: white;">
-        <p>"Riposo Cosmico" è una poesia di Paz Arés Osset, pubblicata nel libro "Frammenti di arte e poesia". È
-          ispirata a un
-          dipinto di María José S. Perea, che raffigura una graziosa ballerina.</p>
-        <br>
-        <img src="cosmico-descanso.jpeg" alt="Cosmic Rest painting"
-          style="max-width: 66%; height: auto; border-color: aqua;  border-width: medium; border-style:solid;">
-      </div>
-
-      <div class="chinese language"
-        style="display: none; font-family: Arial, sans-serif; font-size: 14px; color: white;">
-        <p>《宇宙的休憩》是帕斯·阿雷斯·奥塞特的一首诗，刊登在《艺术与诗歌片段》一书中。它的灵感来自玛丽亚·何塞·S·佩雷亚的画作，描绘了一位优雅的芭蕾舞女演员。</p>
-        <br>
-        <img src="cosmico-descanso.jpeg" alt="Cosmic Rest painting"
-          style="max-width: 66%; height: auto; border-color: aqua;  border-width: medium; border-style:solid;">
-      </div>
-
-      <div class="arabic language" style="display: none; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
-        <p>القصيدة "راحة كونية" هي من تأليف باز أرّس أوست، وهي منشورة في كتاب "شظايا من الفن والشعر". وهي مستوحاة من
-          لوحة
-          ماريا خوسيه س. بيريا، التي تُظهر راقصة باليه رشيقة.</p>
-        <br>
-        <img src="cosmico-descanso.jpeg" alt="Cosmic Rest painting"
-          style="max-width: 66%; height: auto; border-color: aqua;  border-width: medium; border-style:solid;">
-      </div>
-
-
     </div>
   </section>
 
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
+  <!-- Drawing/Book Context -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="drawing-context text-center">
+          <div class="spanish language">
+            <p>"Cósmico descanso" es un poema de Paz Arés Osset, publicado en el libro "Fragmentos de arte y poesía".</p>
+            <p class="small text-warning">Este poema fue creado para dar letras a un dibujo del libro, inspirado en un cuadro de María José S. Perea.</p>
+          </div>
+          <div class="english language">
+            <p>"Cosmic Rest" is a poem by Paz Arés Osset, published in the book "Fragments of Art and Poetry".</p>
+            <p class="small text-warning">This poem was created to give lyrics to a drawing from the book, inspired by a painting by María José S. Perea.</p>
+          </div>
+          <!-- Other languages would follow similar pattern... simplified for brevity -->
+          <img src="cosmico-descanso.jpeg" alt="Cosmic Rest Painting" style="max-width: 300px; border-radius: 15px; border: 2px solid gold; margin-top: 20px;">
         </div>
       </div>
     </div>
-  </section> -->
+  </div>
 
-  <section class="multilingual-description">
-    <div class="container">
+  <!-- Poem Section -->
+  <section class="py-5">
+    <div class="container text-center">
+      
+      <!-- SPANISH -->
+      <div class="spanish language">
+        <h2 class="handwritten text-warning">Cósmico descanso</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            Ligera bailarina de aguamarina<br>
+            En círculos de blancos tules, divina<br>
+            Belleza cristalina, tan femenina<br>
+            Reposando, venusina, se reclina
+          </div>
+          <div class="stanza">
+            Descanso del ser de cósmica andarina<br>
+            Presente en sus pies tras bambalinas<br>
+            Para danzar cual cisne o golondrina<br>
+            y brillar, cual purpurina, mi danzarina
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
+        </div>
+      </div>
 
-      <h1 style="color: gold;">
-        <div class="english language">Cosmic Rest</div>
-        <div class="spanish language" style="display: none;">Cósmico descanso</div>
-        <div class="italian language" style="display: none;">Riposo Cosmico</div>
-        <div class="chinese language" style="display: none;">宇宙的休憩</div>
-        <div class="arabic language" style="display: none;">راحة كونية</div>
-
-      </h1>
-
+      <!-- ENGLISH -->
       <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Light ballerina of aquamarine</p>
-          <p>In circles of white tulle, divine</p>
-          <p>Crystalline beauty, so feminine</p>
-          <p>Resting, Venus-like, she reclines</p>
-          <br>
-          <p>Rest for the cosmic wanderer</p>
-          <p>Present at her feet behind the scenes</p>
-          <p>To dance like a swan or a swallow</p>
-          <p>and shine, like glitter, my dancer</p>
-          <br>
-          <p>Paz Arés Osset, 2020</p>
-
-
+        <h2 class="handwritten text-warning">Cosmic Rest</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            Light ballerina of aquamarine<br>
+            In circles of white tulle, divine<br>
+            Crystalline beauty, so feminine<br>
+            Resting, Venus-like, she reclines
+          </div>
+          <div class="stanza">
+            Rest for the cosmic wanderer<br>
+            Present at her feet behind the scenes<br>
+            To dance like a swan or a swallow<br>
+            and shine, like glitter, my dancer
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
         </div>
-        <br>
-
-
-
-
       </div>
 
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Ligera bailarina de aguamarina</p>
-          <p>En círculos de blancos tules, divina</p>
-          <p>Belleza cristalina, tan femenina</p>
-          <p>Reposando, venusina, se reclina</p>
-          <br>
-          <p>Descanso del ser de cósmica andarina</p>
-          <p>Presente en sus pies tras bambalinas</p>
-          <p>Para danzar cual cisne o golondrina</p>
-          <p>y brillar, cual purpurina, mi danzarina</p>
-          <br>
-          <p>Paz Arés Osset, 2020</p>
-
-
+      <!-- FRENCH -->
+      <div class="french language">
+        <h2 class="handwritten text-warning">Repos Cosmique</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            Légère ballerine d'aigue-marine<br>
+            En cercles de tulles blancs, divine<br>
+            Beauté cristalline, si féminine<br>
+            Reposant, vénusienne, elle s'incline
+          </div>
+          <div class="stanza">
+            Repos de l'être de course cosmique<br>
+            Présent à ses pieds dans les coulisses<br>
+            Pour danser comme un cygne ou une hirondelle<br>
+            Et briller, comme des paillettes, ma danseuse
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
         </div>
-        <br>
-
-
-
       </div>
 
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Leggera ballerina d'acquamarina</p>
-          <p>In cerchi di bianchi tulle, divina</p>
-          <p>Bellezza cristallina, così femminile</p>
-          <p>Riposa, come Venere, si sdraia</p>
-          <br>
-          <p>Riposo del viaggiatore cosmico</p>
-          <p>Presente ai suoi piedi dietro le quinte</p>
-          <p>Per danzare come un cigno o una rondine</p>
-          <p>e brillare, come glitter, la mia danzatrice</p>
-          <br>
-          <p>Paz Arés Osset, 2020</p>
-
-
+      <!-- JAPANESE -->
+      <div class="japanese language">
+        <h2 class="handwritten text-warning">宇宙の休憩</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            アクアマリンの軽やかな舞姫<br>
+            白いチュールの輪の中で、神々しく<br>
+            水晶のような美しさ、とても女性らしい<br>
+            ヴィーナスのように、横たわり休む
+          </div>
+          <div class="stanza">
+            宇宙の彷徨い人の休息<br>
+            舞台裏で彼女の足元に寄り添い<br>
+            白鳥やツバメのように舞うために<br>
+            そして輝く、ラメのように、私の舞姫よ
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
         </div>
-        <br>
-
-
-
-
       </div>
 
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>轻盈的碧绿色芭蕾舞女演员</p>
-          <p>在白色纱裙中旋转，神圣</p>
-          <p>晶莹的美丽，如此女性化</p>
-          <p>休息着，像金星一样，她倾斜</p>
-          <br>
-          <p>宇宙漫游者的休息</p>
-          <p>在幕后站在她的脚下</p>
-          <p>像天鹅或燕子一样跳舞</p>
-          <p>并闪耀，像闪光粉，我的舞者</p>
-          <br>
-          <p>Paz Arés Osset, 2020</p>
-
-
-
+      <!-- ITALIAN -->
+      <div class="italian language">
+        <h2 class="handwritten text-warning">Riposo Cosmico</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            Leggera ballerina d'acquamarina<br>
+            In cerchi di bianchi tulle, divina<br>
+            Bellezza cristallina, così femminile<br>
+            Riposa, come Venere, si sdraia
+          </div>
+          <div class="stanza">
+            Riposo del viaggiatore cosmico<br>
+            Presente ai suoi piedi dietro le quinte<br>
+            Per danzare come un cigno o una rondine<br>
+            e brillare, come glitter, la mia danzatrice
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
         </div>
-        <br>
-
-
       </div>
 
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>راقصة باليه خفيفة من الزبرجد</p>
-          <p>في دوائر من التول الأبيض، إلهية</p>
-          <p>جمال بلوري، أنثوي للغاية</p>
-          <p>تستريح، مثل فينوس، تميل</p>
-          <br>
-          <p>راحة للمسافر الكوني</p>
-          <p>حاضرة عند قدميها خلف الكواليس</p>
-          <p>للرقص مثل البجعة أو السنونو</p>
-          <p>وتتألق، مثل الجليتر، راقصتي</p>
-          <br>
-          <p>Paz Arés Osset, 2020</p>
-
-
+      <!-- RUSSIAN -->
+      <div class="russian language">
+        <h2 class="handwritten text-warning">Космический отдых</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            Легкая балерина цвета аквамарина<br>
+            В кругах белого тюля, божественна<br>
+            Кристальная красота, столь женственна<br>
+            Отдыхает, подобно Венере, склонившись
+          </div>
+          <div class="stanza">
+            Отдых для космического странника<br>
+            У ее ног за кулисами<br>
+            Чтобы танцевать, как лебедь или ласточка<br>
+            И сиять, как блестки, моя танцовщица
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
         </div>
-
-
-
-
-
-
       </div>
 
+      <!-- CHINESE -->
+      <div class="chinese language">
+        <h2 class="handwritten text-warning">宇宙的休憩</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            轻盈的碧绿色芭蕾舞女演员<br>
+            在白色纱裙中旋转，神圣<br>
+            晶莹的美丽，如此女性化<br>
+            休息着，像金星一样，她倾斜
+          </div>
+          <div class="stanza">
+            宇宙漫游者的休息<br>
+            在幕后站在她的脚下<br>
+            像天鹅或燕子一样跳舞<br>
+            并闪耀，像闪光粉，我的舞者
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
+        </div>
+      </div>
+
+      <!-- ARABIC -->
+      <div class="arabic language">
+        <h2 class="handwritten text-warning">راحة كونية</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            راقصة باليه خفيفة من الزبرجد<br>
+            في دوائر من التول الأبيض، إلهية<br>
+            جمال بلوري، أنثوي للغاية<br>
+            تستريح، مثل فينوس، تميل
+          </div>
+          <div class="stanza">
+            راحة للمسافر الكوني<br>
+            حاضرة عند قدميها خلف الكواليس<br>
+            للرقص مثل البجعة أو السنونو<br>
+            وتتألق، مثل الجليتر، راقصتي
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
+        </div>
+      </div>
+
+      <!-- GERMAN -->
+      <div class="german language">
+        <h2 class="handwritten text-warning">Kosmische Ruhe</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            Leichte Ballerina aus Aquamarin<br>
+            In Kreisen aus weißem Tüll, göttlich<br>
+            Kristalline Schönheit, so feminin<br>
+            Ruhend, wie Venus, lehnt sie sich zurück
+          </div>
+          <div class="stanza">
+            Ruhe für den kosmischen Wanderer<br>
+            An ihren Füßen hinter den Kulissen<br>
+            Zu tanzen wie ein Schwan oder eine Schwalbe<br>
+            Und glänzen, wie Glitzer, meine Tänzerin
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
+        </div>
+      </div>
+
+      <!-- PORTUGUESE -->
+      <div class="portuguese language">
+        <h2 class="handwritten text-warning">Descanso Cósmico</h2>
+        <div class="poem-text">
+          <div class="stanza">
+            Leve bailarina de águama-marinha<br>
+            Em círculos de brancos tules, divina<br>
+            Beleza cristalina, tão feminina<br>
+            Repousando, venusiana, se reclina
+          </div>
+          <div class="stanza">
+            Descanso do ser de caminhar cósmico<br>
+            Presente em seus pés nos bastidores<br>
+            Para dançar qual cisne o andorinha<br>
+            E brillar, qual purpurina, minha danzarina
+          </div>
+          <div class="poem-signature">Paz Arés Osset, 2020</div>
+        </div>
+      </div>
 
     </div>
   </section>
 
-  <!-- js here -->
+  <!-- Music Section -->
+  <div class="container mt-5 text-center pb-5">
+    <h2 class="handwritten text-light mb-5">
+      <i class="fab fa-spotify text-success mr-2"></i>
+      <span class="spanish language">Canciones del Poema</span>
+      <span class="english language">Poem Songs</span>
+      <span class="italian language">Canzoni della Poesia</span>
+      <span class="chinese language">诗歌歌曲</span>
+      <span class="arabic language">أغاني القصيدة</span>
+      <span class="russian language">Песни на стихотворение</span>
+      <span class="german language">Gedicht Lieder</span>
+      <span class="french language">Chansons du Poème</span>
+      <span class="japanese language">詩の歌</span>
+      <span class="portuguese language">Canções do Poema</span>
+    </h2>
+
+    <div class="row justify-content-center">
+      <!-- ES -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_es.png" class="album-cover" alt="ES Edition">
+          <div class="album-info">
+            <div class="album-title">Cósmico Descanso</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Castellano</span>
+              <span class="english language">Songs in Spanish</span>
+              <span class="italian language">Canzoni in Spagnolo</span>
+              <span class="chinese language">西班牙语歌曲</span>
+              <span class="arabic language">أغاني إسبانية</span>
+              <span class="russian language">Песни на испанском</span>
+              <span class="german language">Lieder auf Spanisch</span>
+              <span class="french language">Chansons en Espagnol</span>
+              <span class="japanese language">スペイン語の歌</span>
+              <span class="portuguese language">Canções em Espanhol</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- EN -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_en.png" class="album-cover" alt="EN Edition">
+          <div class="album-info">
+            <div class="album-title">Cosmic Rest</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Inglés</span>
+              <span class="english language">Songs in English</span>
+              <span class="italian language">Canzoni in Inglese</span>
+              <span class="chinese language">英语歌曲</span>
+              <span class="arabic language">أغاني إنجليزية</span>
+              <span class="russian language">Песни на английском</span>
+              <span class="german language">Lieder auf Englisch</span>
+              <span class="french language">Chansons en Anglais</span>
+              <span class="japanese language">英語の歌</span>
+              <span class="portuguese language">Canções em Inglês</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FR -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_fr.png" class="album-cover" alt="FR Edition">
+          <div class="album-info">
+            <div class="album-title">Repos Cosmique</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Francés</span>
+              <span class="english language">Songs in French</span>
+              <span class="italian language">Canzoni in Francese</span>
+              <span class="chinese language">法语歌曲</span>
+              <span class="arabic language">أغاني فرنسية</span>
+              <span class="russian language">Песни на французском</span>
+              <span class="german language">Lieder auf Französisch</span>
+              <span class="french language">Chansons en Français</span>
+              <span class="japanese language">フランス語の歌</span>
+              <span class="portuguese language">Canções em Francês</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- IT -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_it.png" class="album-cover" alt="IT Edition">
+          <div class="album-info">
+            <div class="album-title">Riposo Cosmico</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Italiano</span>
+              <span class="english language">Songs in Italian</span>
+              <span class="italian language">Canzoni in Italiano</span>
+              <span class="chinese language">意大利语歌曲</span>
+              <span class="arabic language">أغاني إيطالية</span>
+              <span class="russian language">Песни на итальянском</span>
+              <span class="german language">Lieder auf Italienisch</span>
+              <span class="french language">Chansons en Italien</span>
+              <span class="japanese language">イタリア語の歌</span>
+              <span class="portuguese language">Canções em Italiano</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- RU -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_ru.png" class="album-cover" alt="RU Edition">
+          <div class="album-info">
+            <div class="album-title">Космический отдых</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Ruso</span>
+              <span class="english language">Songs in Russian</span>
+              <span class="italian language">Canzoni in Russo</span>
+              <span class="chinese language">俄语歌曲</span>
+              <span class="arabic language">أغاني روسية</span>
+              <span class="russian language">Песни на русском</span>
+              <span class="german language">Lieder auf Russisch</span>
+              <span class="french language">Chansons en Russe</span>
+              <span class="japanese language">ロシア語の歌</span>
+              <span class="portuguese language">Canções em Russo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- DE -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_de.png" class="album-cover" alt="DE Edition">
+          <div class="album-info">
+            <div class="album-title">Kosmische Ruhe</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Alemán</span>
+              <span class="english language">Songs in German</span>
+              <span class="italian language">Canzoni in Tedesco</span>
+              <span class="chinese language">德语歌曲</span>
+              <span class="arabic language">أغاني ألمانية</span>
+              <span class="russian language">Песни на немецком</span>
+              <span class="german language">Lieder auf Deutsch</span>
+              <span class="french language">Chansons en Allemand</span>
+              <span class="japanese language">ドイツ語の歌</span>
+              <span class="portuguese language">Canções em Alemão</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PT -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_pt.png" class="album-cover" alt="PT Edition">
+          <div class="album-info">
+            <div class="album-title">Descanso Cósmico</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Português</span>
+              <span class="english language">Songs in Portuguese</span>
+              <span class="italian language">Canzoni in Portoghese</span>
+              <span class="chinese language">葡萄牙语歌曲</span>
+              <span class="arabic language">أغاني برتغالية</span>
+              <span class="russian language">Песни на португальском</span>
+              <span class="german language">Lieder auf Portugiesisch</span>
+              <span class="french language">Chansons en Portugais</span>
+              <span class="japanese language">ポルトガル語の歌</span>
+              <span class="portuguese language">Canções em Português</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ZH -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_zh.png" class="album-cover" alt="ZH Edition">
+          <div class="album-info">
+            <div class="album-title">宇宙的休憩</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Chino</span>
+              <span class="english language">Songs in Chinese</span>
+              <span class="italian language">Canzoni in Cinese</span>
+              <span class="chinese language">中文歌曲</span>
+              <span class="arabic language">أغاني صينية</span>
+              <span class="russian language">Песни на китайском</span>
+              <span class="german language">Lieder auf Chinesisch</span>
+              <span class="french language">Chansons en Chinois</span>
+              <span class="japanese language">中国語の歌</span>
+              <span class="portuguese language">Canções em Chinês</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- JA -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_jp.png" class="album-cover" alt="JA Edition">
+          <div class="album-info">
+            <div class="album-title">宇宙の休憩</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Japonés</span>
+              <span class="english language">Songs in Japanese</span>
+              <span class="italian language">Canzoni in Giapponese</span>
+              <span class="chinese language">日语歌曲</span>
+              <span class="arabic language">أغاني يابانية</span>
+              <span class="russian language">Песни на японском</span>
+              <span class="german language">Lieder auf Japanisch</span>
+              <span class="french language">Chansons en Japonais</span>
+              <span class="japanese language">日本語の歌</span>
+              <span class="portuguese language">Canções em Japonês</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- AR -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="album-card">
+          <img src="cover_ar.png" class="album-cover" alt="AR Edition">
+          <div class="album-info">
+            <div class="album-title">راحة كونية</div>
+            <div class="album-artist">
+              <span class="spanish language">Canciones en Árabe</span>
+              <span class="english language">Songs in Arabic</span>
+              <span class="italian language">Canzoni in Arabo</span>
+              <span class="chinese language">阿拉伯语歌曲</span>
+              <span class="arabic language">أغاني عربية</span>
+              <span class="russian language">Песни на арабском</span>
+              <span class="german language">Lieder auf Arabisch</span>
+              <span class="french language">Chansons en Arabe</span>
+              <span class="japanese language">アラビア語の歌</span>
+              <span class="portuguese language">Canções em Árabe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YouTube Section -->
+  <div class="container mt-5 mb-5 text-center">
+    <h2 class="handwritten text-danger">
+      <i class="fab fa-youtube mr-2"></i>Inspiración en Video
+    </h2>
+    <div class="video-placeholder">
+      <p class="text-muted">Próximamente: La explicación artística de este poema en YouTube.</p>
+    </div>
+  </div>
+
+  <footer class="text-center p-5" style="background: rgba(0,0,0,0.8); border-top: 1px solid gold;">
+    <p class="mb-0" style="color: gold; font-family: 'Caveat', cursive; font-size: 1.5rem;">
+      &copy; 2024 Paz Arés Osset - Arte y Poesía para el Alma.
+    </p>
+  </footer>
+
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
 </body>
 
 </html>

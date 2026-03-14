@@ -1,0 +1,7 @@
+spanish:
+  - album_link: https://open.spotify.com/intl-es/album/7EbYxl2hFKbFuWyjYlgnsh?si=cSaetHupSPijqDtQpjDwzQ
+  - album_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/7EbYxl2hFKbFuWyjYlgnsh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - song_link: https://open.spotify.com/intl-es/track/7HPiexpHgMSKybisfoMGx9?si=446be95b5573465c
+  - song_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7HPiexpHgMSKybisfoMGx9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+english:
+  

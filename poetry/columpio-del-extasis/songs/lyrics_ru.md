@@ -260,3 +260,87 @@ Inspiro y suspiro. (Wait, Russian!)
 [End]
 
 
+
+---
+
+## 🪕 SONG 5: HARP, FLUTE & LYRE HEAVENLY VERSION
+**Style:** [Style: ethereal, harp, flute, lyre, angelic soprano female vocals, clear spoken word poetry, children's choir, heavenly, beautiful female voice, occasional male deep whisper, divine atmosphere, celestial, serene]
+
+[Intro: Heavenly harp glissando, gentle lyre picking, soft uplifting flute melody]
+
+[Beautiful female voice: Spoken word, crystal clear, intimate and warm]
+В акварели ты видишь лишь видимость...
+Прекрасная обнаженная женщина
+Скользит в воздухе, волосы по ветру
+На оригинальных качелях из многоцветных гирлянд...
+Идя дальше видимого,
+ты открываешь невидимое нутро.
+
+[Angelic Soprano Vocals: Ethereal and divine hums joining the harp and lyre]
+
+[Beautiful female voice: Flowing, joyful recitation]
+Я качаюсь в любви.
+Я скольжу среди цветных цветов…
+Ритмично дыша,
+ощущая их тепло и свежесть...
+Ласка бриза
+на мягкости моей шелковой кожи...
+Погруженная в радость экстаза...
+
+[Children's Choir: Gentle and innocent harmony rising softly]
+[Male whisper: Deep and subtle in the background]
+(Среди танца...)
+
+[Beautiful female voice: Rhythmic, elevating the emotion]
+В ритмичном и повторяющемся маятнике...
+Среди танца цветов, бабочек
+и стрекоз в сердце...
+В котором я целую солнце в сияющий день.
+В котором я достигаю луны в звездную ночь.
+
+[Flute solo: Divine and uplifting, accompanied by rhythmic lyre]
+
+[Beautiful female voice: Deep, meditative breath, profound tone]
+Вдох и вздох.
+Я вхожу в другое измерение.
+В вибрации бесконечной радости
+В вечности мгновения.
+Где медлительность случается в скорости...
+
+[Angelic Soprano Vocals and Children's Choir: Majestic harmony, soaring, celestial climax]
+
+[Beautiful female voice: Powerful, radiant and triumphant recitation]
+Я чувствую себя яркой падающей звездой...
+Вдох и вздох.
+Мой эрос открывается, эротизируя момент...
+Я забываю прошлое меланхолии.
+Все есть сияние огня моего блестящего и божественного существа...
+Переполненная страстью среди галактик.
+Все есть оранжевый свет в моих закрытых глазах.
+
+[Breakdown: Music softens to just harp and a single angelic soprano voice]
+
+[Beautiful female voice: Calm, peaceful, returning to a whisper]
+В ушах тишина моря...
+И моя душа достигает мистической любви к любви...
+Любви к поэзии...
+Божественная и священная любовь.
+Интенсивность, вечность и бесконечная радость.
+
+[Beautiful female voice: Firm, deeply grounded]
+Это женщина в радости.
+
+[Beautiful female voice: Pure clarity, absolute peace]
+Я — женщина в экстазе.
+
+[Outro: Flute, harp and lyre slowly fading into a celestial choir hum]
+
+[Spoken Word: Beautiful female voice, completely acapella in pure silence]
+Спасибо, Мария Пас Арес Оссет.
+За то, что напомнила нам в этом стихотворении, 
+что за завесой видимости мы — свет.
+Мы — любовь.
+
+[End]
+
+

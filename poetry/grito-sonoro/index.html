@@ -1,608 +1,360 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>Grito de Mujer</title>
+  <title>Grito Sonoro - Paz Arés Osset</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    
+    <!-- Header Controls -->
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2"></i>Linktree
+      </a>
+      <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+        <i class="fab fa-spotify mr-2"></i>
+        <span id="audio-button-text">Escuchar Música</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+        </a>
+        <h1 class="jumbotron-heading">
+          <span class="spanish language">Grito Sonoro</span>
+          <span class="english language">Resounding Cry</span>
+          <span class="italian language">Grido Sonoro</span>
+          <span class="chinese language">响亮呐喊</span>
+          <span class="arabic language">الصرخة العالية</span>
+          <span class="russian language">Звучный крик</span>
+          <span class="aleman language">Tönender Schrei</span>
+          <span class="frances language">Cri Sonore</span>
+          <span class="japones language">響き渡る叫び</span>
+          <span class="portuges language">Grito Sonoro</span>
+        </h1>
+        <div class="lead">
+          <span class="spanish language">¡Un clamor por la libertad y el empoderamiento!</span>
+          <span class="english language">A cry for freedom and empowerment!</span>
+          <span class="italian language">Un grido per la libertà e l'empowerment!</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Poem Section -->
+    <section class="multilingual-description py-5 text-center">
+      <div class="container">
+        
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten">Grito Sonoro</h1>
+          <div class="poem-text">
+            <div class="stanza">Ahora es ya hora del grito sonoro<br>Ahora<br>Ahora es ya hora del grito<br>¡Ahora es ya hora del grito sonoro!</div>
+            <div class="stanza">Nos quieren calladas<br>Sumisas,<br>Sumidas en gritos insonoros<br>Insonoros, Insonoros ...<br>shhss, shss<br>calla, calla</div>
+            <div class="stanza">¿quién nos transformó en muñecas?<br>¿quién en imágenes y maniquíes?<br>¿quién nos hizo sirvientas?<br>¿quién nos hizo objetos de apetencia?</div>
+            <div class="stanza">Criticadas,<br>Juzgadas,<br>Ninguneadas,<br>Desconsideradas,<br>y hasta vejadas,<br>Violadas y matadas.</div>
+            <div class="stanza">¿Dónde se perdieron los valores?<br>¿Dónde está la ética?<br>¿Dónde está el amor verdadero?</div>
+            <div class="stanza">Si hemos sido víctimas de verdugos<br>de lobos con piel de cordero,<br>manipuladores,<br>creencias,<br>prejuicios,<br>sistemas machistas …</div>
+            <div class="stanza">¡víctimas hasta de nosotras mismas!</div>
+            <div class="stanza">¡Ahora! ¡que estamos hartas!<br>Hartas de gritos mudos<br>Ahora es ya hora de grito sonoro<br>¡Ahora es ya hora de Mi grito sonoro!</div>
+            <div class="stanza">grito retumbante, como una batucada,<br>grito femenino y feminista<br>Para equilibrar la balanza<br>En la igualdad y la libertad</div>
+            <div class="stanza">¿Y cómo yo, que amo el silencio creador,<br>podré llegar a un grito ensordecedor?<br>Con el corazón lleno de amor<br>Crearé esta innovación<br>En mi candor.</div>
+            <div class="stanza">Mujer<br>ser divino,<br>Tú sola presencia<br>Es una obra de arte</div>
+            <div class="stanza">¡Grito por las mujeres!<br>¡Mujeres gritad!<br>¡Ahora es ya hora!</div>
+            <div class="stanza">Por las que mueren<br>Por las que morirán<br>Por las que nacerán<br>Por la madre Naturaleza<br>que también muere.</div>
+            <div class="stanza">En grito sonoro<br>en grito cantado<br>expresado en grito pictórico<br>grito musical</div>
+            <div class="stanza">¡Oye pues mi grito sonoro!</div>
+            <div class="stanza">Resumen de millones de gritos insonoros!<br>¡Mío y de todas las mujeres!<br>grito:<br><br>Aaahhh ….!</div>
+            <div class="stanza">Espero que quede<br>convertido<br>en perfume de<br>verdadero amor.</div>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten">Resounding Cry</h1>
+          <div class="poem-text">
+            <div class="stanza">Now is the time for the resounding cry<br>Now<br>Now is the time for the cry<br>Now is the time for the resounding cry!</div>
+            <div class="stanza">They want us silent<br>Submissive,<br>Submerged in soundless cries<br>Soundless, soundless...<br>shhss, shss<br>hush, hush</div>
+            <div class="stanza">Who transformed us into dolls?<br>Who turned us into images and mannequins?<br>Who made us servants?<br>Who made us objects of desire?</div>
+            <div class="stanza">Criticized,<br>Judged,<br>Ignored,<br>Disregarded,<br>and even humiliated,<br>Raped and murdered.</div>
+            <div class="stanza">Where were the values lost?<br>Where is the ethics?<br>Where is true love?</div>
+            <div class="stanza">If we have been victims of executioners<br>of wolves in sheep's clothing,<br>manipulators,<br>beliefs,<br>prejudices,<br>sexist systems...</div>
+            <div class="stanza">Victims even of ourselves!</div>
+            <div class="stanza">Now! Now that we are fed up!<br>Fed up with silent cries<br>Now is the time for the resounding cry<br>Now is the time for My resounding cry!</div>
+            <div class="stanza">A resounding cry, like a batucada,<br>a feminine and feminist cry<br>To balance the scales<br>In equality and freedom</div>
+            <div class="stanza">And how can I, who love the creative silence,<br>reach a deafening cry?<br>With a heart full of love<br>I will create this innovation<br>In my candor.</div>
+            <div class="stanza">Woman<br>divine being,<br>Your mere presence<br>is a work of art</div>
+            <div class="stanza">I cry for the women!<br>Women, cry out!<br>Now is the time!</div>
+            <div class="stanza">For those who die<br>For those who will die<br>For those who will be born<br>For Mother Nature<br>who also dies.</div>
+            <div class="stanza">In a resounding cry<br>in a sung cry<br>expressed in a pictorial cry<br>musical cry</div>
+            <div class="stanza">Listen to my resounding cry!</div>
+            <div class="stanza">Summary of millions of soundless cries!<br>Mine and all women's!<br>I cry:<br><br>Aaahhh...!</div>
+            <div class="stanza">I hope it remains<br>turned into<br>a perfume of<br>true love.</div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten">Grido Sonoro</h1>
+          <div class="poem-text">
+            <div class="stanza">Ora è tempo del grido sonoro<br>Ora<br>Ora è tempo del grido<br>Ora è tempo del grido sonoro!</div>
+            <div class="stanza">Ci vogliono silenziose<br>Sottomesse,<br>Immersed in grida silenziose<br>Silenziose, silenziose...<br>shhss, shss<br>zitta, zitta</div>
+            <div class="stanza">Chi ci ha trasformato in bambole?<br>Chi in immagini e manichini?<br>Chi ci ha fatto serve?<br>Chi ci ha fatto oggetti di desiderio?</div>
+            <div class="stanza">Criticate,<br>Giudicate,<br>Ignorate,<br>Disprezzate,<br>e perfino umiliate,<br>Violentate e uccise.</div>
+            <div class="stanza">Dove sono stati persi i valori?<br>Dov'è l'etica?<br>Dov'è il vero amore?</div>
+            <div class="stanza">Se siamo state vittime di carnefici<br>di lupi travestiti da agnelli,<br>manipolatori,<br>credenze,<br>pregiudizi,<br>sistemi maschilisti...</div>
+            <div class="stanza">Vittime perfino di noi stesse!</div>
+            <div class="stanza">Ora! Ora che siamo stufe!<br>Stufe di grida mute<br>Ora è tempo del grido sonoro<br>Ora è tempo del Mio grido sonoro!</div>
+            <div class="stanza">Un grido rimbombante, come una batucada,<br>un grido femminile e femminista<br>Per bilanciare la bilancia<br>Nell'uguaglianza e nella libertà</div>
+            <div class="stanza">E come posso io, che amo il silenzio creativo,<br>arrivare a un grido assordante?<br>Con il cuore pieno d'amore<br>Creerò questa innovazione<br>Nella mia innocenza.</div>
+            <div class="stanza">Donna<br>essere divino,<br>La tua sola presenza<br>è un'opera d'arte</div>
+            <div class="stanza">Grido per le donne!<br>Donne, gridate!<br>Ora è tempo!</div>
+            <div class="stanza">Per quelle che muoiono<br>Per quelle che moriranno<br>Per quelle che nasceranno<br>Per Madre Natura<br>che muore anche lei.</div>
+            <div class="stanza">In un grido sonoro<br>in un grido cantato<br>espresso in un grido pittorico<br>grido musicale</div>
+            <div class="stanza">Ascolta il mio grido sonoro!</div>
+            <div class="stanza">Riepilogo di milioni di grida silenziose!<br>Mio e di tutte le donne!<br>Grido:<br><br>Aaahhh...!</div>
+            <div class="stanza">Spero che rimanga<br>trasformato<br>in profumo di<br>vero amore.</div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten">Звучный крик</h1>
+          <div class="poem-text">
+            <div class="stanza">Сейчас, уже пришло время для звучного крика<br>Сейчас<br>Сейчас, уже пришло время для крика<br>Сейчас, уже пришло время для звучного крика!</div>
+            <div class="stanza">Они хотят, чтобы мы молчали<br>Покорными,<br>Погруженными в безмолвные крики<br>Безмолвные, безмолвные...<br>ш-ш-ш, ш-ш-ш<br>тише, тише</div>
+            <div class="stanza">кто превратил нас в кукол?<br>кто в образы и манекены?<br>кто сделал нас служанками?<br>кто сделал нас объектами вожделения?</div>
+            <div class="stanza">Критикуемые,<br>Осуждаемые,<br>Игнорируемые,<br>Ни во что не ставимые,<br>и даже унижаемые,<br>Изнасилованные и убитые.</div>
+            <div class="stanza">жертвами даже самих себя!</div>
+            <div class="stanza">Сейчас! Когда мы сыты по горло!<br>Сыты по горло немыми криками<br>Сейчас, уже пришло время для звучного крика<br>Сейчас, уже пришло время для Моего звучного крика!</div>
+            <div class="stanza">раскатистый крик, как батукада,<br>женский и феминистский крик<br>Чтобы уравновесить чашу весов<br>В равенстве и свободе</div>
+            <div class="stanza">И как я, любящая созидательную тишину,<br>смогу достичь оглушительного крика?<br>С сердцем, полным любви<br>Я создам это новшество<br>В моей чистоте.</div>
+            <div class="stanza">Женщина<br>божественное существо,<br>Одно твое присутствие<br>Это произведение искусства</div>
+            <div class="stanza">Я кричу за женщин!<br>Женщины, кричите!<br>Сейчас, уже пришло время!</div>
+            <div class="stanza">За мать-Природу<br>которая тоже умирает.</div>
+            <div class="stanza">В звучном крике<br>в воспетом крике<br>выраженном в живописном крике<br>музыкальном крике</div>
+            <div class="stanza">Слушай же мой звучный крик!</div>
+            <div class="stanza">Итог миллионов безмолвных криков!<br>Мой и всех женщин!<br>кричу:<br><br>А-а-а-х...!</div>
+            <div class="stanza">Я надеюсь, что он останется<br>превращенным<br>в аромат<br>истинной любви.</div>
+          </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="chinese language">
+          <h1 class="handwritten">响亮呐喊</h1>
+          <div class="poem-text">
+            <div class="stanza">现在<br>现在是呐喊的时刻<br>现在是响亮呐喊的时刻！</div>
+            <div class="stanza">他们想让我们保持沉默<br>顺从的，<br>沉浸在无声的呐喊中<br>无声的，无声的...<br>嘘，嘘<br>安静，安静</div>
+            <div class="stanza">谁把我们变成了玩偶？<br>谁把我们变成了形象和假人？<br>谁把我们变成了仆人？<br>谁把我们变成了欲望的对象？</div>
+            <div class="stanza">被批评，<br>被审判，<br>被忽略，<br>被轻视，<br>甚至被羞辱，<br>被强奸和被谋杀。</div>
+            <div class="stanza">现在！我们受够了！<br>受够了无声的呐喊<br>现在是响亮呐喊的时刻<br>现在是我响亮呐喊的时刻！</div>
+            <div class="stanza">震耳欲聋的呐喊，像巴图卡达鼓乐，<br>女性主义者的呐喊<br>为平衡天平<br>在平等与自由中</div>
+            <div class="stanza">听听我的响亮呐喊！</div>
+            <div class="stanza">Aaahhh...！</div>
+            <div class="stanza">我希望它能成为<br>真实之爱的<br>香水。</div>
+          </div>
+        </div>
+
+        <!-- ARABIC -->
+        <div class="arabic language">
+          <h1 class="handwritten">الصرخة العالية</h1>
+          <div class="poem-text">
+            <div class="stanza">الآن<br>الآن حان وقت الصرخة<br>حان الآن وقت الصرخة العالية!</div>
+            <div class="stanza">يريدوننا صامتات<br>خاضعات،<br>غارقات في صرخات غير مسموعة<br>غير مسموعة، غير مسموعة...<br>شش، شش<br>اصمتي، اصمتي</div>
+            <div class="stanza">من حولنا إلى دمى؟<br>من جعلنا خادمات؟<br>من جعلنا أشياء مرغوبة؟</div>
+            <div class="stanza">الآن! نحن متعبات!<br>متعبات من الصرخات الصامتة<br>حان الآن وقت الصرخة العالية<br>حان الآن وقت صرختي العالية!</div>
+            <div class="stanza">استمع إلى صرختي العالية!</div>
+            <div class="stanza">آآآه...!</div>
+            <div class="stanza">آمل أن يتحول إلى<br>عطر<br>الحب الحقيقي.</div>
+          </div>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="aleman language">
+          <h1 class="handwritten">Tönender Schrei</h1>
+          <div class="poem-text">
+            <div class="stanza">Jetzt, es ist bereits Zeit für den tönenden Schrei<br>Jetzt<br>Jetzt, es ist bereits Zeit für den Schrei<br>Jetzt, es ist bereits Zeit für den tönenden Schrei!</div>
+            <div class="stanza">Sie wollen uns schweigend<br>Unterwürfig,<br>Versunken in klanglosen Schreien<br>Klanglos, klanglos...<br>pscht, pscht<br>schweig, schweig</div>
+            <div class="stanza">Höre also meinen tönenden Schrei!</div>
+            <div class="stanza">Aaahhh ….!</div>
+            <div class="stanza">Ich hoffe, dass er bleibt<br>verwandelt<br>in den Duft<br>wahrer Liebe.</div>
+          </div>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="frances language">
+          <h1 class="handwritten">Cri Sonore</h1>
+          <div class="poem-text">
+            <div class="stanza">Maintenant, il est déjà temps pour le cri sonore<br>Maintenant<br>Maintenant, il est déjà temps pour le cri<br>Maintenant, il est déjà temps pour le cri sonore !</div>
+            <div class="stanza">Ils nous veulent silencieuses<br>Soumises,<br>Plongées dans des cris insonores<br>Insonores, insonores ...<br>chut, chut<br>tais-toi, tais-toi</div>
+            <div class="stanza">Écoute donc mon cri sonore !</div>
+            <div class="stanza">Aaahhh ….!</div>
+            <div class="stanza">J'espère qu'il restera<br>converti<br>en parfum de<br>véritable amour.</div>
+          </div>
+        </div>
+
+        <!-- JAPANESE -->
+        <div class="japones language">
+          <h1 class="handwritten">響き渡る叫び</h1>
+          <div class="poem-text">
+            <div class="stanza">今、響き渡る叫びの時が来た<br>今<br>今、叫びの時が来た<br>今、響き渡る叫びの時が来た！</div>
+            <div class="stanza">彼らは私たちに沈黙を求める<br>従順であることを、<br>無声の叫びに沈むことを<br>無声の、無声の……<br>静かに、静かに<br>黙りなさい、黙りなさい</div>
+            <div class="stanza">私の響き渡る叫びを聴きなさい！</div>
+            <div class="stanza">ああああ……！</div>
+            <div class="stanza">私はそれが残ることを願う<br>変えられて<br>真実の愛の<br>香りに。</div>
+          </div>
+        </div>
+
+        <!-- PORTUGUESE -->
+        <div class="portuges language">
+          <h1 class="handwritten">Grito Sonoro</h1>
+          <div class="poem-text">
+            <div class="stanza">Agora, já é hora do grito sonoro<br>Agora<br>Agora, já é hora do grito<br>Agora, ya es hora del grito sonoro!</div>
+            <div class="stanza">Querem-nos caladas<br>Submissas,<br>Mergulhadas em gritos insonoros<br>Insonoros, insonoros ...<br>shhss, shss<br>cala-te, cala-te</div>
+            <div class="stanza">Ouve, pois, o meu grito sonoro!</div>
+            <div class="stanza">Aaahhh ….!</div>
+            <div class="stanza">Espero que fique<br>convertido<br>en perfume de<br>verdadero amor.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="container mt-5">
+      <h2 class="handwritten text-center text-danger">Inspiración en Video</h2>
+      <div class="video-container">
+        <div class="p-5 text-center text-muted" style="background: rgba(0,0,0,0.4);">
+          <i class="fab fa-youtube fa-3x mb-3 text-danger"></i>
+          <p>La esencia del grito en video llegará pronto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music Section Placeholder -->
+    <div class="container mt-5 text-center">
+      <h2 class="handwritten text-light mb-4 text-warning">
+        <i class="fab fa-spotify text-success mr-2"></i>
+        <span class="spanish language">Canciones del Poema</span>
+        <span class="english language">Poem Songs</span>
+        <span class="italian language">Canzoni della Poesia</span>
+        <span class="chinese language">诗歌歌曲</span>
+        <span class="arabic language">أغاني القصيدة</span>
+        <span class="russian language">Песни на стихотворение</span>
+        <span class="aleman language">Gedicht Lieder</span>
+        <span class="frances language">Chansons du Poème</span>
+        <span class="japones language">詩の歌</span>
+        <span class="portuges language">Canções do Poema</span>
+      </h2>
+
+      <div class="row justify-content-center">
+        <div class="col-md-9 mb-4">
+          <div id="spotify-player-container">
+            <div id="spotify-placeholder" class="p-5 rounded"
+              style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,215,0,0.3);">
+              <i class="fab fa-spotify fa-3x mb-3 text-success"></i>
+              <p>Escucha el grito que libera el alma.</p>
+            </div>
+            <iframe id="spotify-iframe" style="border-radius:12px; display:none;" src="" width="100%" height="152"
+              frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <!-- Spanish Album -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="album-card">
+            <img src="cover_es.png" class="album-cover" alt="Spanish Album">
+            <div class="album-info">
+              <div class="album-title">Grito Sonoro (ES)</div>
+              <div class="album-artist">Paz Arés Osset</div>
+              <a href="#" class="btn btn-spotify mt-3 btn-sm"><i class="fab fa-spotify mr-2"></i>Spotify (ES)</a>
+            </div>
+          </div>
+        </div>
+        <!-- English Album -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="album-card">
+            <img src="cover_en.png" class="album-cover" alt="English Album">
+            <div class="album-info">
+              <div class="album-title">Resounding Cry (EN)</div>
+              <div class="album-artist">Paz Arés Osset</div>
+              <a href="#" class="btn btn-spotify mt-3 btn-sm"><i class="fab fa-spotify mr-2"></i>Spotify (EN)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Italian Album -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="album-card">
+            <img src="cover_it.png" class="album-cover" alt="Italian Album">
+            <div class="album-info">
+              <div class="album-title">Grido Sonoro (IT)</div>
+              <div class="album-artist">Paz Arés Osset</div>
+              <a href="#" class="btn btn-spotify mt-3 btn-sm"><i class="fab fa-spotify mr-2"></i>Spotify (IT)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Russian Album -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="album-card">
+            <img src="cover_ru.png" class="album-cover" alt="Russian Album">
+            <div class="album-info">
+              <div class="album-title">Звучный крик (RU)</div>
+              <div class="album-artist">Paz Arés Osset</div>
+              <a href="#" class="btn btn-spotify mt-3 btn-sm"><i class="fab fa-spotify mr-2"></i>Spotify (RU)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Arabic Album -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="album-card">
+            <img src="cover_ar.png" class="album-cover" alt="Arabic Album">
+            <div class="album-info">
+              <div class="album-title">الصرخة العالية (AR)</div>
+              <div class="album-artist">Paz Arés Osset</div>
+              <a href="#" class="btn btn-spotify mt-3 btn-sm"><i class="fab fa-spotify mr-2"></i>Spotify (AR)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-5">
+      <p>&copy; 2024 Paz Arés Osset - Todo por el Arte y el Amor.</p>
+    </footer>
+
   </div>
 
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Now is the time for the resounding cry</div>
-        <div class="spanish language" style="display: none;">Ahora es ya hora del grito sonoro</div>
-        <div class="italian language" style="display: none;">Ora è tempo del grido sonoro</div>
-        <div class="chinese language" style="display: none;">现在是响亮呐喊的时刻</div>
-        <div class="arabic language" style="display: none;">حان الآن وقت الصرخة العالية</div>
-      </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">A resounding cry for women's empowerment, breaking the silence!</div>
-        <div class="spanish language" style="display: none;">¡Un grito sonoro por el empoderamiento de las mujeres,
-          rompiendo el
-          silencio!</div>
-        <div class="italian language" style="display: none;">Un grido sonoro per l'empowerment delle donne, rompendo il
-          silenzio!</div>
-        <div class="chinese language" style="display: none;">为女性赋权而发出响亮的呐喊，打破沉默！</div>
-        <div class="arabic language" style="display: none;">صرخة مدوية لتمكين المرأة، كسر الصمت!</div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Now is the time for the resounding cry</div>
-        <div class="spanish language" style="display: none;">Ahora es ya hora del grito sonoro</div>
-        <div class="italian language" style="display: none;">Ora è tempo del grido sonoro</div>
-        <div class="chinese language" style="display: none;">现在是响亮呐喊的时刻 </div>
-        <div class="arabic language" style="display: none;">حان الآن وقت الصرخة العالية</div>
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>Now</p>
-          <p>Now is the time for the cry</p>
-          <p>Now is the time for the resounding cry!</p>
-          <br>
-          <p>They want us silent</p>
-          <p>Submissive,</p>
-          <p>Submerged in soundless cries</p>
-          <p>Soundless, soundless...</p>
-          <p>shhss, shss</p>
-          <p>hush, hush</p>
-          <br>
-          <p>Who transformed us into dolls?</p>
-          <p>Who turned us into images and mannequins?</p>
-          <p>Who made us servants?</p>
-          <p>Who made us objects of desire?</p>
-          <br>
-          <p>Criticized,</p>
-          <p>Judged,</p>
-          <p>Ignored,</p>
-          <p>Disregarded,</p>
-          <p>and even humiliated,</p>
-          <p>Raped and murdered.</p>
-          <br>
-          <p>Where were the values lost?</p>
-          <p>Where is the ethics?</p>
-          <p>Where is true love?</p>
-          <br>
-          <p>If we have been victims of executioners</p>
-          <p>of wolves in sheep's clothing,</p>
-          <p>manipulators,</p>
-          <p>beliefs,</p>
-          <p>prejudices,</p>
-          <p>sexist systems...</p>
-          <br>
-          <p>Victims even of ourselves!</p>
-          <br>
-          <p>Now! Now that we are fed up!</p>
-          <p>Fed up with silent cries</p>
-          <p>Now is the time for the resounding cry</p>
-          <p>Now is the time for My resounding cry!</p>
-          <br>
-          <p>A resounding cry, like a batucada,</p>
-          <p>a feminine and feminist cry</p>
-          <p>To balance the scales</p>
-          <p>In equality and freedom</p>
-          <br>
-          <p>And how can I, who love the creative silence,</p>
-          <p>reach a deafening cry?</p>
-          <p>With a heart full of love</p>
-          <p>I will create this innovation</p>
-          <p>In my candor.</p>
-          <br>
-          <p>Woman</p>
-          <p>divine being,</p>
-          <p>Your mere presence</p>
-          <p>is a work of art</p>
-          <br>
-          <p>I cry for the women!</p>
-          <p>Women, cry out!</p>
-          <p>Now is the time!</p>
-          <br>
-          <p>For those who die</p>
-          <p>For those who will die</p>
-          <p>For those who will be born</p>
-          <p>For Mother Nature</p>
-          <p>who also dies.</p>
-          <br>
-          <p>In a resounding cry</p>
-          <p>in a sung cry</p>
-          <p>expressed in a pictorial cry</p>
-          <p>musical cry</p>
-          <br>
-          <p>Listen to my resounding cry!</p>
-          <br>
-          <p>Summary of millions of soundless cries!</p>
-          <p>Mine and all women's!</p>
-          <p>I cry:</p>
-          <br>
-          <p>Aaahhh...!</p>
-          <br>
-          <p>I hope it remains</p>
-          <p>turned into</p>
-          <p>a perfume of</p>
-          <p>true love.</p>
-
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Ahora es ya hora del grito sonoro</p>
-          <p>Ahora</p>
-          <p>Ahora es ya hora del grito</p>
-          <p>¡Ahora es ya hora del grito sonoro!</p>
-          <br>
-          <p>Nos quieren calladas</p>
-          <p>Sumisas,</p>
-          <p>Sumidas en gritos insonoros</p>
-          <p>Insonoros, Insonoros ...</p>
-          <p>shhss, shss</p>
-          <p>calla, calla</p>
-          <br>
-          <p>¿quién nos transformó en muñecas?</p>
-          <p>¿quién en imágenes y maniquíes?</p>
-          <p>¿quién nos hizo sirvientas?</p>
-          <p>¿quién nos hizo objetos de apetencia?</p>
-          <br>
-          <p>Criticadas,</p>
-          <p>Juzgadas,</p>
-          <p>Ninguneadas,</p>
-          <p>Desconsideradas,</p>
-          <p>y hasta vejadas,</p>
-          <p>Violadas y matadas.</p>
-          <br>
-          <p>¿Dónde se perdieron los valores?</p>
-          <p>¿Dónde está la ética?</p>
-          <p>¿Dónde está el amor verdadero?</p>
-          <br>
-          <p>Si hemos sido víctimas de verdugos</p>
-          <p>de lobos con piel de cordero,</p>
-          <p>manipuladores, </p>
-          <p>creencias,</p>
-          <p>prejuicios,</p>
-          <p>sistemas machistas …</p>
-          <br>
-          <p>¡víctimas hasta de nosotras mismas!</p>
-          <br>
-          <p>¡Ahora! ¡que estamos hartas!</p>
-          <p>Hartas de gritos mudos </p>
-          <p>Ahora es ya hora de grito sonoro</p>
-          <p>¡Ahora es ya hora de Mi grito sonoro!</p>
-          <br>
-          <p>grito retumbante, como una batucada,</p>
-          <p>grito femenino y feminista</p>
-          <p>Para equilibrar la balanza</p>
-          <p>En la igualdad y la libertad</p>
-          <br>
-          <p>¿Y cómo yo, que amo el silencio creador,</p>
-          <p>podré llegar a un grito ensordecedor?</p>
-          <p>Con el corazón lleno de amor</p>
-          <p>Crearé esta innovación</p>
-          <p>En mi candor.</p>
-          <br>
-          <p>Mujer</p>
-          <p>ser divino,</p>
-          <p>Tú sola presencia</p>
-          <p>Es una obra de arte</p>
-          <br>
-          <p>¡Grito por las mujeres!</p>
-          <p>¡Mujeres gritad!</p>
-          <p>¡Ahora es ya hora!</p>
-          <br>
-          <p>Por las que mueren</p>
-          <p>Por las que morirán</p>
-          <p>Por las que nacerán</p>
-          <p>Por la madre Naturaleza</p>
-          <p>que también muere.</p>
-          <br>
-          <p>En grito sonoro</p>
-          <p>en grito cantado</p>
-          <p>expresado en grito pictórico</p>
-          <p>grito musical</p>
-          <br>
-          <p>¡Oye pues mi grito sonoro!</p>
-          <br>
-          <p>Resumen de millones de gritos insonoros!</p>
-          <p>¡Mío y de todas las mujeres!</p>
-          <p>grito:</p>
-          <br>
-          <p>Aaahhh ….!</p>
-          <br>
-          <p>Espero que quede</p>
-          <p>convertido </p>
-          <p>en perfume de </p>
-          <p>verdadero amor.</p>
-
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Ora</p>
-          <p>Ora è tempo del grido</p>
-          <p>Ora è tempo del grido sonoro!</p>
-          <br>
-          <p>Ci vogliono silenziose</p>
-          <p>Sottomesse,</p>
-          <p>Immersed in grida silenziose</p>
-          <p>Silenziose, silenziose...</p>
-          <p>shhss, shss</p>
-          <p>zitta, zitta</p>
-          <br>
-          <p>Chi ci ha trasformato in bambole?</p>
-          <p>Chi in immagini e manichini?</p>
-          <p>Chi ci ha fatto serve?</p>
-          <p>Chi ci ha fatto oggetti di desiderio?</p>
-          <br>
-          <p>Criticate,</p>
-          <p>Giudicate,</p>
-          <p>Ignorate,</p>
-          <p>Disprezzate,</p>
-          <p>e perfino umiliate,</p>
-          <p>Violentate e uccise.</p>
-          <br>
-          <p>Dove sono stati persi i valori?</p>
-          <p>Dov'è l'etica?</p>
-          <p>Dov'è il vero amore?</p>
-          <br>
-          <p>Se siamo state vittime di carnefici</p>
-          <p>di lupi travestiti da agnelli,</p>
-          <p>manipolatori,</p>
-          <p>credenze,</p>
-          <p>pregiudizi,</p>
-          <p>sistemi maschilisti...</p>
-          <br>
-          <p>Vittime perfino di noi stesse!</p>
-          <br>
-          <p>Ora! Ora che siamo stufe!</p>
-          <p>Stufe di grida mute</p>
-          <p>Ora è tempo del grido sonoro</p>
-          <p>Ora è tempo del Mio grido sonoro!</p>
-          <br>
-          <p>Un grido rimbombante, come una batucada,</p>
-          <p>un grido femminile e femminista</p>
-          <p>Per bilanciare la bilancia</p>
-          <p>Nell'uguaglianza e nella libertà</p>
-          <br>
-          <p>E come posso io, che amo il silenzio creativo,</p>
-          <p>arrivare a un grido assordante?</p>
-          <p>Con il cuore pieno d'amore</p>
-          <p>Creerò questa innovazione</p>
-          <p>Nella mia innocenza.</p>
-          <br>
-          <p>Donna</p>
-          <p>essere divino,</p>
-          <p>La tua sola presenza</p>
-          <p>è un'opera d'arte</p>
-          <br>
-          <p>Grido per le donne!</p>
-          <p>Donne, gridate!</p>
-          <p>Ora è tempo!</p>
-          <br>
-          <p>Per quelle che muoiono</p>
-          <p>Per quelle che moriranno</p>
-          <p>Per quelle che nasceranno</p>
-          <p>Per Madre Natura</p>
-          <p>che muore anche lei.</p>
-          <br>
-          <p>In un grido sonoro</p>
-          <p>in un grido cantato</p>
-          <p>espresso in un grido pittorico</p>
-          <p>grido musicale</p>
-          <br>
-          <p>Ascolta il mio grido sonoro!</p>
-          <br>
-          <p>Riepilogo di milioni di grida silenziose!</p>
-          <p>Mio e di tutte le donne!</p>
-          <p>Grido:</p>
-          <br>
-          <p>Aaahhh...!</p>
-          <br>
-          <p>Spero che rimanga</p>
-          <p>trasformato</p>
-          <p>in profumo di</p>
-          <p>vero amore.</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>现在</p>
-          <p>现在是呐喊的时刻</p>
-          <p>现在是响亮呐喊的时刻！</p>
-          <br>
-          <p>他们想让我们保持沉默</p>
-          <p>顺从的，</p>
-          <p>沉浸在无声的呐喊中</p>
-          <p>无声的，无声的...</p>
-          <p>嘘，嘘</p>
-          <p>安静，安静</p>
-          <br>
-          <p>谁把我们变成了玩偶？</p>
-          <p>谁把我们变成了形象和假人？</p>
-          <p>谁把我们变成了仆人？</p>
-          <p>谁把我们变成了欲望的对象？</p>
-          <br>
-          <p>被批评，</p>
-          <p>被审判，</p>
-          <p>被忽略，</p>
-          <p>被轻视，</p>
-          <p>甚至被羞辱，</p>
-          <p>被强奸和被谋杀。</p>
-          <br>
-          <p>价值观在哪里迷失了？</p>
-          <p>道德在哪里？</p>
-          <p>真爱在哪里？</p>
-          <br>
-          <p>如果我们是刽子手的受害者</p>
-          <p>是披着羊皮的狼的受害者，</p>
-          <p>操纵者，</p>
-          <p>信仰，</p>
-          <p>偏见，</p>
-          <p>父权制系统...</p>
-          <br>
-          <p>甚至是我们自己的受害者！</p>
-          <br>
-          <p>现在！我们受够了！</p>
-          <p>受够了无声的呐喊</p>
-          <p>现在是响亮呐喊的时刻</p>
-          <p>现在是我响亮呐喊的时刻！</p>
-          <br>
-          <p>震耳欲聋的呐喊，像巴图卡达鼓乐，</p>
-          <p>女性主义者的呐喊</p>
-          <p>为平衡天平</p>
-          <p>在平等与自由中</p>
-          <br>
-          <p>我如何能够，</p>
-          <p>作为一个喜爱创造性沉默的人，</p>
-          <p>达到震耳欲聋的呐喊？</p>
-          <p>以充满爱的心</p>
-          <p>我将创造这项创新</p>
-          <p>在我的纯真中。</p>
-          <br>
-          <p>女人</p>
-          <p>神圣的存在，</p>
-          <p>你仅仅的存在</p>
-          <p>就是一件艺术品</p>
-          <br>
-          <p>我为女人们呐喊！</p>
-          <p>女人们，呐喊吧！</p>
-          <p>现在是时刻了！</p>
-          <br>
-          <p>为了那些死去的</p>
-          <p>为了那些将要死去的</p>
-          <p>为了那些将要出生的</p>
-          <p>为了母亲自然</p>
-          <p>她也在死去。</p>
-          <br>
-          <p>在响亮的呐喊中</p>
-          <p>在歌唱的呐喊中</p>
-          <p>在绘画的呐喊中表达</p>
-          <p>音乐的呐喊</p>
-          <br>
-          <p>听听我的响亮呐喊！</p>
-          <br>
-          <p>数百万无声呐喊的总结！</p>
-          <p>属于我和所有女人的！</p>
-          <p>我呐喊：</p>
-          <br>
-          <p>Aaahhh...！</p>
-          <br>
-          <p>我希望它能成为</p>
-          <p>真实之爱的</p>
-          <p>香水。</p>
-
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>الآن</p>
-          <p>الآن حان وقت الصرخة</p>
-          <p>حان الآن وقت الصرخة العالية!</p>
-          <br>
-          <p>يريدوننا صامتات</p>
-          <p>خاضعات،</p>
-          <p>غارقات في صرخات غير مسموعة</p>
-          <p>غير مسموعة، غير مسموعة...</p>
-          <p>شش، شش</p>
-          <p>اصمتي، اصمتي</p>
-          <br>
-          <p>من حولنا إلى دمى؟</p>
-          <p>من حولنا إلى صور ومانيكانات؟</p>
-          <p>من جعلنا خادمات؟</p>
-          <p>من جعلنا أشياء مرغوبة؟</p>
-          <br>
-          <p>مُنتقدات،</p>
-          <p>محكومات،</p>
-          <p>مُهملات،</p>
-          <p>مُحتقرات،</p>
-          <p>حتى مُهانات،</p>
-          <p>مُغتصبات ومقتولات.</p>
-          <br>
-          <p>أين ضاعت القيم؟</p>
-          <p>أين هي الأخلاق؟</p>
-          <p>أين الحب الحقيقي؟</p>
-          <br>
-          <p>إذا كنا ضحايا الجلادين</p>
-          <p>ذئاب في جلد خراف،</p>
-          <p>مُتحكمون،</p>
-          <p>معتقدات،</p>
-          <p>أحكام مسبقة،</p>
-          <p>أنظمة ذكورية...</p>
-          <br>
-          <p>ضحايا حتى من أنفسنا!</p>
-          <br>
-          <p>الآن! نحن متعبات!</p>
-          <p>متعبات من الصرخات الصامتة</p>
-          <p>حان الآن وقت الصرخة العالية</p>
-          <p>حان الآن وقت صرختي العالية!</p>
-          <br>
-          <p>صرخة مدوية، مثل باتوكادا،</p>
-          <p>صرخة نسائية ونسوية</p>
-          <p>لتحقيق التوازن</p>
-          <p>في المساواة والحرية</p>
-          <br>
-          <p>وكيف أستطيع أنا، التي أحب الصمت الخلاق،</p>
-          <p>أن أصل إلى صرخة تصم الآذان؟</p>
-          <p>بقلبي الممتلئ بالحب</p>
-          <p>سأخلق هذا الابتكار</p>
-          <p>في طهري.</p>
-          <br>
-          <p>امرأة</p>
-          <p>كائن إلهي،</p>
-          <p>وجودك وحده</p>
-          <p>هو عمل فني</p>
-          <br>
-          <p>أصرخ من أجل النساء!</p>
-          <p>أيتها النساء اصرخن!</p>
-          <p>الآن هو الوقت!</p>
-          <br>
-          <p>من أجل اللواتي يمتن</p>
-          <p>من أجل اللواتي سيمتن</p>
-          <p>من أجل اللواتي سيولدن</p>
-          <p>من أجل الأم الطبيعة</p>
-          <p>التي تموت هي الأخرى.</p>
-          <br>
-          <p>في صرخة عالية</p>
-          <p>في صرخة مغناة</p>
-          <p>معبر عنها في صرخة تصويرية</p>
-          <p>صرخة موسيقية</p>
-          <br>
-          <p>استمع إلى صرختي العالية!</p>
-          <br>
-          <p>خلاصة ملايين الصرخات غير المسموعة!</p>
-          <p>صرختي وجميع النساء!</p>
-          <p>أصرخ:</p>
-          <br>
-          <p>آآآه...!</p>
-          <br>
-          <p>آمل أن يتحول إلى</p>
-          <p>عطر</p>
-          <p>الحب الحقيقي.</p>
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

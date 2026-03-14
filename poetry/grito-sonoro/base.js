@@ -1,76 +1,121 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-//document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
-    document.querySelectorAll('.language').forEach(function (element) {
-      element.style.display = 'none';
-    });
+  // --- Initialize Spanish as default ---
+  const initialLang = 'spanish';
+  document.querySelectorAll('.language').forEach(function (element) {
+    element.style.display = 'none';
+  });
+  document.querySelectorAll('.' + initialLang).forEach(function (element) {
+    element.style.display = 'block';
+  });
+  const langSelect = document.getElementById('language-select');
+  if (langSelect) langSelect.value = initialLang;
 
-    // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
+  // --- Language Selector ---
+  if (langSelect) {
+    langSelect.addEventListener('change', function () {
+      const selectedLanguage = this.value;
+      document.querySelectorAll('.language').forEach(function (element) {
+        element.style.display = 'none';
+      });
+      document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
+        element.style.display = 'block';
+      });
+
+      // Update audio button text if exists
+      const audioButtonTexts = {
+        'spanish': 'Escuchar Grito',
+        'english': 'Listen to the Cry',
+        'italian': 'Ascolta il Grido',
+        'chinese': '听见呐喊',
+        'arabic': 'استمع إلى الصرخة',
+        'russian': 'Слушать крик',
+        'aleman': 'Schrei hören',
+        'frances': 'Écouter le cri',
+        'japones': '叫びを聴く',
+        'portuges': 'Ouvir o grito'
+      };
+      
+      const audioButtonText = document.getElementById('audio-button-text');
+      if (audioButtonText) {
+        audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
+      }
     });
+  }
+
+  // --- Scroll Reveal Animation for Stanzas ---
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.stanza').forEach(stanza => {
+    revealObserver.observe(stanza);
   });
 
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
-  var zoomImages = document.querySelectorAll('.zoom-image');
+  // --- Canvas Effects (Dust & Static) ---
+  const canvas = document.getElementById('effects-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width, height;
 
-  // Recorre todas las imágenes
-  zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
-    var isZoomed = false;
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
 
-    // Función para realizar el zoom en la imagen
-    function zoomImage() {
-      if (isZoomed) {
-        image.style.transform = 'scale(1)';
-        isZoomed = false;
-      } else {
-        image.style.transform = 'scale(1.5)';
-        isZoomed = true;
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 1.5 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.3;
+        this.alpha = Math.random() * 0.3;
+        this.color = '255, 255, 255'; 
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
       }
     }
 
-    // Asigna el evento touchstart (toque) a la imagen
-    image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
+    const particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push(new Particle());
+    }
 
-      // Establece un temporizador para reducir el zoom después de 3 segundos
-      setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
-      }, 3000);
-    });
-  });
-
-  ////
-
-
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });

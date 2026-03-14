@@ -1,76 +1,55 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-//document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('language-select').addEventListener('change', function () {
+  const langSelect = document.getElementById('language-select');
+  const initialLang = 'spanish';
+
+  function updateLanguage(selectedLanguage) {
     // Hide all language elements
     document.querySelectorAll('.language').forEach(function (element) {
       element.style.display = 'none';
     });
 
     // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
-    });
-  });
-
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
-  var zoomImages = document.querySelectorAll('.zoom-image');
-
-  // Recorre todas las imágenes
-  zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
-    var isZoomed = false;
-
-    // Función para realizar el zoom en la imagen
-    function zoomImage() {
-      if (isZoomed) {
-        image.style.transform = 'scale(1)';
-        isZoomed = false;
+    document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
+      // Logic for grid elements (album cards)
+      if (element.classList.contains('col-lg-3') || element.classList.contains('col-md-6')) {
+        element.style.display = 'block';
       } else {
-        image.style.transform = 'scale(1.5)';
-        isZoomed = true;
+        element.style.display = 'block';
       }
-    }
-
-    // Asigna el evento touchstart (toque) a la imagen
-    image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
-
-      // Establece un temporizador para reducir el zoom después de 3 segundos
-      setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
-      }, 3000);
     });
+  }
+
+  // Initialize with Spanish
+  if (langSelect) {
+    langSelect.value = initialLang;
+    updateLanguage(initialLang);
+
+    langSelect.addEventListener('change', function () {
+      updateLanguage(this.value);
+    });
+  }
+
+  // --- Scroll Reveal Animation for Stanzas ---
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      }
+    });
+  }, observerOptions);
+
+  // Observe stanzas
+  document.querySelectorAll('.stanza').forEach(stanza => {
+    revealObserver.observe(stanza);
   });
 
-  ////
-
-
+  // Observe individual lines in poem-text if stanzas are not used
+  document.querySelectorAll('.poem-text p').forEach(p => {
+    revealObserver.observe(p);
+  });
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });
