@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Paz Arés Osset — Introducción</title>
+  <meta name="description" content="Reseña de Paz Arés Osset: poeta, pintora, escritora, profesora de Lengua y Literatura, doctorada en Bellas Artes, Filosofía y Ciencias de la Educación. Autora de Destellos de Paz.">
+  <link rel="icon" type="image/png" href="../favicon.ico" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --gold: #FFD700;
+      --dark-gold: #B8860B;
+      --warm-gold: #e6b422;
+      --pink-accent: #ff4c68;
+      --rose: #d4768a;
+      --dark-bg: #0a0a0a;
+      --deep-purple: #1a0a2e;
+      --glass-bg: rgba(20, 15, 30, 0.75);
+      --glass-border: rgba(255, 215, 0, 0.2);
+      --text-warm: #f5efe6;
+      --text-muted: #c0b8a8;
+      --spotify-green: #1DB954;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--text-warm);
+      background: var(--dark-bg);
+      overflow-x: hidden;
+      line-height: 1.8;
+    }
+
+    /* ─── ANIMATED BACKGROUND ─── */
+    .bg-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+      background: radial-gradient(ellipse at 20% 50%, rgba(212, 118, 138, 0.15), transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(255, 215, 0, 0.1), transparent 50%),
+                  radial-gradient(ellipse at 50% 80%, rgba(26, 10, 46, 0.9), transparent 70%),
+                  var(--dark-bg);
+    }
+
+    .floating-particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px; height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float-particle 8s infinite ease-in-out;
+    }
+
+    @keyframes float-particle {
+      0%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
+      50% { opacity: 0.6; transform: translateY(-120px) scale(1); }
+    }
+
+    /* ─── HEADER ─── */
+    .top-nav {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo-img {
+      max-height: 60px;
+      transition: transform 0.3s;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .back-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .back-link:hover {
+      color: var(--pink-accent);
+      transform: translateX(-5px);
+    }
+
+    /* ─── HERO SECTION ─── */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      max-width: 1200px;
+      width: 100%;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-portrait {
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .hero-portrait img {
+      width: 380px;
+      height: 460px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 30px;
+      border: 3px solid var(--glass-border);
+      box-shadow:
+        0 0 60px rgba(255, 215, 0, 0.15),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+      transition: all 0.6s ease;
+    }
+
+    .hero-portrait img:hover {
+      border-color: var(--gold);
+      box-shadow:
+        0 0 80px rgba(255, 215, 0, 0.25),
+        0 25px 70px rgba(0, 0, 0, 0.6);
+      transform: scale(1.02);
+    }
+
+    .hero-portrait::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 30px;
+      background: radial-gradient(ellipse, rgba(255, 215, 0, 0.2), transparent);
+      border-radius: 50%;
+      filter: blur(10px);
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-kicker {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'Philosopher', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 50%, var(--gold) 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s linear infinite;
+      margin-bottom: 10px;
+    }
+
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-intro {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+      max-width: 540px;
+    }
+
+    .hero-intro strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ─── CONTENT SECTIONS ─── */
+    .content-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 30px 80px;
+    }
+
+    .section-block {
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .section-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Philosopher', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--rose));
+      margin-top: 15px;
+      border-radius: 3px;
+    }
+
+    .section-text {
+      font-size: 1.2rem;
+      line-height: 2;
+      color: var(--text-warm);
+      max-width: 800px;
+    }
+
+    .section-text em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    /* ─── ACADEMIC CREDENTIALS CARDS ─── */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .credential-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 35px 25px;
+      text-align: center;
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .credential-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), transparent 50%);
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .credential-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 215, 0, 0.15);
+    }
+
+    .credential-card:hover::before {
+      opacity: 1;
+    }
+
+    .credential-icon {
+      font-size: 2.5rem;
+      margin-bottom: 18px;
+      display: block;
+      color: var(--pink-accent);
+      transition: color 0.3s;
+    }
+
+    .credential-card:hover .credential-icon {
+      color: var(--gold);
+    }
+
+    .credential-name {
+      font-family: 'Philosopher', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .credential-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── BOOK FEATURED SECTION ─── */
+    .book-feature {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-top: 35px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      border-radius: 25px;
+      padding: 40px;
+      transition: all 0.5s ease;
+    }
+
+    .book-feature:hover {
+      border-color: var(--warm-gold);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.1);
+    }
+
+    .book-feature img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      transition: transform 0.5s ease;
+    }
+
+    .book-feature:hover img {
+      transform: scale(1.03) rotate(-1deg);
+    }
+
+    .book-info {
+      flex: 1;
+    }
+
+    .book-badge {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dark-bg);
+      background: linear-gradient(135deg, var(--gold), var(--warm-gold));
+      padding: 5px 14px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .book-title {
+      font-family: 'Philosopher', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .book-description {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--text-warm);
+    }
+
+    /* ─── QUOTE BLOCK ─── */
+    .quote-block {
+      text-align: center;
+      padding: 60px 40px;
+      margin: 80px 0;
+      position: relative;
+    }
+
+    .quote-block::before {
+      content: '"';
+      font-family: 'Philosopher', serif;
+      font-size: 12rem;
+      color: rgba(255, 215, 0, 0.08);
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 1;
+    }
+
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-warm);
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    .quote-attr {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--rose);
+    }
+
+    /* ─── HIGHLIGHT BOX ─── */
+    .highlight-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 25px;
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(212, 118, 138, 0.08), rgba(255, 215, 0, 0.05));
+      border-left: 4px solid var(--rose);
+      border-radius: 0 15px 15px 0;
+    }
+
+    .highlight-box.gold-border {
+      border-left-color: var(--gold);
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.06), rgba(212, 118, 138, 0.04));
+    }
+
+    .highlight-box.green-border {
+      border-left-color: var(--spotify-green);
+      background: linear-gradient(135deg, rgba(29, 185, 84, 0.06), rgba(255, 215, 0, 0.03));
+    }
+
+    .highlight-icon {
+      font-size: 3rem;
+      color: var(--rose);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .highlight-box.gold-border .highlight-icon {
+      color: var(--gold);
+    }
+
+    .highlight-box.green-border .highlight-icon {
+      color: var(--spotify-green);
+    }
+
+    .highlight-text {
+      font-size: 1.15rem;
+      line-height: 2;
+      color: var(--text-warm);
+    }
+
+    .highlight-text strong {
+      color: var(--gold);
+    }
+
+    /* ─── STATS COUNTER ─── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 30px 15px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      backdrop-filter: blur(15px);
+      transition: all 0.4s ease;
+    }
+
+    .stat-item:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-family: 'Philosopher', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ─── PROJECT FEATURES GRID ─── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .feature-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 30px 25px;
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 50%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      transition: left 0.6s ease;
+      transform: skewX(-20deg);
+    }
+
+    .feature-card:hover::after {
+      left: 150%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.1);
+    }
+
+    .feature-card i {
+      font-size: 2.2rem;
+      color: var(--pink-accent);
+      margin-bottom: 15px;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .feature-card:hover i {
+      color: var(--gold);
+    }
+
+    .feature-card h4 {
+      font-family: 'Philosopher', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── CTA / SUPPORT SECTION ─── */
+    .cta-section {
+      text-align: center;
+      padding: 60px 40px;
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.06), rgba(212, 118, 138, 0.06));
+      border: 1px solid var(--glass-border);
+      border-radius: 30px;
+      backdrop-filter: blur(15px);
+      margin-top: 20px;
+    }
+
+    .cta-title {
+      font-family: 'Philosopher', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .cta-text {
+      font-size: 1.2rem;
+      line-height: 1.9;
+      color: var(--text-warm);
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.4s ease;
+    }
+
+    .cta-btn.primary {
+      background: linear-gradient(135deg, var(--gold), var(--warm-gold));
+      color: var(--dark-bg);
+    }
+
+    .cta-btn.primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+    }
+
+    .cta-btn.secondary {
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .cta-btn.secondary:hover {
+      background: rgba(255, 215, 0, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .cta-btn.kofi {
+      background: linear-gradient(135deg, #ff5e5b, #e74c3c);
+      color: white;
+      border: none;
+    }
+
+    .cta-btn.kofi:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 94, 91, 0.3);
+    }
+
+
+    /* ─── LANGUAGE SELECTOR ─── */
+    .lang-select-wrapper {
+      position: relative;
+    }
+
+    .custom-select-dark {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    .custom-select-dark:hover,
+    .custom-select-dark:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    /* Base language hiding */
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: inline;
+    }
+
+    /* For block-level lang elements */
+    p.lang.active, div.lang.active {
+      display: block;
+    }
+
+    /* Arabic RTL */
+    .rtl-body {
+      direction: rtl;
+    }
+
+    /* ─── DIVIDER ─── */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+      margin: 60px 0;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-top: 1px solid var(--glass-border);
+    }
+
+    .social-icons {
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      color: var(--gold);
+      font-size: 1.6rem;
+      margin: 0 12px;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .social-icons a:hover {
+      color: var(--pink-accent);
+      transform: translateY(-4px) scale(1.1);
+    }
+
+    .footer-text {
+      color: #777;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-portrait img {
+        width: 280px;
+        height: 340px;
+      }
+
+      .hero-title {
+        font-size: 2.8rem;
+      }
+
+      .hero-intro {
+        max-width: 100%;
+      }
+
+      .credentials-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .book-feature {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .book-feature img {
+        width: 220px;
+        height: 220px;
+      }
+
+      .highlight-box {
+        flex-direction: column;
+        text-align: center;
+        border-left: none;
+        border-top: 4px solid var(--rose);
+        border-radius: 0 0 15px 15px;
+      }
+
+      .highlight-box.gold-border {
+        border-top-color: var(--gold);
+      }
+
+      .highlight-box.green-border {
+        border-top-color: var(--spotify-green);
+      }
+
+      .quote-text {
+        font-size: 1.5rem;
+      }
+
+      .top-nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="bg-canvas"></div>
+  <div class="floating-particles" id="particles"></div>
+
+  <!-- Navigation -->
+  <nav class="top-nav">
+    <a href="../index.html">
+      <img src="../logopazares.png" alt="Paz Arés Osset Logo" class="logo-img">
+    </a>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <div class="lang-select-wrapper">
+        <select id="language-select" class="custom-select-dark">
+          <option value="es" selected>🇪🇸 Español</option>
+          <option value="en">🇺🇸 English</option>
+          <option value="fr">🇫🇷 Français</option>
+          <option value="it">🇮🇹 Italiano</option>
+          <option value="de">🇩🇪 Deutsch</option>
+          <option value="pt">🇵🇹 Português</option>
+          <option value="ru">🇷🇺 Русский</option>
+          <option value="ar">🇦🇪 العربية</option>
+          <option value="zh">🇨🇳 中文</option>
+          <option value="ja">🇯🇵 日本語</option>
+        </select>
+      </div>
+      <a href="../index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        <span class="lang es active">Volver al inicio</span>
+        <span class="lang en">Back to home</span>
+        <span class="lang fr">Retour à l'accueil</span>
+        <span class="lang it">Torna all'inizio</span>
+        <span class="lang de">Zurück</span>
+        <span class="lang pt">Voltar</span>
+        <span class="lang ru">На главную</span>
+        <span class="lang ar">العودة</span>
+        <span class="lang zh">返回</span>
+        <span class="lang ja">ホームへ</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-portrait">
+        <img src="paz_real_portrait.jpg" alt="Paz Arés Osset — Retrato">
+      </div>
+      <div class="hero-text">
+        <div class="hero-kicker">
+          <span class="lang es active">Introducción</span>
+          <span class="lang en">Introduction</span>
+          <span class="lang fr">Introduction</span>
+          <span class="lang it">Introduzione</span>
+          <span class="lang de">Einführung</span>
+          <span class="lang pt">Introdução</span>
+          <span class="lang ru">Введение</span>
+          <span class="lang ar">مقدمة</span>
+          <span class="lang zh">介绍</span>
+          <span class="lang ja">紹介</span>
+        </div>
+        <h1 class="hero-title">Paz Arés Osset</h1>
+        <p class="hero-subtitle">
+          <span class="lang es active">Poeta · Pintora · Escritora · Maestra</span>
+          <span class="lang en">Poet · Painter · Writer · Teacher</span>
+          <span class="lang fr">Poète · Peintre · Écrivaine · Enseignante</span>
+          <span class="lang it">Poetessa · Pittrice · Scrittrice · Maestra</span>
+          <span class="lang de">Dichterin · Malerin · Schriftstellerin · Lehrerin</span>
+          <span class="lang pt">Poetisa · Pintora · Escritora · Mestra</span>
+          <span class="lang ru">Поэт · Художник · Писатель · Учитель</span>
+          <span class="lang ar">شاعرة · رسامة · كاتبة · معلمة</span>
+          <span class="lang zh">诗人 · 画家 · 作家 · 教师</span>
+          <span class="lang ja">詩人 · 画家 · 作家 · 教師</span>
+        </p>
+        <div class="hero-intro">
+          <p class="lang es active">María Paz Arés Osset, nacida en <strong>Sidi Ifni</strong>, es mucho más que una artista: es una <strong>alquimista del verbo y del espíritu</strong>, envuelta en un halo de misticismo y belleza. Su búsqueda trascendental la ha llevado a explorar religiones y culturas, tejiendo un arte que es lienzo y poema de la unidad humana.</p>
+          <p class="lang en">María Paz Arés Osset, born in <strong>Sidi Ifni</strong>, is much more than an artist: she is an <strong>alchemist of words and spirit</strong>, wrapped in an aura of mysticism and beauty. Her transcendental quest has led her to explore religions and cultures, weaving an art that is both canvas and poem of human unity.</p>
+          <p class="lang fr">María Paz Arés Osset, née à <strong>Sidi Ifni</strong>, est bien plus qu'une artiste : c'est une <strong>alchimiste du verbe et de l'esprit</strong>, enveloppée d'un halo de mysticisme et de beauté. Sa quête transcendantale l'a amenée à explorer les religions et les cultures, tissant un art qui est à la fois toile et poème de l'unité humaine.</p>
+          <p class="lang it">María Paz Arés Osset, nata a <strong>Sidi Ifni</strong>, è molto più di un'artista: è un'<strong>alchimista del verbo e dello spirito</strong>, avvolta in un alone di misticismo e bellezza. La sua ricerca trascendentale l'ha portata a esplorare religioni e culture, tessendo un'arte che è tela e poema dell'unità umana.</p>
+          <p class="lang de">María Paz Arés Osset, geboren in <strong>Sidi Ifni</strong>, ist weit mehr als eine Künstlerin: Sie ist eine <strong>Alchemistin des Wortes und des Geistes</strong>, umhüllt von einem Hauch von Mystik und Schönheit. Ihre transzendentale Suche hat sie dazu geführt, Religionen und Kulturen zu erforschen und eine Kunst zu schaffen, die Leinwand und Gedicht der menschlichen Einheit zugleich ist.</p>
+          <p class="lang pt">María Paz Arés Osset, nascida em <strong>Sidi Ifni</strong>, é muito más do que uma artista: é uma <strong>alquimista do verbo e do espírito</strong>, envolta numa aura de misticismo e beleza. A sua busca transcendental levou-a a explorar religiões e culturas, tecendo uma arte que é tela e poema da unidade humana.</p>
+          <p class="lang ru">Мария Пас Арес Оссет, родившаяся в <strong>Сиди-Ифни</strong>, — это гораздо больше, чем просто художница: она — <strong>алхимик слова и духа</strong>, окутанная аурой мистицизма и красоты. Её трансцендентальный поиск привёл её к исследованию религий и культур, создавая искусство, которое является холстом и поэмой человеческого единства.</p>
+          <p class="lang ar">ماريا باث أريس أوسيت، المولودة في <strong>سيدي إفني</strong>، هي أكثر من مجرد فنانة: إنها <strong>خيميائية الكلمة والروح</strong>، محاطة بهالة من الروحانية والجمال. قادها بحثها المتسامي إلى استكشاف الأديان والثقافات، لتنسج فناً يجمع بين اللوحة والقصيدة في وحدة إنسانية.</p>
+          <p class="lang zh">玛丽亚·帕斯·阿雷斯·奥赛特出生于<strong>西迪伊夫尼</strong>，她不仅仅是一位艺术家：她是<strong>文字与灵魂的炼金术士</strong>，笼罩在神秘与美丽的光环中。她的超越性探索引领她探索宗教与文化，编织出一种既是画布又是诗歌的人类统一的艺术。</p>
+          <p class="lang ja">マリア・パス・アレス・オセットは<strong>シディ・イフニ</strong>で生まれ、単なるアーティストをはるかに超えた存在です。彼女は<strong>言葉と精神の錬金術師</strong>であり、神秘と美のオーラに包まれています。その超越的な探求は宗教と文化の探究へと導き、人間の統一のキャンバスであり詩でもある芸術を紡いでいます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTENT ═══════════ -->
+  <div class="content-wrapper">
+    <!-- ── Poesía ── -->
+    <div class="section-block" id="poesia">
+      <div class="section-label"><span class="lang es active">El alma del proyecto</span><span class="lang en">The soul of the project</span><span class="lang fr">L'âme du projet</span><span class="lang it">L'anima del progetto</span><span class="lang de">Die Seele des Projekts</span><span class="lang pt">A alma do projeto</span><span class="lang ru">Душа проекта</span><span class="lang ar">روح المشروع</span><span class="lang zh">项目的灵魂</span><span class="lang ja">プロジェクトの魂</span></div>
+      <h2 class="section-title"><span class="lang es active">La poesía como voz del alma</span><span class="lang en">Poetry as the voice of the soul</span><span class="lang fr">La poésie, voix de l'âme</span><span class="lang it">La poesia come voce dell'anima</span><span class="lang de">Poesie als Stimme der Seele</span><span class="lang pt">A poesia como voz da alma</span><span class="lang ru">Поэзия как голос души</span><span class="lang ar">الشعر صوت الروح</span><span class="lang zh">诗歌——灵魂之声</span><span class="lang ja">詩——魂の声</span></h2>
+      <div class="section-text">
+        <p class="lang es active">Si hay algo que define a Paz Arés Osset como artista es su <em>voz poética</em>. Sus versos no son simples composiciones literarias: son destellos de luz que buscan alcanzar el corazón de quien los lee, sin importar su idioma, su cultura o su rincón del mundo. Cada poema es un acto de generosidad, una mano tendida al alma del lector.<br><br>Su catálogo poético abarca más de <em>treinta poemas</em> que exploran el amor, la naturaleza, la espiritualidad, la denuncia social y la paz universal: desde el intimismo de <em>«Hueles a Amor»</em> hasta la fuerza de <em>«Grito por la Paz»</em>, pasando por la contemplación mística de <em>«Sinfonía de la Naturaleza»</em> o la ternura desgarradora de <em>«Llanto de los Niños»</em>.</p>
+<p class="lang en">If there is one thing that defines Paz Arés Osset as an artist, it is her <em>poetic voice</em>. Her verses are not simple literary compositions: they are flashes of light that seek to reach the heart of those who read them, regardless of their language, culture, or corner of the world. Each poem is an act of generosity, a hand extended to the reader's soul.<br><br>Her poetic catalog includes more than <em>thirty poems</em> exploring love, nature, spirituality, social protest, and universal peace: from the intimacy of <em>"You Smell of Love"</em> to the strength of <em>"Cry for Peace"</em>, through the mystical contemplation of <em>"Nature's Symphony"</em> or the heart-wrenching tenderness of <em>"Cry of the Children"</em>.</p>
+<p class="lang fr">S'il est une chose qui définit Paz Arés Osset en tant qu'artiste, c'est sa <em>voix poétique</em>. Ses vers ne sont pas de simples compositions littéraires : ce sont des éclats de lumière qui cherchent à atteindre le cœur de ceux qui les lisent, quelle que soit leur langue, leur culture ou leur coin du monde. Chaque poème est un acte de générosité, une main tendue vers l'âme du lecteur.<br><br>Son catalogue poétique comprend plus de <em>trente poèmes</em> explorant l'amour, la nature, la spiritualité, la protestation sociale et la paix universelle : de l'intimité de <em>« Tu sens l'Amour »</em> à la puissance du <em>« Cri pour la Paix »</em>, en passant par la contemplation mystique de la <em>« Symphonie de la Nature »</em> ou la tendresse déchirante du <em>« Cri des Enfants »</em>.</p>
+<p class="lang it">Se c'è una cosa che definisce Paz Arés Osset come artista, è la sua <em>voce poetica</em>. I suoi versi non sono semplici composizioni letterarie: sono sprazzi di luce che cercano di raggiungere il cuore di chi li legge, indipendentemente dalla lingua, dalla cultura o dall'angolo di mondo in cui si trova. Ogni poesia è un atto di generosità, una mano tesa all'anima del lettore.<br><br>Il suo catalogo poetico comprende più di <em>trenta poesie</em> che esplorano l'amore, la natura, la spiritualità, la protesta sociale e la pace universale: dall'intimità di <em>«Profumi d'Amore»</em> alla forza di <em>«Grido per la Pace»</em>, passando per la contemplazione mistica della <em>«Sinfonia della Natura»</em> o la tenerezza straziante del <em>«Pianto dei Bambini»</em>.</p>
+<p class="lang de">Wenn es etwas gibt, das Paz Arés Osset als Künstlerin definiert, dann ist es ihre <em>poetische Stimme</em>. Ihre Verse sind keine einfachen literarischen Kompositionen: Sie sind Lichtblitze, die das Herz derer erreichen wollen, die sie lesen, ungeachtet ihrer Sprache, ihrer Kultur oder ihres Ortes auf der Welt. Jedes Gedicht ist ein Akt der Großzügigkeit, eine dem Leser gereichte Hand.<br><br>Ihr lyrisches Werk umfasst mehr als <em>dreißig Gedichte</em>, die Liebe, Natur, Spiritualität, soziale Proteste und den universellen Frieden erforschen: von der Intimität von <em>„Du duftest nach Liebe“</em> bis zur Kraft vom <em>„Ruf nach Frieden“</em>, über die mystische Betrachtung der <em>„Sinfonie der Natur“</em> bis hin zur herzzerreißenden Zärtlichkeit vom <em>„Klagen der Kinder“</em>.</p>
+<p class="lang pt">Se há algo que define Paz Arés Osset como artista é a sua <em>voz poética</em>. Os seus versos não são meras composições literárias: são clarões de luz que procuram alcançar o coração de quem os lê, independentemente da sua língua, cultura ou canto do mundo. Cada poema é um ato de generosidade, uma mão estendida à alma do leitor.<br><br>O seu catálogo poético inclui mais de <em>trinta poemas</em> que exploram o amor, a natureza, a espiritualidade, a denúncia social e a paz universal: desde o intimismo de <em>«Cheiras a Amor»</em> à força do <em>«Grito pela Paz»</em>, passando pela contemplação mística da <em>«Sinfonia da Natureza»</em> ou pela ternura dilacerante do <em>«Choro das Crianças»</em>.</p>
+<p class="lang ru">Если и есть что-то, что определяет Пас Арес Оссет как художника, так это её <em>поэтический голос</em>. Её стихи — это не просто литературные произведения: это вспышки света, которые стремятся достичь сердца каждого читателя, независимо от его языка, культуры или уголка мира. Каждое стихотворение — это акт щедрости, рука, протянутая к душе читателя.<br><br>Её поэтический каталог включает более <em>тридцати стихотворений</em>, посвященных любви, природе, духовности, социальному протесту и всеобщему миру: от интима <em>«Ты пахнешь любовью»</em> до силы <em>«Крика о мире»</em>, через мистическое созерцание <em>«Симфонии природы»</em> или душераздирающую нежность <em>«Плача детей»</em>.</p>
+<p class="lang ar">إذا كان هناك شيء يميز باث أريس أوسيت كفنانة، فهو <em>صوتها الشعري</em>. قصائدها ليست مجرد مؤلفات أدبية بسيطة: إنها ومضات من الضوء تسعى للوصول إلى قلب من يقرأها، بغض النظر عن لغتهم أو ثقافتهم أو مكانهم في العالم. كل قصيدة هي عمل من أعمال الكرم، ويد ممدودة لروح القارئ.<br><br>يتضمن كتالوجها الشعري أكثر من <em>ثلاثين قصيدة</em> تستكشف الحب والطبيعة والروحانية والاحتجاج الاجتماعي والسلام العالمي: من حميمية <em>«رائحة الحب»</em> إلى قوة <em>«صرخة أجل السلام»</em>، مروراً بالتأمل الصوفي في <em>«سمفونية الطبيعة»</em> أو الحنان المفجع في <em>«بكاء الأطفال»</em>.</p>
+<p class="lang zh">如果有一件事定义了作为艺术家的帕斯·阿雷斯·奥赛特，那就是她的<em>诗意之声</em>。她的诗句不仅仅是简单的文学创作：它们是闪耀的光芒，旨在触及读者的心灵，无论他们的语言、文化或身处世界哪个角落。每一首诗都是一种慷慨的行为，是伸向读者灵魂的一只手。<br><br>她的诗歌目录包括<em>三十多首诗</em>，探索爱情、自然、灵性、社会抗议和普遍和平：从《你闻起来像爱》的亲密，到《为和平呐喊》的力量，经由《大自然的交响曲》的神秘冥想，或是《孩子们的哭泣》中令人心碎的温柔。</p>
+<p class="lang ja">パズ・アレス・オセットをアーティストとして定義するものがあるとするならば、それは彼女の<em>詩的な声</em>です。彼女の詩は単なる文学的創作ではありません。それらは、言語、文化、世界のどこにいるかに関わらず、読む人の心に届こうとする光の輝きなのです。各詩は寛大さの行為であり、読者の魂に差し伸べられた手なのです。<br><br>彼女の詩のカタログには、愛、自然、精神性、社会への訴え、そして世界の平和を探求する<em>30以上の詩</em>が含まれています。親しみやすい『愛の香り』から、力強い『平和への叫び』、神秘的な瞑想の『自然の交響曲』、そして心を打つ誠実な『子供たちの嘆き』まで多岐にわたります。</p>
+
+      </div>
+      <div class="highlight-box">
+        <i class="fas fa-feather-alt highlight-icon"></i>
+        <div class="highlight-text">
+          <p class="lang es active">Cada poema ha sido <strong>traducido a más de diez idiomas</strong> para que el mensaje de Paz pueda llegar a cualquier persona del planeta.</p>
+          <p class="lang en">Each poem has been <strong>translated into more than ten languages</strong> so that Paz's message can reach anyone on the planet.</p>
+          <p class="lang fr">Chaque poème a été traduit dans plus de dix langues pour que le message de Paz puisse atteindre n'importe qui sur la planète.</p>
+          <p class="lang it">Ogni poesia è stata tradotta in più di dieci lingue affinché il messaggio di Paz possa raggiungere chiunque sul pianeta.</p>
+          <p class="lang de">Jedes Gedicht wurde in mehr als zehn Sprachen übersetzt, damit die Botschaft von Paz jeden Menschen auf dem Planeten erreichen kann.</p>
+          <p class="lang pt">Cada poema foi traduzido para mais de dez idiomas para que a mensagem de Paz possa chegar a qualquer pessoa do planeta.</p>
+          <p class="lang ru">Каждое стихотворение было переведено на более чем десять языков, чтобы послание Пас могло достичь любого человека на планете.</p>
+          <p class="lang ar">تمت ترجمة كل قصيدة إلى أكثر من عشر لغات حتى يمكن لرسالة باث أن تصل إلى أي شخص على هذا الكوكب.</p>
+          <p class="lang zh">每一首诗都已被翻译成十多种语言，让帕斯的信息能够传达到地球上的每一个人。</p>
+          <p class="lang ja">各詩は、パズのメッセージが地球上のすべての人に届くよう、10以上の言語に翻訳されています。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ── Música ── -->
+    <div class="section-block" id="musica">
+      <div class="section-label"><span class="lang es active">Innovación artística</span><span class="lang en">Artistic innovation</span><span class="lang fr">Innovation artistique</span><span class="lang it">Innovazione artistica</span><span class="lang de">Künstlerische Innovation</span><span class="lang pt">Inovação artística</span><span class="lang ru">Художественные инновации</span><span class="lang ar">الابتكار الفني</span><span class="lang zh">艺术创新</span><span class="lang ja">芸術的革新</span></div>
+      <h2 class="section-title"><span class="lang es active">Los poemas hechos música</span><span class="lang en">Poems turned into music</span><span class="lang fr">Les poèmes faits musique</span><span class="lang it">Le poesie diventano musica</span><span class="lang de">Gedichte werden zu Musik</span><span class="lang pt">Os poemas feitos música</span><span class="lang ru">Стихи, ставшие музыкой</span><span class="lang ar">القصائد تتحول إلى موسيقى</span><span class="lang zh">诗歌化作音乐</span><span class="lang ja">音楽になった詩</span></h2>
+      <div class="section-text">
+        <p class="lang es active">Convertir la poesía en <em>experiencia musical</em> es uno de los pilares de este proyecto. Gracias a la tecnología y al talento de compositores, los versos de Paz han cobrado una nueva dimensión sonora. No se trata solo de leer un poema, sino de sumergirse en su atmósfera a través de melodías que potencian su mensaje emocional.<br><br>Cada canción es una pieza única que respeta la métrica y el sentimiento original, permitiendo que la palabra escrita vuele más alto a través de las notas.</p>
+<p class="lang en">Turning poetry into a <em>musical experience</em> is one of the pillars of this project. Thanks to technology and the talent of composers, Paz's verses have taken on a new sonic dimension. It is not just about reading a poem, but about immersing oneself in its atmosphere through melodies that enhance its emotional message.<br><br>Each song is a unique piece that respects the original meter and feeling, allowing the written word to fly higher through the notes.</p>
+<p class="lang fr">Transformer la poésie en <em>expérience musicale</em> est l'un des piliers de ce projet. Grâce à la technologie et au talent des compositeurs, les vers de Paz ont pris une nouvelle dimension sonore. Il ne s'agit pas seulement de lire un poème, mais de plonger dans son atmosphère à travers des mélodies qui renforcent son message émotionnel.<br><br>Chaque chanson est une pièce unique qui respecte la métrique et le sentiment originaux, permettant à la parole écrite de s'envoler plus haut grâce aux notes.</p>
+<p class="lang it">Trasformare la poesia in <em>esperienza musicale</em> è uno dei pilastri di questo progetto. Grazie alla tecnologia e al talento dei compositori, i versi di Paz hanno assunto una nuova dimensione sonora. Non si tratta solo di leggere una poesia, ma di immergersi nella sua atmosfera attraverso melodie che ne esaltano il messaggio emotivo.<br><br>Ogni canzone è un pezzo unico che rispetta la metrica e il sentimento originale, permettendo alla parola scritta di volare più in alto attraverso le note.</p>
+<p class="lang de">Poesie in ein <em>musikalisches Erlebnis</em> zu verwandeln, ist eine der Säulen dieses Projekts. Dank der Technologie und des Talents von Komponisten haben die Verse von Paz eine neue klangliche Dimension erhalten. Es geht nicht nur darum, ein Gedicht zu lesen, sondern in seine Atmosphäre durch Melodien einzutauchen, die seine emotionale Botschaft verstärken.<br><br>Jedes Lied ist ein Unikat, das das ursprüngliche Metrum und Gefühl respektiert und dem geschriebenen Wort erlaubt, durch die Noten höher zu fliegen.</p>
+<p class="lang pt">Converter a poesia em <em>experiência musical</em> é um dos pilares deste projeto. Graças à tecnologia e ao talento de compositores, os versos de Paz ganharam uma nova dimensão sonora. Não se trata apenas de ler um poema, mas de mergulhar na sua atmosfera através de melodias que potenciam a sua mensagem emocional.<br><br>Cada canção é uma peça única que respeita a métrica e o sentimento original, permitindo que a palavra escrita voe mais alto através das notas.</p>
+<p class="lang ru">Превращение поэзии в <em>музыкальный опыт</em> — одна из опор этого проекта. Благодаря технологиям и таланту композиторов стихи Пас обрели новое звуковое измерение. Речь идет не просто о чтении стихотворения, а о погружении в его атмосферу через мелодии, усиливающие его эмоциональный посыл.<br><br>Каждая песня — это уникальное произведение, уважающее оригинальный размер и чувство, позволяющее написанному слову лететь выше через ноты.</p>
+<p class="lang ar">تحويل الشعر إلى <em>تجربة موسيقية</em> هو أحد ركائز هذا المشروع. بفضل التكنولوجيا وموهبة الملحنين، اتخذت قصائد باث بعداً صوتياً جديداً. الأمر لا يقتصر فقط على قراءة قصيدة، بل يتعلق بالانغماس في أجوائها من خلال ألحان تعزز رسالتها العاطفية.<br><br>كل أغنية هي قطعة فريدة تحترم الميزان الشعري والشعور الأصلي، مما يسمح للكلمة المكتوبة بالتحليق عالياً عبر النوتات الموسيقية.</p>
+<p class="lang zh">将诗歌转化为<em>音乐体验</em>是该项目的支柱之一。得益于技术和作曲家的天赋，帕斯的诗句呈现出了全新的声音维度。这不仅仅是阅读一首诗，更是通过增强其情感信息的旋律，让自己沉浸在其氛围中。<br><br>每首歌都是一个独特的作品，尊重原始的节拍和感受，让书面语言通过音符飞得更高。</p>
+<p class="lang ja">詩を<em>音楽体験</em>に変えることは、このプロジェクトの柱の一つです。テクノロジーと作曲家の才能のおかげで、パズの詩は新しい音の次元を帯びるようになりました。単に詩を読むだけでなく、その感情的なメッセージを高めるメロディーを通して、その雰囲気に没頭することなのです。<br><br>各曲は、オリジナルの韻律と感情を尊重したユニークな作品であり、書かれた言葉が音符を通してより高く飛ぶことを可能にしています。</p>
+
+      </div>
+      <div class="highlight-box green-border">
+        <i class="fab fa-spotify highlight-icon"></i>
+        <div class="highlight-text">
+          <p class="lang es active">Disfruta de las composiciones originales en <strong>Spotify</strong>.</p>
+          <p class="lang en">Enjoy original compositions on <strong>Spotify</strong>.</p>
+          <p class="lang fr">Profitez des compositions originales sur <strong>Spotify</strong>.</p>
+          <p class="lang it">Goditi le composizioni originali su <strong>Spotify</strong>.</p>
+          <p class="lang de">Genießen Sie die Originalkompositionen auf <strong>Spotify</strong>.</p>
+          <p class="lang pt">Desfruta das composições originais no <strong>Spotify</strong>.</p>
+          <p class="lang ru">Наслаждайтесь оригинальными композициями в <strong>Spotify</strong>.</p>
+          <p class="lang ar">استمتع بالمؤلفات الأصلية على <strong>Spotify</strong>.</p>
+          <p class="lang zh">在 <strong>Spotify</strong> 上欣赏原创作品。</p>
+          <p class="lang ja"><strong>Spotify</strong>でオリジナル曲をお楽しみください。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ── Tecnología ── -->
+    <div class="section-block" id="tecnologia">
+      <div class="section-label"><span class="lang es active">Tecnología al servicio del arte</span><span class="lang en">Technology at the service of art</span><span class="lang fr">La technologie au service de l'art</span><span class="lang it">La tecnologia al servizio dell'arte</span><span class="lang de">Technologie im Dienste der Kunst</span><span class="lang pt">Tecnologia ao serviço da arte</span><span class="lang ru">Технологии на службе искусства</span><span class="lang ar">التكنولوجيا في خدمة الفن</span><span class="lang zh">技术服务于艺术</span><span class="lang ja">芸術に役立つテクノロジー</span></div>
+      <h2 class="section-title"><span class="lang es active">Difusión global</span><span class="lang en">Global diffusion</span><span class="lang fr">Diffusion mondiale</span><span class="lang it">Diffusione globale</span><span class="lang de">Globale Verbreitung</span><span class="lang pt">Difusão global</span><span class="lang ru">Глобальное распространение</span><span class="lang ar">الانتشار العالمي</span><span class="lang zh">全球传播</span><span class="lang ja">グローバルな普及</span></h2>
+      <div class="section-text">
+        <p class="lang es active">Vivimos en una era donde el arte y la técnica deben caminar de la mano. Este sitio web es una muestra de ello: el uso de <em>inteligencia artificial</em> para la traducción, la generación de visuales y la composición musical nos permite derribar las barreras que tradicionalmente limitaban la llegada del mensaje poético.<br><br>Nuestra web es un ecosistema vivo donde el misticismo de la obra de Paz se encuentra con las herramientas más avanzadas del siglo XXI para crear algo totalmente nuevo.</p>
+<p class="lang en">We live in an era where art and technology must walk hand in hand. This website is a testament to that: the use of <em>artificial intelligence</em> for translation, visuals generation, and musical composition allows us to tear down the barriers that traditionally limited the reach of the poetic message.<br><br>Our website is a living ecosystem where the mysticism of Paz's work meets the most advanced tools of the 21rd century to create something completely new.</p>
+<p class="lang fr">Nous vivons dans une époque où l'art et la technique doivent marcher main dans la main. Ce site web en est la preuve : l'utilisation de <em>l'intelligence artificielle</em> pour la traduction, la génération de visuels et la composition musicale nous permet d'abattre les barrières qui limitaient traditionnellement la portée du message poétique.<br><br>Notre site web est un écosystème vivant où le mysticisme de l'œuvre de Paz rencontre les outils les plus avancés du XXIe siècle pour créer quelque chose de totalement nouveau.</p>
+<p class="lang it">Viviamo in un'epoca in cui arte e tecnologia devono camminare di pari passo. Questo sito web ne è la prova: l'uso dell'<em>intelligenza artificiale</em> per la traduzione, la generazione di immagini e la composizione musicale ci permette di abbattere le barriere che tradizionalmente limitavano la portata del messaggio poetico.<br><br>Il nostro sito web è un ecosistema vivente in cui il misticismo dell'opera di Paz incontra gli strumenti più avanzati del XXI secolo per creare qualcosa di completamente nuovo.</p>
+<p class="lang de">Wir leben in einer Ära, in der Kunst und Technik Hand in Hand gehen müssen. Diese Website ist ein Beweis dafür: Der Einsatz von <em>künstlicher Intelligenz</em> für Übersetzungen, die Erstellung von Visualisierungen und die musikalische Komposition ermöglicht es uns, Barrieren abzubauen, die traditionell die Reichweite der poetischen Botschaft begrenzten.<br><br>Unsere Website ist ein lebendiges Ökosystem, in dem die Mystik von Paz' Werk auf die fortschrittlichsten Werkzeuge des 21. Jahrhunderts trifft, um etwas völlig Neues zu schaffen.</p>
+<p class="lang pt">Vivemos numa era onde a arte e a técnica devem caminhar de mãos dadas. Este sítio web é uma amostra disso: o uso de <em>inteligência artificial</em> para a tradução, a geração de visuais e a composição musical permite-nos derrubar as barreiras que tradicionalmente limitavam o alcance da mensagem poética.<br><br>A nossa web é um ecossistema vivo onde o misticismo da obra de Paz se encontra com as ferramentas mais avançadas do século XXI para criar algo totalmente novo.</p>
+<p class="lang ru">Мы живем в эпоху, когда искусство и техника должны идти рука об руку. Этот веб-сайт — тому подтверждение: использование <em>искусственного интеллекта</em> для перевода, генерации визуальных эффектов и музыкальной композиции позволяет нам разрушить барьеры, которые традиционно ограничивали охват поэтического послания.<br><br>Наш сайт — это живая экосистема, где мистицизм работ Пас встречается с самыми передовыми инструментами XXI века для создания чего-то совершенно нового.</p>
+<p class="lang ar">نحن نعيش في عصر يجب أن يسير فيه الفن والتقنية جنباً إلى جنب. هذا الموقع هو دليل على ذلك: استخدام <em>الذكاء الاصطناعي</em> للترجمة وتوليد المرئيات والتأليف الموسيقي يتيح لنا هدم الحواجز التي كانت تحد تقليدياً من وصول الرسالة الشعرية.<br><br>موقعنا هو نظام بيئي حي حيث يلتقي مذهب الصوفية في أعمال باث مع أكثر الأدوات تقدماً في القرن الحادي والعشرين لإنشاء شيء جديد تماماً.</p>
+<p class="lang zh">我们生活在一个艺术与技术必须携手并进的时代。这个网站就证明了这一点：利用<em>人工智能</em>进行翻译、视觉生成和音乐创作，使我们能够打破传统上限制诗歌信息传播的障碍。<br><br>我们的网站是一个充满活力的生态系统，在这里，帕斯作品的神秘密义与21世纪最先进的工具相结合，创造出全新的东西。</p>
+<p class="lang ja">芸術と技術が手を取り合って歩まなければならない時代に私たちは生きています。このウェブサイトはその証です。翻訳、ビジュアル生成、作曲に<em>人工知能</em>を使用することで、伝統的に詩的なメッセージの広がりを制限していた障壁を打ち破ることができます。<br><br>私たちのウェブサイトは、パズの作品の神秘性が21世紀の最先端ツールと出会い、全く新しいものを創造する生きたエコシステムなのです。</p>
+
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-brain"></i>
+          <h4><span class="lang es active">Impacto social</span><span class="lang en">Social impact</span><span class="lang fr">Impact social</span><span class="lang it">Impatto sociale</span><span class="lang de">Soziale Wirkung</span><span class="lang pt">Impacto social</span><span class="lang ru">Социальное воздействие</span><span class="lang ar">الأثر الاجتماعي</span><span class="lang zh">社会影响</span><span class="lang ja">社会的影響</span></h4>
+          <p class="lang es active">Llegamos a personas de cualquier cultura eliminando las barreras del idioma.</p>
+          <p class="lang en">We reach people of any culture by eliminating language barriers.</p>
+          <p class="lang fr">Nous atteignons des personnes de n'importe quelle culture en éliminant les barrières linguistiques.</p>
+          <p class="lang it">Raggiungiamo persone di ogni cultura eliminando le barriere linguistiche.</p>
+          <p class="lang de">Wir erreichen Menschen jeder Kultur, indem wir Sprachbarrieren abbauen.</p>
+          <p class="lang pt">Chegamos a pessoas de qualquer cultura eliminando as barreiras linguísticas.</p>
+          <p class="lang ru">Мы охватываем людей любой культуры, устраняя языковые барьеры.</p>
+          <p class="lang ar">نصل إلى الناس من أي ثقافة من خلال القضاء على الحواجز اللغوية.</p>
+          <p class="lang zh">我们通过消除语言障碍来接触任何文化的人群。</p>
+          <p class="lang ja">言語の壁を取り除くことで、あらゆる文化の人々にリーチします。</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-universal-access"></i>
+          <h4><span class="lang es active">Trascendencia universal</span><span class="lang en">Universal transcendence</span><span class="lang fr">Transcendance universelle</span><span class="lang it">Trascendenza universale</span><span class="lang de">Universelle Transzendenz</span><span class="lang pt">Transcendência universal</span><span class="lang ru">Всемирная трансцендентность</span><span class="lang ar">السمو العالمي</span><span class="lang zh">普遍超越</span><span class="lang ja">普遍的な超越</span></h4>
+          <p class="lang es active">Un mensaje de unidad que utiliza la tecnología para ser escuchado en todo el mundo.</p>
+          <p class="lang en">A message of unity that uses technology to be heard around the world.</p>
+          <p class="lang fr">Un message d'unité qui utilise la technologie pour être entendu dans le monde entier.</p>
+          <p class="lang it">Un messaggio di unità che usa la tecnologia per essere ascoltato in tutto il mondo.</p>
+          <p class="lang de">Eine Botschaft der Einheit, die Technologie nutzt, um auf der ganzen Welt gehört zu werden.</p>
+          <p class="lang pt">Uma mensagem de unidade que utiliza a tecnologia para ser ouvida em todo o mundo.</p>
+          <p class="lang ru">Послание единства, использующее технологии, чтобы его услышали во всем мире.</p>
+          <p class="lang ar">رسالة وحدة تستخدم التكنولوجيا ليتم سماعها في جميع أنحاء العالم.</p>
+          <p class="lang zh">一个利用技术让世界各地都能听到团结的信息。</p>
+          <p class="lang ja">テクノロジーを駆使して世界中に届ける、結束のメッセージ。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ── Experiencia Interactiva ── -->
+    <div class="section-block" id="interactivo">
+      <div class="section-label">
+        <span class="lang es active">Arte en movimiento</span>
+        <span class="lang en">Art in motion</span>
+        <span class="lang fr">L'art en mouvement</span>
+        <span class="lang ja">動く芸術</span>
+      </div>
+      <h2 class="section-title">
+        <span class="lang es active">Una experiencia multisensorial</span>
+        <span class="lang en">A multisensory experience</span>
+        <span class="lang fr">Une expérience multisensorielle</span>
+        <span class="lang ja">多感覚体験</span>
+      </h2>
+      <div class="section-text">
+        <p class="lang es active">Este no es un sitio web convencional; es un <strong>viaje espiritual</strong> potenciado por la narrativa visual. Cada poema se acompaña de <em>cómics generados por IA</em> que interpretan el alma de los versos, permitiendo que el lector no solo lea, sino que vea y sienta la profundidad del mensaje.<br><br>Desde los paisajes oníricos de África hasta las reflexiones filosóficas más profundas, el arte de Paz se expande en este ecosistema digital para tocar todas las sensibilidades.</p>
+        <p class="lang en">This is not a conventional website; it is a <strong>spiritual journey</strong> enhanced by visual storytelling. Each poem is accompanied by <em>AI-generated comics</em> that interpret the soul of the verses, allowing the reader not just to read, but to see and feel the depth of the message.<br><br>From the dreamlike landscapes of Africa to the deepest philosophical reflections, Paz's art expands in this digital ecosystem to touch all sensibilities.</p>
+        <p class="lang fr">Ceci n'est pas un site web conventionnel ; c'est un <strong>voyage spirituel</strong> enrichi par la narration visuelle. Chaque poème est accompagné de <em>bandes dessinées générées par IA</em> qui interprètent l'âme des vers, permettant au lecteur non seulement de lire, mais de voir et de ressentir la profondeur du message.<br><br>Des paysages oniriques de l'Afrique aux réflexions philosophiques les plus profondes, l'art de Paz s'épanouit dans cet écosystème numérique pour toucher toutes les sensibilités.</p>
+        <p class="lang ja">これは単なるウェブサイトではありません。視覚的なストーリーテリングによって強化された<strong>精神的な旅</strong>なのです。各詩には、詩の魂を解釈する<em>AI生成のコミック</em>が添えられており、読者が単に読むだけでなく、メッセージの深さを見て感じることができます。<br><br>アフリカの夢のような風景から最も深い哲学的考察まで、パズの芸術はこのデジタル・エコシステムの中で拡大し、あらゆる感性に触れます。</p>
+      </div>
+      <div class="features-grid">
+         <div class="feature-card">
+            <i class="fas fa-book-open"></i>
+            <h4><span class="lang es active">Cómics Narrativos</span><span class="lang en">Narrative Comics</span></h4>
+            <p class="lang es active">Visualizamos la esencia de cada poema a través de viñetas artísticas únicas.</p>
+            <p class="lang en">We visualize the essence of each poem through unique artistic vignettes.</p>
+         </div>
+         <div class="feature-card">
+            <i class="fas fa-volume-up"></i>
+            <h4><span class="lang es active">Paisajes Sonoros</span><span class="lang en">Soundscapes</span></h4>
+            <p class="lang es active">Música compuesta para elevar la vibración de cada palabra escrita.</p>
+            <p class="lang en">Music composed to elevate the vibration of each written word.</p>
+         </div>
+      </div>
+    </div><div class="section-divider"></div>
+
+    <!-- ── Credenciales ── -->
+    
+    <div class="section-divider"></div>
+
+    <!-- ── Laboratorio del Alma ── -->
+    <div class="section-block" id="laboratorio">
+      <div class="section-label">
+        <span class="lang es active">Búsqueda trascendental</span>
+        <span class="lang en">Transcendental search</span>
+        <span class="lang fr">Quête transcendantale</span>
+        <span class="lang ja">超越的な探求</span>
+      </div>
+      <h2 class="section-title">
+        <span class="lang es active">Un laboratorio espiritual humano</span>
+        <span class="lang en">A human spiritual laboratory</span>
+        <span class="lang fr">Un laboratoire spirituel humain</span>
+        <span class="lang ja">人間精神の実験室</span>
+      </h2>
+      <div class="section-text">
+        <p class="lang es active">Paz Arés Osset no se limitó a estudiar la espiritualidad desde la barrera; se convirtió en su propio <strong>ratón de laboratorio</strong> en una audaz "locura de experimentar" diversas religiones. En su búsqueda de la Verdad, llegó a pedir <em>permiso a Jesucristo</em> para explorar otras sendas de fe, y le fue concedido, permitiéndole comprender que, en esencia, todas las grandes filosofías beben de la <strong>misma fuente divina</strong>.<br><br>Su conclusión es un mensaje de paz: las negaciones que las religiones hacen de las demás son una tragedia. Si todas se dieran la mano y se apoyasen, el mundo sería un lugar infinitamente más próspero espiritualmente.</p>
+        <p class="lang en">Paz Arés Osset did not limit herself to studying spirituality from the sidelines; she became her own <strong>laboratory pig</strong> in a bold "madness of experimenting" with various religions. In her search for Truth, she even asked <em>Jesus Christ for permission</em> to explore other paths of faith, and it was granted, allowing her to understand that, in essence, all great philosophies drink from the <strong>same divine source</strong>.<br><br>Her conclusion is a message of peace: the denials that religions make of each other are a tragedy. If they all held hands and supported each other, the world would be an infinitely more spiritually prosperous place.</p>
+        <p class="lang fr">Paz Arés Osset ne s'est pas contentée d'étudier la spiritualité de loin ; elle est devenue son propre <strong>cobaye de laboratoire</strong> dans une audacieuse « folie d'expérimentation » de diverses religions. Dans sa recherche de la Vérité, elle a même demandé <em>la permission à Jésus-Christ</em> d'explorer d'autres chemins de foi, et celle-ci lui a été accordée, lui permettant de comprendre qu'en essence, toutes les grandes philosophies puisent à la <strong>même source divine</strong>.<br><br>Sa conclusion est un message de paix : les dénégations que les religions font les unes des autres sont une tragédie. Si elles se donnaient toutes la main et se soutenaient, le monde serait un endroit infiniment plus prospère sur le plan spirituel.</p>
+        <p class="lang ja">パズ・アレス・オセットは、傍観者として精神性を研究することに留まりませんでした。彼女は、様々な宗教を「実験するという狂気」の中で、自らを<strong>実験台</strong>としたのです。真理を求める中で、彼女は<em>イエス・キリストに</em>他の信仰の道を探索する許可を求め、それが与えられました。それによって、本質的にすべての偉大な哲学は<strong>一つの神聖な源</strong>から汲み出されていることを理解したのです。<br><br>彼女の結論は平和のメッセージです。宗教が互いを否定し合うことは悲劇です。もしすべての宗教が手を取り合い、互いに支え合うことができれば、世界は精神的に無限に豊かな場所になるでしょう。</p>
+      </div>
+      <div class="highlight-box gold-border">
+        <i class="fas fa-hand-holding-heart highlight-icon"></i>
+        <div class="highlight-text">
+          <p class="lang es active">"Si todas las religiones se dieran la mano, el mundo sería mejor y más próspero espiritualmente."</p>
+          <p class="lang en">"If all religions held hands, the world would be better and more spiritually prosperous."</p>
+          <p class="lang fr">« Si toutes les religions se donnaient la main, le monde serait meilleur et plus prospère spirituellement. »</p>
+          <p class="lang ja">「もしすべての宗教が手を取り合えば、世界はより良くなり、精神的により豊かになるでしょう。」</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-block" id="credenciales">
+      <div class="section-label"><span class="lang es active">Formación</span><span class="lang en">Education</span><span class="lang fr">Formation</span><span class="lang it">Formazione</span><span class="lang de">Bildung</span><span class="lang pt">Formação</span><span class="lang ru">Образование</span><span class="lang ar">التعليم</span><span class="lang zh">教育</span><span class="lang ja">教育</span></div>
+      <h2 class="section-title"><span class="lang es active">Credenciales académicas</span><span class="lang en">Academic credentials</span><span class="lang fr">Titres académiques</span><span class="lang it">Titoli accademici</span><span class="lang de">Akademische Qualifikationen</span><span class="lang pt">Credenciais académicas</span><span class="lang ru">Академические полномочия</span><span class="lang ar">المؤهلات الأكاديمية</span><span class="lang zh">学术证件</span><span class="lang ja">学術的資格</span></h2>
+      <div class="credentials-grid">
+        <div class="credential-card">
+          <i class="fas fa-graduation-cap credential-icon"></i>
+          <h4 class="credential-name"><span class="lang es active">Doctorado en Filosofía</span><span class="lang en">PhD in Philosophy</span><span class="lang fr">Doctorat en Philosophie</span><span class="lang it">Dottorato in Filosofia</span><span class="lang de">Promotion in Philosophie</span><span class="lang pt">Doutorado em Filosofia</span><span class="lang ru">Доктор философии</span><span class="lang ar">دكتوراه في الفلسفة</span><span class="lang zh">哲学博士</span><span class="lang ja">哲学博士</span></h4>
+          <p class="credential-desc"><span class="lang es active">Y Ciencias de la Educación.</span><span class="lang en">And Educational Sciences.</span><span class="lang fr">Et Sciences de l'Éducation.</span><span class="lang it">E Scienze dell'Educazione.</span><span class="lang de">Und Erziehungswissenschaften.</span><span class="lang pt">E Ciências da Educação.</span><span class="lang ru">И педагогические науки.</span><span class="lang ar">وعلوم التربية.</span><span class="lang zh">与教育科学。</span><span class="lang ja">および教育科学。</span></p>
+        </div>
+        <div class="credential-card">
+          <i class="fas fa-palette credential-icon"></i>
+          <h4 class="credential-name"><span class="lang es active">Doctorado en Bellas Artes</span><span class="lang en">PhD in Fine Arts</span><span class="lang fr">Doctorat en Beaux-Arts</span><span class="lang it">Dottorato in Belle Arti</span><span class="lang de">Promotion in Bildende Kunst</span><span class="lang pt">Doutorado em Belas Artes</span><span class="lang ru">Доктор изящных искусств</span><span class="lang ar">دكتوراه في الفنون الجميلة</span><span class="lang zh">美术博士</span><span class="lang ja">芸術学博士</span></h4>
+          <p class="credential-desc"><span class="lang es active">Especialidad en Grabado y Pintura.</span><span class="lang en">Specialty in Engraving and Painting.</span><span class="lang fr">Spécialité en Gravure et Peinture.</span><span class="lang it">Specialità in Incisione e Pittura.</span><span class="lang de">Fachrichtung Gravur und Malerei.</span><span class="lang pt">Especialidade em Gravura e Pintura.</span><span class="lang ru">Специальность в гравюре и живописи.</span><span class="lang ar">تخصص الحفر والرسم.</span><span class="lang zh">版画与绘画专业。</span><span class="lang ja">版画・絵画専攻。</span></p>
+        </div>
+        <div class="credential-card">
+          <i class="fas fa-book credential-icon"></i>
+          <h4 class="credential-name"><span class="lang es active">Escritora</span><span class="lang en">Author</span><span class="lang fr">Écrivaine</span><span class="lang it">Scrittrice</span><span class="lang de">Schriftstellerin</span><span class="lang pt">Escritora</span><span class="lang ru">Писатель</span><span class="lang ar">كاتبة</span><span class="lang zh">作家</span><span class="lang ja">作家</span></h4>
+          <p class="credential-desc"><span class="lang es active">Autora de varios libros publicados.</span><span class="lang en">Author of several published books.</span><span class="lang fr">Auteur de plusieurs livres publiés.</span><span class="lang it">Autrice di diversi libri pubblicati.</span><span class="lang de">Autorin mehrerer veröffentlichter Bücher.</span><span class="lang pt">Autora de vários livros publicados.</span><span class="lang ru">Автор нескольких опубликованных книг.</span><span class="lang ar">مؤلفة لعدة كتب منشورة.</span><span class="lang zh">多本出版书籍的作者。</span><span class="lang ja">複数の出版書籍の著者。</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ── Docencia ── -->
+    <div class="section-block" id="docencia">
+      <div class="section-label"><span class="lang es active">Trayectoria docente</span><span class="lang en">Teaching career</span><span class="lang fr">Parcours pédagogique</span><span class="lang it">Carriera docente</span><span class="lang de">Lehrerlaufbahn</span><span class="lang pt">Trajetória docente</span><span class="lang ru">Педагогическая карьера</span><span class="lang ar">المسيرة التدريسية</span><span class="lang zh">教学生涯</span><span class="lang ja">教職の経歴</span></div>
+      <h2 class="section-title"><span class="lang es active">La enseñanza como vocación</span><span class="lang en">Teaching as a vocation</span><span class="lang fr">L'enseignement comme vocation</span><span class="lang it">L'insegnamento come vocazione</span><span class="lang de">Lehren als Berufung</span><span class="lang pt">O ensino como vocação</span><span class="lang ru">Преподавание как призвание</span><span class="lang ar">التدريس كرسالة</span><span class="lang zh">教学作为天职</span><span class="lang ja">天職としての教育</span></h2>
+      <div class="section-text">
+        <p class="lang es active">Más allá de su faceta creativa, María Paz ha dedicado gran parte de su vida a la <strong>docencia como profesora de Lengua y Literatura<strong>. Esta vocación no solo le ha permitido transmitir su amor por las letras a generaciones de estudiantes, sino que ha enriquecido su propia sensibilidad artística.<br><br>Su metodología siempre ha buscado ir más allá de los libros de texto, fomentando la creatividad y el pensamiento crítico, entendiendo que la educación es, en sí misma, una forma de arte y transformación social.</p>
+<p class="lang en">Beyond her creative side, María Paz has dedicated a large part of her life to <strong>teaching as a Professor of Language and Literature<strong>. This vocation has not only allowed her to transmit her love for letters to generations of students, but has also enriched her own artistic sensitivity.<br><br>Her methodology has always sought to go beyond textbooks, promoting creativity and critical thinking, understanding that education is, in itself, a form of art and social transformation.</p>
+<p class="lang fr">Au-delà de sa facette créative, María Paz a consacré une grande partie de sa vie à <strong>l'enseignement en tant que professeur de langue et de littérature<strong>. Cette vocation lui a non seulement permis de transmettre son amour des lettres à des générations d'étudiants, mais a également enrichi sa propre sensibilité artistique.<br><br>Sa méthodologie a toujours cherché à aller au-delà des manuels scolaires, en encourageant la créativité et la pensée critique, comprenant que l'éducation est, en soi, une forme d'art et de transformation sociale.</p>
+<p class="lang it">Oltre alla sua vena creativa, María Paz ha dedicato gran parte della sua vita all'<strong>insegnamento come professoressa di Lingua e Letteratura<strong>. Questa vocazione non solo le ha permesso di trasmettere il suo amore per le lettere a generazioni di studenti, ma ha anche arricchito la sua sensibilità artistica.<br><br>La sua metodologia ha sempre cercato di andare oltre i libri di testo, incoraggiando la creatività e il pensiero critico, nella consapevolezza che l'educazione è, in sé, una forma d'arte e di trasformazione sociale.</p>
+<p class="lang de">Über ihre kreative Seite hinaus hat María Paz einen großen Teil ihres Lebens dem <strong>Lehren als Professorin für Sprache und Literatur<strong> gewidmet. Diese Berufung hat es ihr nicht nur ermöglicht, ihre Liebe zur Literatur an Generationen von Schülern weiterzugeben, sondern hat auch ihre eigene künstlerische Sensibilität bereichert.<br><br>Ihre Methodik war immer darauf ausgerichtet, über die Lehrbücher hinauszugehen, Kreativität und kritisches Denken zu fördern und zu verstehen, dass Bildung an sich eine Form der Kunst und des sozialen Wandels ist.</p>
+<p class="lang pt">Para além da sua faceta criativa, María Paz dedicou grande parte da sua vida à <strong>docência como professora de Língua e Literatura<strong>. Esta vocação não só lhe permitiu transmitir o seu amor pelas letras a gerações de estudantes, como também enriqueceu a sua própria sensibilidade artística.<br><br>A sua metodologia sempre procurou ir além dos livros de texto, fomentando a criatividade e o pensamento crítico, entendendo que a educação é, em si mesma, uma forma de arte e transformação social.</p>
+<p class="lang ru">Помимо своей творческой стороны, Мария Пас посвятила большую часть своей жизни <strong>преподаванию в качестве профессора языка и литературы<strong>. Это призвание не только позволило ей передать любовь к письмам поколениям студентов, но и обогатило её собственную художественную чувствительность.<br><br>Её методология всегда стремилась выйти за рамки учебников, способствуя развитию творчества и критического мышления, понимая, что образование само по себе является формой искусства и социальной трансформации.</p>
+<p class="lang ar">إلى جانب جانبها الإبداعي، خصصت ماريا باث جزءاً كبيراً من حياتها لـ <strong>التدريس كأستاذة للغة والأدب<strong>. لم تسمح لها هذه المهنة بنقل حبها للحروف إلى أجيال من الطلاب فحسب، بل أثرت أيضاً حساسيتها الفنية الخاصة.<br><br>لطالما سعت منهجيتها إلى تجاوز الكتب المدرسية، وتشجيع الإبداع والتفكير النقدي، مدركة أن التعليم هو في حد ذاته شكل من أشكال الفن والتحول الاجتماعي.</p>
+<p class="lang zh">除了她的创作的一面，玛丽亚·帕斯还将她生命中的大部分时间奉献给了<strong>作为语言和文学教授的教学工作<strong>。这一天职不仅让她向一代又一代的学生传递了她对文学的热爱，也丰富了她自己的艺术敏感性。<br><br>她的教学方法始终力求超越教科书，鼓励创造力和批判性思维，理解教育本身就是一种艺术形式和社会转型方式。</p>
+<p class="lang ja">クリエイティブな一面だけでなく、マリア・パスは人生の大部分を<strong>言語と文学の教授として教育<strong>に捧げてきました。この天職は、彼女が何世代もの学生に文学への愛を伝えることを可能にしただけでなく、彼女自身の芸術的感性をも豊かにしました。<br><br>彼女の教育方法は常に教科書を超え、創造性と批判的思考を促進することを目指しており、教育はそれ自体が芸術の一形態であり、社会変革の一助であると理解しています。</p>
+
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ── Cita ── -->
+    <div class="quote-block">
+      <div class="quote-text">
+        <p class="lang es active">"El arte no es un lujo del espíritu, es la necesidad más profunda del alma."</p>
+        <p class="lang en">"Art is not a luxury of the spirit, it is the deepest necessity of the soul."</p>
+        <p class="lang fr">"L'art n'est pas un luxe de l'esprit, c'est le besoin le plus profond de l'âme."</p>
+        <p class="lang it">"L'arte non è un lusso dello spirito, è il bisogno più profondo dell'anima."</p>
+        <p class="lang de">"Kunst ist kein Luxus des Geistes, sie ist das tiefste Bedürfnis der Seele."</p>
+        <p class="lang pt">"A arte não é um luxo do espírito, é a necessidade mais profunda da alma."</p>
+        <p class="lang ru">"Искусство — это не роскошь духа, это глубочайшая потребность души."</p>
+        <p class="lang ar">"الفن ليس ترفاً للروح، بل هو أعمق احتياجات النفس."</p>
+        <p class="lang zh">“艺术不是精神的奢侈品，而是灵魂最深处的需要。”</p>
+        <p class="lang ja">「芸術は精神の贅沢品ではなく、魂の最も深い必要性です。」</p>
+      </div>
+      <span class="quote-attr">— Paz Arés Osset</span>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ── Obra Literaria Detalle ── -->
+    <div class="section-block" id="obra-literaria">
+      <div class="section-label"><span class="lang es active">Obra Literaria</span><span class="lang en">Literary Work</span><span class="lang fr">Œuvre littéraire</span><span class="lang it">Opera letteraria</span><span class="lang de">Literarisches Werk</span><span class="lang pt">Obra Literária</span><span class="lang ru">Литературное творчество</span><span class="lang ar">العمل الأدبي</span><span class="lang zh">文学作品</span><span class="lang ja">文学作品</span></div>
+      <h2 class="section-title"><span class="lang es active">Destellos de Paz</span><span class="lang en">Flashes of Peace</span><span class="lang fr">Éclats de Paix</span><span class="lang it">Bagliori di Pace</span><span class="lang de">Lichtblicke des Friedens</span><span class="lang pt">Clarões de Paz</span><span class="lang ru">Проблески Мира</span><span class="lang ar">ومضات السلام</span><span class="lang zh">和平之光</span><span class="lang ja">平和の輝き</span></h2>
+      <div class="book-feature">
+        <img src="destellos_book.png" alt="Libro Destellos de Paz">
+        <div class="book-info">
+          <div class="book-badge"><span class="lang es active">Última Publicación</span><span class="lang en">Latest Publication</span><span class="lang fr">Dernière publication</span><span class="lang it">Ultima pubblicazione</span><span class="lang de">Neueste Veröffentlichung</span><span class="lang pt">Última Publicação</span><span class="lang ru">Последняя публикация</span><span class="lang ar">أحدث منشور</span><span class="lang zh">最新出版</span><span class="lang ja">最新の出版物</span></div>
+          <h3 class="book-title">«Destellos de Paz»</h3>
+          <div class="book-description">
+            <p class="lang es active">Entre sus publicaciones destaca su obra más reciente, <strong>«Destellos de Paz»<strong>, un libro que condensa años de meditaciones y reflexiones poéticas. En sus páginas, Paz invita al lector a un viaje de autodescubrimiento y conexión espiritual, utilizando un lenguaje sencillo pero profundamente evocador.<br><br>Este libro es el resultado de una vida dedicada al estudio de la filosofía y el arte, destilado en versos que buscan ser, como su título indica, pequeñas luces en el camino del lector.</p>
+<p class="lang en">Among her publications, her most recent work, <strong>"Flashes of Peace"<strong>, stands out as a book that condenses years of meditations and poetic reflections. In its pages, Paz invites the reader on a journey of self-discovery and spiritual connection, using simple but deeply evocative language.<br><br>This book is the result of a life dedicated to the study of philosophy and art, distilled into verses that aim to be, as the title suggests, small lights on the reader's path.</p>
+<p class="lang fr">Parmi ses publications, son ouvrage le plus récent, <strong>« Éclats de Paix »<strong>, se distingue comme un livre qui condense des années de méditations et de réflexions poétiques. Dans ses pages, Paz invite le lecteur à un voyage de découverte de soi et de connexion spirituelle, en utilisant un langage simple mais profondément évocateur.<br><br>Ce livre est le résultat d'une vie consacrée à l'étude de la philosophie et de l'art, distillée en vers qui se veulent être, comme le titre le suggère, de petites lumières sur le chemin du lecteur.</p>
+<p class="lang it">Tra le sue pubblicazioni spicca l'opera più recente, <strong>«Bagliori di Pace»<strong>, un libro che condensa anni di meditazioni e riflessioni poetiche. Nelle sue pagine, Paz invita il lettore a un viaggio alla scoperta di sé e alla connessione spirituale, usando un linguaggio semplice ma profondamente evocativo.<br><br>Questo libro è il risultato di una vita dedicata allo studio della filosofia e dell'arte, distillata in versi che mirano a essere, come suggerisce il titolo, piccole luci sul cammino del lettore.</p>
+<p class="lang de">Unter ihren Veröffentlichungen sticht ihr jüngstes Werk <strong>„Lichtblicke des Friedens“<strong> hervor, ein Buch, das jahrelange Meditationen und poetische Überlegungen zusammenfasst. Auf seinen Seiten lädt Paz den Leser zu einer Reise der Selbstentdeckung und spirituellen Verbindung ein, wobei sie eine einfache, aber tief evokative Sprache verwendet.<br><br>Dieses Buch ist das Ergebnis eines Lebens, das dem Studium der Philosophie und Kunst gewidmet ist, destilliert in Versen, die, wie der Titel schon sagt, kleine Lichter auf dem Weg des Lesers sein wollen.</p>
+<p class="lang pt">Entre as suas publicações destaca-se a sua obra mais recente, <strong>«Clarões de Paz»<strong>, um livro que condensa anos de meditações e reflexões poéticas. Nas suas páginas, Paz convida o leitor para uma viagem de autodescoberta e conexão espiritual, utilizando uma linguagem simples mas profundamente evocadora.<br><br>Este livro é o resultado de uma vida dedicada ao estudo da filosofia e da arte, destilado em versos que procuram ser, como o seu título indica, pequenas luzes no caminho do leitor.</p>
+<p class="lang ru">Среди её публикаций выделяется последняя работа <strong>«Проблески мира»<strong> — книга, вобравшая в себя годы медитаций и поэтических размышлений. На её страницах Пас приглашает читателя в путешествие к самопознанию и духовной связи, используя простой, но глубоко выразительный язык.<br><br>Эта книга — результат жизни, посвященной изучению философии и искусства, воплощенный в стихах, которые призваны быть, как следует из названия, маленькими огоньками на пути читателя.</p>
+<p class="lang ar">من بين منشوراتها، يبرز أحدث أعمالها، <strong>«ومضات السلام»<strong>، ككتاب يكثف سنوات من التأملات والانعكاسات الشعرية. تدعو باث القارئ في صفحاته إلى رحلة لاكتشاف الذات والاتصال الروحي، باستخدام لغة بسيطة ولكنها موحية بعمق.<br><br>هذا الكتاب هو نتيجة حياة مكرسة لدراسة الفلسفة والفن، تم تقطيرها في أبيات تهدف إلى أن تكون، كما يوحي العنوان، أنواراً صغيرة في طريق القارئ.</p>
+<p class="lang zh">在她的出版物中，她最近的作品《和平之光》脱颖而出，这本书浓缩了她多年的冥想和诗意反映。在书中，帕斯用简单但极具启发性的语言，邀请读者开启一段自我发现和心灵连接的旅程。<br><br>这本书是她投身于哲学和艺术研究一生的结晶，通过诗句提炼而成，正如书名所暗示的，旨在成为读者道路上的点点微光。</p>
+<p class="lang ja">彼女の出版物の中で、最新作『平和の輝き』は、長年の瞑想と詩的な思索を凝縮した一冊として際立っています。そのページの中で、パズはシンプルでありながら深く心に響く言葉を用い、読者を自己発見と精神的な繋がりの旅へと誘います。<br><br>この本は、哲学と芸術の研究に捧げられた人生の集大成であり、タイトルが示すように、読者の道における小さな光となることを目指した詩として結実したものです。</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ── Reconocimiento ── -->
+    <div class="section-block" id="reconocimiento">
+      <div class="section-label"><span class="lang es active">Reconocimiento Internacional</span><span class="lang en">International Recognition</span><span class="lang fr">Reconnaissance internationale</span><span class="lang it">Riconoscimento internazionale</span><span class="lang de">Internationale Anerkennung</span><span class="lang pt">Reconhecimento Internacional</span><span class="lang ru">Международное признание</span><span class="lang ar">الاعتراف الدولي</span><span class="lang zh">国际认可</span><span class="lang ja">国際的な評価</span></div>
+      <h2 class="section-title"><span class="lang es active">Premios y distinciones</span><span class="lang en">Awards and honors</span><span class="lang fr">Prix et distinctions</span><span class="lang it">Premi e onorificenze</span><span class="lang de">Preise und Auszeichnungen</span><span class="lang pt">Prémios e distinções</span><span class="lang ru">Награды и почести</span><span class="lang ar">الجوائز والتكريمات</span><span class="lang zh">奖项与荣誉</span><span class="lang ja">賞と栄誉</span></h2>
+      <div class="section-text">
+        <p class="lang es active">La maestría técnica de Paz Arés Osset en disciplinas como el <strong>grabado y la pintura<strong> le ha valido premios y reconocimientos internacionales. Su obra plástica es un diálogo constante entre la figuración mística y la abstracción espiritual, capturando momentos de belleza trascendental que invitan a la meditación.<br><br>Sus exposiciones han sido testimonio de su capacidad para fusionar estilos clásicos con una visión contemporánea y universal del arte.</p>
+<p class="lang en">Paz Arés Osset's technical mastery in disciplines such as <strong>engraving and painting<strong> has earned her international awards and recognition. Her artistic work is a constant dialogue between mystical figuration and spiritual abstraction, capturing moments of transcendental beauty that invite meditation.<br><br>Her exhibitions have been a testament to her ability to fuse classical styles with a contemporary and universal vision of art.</p>
+<p class="lang fr">La maîtrise technique de Paz Arés Osset dans des disciplines telles que <strong>la gravure et la peinture<strong> lui a valu des prix et une reconnaissance internationale. Son travail plastique est un dialogue constant entre figuration mystique et abstraction spirituelle, capturant des moments de beauté transcendantale qui invitent à la méditation.<br><br>Ses expositions ont témoigné de sa capacité à fusionner les styles classiques avec une vision contemporaine et universelle de l'art.</p>
+<p class="lang it">La maestria tecnica di Paz Arés Osset in discipline come <strong>l'incisione e la pittura<strong> le è valsa premi e riconoscimenti internazionali. La sua opera plastica è un dialogo costante tra figurazione mistica e astrazione spirituale, catturando momenti di bellezza trascendentale che invitano alla meditazione.<br><br>Le sue mostre hanno testimoniato la sua capacità di fondere stili classici con una visione contemporanea e universale dell'arte.</p>
+<p class="lang de">Paz Arés Ossets technische Meisterschaft in Disziplinen wie <strong>Stich und Malerei<strong> hat ihr internationale Preise und Anerkennungen eingebracht. Ihr bildnerisches Werk ist ein ständiger Dialog zwischen mystischer Figuration und spiritueller Abstraktion und fängt Momente transzendentaler Schönheit ein, die zur Meditation einladen.<br><br>Ihre Ausstellungen zeugen von ihrer Fähigkeit, klassische Stile mit einer zeitgenössischen und universellen Vision von Kunst zu verschmelzen.</p>
+<p class="lang pt">A mestria técnica de Paz Arés Osset em disciplinas como a <strong>gravura e a pintura<strong> valeu-lhe prémios e reconhecimentos internacionais. A sua obra plástica é um diálogo constante entre a figuração mística e a abstração espiritual, capturando momentos de beleza transcendental que convidam à meditação.<br><br>As suas exposições foram testemunho da sua capacidade de fundir estilos clássicos com uma visão contemporânea e universal da arte.</p>
+<p class="lang ru">Техническое мастерство Пас Арес Оссет в таких дисциплинах, как <strong>гравюра и живопись<strong>, принесло ей международные награды и признание. Её художественные работы — это постоянный диалог между мистической фигурацией и духовной абстракцией, запечатлевающий моменты трансцендентальной красоты, приглашающие к медитации.<br><br>Её выставки стали свидетельством её способности сочетать классические стили с современным и универсальным видением искусства.</p>
+<p class="lang ar">إن إتقان باث أريس أوسيت التقني في تخصصات مثل <strong>الحفر والرسم<strong> قد منحها جوائز واعترافات دولية. عملها الفني هو حوار مستمر بين التجسيد الصوفي والتجريد الروحي، والتقاط لحظات من الجمال المتسامي التي تدعو إلى التأمل.<br><br>كانت معارضها شهادة على قدرتها على دمج الأساليب الكلاسيكية مع رؤية معاصرة وعالمية للفن.</p>
+<p class="lang zh">帕斯·阿雷斯·奥赛特在<strong>版画和绘画<strong>等学科上的技术精湛，为她赢得了国际奖项和认可。她的艺术作品是神秘具象与精神抽象之间的不断对话，捕捉了引发冥想的超越性美感时刻。<br><br>她的展览证明了她将古典风格与当代全球艺术视野融合的能力。</p>
+<p class="lang ja">パズ・アレス・オセットの<strong>版画や絵画<strong>といった分野における技術的な熟練は、国際的な賞や評価を得ています。彼女の造形作品は、神秘的な具象と精神的な抽象の間の絶え間ない対話であり、瞑想へと誘う超越的な美の瞬間を捉えています。<br><br>彼女の展覧会は、古典的なスタイルと現代的かつ普遍的な芸術のビジョンを融合させる能力を証明してきました。</p>
+
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ── Apoyo ── -->
+    <div class="section-block" id="apoyo">
+      <div class="section-label"><span class="lang es active">Colaboración</span><span class="lang en">Collaboration</span><span class="lang fr">Collaboration</span><span class="lang it">Collaborazione</span><span class="lang de">Zusammenarbeit</span><span class="lang pt">Colaboração</span><span class="lang ru">Сотрудничество</span><span class="lang ar">التعاون</span><span class="lang zh">合作</span><span class="lang ja">コラボレーション</span></div>
+      <h2 class="section-title"><span class="lang es active">Apoya este proyecto</span><span class="lang en">Support this project</span><span class="lang fr">Soutenez ce projet</span><span class="lang it">Sostieni questo progetto</span><span class="lang de">Unterstützen Sie dieses Projekt</span><span class="lang pt">Apoie este projeto</span><span class="lang ru">Поддержите этот проект</span><span class="lang ar">دعم هذا المشروع</span><span class="lang zh">支持这个项目</span><span class="lang ja">このプロジェクトを支援する</span></h2>
+      <div class="cta-section">
+        <h3 class="cta-title">
+            <span class="lang es active">¿Te ha gustado la obra?</span>
+            <span class="lang en">Did you like the work?</span>
+            <span class="lang fr">Avez-vous aimé l'œuvre ?</span>
+            <span class="lang it">Ti è piaciuta l'opera?</span>
+            <span class="lang de">Hat Ihnen das Werk gefallen?</span>
+            <span class="lang pt">Gostou da obra?</span>
+            <span class="lang ru">Вам понравилась работа?</span>
+            <span class="lang ar">هل أعجبك العمل؟</span>
+            <span class="lang zh">你喜欢这个作品吗？</span>
+            <span class="lang ja">作品を気に入っていただけましたか？</span>
+        </h3>
+        <p class="cta-text">
+            <span class="lang es active">Cada muestra de apoyo nos ayuda a seguir difundiendo este mensaje de paz y unidad a través del arte y la tecnología.</span>
+            <span class="lang en">Every show of support helps us continue spreading this message of peace and unity through art and technology.</span>
+            <span class="lang fr">Chaque témoignage de soutien nous aide à continuer à diffuser ce message de paix et d'unité à travers l'art et la technologie.</span>
+            <span class="lang it">Ogni dimostrazione di sostegno ci aiuta a continuare a diffondere questo messaggio di pace e unità attraverso l'arte e la tecnologia.</span>
+            <span class="lang de">Jede Unterstützung hilft uns, diese Botschaft von Frieden und Einheit durch Kunst und Technologie weiter zu verbreiten.</span>
+            <span class="lang pt">Cada amostra de apoio ajuda-nos a continuar a difundir esta mensagem de paz e unidade através da arte e da tecnologia.</span>
+            <span class="lang ru">Каждое проявление поддержки помогает нам продолжать распространять это послание мира и единства через искусство и технологии.</span>
+            <span class="lang ar">كل بادرة دعم تساعدنا على الاستمرار في نشر رسالة السلام والوحدة هذه من خلال الفن والتكنولوجيا.</span>
+            <span class="lang zh">每一份支持都能帮助我们继续通过艺术和技术传播这种和平与团结的信息。</span>
+            <span class="lang ja">皆様のご支援一つひとつが、芸術とテクノロジーを通じてこの平和と結束のメッセージを広め続ける助けとなります。</span>
+        </p>
+        <div class="cta-buttons">
+          <a href="https://ko-fi.com/pazaresosset" target="_blank" class="cta-btn kofi">
+            <i class="fas fa-heart"></i>
+            <span class="lang es active">Invítame a un café</span>
+            <span class="lang en">Buy me a coffee</span>
+            <span class="lang fr">Offrez-moi un café</span>
+            <span class="lang it">Offrimi un caffè</span>
+            <span class="lang de">Lade mich auf einen Kaffee ein</span>
+            <span class="lang pt">Paga-me um café</span>
+            <span class="lang ru">Угостите меня кофе</span>
+            <span class="lang ar">ادعوني لتناول القهوة</span>
+            <span class="lang zh">请我喝杯咖啡</span>
+            <span class="lang ja">コーヒーをおごる</span>
+          </a>
+          <a href="../poetry/index.html" class="cta-btn primary">
+            <i class="fas fa-feather-alt"></i>
+            <span class="lang es active">Ver poemas</span>
+            <span class="lang en">See poems</span>
+            <span class="lang fr">Voir les poèmes</span>
+            <span class="lang it">Vedi poesie</span>
+            <span class="lang de">Gedichte ansehen</span>
+            <span class="lang pt">Ver poemas</span>
+            <span class="lang ru">Смотреть стихи</span>
+            <span class="lang ar">شاهد القصائد</span>
+            <span class="lang zh">查看诗歌</span>
+            <span class="lang ja">詩を見る</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/pazarestheartist/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/pazaresosset/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@pazaresosset" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://twitter.com/pazaresosset" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/user/pazaresosset" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="footer-text">
+      © <span id="year"></span> Paz Arés Osset — <span class="lang es active">Todos los derechos reservados</span><span class="lang en">All rights reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const particleContainer = document.getElementById('particles');
+    for (let i = 0; i < 40; i++) {
+        const p = document.createElement('div');
+        p.classList.add('particle');
+        p.style.left = Math.random() * 100 + '%';
+        p.style.top = Math.random() * 100 + '%';
+        p.style.animationDelay = Math.random() * 8 + 's';
+        particleContainer.appendChild(p);
+    }
+    const sections = document.querySelectorAll('.section-block');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    sections.forEach(s => observer.observe(s));
+    const languageSelect = document.getElementById('language-select');
+    const allLangs = document.querySelectorAll('.lang');
+    languageSelect.addEventListener('change', (e) => {
+      const selectedLang = e.target.value;
+      allLangs.forEach(el => {
+        el.classList.remove('active');
+        if (el.classList.contains(selectedLang)) el.classList.add('active');
+      });
+      if (selectedLang === 'ar') document.body.classList.add('rtl-body');
+      else document.body.classList.remove('rtl-body');
+    });
+  </script>
+</body>
+</html>
