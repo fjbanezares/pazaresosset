@@ -50,8 +50,19 @@ document.addEventListener('DOMContentLoaded', function () {
         'spanish': {
           'album_link': 'https://open.spotify.com/intl-es/album/7EbYxl2hFKbFuWyjYlgnsh?si=cSaetHupSPijqDtQpjDwzQ',
           'album_iframe': 'https://open.spotify.com/embed/album/7EbYxl2hFKbFuWyjYlgnsh?utm_source=generator'
+        },
+        'english': {
+          'album_link': 'https://open.spotify.com/album/2y3OiikBE9p5jFcfKocArO?si=u29YcP9fSC-2uRwRmNMc2Q',
+          'album_iframe': 'https://open.spotify.com/embed/album/2y3OiikBE9p5jFcfKocArO?utm_source=generator'
+        },
+        'russian': {
+          'album_link': 'https://open.spotify.com/intl-es/album/1kGSA089ds2NKgGQV7RwJv?si=HEFP5WQtTr2RTpGuRzP3Lw',
+          'album_iframe': 'https://open.spotify.com/embed/album/1kGSA089ds2NKgGQV7RwJv?utm_source=generator'
+        },
+        'italian': {
+          'album_link': 'https://open.spotify.com/album/2VfMIcwFoga7XLAc0aQXIs?si=uyOY4X-sSgSNJRCCNkOZYw',
+          'album_iframe': 'https://open.spotify.com/embed/album/2VfMIcwFoga7XLAc0aQXIs?utm_source=generator'
         }
-        // Other languages will fallback to Spanish for now
       };
 
       const comicImage = document.getElementById('comic-image');

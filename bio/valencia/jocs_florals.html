@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especial: Juegos Florales 1971 | Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Lemonada:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --velvet: #800020;
+            --royal-blue: #002366;
+            --bg-dark: #0a0a0a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.1), var(--bg-dark)), url('paz_jocs_florals_hero.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end; /* Move to bottom */
+            justify-content: flex-start;
+            text-align: left;
+            position: relative;
+            padding: 80px 5%;
+        }
+
+        .hero-content {
+            background: none; /* Removed opaque background */
+            padding: 0;
+            border: none;
+            backdrop-filter: none;
+            max-width: 100%;
+        }
+
+        .hero h1 {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 3.5rem; /* Slightly smaller and discrete */
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 5px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        /* Documentation Gallery */
+        .gallery-section {
+            padding: 100px 5%;
+            background: linear-gradient(to bottom, var(--bg-dark), #151515);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Philosopher', sans-serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 60px;
+        }
+
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .doc-card {
+            background: none;
+            padding: 0;
+            border: none;
+            transition: all 0.4s ease;
+        }
+
+        .doc-card:hover {
+            transform: scale(1.02);
+        }
+
+        .doc-card img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Narrative blocks */
+        .narrative {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        .narrative h2 {
+            font-family: 'Philosopher', sans-serif;
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .narrative p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        /* Special highlight for the letter */
+        .letter-focus {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            background: rgba(255,215,0,0.03);
+            padding: 60px;
+            border-radius: 20px;
+            margin: 50px 0;
+            border: 1px solid rgba(255,215,0,0.1);
+        }
+
+        .letter-focus img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        /* Navigation */
+        .nav-back {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 20px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        @media (max-width: 900px) {
+            .letter-focus { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="primer_amor.html" class="nav-back">← Volver</a>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Jocs Florals</h1>
+            <p>Valencia · 1971</p>
+        </div>
+    </header>
+
+    <section class="gallery-section">
+        <h2 class="section-title">Dibujos e Imágenes</h2>
+        <div class="doc-grid">
+            <div class="doc-card">
+                <img src="Jocs Florals-EDIT.jpg" alt="Dibujo Jocs Florals">
+            </div>
+            <div class="doc-card">
+                <img src="jocs florals.jpg" alt="Dibujo Jocs Florals">
+            </div>
+            <div class="doc-card">
+                <img src="jocs florals 2.jpg" alt="Dibujo Jocs Florals">
+            </div>
+            <div class="doc-card">
+                <img src="Jocs Florals2-ret.jpg" alt="Dibujo Jocs Florals">
+            </div>
+        </div>
+
+        <div class="narrative">
+            <div class="letter-focus">
+                <img src="carta_alcalde_art.png" alt="Carta del Alcalde Arte" style="width:100%; border-radius:10px;">
+                <div>
+                    <h2>La Invitación del Alcalde</h2>
+                    <p>Cuando Paz Arés Osset era una niña, recibió una carta que marcaría su vida social en la ciudad. El alcalde de Valencia, reconociendo su gracia y potencial, la invitó personalmente a formar parte de la <strong>Cort d'Honor de la Regina dels Jocs Florals</strong>.</p>
+                    <p>Este festival, de inmensa relevancia cultural, honraba las tradiciones más profundas de Valencia, reuniendo a las familias más destacadas en actos llenos de solemnidad y belleza.</p>
+                </div>
+            </div>
+
+            <h2>Crónica de la Festividad</h2>
+            <p>El programa comenzó el 28 de julio de 1971 con una cena de gala en el <strong>Restaurant Viveros</strong>. Paz, con su elegancia natural, brilló entre las damas de honor mientras la Regina era presentada oficialmente.</p>
+            <p>El 30 de julio, la jornada continuó con la bendición en la <strong>Basílica de la Verge dels Desemparats</strong>. Un acto de profunda espiritualidad y tradición que culminó en un almuerzo de honor.</p>
+            <p>Esa misma noche, la ciudad se vistió de gala para el baile en la <strong>Societat Hípica Valenciana</strong>. Fue aquí donde Paz lució con orgullo el <strong>traje tradicional de valenciana</strong>, una obra de arte en seda y bordados que simboliza la identidad de su tierra.</p>
+            <p>El broche de oro lo puso la <strong>Batalla de Flores</strong> el 31 de julio, un estallido de color y fragancia donde la Reina y su corte recorrieron las calles en carrozas engalanadas, celebrando la alegría de la vida valenciana.</p>
+        </div>
+    </section>
+
+</body>
+</html>

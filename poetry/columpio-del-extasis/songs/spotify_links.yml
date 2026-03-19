@@ -4,4 +4,17 @@ spanish:
   - song_link: https://open.spotify.com/intl-es/track/7HPiexpHgMSKybisfoMGx9?si=446be95b5573465c
   - song_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7HPiexpHgMSKybisfoMGx9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 english:
-  
+  - album_link: https://open.spotify.com/album/2y3OiikBE9p5jFcfKocArO?si=u29YcP9fSC-2uRwRmNMc2Q
+  - album_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2y3OiikBE9p5jFcfKocArO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - song_link: https://open.spotify.com/intl-es/track/7MXPVGXQYFFlPGYYrMi8QC?si=2095c228a3124f8c
+  - song_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7MXPVGXQYFFlPGYYrMi8QC?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+russian:
+  - album_link: https://open.spotify.com/intl-es/album/1kGSA089ds2NKgGQV7RwJv?si=HEFP5WQtTr2RTpGuRzP3Lw
+  - album_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1kGSA089ds2NKgGQV7RwJv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - song_link: https://open.spotify.com/intl-es/track/3lPazZlU91p8hgdauwkk9p?si=df9cb89d3b714bd4
+  - song_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3lPazZlU91p8hgdauwkk9p?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+italian:
+  - album_link: https://open.spotify.com/album/2VfMIcwFoga7XLAc0aQXIs?si=uyOY4X-sSgSNJRCCNkOZYw
+  - album_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2VfMIcwFoga7XLAc0aQXIs?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - song_link: https://open.spotify.com/intl-es/track/1Aq2mQnrgbcCbMpZwTdqAn?si=bd4806ba6017452d
+  - song_iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1Aq2mQnrgbcCbMpZwTdqAn?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Regreso a Valencia</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            font-size: 1.7rem;
+            color: #fff;
+        }
+
+        .custom-header {
+            padding: 2rem 1rem;
+            text-align: center;
+            color: inherit;
+            background-color: black;
+        }
+
+        .custom-select-lg {
+            font-size: 3rem;
+            line-height: 1.2;
+            padding: .5rem 1rem;
+            height: auto;
+        }
+
+        .custom-header h1 {
+            margin-top: 40px;
+            font-family: 'Montserrat', sans-serif;
+            color: magenta;
+            font-weight: 700;
+        }
+
+        .multilingual-description {
+            font-size: 3rem;
+            margin-top: 30px;
+            border: 2px solid magenta;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        .language-desc {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .main-description {
+            margin-top: 20px;
+        }
+
+        .description {
+            margin: 12px;
+            color: white;
+            font-family: 'Lemonada', cursive;
+        }
+
+        .audio {
+            text-align: center;
+            border: 20px;
+            padding: 0;
+            margin: 0;
+            width: min-content;
+            height: min-content;
+            top: 40px;
+        }
+
+        .buttonAudio {
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position-fixed d-flex justify-content-end p-4" style="position: fixed; right:0; top: 1; z-index: 1;">
+        <select id="language-select" class="custom-select-lg">
+            <option value="english">English</option>
+            <option value="spanish">Español</option>
+            <option value="italian">Italiano</option>
+            <option value="chinese">中文</option>
+            <option value="arabic">العربية</option>
+        </select>
+    </div>
+
+    <div class="custom-header">
+        <a class="brand" href="https://www.pazaresosset.es">
+            <img src="../../logopazares.png" style="
+                        position:absolute; 
+                        margin: 10px;
+                        top:0px; 
+                        left:0px;" alt="Paz Arés Osset, the Artist">
+        </a>
+        <h1 class="display-4 language english">Paz Arés, the Artist</h1>
+        <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
+        <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
+        <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
+        <h1 class="display-4 language arabic" style="display: none;">الفنانة باز أريس</h1>
+
+        <h2 class="language english">Return to Valencia</h2>
+        <h2 class="language spanish" style="display: none;">Regreso a Valencia</h2>
+        <h2 class="language italian" style="display: none;">Ritorno a Valencia</h2>
+        <h2 class="language chinese" style="display: none;">返回瓦伦西亚</h2>
+        <h2 class="language arabic" style="display: none;">العودة إلى فالنسيا</h2>
+
+
+    </div>
+
+
+
+
+    <section style="margin-top: 30px; text-align: center; font-size: 2em;">
+        <div style="display: inline-block; text-align: left;">
+            <div class="english language">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">Return to
+                            Valencia</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">Educational
+                            Challenges</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">Meeting Marina
+                            Moscardó</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">Passion for Las
+                            Fallas</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">Academic and
+                            Professional
+                            Aspirations</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">Influence of
+                            Valencia</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">First Love and
+                            Cultural
+                            Barriers</a></li>
+                </ul>
+            </div>
+
+            <div class="spanish language" style="display: none;">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">Regreso a
+                            Valencia</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">Desafíos
+                            Educativos</a></li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">Encuentro con Marina
+                            Moscardó</a></li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">Pasión por Las
+                            Fallas</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">Aspiraciones
+                            Académicas y
+                            Profesionales</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">Influencia de
+                            Valencia</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">Primer Amor y
+                            Barreras
+                            Culturales</a></li>
+                </ul>
+            </div>
+
+            <div class="italian language" style="display: none;">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">Ritorno a
+                            Valencia</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">Sfide Educative</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">Incontro con Marina
+                            Moscardó</a></li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">Passione per Las
+                            Fallas</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">Aspirazioni
+                            Accademiche e
+                            Professionali</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">Influenza di
+                            Valencia</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">Primo Amore e
+                            Barriere
+                            Culturali</a></li>
+                </ul>
+            </div>
+
+            <div class="chinese language" style="display: none;">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">回到瓦伦西亚</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">教育挑战</a></li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">与玛丽娜·莫斯卡多的相遇</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">对Las Fallas的热爱</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">学术和职业抱负</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">瓦伦西亚的影响</a></li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">初恋和文化障碍</a></li>
+                </ul>
+            </div>
+
+            <div class="arabic language" style="display: none;">
+                <ul style="list-style-type: disc; padding-right: 20px; direction: rtl;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">العودة إلى
+                            فالنسيا</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">التحديات
+                            التعليمية</a></li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">لقاء مع مارينا
+                            موسكاردو</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">الشغف بـ Las
+                            Fallas</a></li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">التطلعات الأكاديمية
+                            والمهنية</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">تأثير فالنسيا</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">الحب الأول والحواجز
+                            الثقافية</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="multilingual-description">
+        <div class="container">
+            <h2 class="language english">Return to Valencia</h2>
+            <h2 class="language spanish" style="display: none;">Regreso a Valencia</h2>
+            <h2 class="language italian" style="display: none;">Ritorno a Valencia</h2>
+            <h2 class="language chinese" style="display: none;">返回瓦伦西亚</h2>
+            <h2 class="language arabic" style="display: none;">العودة إلى فالنسيا</h2>
+
+
+
+            <div class="english language">
+                <!-- English description here -->
+                <p>In 1968, the family of Paz Arés Osset was forced to return to Spain after the loss of Sidi Ifni, a
+                    Spanish enclave on
+                    the Atlantic coast of Morocco. This return marked the beginning of a new stage in Paz's life, a
+                    stage that would be
+                    both challenging and transformative.</p>
+
+                <p>Sidi Ifni had been a significant part of the Spanish Protectorate in Morocco, but political and
+                    military pressures
+                    led to its return to Morocco in 1969. For the Arés family, this change meant leaving behind a life
+                    built amid
+                    conflicts and tensions. The transition to Valencia was a relief from the uncertainty of living in a
+                    conflict zone,
+                    but it also presented its own challenges.</p>
+
+                <p>A year before the family's official return, Paz was sent to Valencia by her parents, who knew in
+                    advance that Sidi
+                    Ifni would be handed over to Morocco, but did not want to worry her. Thus, Paz moved calmly, unaware
+                    of the real
+                    reason behind her relocation.</p>
+
+                <p>During the Christmas of 1968, Paz returned to Sidi Ifni and was able to appreciate the place and her
+                    friends more.
+                    The collective celebrations and the union among all the Spaniards living there were palpable. Even a
+                    musical group
+                    enlivened one of the events, and one of its members visited Paz in Valencia, showing her a city that
+                    was still new
+                    to her.</p>
+
+                <p>In Valencia, Paz lived alone with her maternal grandmother, Amelia, who moved to the family home so
+                    that she would
+                    not be alone. Although Paz devoted much time to studying, she attended a church where dances were
+                    organized,
+                    introduced by her friend Marina. Sometimes, once a week, Paz allowed herself a break and joined the
+                    group for
+                    dancing.</p>
+
+                <p>In 1969, Paz began painting in oil. Additionally, she stayed for lunch at the Colegio de las
+                    Escolapias, where she
+                    was not a boarder but did have lunch. Paz often ate what the other girls left on their plates.</p>
+
+                <p>With her grandmother Amelia, Paz maintained some conversations, though few, due to her intense
+                    dedication to
+                    studying. During dinner, they sometimes exchanged words. Her grandmother was an admirable woman who
+                    walked an hour
+                    every day to the Valencia Cathedral, arguing that it was good for health. Inspired by her
+                    grandmother, Paz began
+                    walking to the Colegio de las Escolapias, a 30-minute journey each day, which seemed much compared
+                    to Sidi Ifni,
+                    where everything was 10 minutes away.</p>
+
+                <p>Valencia, with its vibrant urban life and rich Mediterranean culture, was a completely different
+                    world from what Paz
+                    had known in Sidi Ifni. The city offered new opportunities but also required significant adaptation
+                    from the family.
+                    For Paz, then a teenager, this change was especially impactful. She was at a crucial stage of her
+                    personal and
+                    academic development, and the move represented both a break and a new beginning.</p>
+
+                <p>Adaptation to Valencia was not easy. Paz had to integrate into a new school environment, the Colegio
+                    de las
+                    Escolapias, where she faced an educational level much higher than what she had received in Sidi
+                    Ifni. This academic
+                    disparity was a hard blow for her, accustomed to a less demanding educational system with fewer
+                    resources. The
+                    difference in the level of instruction made her feel out of place and experience great pressure to
+                    catch up.</p>
+
+                <p>Paz's perfectionism, a characteristic that would accompany her throughout her life, <strong>probably
+                        as a result of
+                        complications at birth that imprinted a fear of imminent death on her brain, making her
+                        constantly analyze any
+                        detail that could go wrong</strong>, manifested intensely during this period. Determined to
+                    overcome her
+                    limitations and reach the level of her classmates, Paz dedicated long hours to studying. This
+                    incessant effort,
+                    although exhausting, was also a testament to her determination and tireless spirit.</p>
+
+                <p>Despite the challenges, the return to Valencia also offered unique opportunities for Paz's personal
+                    and professional
+                    growth. The city, known for its rich cultural heritage and dynamic environment, provided a
+                    stimulating setting for a
+                    curious and creative young woman like her. Valencia, with its festivities, historical monuments, and
+                    active social
+                    life, became a constant source of inspiration.</p>
+
+                <p>Moreover, life in Valencia allowed Paz to connect with new friends and communities. These
+                    relationships not only
+                    provided her with emotional support during difficult times but also broadened her worldview and
+                    cultural horizons.
+                    The connection with the local community and participation in social and cultural events enriched her
+                    experience and
+                    contributed to her overall development.</p>
+
+                <p>The time spent in Valencia was crucial in preparing Paz for her future career as a teacher. The
+                    education received at
+                    the Colegio de las Escolapias, though challenging, equipped her with a solid foundation of knowledge
+                    and skills.
+                    This period of intense study and adaptation also strengthened her character, teaching her lessons of
+                    perseverance,
+                    resilience, and self-motivation.</p>
+
+                <p>Therefore, <strong>the return to Valencia in 1968 was a turning point in the life of Paz Arés
+                        Osset</strong>. Through
+                    the challenges of adaptation and the opportunities for growth, Valencia became the stage for her
+                    adolescence and the
+                    beginnings of her teaching career. The city, with its rich culture and vibrant social life, left an
+                    indelible mark
+                    on her heart, marking the beginning of a journey that would define her life and work.</p>
+
+            </div>
+
+            <div class="spanish language" style="display: none;">
+                <!-- Spanish description here -->
+                <p>En 1968, la familia de Paz Arés Osset se vio obligada a regresar a España tras la pérdida de Sidi
+                    Ifni, un enclave
+                    español en la costa atlántica de Marruecos. Este retorno marcó el comienzo de una nueva etapa en la
+                    vida de Paz, una
+                    etapa que sería tanto desafiante como transformadora.</p>
+
+                <p>Sidi Ifni había sido una parte significativa del Protectorado español en Marruecos, pero las
+                    presiones políticas y
+                    militares llevaron a su devolución a Marruecos en 1969. Para la familia Arés, este cambio significó
+                    dejar atrás una
+                    vida construida en medio de conflictos y tensiones. La transición a Valencia fue un respiro de la
+                    incertidumbre de
+                    vivir en una zona de conflicto, pero también presentó sus propios desafíos.</p>
+
+                <p>Un año antes del regreso oficial de la familia, Paz fue enviada a Valencia por sus padres, quienes
+                    sabían de antemano
+                    que Sidi Ifni se entregaría a Marruecos, pero no querían preocuparla. Así, Paz se mudó con calma,
+                    sin conocer la
+                    verdadera razón detrás de su traslado.</p>
+
+                <p>Durante las Navidades del 68, Paz regresó a Sidi Ifni y pudo apreciar más el lugar y sus amigos. Las
+                    fiestas
+                    colectivas y la unión entre todos los españoles que allí residían eran palpables. Incluso un grupo
+                    musical amenizó
+                    uno de los eventos, y uno de sus miembros visitó a Paz en Valencia, mostrándole una ciudad aún nueva
+                    para ella.</p>
+
+                <p>En Valencia, Paz vivió sola con su abuela materna, Amelia, quien se trasladó a la casa familiar para
+                    que ella no
+                    estuviera sola. Aunque Paz dedicaba mucho tiempo al estudio, asistía a una iglesia donde se
+                    organizaban bailes,
+                    introducida por su amiga Marina. A veces, una vez a la semana, Paz se permitía un respiro y se unía
+                    al grupo para
+                    bailar.</p>
+
+                <p>En 1969, Paz comenzó a pintar al óleo. Además, se quedaba a comer en el Colegio de las Escolapias,
+                    donde no era
+                    interna pero sí almorzaba. Paz a menudo comía lo que las otras chicas dejaban en sus platos.</p>
+
+                <p>Con su abuela Amelia, Paz mantenía algunas conversaciones, aunque pocas, debido a su intensa
+                    dedicación al estudio.
+                    Durante la cena, a veces intercambiaban palabras. La abuela era una mujer admirable que caminaba una
+                    hora cada día
+                    hasta la catedral de Valencia, argumentando que era bueno para la salud. Inspirada por su abuela,
+                    Paz comenzó a
+                    caminar hasta el colegio de las Escolapias, un trayecto de 30 minutos al día, algo que le parecía
+                    mucho comparado
+                    con Sidi Ifni, donde todo estaba a 10 minutos.</p>
+
+                <p>Valencia, con su vibrante vida urbana y su rica cultura mediterránea, era un mundo completamente
+                    diferente al que Paz
+                    había conocido en Sidi Ifni. La ciudad ofrecía nuevas oportunidades, pero también requería una
+                    adaptación
+                    significativa por parte de la familia. Para Paz, entonces una adolescente, este cambio fue
+                    especialmente impactante.
+                    Se encontraba en una etapa crucial de su desarrollo personal y académico, y la mudanza representaba
+                    una ruptura y un
+                    nuevo comienzo.</p>
+
+                <p>La adaptación a Valencia no fue sencilla. Paz tuvo que integrarse en un nuevo entorno escolar, el
+                    Colegio de las
+                    Escolapias, donde se enfrentó a un nivel educativo muy superior al que había recibido en Sidi Ifni.
+                    Esta disparidad
+                    académica fue un golpe duro para ella, acostumbrada a un sistema educativo menos exigente y con
+                    menos recursos. La
+                    diferencia en el nivel de instrucción la llevó a sentirse fuera de lugar y a experimentar una gran
+                    presión para
+                    ponerse al día.</p>
+
+                <p>El perfeccionismo de Paz, una característica que la acompañaría toda su vida, <strong>probablemente
+                        como efecto
+                        derivado de complicaciones en el parto que hizo que en el cerebro de Paz se grabase ese miedo a
+                        la muerte
+                        inminente que ha de estar continuamente analizando cualquier detalle que pueda ir mal</strong>,
+                    se manifestó de
+                    manera intensa durante este periodo. Determinada a superar sus limitaciones y alcanzar el nivel de
+                    sus compañeras,
+                    Paz dedicó largas horas al estudio. Este esfuerzo incesante, aunque agotador, fue también un
+                    testimonio de su
+                    determinación y su espíritu incansable.</p>
+
+                <p>A pesar de los desafíos, el regreso a Valencia también ofreció oportunidades únicas para el
+                    crecimiento personal y
+                    profesional de Paz. La ciudad, conocida por su rica herencia cultural y su ambiente dinámico,
+                    proporcionó un entorno
+                    estimulante para una joven curiosa y creativa como ella. Valencia, con sus festividades, monumentos
+                    históricos y
+                    vida social activa, se convirtió en una fuente constante de inspiración.</p>
+
+                <p>Además, la vida en Valencia permitió a Paz entrar en contacto con nuevas amistades y comunidades.
+                    Estas relaciones no
+                    solo le proporcionaron apoyo emocional durante los tiempos difíciles, sino que también ampliaron su
+                    visión del mundo
+                    y sus horizontes culturales. La conexión con la comunidad local y la participación en eventos
+                    sociales y culturales
+                    enriquecieron su experiencia y contribuyeron a su desarrollo integral.</p>
+
+                <p>El tiempo que pasó en Valencia fue fundamental para preparar a Paz para su futura carrera como
+                    docente. La educación
+                    recibida en el Colegio de las Escolapias, aunque desafiante, la equipó con una base sólida de
+                    conocimientos y
+                    habilidades. Este periodo de intenso estudio y adaptación también fortaleció su carácter,
+                    enseñándole lecciones de
+                    perseverancia, resiliencia y auto-motivación.</p>
+
+                <p>Por tanto, <strong>el regreso a Valencia en 1968 fue un punto de inflexión en la vida de Paz Arés
+                        Osset</strong>. A
+                    través de los desafíos de adaptación y las oportunidades de crecimiento, Valencia se convirtió en el
+                    escenario de su
+                    adolescencia y los inicios de su carrera de magisterio. La ciudad, con su rica cultura y vibrante
+                    vida social, dejó
+                    una huella indeleble en su corazón, marcando el comienzo de un viaje que definiría su vida y su
+                    obra.</p>
+
+
+
+
+            </div>
+
+            <div class="italian language" style="display: none;">
+                <!-- Italian description here -->
+                <p>Nel 1968, la famiglia di Paz Arés Osset fu costretta a tornare in Spagna dopo la perdita di Sidi
+                    Ifni, un'enclave
+                    spagnola sulla costa atlantica del Marocco. Questo ritorno segnò l'inizio di una nuova fase nella
+                    vita di Paz, una
+                    fase che sarebbe stata sia impegnativa che trasformativa.</p>
+
+                <p>Sidi Ifni era stata una parte significativa del Protettorato spagnolo in Marocco, ma le pressioni
+                    politiche e
+                    militari portarono alla sua restituzione al Marocco nel 1969. Per la famiglia Arés, questo
+                    cambiamento significava
+                    lasciare una vita costruita in mezzo a conflitti e tensioni. Il passaggio a Valencia fu un sollievo
+                    dall'incertezza
+                    di vivere in una zona di conflitto, ma presentava anche le sue sfide.</p>
+
+                <p>Un anno prima del ritorno ufficiale della famiglia, Paz fu mandata a Valencia dai suoi genitori, che
+                    sapevano in
+                    anticipo che Sidi Ifni sarebbe stata consegnata al Marocco, ma non volevano preoccuparla. Così, Paz
+                    si trasferì con
+                    calma, senza conoscere la vera ragione dietro il suo trasferimento.</p>
+
+                <p>Durante il Natale del 1968, Paz tornò a Sidi Ifni e poté apprezzare di più il luogo e i suoi amici.
+                    Le celebrazioni
+                    collettive e l'unione tra tutti gli spagnoli che vivevano lì erano palpabili. Anche un gruppo
+                    musicale animò uno
+                    degli eventi, e uno dei suoi membri visitò Paz a Valencia, mostrandole una città ancora nuova per
+                    lei.</p>
+
+                <p>A Valencia, Paz viveva da sola con sua nonna materna, Amelia, che si trasferì nella casa di famiglia
+                    per non
+                    lasciarla sola. Sebbene Paz dedicasse molto tempo allo studio, frequentava una chiesa dove si
+                    organizzavano balli,
+                    introdotta dalla sua amica Marina. A volte, una volta alla settimana, Paz si concedeva una pausa e
+                    si univa al
+                    gruppo per ballare.</p>
+
+                <p>Nel 1969, Paz iniziò a dipingere a olio. Inoltre, pranzava al Colegio de las Escolapias, dove non era
+                    interna ma
+                    pranzava. Paz spesso mangiava quello che le altre ragazze lasciavano nei loro piatti.</p>
+
+                <p>Con sua nonna Amelia, Paz manteneva alcune conversazioni, anche se poche, a causa della sua intensa
+                    dedizione allo
+                    studio. Durante la cena, a volte scambiavano parole. Sua nonna era una donna ammirevole che
+                    camminava un'ora ogni
+                    giorno fino alla cattedrale di Valencia, sostenendo che fosse salutare. Ispirata da sua nonna, Paz
+                    iniziò a
+                    camminare fino al Colegio de las Escolapias, un tragitto di 30 minuti al giorno, che sembrava molto
+                    rispetto a Sidi
+                    Ifni, dove tutto era a 10 minuti di distanza.</p>
+
+                <p>Valencia, con la sua vibrante vita urbana e la sua ricca cultura mediterranea, era un mondo
+                    completamente diverso da
+                    quello che Paz conosceva a Sidi Ifni. La città offriva nuove opportunità, ma richiedeva anche un
+                    adattamento
+                    significativo da parte della famiglia. Per Paz, allora adolescente, questo cambiamento fu
+                    particolarmente
+                    impattante. Si trovava in una fase cruciale del suo sviluppo personale e accademico, e il
+                    trasferimento
+                    rappresentava sia una rottura che un nuovo inizio.</p>
+
+                <p>L'adattamento a Valencia non fu facile. Paz dovette integrarsi in un nuovo ambiente scolastico, il
+                    Colegio de las
+                    Escolapias, dove si trovò ad affrontare un livello educativo molto superiore a quello che aveva
+                    ricevuto a Sidi
+                    Ifni. Questa disparità accademica fu un duro colpo per lei, abituata a un sistema educativo meno
+                    esigente e con meno
+                    risorse. La differenza nel livello di istruzione la fece sentire fuori posto e provare una grande
+                    pressione per
+                    mettersi al passo.</p>
+
+                <p>Il perfezionismo di Paz, una caratteristica che l'avrebbe accompagnata per tutta la vita,
+                    <strong>probabilmente come
+                        effetto derivato da complicazioni alla nascita che fecero sì che nel cervello di Paz si
+                        imprimessero la paura di
+                        una morte imminente e la necessità di analizzare continuamente ogni dettaglio che potrebbe
+                        andare
+                        storto</strong>, si manifestò in modo intenso durante questo periodo. Determinata a superare i
+                    suoi limiti e
+                    raggiungere il livello delle sue compagne, Paz dedicò lunghe ore allo studio. Questo sforzo
+                    incessante, sebbene
+                    estenuante, fu anche una testimonianza della sua determinazione e del suo spirito instancabile.
+                </p>
+
+                <p>Nonostante le sfide, il ritorno a Valencia offrì anche opportunità uniche per la crescita personale e
+                    professionale
+                    di Paz. La città, nota per il suo ricco patrimonio culturale e il suo ambiente dinamico, fornì un
+                    contesto
+                    stimolante per una giovane curiosa e creativa come lei. Valencia, con le sue festività, monumenti
+                    storici e vita
+                    sociale attiva, divenne una fonte costante di ispirazione.</p>
+
+                <p>Inoltre, la vita a Valencia permise a Paz di entrare in contatto con nuove amicizie e comunità.
+                    Queste relazioni non
+                    solo le fornirono supporto emotivo durante i momenti difficili, ma ampliarono anche la sua visione
+                    del mondo e i
+                    suoi orizzonti culturali. La connessione con la comunità locale e la partecipazione agli eventi
+                    sociali e culturali
+                    arricchirono la sua esperienza e contribuirono al suo sviluppo integrale.</p>
+
+                <p>Il tempo trascorso a Valencia fu fondamentale per preparare Paz alla sua futura carriera di
+                    insegnante. L'educazione
+                    ricevuta al Colegio de las Escolapias, sebbene impegnativa, la dotò di una solida base di conoscenze
+                    e competenze.
+                    Questo periodo di intenso studio e adattamento rafforzò anche il suo carattere, insegnandole lezioni
+                    di
+                    perseveranza, resilienza e auto-motivazione.</p>
+
+                <p>Pertanto, <strong>il ritorno a Valencia nel 1968 fu un punto di svolta nella vita di Paz Arés
+                        Osset</strong>.
+                    Attraverso le sfide dell'adattamento e le opportunità di crescita, Valencia divenne il palcoscenico
+                    della sua
+                    adolescenza e degli inizi della sua carriera di insegnante. La città, con la sua ricca cultura e la
+                    sua vibrante
+                    vita sociale, lasciò un'impronta indelebile nel suo cuore, segnando l'inizio di un viaggio che
+                    avrebbe definito la
+                    sua vita e la sua opera.</p>
+
+
+            </div>
+
+            <div class="chinese language" style="display: none;">
+                <!-- Chinese description here -->
+                <p>1968年，在失去西属伊弗尼后，Paz Arés Osset 的家人被迫返回西班牙。这次回归标志着Paz生活的新阶段，这一阶段既充满挑战又具有变革性。</p>
+
+                <p>西属伊弗尼曾是西班牙保护国在摩洛哥的重要组成部分，但政治和军事压力导致其在1969年归还摩洛哥。对于Arés一家来说，这一变化意味着离开在冲突和紧张中建立的生活。转移到瓦伦西亚是从生活在冲突地区的不确定性中解脱出来，但也带来了自身的挑战。
+                </p>
+
+                <p>在家人正式返回的前一年，Paz被父母送到了瓦伦西亚，他们提前知道西属伊弗尼将移交给摩洛哥，但不想让她担心。因此，Paz平静地搬家，不知道背后的真正原因。</p>
+
+                <p>1968年的圣诞节期间，Paz返回西属伊弗尼，能够更好地欣赏这个地方和她的朋友们。集体庆祝活动和居住在那里的所有西班牙人之间的团结是显而易见的。甚至有一个乐队为其中一个活动增色，其中一个成员在瓦伦西亚拜访了Paz，向她展示了这座对她来说仍然陌生的城市。
+                </p>
+
+                <p>在瓦伦西亚，Paz与她的外祖母Amelia单独生活，Amelia搬到家庭住宅来陪伴她。尽管Paz花了很多时间学习，但她在朋友Marina的介绍下参加了一个教堂组织的舞会。有时，一周一次，Paz允许自己休息一下，加入舞会。
+                </p>
+
+                <p>1969年，Paz开始学习油画。此外，她在Escolapias学院吃午饭，虽然她不是寄宿生，但她在那里吃午餐。Paz经常吃其他女孩剩下的食物。</p>
+
+                <p>Paz与她的外祖母Amelia保持着一些对话，虽然不多，因为她非常专注于学习。有时在晚餐时，她们会互相交流几句话。她的外祖母是一个令人钦佩的女人，每天步行一小时到瓦伦西亚大教堂，认为这对健康有益。受到她外祖母的启发，Paz开始步行到Escolapias学院，每天需要30分钟的路程，这比在西属伊弗尼感觉长得多，在那里一切都是10分钟的距离。
+                </p>
+
+                <p>瓦伦西亚以其充满活力的城市生活和丰富的地中海文化，是一个与Paz在西属伊弗尼所知的完全不同的世界。这座城市提供了新的机会，但也需要家庭进行重大的适应。对于当时还是青少年的Paz来说，这一变化尤其具有影响力。她正处于个人和学术发展的关键阶段，搬迁既是一次破裂，又是一个新的开始。
+                </p>
+
+                <p>适应瓦伦西亚并不容易。Paz必须融入新的学校环境，Escolapias学院，她在那里面临着比她在西属伊弗尼接受的教育水平高得多的教育。这种学术差距对她来说是一个沉重的打击，她习惯了一个要求较低、资源较少的教育系统。教育水平的差异让她感到格格不入，并经历了巨大的压力来赶上进度。
+                </p>
+
+                <p>Paz的完美主义是她一生伴随的特质，<strong>可能是由于出生时的并发症，在她的大脑中印刻了对即将死亡的恐惧，她必须不断分析可能出错的任何细节</strong>，在这一时期表现得尤为强烈。Paz决心克服自己的局限，达到同学们的水平，她花了长时间学习。虽然这种不断的努力令人筋疲力尽，但也是她决心和不屈不挠精神的见证。
+                </p>
+
+                <p>尽管面临挑战，回到瓦伦西亚也为Paz的个人和职业成长提供了独特的机会。这座城市以其丰富的文化遗产和充满活力的环境，为像她这样好奇和有创造力的年轻女性提供了一个激励性的环境。瓦伦西亚及其节日、历史古迹和活跃的社交生活成为了她不断的灵感来源。
+                </p>
+
+                <p>此外，瓦伦西亚的生活使Paz能够结识新朋友和社区。这些关系不仅在困难时期为她提供了情感支持，还拓宽了她的世界观和文化视野。与当地社区的联系和参与社交文化活动丰富了她的经验，并有助于她的全面发展。</p>
+
+                <p>在瓦伦西亚度过的时光对于Paz未来的教师职业生涯至关重要。在Escolapias学院接受的教育，虽然具有挑战性，但为她提供了坚实的知识和技能基础。这段紧张学习和适应的时期也增强了她的性格，教会了她坚持不懈、适应力和自我激励的课程。
+                </p>
+
+                <p>因此，<strong>1968年回到瓦伦西亚是Paz Arés
+                        Osset生活中的一个转折点</strong>。通过适应的挑战和成长的机会，瓦伦西亚成为她青春期和教学生涯初期的舞台。这座城市以其丰富的文化和充满活力的社交生活，在她的心中留下了不可磨灭的印记，标志着定义她生活和作品的旅程的开始。
+                </p>
+
+
+            </div>
+
+            <div class="arabic language" style="display: none;">
+                <!-- Arabic  description here -->
+                <p>في عام 1968، اضطرت عائلة باز أريس أوسيت إلى العودة إلى إسبانيا بعد خسارة سيدي إفني، وهي منطقة إسبانية
+                    على الساحل
+                    الأطلسي للمغرب. هذه العودة كانت بداية مرحلة جديدة في حياة باز، مرحلة ستكون مليئة بالتحديات
+                    والتحولات.</p>
+
+                <p>كانت سيدي إفني جزءًا مهمًا من الحماية الإسبانية في المغرب، ولكن الضغوط السياسية والعسكرية أدت إلى
+                    عودتها إلى المغرب
+                    في عام 1969. بالنسبة لعائلة أريس، كان هذا التغيير يعني ترك حياة بنيت في وسط النزاعات والتوترات.
+                    الانتقال إلى فالنسيا
+                    كان متنفسًا من عدم اليقين الذي تسببه العيش في منطقة نزاع، ولكنه قدم أيضًا تحدياته الخاصة.</p>
+
+                <p>قبل عام من عودة العائلة الرسمية، أرسل والدا باز إلى فالنسيا، كانا يعلمان مسبقًا أن سيدي إفني ستسلم
+                    إلى المغرب، لكنهما
+                    لم يرغبا في قلقها. وهكذا، انتقلت باز بهدوء، دون أن تعرف السبب الحقيقي وراء انتقالها.</p>
+
+                <p>خلال عطلة عيد الميلاد عام 1968، عادت باز إلى سيدي إفني وتمكنت من تقدير المكان وأصدقائها أكثر. كانت
+                    الاحتفالات
+                    الجماعية والوحدة بين جميع الإسبان الذين يعيشون هناك واضحة. حتى أن فرقة موسيقية أحيت أحد الفعاليات،
+                    وزار أحد أعضائها
+                    باز في فالنسيا، حيث أراها مدينة جديدة تمامًا بالنسبة لها.</p>
+
+                <p>في فالنسيا، كانت باز تعيش وحدها مع جدتها لأمها، أميليا، التي انتقلت إلى المنزل العائلي حتى لا تكون
+                    وحدها. على الرغم
+                    من أن باز كرست الكثير من الوقت للدراسة، إلا أنها حضرت الكنيسة حيث تم تنظيم الرقصات، والتي قدمتها
+                    صديقتها مارينا. في
+                    بعض الأحيان، مرة واحدة في الأسبوع، كانت باز تأخذ قسطًا من الراحة وتنضم إلى المجموعة للرقص.</p>
+
+                <p>في عام 1969، بدأت باز في الرسم بالزيت. بالإضافة إلى ذلك، كانت تبقى لتناول الغداء في مدرسة Escolapias،
+                    حيث لم تكن
+                    داخلية لكنها كانت تتناول الغداء. غالبًا ما كانت باز تأكل ما تتركه الفتيات الأخريات في أطباقهن.</p>
+
+                <p>كانت باز تتحدث مع جدتها أميليا في بعض الأحيان، رغم أن هذه المحادثات كانت قليلة بسبب تفانيها الشديد في
+                    الدراسة. خلال
+                    العشاء، كانت تتبادل الكلمات أحيانًا. كانت جدتها امرأة مثيرة للإعجاب، كانت تمشي ساعة كل يوم إلى
+                    كاتدرائية فالنسيا،
+                    معتقدة أن ذلك مفيد للصحة. مستوحاة من جدتها، بدأت باز في المشي إلى مدرسة Escolapias، وهي رحلة تستغرق
+                    30 دقيقة يوميًا،
+                    والتي كانت تعتبر طويلة مقارنة بسيدي إفني، حيث كانت كل شيء على بعد 10 دقائق.</p>
+
+                <p>كانت فالنسيا بحياتها الحضرية النابضة بالحياة وثقافتها المتوسطية الغنية عالمًا مختلفًا تمامًا عن ما
+                    عرفته باز في سيدي
+                    إفني. كانت المدينة تقدم فرصًا جديدة، ولكنها تتطلب أيضًا تكيفًا كبيرًا من العائلة. بالنسبة لباس، التي
+                    كانت مراهقة
+                    آنذاك، كان هذا التغيير مؤثرًا بشكل خاص. كانت في مرحلة حاسمة من تطورها الشخصي والأكاديمي، وكان
+                    الانتقال يمثل كسرًا
+                    وبداية جديدة.</p>
+
+                <p>لم يكن التكيف مع فالنسيا سهلاً. كان على باز أن تندمج في بيئة مدرسية جديدة، مدرسة Escolapias، حيث
+                    واجهت مستوى تعليميًا
+                    أعلى بكثير مما تلقته في سيدي إفني. كانت هذه الفجوة الأكاديمية ضربة قوية لها، حيث كانت معتادة على
+                    نظام تعليمي أقل
+                    صرامة وبموارد أقل. جعلها الاختلاف في مستوى التعليم تشعر بأنها خارج المكان وتجربة ضغط كبير لتلحق
+                    بالركب.</p>
+
+                <p>كان الكمال لباس، وهي سمة سترافقها طوال حياتها، <strong>ربما نتيجة لمضاعفات الولادة التي جعلت في دماغ
+                        باز يسجل خوفًا
+                        من الموت الوشيك مما جعلها تحلل باستمرار أي تفصيل يمكن أن يسوء</strong>، ظهر بقوة خلال هذه
+                    الفترة. عازمة على
+                    تجاوز قيودها والوصول إلى مستوى زميلاتها، كرست باز ساعات طويلة للدراسة. هذا الجهد المستمر، رغم أنه
+                    كان مرهقًا، كان
+                    أيضًا دليلًا على تصميمها وروحها التي لا تعرف الكلل.</p>
+
+                <p>بالرغم من التحديات، قدمت العودة إلى فالنسيا فرصًا فريدة للنمو الشخصي والمهني لباس. المدينة، المعروفة
+                    بتراثها الثقافي
+                    الغني وبيئتها الديناميكية، وفرت بيئة محفزة لشابة فضولية ومبدعة مثلها. أصبحت فالنسيا، باحتفالاتها،
+                    معالمها التاريخية،
+                    وحياتها الاجتماعية النشطة، مصدر إلهام دائم.</p>
+
+                <p>علاوة على ذلك، سمحت الحياة في فالنسيا لباس بالاتصال بأصدقاء جدد ومجتمعات جديدة. لم توفر هذه العلاقات
+                    لها الدعم
+                    العاطفي خلال الأوقات الصعبة فحسب، بل وسعت أيضًا رؤيتها للعالم وآفاقها الثقافية. كان الاتصال بالمجتمع
+                    المحلي
+                    والمشاركة في الأنشطة الاجتماعية والثقافية يثري تجربتها ويساهم في تنميتها الشاملة.</p>
+
+                <p>كانت الفترة التي قضتها في فالنسيا أساسية لإعداد باز لمسيرتها المستقبلية كمدرسة. التعليم الذي تلقته في
+                    مدرسة
+                    Escolapias، رغم التحديات، زودها بأساس متين من المعرفة والمهارات. كما أن هذه الفترة من الدراسة
+                    المكثفة والتكيف عززت
+                    شخصيتها، حيث علمتها دروس المثابرة، المرونة، والتحفيز الذاتي.</p>
+
+                <p>لذلك، <strong>كانت العودة إلى فالنسيا في عام 1968 نقطة تحول في حياة باز أريس أوسيت</strong>. من خلال
+                    تحديات التكيف
+                    وفرص النمو، أصبحت فالنسيا مسرحًا لمراهقتها وبداية مسيرتها التدريسية. المدينة، بثقافتها الغنية
+                    وحياتها الاجتماعية
+                    النابضة بالحياة، تركت بصمة لا تمحى في قلبها، مما جعلها بداية رحلة ستعرف حياتها وأعمالها.</p>
+
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('language-select').addEventListener('change', function () {
+                // Hide all language elements
+                document.querySelectorAll('.language').forEach(function (element) {
+                    element.style.display = 'none';
+                });
+
+                // Show selected language elements
+                document.querySelectorAll('.' + this.value).forEach(function (element) {
+                    element.style.display = 'block';
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

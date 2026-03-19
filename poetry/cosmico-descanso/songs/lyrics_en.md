@@ -74,3 +74,58 @@ My dancer.
 [Guitar feedback turns into a soft, harmonic hum]
 [Female Voice: Whisper of gratitude]
 Thank you Maria Paz Arés Osset for allowing us, through this poem, to express the ecstasy of cosmic rest and the beauty of the dance.
+
+---
+
+Genre: Reggaeton Dance House Soca Christian Worship
+Mood: euphoric, spiritual, triumphant, fiery, uplifting
+Energy: festival anthem, explosive drops, emotional worship build
+Vocals: powerful female lead, layered harmonies, choir backing
+Tempo: 100–108 BPM
+Production: deep bass, tropical percussion, atmospheric pads, risers, crowd chants
+Influence: dancehall worship, global pop, club revival energy
+Theme: spiritual awakening, rising from depth, inner transformation through Yeshua
+
+## ⚡ SONG 3: CELESTIAL AWAKENING (GLOBAL FESTIVAL WORSHIP)
+**Style:** [Genre: Reggaeton Dance House Soca Christian Worship | Mood: euphoric, spiritual, triumphant, fiery, uplifting | Energy: festival anthem, explosive drops, emotional worship build | Vocals: powerful female lead, layered harmonies, choir backing | Tempo: 100–108 BPM | Production: deep bass, tropical percussion, atmospheric pads, risers, crowd chants | Influence: dancehall worship, global pop, club revival energy]
+
+[Intro]
+[Deep sub-bass hum, tropical atmospheric pads, distant crowd cheering]
+[Choir: Ethereal harmonies humming]
+
+[Verse 1]
+[Reggaeton kick begins, tropical percussion accents]
+[Vocals: Powerful, commanding female lead]
+Light ballerina of aquamarine...
+In circles of white tulle... divine!
+Crystalline beauty, so feminine,
+Resting, Venus-like, she reclines.
+
+[Pre-Chorus]
+[Soca rhythmic energy building, rising synth textures]
+Rest for the wanderer, cosmic and bright,
+Present at her feet, emerging from the night.
+To dance like a swan!
+To fly like a swallow!
+
+[Chorus]
+[Explosive Drop: Triumphant Dance House beat, spiritual fire]
+SHINE! Like glitter in the sky!
+SHINE! My dancer, soaring high!
+Cosmic Rest! Divine transformation!
+Rising from the depths! Heavenly celebration!
+
+[Bridge]
+[Atmospheric pads, crowd chants rising: "Holy, Holy, Holy"]
+[Vocals: Layered choir harmonies building glory]
+Beyond the scenes, the light appears,
+Washing away the cosmic years.
+Pure beauty...
+Pure grace...
+
+[Outro]
+[Rhythmic outro with fading tropical percussion and choir backing]
+[Vocals: Soulful and triumphant]
+Thank you Maria Paz Arés Osset for this sacred vision, for allowing us to express the cry of freedom and the joy of the cosmic dance.
+Paz Arés Osset... Thank you.
+[Choir fades out with a triumphant chord]

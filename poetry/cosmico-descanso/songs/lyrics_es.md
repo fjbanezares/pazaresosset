@@ -62,7 +62,7 @@ En círculos de blancos tules... divina.
 [Recitation]
 Belleza cristalina... tan femenina.
 Reposando... venusina... se reclina.
-Descanso del ser de cósmica andarina...
+Descanso del ser de cómica andarina...
 Presente en sus pies tras bambalinas.
 
 [Recitation: Rising emotion]
@@ -74,3 +74,38 @@ Mi danzarina.
 [Guitar feedback turns into a soft, harmonic hum]
 [Female Voice: Whisper of gratitude]
 Gracias María Paz Arés Osset por permitir con este poema expresar el éxtasis del descanso cósmico y la belleza de la danza.
+
+---
+
+## ⚡ CANCIÓN 3: ATARDECER EN EL COSMOS (HOUSE IBIZA FLAMENCO)
+**Style:** [Style: Deep House, relaxed Ibiza sunset vibe, warm analog bassline, soft chillout percussion, subtle acoustic flamenco guitar chords, ethereal atmospheric textures, sophisticated and elegant, 115 BPM, passionate but calm Spanish female recitation, sunset feeling]
+
+[Intro]
+[Waves of space ambient, soft flamenco guitar plucking rhythmic chords]
+[Female Voice: Intimately whispered]
+Descanso cósmico... paz...
+
+[Verse 1]
+[Smooth deep house beat kicks in, melodic and warm]
+Ligera bailarina de aguamarina
+En círculos de blancos tules, divina.
+Belleza cristalina, tan femenina
+Reposando, venusina, se reclina...
+
+[Chorus]
+[Music expands with a warm saxophone or soft flute layer]
+Descanso del ser de cósmica andarina
+Presente en sus pies tras bambalinas.
+Para danzar... para brillar.
+
+[Verse 2]
+[Spanish guitar solo: soulful, brief, flamenco style but modern]
+Para danzar cual cisne o golondrina
+Y brillar... cual purpurina... 
+Mi danzarina.
+
+[Outro]
+[Beat slows down, guitar lingers, cosmic pads fade]
+[Female Voice: Soulful closing]
+Gracias Paz Arés Osset por esta experiencia tan profunda, por esta danza del alma entre las estrellas.
+Gracias.

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jocs Florals</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            font-size: 1.7rem;
+            color: #fff;
+        }
+
+        .custom-header {
+            padding: 2rem 1rem;
+            text-align: center;
+            color: inherit;
+            background-color: black;
+        }
+
+        .custom-select-lg {
+            font-size: 3rem;
+            line-height: 1.2;
+            padding: .5rem 1rem;
+            height: auto;
+        }
+
+        .custom-header h1 {
+            margin-top: 40px;
+            font-family: 'Montserrat', sans-serif;
+            color: magenta;
+            font-weight: 700;
+        }
+
+        .multilingual-description {
+            font-size: 3rem;
+            margin-top: 30px;
+            border: 2px solid magenta;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        .language-desc {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .main-description {
+            margin-top: 20px;
+        }
+
+        .description {
+            margin: 12px;
+            color: white;
+            font-family: 'Lemonada', cursive;
+        }
+
+        .audio {
+            text-align: center;
+            border: 20px;
+            padding: 0;
+            margin: 0;
+            width: min-content;
+            height: min-content;
+            top: 40px;
+        }
+
+        .buttonAudio {
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position-fixed d-flex justify-content-end p-4" style="position: fixed; right:0; top: 1; z-index: 1;">
+        <select id="language-select" class="custom-select-lg">
+            <option value="english">English</option>
+            <option value="spanish">Español</option>
+            <option value="italian">Italiano</option>
+            <option value="chinese">中文</option>
+            <option value="arabic">العربية</option>
+        </select>
+    </div>
+
+    <div class="custom-header">
+        <a class="brand" href="https://www.pazaresosset.es">
+            <img src="../../logopazares.png" style="
+                        position:absolute; 
+                        margin: 10px;
+                        top:0px; 
+                        left:0px;" alt="Paz Arés Osset, the Artist">
+        </a>
+        <h1 class="display-4 language english">Paz Arés, the Artist</h1>
+        <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
+        <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
+        <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
+        <h1 class="display-4 language arabic" style="display: none;">الفنانة باز أريس</h1>
+
+        <h2 class="language english">Floral Games</h2>
+        <h2 class="language spanish" style="display: none;">Juegos Florales</h2>
+        <h2 class="language italian" style="display: none;">Giochi Floreali</h2>
+        <h2 class="language chinese" style="display: none;">花卉游戏</h2>
+        <h2 class="language arabic" style="display: none;">الألعاب الزهرية</h2>
+
+
+
+    </div>
+
+
+
+
+    <section style="margin-top: 30px; text-align: center; font-size: 2em;">
+        <div style="display: inline-block; text-align: left;">
+            <div class="english language">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">Return to
+                            Valencia</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">Educational
+                            Challenges</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">Meeting Marina
+                            Moscardó</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">Passion for Las
+                            Fallas</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">Academic and
+                            Professional
+                            Aspirations</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">Influence of
+                            Valencia</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">First Love and
+                            Cultural
+                            Barriers</a></li>
+                </ul>
+            </div>
+
+            <div class="spanish language" style="display: none;">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">Regreso a
+                            Valencia</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">Desafíos
+                            Educativos</a></li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">Encuentro con Marina
+                            Moscardó</a></li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">Pasión por Las
+                            Fallas</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">Aspiraciones
+                            Académicas y
+                            Profesionales</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">Influencia de
+                            Valencia</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">Primer Amor y
+                            Barreras
+                            Culturales</a></li>
+                </ul>
+            </div>
+
+            <div class="italian language" style="display: none;">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">Ritorno a
+                            Valencia</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">Sfide Educative</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">Incontro con Marina
+                            Moscardó</a></li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">Passione per Las
+                            Fallas</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">Aspirazioni
+                            Accademiche e
+                            Professionali</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">Influenza di
+                            Valencia</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">Primo Amore e
+                            Barriere
+                            Culturali</a></li>
+                </ul>
+            </div>
+
+            <div class="chinese language" style="display: none;">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">回到瓦伦西亚</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">教育挑战</a></li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">与玛丽娜·莫斯卡多的相遇</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">对Las Fallas的热爱</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">学术和职业抱负</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">瓦伦西亚的影响</a></li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">初恋和文化障碍</a></li>
+                </ul>
+            </div>
+
+            <div class="arabic language" style="display: none;">
+                <ul style="list-style-type: disc; padding-right: 20px; direction: rtl;">
+                    <li style="margin: 10px 0;"><a href="regreso_valencia.html"
+                            style="color: lime; text-decoration: none;">العودة إلى
+                            فالنسيا</a></li>
+                    <li style="margin: 10px 0;"><a href="desafios_educativos.html"
+                            style="color: lime; text-decoration: none;">التحديات
+                            التعليمية</a></li>
+                    <li style="margin: 10px 0;"><a href="encuentro_marina.html"
+                            style="color: lime; text-decoration: none;">لقاء مع مارينا
+                            موسكاردو</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="pasion_fallas.html"
+                            style="color: lime; text-decoration: none;">الشغف بـ Las
+                            Fallas</a></li>
+                    <li style="margin: 10px 0;"><a href="aspiraciones_academicas.html"
+                            style="color: lime; text-decoration: none;">التطلعات الأكاديمية
+                            والمهنية</a></li>
+                    <li style="margin: 10px 0;"><a href="influencia_valencia.html"
+                            style="color: lime; text-decoration: none;">تأثير فالنسيا</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="primer_amor.html"
+                            style="color: lime; text-decoration: none;">الحب الأول والحواجز
+                            الثقافية</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="main-image" style="text-align: center;">
+        <div style="display: inline-block; text-align: center;">
+            <div style="margin: 0 auto;">
+                <div style="margin: 10px 0; display: inline-block;">
+
+                    <img src="Jocs Florals-EDIT.jpg" width="80%" style="border:11px solid white; margin-bottom: 20px;"
+                        alt="Amazing">
+
+                </div>
+                <div style="margin: 10px 0; display: inline-block;">
+
+                    <img src="jocs florals.jpg" width="80%" style="border:11px solid white; margin-bottom: 20px;"
+                        alt="Amazing">
+
+                </div>
+
+                <div style="margin: 10px 0; display: inline-block;">
+
+                    <img src="jocs florals 2.jpg" width="80%" style="border:11px solid white; margin-bottom: 20px;"
+                        alt="Amazing">
+
+                </div>
+
+                <div style="margin: 10px 0; display: inline-block;">
+
+                    <img src="jocs florals 3.jpg" width="80%" style="border:11px solid white; margin-bottom: 20px;"
+                        alt="Amazing">
+
+                </div>
+
+                <div style="margin: 10px 0; display: inline-block;">
+
+                    <img src="Jocs Florals2-ret.jpg" width="80%" style="border:11px solid white; margin-bottom: 20px;"
+                        alt="Amazing">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="multilingual-description">
+        <div class="container">
+            <h2 class="language english">Floral Games</h2>
+            <h2 class="language spanish" style="display: none;">Juegos Florales</h2>
+            <h2 class="language italian" style="display: none;">Giochi Floreali</h2>
+            <h2 class="language chinese" style="display: none;">花卉游戏</h2>
+            <h2 class="language arabic" style="display: none;">الألعاب الزهرية</h2>
+
+
+
+
+            <div class="english language">
+                <!-- English description here -->
+                <h2 style="color: #FFD700;">Invitation as Maid of Honor</h2>
+                <p>When Paz Arés Osset was a child, she received a very special invitation that filled her with pride
+                    and excitement.
+                    The mayor of Valencia, recognizing her grace, charm, and potential, personally sent her a letter
+                    inviting her to be
+                    part of the Cort d'Honor de la Regina dels Jocs Florals de Valencia. This festival, of great
+                    cultural and social
+                    relevance in the region, not only celebrated Valencian traditions but also honored young women who
+                    stood out in the
+                    community.</p>
+                <p>Participating in the Cort d'Honor was a significant honor that marked Paz as a prominent and
+                    appreciated young woman
+                    in Valencian society. This event represented much more than a series of celebrations; it was a
+                    recognition of her
+                    vibrant spirit and contribution to the community. Being part of the Cort d'Honor allowed Paz to have
+                    unforgettable
+                    experiences and connect deeply with the rich culture and traditions of her homeland, influences that
+                    would later be
+                    reflected in her artistic work.</p>
+                <p>The festival program began on July 28, 1971, when Paz, accompanied by her friend Aziz Aghabi, would
+                    attend Restaurant
+                    Viveros at 9:15 p.m. That night, a very special dinner would be held where the Regina would be
+                    officially presented
+                    to her Cort d'Honor. For this occasion, Paz was expected to wear an elegant street dress,
+                    appropriate for the
+                    solemnity of the event. The night was full of excitement and anticipation, and Paz, with her natural
+                    elegance, shone
+                    among the maids of honor.</p>
+                <p>On July 30, the day would start early for Paz. At 11:30 a.m., she had to be ready for her companion
+                    to take her to
+                    the Basilica of the Verge dels Desemparats, where a blessing ceremony would take place at 12:30 p.m.
+                    After this
+                    religious act, everyone would head back to Restaurant Viveros to enjoy a lunch in honor of the
+                    Regina and her court.
+                    Again, Paz would wear a street dress for this part of the event, showing her sophistication and
+                    respect for the
+                    traditions.</p>
+                <p>That same night, at 10:00 p.m., Aziz would pick up Paz to take her to the Regina's residence. From
+                    there, in a
+                    festive procession, they would move to the main party. After the celebration, the group would head
+                    to the Valencian
+                    Equestrian Society, where a dance would be held in honor of the Regina and her court. For this
+                    occasion, Paz would
+                    wear the traditional Valencian dress, thus immersing herself even more deeply in the local
+                    traditions and culture.
+                    The night was filled with music, dance, and joy, and Paz, with her energy and charisma, stood out at
+                    every moment.
+                </p>
+                <p>On July 31, the festival would culminate with the spectacular Battle of Flowers. At 5:00 p.m., the
+                    Queen would pick
+                    up Paz so that they could attend this colorful event together, which again required the Valencian
+                    dress,
+                    highlighting the beauty and tradition of the region. The Battle of Flowers, with its parades and
+                    floral displays,
+                    was a perfect ending to the celebration, filling the air with color and fragrance.</p>
+
+                <h2 style="color: #FFD700;">Meeting and Relationship with Aziz Aghabi</h2>
+                <p>Paz and Aziz had previously met during a walk along the beach of Valencia. This tall, dark-haired
+                    Palestinian young
+                    man approached Paz with a warm smile and a kindness that immediately captivated her. The casual
+                    encounter soon
+                    turned into a deep friendship and eventually a significant relationship.</p>
+                <p>Paz fondly and emotionally recalls her first kiss of love, which was with Aziz. This relationship,
+                    which could have
+                    been seen as controversial in a conservative society, became an early manifestation of her empathy
+                    and deep
+                    understanding of humanity. Aziz not only showed her love but also explained to her the complex and
+                    painful issues of
+                    Palestine. At 17, Paz immersed herself in the history of an endless conflict, awakening in her a
+                    sense of compassion
+                    and a quest for justice that has permeated her life and work.</p>
+
+                <h2 style="color: #FFD700;">Reflections and Social Commitment</h2>
+                <p>At 17, Paz immersed herself in the complex and painful history of Palestine. This early understanding
+                    of global
+                    conflicts and injustices awakened in her a sense of compassion and a quest for justice that has
+                    permeated her life
+                    and work. The sad history of Palestine, with its seemingly endless challenges, left a lasting mark
+                    on her heart.</p>
+                <p>Reflecting on her experiences and connection with Palestine, Paz wrote about the pain and hope during
+                    a particularly
+                    bittersweet Christmas. In her writings, she expressed the bitterness of seeing the ongoing struggle
+                    and suffering,
+                    but also a firm belief in the possibility of peace and justice. For Paz, the solution to the world's
+                    problems lies
+                    in love, respect for human rights, and spiritual unity.</p>
+
+                <h2 style="color: #FFD700;">Influence on Her Artistic Work</h2>
+                <p>In her work, Paz often turns to poetry, music, and art as means to raise awareness and foster the
+                    reconstruction of a
+                    better world. She fervently believes in the need to embrace fraternity among all people and
+                    religions, and in the
+                    importance of artistic expressions to heal and unite. Paz's relationship with Aziz Aghabi and her
+                    connection with
+                    Palestine not only marked her youth but also cemented her commitment to social justice and peace.
+                </p>
+
+                <h2 style="color: #FFD700;">Conclusion</h2>
+                <p>The invitation to the festival as Maid of Honor and the relationship with Aziz Aghabi were
+                    transformative events in
+                    the life of Paz Arés Osset. These moments not only enriched her social and cultural life in Valencia
+                    but also
+                    provided her with a deep perspective on social justice and human rights. The relationship with Aziz
+                    became an
+                    integral part of her identity, influencing her art and activism. Through her works, Paz continues to
+                    advocate for a
+                    world where everyone can live in harmony and where cultural and religious divisions are overcome by
+                    love and mutual
+                    understanding.</p>
+
+            </div>
+
+            <div class="spanish language" style="display: none;">
+                <!-- Spanish description here -->
+                <h2 style="color: #FFD700;">Invitación como Dama de Honor</h2>
+                <p>Cuando Paz Arés Osset era una niña, recibió una invitación muy especial que la llenó de orgullo y
+                    emoción. El alcalde
+                    de Valencia, reconociendo su gracia, encanto y potencial, le envió personalmente una carta
+                    invitándola a formar
+                    parte de la Cort d'Honor de la Regina dels Jocs Florals de Valencia. Esta festividad, de gran
+                    relevancia cultural y
+                    social en la región, no solo celebraba las tradiciones valencianas, sino que también honraba a las
+                    jóvenes que se
+                    destacaban en la comunidad.</p>
+                <p>La participación en la Cort d'Honor era un honor significativo que señalaba a Paz como una joven
+                    prominente y
+                    apreciada en la sociedad valenciana. Este evento representaba mucho más que una serie de
+                    celebraciones; era un
+                    reconocimiento a su espíritu vibrante y su contribución a la comunidad. Ser parte de la Cort d'Honor
+                    le permitió a
+                    Paz vivir experiencias inolvidables y conectarse profundamente con la rica cultura y las tradiciones
+                    de su tierra
+                    natal, influencias que más tarde se reflejarían en su obra artística.</p>
+                <p>El programa de la festividad comenzaba el 28 de julio de 1971, cuando Paz, acompañada por su amigo
+                    Aziz Aghabi,
+                    asistiría a las 21:15 horas al Restaurant Viveros. Esa noche, se celebraría una cena muy especial en
+                    la que la
+                    Regina sería presentada oficialmente a su Cort d'Honor. Para esta ocasión, se esperaba que Paz
+                    vistiera un elegante
+                    traje de calle, apropiado para la solemnidad del evento. La noche estaba llena de emoción y
+                    expectativa, y Paz, con
+                    su elegancia natural, brillaba entre las damas de honor.</p>
+                <p>El 30 de julio, la jornada empezaría temprano para Paz. A las 11:30 horas, debía estar lista para que
+                    su acompañante
+                    la llevara a la Basílica de la Verge dels Desemparats, donde, a las 12:30 horas, se llevaría a cabo
+                    una ceremonia de
+                    bendición. Después de este acto religioso, todos se dirigirían nuevamente al Restaurant Viveros para
+                    disfrutar de un
+                    almuerzo en honor a la Regina y su corte. Nuevamente, Paz vestiría un traje de calle para esta parte
+                    del evento,
+                    mostrando su sofisticación y respeto por las tradiciones.</p>
+                <p>La misma noche, a las 22:00 horas, Aziz pasaría a recoger a Paz para llevarla al domicilio de la
+                    Regina. Desde allí,
+                    en una comitiva festiva, se trasladarían a la fiesta principal. Tras la celebración, el grupo se
+                    dirigiría a la
+                    Societat Hípica Valenciana, donde se ofrecería un baile en honor a la Regina y su corte. Para esta
+                    ocasión, Paz
+                    vestiría el tradicional traje de valenciana, sumergiéndose así en las tradiciones y cultura locales
+                    de manera aún
+                    más profunda. La noche estaba llena de música, danza y alegría, y Paz, con su energía y carisma, se
+                    destacaba en
+                    cada momento.</p>
+                <p>El 31 de julio, la festividad culminaría con la espectacular Batalla de Flors. A las 17:00 horas, la
+                    Reina pasaría a
+                    recoger a Paz para que juntas asistieran a este colorido evento, que requería nuevamente el traje de
+                    valenciana,
+                    resaltando la belleza y la tradición de la región. La Batalla de Flors, con sus desfiles y
+                    exhibiciones florales,
+                    era un final perfecto para la celebración, llenando el aire de color y fragancia.</p>
+
+                <h2 style="color: #FFD700;">Encuentro y Relación con Aziz Aghabi</h2>
+                <p>Paz y Aziz se habían conocido previamente en un paseo por la playa de Valencia. Este joven palestino,
+                    alto y de pelo
+                    moreno, se acercó a Paz con una sonrisa cálida y una amabilidad que la cautivaron de inmediato. El
+                    encuentro casual
+                    pronto se convirtió en una amistad profunda y, eventualmente, en una relación significativa.</p>
+                <p>Paz recuerda con cariño y emoción su primer beso de amor, que fue con Aziz. Esta relación, que podría
+                    haber sido
+                    vista como controvertida en una sociedad conservadora, se convirtió en una manifestación temprana de
+                    su empatía y su
+                    comprensión profunda de la humanidad. Aziz no solo le mostró el amor, sino que también le explicó la
+                    compleja y
+                    dolorosa problemática de Palestina. A los 17 años, Paz se sumergió en la historia de un conflicto
+                    interminable,
+                    despertando en ella un sentido de compasión y una búsqueda de justicia que han permeado su vida y su
+                    obra.</p>
+
+                <h2 style="color: #FFD700;">Reflexiones y Compromiso Social</h2>
+                <p>A los 17 años, Paz se sumergió en la compleja y dolorosa historia de Palestina. Esta comprensión
+                    temprana de los
+                    conflictos y las injusticias globales despertó en ella un sentido de compasión y una búsqueda de
+                    justicia que han
+                    permeado su vida y su obra. La triste historia de Palestina, con sus desafíos aparentemente
+                    interminables, dejó una
+                    huella duradera en su corazón.</p>
+                <p>Reflexionando sobre sus experiencias y su conexión con Palestina, Paz escribió sobre el dolor y la
+                    esperanza durante
+                    una Navidad particularmente agridulce. En sus escritos, expresaba la amargura de ver la continua
+                    lucha y el
+                    sufrimiento, pero también una firme creencia en la posibilidad de la paz y la justicia. Para Paz, la
+                    solución a los
+                    problemas del mundo radica en el amor, el respeto a los derechos humanos y la unión espiritual.</p>
+
+                <h2 style="color: #FFD700;">Influencia en su Obra Artística</h2>
+                <p>En su obra, Paz a menudo recurre a la poesía, la música y el arte como medios para elevar la
+                    conciencia y fomentar la
+                    reconstrucción de un mundo mejor. Ella cree fervientemente en la necesidad de abrazar la fraternidad
+                    entre todas las
+                    personas y religiones, y en la importancia de las expresiones artísticas para sanar y unir. La
+                    relación de Paz con
+                    Aziz Aghabi y su conexión con Palestina no solo marcaron su juventud, sino que también cimentaron su
+                    compromiso con
+                    la justicia social y la paz.</p>
+
+                <h2 style="color: #FFD700;">Conclusión</h2>
+                <p>La invitación a la festividad como Dama de Honor y la relación con Aziz Aghabi fueron eventos
+                    transformadores en la
+                    vida de Paz Arés Osset. Estos momentos no sólo enriquecieron su vida social y cultural en Valencia,
+                    sino que también
+                    le proporcionaron una perspectiva profunda sobre la justicia social y los derechos humanos. La
+                    relación con Aziz se
+                    convirtió en una parte integral de su identidad, influenciando su arte y su activismo. A través de
+                    sus obras, Paz
+                    continúa abogando por un mundo donde todos puedan vivir en armonía y donde las divisiones culturales
+                    y religiosas
+                    sean superadas por el amor y la comprensión mutua.</p>
+
+
+
+
+            </div>
+
+            <div class="italian language" style="display: none;">
+                <!-- Italian description here -->
+                <h2 style="color: #FFD700;">Invito come Dama d'Onore</h2>
+                <p>Quando Paz Arés Osset era una bambina, ricevette un invito molto speciale che la riempì di orgoglio
+                    ed emozione. Il
+                    sindaco di Valencia, riconoscendo la sua grazia, fascino e potenziale, le inviò personalmente una
+                    lettera
+                    invitandola a far parte della Cort d'Honor de la Regina dels Jocs Florals de Valencia. Questa
+                    festività, di grande
+                    rilevanza culturale e sociale nella regione, non solo celebrava le tradizioni valenziane, ma onorava
+                    anche le
+                    giovani che si distinguevano nella comunità.</p>
+                <p>La partecipazione alla Cort d'Honor era un onore significativo che segnalava Paz come una giovane
+                    prominente e
+                    apprezzata nella società valenziana. Questo evento rappresentava molto più di una serie di
+                    celebrazioni; era un
+                    riconoscimento del suo spirito vibrante e del suo contributo alla comunità. Far parte della Cort
+                    d'Honor permise a
+                    Paz di vivere esperienze indimenticabili e di connettersi profondamente con la ricca cultura e le
+                    tradizioni della
+                    sua terra natale, influenze che si sarebbero riflesse più tardi nella sua opera artistica.</p>
+                <p>Il programma della festività iniziava il 28 luglio 1971, quando Paz, accompagnata dal suo amico Aziz
+                    Aghabi, avrebbe
+                    partecipato al Restaurant Viveros alle 21:15. Quella notte si sarebbe tenuta una cena molto speciale
+                    in cui la
+                    Regina sarebbe stata presentata ufficialmente alla sua Cort d'Honor. Per questa occasione, ci si
+                    aspettava che Paz
+                    indossasse un elegante abito da sera, appropriato per la solennità dell'evento. La notte era piena
+                    di emozione e
+                    aspettative, e Paz, con la sua naturale eleganza, brillava tra le damigelle d'onore.</p>
+                <p>Il 30 luglio la giornata sarebbe iniziata presto per Paz. Alle 11:30 doveva essere pronta perché il
+                    suo
+                    accompagnatore la portasse alla Basilica della Verge dels Desemparats, dove alle 12:30 si sarebbe
+                    svolta una
+                    cerimonia di benedizione. Dopo questo atto religioso, tutti si sarebbero diretti nuovamente al
+                    Restaurant Viveros
+                    per godersi un pranzo in onore della Regina e della sua corte. Anche in questa parte dell'evento,
+                    Paz avrebbe
+                    indossato un abito da sera, mostrando la sua sofisticazione e il suo rispetto per le tradizioni.</p>
+                <p>Quella stessa notte, alle 22:00, Aziz sarebbe passato a prendere Paz per portarla alla residenza
+                    della Regina. Da lì,
+                    in una processione festiva, si sarebbero trasferiti alla festa principale. Dopo la celebrazione, il
+                    gruppo si
+                    sarebbe diretto alla Societat Hípica Valenciana, dove si sarebbe tenuto un ballo in onore della
+                    Regina e della sua
+                    corte. Per questa occasione, Paz avrebbe indossato il tradizionale abito valenziano, immergendosi
+                    ancora più
+                    profondamente nelle tradizioni e nella cultura locale. La notte era piena di musica, danza e gioia,
+                    e Paz, con la
+                    sua energia e carisma, si distingueva in ogni momento.</p>
+                <p>Il 31 luglio, la festività sarebbe culminata con la spettacolare Battaglia dei Fiori. Alle 17:00 la
+                    Regina sarebbe
+                    passata a prendere Paz per assistere insieme a questo colorato evento, che richiedeva nuovamente
+                    l'abito valenziano,
+                    mettendo in risalto la bellezza e la tradizione della regione. La Battaglia dei Fiori, con le sue
+                    sfilate e le sue
+                    esposizioni floreali, era una conclusione perfetta per la celebrazione, riempiendo l'aria di colore
+                    e fragranza.</p>
+
+                <h2 style="color: #FFD700;">Incontro e Relazione con Aziz Aghabi</h2>
+                <p>Paz e Aziz si erano conosciuti precedentemente durante una passeggiata lungo la spiaggia di Valencia.
+                    Questo giovane
+                    palestinese, alto e dai capelli scuri, si avvicinò a Paz con un sorriso caldo e una gentilezza che
+                    la catturarono
+                    immediatamente. L'incontro casuale si trasformò presto in una profonda amicizia e, alla fine, in una
+                    relazione
+                    significativa.</p>
+                <p>Paz ricorda con affetto ed emozione il suo primo bacio d'amore, che fu con Aziz. Questa relazione,
+                    che avrebbe potuto
+                    essere vista come controversa in una società conservatrice, divenne una manifestazione precoce della
+                    sua empatia e
+                    della sua profonda comprensione dell'umanità. Aziz non solo le mostrò l'amore, ma le spiegò anche le
+                    complesse e
+                    dolorose problematiche della Palestina. A 17 anni, Paz si immerse nella storia di un conflitto senza
+                    fine,
+                    risvegliando in lei un senso di compassione e una ricerca di giustizia che hanno permeato la sua
+                    vita e la sua
+                    opera.</p>
+
+                <h2 style="color: #FFD700;">Riflessioni e Impegno Sociale</h2>
+                <p>A 17 anni, Paz si immerse nella complessa e dolorosa storia della Palestina. Questa precoce
+                    comprensione dei
+                    conflitti e delle ingiustizie globali risvegliò in lei un senso di compassione e una ricerca di
+                    giustizia che hanno
+                    permeato la sua vita e la sua opera. La triste storia della Palestina, con le sue sfide
+                    apparentemente senza fine,
+                    lasciò un segno duraturo nel suo cuore.</p>
+                <p>Riflettendo sulle sue esperienze e sulla sua connessione con la Palestina, Paz scrisse del dolore e
+                    della speranza
+                    durante un Natale particolarmente agrodolce. Nei suoi scritti esprimeva l'amarezza nel vedere la
+                    continua lotta e
+                    sofferenza, ma anche una ferma convinzione nella possibilità di pace e giustizia. Per Paz, la
+                    soluzione ai problemi
+                    del mondo risiede nell'amore, nel rispetto dei diritti umani e nell'unione spirituale.</p>
+
+                <h2 style="color: #FFD700;">Influenza sulla Sua Opera Artistica</h2>
+                <p>Nella sua opera, Paz ricorre spesso alla poesia, alla musica e all'arte come mezzi per aumentare la
+                    consapevolezza e
+                    promuovere la ricostruzione di un mondo migliore. Crede fermamente nella necessità di abbracciare la
+                    fraternità tra
+                    tutte le persone e religioni, e nell'importanza delle espressioni artistiche per guarire e unire. La
+                    relazione di
+                    Paz con Aziz Aghabi e la sua connessione con la Palestina non solo segnarono la sua giovinezza, ma
+                    cementarono anche
+                    il suo impegno per la giustizia sociale e la pace.</p>
+
+                <h2 style="color: #FFD700;">Conclusione</h2>
+                <p>L'invito alla festività come Dama d'Onore e la relazione con Aziz Aghabi furono eventi trasformativi
+                    nella vita di
+                    Paz Arés Osset. Questi momenti non solo arricchirono la sua vita sociale e culturale a Valencia, ma
+                    le fornirono
+                    anche una profonda prospettiva sulla giustizia sociale e i diritti umani. La relazione con Aziz
+                    divenne una parte
+                    integrante della sua identità, influenzando la sua arte e il suo attivismo. Attraverso le sue opere,
+                    Paz continua a
+                    promuovere un mondo in cui tutti possano vivere in armonia e dove le divisioni culturali e religiose
+                    siano superate
+                    dall'amore e dalla comprensione reciproca.</p>
+
+
+            </div>
+
+            <div class="chinese language" style="display: none;">
+                <!-- Chinese description here -->
+                <h2 style="color: #FFD700;">作为荣誉女仆的邀请</h2>
+                <p>当帕兹·阿雷斯·奥塞特（Paz Arés
+                    Osset）还是个孩子时，她收到了一个非常特别的邀请，这让她充满了自豪和激动。瓦伦西亚市长亲自给她寄了一封信，邀请她加入瓦伦西亚花卉节皇后的荣誉女仆团，认同了她的优雅、魅力和潜力。这一节日是该地区具有重要文化和社会意义的活动，不仅庆祝了瓦伦西亚的传统，还表彰了在社区中脱颖而出的年轻女性。
+                </p>
+                <p>参与荣誉女仆团是一个重要的荣誉，标志着帕兹在瓦伦西亚社会中被视为杰出和受人尊敬的年轻女性。这一活动不仅仅是一系列的庆祝活动；它是对她充满活力的精神和对社区贡献的认可。成为荣誉女仆的一员让帕兹体验到了难忘的经历，并与她的故土的丰富文化和传统建立了深厚的联系，这些影响后来反映在她的艺术作品中。
+                </p>
+                <p>节日的节目开始于1971年7月28日，当时帕兹和她的朋友阿齐兹·阿加比（Aziz
+                    Aghabi）在21:15前往Viveros餐厅。当晚将举行一场非常特别的晚宴，在晚宴上，皇后将正式向她的荣誉女仆团介绍。为了这次活动，帕兹预计会穿上一件优雅的街头服装，适合活动的庄重性。整个晚上充满了兴奋和期待，而帕兹凭借她自然的优雅在荣誉女仆中熠熠生辉。
+                </p>
+                <p>7月30日，帕兹的日程安排得非常早。11:30，她必须准备好，让她的陪伴者带她去我们的遗弃者圣母大教堂，在12:30举行祝福仪式。宗教仪式结束后，所有人将再次前往Viveros餐厅，享受一顿为皇后及其随行人员准备的午餐。同样地，帕兹将在这一部分活动中穿上一件街头服装，展现她的优雅和对传统的尊重。
+                </p>
+                <p>同一晚，22:00，阿齐兹会来接帕兹，带她前往皇后的住所。从那里，他们将以节日队伍的形式前往主会场。庆祝活动结束后，大家将前往瓦伦西亚马术协会，为皇后及其随行人员举办舞会。为此，帕兹会穿上传统的瓦伦西亚服装，更深入地融入当地的传统和文化。整晚充满了音乐、舞蹈和欢乐，而帕兹以她的活力和魅力在每一个瞬间都显得格外出色。
+                </p>
+                <p>7月31日，节日将在盛大的花战中达到高潮。17:00，皇后来接帕兹一起参加这个色彩缤纷的活动，再次需要穿上传统的瓦伦西亚服装，突显该地区的美丽和传统。花战以其游行和花卉展示，为庆祝活动画上了完美的句号，空气中充满了色彩和芬芳。
+                </p>
+
+                <h2 style="color: #FFD700;">与阿齐兹·阿加比的相遇和关系</h2>
+                <p>帕兹和阿齐兹之前在瓦伦西亚海滩散步时相识。这位高大、黑发的巴勒斯坦青年带着温暖的微笑和亲切感接近了帕兹，立即打动了她。这个偶然的相遇很快变成了深厚的友谊，最终发展为一段重要的关系。</p>
+                <p>帕兹带着深情和激动回忆起她与阿齐兹的初吻。这段关系在保守的社会中可能被视为有争议，但它早早地展示了她的同情心和对人性的深刻理解。阿齐兹不仅向她展示了爱情，还向她解释了巴勒斯坦复杂而痛苦的问题。在17岁时，帕兹沉浸在一个无休止的冲突历史中，唤醒了她对同情和寻求正义的意识，这些影响渗透到她的生活和作品中。
+                </p>
+
+                <h2 style="color: #FFD700;">反思与社会承诺</h2>
+                <p>在17岁时，帕兹沉浸在巴勒斯坦复杂而痛苦的历史中。这种对全球冲突和不公正的早期理解唤醒了她对同情和寻求正义的意识，这些影响渗透到她的生活和作品中。巴勒斯坦的悲惨历史及其看似无尽的挑战在她的心中留下了持久的印记。
+                </p>
+                <p>在反思她的经历和与巴勒斯坦的联系时，帕兹在一个特别痛苦的圣诞节期间写下了关于痛苦和希望的文章。在她的写作中，她表达了看到持续斗争和痛苦的痛苦，但也坚信和平与正义的可能性。对于帕兹来说，解决世界问题的办法在于爱、尊重人权和精神上的团结。
+                </p>
+
+                <h2 style="color: #FFD700;">对她艺术作品的影响</h2>
+                <p>在她的作品中，帕兹经常通过诗歌、音乐和艺术来提高意识，促进世界的重建。她坚信有必要在所有人和宗教之间拥抱兄弟情谊，并且艺术表达对治愈和团结至关重要。帕兹与阿齐兹·阿加比的关系以及她与巴勒斯坦的联系不仅标志着她的青春期，还巩固了她对社会正义与和平的承诺。
+                </p>
+
+                <h2 style="color: #FFD700;">结论</h2>
+                <p>作为荣誉女仆参加节日和与阿齐兹·阿加比的关系是帕兹·阿雷斯·奥塞特生活中的变革性事件。这些时刻不仅丰富了她在瓦伦西亚的社交和文化生活，还为她提供了对社会正义和人权的深刻见解。与阿齐兹的关系成为她身份的一部分，影响了她的艺术和积极主义。通过她的作品，帕兹继续倡导一个所有人都能和谐共处的世界，文化和宗教分歧被爱和相互理解所超越。
+                </p>
+
+
+            </div>
+
+            <div class="arabic language" style="display: none;">
+                <!-- Arabic  description here -->
+                <h2 style="color: #FFD700;">دعوة كوصيفة شرف</h2>
+                <p>عندما كانت باز أريس أوسيت طفلة، تلقت دعوة خاصة جدًا ملأتها بالفخر والحماس. عمدة فالنسيا، الذي اعترف
+                    برشاقتها وسحرها
+                    وإمكاناتها، أرسل لها شخصيًا رسالة يدعوها فيها للانضمام إلى كورت د'أونور دي لا ريجينا ديلز جوكس
+                    فلورالس دي فالنسيا.
+                    هذا المهرجان، الذي يحمل أهمية ثقافية واجتماعية كبيرة في المنطقة، لم يحتفل فقط بالتقاليد الفالنسية،
+                    بل أيضًا كرّم
+                    الشابات اللواتي تميزن في المجتمع.</p>
+                <p>كانت المشاركة في كورت د'أونور شرفًا كبيرًا يشير إلى باز كشابة بارزة ومقدرة في المجتمع الفالنسي. كان
+                    هذا الحدث يمثل
+                    أكثر من مجرد سلسلة من الاحتفالات؛ كان اعترافًا بروحها النابضة وحسنًا لمساهمتها في المجتمع. سمحت لها
+                    المشاركة في كورت
+                    د'أونور بعيش تجارب لا تُنسى والتواصل بعمق مع الثقافة الغنية والتقاليد لأرضها الأم، وهي تأثيرات
+                    انعكست لاحقًا في
+                    أعمالها الفنية.</p>
+                <p>بدأ برنامج المهرجان في 28 يوليو 1971، عندما كانت باز، برفقة صديقها عزيز أغابي، ستحضر في الساعة 21:15
+                    إلى مطعم
+                    فيفيروس. في تلك الليلة، سيتم تقديم عشاء خاص جدًا حيث سيتم تقديم الملكة رسميًا إلى كورت د'أونور
+                    الخاصة بها. لهذه
+                    المناسبة، كان من المتوقع أن ترتدي باز فستانًا أنيقًا، مناسبًا لجدية الحدث. كانت الليلة مليئة
+                    بالإثارة والترقب، وباز،
+                    بأناقتها الطبيعية، كانت تتألق بين وصيفات الشرف.</p>
+                <p>في 30 يوليو، كان اليوم سيبدأ مبكرًا لباس. في الساعة 11:30، كان يجب أن تكون جاهزة لأن يأخذها مرافقتها
+                    إلى بازيليكا
+                    فيرجي ديلس ديسامباراتس، حيث ستقام مراسم البركة في الساعة 12:30. بعد هذا العمل الديني، سيتوجه الجميع
+                    مرة أخرى إلى
+                    مطعم فيفيروس للاستمتاع بغداء على شرف الملكة وحاشيتها. مرة أخرى، سترتدي باز فستانًا أنيقًا لهذه الجزء
+                    من الحدث، مما
+                    يظهر أناقتها واحترامها للتقاليد.</p>
+                <p>في تلك الليلة نفسها، في الساعة 22:00، سيأتي عزيز ليصطحب باز إلى منزل الملكة. من هناك، في موكب
+                    احتفالي، سيتوجهون إلى
+                    الحفلة الرئيسية. بعد الاحتفال، سيتوجه المجموعة إلى الجمعية الفالنسية للفروسية، حيث سيقام حفل رقص على
+                    شرف الملكة
+                    وحاشيتها. لهذه المناسبة، سترتدي باز الفستان التقليدي الفالنسي، مما يغمرها بعمق أكبر في التقاليد
+                    والثقافة المحلية.
+                    كانت الليلة مليئة بالموسيقى والرقص والفرح، وباز، بحيويتها وسحرها، كانت تبرز في كل لحظة.</p>
+                <p>في 31 يوليو، سيصل المهرجان إلى ذروته مع معركة الزهور المذهلة. في الساعة 17:00، ستمر الملكة لأخذ باز
+                    لحضور هذا الحدث
+                    الملون معًا، والذي يتطلب مرة أخرى الفستان الفالنسي، مما يبرز جمال وتقاليد المنطقة. كانت معركة
+                    الزهور، مع مسيراتها
+                    وعروضها الزهرية، ختامًا مثاليًا للاحتفال، مما يملأ الهواء بالألوان والعطور.</p>
+
+                <h2 style="color: #FFD700;">لقاء وعلاقة مع عزيز أغابي</h2>
+                <p>تعرفت باز وعزيز سابقًا أثناء نزهة على شاطئ فالنسيا. هذا الشاب الفلسطيني الطويل وذو الشعر الداكن اقترب
+                    من باز بابتسامة
+                    دافئة وود أثار إعجابها على الفور. سرعان ما تحول اللقاء العابر إلى صداقة عميقة، وفي النهاية إلى علاقة
+                    ذات أهمية.</p>
+                <p>تتذكر باز بحنان وانفعال قبلتها الأولى مع عزيز. كانت هذه العلاقة، التي قد تُعتبر مثيرة للجدل في مجتمع
+                    محافظ، تعبيرًا
+                    مبكرًا عن تعاطفها وفهمها العميق للإنسانية. لم يظهر عزيز لها الحب فحسب، بل شرح لها أيضًا المشكلات
+                    المعقدة والمؤلمة
+                    لفلسطين. في سن 17، غرقت باز في تاريخ صراع لا نهاية له، مما أفاق فيها شعورًا بالرحمة والسعي للعدالة
+                    الذي اخترق حياتها
+                    وأعمالها.</p>
+
+                <h2 style="color: #FFD700;">تأملات والالتزام الاجتماعي</h2>
+                <p>في سن 17، غرقت باز في التاريخ المعقد والمؤلم لفلسطين. أثارت هذه الفهم المبكر للصراعات والظلم
+                    العالميين شعورًا بالرحمة
+                    والسعي للعدالة الذي اخترق حياتها وأعمالها. ترك التاريخ الحزين لفلسطين، بتحدياته التي لا تنتهي على ما
+                    يبدو، أثرًا
+                    دائمًا في قلبها.</p>
+                <p>بينما كانت تتأمل في تجاربها وارتباطها بفلسطين، كتبت باز عن الألم والأمل خلال عيد ميلاد مسيحي مرير
+                    بشكل خاص. في
+                    كتاباتها، عبرت عن المرارة من رؤية الصراع والمعاناة المستمرة، ولكن أيضًا عن إيمان قوي بإمكانية السلام
+                    والعدالة.
+                    بالنسبة لباس، تكمن حل مشكلات العالم في الحب، واحترام حقوق الإنسان، والوحدة الروحية.</p>
+
+                <h2 style="color: #FFD700;">تأثير على عملها الفني</h2>
+                <p>في أعمالها، غالبًا ما تلجأ باز إلى الشعر والموسيقى والفن كوسائل لزيادة الوعي وتعزيز إعادة بناء عالم
+                    أفضل. تؤمن بشدة
+                    بضرورة تبني الأخوة بين جميع الناس والأديان، وبأهمية التعبيرات الفنية للشفاء والوحدة. لم تميز علاقتها
+                    مع عزيز أغابي
+                    وارتباطها بفلسطين شبابها فحسب، بل أرست أيضًا التزامها بالعدالة الاجتماعية والسلام.</p>
+
+                <h2 style="color: #FFD700;">الخاتمة</h2>
+                <p>كانت دعوة للمهرجان كوصيفة شرف وعلاقتها مع عزيز أغابي أحداثًا تحولية في حياة باز أريس أوسيت. لم تغني
+                    هذه اللحظات
+                    حياتها الاجتماعية والثقافية في فالنسيا فحسب، بل قدمت لها أيضًا منظورًا عميقًا حول العدالة الاجتماعية
+                    وحقوق الإنسان.
+                    أصبحت علاقتها مع عزيز جزءًا لا يتجزأ من هويتها، مما أثر على فنها ونشاطها. من خلال أعمالها، تواصل باز
+                    الدعوة إلى عالم
+                    يعيش فيه الجميع في وئام، حيث يتم تجاوز الانقسامات الثقافية والدينية بالحب والتفاهم المتبادل.</p>
+
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('language-select').addEventListener('change', function () {
+                // Hide all language elements
+                document.querySelectorAll('.language').forEach(function (element) {
+                    element.style.display = 'none';
+                });
+
+                // Show selected language elements
+                document.querySelectorAll('.' + this.value).forEach(function (element) {
+                    element.style.display = 'block';
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
