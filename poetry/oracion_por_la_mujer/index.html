@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Oración por la Mujer - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+              <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 10px;">
+            <!-- Poemas Button -->
+            <a href="../index.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 8px 15px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3); font-size: 0.9rem;">
+                <i class="fas fa-feather-alt mr-2"></i>
+                <span class="spanish language">Poemas</span>
+                <span class="english language" style="display:none;">Poems</span>
+                <span class="italian language" style="display:none;">Poesie</span>
+                <span class="aleman language" style="display:none;">Gedichte</span>
+                <span class="frances language" style="display:none;">Poèmes</span>
+                <span class="japones language" style="display:none;">詩</span>
+                <span class="portugues language" style="display:none;">Poemas</span>
+                <span class="chinese language" style="display:none;">诗歌</span>
+                <span class="arabic language" style="display:none;">قصائد</span>
+                <span class="russian language" style="display:none;">Стихи</span>
+                <span class="ukrainian language" style="display:none;">Вірші</span>
+            </a>
+            <!-- Linktree Button -->
+            <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 8px 15px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3); font-size: 0.9rem;">
+                <i class="fas fa-link mr-2"></i>
+                <span>Linktree</span>
+            </a>
+            <!-- Spotify Button -->
+            <a id="spotify-link" href="https://open.spotify.com/artist/7AtGf8J17mC5p9pG8zN0n2" target="_blank" class="btn btn-spotify d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; background: #1DB954; color: white; padding: 8px 15px; border: none; font-size: 0.9rem;">
+                <i class="fab fa-spotify mr-2"></i>
+                <span class="spanish language">Música</span>
+                <span class="english language" style="display:none;">Music</span>
+                <span class="italian language" style="display:none;">Musica</span>
+                <span class="aleman language" style="display:none;">Musik</span>
+                <span class="frances language" style="display:none;">Musique</span>
+                <span class="japones language" style="display:none;">音楽</span>
+                <span class="portugues language" style="display:none;">Música</span>
+                <span class="chinese language" style="display:none;">音乐</span>
+                <span class="arabic language" style="display:none;">موسيقى</span>
+                <span class="russian language" style="display:none;">Музыка</span>
+                <span class="ukrainian language" style="display:none;">Музика</span>
+            </a>
+            <select id="language-select" class="custom-select-lg" style="background: rgba(0,0,0,0.5); color: white; border: 1px solid #FFD700; border-radius: 10px; padding: 5px 15px; font-size: 1.1rem; height: auto; width: auto; font-weight: bold;">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portugues">🇵🇹 Português</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="ukrainian">🇺🇦 Українська</option>
+            </select>
+        </div></div>
+
+        <section class="jumbotron text-center" style="padding: 100px 0;">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px; max-width: 120px;" alt="Paz Arés Osset">
+                </a>
+                <h1 class="jumbotron-heading text-shadow-deep">
+                    <div class="spanish language">Oración por la Mujer</div>
+                    <div class="english language" style="display:none;">Prayer for Woman</div>
+                    <div class="italian language" style="display:none;">Preghiera per la Donna</div>
+                    <div class="aleman language" style="display:none;">Gebet für die Frau</div>
+                    <div class="frances language" style="display:none;">Prière pour la Femme</div>
+                    <div class="japones language" style="display:none;">女性のための祈り</div>
+                    <div class="portugues language" style="display:none;">Oração pela Mulher</div>
+                    <div class="chinese language" style="display:none;">为女人的祈祷</div>
+                    <div class="arabic language" style="display:none;">صلاة من أجل المرأة</div>
+                    <div class="russian language" style="display:none;">Молитва за женщину</div>
+                    <div class="ukrainian language" style="display:none;">Молитва за Жінку</div>
+                </h1>
+                <div class="lead text-shadow-deep">
+                    <div class="spanish language">Un destello en la noche, la luz del mundo.</div>
+                    <div class="english language" style="display:none;">A spark in the night, the light of the world.</div>
+                    <div class="italian language" style="display:none;">Una scintilla nella notte, la luce del mondo.</div>
+                    <div class="aleman language" style="display:none;">Ein Funke in der Nacht, das Licht der Welt.</div>
+                    <div class="frances language" style="display:none;">Une étincelle dans la nuit, la lumière du monde.</div>
+                    <div class="japones language" style="display:none;">夜の火花、世界の光。</div>
+                    <div class="portugues language" style="display:none;">Uma faísca na noite, a luz do mundo.</div>
+                    <div class="chinese language" style="display:none;">黑夜中的微光，世界之光。</div>
+                    <div class="arabic language" style="display:none;">بريق في الليل، نور العالم.</div>
+                    <div class="russian language" style="display:none;">Искра в ночи, свет мира.</div>
+                    <div class="ukrainian language" style="display:none;">Іскра в ночі, світло світу.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Oración por la Mujer</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Vengo de todas las orillas<br>y de ningún encierro.<br>Traigo en la sangre el sol de Sidi Ifni<br>y en el espíritu, la calma de la paz.<br>Soy mujer, soy maestra,<br>soy el reflejo vivo de las que callaron.
+                        </div>
+                        <div class="stanza">
+                            Grito hoy por Hildegarda, música y sibila del Rin,<br>que unió la ciencia y la fe como hermanas.<br>Grito por Sor Juana Inés de la Cruz, fénix de la razón,<br>que amó los libros más que al mundo.<br>Grito por Plautilla Nelli, la primera en el lienzo,<br>que me prestó sus ojos para pintar lo invisible.
+                        </div>
+                        <div class="stanza">
+                            He pasado la vida buscando la Verdad en la belleza,<br>doctorando el alma en filosofía y colores,<br>sanando heridas antiguas con el Dharma y el Evangelio.<br>Porque el arte es la única religión<br>que no necesita muros para tocar el cielo.
+                        </div>
+                        <div class="stanza">
+                            Ellas abrieron la puerta entrecerrada<br>por el derecho a la educación de la mujer<br>y yo la he cruzado con mis alumnos de la mano,<br>desarrollando una educación creativa.
+                        </div>
+                        <div class="stanza">
+                            Espero que mi legado sea bello y fértil:<br>haber dejado algo bonito en el caos del mundo,<br>haber sido un destello en la larga noche,<br>pues la mujer siempre fue, y será, la luz del mundo.<br><span class="signature">Paz Arés Osset, marzo de 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="english language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Prayer for Woman</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            I come from all shores<br>and from no confinement.<br>I carry in my blood the sun of Sidi Ifni<br>and in my spirit, the calm of peace.<br>I am a woman, I am a teacher,<br>I am the living reflection of those who were silenced.
+                        </div>
+                        <div class="stanza">
+                            I cry out today for Hildegard, music and sibyl of the Rhine,<br>who united science and faith as sisters.<br>I cry out for Sor Juana Inés de la Cruz, phoenix of reason,<br>who loved books more than the world.<br>I cry out for Plautilla Nelli, the first on the canvas,<br>who lent me her eyes to paint the invisible.
+                        </div>
+                        <div class="stanza">
+                            I have spent my life seeking Truth in beauty,<br>doctoring the soul in philosophy and colors,<br>healing ancient wounds with the Dharma and the Gospel.<br>Because art is the only religion<br>that needs no walls to touch the sky.
+                        </div>
+                        <div class="stanza">
+                            They opened the half-closed door<br>for the right to women's education<br>and I have crossed it with my students by the hand,<br>developing a creative education.
+                        </div>
+                        <div class="stanza">
+                            I hope my legacy is beautiful and fertile:<br>to have left something beautiful in the chaos of the world,<br>to have been a spark in the long night,<br>for woman always was, and will be, the light of the world.<br><span class="signature">Paz Arés Osset, March 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="italian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Preghiera per la Donna</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Vengo da tutte le rive<br>e da nessuna prigione.<br>Porto nel sangue il sole di Sidi Ifni<br>e nello spirito, la calma della pace.<br>Sono donna, sono maestra,<br>sono il riflesso vivo di quelle che hanno taciuto.
+                        </div>
+                        <div class="stanza">
+                            Grido oggi per Ildegarda, musica e sibilla del Reno,<br>che unì scienza e fede come sorelle.<br>Grido per Sor Juana Inés de la Cruz, fenice della ragione,<br>che amò i libri più del mondo.<br>Grido per Plautilla Nelli, la prima sulla tela,<br>che mi prestò i suoi occhi per dipingere l'invisibile.
+                        </div>
+                        <div class="stanza">
+                            Ho passato la vita cercando la Verità nella bellezza,<br>addottorando l'anima in filosofia e colori,<br>sanando antiche ferite con il Dharma e il Vangelo.<br>Perché l'arte è l'unica religione<br>che non ha bisogno di muri per toccare il cielo.
+                        </div>
+                        <div class="stanza">
+                            Loro aprirono la porta socchiusa<br>per il diritto all'educazione della donna<br>e io l'ho attraversata con i miei alunni per mano,<br>sviluppando un'educazione creativa.
+                        </div>
+                        <div class="stanza">
+                            Spero che il mio lascito sia bello e fertile:<br>aver lasciato qualcosa di bello nel caos del mondo,<br>essere stata una scintilla nella lunga notte,<br>perché la donna è sempre stata, e sarà, la luce del mondo.<br><span class="signature">Paz Arés Osset, marzo 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aleman language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Gebet für die Frau</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Ich komme von allen Ufern<br>und aus keiner Gefangenschaft.<br>Ich trage die Sonne von Sidi Ifni im Blut<br>und im Geist die Ruhe des Friedens.<br>Ich bin Frau, ich bin Lehrerin,<br>ich bin das lebendige Spiegelbild derer, die schwiegen.
+                        </div>
+                        <div class="stanza">
+                            Ich rufe heute nach Hildegard, Musik und Sibylle des Rheins,<br>die Wissenschaft und Glaube als Schwestern vereinte.<br>Ich rufe nach Sor Juana Inés de la Cruz, Phönix der Vernunft,<br>die die Bücher mehr als die Welt liebte.<br>Ich rufe nach Plautilla Nelli, der Ersten auf der Leinwand,<br>die mir ihre Augen lieh, um das Unsichtbare zu malen.
+                        </div>
+                        <div class="stanza">
+                            Ich habe mein Leben damit verbracht, die Wahrheit in der Schönheit zu suchen,<br>die Seele in Philosophie und Farben zu promovieren,<br>alte Wunden mit dem Dharma und dem Evangelium zu heilen.<br>Denn Kunst ist die einzige Religion,<br>die keine Mauern braucht, um den Himmel zu berühren.
+                        </div>
+                        <div class="stanza">
+                            Sie öffneten die angelehnte Tür<br>für das Recht der Frau auf Bildung<br>und ich habe sie mit meinen Schülern an der Hand durchschritten,<br>um eine kreative Bildung zu entwickeln.
+                        </div>
+                        <div class="stanza">
+                            Ich hoffe, mein Vermächtnis ist schön und fruchtbar:<br>etwas Schönes im Chaos der Welt hinterlassen zu haben,<br>ein Funke in der langen Nacht gewesen zu sein,<br>denn die Frau war schon immer, und wird es sein, das Licht der Welt.<br><span class="signature">Paz Arés Osset, März 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="frances language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Prière pour la Femme</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Je viens de tous les rivages<br>et d'aucun enfermement.<br>Je porte dans le sang le soleil de Sidi Ifni<br>et dans l'esprit, le calme de la paix.<br>Je suis femme, je suis maîtresse,<br>je suis le reflet vivant de celles qui se sont tues.
+                        </div>
+                        <div class="stanza">
+                            Je crie aujourd'hui pour Hildegarde, musique et sibylle du Rhin,<br>qui a uni la science et la foi comme des sœurs.<br>Je crie pour Sor Juana Inés de la Cruz, phénix de la raison,<br>qui a aimé les livres plus que le monde.<br>Je crie pour Plautilla Nelli, la première sur la toile,<br>qui m'a prêté ses yeux pour peindre l'invisible.
+                        </div>
+                        <div class="stanza">
+                            J'ai passé ma vie à chercher la Vérité dans la beauté,<br>doctorant l'âme en philosophie et en couleurs,<br>guérissant d'anciennes blessures avec le Dharma et l'Évangile.<br>Parce que l'art est la seule religion<br>qui n'a pas besoin de murs pour toucher le ciel.
+                        </div>
+                        <div class="stanza">
+                            Elles ont ouvert la porte entrouverte<br>pour le droit à l'éducation de la femme<br>et je l'ai franchie avec mes élèves par la main,<br>développant une éducation créative.
+                        </div>
+                        <div class="stanza">
+                            J'espère que mon héritage sera beau et fertile:<br>avoir laissé quelque chose de beau dans le chaos du monde,<br>avoir été une étincelle dans la longue nuit,<br>car la femme a toujours été, et sera, la lumière du monde.<br><span class="signature">Paz Arés Osset, mars 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="japones language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">女性のための祈り</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            私はすべての岸から来る<br>そして何の閉じ込めからもない。<br>私の血の中にはシディ・イフニの太陽があり、<br>精神には平和の静けさがある。<br>私は女であり、教師であり、<br>沈黙した者たちの生きた反映である。
+                        </div>
+                        <div class="stanza">
+                            私は今日、ライン川のシビラであり音楽であるヒルデガルトのために叫ぶ、<br>彼女は科学と信仰を姉妹のように結びつけた。<br>私は理性の不死鳥、ソル・フアナ＝イネス・デ・ラ・クルスのために叫ぶ、<br>彼女は世界よりも本を愛した。<br>私はキャンバス上の最初の一人、プラウティッラ・ネッリのために叫ぶ、<br>彼女は見えないものを描くために私に目を貸してくれた。
+                        </div>
+                        <div class="stanza">
+                            私は美の中に真実を探し求めて人生を過ごし、<br>哲学と色で魂を博士にし、<br>ダルマと福音で古い傷を癒やしてきた。<br>なぜなら、芸術は<br>空に触れるために壁を必要としない唯一の宗教だからだ。
+                        </div>
+                        <div class="stanza">
+                            彼女たちは、女性の教育の権利のために<br>半開きの扉を開き、<br>私は生徒と手をつないでそこを越え、<br>創造的な教育を発展させてきた。
+                        </div>
+                        <div class="stanza">
+                            私の遺産が美しく、豊かであることを願っている：<br>世界の混沌の中に何か美しいものを残したこと、<br>長い夜の火花であったこと、<br>なぜなら、女性は常に世界の光であり、これからもそうだからだ。<br><span class="signature">パス・アレス・オセ、2026年3月</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portugues language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Oração pela Mulher</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Venho de todas as margens<br>e de nenhum confinamento.<br>Trago no sangue o sol de Sidi Ifni<br>e no espírito, a calma da paz.<br>Sou mulher, sou professora,<br>sou o reflexo vivo das que se calaram.
+                        </div>
+                        <div class="stanza">
+                            Grito hoje por Hildegarda, música e sibila do Reno,<br>que uniu a ciência e a fé como irmãs.<br>Grito por Sor Juana Inés de la Cruz, fênix da razão,<br>que amou os livros mais do que ao mundo.<br>Grito por Plautilla Nelli, a primeira na tela,<br>que me emprestou os seus olhos para pintar o invisível.
+                        </div>
+                        <div class="stanza">
+                            Passei a vida a procurar a Verdade na beleza,<br>doutorando a alma em filosofia e cores,<br>curando antigas feridas com o Dharma e o Evangelho.<br>Porque a arte é a única religião<br>que não precisa de muros para tocar o céu.
+                        </div>
+                        <div class="stanza">
+                            Elas abriram a porta entreaberta<br>pelo direito à educação da mulher<br>e eu atravessei-a com os meus alunos pela mão,<br>desenvolvendo uma educação criativa.
+                        </div>
+                        <div class="stanza">
+                            Espero que o meu legado seja belo e fértil:<br>ter deixado algo de bonito no caos do mundo,<br>ter sido uma faísca na longa noite,<br>pois a mulher sempre foi, e será, a luz do mundo.<br><span class="signature">Paz Arés Osset, março de 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chinese language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">为女人的祈祷</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            我来自所有的海岸<br>没有被囚禁。<br>我的血液中流淌着西迪伊夫尼的阳光<br>精神中充满着和平的宁静。<br>我是女人，我是老师，<br>我是那些沉默者的鲜活倒影。
+                        </div>
+                        <div class="stanza">
+                            我今天为莱茵河的音乐和女先知希尔德加德呼喊，<br>她像姐妹一样将科学与信仰结合在一起。<br>我为理性的凤凰，索尔·胡安娜·伊内斯·德拉克鲁斯呼喊，<br>她爱书胜过爱世界。<br>我为画布上的第一位女性普劳提拉·内利呼喊，<br>她借给我她的眼睛去画那无形的东西。
+                        </div>
+                        <div class="stanza">
+                            我一生都在美中寻找真理，<br>在哲学和色彩中获得灵魂的博士学位，<br>用达摩和福音治愈古老的伤口。<br>因为艺术是唯一的<br>不需要围墙就能触摸天空的宗教。
+                        </div>
+                        <div class="stanza">
+                            她们为女性的受教育权<br>打开了半开的门<br>而我牵着学生的手穿过它，<br>发展创造性的教育。
+                        </div>
+                        <div class="stanza">
+                            我希望我的遗产是美丽而肥沃的：<br>在世界的混乱中留下一些美好的东西，<br>成为漫漫长夜中的微光，<br>因为女人过去是，将来也永远是世界的光。<br><span class="signature">帕斯·阿雷斯·奥塞特，2026年3月</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="arabic language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">صلاة من أجل المرأة</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            أنا قادمة من جميع الشواطئ<br>ومن عدم الحبس.<br>أحمل في دمي شمس سيدي إفني<br>وفي الروح، هدوء السلام.<br>أنا امرأة، أنا معلمة،<br>أنا الانعكاس الحي لأولئك الذين صمتوا.
+                        </div>
+                        <div class="stanza">
+                            أصرخ اليوم من أجل هيلدغارد، موسيقى وعرافة نهر الراين،<br>التي وحدت العلم والإيمان كأخوات.<br>أصرخ من أجل سور خوانا إينيس دي لا كروز، عنقاء العقل،<br>التي أحبت الكتب أكثر من العالم.<br>أصرخ من أجل بلاوتيلا نيلي، الأولى على القماش،<br>التي أعارتني عينيها لرسم ما لا يُرى.
+                        </div>
+                        <div class="stanza">
+                            لقد أمضيت حياتي أبحث عن الحقيقة في الجمال،<br>حاصلاً على دكتوراه الروح في الفلسفة والألوان،<br>وعلاج الجروح القديمة بالدارما والإنجيل.<br>لأن الفن هو الدين الوحيد<br>الذي لا يحتاج إلى جدران للمس السماء.
+                        </div>
+                        <div class="stanza">
+                            لقد فتحن الباب الموارب<br>من أجل حق المرأة في التعليم<br>وقد تجاوزته مع طلابي يداً بيد،<br>مطوراً تعليماً إبداعياً.
+                        </div>
+                        <div class="stanza">
+                            آمل أن يكون إرثي جميلاً ومثمراً:<br>أن أكون قد تركت شيئاً جميلاً في فوضى العالم،<br>أن أكون بريقاً في الليل الطويل،<br>لأن المرأة كانت دائماً، وستظل، نور العالم.<br><span class="signature">باز أريس أوسيت، مارس 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="russian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Молитва за женщину</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Я прихожу со всех берегов<br>и ни из какого заточения.<br>В моей крови — солнце Сиди-Ифни,<br>а в духе — спокойствие мира.<br>Я женщина, я учительница,<br>я живое отражение тех, кто молчал.
+                        </div>
+                        <div class="stanza">
+                            Я кричу сегодня об Хильдегарде, музыке и сивилле Рейна,<br>которая объединила науку и веру как сестер.<br>Я кричу о Сор Хуане Инес де ла Крус, фениксе разума,<br>которая любила книги больше, чем мир.<br>Я кричу о Плаутилле Нелли, первой на холсте,<br>которая одолжила мне свои глаза, чтобы нарисовать невидимое.
+                        </div>
+                        <div class="stanza">
+                            Я провела свою жизнь в поисках Истины в красоте,<br>получив докторскую степень души в философии и цветах,<br>исцеляя древние раны Дхармой и Евангелием.<br>Потому что искусство — это единственная религия,<br>которой не нужны стены, чтобы коснуться неба.
+                        </div>
+                        <div class="stanza">
+                            Они открыли полуоткрытую дверь<br>ради права женщин на образование,<br>и я прошла через нее за руку со своими учениками,<br>развивая творческое образование.
+                        </div>
+                        <div class="stanza">
+                            Я надеюсь, что мое наследие будет прекрасным и плодотворным:<br>оставить что-то прекрасное в хаосе мира,<br>быть искрой в долгой ночи,<br>ибо женщина всегда была и будет светом мира.<br><span class="signature">Пас Арес Оссет, март 2026 г.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ukrainian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Молитва за Жінку</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Я приходжу з усіх берегів<br>і з жодного ув'язнення.<br>У моїй крові — сонце Сіді-Іфні,<br>а в дусі — спокій миру.<br>Я жінка, я вчителька,<br>я живе відображення тих, хто мовчав.
+                        </div>
+                        <div class="stanza">
+                            Я кричу сьогодні за Гільдегарду, музику та сивілу Рейну,<br>яка об'єднала науку та віру як сестер.<br>Я кричу за Сор Хуану Інес де ла Крус, фенікса розуму,<br>яка любила книги більше, ніж світ.<br>Я кричу за Плаутіллу Неллі, першу на полотні,<br>яка позичила мені свої очі, щоб намалювати невидиме.
+                        </div>
+                        <div class="stanza">
+                            Я провела своє життя в пошуках Істини в красі,<br>здобуваючи докторський ступінь душі у філософії та кольорах,<br>зцілюючи давні рани Дхармою та Євангелієм.<br>Тому що мистецтво — єдина релігія,<br>якій не потрібні стіни, щоб торкнутися неба.
+                        </div>
+                        <div class="stanza">
+                            Вони відкрили напіввідчинені двері<br>заради права жінок на освіту,<br>і я пройшла через них за руку зі своїми учнями,<br>розвиваючи творчу освіту.
+                        </div>
+                        <div class="stanza">
+                            Я сподіваюся, що моя спадщина буде прекрасною і плідною:<br>залишити щось прекрасне в хаосі світу,<br>бути іскрою в довгій ночі,<br>бо жінка завжди була і буде світлом світу.<br><span class="signature">Пас Арес Оссет, березень 2026</span>.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Comic Section -->
+            <div class="container mt-5 mb-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <span class="spanish language">El Poema en Imágenes</span>
+                    <span class="english language" style="display:none;">The Poem in Images</span>
+                    <span class="italian language" style="display:none;">Il Poema in Immagini</span>
+                    <span class="aleman language" style="display:none;">Das Gedicht in Bildern</span>
+                    <span class="frances language" style="display:none;">Le Poème en Images</span>
+                    <span class="japones language" style="display:none;">画像で見る詩</span>
+                    <span class="portugues language" style="display:none;">O Poema em Imagens</span>
+                    <span class="chinese language" style="display:none;">图片中的诗歌</span>
+                    <span class="arabic language" style="display:none;">القصيدة في صور</span>
+                    <span class="russian language" style="display:none;">Стихотворение в картинках</span>
+                    <span class="ukrainian language" style="display:none;">Вірш у малюнках</span>
+                </h2>
+                <div class="mt-4">
+                    <img id="comic-image" src="comic_oracion/comic_oracion_espanol.png" class="img-fluid rounded shadow-lg" alt="Arte del poema" style="max-height: 800px; border: 1px solid rgba(255,215,0,0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.8);">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="base.js"></script>
+</body>
+</html>

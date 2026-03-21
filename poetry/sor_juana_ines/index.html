@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Sor Juana Inés de la Cruz - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+        <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 10px;">
+            <!-- Poemas Button -->
+            <a href="../index.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 8px 15px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3); font-size: 0.9rem;">
+                <i class="fas fa-feather-alt mr-2"></i>
+                <span class="spanish language">Poemas</span>
+                <span class="english language" style="display:none;">Poems</span>
+                <span class="italian language" style="display:none;">Poesie</span>
+                <span class="aleman language" style="display:none;">Gedichte</span>
+                <span class="frances language" style="display:none;">Poèmes</span>
+                <span class="japones language" style="display:none;">詩</span>
+                <span class="portugues language" style="display:none;">Poemas</span>
+                <span class="chinese language" style="display:none;">诗歌</span>
+                <span class="arabic language" style="display:none;">قصائد</span>
+                <span class="russian language" style="display:none;">Стихи</span>
+                <span class="ukrainian language" style="display:none;">Вірші</span>
+            </a>
+            <!-- Linktree Button -->
+            <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 8px 15px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3); font-size: 0.9rem;">
+                <i class="fas fa-link mr-2"></i>
+                <span>Linktree</span>
+            </a>
+            <!-- Spotify Button -->
+            <a id="spotify-link" href="https://open.spotify.com/artist/7AtGf8J17mC5p9pG8zN0n2" target="_blank" class="btn btn-spotify d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; background: #1DB954; color: white; padding: 8px 15px; border: none; font-size: 0.9rem;">
+                <i class="fab fa-spotify mr-2"></i>
+                <span class="spanish language">Música</span>
+                <span class="english language" style="display:none;">Music</span>
+                <span class="italian language" style="display:none;">Musica</span>
+                <span class="aleman language" style="display:none;">Musik</span>
+                <span class="frances language" style="display:none;">Musique</span>
+                <span class="japones language" style="display:none;">音楽</span>
+                <span class="portugues language" style="display:none;">Música</span>
+                <span class="chinese language" style="display:none;">音乐</span>
+                <span class="arabic language" style="display:none;">موسيقى</span>
+                <span class="russian language" style="display:none;">Музыка</span>
+                <span class="ukrainian language" style="display:none;">Музика</span>
+            </a>
+            <select id="language-select" class="custom-select-lg" style="background: rgba(0,0,0,0.5); color: white; border: 1px solid #FFD700; border-radius: 10px; padding: 5px 15px; font-size: 1.1rem; height: auto; width: auto; font-weight: bold;">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portugues">🇵🇹 Português</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="ukrainian">🇺🇦 Українська</option>
+            </select>
+        </div>
+
+        <section class="jumbotron text-center" style="padding: 100px 0;">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px; max-width: 120px;" alt="Paz Arés Osset">
+                </a>
+                <h1 class="jumbotron-heading text-shadow-deep">
+                    <div class="spanish language">Sor Juana Inés de la Cruz: El Fénix de la Razón</div>
+                    <div class="english language" style="display:none;">Sor Juana Inés de la Cruz: The Phoenix of Reason</div>
+                    <div class="italian language" style="display:none;">Sor Juana Inés de la Cruz: La Fenice della Ragione</div>
+                    <div class="aleman language" style="display:none;">Sor Juana Inés de la Cruz: Der Phönix der Vernunft</div>
+                    <div class="frances language" style="display:none;">Sor Juana Inés de la Cruz : Le Phénix de la Raison</div>
+                    <div class="japones language" style="display:none;">ソル・フアナ・イネス・デ・ラ・クルス：理性の不死鳥</div>
+                    <div class="portugues language" style="display:none;">Sor Juana Inés de la Cruz: A Fênix da Razão</div>
+                    <div class="chinese language" style="display:none;">索尔·胡安娜·伊内斯·德拉克鲁斯：理性的凤凰</div>
+                    <div class="arabic language" style="display:none;">سور خوانا إينيس دي لا كروز: عنقاء العقل</div>
+                    <div class="russian language" style="display:none;">Сор Хуана Инес де ла Крус: Феникс Разума</div>
+                    <div class="ukrainian language" style="display:none;">Сор Хуана Інес де ла Крус: Фенікс Розуму</div>
+                </h1>
+            </div>
+        </section>
+
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Sor Juana Inés de la Cruz: El Fénix de la Razón</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Entre volcanes de México,<br>se alzó la Décima Musa, el Fénix de América.<br>Sor Juana, la que aprendió a leer a los tres años,<br>la que quiso vestirse de hombre para entrar al aula.
+                        </div>
+                        <div class="stanza">
+                            Hizo de su celda la biblioteca más grande,<br>y de su mente, una fortaleza inexpugnable.<br>Si no entendía una lección, cortaba su cabello,<br>pues no quería cabeza hermosa si estaba vacía.
+                        </div>
+                        <div class="stanza">
+                            "Hombres necios", escribió con pluma afilada,<br>desnudando la hipocresía de su tiempo.<br>Teóloga, astrónoma, poeta y matemática,<br>defendió que el alma no tiene género<br>y que el derecho a saber es don divino.
+                        </div>
+                        <div class="stanza">
+                            Al final le quitaron los libros, le impusieron silencio,<br>pero no sabían que su voz ya era eterna.<br>Ella firmó con su sangre la libertad de pensar,<br>dejándonos la herencia más valiosa:<br>la palabra como patria de la mujer.
+                        </div>
+                        <div class="stanza">
+                            <span class="signature">Paz Arés Osset, marzo de 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="english language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Sor Juana Inés de la Cruz: The Phoenix of Reason</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Among the volcanoes of Mexico,<br>rose the Tenth Muse, the Phoenix of America.<br>Sor Juana, who learned to read at three years old,<br>who wanted to dress as a man to enter the classroom.
+                        </div>
+                        <div class="stanza">
+                            She made her cell the largest library,<br>and her mind, an impregnable fortress.<br>If she didn't understand a lesson, she cut her hair,<br>for she wanted no beautiful head if it were empty.
+                        </div>
+                        <div class="stanza">
+                            "Foolish men," she wrote with a sharp quill,<br>stripping bare the hypocrisy of her time.<br>Theologian, astronomer, poet, and mathematician,<br>she defended that the soul has no gender<br>and that the right to know is a divine gift.
+                        </div>
+                        <div class="stanza">
+                            In the end they took away her books, they imposed silence on her,<br>but they didn't know her voice was already eternal.<br>She signed with her blood the freedom to think,<br>leaving us the most valuable inheritance:<br>the word as the homeland of women.
+                        </div>
+                        <div class="stanza">
+                            <span class="signature">Paz Arés Osset, March 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="italian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Sor Juana Inés de la Cruz: La Fenice della Ragione</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Tra i vulcani del Messico,<br>sorse la Decima Musa, la Fenice d'America.<br>Sor Juana, colei che imparò a leggere a tre anni,<br>colei che volle vestirsi da uomo per entrare in aula.
+                        </div>
+                        <div class="stanza">
+                            Fece della sua cella la biblioteca più grande,<br>e della sua mente, una fortezza inespugnabile.<br>Se non capiva una lezione, si tagliava i capelli,<br>poiché non voleva una testa bella se fosse stata vuota.
+                        </div>
+                        <div class="stanza">
+                            "Uomini stolti", scrisse con penna affilata,<br>mettendo a nudo l'ipocrisia del suo tempo.<br>Teologa, astronoma, poetessa e matematica,<br>difese che l'anima non ha sesso<br>e che il diritto di sapere è un dono divino.
+                        </div>
+                        <div class="stanza">
+                            Alla fine le tolsero i libri, le imposero il silenzio,<br>ma non sapevano che la sua voce era già eterna.<br>Firmò con il suo sangue la libertà di pensare,<br>lasciandoci l'eredità più preziosa:<br>la parola come patria della donna.
+                        </div>
+                        <div class="stanza">
+                            <span class="signature">Paz Arés Osset, marzo 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aleman language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Sor Juana Inés de la Cruz: Der Phönix der Vernunft</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Zwischen den Vulkanen Mexikos<br>erhob sich die Zehnte Muse, der Phönix von Amerika.<br>Sor Juana, die mit drei Jahren lesen lernte,<br>die sich als Mann verkleiden wollte, um in den Hörsaal zu gelangen.
+                        </div>
+                        <div class="stanza">
+                            Sie machte aus ihrer Zelle die größte Bibliothek<br>und aus ihrem Verstand eine uneinnehmbare Festung.<br>Wenn sie eine Lektion nicht verstand, schnitt sie sich die Haare ab,<br>denn sie wollte keinen schönen Kopf, wenn er leer war.
+                        </div>
+                        <div class="stanza">
+                            "Törichte Männer", schrieb sie mit scharfer Feder<br>und entblößte die Heuchelei ihrer Zeit.<br>Theologin, Astronomin, Dichterin und Mathematikerin,<br>sie verteidigte, dass die Seele kein Geschlecht hat<br>und dass das Recht auf Wissen ein göttliches Geschenk ist.
+                        </div>
+                        <div class="stanza">
+                            Am Ende nahmen sie ihr die Bücher, zwangen ihr Schweigen auf,<br>aber sie wussten nicht, dass ihre Stimme bereits ewig war.<br>Sie unterschrieb mit ihrem Blut die Freiheit zu denken<br>und hinterließ uns das wertvollste Erbe:<br>das Wort als Heimat der Frau.
+                        </div>
+                        <div class="stanza">
+                            <span class="signature">Paz Arés Osset, März 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="frances language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Sor Juana Inés de la Cruz : Le Phénix de la Raison</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Parmi les volcans du Mexique,<br>s'est élevée la Dixième Muse, le Phénix de l'Amérique.<br>Sor Juana, celle qui apprit à lire à trois ans,<br>celle qui voulut s'habiller en homme pour entrer en classe.
+                        </div>
+                        <div class="stanza">
+                            Elle fit de sa cellule la plus grande bibliothèque,<br>et de son esprit, une forteresse inexpugnable.<br>Si elle ne comprenait pas une leçon, elle se coupait les cheveux,<br>car elle ne voulait pas d'une belle tête si elle était vide.
+                        </div>
+                        <div class="stanza">
+                            "Hommes insensés", écrivit-elle d'une plume acérée,<br>mettant à nu l'hypocrisie de son temps.<br>Théologienne, astronome, poétesse et mathématicienne,<br>elle défendit que l'âme n'a pas de genre<br>et que le droit de savoir est un don divin.
+                        </div>
+                        <div class="stanza">
+                            À la fin, on lui enleva ses livres, on lui imposa le silence,<br>mais ils ne savaient pas que sa voix était déjà éternelle.<br>Elle signa de son sang la liberté de penser,<br>nous laissant l'héritage le plus précieux :<br>la parole comme patrie de la femme.
+                        </div>
+                        <div class="stanza">
+                            <span class="signature">Paz Arés Osset, mars 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="japones language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">ソル・フアナ・イネス・デ・ラ・クルス：理性の不死鳥</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            メキシコの火山の間から、<br>十番目のミューズ、アメリカの不死鳥が立ち上がった。<br>ソル・フアナ、3歳で読み書きを学んだ彼女、<br>教室に入るために男装を望んだ彼女。
+                        </div>
+                        <div class="stanza">
+                            彼女は自分の独房を最大の図書館にし、<br>彼女の心を難攻不落の要塞にした。<br>教訓を理解できなければ、髪を切った、<br>空っぽなら美しい頭など欲しくなかったから。
+                        </div>
+                        <div class="stanza">
+                            「愚かな男たち」と彼女は鋭いペンで書き、<br>彼女の時代の偽善を暴露した。<br>神学者、天文学者、詩人、数学者、<br>彼女は魂に性別はないと弁護し、<br>知る権利は神の贈り物であると主張した。
+                        </div>
+                        <div class="stanza">
+                            最後に彼らは彼女から本を奪い、沈黙を強いたが、<br>彼女の声がすでに永遠であることを知らなかった。<br>彼女は血で考える自由を署名し、<br>最も価値のある遺産を残してくれた：<br>女性の祖国としての言葉。
+                        </div>
+                        <div class="stanza">
+                            パス・アレス・オセ、2026年3月
+                        </div>
+                    </div>
+                </div>
+                <div class="portugues language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Sor Juana Inés de la Cruz: A Fênix da Razão</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Entre vulcões do México,<br>ergueu-se a Décima Musa, a Fênix da América.<br>Sor Juana, aquela que aprendeu a ler aos três anos,<br>aquela que quis vestir-se de homem para entrar na aula.
+                        </div>
+                        <div class="stanza">
+                            Fez da sua cela a maior biblioteca,<br>e da sua mente, uma fortaleza inexpugnável.<br>Se não entendia uma lição, cortava o cabelo,<br>pois não queria uma cabeça bonita se estivesse vazia.
+                        </div>
+                        <div class="stanza">
+                            "Homens néscios", escreveu com pluma afiada,<br>desnudando a hipocrisia do seu tempo.<br>Teóloga, astrônoma, poeta e matemática,<br>defendeu que a alma não tem gênero<br>e que o direito a saber é dom divino.
+                        </div>
+                        <div class="stanza">
+                            No final tiraram-lhe os livros, impuseram-lhe o silêncio,<br>mas não sabiam que a sua voz já era eterna.<br>Ela assinou com o seu sangue a liberdade de pensar,<br>deixando-nos a herança mais valiosa:<br>a palavra como pátria da mulher.
+                        </div>
+                        <div class="stanza">
+                            <span class="signature">Paz Arés Osset, março 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chinese language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">索尔·胡安娜·伊内斯·德拉克鲁斯：理性的凤凰</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            在墨西哥的火山之间，<br>升起了第十位缪斯，美洲的凤凰。<br>索尔·胡安娜，她三岁就学会了阅读，<br>她想穿上男装走进教室。
+                        </div>
+                        <div class="stanza">
+                            她把自己的牢房变成了最大的图书馆，<br>把心智建成了坚不可摧的堡垒。<br>如果她不懂了一课，她就剪掉头发，<br>因为她不想要一个美丽的脑袋如果它是空洞的。
+                        </div>
+                        <div class="stanza">
+                            “愚蠢的男人们”，她用锋利的笔写道，<br>扒开了她那个时代的虚伪。<br>神学家、天文学家、诗人、数学家，<br>她辩护说灵魂没有性别，<br>求知的权利是上帝赐予的礼物。
+                        </div>
+                        <div class="stanza">
+                            最后他们抢走了她的书，强迫她保持沉默，<br>但他们不知道她的声音已经成为永恒。<br>她用鲜血签下了思考的自由，<br>给我们留下了最宝贵的遗产：<br>以语言作为女性的祖国。
+                        </div>
+                        <div class="stanza">
+                            帕斯·阿雷斯·奥塞特，2026年3月
+                        </div>
+                    </div>
+                </div>
+                <div class="arabic language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">سور خوانا إينيس دي لا كروز: عنقاء العقل</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            بين براكين المكسيك،<br>نهضت الملهمة العاشرة، عنقاء أمريكا.<br>سور خوانا، التي تعلمت القراءة في الثالثة من عمرها،<br>التي أرادت أن ترتدي زي رجل لدخول الفصل.
+                        </div>
+                        <div class="stanza">
+                            جعلت من زنزانتها أكبر مكتبة،<br>ومن عقلها حصنا منيعا.<br>إذا لم تفهم درسا، قامت بقص شعرها،<br>لأنها لم تكن تريد رأسا جميلا إذا كان فارغا.
+                        </div>
+                        <div class="stanza">
+                            "الرجال الحمقى"، كتبت بقلم حاد،<br>كاشفة نفاق عصرها.<br>عالمة لاهوت، فلكية، شاعرة ورياضية،<br>دافعت عن أن الروح لا جنس لها<br>وأن الحق في المعرفة هبة مقدسة.
+                        </div>
+                        <div class="stanza">
+                            في النهاية سلبوها كتبها، وفرضوا عليها الصمت،<br>لكنهم لم يعلموا أن صوتها أصبح أبديا.<br>وقعت بدمائها على حرية التفكير،<br>تاركة لنا أثمن ميراث:<br>الكلمة كوطن للمرأة.
+                        </div>
+                        <div class="stanza">
+                            باز أريس أوسيت، مارس ٢٠٢٦
+                        </div>
+                    </div>
+                </div>
+                <div class="russian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Сор Хуана Инес де ла Крус: Феникс Разума</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Среди вулканов Мексики<br>восстала Десятая Муза, Феникс Америки.<br>Сор Хуана, та, что научилась читать в три года,<br>что хотела переодеться мужчиной, чтобы войти в класс.
+                        </div>
+                        <div class="stanza">
+                            Она превратила свою келью в величайшую библиотеку,<br>а свой разум — в неприступную крепость.<br>Если она не понимала урок, она отрезала свои волосы,<br>ибо не желала красивой головы, если она была пуста.
+                        </div>
+                        <div class="stanza">
+                            «Глупые мужчины», — писала она острым пером,<br>обнажая лицемерие своего времени.<br>Богослов, астроном, поэт и математик,<br>она защищала, что душа не имеет пола,<br>а право на знание — божественный дар.
+                        </div>
+                        <div class="stanza">
+                            В конце концов у нее забрали книги, навязали молчание,<br>но они не знали, что ее голос уже стал вечным.<br>Она подписала своей кровью свободу мысли,<br>оставив нам самое ценное наследство:<br>слово как родину женщины.
+                        </div>
+                        <div class="stanza">
+                            Пас Арес Оссет, март 2026
+                        </div>
+                    </div>
+                </div>
+                <div class="ukrainian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3rem;">Сор Хуана Інес де ла Крус: Фенікс Розуму</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Серед вулканов Мексики<br>постала Десята Муза, Фенікс Америки.<br>Сор Хуана, та, що навчилася читати в три роки,<br>що хотіла переодягнутися чоловіком, щоб увійти до класу.
+                        </div>
+                        <div class="stanza">
+                            Вона перетворила свою келію на найбільшу бібліотеку,<br>а свій розум — на неприступну фортецю.<br>Якщо вона не розуміла урок, вона відрізала своє волосся,<br>бо не бажала красивої голови, якщо вона була порожньою.
+                        </div>
+                        <div class="stanza">
+                            «Нерозумні чоловіки», — писала вона гострим пером,<br>оголюючи лицемірство свого часу.<br>Богослов, астроном, поет і математик,<br>вона захищала, що душа не має статі,<br>а право на знання — божественний дар.
+                        </div>
+                        <div class="stanza">
+                            Зрештою у неї забрали книги, нав'язали їй мовчання,<br>але вони не знали, що її голос вже став вічним.<br>Вона підписала своєю кров'ю свободу думки,<br>залишивши нам найціннішу спадщину:<br>слово як батьківщину жінки.
+                        </div>
+                        <div class="stanza">
+                            Пас Арес Оссет, березень 2026
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Comic Section -->
+            <div class="container mt-5 mb-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <span class="spanish language">El Poema en Imágenes</span>
+                    <span class="english language" style="display:none;">The Poem in Images</span>
+                    <span class="italian language" style="display:none;">Il Poema in Immagini</span>
+                    <span class="aleman language" style="display:none;">Das Gedicht in Bildern</span>
+                    <span class="frances language" style="display:none;">Le Poème en Images</span>
+                    <span class="japones language" style="display:none;">画像で見る詩</span>
+                    <span class="portugues language" style="display:none;">O Poema em Imagens</span>
+                    <span class="chinese language" style="display:none;">图片中的诗歌</span>
+                    <span class="arabic language" style="display:none;">القصيدة في صور</span>
+                    <span class="russian language" style="display:none;">Стихотворение в картинках</span>
+                    <span class="ukrainian language" style="display:none;">Вірш у малюнках</span>
+                </h2>
+                <div class="mt-4">
+                    <img id="comic-image" src="comic_sor_juana/comic_espanol.png" class="img-fluid rounded shadow-lg" alt="Arte del poema" style="max-height: 800px; border: 1px solid rgba(255,215,0,0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.8);">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="base.js"></script>
+</body>
+</html>
