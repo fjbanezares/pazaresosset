@@ -12,23 +12,19 @@
         /* --- VARIABLES DE DISEÑO PREMIUM --- */
         :root {
             --bg-dark: #0a1118;
-            /* Azul noche profundo */
             --bg-card: #141e29;
             --bg-card-alt: #1a2634;
             --text-main: #e0e6ed;
             --text-muted: #a0aec0;
             --gold: #c6a355;
-            /* Oro sofisticado */
             --gold-hover: #e6c678;
             --green-gain: #2ecc71;
-            /* Verde esmeralda */
             --red-loss: #e74c3c;
             --font-header: 'Cinzel', serif;
             --font-body: 'Montserrat', sans-serif;
             --transition: all 0.4s ease;
         }
 
-        /* --- RESET & BASIC --- */
         * {
             margin: 0;
             padding: 0;
@@ -44,7 +40,6 @@
             overflow-x: hidden;
         }
 
-        /* --- ANIMACIONES --- */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -68,8 +63,8 @@
 
         /* --- HERO --- */
         header {
-            height: 100vh;
-            background: linear-gradient(rgba(10, 17, 24, 0.7), rgba(10, 17, 24, 1)),
+            height: 90vh;
+            background: linear-gradient(rgba(10, 17, 24, 0.8), rgba(10, 17, 24, 1)),
                 url('https://images.unsplash.com/photo-1558661076-21379f425864?q=80&w=1920') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
@@ -102,7 +97,7 @@
         .hero-subtitle {
             font-size: 1.2rem;
             font-weight: 300;
-            max-width: 700px;
+            max-width: 800px;
             color: var(--text-muted);
             animation: fadeInUp 1s forwards 0.3s;
             opacity: 0;
@@ -114,27 +109,12 @@
             padding: 60px 20px;
         }
 
-        /* --- INTRO BOX --- */
-        .intro-box {
-            background-color: var(--bg-card);
-            padding: 40px;
-            border-radius: 4px;
-            border-left: 3px solid var(--gold);
-            margin-bottom: 80px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .intro-box p {
-            font-size: 1.1rem;
-            color: var(--text-main);
-        }
-
         .highlight-gold {
             color: var(--gold);
             font-weight: 600;
         }
 
-        /* --- SECTION TITLES --- */
+        /* --- TABLAS Y TARJETAS --- */
         .section-title {
             font-family: var(--font-header);
             font-size: 2.2rem;
@@ -148,81 +128,12 @@
             color: var(--text-muted);
             margin-bottom: 50px;
             font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* --- BAR CHART CARDS (PISO) --- */
-        .chart-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .chart-card {
-            background-color: var(--bg-card);
-            padding: 30px;
-            border-radius: 8px;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .chart-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(198, 163, 85, 0.1);
-        }
-
-        .chart-card.inmo { border-top: 3px solid var(--red-loss); }
-        .chart-card.pablo { border-top: 3px solid var(--gold); }
-
-        .card-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-        }
-
-        .card-price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #fff;
-            margin: 10px 0;
-        }
-
-        .bar-visual {
-            height: 20px;
-            background: #2a3b4d;
-            border-radius: 10px;
-            margin: 20px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bar-fill {
-            position: absolute;
-            top: 0; left: 0;
-            height: 100%;
-            border-radius: 10px;
-            width: 0;
-            transition: width 1.5s ease-out;
-        }
-
-        .inmo .bar-fill { background: var(--red-loss); width: 85%; }
-        .pablo .bar-fill { background: var(--green-gain); width: 100%; }
-
-        .data-list { list-style: none; margin-top: 20px; }
-        .data-list li {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #2a3b4d;
-            font-size: 0.95rem;
-        }
-
-        .loss { color: var(--red-loss); font-weight: 600; }
-        .gain { color: var(--green-gain); font-weight: 600; }
-
-        /* --- PREMIUM TABLE (LOCAL) --- */
+        /* Tabla Premium CSS */
         .premium-table {
             width: 100%;
             border-collapse: collapse;
@@ -251,14 +162,32 @@
             color: var(--text-main);
         }
 
-        .premium-table tr:last-child td { border-bottom: none; }
-        .premium-table td:first-child { text-align: left; font-weight: 600; color: var(--text-muted); }
+        .premium-table tr:last-child td {
+            border-bottom: none;
+        }
 
-        .td-bad { color: var(--red-loss); font-style: italic; }
-        .td-good { color: var(--green-gain); font-weight: bold; font-size: 1.1rem; }
-        .td-neutral { color: var(--text-main); }
+        .premium-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
 
-        /* --- LOCAL STORY --- */
+        .td-bad {
+            color: var(--red-loss);
+            font-style: italic;
+        }
+
+        .td-good {
+            color: var(--green-gain);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .td-neutral {
+            color: var(--text-main);
+        }
+
+        /* --- SECCIÓN LOCAL --- */
         .local-story {
             background-color: var(--bg-card);
             padding: 40px;
@@ -289,7 +218,7 @@
             font-family: var(--font-header);
         }
 
-        /* --- EMOTIONAL HOOK --- */
+        /* --- GANCHO EMOCIONAL --- */
         .emotional-hook {
             text-align: center;
             max-width: 900px;
@@ -371,12 +300,23 @@
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .chart-container { grid-template-columns: 1fr; }
-            .total-amount { font-size: 3rem; }
-            .funding-grid { grid-template-columns: 1fr; }
-            .premium-table th, .premium-table td { padding: 12px 10px; font-size: 0.9rem; }
-            .container { padding: 40px 15px; }
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .total-amount {
+                font-size: 3rem;
+            }
+
+            .funding-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .premium-table th,
+            .premium-table td {
+                padding: 12px 10px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -384,62 +324,60 @@
 <body>
 
     <header>
-        <h1 class="reveal">Excelencia Patrimonial</h1>
-        <p class="hero-subtitle reveal">Una propuesta estratégica diseñada para Teresa y Elena, maximizando el legado
-            familiar con inteligencia y seguridad.</p>
+        <h1 class="reveal">Patrimonio y Familia</h1>
+        <p class="hero-subtitle reveal">Teresa, Elena: Hemos analizado vuestras ideas. Esta es la hoja de ruta
+            definitiva para maximizar el valor de la calle Albacete, proteger nuestro legado y ayudarnos mutuamente.</p>
     </header>
 
     <div class="container">
 
-        <div class="intro-box reveal">
-            <p>Queridas tías, tras reflexionar sobre <span class="highlight-gold">vuestras excelentes intuiciones</span>
-                acerca del mercado en Valencia, he materializado esa visión. He consultado a <strong>Pablo</strong>
-                (nuestro familiar y experto de total confianza). Gracias a vuestro enfoque inicial, Pablo se ha
-                ilusionado y ha diseñado una estructura legal y financiera que <span class="highlight-gold">garantiza
-                    paz mental y un beneficio económico superior</span> al de cualquier inmobiliaria externa.</p>
+        <div class="local-story reveal" style="margin-bottom: 80px;">
+            <p>Tras escuchar vuestras acertadas reflexiones, hablé con <strong>Pablo (nuestro familiar de
+                    confianza)</strong>. Le entusiasmó vuestra visión y ha realizado un estudio profundo del mercado
+                real en Valencia. Sus datos nos demuestran que la vía tradicional nos hace perder dinero, mientras que
+                un acuerdo familiar nos protege de impuestos abusivos y comisiones, garantizando mucha más liquidez real
+                para vosotras.</p>
         </div>
 
-        <h2 class="section-title reveal">Análisis de Rendimiento Neto</h2>
-        <p class="section-subtitle reveal">Por qué la "Estrategia Pablo" es la opción financieramente superior.</p>
+        <h2 class="section-title reveal">1. La Vivienda: La Realidad de los Números</h2>
+        <p class="section-subtitle reveal">Comparativa del rendimiento neto en el bolsillo.</p>
 
-        <div class="chart-container">
-
-            <div class="chart-card inmo reveal">
-                <div class="card-label">Opción Inmobiliaria Estándar</div>
-                <div class="card-price">~375.000 €</div>
-                <p class="card-label" style="text-transform: none;">Líquido Final Estimado (Malviviendo)</p>
-
-                <div class="bar-visual">
-                    <div class="bar-fill" id="barInmo"></div>
-                </div>
-
-                <ul class="data-list">
-                    <li><span>Precio Salida</span> <span>450.000 €</span></li>
-                    <li><span>Cierre Real Mercado</span> <span>400.000 €</span></li>
-                    <li><span>Comisión (5% + IVA)</span> <span class="loss">-24.200 €</span></li>
-                    <li><span>Impuestos Patrimonio</span> <span class="loss">PAGO MÁXIMO</span></li>
-                </ul>
-            </div>
-
-            <div class="chart-card pablo reveal">
-                <div class="card-label">Estrategia Familiar (Pablo)</div>
-                <div class="card-price gain">> 400.000 €</div>
-                <p class="card-label" style="text-transform: none;">Líquido Real + Ahorro Fiscal</p>
-
-                <div class="bar-visual">
-                    <div class="bar-fill" id="barPablo"></div>
-                </div>
-
-                <ul class="data-list">
-                    <li><span>Precio Salida Real</span> <span>420.000 €</span></li>
-                    <li><span>Cierre Acordado</span> <span class="gain">390.000 €</span></li>
-                    <li><span>Comisión Inmobiliaria</span> <span class="gain">0 € (AHORRO)</span></li>
-                    <li><span>Optimización Fiscal (B)</span> <span class="gain">EVITA IMPUESTOS</span></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- === DESDE AQUÍ: SECCIÓN LOCAL DEL COPY === -->
+        <table class="premium-table reveal">
+            <thead>
+                <tr>
+                    <th>Concepto</th>
+                    <th>Inmobiliaria Externa</th>
+                    <th>Estrategia Pablo (Familiar)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Precio Salida</td>
+                    <td>450.000 € (Poco realista)</td>
+                    <td>420.000 € (Ajustado a mercado)</td>
+                </tr>
+                <tr>
+                    <td>Cierre Real Estimado</td>
+                    <td>400.000 €</td>
+                    <td class="td-good">390.000 €</td>
+                </tr>
+                <tr>
+                    <td>Comisiones e Intermediarios</td>
+                    <td class="td-bad">-24.200 € (Pérdida)</td>
+                    <td class="td-good">0 € (Ahorro Total)</td>
+                </tr>
+                <tr>
+                    <td>Impacto Fiscal</td>
+                    <td class="td-bad">Pago máximo a Hacienda</td>
+                    <td class="td-good">Optimizado (Gestión Inteligente)</td>
+                </tr>
+                <tr style="background-color: rgba(46, 204, 113, 0.05);">
+                    <td style="color: #fff;"><strong>Liquidez por Heredero (El Pico)</strong></td>
+                    <td class="td-bad">Menos de 125.000 €</td>
+                    <td class="td-good">133.000 € limpios</td>
+                </tr>
+            </tbody>
+        </table>
 
         <h2 class="section-title reveal" style="margin-top: 100px;">2. El Local: Un Esfuerzo con Propósito</h2>
 
@@ -541,17 +479,11 @@
                 var elementVisible = 150;
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
-
-                    if (reveals[i].contains(document.getElementById('barInmo'))) {
-                        document.getElementById('barInmo').style.width = "85%";
-                        document.getElementById('barPablo').style.width = "100%";
-                    }
                 }
             }
         }
         window.addEventListener("scroll", reveal);
         reveal();
-        // Podrías añadir un efecto de conteo numérico aquí para el total si quisieras más impacto.
     </script>
 </body>
 
