@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>¿Dónde Estás? - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+        <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 10px;">
+            <a href="../index.html" class="btn btn-outline-light d-flex align-items-center" style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 8px 15px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3); font-size: 0.9rem;">
+                <i class="fas fa-feather-alt mr-2"></i>
+                <span class="spanish language">Poemas</span><span class="english language">Poems</span><span class="italian language">Poesie</span><span class="aleman language">Gedichte</span><span class="frances language">Poèmes</span><span class="japones language">詩</span><span class="portugues language">Poemas</span><span class="chinese language">诗歌</span><span class="arabic language">قصائد</span><span class="russian language">Стихи</span><span class="ukrainian language">Вірші</span>
+            </a>
+            <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center" style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 8px 15px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3); font-size: 0.9rem;">
+                <i class="fas fa-link mr-2"></i><span>Linktree</span>
+            </a>
+            <select id="language-select" class="custom-select-lg">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portugues">🇵🇹 Português</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="ukrainian">🇺🇦 Українська</option>
+            </select>
+        </div>
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px; max-width: 120px;" alt="Paz Arés Osset">
+                </a>
+                <h1 class="jumbotron-heading text-shadow-deep">
+                    <div class="spanish language">¿Dónde Estás?</div>
+                    <div class="english language">Where Are You?</div>
+                    <div class="italian language">Dove Sei?</div>
+                    <div class="aleman language">Wo Bist Du?</div>
+                    <div class="frances language">Où Es-Tu ?</div>
+                    <div class="japones language">あなたはどこに？</div>
+                    <div class="portugues language">Onde Estás?</div>
+                    <div class="chinese language">你在哪里？</div>
+                    <div class="arabic language">أين أنت؟</div>
+                    <div class="russian language">Где Ты?</div>
+                    <div class="ukrainian language">Де Ти?</div>
+                </h1>
+                <div class="lead text-shadow-deep">
+                    <div class="spanish language">Un grito desesperado de amor y ausencia entre estatuas hermosas.</div>
+                    <div class="english language">A desperate cry of love and absence among beautiful statues.</div>
+                    <div class="italian language">Un grido disperato d'amore e assenza tra belle statue.</div>
+                    <div class="aleman language">Ein verzweifelter Schrei der Liebe und Abwesenheit zwischen schönen Statuen.</div>
+                    <div class="frances language">Un cri désespéré d'amour et d'absence parmi de belles statues.</div>
+                    <div class="japones language">美しい彫像の間で愛と不在の絶望的な叫び。</div>
+                    <div class="portugues language">Um grito desesperado de amor e ausência entre belas estátuas.</div>
+                    <div class="chinese language">在美丽的雕像间，一声绝望的爱与缺失之呼喊。</div>
+                    <div class="arabic language">صرخة يائسة من الحب والغياب بين التماثيل الجميلة.</div>
+                    <div class="russian language">Отчаянный крик любви и разлуки среди прекрасных статуй.</div>
+                    <div class="ukrainian language">Відчайний крик любові та розлуки серед прекрасних статуй.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
+
+                <!-- SPANISH -->
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: #C0A060;">¿Dónde Estás?</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">En la tarde de oro,<br>¿dónde estás? ¿dónde estás?<br>En la noche de plata,<br>cuando te quiero amar.</div>
+                        <div class="stanza">¿Dónde estás ahora<br>niño del alma<br>que no te encuentro?<br>Buscándote, entre estatuas hermosas.</div>
+                        <div class="stanza">Busco, te busco,<br>Rostro enamorado, rostro sonriente,<br>¿Dónde estás, dónde estás?</div>
+                        <div class="stanza">Felicidad extraña de vida y muerte<br>necesidad extrema de sentir tu presencia.<br>Llorando por dentro tu insoportable ausencia.<br>No hay realidad más dura<br>en esta contradictoria incongruencia.</div>
+                        <div class="stanza">Alrededor resplandeciente no adviertes nada.<br>La opresión de mis sienes todo el llanto contienen.<br>Y así como en el agua no se ven las lágrimas<br>el espejo no refleja el alma torturada.</div>
+                        <div class="stanza">Fingiendo vivo y estoy cansada.<br>Quiero vivir y no está permitido,<br>vivir como el cristal tan duro y frágil<br>vivir con la transparencia posible de un ser contradictorio</div>
+                        <div class="stanza">Y aquí estoy<br>escondida de la vida, que pasa y pasa.<br>¿Qué haces? ¿qué esperas, que no la abrazas?</div>
+                        <div class="stanza">Y aquí estoy<br>esperando tu mirada,<br>deseando tu sonrisa<br>soñando tu fuego de amor,<br>de amor que abrasa.</div>
+                        <div class="stanza">¿Dónde?<br>Ahora que te necesito<br>en el mar de dolor que me envuelve<br>por no estar en tu orilla<br>besada por tu arena.</div>
+                        <div class="stanza">¿Dónde?<br>Mañana, cuando tu felicidad<br>no advierta mi alma cansada.</div>
+                        <div class="stanza">¡Deja todo y ven ahora!<br>hazme volar como el soplo del aire,<br>hazme brillar como el rayo de luz<br>y escuchar el rumor de la vida,<br>hazme amar el amor.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="english language">
+                    <h1 class="handwritten" style="color: #C0A060;">Where Are You?</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">In the golden afternoon,<br>where are you? where are you?<br>In the silver night,<br>when I want to love you.</div>
+                        <div class="stanza">Where are you now<br>child of my soul<br>that I cannot find you?<br>Searching for you, among beautiful statues.</div>
+                        <div class="stanza">I search, I search for you,<br>Enamored face, smiling face,<br>Where are you, where are you?</div>
+                        <div class="stanza">Strange happiness of life and death<br>extreme need to feel your presence.<br>Crying inside your unbearable absence.<br>There is no harder reality<br>in this contradictory incongruence.</div>
+                        <div class="stanza">Surrounded by brilliance you notice nothing.<br>The pressure on my temples contains all the weeping.<br>And just as in water tears cannot be seen<br>the mirror does not reflect the tortured soul.</div>
+                        <div class="stanza">Pretending I live and I am tired.<br>I want to live and it is not permitted,<br>to live like crystal so hard and fragile<br>to live with the possible transparency of a contradictory being</div>
+                        <div class="stanza">And here I am<br>hidden from life, which passes and passes.<br>What are you doing? What are you waiting for, why don't you embrace it?</div>
+                        <div class="stanza">And here I am<br>waiting for your gaze,<br>longing for your smile<br>dreaming of your fire of love,<br>of love that burns.</div>
+                        <div class="stanza">Where?<br>Now that I need you<br>in the sea of pain that envelops me<br>for not being on your shore<br>kissed by your sand.</div>
+                        <div class="stanza">Where?<br>Tomorrow, when your happiness<br>will not notice my weary soul.</div>
+                        <div class="stanza">Leave everything and come now!<br>make me fly like the breath of air,<br>make me shine like the beam of light<br>and hear the murmur of life,<br>make me love love.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="italian language">
+                    <h1 class="handwritten" style="color: #C0A060;">Dove Sei?</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">Nel pomeriggio dorato,<br>dove sei? dove sei?<br>Nella notte d'argento,<br>quando ti voglio amare.</div>
+                        <div class="stanza">Dove sei adesso<br>bambino dell'anima<br>che non ti trovo?<br>Cercandoti, tra statue bellissime.</div>
+                        <div class="stanza">Cerco, ti cerco,<br>Volto innamorato, volto sorridente,<br>Dove sei, dove sei?</div>
+                        <div class="stanza">Felicità strana di vita e morte<br>bisogno estremo di sentire la tua presenza.<br>Piangendo dentro la tua insopportabile assenza.<br>Non c'è realtà più dura<br>in questa contraddittoria incongruenza.</div>
+                        <div class="stanza">Intorno risplendente non noti nulla.<br>L'oppressione delle mie tempie tutto il pianto contiene.<br>E come nell'acqua non si vedono le lacrime<br>lo specchio non riflette l'anima torturata.</div>
+                        <div class="stanza">Fingendo vivo e sono stanca.<br>Voglio vivere e non è permesso,<br>vivere come il cristallo così duro e fragile<br>vivere con la trasparenza possibile di un essere contraddittorio</div>
+                        <div class="stanza">E qui sono<br>nascosta dalla vita, che passa e passa.<br>Che fai? che aspetti, perché non l'abbracci?</div>
+                        <div class="stanza">E qui sono<br>aspettando il tuo sguardo,<br>desiderando il tuo sorriso<br>sognando il tuo fuoco d'amore,<br>d'amore che brucia.</div>
+                        <div class="stanza">Dove?<br>Adesso che ho bisogno di te<br>nel mare di dolore che mi avvolge<br>per non essere sulla tua riva<br>baciata dalla tua sabbia.</div>
+                        <div class="stanza">Dove?<br>Domani, quando la tua felicità<br>non noterà la mia anima stanca.</div>
+                        <div class="stanza">Lascia tutto e vieni adesso!<br>fammi volare come il soffio dell'aria,<br>fammi brillare come il raggio di luce<br>e ascoltare il mormorio della vita,<br>fammi amare l'amore.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="aleman language">
+                    <h1 class="handwritten" style="color: #C0A060;">Wo Bist Du?</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">Am goldenen Nachmittag,<br>wo bist du? wo bist du?<br>In der silbernen Nacht,<br>wenn ich dich lieben will.</div>
+                        <div class="stanza">Wo bist du jetzt<br>Kind meiner Seele<br>dass ich dich nicht finde?<br>Dich suchend, zwischen wunderschönen Statuen.</div>
+                        <div class="stanza">Ich suche, ich suche dich,<br>Verliebtes Gesicht, lächelndes Gesicht,<br>Wo bist du, wo bist du?</div>
+                        <div class="stanza">Seltsames Glück von Leben und Tod<br>extremes Bedürfnis, deine Gegenwart zu spüren.<br>Innerlich weinend deine unerträgliche Abwesenheit.<br>Es gibt keine härtere Realität<br>in dieser widersprüchlichen Inkongruenz.</div>
+                        <div class="stanza">Ringsum strahlend bemerkst du nichts.<br>Der Druck an meinen Schläfen hält alles Weinen zurück.<br>Und so wie im Wasser die Tränen nicht zu sehen sind<br>spiegelt der Spiegel die gequälte Seele nicht wider.</div>
+                        <div class="stanza">Vorgebend lebe ich und bin müde.<br>Ich will leben und es ist nicht erlaubt,<br>leben wie Kristall so hart und zerbrechlich<br>leben mit der möglichen Transparenz eines widersprüchlichen Wesens</div>
+                        <div class="stanza">Und hier bin ich<br>versteckt vor dem Leben, das vergeht und vergeht.<br>Was tust du? Was wartest du, warum umarmst du es nicht?</div>
+                        <div class="stanza">Und hier bin ich<br>auf deinen Blick wartend,<br>dein Lächeln sehnend<br>von deinem Liebesfeuer träumend,<br>von Liebe die verbrennt.</div>
+                        <div class="stanza">Wo?<br>Jetzt, wo ich dich brauche<br>im Meer des Schmerzes, das mich umhüllt<br>weil ich nicht an deinem Ufer bin<br>von deinem Sand geküsst.</div>
+                        <div class="stanza">Wo?<br>Morgen, wenn dein Glück<br>meine müde Seele nicht bemerkt.</div>
+                        <div class="stanza">Lass alles und komm jetzt!<br>Lass mich fliegen wie der Hauch der Luft,<br>lass mich strahlen wie der Lichtstrahl<br>und das Rauschen des Lebens hören,<br>lass mich die Liebe lieben.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="frances language">
+                    <h1 class="handwritten" style="color: #C0A060;">Où Es-Tu ?</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">Dans l'après-midi doré,<br>où es-tu ? où es-tu ?<br>Dans la nuit d'argent,<br>quand je veux t'aimer.</div>
+                        <div class="stanza">Où es-tu maintenant<br>enfant de mon âme<br>que je ne te trouve pas ?<br>Te cherchant, parmi de belles statues.</div>
+                        <div class="stanza">Je cherche, je te cherche,<br>Visage amoureux, visage souriant,<br>Où es-tu, où es-tu ?</div>
+                        <div class="stanza">Bonheur étrange de vie et de mort<br>besoin extrême de sentir ta présence.<br>Pleurant à l'intérieur ton absence insupportable.<br>Il n'y a pas de réalité plus dure<br>dans cette incongruence contradictoire.</div>
+                        <div class="stanza">Autour resplendissant tu ne remarques rien.<br>L'oppression de mes tempes contient tous les pleurs.<br>Et comme dans l'eau on ne voit pas les larmes<br>le miroir ne reflète pas l'âme torturée.</div>
+                        <div class="stanza">Feignant de vivre et je suis fatiguée.<br>Je veux vivre et ce n'est pas permis,<br>vivre comme le cristal si dur et fragile<br>vivre avec la transparence possible d'un être contradictoire</div>
+                        <div class="stanza">Et me voici<br>cachée de la vie, qui passe et passe.<br>Que fais-tu ? qu'attends-tu, pourquoi ne l'embrasses-tu pas ?</div>
+                        <div class="stanza">Et me voici<br>attendant ton regard,<br>désirant ton sourire<br>rêvant de ton feu d'amour,<br>d'amour qui brûle.</div>
+                        <div class="stanza">Où ?<br>Maintenant que j'ai besoin de toi<br>dans la mer de douleur qui m'enveloppe<br>pour ne pas être sur ton rivage<br>embrassée par ton sable.</div>
+                        <div class="stanza">Où ?<br>Demain, quand ton bonheur<br>ne remarquera pas mon âme fatiguée.</div>
+                        <div class="stanza">Laisse tout et viens maintenant !<br>fais-moi voler comme le souffle de l'air,<br>fais-moi briller comme le rayon de lumière<br>et entendre la rumeur de la vie,<br>fais-moi aimer l'amour.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- JAPANESE -->
+                <div class="japones language">
+                    <h1 class="handwritten" style="color: #C0A060;">あなたはどこに？</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">黄金の午後に、<br>どこにいるの？どこにいるの？<br>銀色の夜に、<br>あなたを愛したいとき。</div>
+                        <div class="stanza">今どこにいるの<br>魂の子よ<br>あなたが見つからない？<br>美しい彫像の間をあなたを探して。</div>
+                        <div class="stanza">探す、あなたを探す、<br>恋する顔、微笑む顔、<br>どこにいるの、どこにいるの？</div>
+                        <div class="stanza">生と死の奇妙な幸福<br>あなたの存在を感じる極限の欲求。<br>あなたの耐えがたい不在に内側で泣いている。<br>これより厳しい現実はない<br>この矛盾した不一致の中に。</div>
+                        <div class="stanza">輝く周囲に何も気づかない。<br>こめかみの圧迫がすべての涙をとどめる。<br>そして水の中で涙が見えないように<br>鏡は苦しむ魂を映さない。</div>
+                        <div class="stanza">生きているふりをして疲れている。<br>生きたいのに許されず、<br>水晶のように硬くて脆く生きる<br>矛盾する存在の可能な透明さで生きる</div>
+                        <div class="stanza">そしてここにいる<br>過ぎ去る人生から隠れて。<br>何をしているの？何を待っているの、なぜ抱きしめないの？</div>
+                        <div class="stanza">そしてここにいる<br>あなたのまなざしを待ち、<br>あなたの微笑みを望み<br>あなたの愛の炎を夢見て、<br>燃える愛を。</div>
+                        <div class="stanza">どこ？<br>今あなたを必要としているのに<br>私を包む苦痛の海の中で<br>あなたの岸辺にいられないから<br>あなたの砂に口づけされて。</div>
+                        <div class="stanza">どこ？<br>明日、あなたの幸せが<br>私の疲れた魂に気づかないとき。</div>
+                        <div class="stanza">すべてを捨てて今来て！<br>風のそよぎのように飛ばせて、<br>光の束のように輝かせて<br>命のざわめきを聞かせて、<br>愛を愛させて。</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- PORTUGUESE -->
+                <div class="portugues language">
+                    <h1 class="handwritten" style="color: #C0A060;">Onde Estás?</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">Na tarde dourada,<br>onde estás? onde estás?<br>Na noite de prata,<br>quando te quero amar.</div>
+                        <div class="stanza">Onde estás agora<br>menino da alma<br>que não te encontro?<br>Buscando-te, entre estátuas formosas.</div>
+                        <div class="stanza">Busco, te busco,<br>Rosto enamorado, rosto sorridente,<br>Onde estás, onde estás?</div>
+                        <div class="stanza">Felicidade estranha de vida e morte<br>necessidade extrema de sentir a tua presença.<br>Chorando por dentro a tua insuportável ausência.<br>Não há realidade mais dura<br>nesta contraditória incongruência.</div>
+                        <div class="stanza">À volta resplandecente nada percebes.<br>A opressão das minhas têmporas todo o pranto contém.<br>E assim como na água não se veem as lágrimas<br>o espelho não reflete a alma torturada.</div>
+                        <div class="stanza">Fingindo vivo e estou cansada.<br>Quero viver e não é permitido,<br>viver como o cristal tão duro e frágil<br>viver com a transparência possível de um ser contraditório</div>
+                        <div class="stanza">E aqui estou<br>escondida da vida, que passa e passa.<br>Que fazes? que esperas, que não a abraças?</div>
+                        <div class="stanza">E aqui estou<br>esperando o teu olhar,<br>desejando o teu sorriso<br>sonhando o teu fogo de amor,<br>de amor que abrasa.</div>
+                        <div class="stanza">Onde?<br>Agora que te necessito<br>no mar de dor que me envolve<br>por não estar na tua margem<br>beijada pela tua areia.</div>
+                        <div class="stanza">Onde?<br>Amanhã, quando a tua felicidade<br>não advertir a minha alma cansada.</div>
+                        <div class="stanza">Deixa tudo e vem agora!<br>faz-me voar como o sopro do ar,<br>faz-me brilhar como o raio de luz<br>e escutar o rumor da vida,<br>faz-me amar o amor.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- CHINESE -->
+                <div class="chinese language">
+                    <h1 class="handwritten" style="color: #C0A060;">你在哪里？</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">在金色的午后，<br>你在哪里？你在哪里？<br>在银色的夜晚，<br>当我想要爱你的时候。</div>
+                        <div class="stanza">你现在在哪里<br>灵魂的孩子<br>我找不到你？<br>在美丽的雕像间寻找你。</div>
+                        <div class="stanza">我寻找，我寻找你，<br>恋爱的面容，微笑的面容，<br>你在哪里，你在哪里？</div>
+                        <div class="stanza">生与死的奇异幸福<br>感受你存在的极端渴望。<br>内心哭泣你无法忍受的缺席。<br>没有更残酷的现实<br>在这矛盾的不一致中。</div>
+                        <div class="stanza">周围光辉灿烂你什么都没注意到。<br>太阳穴的压迫包含了所有的哭泣。<br>就像在水中看不到眼泪一样<br>镜子不会映出受折磨的灵魂。</div>
+                        <div class="stanza">假装活着而我已疲惫。<br>我想活着却不被允许，<br>像水晶一样坚硬而脆弱地活着<br>以一个矛盾存在的可能透明度活着</div>
+                        <div class="stanza">而我在这里<br>躲避匆匆流逝的生活。<br>你在做什么？你在等什么，为什么不拥抱它？</div>
+                        <div class="stanza">而我在这里<br>等待你的目光，<br>渴望你的微笑<br>梦想着你爱的火焰，<br>燃烧的爱。</div>
+                        <div class="stanza">在哪里？<br>现在我需要你<br>在包裹着我的痛苦之海中<br>因为不在你的岸边<br>被你的沙滩亲吻。</div>
+                        <div class="stanza">在哪里？<br>明天，当你的幸福<br>不会注意到我疲惫的灵魂。</div>
+                        <div class="stanza">放下一切现在就来！<br>让我像风的气息一样飞翔，<br>让我像光束一样闪耀<br>聆听生命的低语，<br>让我去爱爱。</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- ARABIC -->
+                <div class="arabic language">
+                    <h1 class="handwritten" style="color: #C0A060;">أين أنت؟</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">في عصر ذهبي،<br>أين أنت؟ أين أنت؟<br>في ليلة فضية،<br>حين أريد أن أحبك.</div>
+                        <div class="stanza">أين أنت الآن<br>يا طفل روحي<br>لا أجدك؟<br>أبحث عنك، بين التماثيل الجميلة.</div>
+                        <div class="stanza">أبحث، أبحث عنك،<br>وجه عاشق، وجه مبتسم،<br>أين أنت، أين أنت؟</div>
+                        <div class="stanza">سعادة غريبة من الحياة والموت<br>حاجة ملحة لأشعر بحضورك.<br>أبكي في داخلي غيابك الذي لا يُحتمل.<br>لا توجد حقيقة أقسى<br>في هذا التناقض المحيّر.</div>
+                        <div class="stanza">حولك كل شيء يتألق ولا تلاحظ شيئاً.<br>ضغط صدغيّ يحبس كل البكاء.<br>وكما لا تُرى الدموع في الماء<br>المرآة لا تعكس الروح المعذبة.</div>
+                        <div class="stanza">أتظاهر بالحياة وأنا منهكة.<br>أريد أن أعيش وليس مسموحاً،<br>أن أعيش كالبلور صلباً وهشاً<br>أن أعيش بشفافية كائن متناقض</div>
+                        <div class="stanza">وها أنا هنا<br>مختبئة من الحياة التي تمر وتمر.<br>ماذا تفعل؟ ماذا تنتظر، لمَ لا تعانقها؟</div>
+                        <div class="stanza">وها أنا هنا<br>أنتظر نظرتك،<br>أشتهي ابتسامتك<br>أحلم بنار حبك،<br>حب يحرق.</div>
+                        <div class="stanza">أين؟<br>الآن حين أحتاجك<br>في بحر الألم الذي يلفّني<br>لأنني لست على شاطئك<br>تقبّلني رمالك.</div>
+                        <div class="stanza">أين؟<br>غداً، حين سعادتك<br>لن تلاحظ روحي المتعبة.</div>
+                        <div class="stanza">اترك كل شيء وتعال الآن!<br>اجعلني أطير كنسمة الهواء،<br>اجعلني أتألّق كشعاع الضوء<br>وأسمع همس الحياة،<br>اجعلني أحب الحب.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- RUSSIAN -->
+                <div class="russian language">
+                    <h1 class="handwritten" style="color: #C0A060;">Где Ты?</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">В золотой полдень,<br>где ты? где ты?<br>В серебряную ночь,<br>когда хочу тебя любить.</div>
+                        <div class="stanza">Где ты сейчас<br>дитя моей души<br>что не нахожу тебя?<br>Ищу тебя среди прекрасных статуй.</div>
+                        <div class="stanza">Ищу, ищу тебя,<br>Влюблённое лицо, улыбающееся лицо,<br>Где ты, где ты?</div>
+                        <div class="stanza">Странное счастье жизни и смерти<br>крайняя нужда чувствовать твоё присутствие.<br>Плачу внутри от твоего невыносимого отсутствия.<br>Нет реальности суровее<br>в этом противоречивом несоответствии.</div>
+                        <div class="stanza">Вокруг сияние — ты ничего не замечаешь.<br>Давление в висках сдерживает весь плач.<br>И как в воде не видно слёз<br>зеркало не отражает измученную душу.</div>
+                        <div class="stanza">Притворяюсь живой и устала.<br>Хочу жить и не позволено,<br>жить как хрусталь — так твёрдо и хрупко<br>жить с возможной прозрачностью противоречивого существа</div>
+                        <div class="stanza">И вот я здесь<br>спрятана от жизни, что проходит и проходит.<br>Что ты делаешь? Чего ждёшь, почему не обнимешь её?</div>
+                        <div class="stanza">И вот я здесь<br>жду твоего взгляда,<br>желаю твоей улыбки<br>мечтаю о твоём огне любви,<br>любви, что сжигает.</div>
+                        <div class="stanza">Где?<br>Сейчас, когда ты мне нужен<br>в море боли, что окутывает меня<br>за то, что не на твоём берегу<br>целованная твоим песком.</div>
+                        <div class="stanza">Где?<br>Завтра, когда твоё счастье<br>не заметит мою усталую душу.</div>
+                        <div class="stanza">Брось всё и приходи сейчас!<br>дай мне лететь как дуновение ветра,<br>дай мне сиять как луч света<br>и слышать шёпот жизни,<br>дай мне любить любовь.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+                <!-- UKRAINIAN -->
+                <div class="ukrainian language">
+                    <h1 class="handwritten" style="color: #C0A060;">Де Ти?</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">У золотому полудні,<br>де ти? де ти?<br>У срібну ніч,<br>коли хочу тебе кохати.</div>
+                        <div class="stanza">Де ти зараз<br>дитино моєї душі<br>що не знаходжу тебе?<br>Шукаю тебе серед прекрасних статуй.</div>
+                        <div class="stanza">Шукаю, шукаю тебе,<br>Закохане обличчя, усміхнене обличчя,<br>Де ти, де ти?</div>
+                        <div class="stanza">Дивне щастя життя і смерті<br>крайня потреба відчути твою присутність.<br>Плачу всередині від твоєї нестерпної відсутності.<br>Немає суворішої реальності<br>у цій суперечливій невідповідності.</div>
+                        <div class="stanza">Навколо сяйво — ти нічого не помічаєш.<br>Тиск у скронях стримує весь плач.<br>І як у воді не видно сліз<br>дзеркало не відображає змучену душу.</div>
+                        <div class="stanza">Вдаю живою і втомилася.<br>Хочу жити і не дозволено,<br>жити як кришталь — так твердо і крихко<br>жити з можливою прозорістю суперечливої істоти</div>
+                        <div class="stanza">І ось я тут<br>схована від життя, що минає і минає.<br>Що ти робиш? Чого чекаєш, чому не обіймеш його?</div>
+                        <div class="stanza">І ось я тут<br>чекаю твого погляду,<br>бажаю твоєї усмішки<br>мрію про твій вогонь кохання,<br>кохання, що палає.</div>
+                        <div class="stanza">Де?<br>Зараз, коли ти мені потрібен<br>у морі болю, що огортає мене<br>бо не на твоєму березі<br>цілована твоїм піском.</div>
+                        <div class="stanza">Де?<br>Завтра, коли твоє щастя<br>не помітить мою втомлену душу.</div>
+                        <div class="stanza">Залиш усе і приходь зараз!<br>дай мені літати як подих повітря,<br>дай мені сяяти як промінь світла<br>і чути шепіт життя,<br>дай мені кохати кохання.</div>
+                        <div class="stanza"><span class="signature">Paz Arés Osset</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Image Section -->
+            <div class="container mt-5 mb-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <span class="spanish language">El Poema en Imágenes</span><span class="english language">The Poem in Images</span><span class="italian language">Il Poema in Immagini</span><span class="aleman language">Das Gedicht in Bildern</span><span class="frances language">Le Poème en Images</span><span class="japones language">画像で見る詩</span><span class="portugues language">O Poema em Imagens</span><span class="chinese language">图片中的诗歌</span><span class="arabic language">القصيدة في صور</span><span class="russian language">Стихотворение в картинках</span><span class="ukrainian language">Вірш у малюнках</span>
+                </h2>
+                <div class="mt-4 mb-5">
+                    <img src="donde_estas_palacio.png" class="img-fluid rounded shadow-lg" alt="Pasillo de reyes del Palacio Real" style="max-height: 800px; border: 1px solid rgba(192,160,96,0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.8);">
+                </div>
+                <div class="mt-4 mb-5">
+                    <img src="donde_estas_sunset.png" class="img-fluid rounded shadow-lg" alt="Puesta de sol entre estatuas de reyes" style="max-height: 800px; border: 1px solid rgba(192,160,96,0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.8);">
+                </div>
+                <div class="mt-4 mb-5">
+                    <img src="background.png" class="img-fluid rounded shadow-lg" alt="Buscándote entre estatuas hermosas" style="max-height: 800px; border: 1px solid rgba(192,160,96,0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.8);">
+                </div>
+                <div class="mt-4 mb-5">
+                    <img src="original.png" class="img-fluid rounded shadow-lg" alt="Imagen original del poema" style="max-height: 800px; border: 1px solid rgba(192,160,96,0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.8);">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="base.js"></script>
+</body>
+</html>

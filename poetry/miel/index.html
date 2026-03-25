@@ -1,298 +1,409 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>Miel</title>
-  <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
-  <link rel="stylesheet" href="base.css">
+    <meta charset="utf-8">
+    <title>Miel - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
-  </div>
-
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Honey</div>
-        <div class="spanish language" style="display: none;">Miel</div>
-        <div class="italian language" style="display: none;">Miele</div>
-        <div class="chinese language" style="display: none;">蜂蜜</div>
-        <div class="arabic language" style="display: none;">عسل</div>
-
-      </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">Honey in your eyes and smile, your essence is pure sweetness.</div>
-        <div class="spanish language" style="display: none;">Miel en tus ojos y sonrisa, tu esencia es pura dulzura.
+    <canvas id="effects-canvas"></canvas>
+    <div class="content-wrap">
+        <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 10px;">
+            <a href="../index.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 8px 15px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3); font-size: 0.9rem;">
+                <i class="fas fa-feather-alt mr-2"></i>
+                <span class="spanish language">Poemas</span>
+                <span class="english language" style="display:none;">Poems</span>
+                <span class="italian language" style="display:none;">Poesie</span>
+                <span class="aleman language" style="display:none;">Gedichte</span>
+                <span class="frances language" style="display:none;">Poèmes</span>
+                <span class="japones language" style="display:none;">詩</span>
+                <span class="portugues language" style="display:none;">Poemas</span>
+                <span class="chinese language" style="display:none;">诗歌</span>
+                <span class="arabic language" style="display:none;">قصائد</span>
+                <span class="russian language" style="display:none;">Стихи</span>
+                <span class="ukrainian language" style="display:none;">Вірші</span>
+            </a>
+            <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 8px 15px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3); font-size: 0.9rem;">
+                <i class="fas fa-link mr-2"></i>
+                <span>Linktree</span>
+            </a>
+            <a id="spotify-link" href="https://open.spotify.com/artist/7AtGf8J17mC5p9pG8zN0n2" target="_blank" class="btn btn-spotify d-flex align-items-center"
+                style="border-radius: 30px; font-weight: bold; background: #1DB954; color: white; padding: 8px 15px; border: none; font-size: 0.9rem;">
+                <i class="fab fa-spotify mr-2"></i>
+                <span class="spanish language">Música</span>
+                <span class="english language" style="display:none;">Music</span>
+                <span class="italian language" style="display:none;">Musica</span>
+                <span class="aleman language" style="display:none;">Musik</span>
+                <span class="frances language" style="display:none;">Musique</span>
+                <span class="japones language" style="display:none;">音楽</span>
+                <span class="portugues language" style="display:none;">Música</span>
+                <span class="chinese language" style="display:none;">音乐</span>
+                <span class="arabic language" style="display:none;">موسيقى</span>
+                <span class="russian language" style="display:none;">Музыка</span>
+                <span class="ukrainian language" style="display:none;">Музика</span>
+            </a>
+            <select id="language-select" class="custom-select-lg" style="background: rgba(0,0,0,0.5); color: white; border: 1px solid #FFD700; border-radius: 10px; padding: 5px 15px; font-size: 1.1rem; height: auto; width: auto; font-weight: bold;">
+                <option value="spanish">🇪🇸 Español</option>
+                <option value="english">🇺🇸 English</option>
+                <option value="italian">🇮🇹 Italiano</option>
+                <option value="aleman">🇩🇪 Deutsch</option>
+                <option value="frances">🇫🇷 Français</option>
+                <option value="japones">🇯🇵 日本語</option>
+                <option value="portugues">🇵🇹 Português</option>
+                <option value="chinese">🇨🇳 中文</option>
+                <option value="arabic">🇦🇪 العربية</option>
+                <option value="russian">🇷🇺 Русский</option>
+                <option value="ukrainian">🇺🇦 Українська</option>
+            </select>
         </div>
-        <div class="italian language" style="display: none;">Miele nei tuoi occhi e sorriso, la tua essenza è pura
-          dolcezza.
-        </div>
-        <div class="chinese language" style="display: none;">你眼中和微笑中的蜂蜜，你的本质是纯粹的甜蜜。</div>
-        <div class="arabic language" style="display: none;">عسل في عيونك وابتسامتك، جوهرك هو النقاء والحلاوة.</div>
 
-      </div>
+        <section class="jumbotron text-center">
+            <div class="container">
+                <a class="brand" href="https://www.pazaresosset.es">
+                    <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px; max-width: 120px;" alt="Paz Arés Osset">
+                </a>
+                <h1 class="jumbotron-heading text-shadow-deep">
+                    <div class="spanish language">Miel</div>
+                    <div class="english language" style="display:none;">Honey</div>
+                    <div class="italian language" style="display:none;">Miele</div>
+                    <div class="aleman language" style="display:none;">Honig</div>
+                    <div class="frances language" style="display:none;">Miel</div>
+                    <div class="japones language" style="display:none;">蜂蜜</div>
+                    <div class="portugues language" style="display:none;">Mel</div>
+                    <div class="chinese language" style="display:none;">蜂蜜</div>
+                    <div class="arabic language" style="display:none;">عسل</div>
+                    <div class="russian language" style="display:none;">Мёд</div>
+                    <div class="ukrainian language" style="display:none;">Мед</div>
+                </h1>
+                <div class="lead text-shadow-deep">
+                    <div class="spanish language">Miel en tus ojos y sonrisa, tu esencia es pura dulzura.</div>
+                    <div class="english language" style="display:none;">Honey in your eyes and smile, your essence is pure sweetness.</div>
+                    <div class="italian language" style="display:none;">Miele nei tuoi occhi e sorriso, la tua essenza è pura dolcezza.</div>
+                    <div class="aleman language" style="display:none;">Honig in deinen Augen und in deinem Lächeln, deine Essenz ist reine Süße.</div>
+                    <div class="frances language" style="display:none;">Du miel dans tes yeux et ton sourire, ton essence est pure douceur.</div>
+                    <div class="japones language" style="display:none;">その瞳と微笑みにある蜂蜜、あなたの本質は純粋な甘さ。</div>
+                    <div class="portugues language" style="display:none;">Mel em teus olhos e sorriso, tua essência é pura doçura.</div>
+                    <div class="chinese language" style="display:none;">你眼中和微笑中的蜂蜜，你的本质是纯粹的甜蜜。</div>
+                    <div class="arabic language" style="display:none;">عسل في عيونك وابتسامتك، جوهرك هو النقاء والحلاوة.</div>
+                    <div class="russian language" style="display:none;">Мёд в твоих глазах и улыбке, твоя суть — чистая сладость.</div>
+                    <div class="ukrainian language" style="display:none;">Мед у твоїх очах і усмішці, твоя суть — чиста солодкість.</div>
+                </div>
+            </div>
+        </section>
 
+        <section class="multilingual-description py-5" style="background-color: transparent;">
+            <div class="container text-center">
+                
+                <!-- SPANISH -->
+                <div class="spanish language">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">Miel</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Miel en tus ojos de reflejos dorados;<br>Miel tu sonrisa de labios mojados;<br>Miel en tu dulce voz de sonidos pausados;<br>Miel es tu cuerpo tostado.
+                        </div>
+                        <div class="stanza">
+                            Tu cabello largo de oro rizado;<br>Tu beso ardiente, deseo impaciente;<br>Tu vuelo de risas, de risas o lloros;<br>¡eres toda miel!
+                        </div>
+                        <div class="stanza">
+                            ¡Miel!
+                        </div>
+                        <div class="stanza">
+                            ¡Cómo las flores!<br>¡Cómo un bello canto!<br>¡Cómo las estrellas!<br>¡Cómo el sol brillando!
+                        </div>
+                        <div class="stanza">
+                            No sé si te quiero, no sé si te amo;<br>O solo me gustas por ser toda miel…<br>O quizás sí sé…<br>Sí sé que te quiero,<br>Sí sé que te amo,<br>Y quiero que seas así,<br>toda miel.
+                        </div>
+                        <div class="stanza">
+                            Eres... ¡más que miel!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="english language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">Honey</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Honey in your eyes of golden reflections;<br>Honey your smile of moist lips;<br>Honey in your sweet voice of slow sounds;<br>Honey is your tanned body.
+                        </div>
+                        <div class="stanza">
+                            Your long hair of curly gold;<br>Your burning kiss, impatient desire;<br>Your flight of laughter, of laughter or tears;<br>you are all honey!
+                        </div>
+                        <div class="stanza">
+                            Honey!
+                        </div>
+                        <div class="stanza">
+                            Like the flowers!<br>Like a beautiful song!<br>Like the stars!<br>Like the shining sun!
+                        </div>
+                        <div class="stanza">
+                            I don't know if I want you, I don't know if I love you;<br>Or I just like you for being all honey...<br>Or maybe I do know...<br>I do know that I want you,<br>I do know that I love you,<br>And I want you to be like this,<br>all honey.
+                        </div>
+                        <div class="stanza">
+                            You are... more than honey!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="italian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">Miele</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Miele nei tuoi occhi dai riflessi dorati;<br>Miele il tuo sorriso dalle labbra bagnate;<br>Miele nella tua dolce voce dai suoni lenti;<br>Miele è il tuo corpo abbronzato.
+                        </div>
+                        <div class="stanza">
+                            I tuoi lunghi capelli d'oro riccio;<br>Il tuo bacio ardente, desiderio impaziente;<br>Il tuo volo di risate, di risate o lacrime;<br>sei tutta miele!
+                        </div>
+                        <div class="stanza">
+                            Miele!
+                        </div>
+                        <div class="stanza">
+                            Come i fiori!<br>Come un bel canto!<br>Come le stelle!<br>Come il sole splendente!
+                        </div>
+                        <div class="stanza">
+                            Non so se ti voglio, non so se ti amo;<br>O mi piaci solo perché sei tutta miele...<br>O forse lo so...<br>So che ti voglio,<br>So che ti amo,<br>E voglio che tu sia così,<br>tutta miele.
+                        </div>
+                        <div class="stanza">
+                            Sei... più che miele!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="aleman language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">Honig</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Honig in deinen Augen mit goldenen Reflexen;<br>Honig dein Lächeln mit feuchten Lippen;<br>Honig in deiner süßen Stimme mit langsamen Klängen;<br>Honig ist dein gebräunter Körper.
+                        </div>
+                        <div class="stanza">
+                            Dein langes Haar aus lockigem Gold;<br>Dein brennender Kuss, ungeduldiges Verlangen;<br>Dein Flug von Lachen, von Lachen oder Tränen;<br>du bist ganz Honig!
+                        </div>
+                        <div class="stanza">
+                            Honig!
+                        </div>
+                        <div class="stanza">
+                            Wie die Blumen!<br>Wie ein schönes Lied!<br>Wie die Sterne!<br>Wie die strahlende Sonne!
+                        </div>
+                        <div class="stanza">
+                            Ich weiß nicht, ob ich dich will, ich weiß nicht, ob ich dich liebe;<br>Oder ob ich dich nur mag, weil du ganz Honig bist...<br>Oder vielleicht weiß ich es ja...<br>Ich weiß, dass ich dich will,<br>Ich weiß, dass ich dich liebe,<br>Und ich will, dass du so bist,<br>ganz Honig.
+                        </div>
+                        <div class="stanza">
+                            Du bist... mehr als Honig!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="frances language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">Miel</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Du miel dans tes yeux aux reflets dorés ;<br>Du miel ton sourire aux lèvres humides ;<br>Du miel dans ta douce voix aux sons lents ;<br>Du miel est ton corps bronzé.
+                        </div>
+                        <div class="stanza">
+                            Tes longs cheveux d'or bouclé ;<br>Ton baiser ardent, désir impatient ;<br>Ton vol de rires, de rires ou de larmes ;<br>tu es tout miel !
+                        </div>
+                        <div class="stanza">
+                            Miel !
+                        </div>
+                        <div class="stanza">
+                            Comme les fleurs !<br>Comme un beau chant !<br>Comme les étoiles !<br>Comme le soleil brillant !
+                        </div>
+                        <div class="stanza">
+                            Je ne sais pas si je te veux, je ne sais pas si je t'aime ;<br>Ou si tu me plais juste pour être tout miel...<br>Ou peut-être que je le sais...<br>Je sais que je te veux,<br>Je sais que je t'aime,<br>Et je veux que tu sois ainsi,<br>tout miel.
+                        </div>
+                        <div class="stanza">
+                            Tu es... plus que du miel !
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JAPANESE -->
+                <div class="japones language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">蜂蜜</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            黄金の反射を持つあなたの瞳の蜂蜜。<br>濡れた唇のあなたの笑顔の蜂蜜。<br>ゆっくりとした音のあなたの甘い声の蜂蜜。<br>蜂蜜はあなたの日焼けした体。
+                        </div>
+                        <div class="stanza">
+                            あなたの巻き毛の金の長い髪。<br>あなたの燃えるようなキス、焦燥する欲望。<br>あなたの笑い声の飛行、笑い声や涙の飛行。<br>あなたはすべて蜂蜜！
+                        </div>
+                        <div class="stanza">
+                            蜂蜜！
+                        </div>
+                        <div class="stanza">
+                            花のように！<br>美しい歌のように！<br>星のように！<br>輝く太陽のように！
+                        </div>
+                        <div class="stanza">
+                            あなたが欲しいのか分からない、あなたを愛しているのか分からない。<br>それとも、あなたがすべて蜂蜜だから好きなだけなのか…<br>あるいは、多分私は知っている…<br>あなたが欲しいと知っている、<br>あなたを愛していると知っている、<br>そして、あなたにこのままでいてほしい、<br>すべて蜂蜜で。
+                        </div>
+                        <div class="stanza">
+                            あなたは…蜂蜜以上！
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTUGUESE -->
+                <div class="portugues language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">Mel</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Mel em teus olhos de reflexos dourados;<br>Mel teu sorriso de lábios molhados;<br>Mel em tua doce voz de sons pausados;<br>Mel é teu corpo bronzeado.
+                        </div>
+                        <div class="stanza">
+                            Teu cabelo longo de ouro cacheado;<br>Teu beijo ardente, desejo impaciente;<br>Teu voo de risos, de risos ou choros;<br>és toda mel!
+                        </div>
+                        <div class="stanza">
+                            Mel!
+                        </div>
+                        <div class="stanza">
+                            Como as flores!<br>Como um belo canto!<br>Como as estrelas!<br>Como o sol brilhando!
+                        </div>
+                        <div class="stanza">
+                            Não sei se te quero, não sei se te amo;<br>Ou só gosto de ti por seres toda mel...<br>Ou talvez eu saiba...<br>Eu sei que te quero,<br>Eu sei que te amo,<br>E quero que sejas assim,<br>toda mel.
+                        </div>
+                        <div class="stanza">
+                            És... mais que mel!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHINESE -->
+                <div class="chinese language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">蜂蜜</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            你金色眼眸映出的倒影，如蜂蜜般甜蜜；<br>你湿润双唇绽放的微笑，如蜂蜜般柔软；<br>你缓慢语调中流露的甜美，如蜂蜜般醉人；<br>你拥有如蜂蜜般晒黑的身体。
+                        </div>
+                        <div class="stanza">
+                            你那长长的金色卷发；<br>你火热的吻，急切的渴望；<br>你飞扬的笑声，无论是笑是泪；<br>你浑身都是蜂蜜！
+                        </div>
+                        <div class="stanza">
+                            蜂蜜！
+                        </div>
+                        <div class="stanza">
+                            像花朵一样！<br>像一首美丽的歌！<br>像星星一样！<br>像闪耀的太阳！
+                        </div>
+                        <div class="stanza">
+                            我不知道是否想要你，我不知道是否爱你；<br>或者我只是喜欢你是如此纯粹的蜂蜜……<br>也许我知道……<br>我知道我想要你，<br>我知道我爱你，<br>我希望你一直这样，<br>浑身都是蜂蜜。
+                        </div>
+                        <div class="stanza">
+                            你……不仅仅是蜂蜜！
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARABIC -->
+                <div class="arabic language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">عسل</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            عسل في عينيك ذات الانعكاسات الذهبية؛<br>عسل ابتسامتك بشفاه رطبة؛<br>عسل في صوتك العذب بأصوات بطيئة؛<br>عسل هو جسدك الأسمر.
+                        </div>
+                        <div class="stanza">
+                            شعرك الطويل من الذهب المجعد؛<br>قبلتك المشتعلة، رغبة نافدة الصبر؛<br>تحليقك من الضحكات، من الضحكات أو الدموع؛<br>أنتِ كلك عسل!
+                        </div>
+                        <div class="stanza">
+                            عسل!
+                        </div>
+                        <div class="stanza">
+                            مثل الزهور!<br>مثل أغنية جميلة!<br>مثل النجوم!<br>مثل الشمس المشرقة!
+                        </div>
+                        <div class="stanza">
+                            لا أعرف إذا كنت أريدك، لا أعرف إذا كنت أحبك؛<br>أو فقط تعجبني لأنك كلك عسل...<br>أو ربما أعرف...<br>أعرف أنني أريدك،<br>أعرف أنني أحبك،<br>وأريدك أن تكوني هكذا،<br>كلك عسل.
+                        </div>
+                        <div class="stanza">
+                            أنتِ... أكثر من عسل!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUSSIAN -->
+                <div class="russian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">Мёд</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Мёд в твоих глазах с золотыми бликами;<br>Мёд твоя улыбка влажных губ;<br>Мёд в твоем сладком голосе с медленными звуками;<br>Мёд — это твое загорелое тело.
+                        </div>
+                        <div class="stanza">
+                            Твои длинные волосы из кудрявого золота;<br>Твой жгучий поцелуй, нетерпеливое желание;<br>Твой полет смеха, смеха или слез;<br>ты вся из меда!
+                        </div>
+                        <div class="stanza">
+                            Мёд!
+                        </div>
+                        <div class="stanza">
+                            Как цветы!<br>Как прекрасная песня!<br>Как звезды!<br>Как сияющее солнце!
+                        </div>
+                        <div class="stanza">
+                            Я не знаю, хочу ли я тебя, я не знаю, люблю ли я тебя;<br>Или ты мне просто нравишься, потому что ты вся мёд...<br>А может, я знаю...<br>Я знаю, что хочу тебя,<br>Я знаю, что люблю тебя,<br>И я хочу, чтобы ты была такой,<br>всей из меда.
+                        </div>
+                        <div class="stanza">
+                            Ты... больше, чем мёд!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UKRAINIAN -->
+                <div class="ukrainian language" style="display:none;">
+                    <h1 class="handwritten" style="color: #FFD700; font-size: 3.5rem;">Мед</h1><br>
+                    <div class="poem-text">
+                        <div class="stanza">
+                            Мед у твоїх очах із золотими відблисками;<br>Мед твоя усмішка вологих губ;<br>Мед у твоєму солодкому голосі з повільними звуками;<br>Мед — це твоє засмагле тіло.
+                        </div>
+                        <div class="stanza">
+                            Твоє довге волосся з кучерявого золота;<br>Твій палючий поцілунок, нетерпляче бажання;<br>Твій політ сміху, сміху чи сліз;<br>ти вся з меду!
+                        </div>
+                        <div class="stanza">
+                            Мед!
+                        </div>
+                        <div class="stanza">
+                            Як квіти!<br>Як прекрасна пісня!<br>Як зірки!<br>Як сяюче сонце!
+                        </div>
+                        <div class="stanza">
+                            Я не знаю, чи хочу я тебе, я не знаю, чи люблю я тебе;<br>Або ти мені просто подобаєшся, бо ти вся мед...<br>А може, я знаю...<br>Я знаю, що хочу тебе,<br>Я знаю, що люблю тебе,<br>І я хочу, щоб ти була такою,<br>всією з меду.
+                        </div>
+                        <div class="stanza">
+                            Ти... більше, ніж мед!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Comic Section Placeholder -->
+            <div class="container mt-5 mb-5 text-center">
+                <h2 class="handwritten text-light mb-4">
+                    <span class="spanish language">El Poema en Imágenes</span>
+                    <span class="english language" style="display:none;">The Poem in Images</span>
+                    <span class="italian language" style="display:none;">Il Poema in Immagini</span>
+                    <span class="aleman language" style="display:none;">Das Gedicht in Bildern</span>
+                    <span class="frances language" style="display:none;">Le Poème en Images</span>
+                    <span class="japones language" style="display:none;">画像で見る詩</span>
+                    <span class="portugues language" style="display:none;">O Poema em Imagens</span>
+                    <span class="chinese language" style="display:none;">图片中的诗歌</span>
+                    <span class="arabic language" style="display:none;">القصيدة في صور</span>
+                    <span class="russian language" style="display:none;">Стихотворение в картинках</span>
+                    <span class="ukrainian language" style="display:none;">Вірш у малюнках</span>
+                </h2>
+                <div class="mt-4">
+                    <img id="comic-image" src="background.png" class="img-fluid rounded shadow-lg" alt="Arte del poema" style="max-height: 800px; border: 1px solid rgba(255,215,0,0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.8);">
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
 
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Honey</div>
-        <div class="spanish language" style="display: none;">Miel</div>
-        <div class="italian language" style="display: none;">Miele</div>
-        <div class="chinese language" style="display: none;">蜂蜜</div>
-        <div class="arabic language" style="display: none;">عسل</div>
-
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>Honey in your eyes of golden reflections;</p>
-          <p>Honey your smile with moist lips;</p>
-          <p>Honey in your sweet voice with slow sounds;</p>
-          <p>Honey is your tanned body.</p>
-          <br>
-          <p>Your long hair of curly gold;</p>
-          <p>Your burning kiss, impatient desire;</p>
-          <p>Your flight of laughter, of laughter or tears;</p>
-          <p>you are all honey!</p>
-          <br>
-          <p>Honey!</p>
-          <br>
-          <p>Like the flowers!</p>
-          <p>Like a beautiful song!</p>
-          <p>Like the stars!</p>
-          <p>Like the sun shining!</p>
-          <br>
-          <p>I don't know if I love you, I don't know if I want you;</p>
-          <p>Or I just like you for being all honey...</p>
-          <p>Or maybe I do know...</p>
-          <p>I do know that I love you,</p>
-          <p>I do know that I want you,</p>
-          <p>And I want you to be like this, </p>
-          <p>all honey.</p>
-          <br>
-          <p>You are... more than honey!</p>
-
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>Miel en tus ojos de reflejos dorados;</p>
-          <p>Miel tu sonrisa de labios mojados;</p>
-          <p>Miel en tu dulce voz de sonidos pausados;</p>
-          <p>Miel es tu cuerpo tostado.</p>
-          <br>
-          <p>Tu cabello largo de oro rizado;</p>
-          <p>Tu beso ardiente, deseo impaciente;</p>
-          <p>Tu vuelo de risas, de risas o lloros;</p>
-          <p>¡eres toda miel!</p>
-          <br>
-          <p>¡Miel!</p>
-          <br>
-          <p>¡Cómo las flores!</p>
-          <p>¡Cómo un bello canto!</p>
-          <p>¡Cómo las estrellas!</p>
-          <p>¡Cómo el sol brillando!</p>
-          <br>
-          <p>No sé si te quiero, no sé si te amo;</p>
-          <p>O solo me gustas por ser toda miel…</p>
-          <p>O quizás sí sé…</p>
-          <p>Sí sé que te quiero,</p>
-          <p>Sí sé que te amo,</p>
-          <p>Y quiero que seas así, </p>
-          <p>toda miel.</p>
-          <br>
-          <p>Eres... ¡más que miel!</p>
-
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Miele</p>
-
-          <p>Miele nei tuoi occhi dai riflessi dorati;</p>
-          <p>Miele il tuo sorriso con labbra bagnate;</p>
-          <p>Miele nella tua dolce voce dai suoni lenti;</p>
-          <p>Miele è il tuo corpo abbronzato.</p>
-          <br>
-          <p>I tuoi lunghi capelli d'oro ricci;</p>
-          <p>Il tuo bacio ardente, desiderio impaziente;</p>
-          <p>Il tuo volo di risate, di risate o lacrime;</p>
-          <p>sei tutta miele!</p>
-          <br>
-          <p>Miele!</p>
-          <br>
-          <p>Come i fiori!</p>
-          <p>Come un bel canto!</p>
-          <p>Come le stelle!</p>
-          <p>Come il sole splendente!</p>
-          <br>
-          <p>Non so se ti amo, non so se ti voglio;</p>
-          <p>O mi piaci solo perché sei tutta miele...</p>
-          <p>O forse lo so...</p>
-          <p>So che ti amo,</p>
-          <p>So che ti voglio,</p>
-          <p>E voglio che tu sia così, </p>
-          <p>tutta miele.</p>
-          <br>
-          <p>Sei... più che miele!</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>عسل</p>
-
-          <p>عسل في عيونك ذات الانعكاسات الذهبية؛</p>
-          <p>عسل ابتسامتك بشفاه رطبة؛</p>
-          <p>عسل في صوتك العذب بأصوات بطيئة؛</p>
-          <p>عسل هو جسدك الأسمر.</p>
-          <br>
-          <p>شعرك الطويل من الذهب المجعد؛</p>
-          <p>قبلة مشتعلة، رغبة نافدة الصبر؛</p>
-          <p>تحليقك من الضحكات، من الضحكات أو الدموع؛</p>
-          <p>أنتِ كلها عسل!</p>
-          <br>
-          <p>عسل!</p>
-          <br>
-          <p>مثل الزهور!</p>
-          <p>مثل أغنية جميلة!</p>
-          <p>مثل النجوم!</p>
-          <p>مثل الشمس المشرقة!</p>
-          <br>
-          <p>لا أعرف إذا كنت أحبك، لا أعرف إذا كنت أريدك؛</p>
-          <p>أو فقط تعجبني لأنك كلها عسل...</p>
-          <p>أو ربما أعرف...</p>
-          <p>أعرف أنني أحبك،</p>
-          <p>أعرف أنني أريدك،</p>
-          <p>وأريدك أن تكوني هكذا،</p>
-          <p>كلها عسل.</p>
-          <br>
-          <p>أنتِ... أكثر من عسل!</p>
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
-  <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
+    <!-- js here -->
+    <script src="base.js"></script>
 
 </body>
 
