@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Piscina: Inversión en Salud y Ahorro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Chosen Palette: Warm Neutrals (Slate-50) background, Clean Water Blues (Sky-500/700) for primary actions, Nature Greens (Emerald-600) for savings/health, Alert Reds (Rose-600) for chlorine risks. -->
+
+    <!-- Application Structure Plan: 
+    1. Hero Section: Emotional hook focusing on family health and modernization.
+    2. The Problem vs. The Solution (Grid): Side-by-side comparison of Traditional Chlorine vs. Salt Chlorination to create immediate contrast.
+    3. Economic Justification (Dashboard/Chart): The core argument for the 30k investment. Shows cumulative costs over 10 years to prove ROI.
+    4. Health Benefits (Icon Cards): Digestible, visual points on why it feels better (skin, eyes, breathing).
+    5. FAQ / Handling Objections (Accordion): Interactive section to proactively answer neighbors' doubts and lower resistance.
+    6. Call to Action: Final push to vote YES.
+    This structure guides the user from the emotional "why" to the logical "how much" and finally the practical "what to do next".
+    -->
+
+    <!-- Visualization & Content Choices: 
+    - Goal: Compare long-term costs (30k upfront vs continuous chemical buying).
+    - Viz/Method: Line Chart (Chart.js). 
+    - Interaction: Hover tooltips to see exact numbers per year.
+    - Justification: A 30k expense is scary. A chart showing that keeping chlorine costs MORE after X years transforms the "expense" into a "savings plan".
+    - Method: Chart.js on Canvas. NO SVG/Mermaid used.
+    -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        /* Custom Styles for Chart Container as per requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        /* Smooth transitions for interactive elements */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .accordion-content.open {
+            max-height: 500px;
+            /* Arbitrary large enough value */
+            opacity: 1;
+        }
+
+        .icon-rotate {
+            transition: transform 0.3s ease;
+        }
+
+        .open .icon-rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-200">
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-sky-700 text-xl tracking-tight">
+                    💧 Proyecto Piscina 2026
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#el-problema" class="text-slate-600 hover:text-sky-600 font-medium transition-colors">El
+                        Problema</a>
+                    <a href="#la-solucion" class="text-slate-600 hover:text-sky-600 font-medium transition-colors">La
+                        Solución</a>
+                    <a href="#economia" class="text-slate-600 hover:text-sky-600 font-medium transition-colors">Análisis
+                        Económico</a>
+                    <a href="#salud" class="text-slate-600 hover:text-sky-600 font-medium transition-colors">Salud</a>
+                </div>
+                <div>
+                    <a href="#vota-si"
+                        class="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-full font-semibold shadow-md transition-transform transform hover:scale-105">Vota
+                        SÍ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-sky-50 to-slate-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+                El futuro de nuestra piscina: <br>
+                <span class="text-sky-600">Salud, Ahorro y Bienestar</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+                Nuestra piscina es el corazón de la comunidad en verano. Sin embargo, el sistema actual de cloro químico
+                está obsoleto, es dañino para nuestra salud y supone una sangría económica invisible. Es hora de dar el
+                salto al <strong>Clorador Salino</strong>.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#economia"
+                    class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-bold shadow-lg transition-all">Ver
+                    impacto económico</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section: El Problema vs La Solución -->
+    <section id="el-problema" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">¿Por qué debemos cambiar AHORA?</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Comprender la diferencia entre el sistema obsoleto que
+                    sufrimos hoy y el estándar moderno que merecemos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- El Problema -->
+                <div class="bg-rose-50 rounded-2xl p-8 border border-rose-100 shadow-sm">
+                    <div class="text-4xl mb-4">⚠️</div>
+                    <h3 class="text-2xl font-bold text-rose-800 mb-4">El Problema: Cloro Químico</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-rose-600 mr-3 font-bold">✗</span>
+                            <span class="text-slate-700"><strong>Peligro para la salud:</strong> Genera cloraminas
+                                (causantes del fuerte olor a "piscina"), irrita gravemente los ojos, reseca la piel y
+                                agrava problemas respiratorios y dermatitis.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-600 mr-3 font-bold">✗</span>
+                            <span class="text-slate-700"><strong>Coste continuo y oculto:</strong> Compra constante de
+                                bidones de cloro, alguicidas, reductores de pH. Degrada la lechada de la piscina, la
+                                maquinaria y destiñe los bañadores.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-600 mr-3 font-bold">✗</span>
+                            <span class="text-slate-700"><strong>Riesgo legal y laboral:</strong> Manipular y almacenar
+                                cloro industrial en nuestra comunidad es un riesgo de toxicidad. La normativa sanitaria
+                                presiona cada vez más para su eliminación.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- La Solucion -->
+                <div id="la-solucion"
+                    class="bg-sky-50 rounded-2xl p-8 border border-sky-100 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl">🌊</div>
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="text-2xl font-bold text-sky-800 mb-4">La Solución: Cloración Salina</h3>
+                    <ul class="space-y-4 relative z-10">
+                        <li class="flex items-start">
+                            <span class="text-sky-600 mr-3 font-bold">✓</span>
+                            <span class="text-slate-700"><strong>Agua pura y saludable:</strong> Produce un cloro
+                                natural y suave a partir de sal común. Sensación de agua sedosa, sin ojos rojos ni
+                                picores en la piel.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-sky-600 mr-3 font-bold">✓</span>
+                            <span class="text-slate-700"><strong>Ahorro brutal a medio plazo:</strong> La sal no se
+                                evapora, es un ciclo cerrado. Los costes de mantenimiento y compra de químicos caen en
+                                picado.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-sky-600 mr-3 font-bold">✓</span>
+                            <span class="text-slate-700"><strong>Seguridad total:</strong> Eliminamos el almacén de
+                                productos químicos tóxicos de nuestra urbanización. Cumplimiento garantizado de futuras
+                                normativas.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Economic Analysis -->
+    <section id="economia" class="py-16 bg-slate-100 border-t border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span
+                    class="bg-emerald-100 text-emerald-800 text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wide">El
+                    dato clave</span>
+                <h2 class="text-3xl font-bold text-slate-800 mt-4">¿Por qué invertir 30.000€ es la decisión más
+                    inteligente?</h2>
+                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
+                    A simple vista, 30.000€ parece un gasto enorme. Pero el cloro químico es un "impuesto oculto" anual.
+                    Este gráfico muestra el coste acumulado a lo largo de 10 años. Mira cómo <strong>no instalarlo nos
+                        cuesta más caro</strong>.
+                </p>
+            </div>
+
+            <!-- Contenedor del Gráfico con tamaño controlado -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200">
+                <div class="chart-container">
+                    <canvas id="costComparisonChart"></canvas>
+                </div>
+                <div class="mt-6 text-center text-sm text-slate-500 bg-slate-50 p-4 rounded-lg">
+                    <p><strong>Nota de cálculo (estimación):</strong> El sistema tradicional asume un alto coste anual
+                        en químicos, horas de operario, vaciado parcial de agua y deterioro de equipos. El sistema
+                        salino asume la inversión inicial de 30.000€ y un coste de mantenimiento anual mínimo
+                        (reposición de sacos de sal y cambio de célula cada 5-7 años).</p>
+                </div>
+            </div>
+
+            <!-- Destacado de Ahorro -->
+            <div class="mt-10 grid md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <div class="text-3xl mb-2">💰</div>
+                    <div class="text-slate-500 font-semibold mb-1">Inversión Inicial</div>
+                    <div class="text-2xl font-bold text-slate-800">30.000 €</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <div class="text-3xl mb-2">📉</div>
+                    <div class="text-slate-500 font-semibold mb-1">Reducción de Gastos Anuales</div>
+                    <div class="text-2xl font-bold text-emerald-600">Hasta un 70%</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <div class="text-3xl mb-2">⏱️</div>
+                    <div class="text-slate-500 font-semibold mb-1">Punto de Amortización</div>
+                    <div class="text-2xl font-bold text-sky-600">Aprox. Año 5 - 6</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Health Benefits -->
+    <section id="salud" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Salud y Bienestar para nuestras familias</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Más allá del dinero, esta es una inversión en calidad
+                    de vida, especialmente para los más pequeños y mayores de la comunidad.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <div class="text-5xl mb-4">👁️</div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Adiós Ojos Rojos</h4>
+                    <p class="text-slate-600 text-sm">La concentración salina es similar a la de una lágrima humana. Se
+                        acabaron las gafas de bucear obligatorias y el escozor.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Piel Sedosa</h4>
+                    <p class="text-slate-600 text-sm">El agua ligeramente salada actúa como un antiséptico natural
+                        suave. Ideal para pieles atópicas, psoriasis o alergias.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <div class="text-5xl mb-4">🫁</div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Respiración Limpia</h4>
+                    <p class="text-slate-600 text-sm">Eliminamos las temidas "cloraminas" (el gas tóxico que huele a
+                        lejía), mejorando enormemente el ambiente para asmáticos.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <div class="text-5xl mb-4">👙</div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Cuidado Material</h4>
+                    <p class="text-slate-600 text-sm">El pelo no se reseca ni se tiñe de verde. Los trajes de baño y
+                        colchonetas duran mucho más al no sufrir agresiones químicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Preguntas Frecuentes (Mitos) -->
+    <section class="py-16 bg-slate-800 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold">Desmontando Mitos (Preguntas Frecuentes)</h2>
+                <p class="mt-4 text-slate-300">Es normal tener dudas antes de aprobar un presupuesto. Aquí las
+                    resolvemos de forma transparente.</p>
+            </div>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-600 rounded-lg overflow-hidden bg-slate-700/50">
+                    <button
+                        class="faq-btn w-full text-left px-6 py-4 font-semibold flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
+                        <span>¿El agua sabrá a agua de mar?</span>
+                        <span class="text-xl icon-rotate">▼</span>
+                    </button>
+                    <div class="accordion-content bg-slate-700">
+                        <p class="px-6 py-4 text-slate-300">
+                            <strong>No.</strong> La proporción de sal es aproximadamente la décima parte que la del agua
+                            del mar (unos 5 gramos por litro, frente a los 35g del mar). Es el mismo nivel de salinidad
+                            que tiene una lágrima humana. Apenas se percibe un ligerísimo y agradable sabor.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-600 rounded-lg overflow-hidden bg-slate-700/50">
+                    <button
+                        class="faq-btn w-full text-left px-6 py-4 font-semibold flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
+                        <span>¿Es obligatorio por ley hacer este cambio?</span>
+                        <span class="text-xl icon-rotate">▼</span>
+                    </button>
+                    <div class="accordion-content bg-slate-700">
+                        <p class="px-6 py-4 text-slate-300">
+                            Actualmente, la ley no te "obliga" a tirar tu instalación vieja. <strong>Sin
+                                embargo</strong>, las normativas autonómicas de sanidad y los riesgos laborales por
+                            manipulación de químicos son cada vez más severos. Todas las piscinas de nueva construcción
+                            y polideportivos ya lo instalan por defecto por seguridad. Esperar a que sea legalmente
+                            imperativo solo encarecerá la instalación por la demanda.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-600 rounded-lg overflow-hidden bg-slate-700/50">
+                    <button
+                        class="faq-btn w-full text-left px-6 py-4 font-semibold flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
+                        <span>30.000€ es mucho dinero para la comunidad...</span>
+                        <span class="text-xl icon-rotate">▼</span>
+                    </button>
+                    <div class="accordion-content bg-slate-700">
+                        <p class="px-6 py-4 text-slate-300">
+                            Es una inversión importante, pero hay que verla en perspectiva. Si somos 100 vecinos, son
+                            300€ por vecino. Esa cantidad se recupera en pocos años gracias a que ya no hay que comprar
+                            miles de litros de cloro químico anualmente ni contratar reparaciones constantes por la
+                            corrosión en bombas y tuberías. Además, <strong>revaloriza nuestras viviendas</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="vota-si" class="py-20 bg-gradient-to-br from-sky-600 to-sky-800 text-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl font-extrabold mb-6">El momento de modernizarnos es HOY</h2>
+            <p class="text-xl text-sky-100 mb-10 leading-relaxed">
+                Cada temporada que retrasamos esta decisión, seguimos quemando dinero en químicos y exponiendo a
+                nuestras familias a irritaciones innecesarias. Seamos inteligentes.
+            </p>
+            <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/20 inline-block">
+                <div class="text-6xl mb-4">📝</div>
+                <h3 class="text-2xl font-bold mb-2">Próxima Junta de Propietarios</h3>
+                <p class="mb-6">Asiste y vota a favor de la instalación del Clorador Salino.</p>
+                <button
+                    onclick="alert('¡Gracias por tu interés! Por favor, comparte esta página con tus vecinos en el grupo de WhatsApp de la comunidad.')"
+                    class="bg-white text-sky-800 hover:bg-sky-50 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-transform transform hover:scale-105">
+                    Compartir Argumentario en WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <p>Documento informativo creado para la Comunidad de Vecinos.</p>
+        <p class="mt-2">Datos económicos basados en estimaciones medias de mantenimiento de piscinas comunitarias
+            (>100m3).</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- 1. ACCORDION LOGIC ---
+            const faqButtons = document.querySelectorAll('.faq-btn');
+
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Close all other accordions first (optional, but good UX)
+                    faqButtons.forEach(otherBtn => {
+                        if (otherBtn !== button) {
+                            otherBtn.classList.remove('open');
+                            otherBtn.nextElementSibling.classList.remove('open');
+                        }
+                    });
+
+                    // Toggle current accordion
+                    button.classList.toggle('open');
+                    const content = button.nextElementSibling;
+                    content.classList.toggle('open');
+                });
+            });
+
+            // --- 2. CHART.JS LOGIC (Economic Justification) ---
+            const ctx = document.getElementById('costComparisonChart').getContext('2d');
+
+            // Data generation (Simulated for demonstration based on report logic)
+            const years = Array.from({ length: 11 }, (_, i) => `Año ${i}`);
+
+            // Traditional: 0 initial, +6000/year (chemicals, extra water, heavy maintenance)
+            const costTraditional = [0];
+            let currentTradCost = 0;
+            for (let i = 1; i <= 10; i++) {
+                currentTradCost += 6500;
+                costTraditional.push(currentTradCost);
+            }
+
+            // Salt: 30000 initial, +500/year (salt bags, minor maint), +1500 year 6 (cell replacement)
+            const costSalt = [30000];
+            let currentSaltCost = 30000;
+            for (let i = 1; i <= 10; i++) {
+                let yearlyMaint = 800;
+                if (i === 6) yearlyMaint += 1500; // Replacement cell example
+                currentSaltCost += yearlyMaint;
+                costSalt.push(currentSaltCost);
+            }
+
+            // Chart configuration
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: years,
+                    datasets: [
+                        {
+                            label: 'Gasto Acumulado: Cloro Químico (Sistema Actual)',
+                            data: costTraditional,
+                            borderColor: '#ef4444', // Tailwind Rose-500
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.3,
+                            pointRadius: 4,
+                            pointHoverRadius: 6
+                        },
+                        {
+                            label: 'Inversión Acumulada: Clorador Salino',
+                            data: costSalt,
+                            borderColor: '#10b981', // Tailwind Emerald-500
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.3,
+                            pointRadius: 4,
+                            pointHoverRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false, // CRITICAL for filling the container height
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparativa de Costes Acumulados a 10 Años',
+                            font: { size: 16, family: 'sans-serif' }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        },
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Euros (€)'
+                            },
+                            ticks: {
+                                callback: function (value, index, values) {
+                                    return value.toLocaleString('es-ES') + ' €';
+                                }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Años desde la instalación'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
