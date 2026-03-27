@@ -1,409 +1,181 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Sidi Ifni</title>
-    <link rel="icon" type="image/png" href="../../favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-        rel="stylesheet">
-
-    <style>
-        body {
-            background-color: black;
-            font-size: 1.7rem;
-            color: #fff;
-        }
-
-        .custom-header {
-            padding: 2rem 1rem;
-            text-align: center;
-            color: inherit;
-            background-color: black;
-        }
-
-        .custom-select-lg {
-            font-size: 3rem;
-            line-height: 1.2;
-            padding: .5rem 1rem;
-            height: auto;
-        }
-
-        .custom-header h1 {
-            margin-top: 40px;
-            font-family: 'Montserrat', sans-serif;
-            color: magenta;
-            font-weight: 700;
-        }
-
-        .multilingual-description {
-            font-size: 3rem;
-            margin-top: 30px;
-            border: 2px solid magenta;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: black;
-            color: #fff;
-        }
-
-        .language-desc {
-            padding: 10px;
-            margin-top: 10px;
-        }
-
-        .main-description {
-            margin-top: 20px;
-        }
-
-        .description {
-            margin: 12px;
-            color: white;
-            font-family: 'Lemonada', cursive;
-        }
-
-        .audio {
-            text-align: center;
-            border: 20px;
-            padding: 0;
-            margin: 0;
-            width: min-content;
-            height: min-content;
-            top: 40px;
-        }
-
-        .buttonAudio {
-            top: 200px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>Sidi Ifni — Paz Arés Osset</title>
+  <link rel="icon" type="image/png" href="../../favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    *{box-sizing:border-box}body{background:#0a0a1a;color:#e0d8cc;font-family:'Playfair Display',serif;margin:0;overflow-x:hidden}
+    .hero{min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,.35),rgba(10,10,26,.85)),url('assets/hero_bg.png') center/cover no-repeat;background-attachment:fixed}
+    .hero h1{font-family:'Caveat',cursive;font-size:4.5rem;color:#FFD700;text-shadow:2px 4px 20px rgba(0,0,0,.9)}
+    .hero h2{font-size:1.5rem;color:rgba(255,255,255,.8);font-weight:400;letter-spacing:2px}
+    .hero .sub{margin-top:18px;font-size:1.1rem;color:rgba(255,215,0,.7);font-style:italic}
+    .nav-top{position:fixed;right:15px;top:15px;z-index:1000;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .nav-top .nbtn{border-radius:30px;font-weight:bold;padding:7px 14px;backdrop-filter:blur(5px);background:rgba(0,0,0,.4);font-size:.82rem;text-decoration:none;display:inline-block}
+    #ls{background:rgba(0,0,0,.6);color:#fff;border:1px solid rgba(255,215,0,.4);border-radius:30px;padding:5px 14px;font-size:.95rem;cursor:pointer}
+    .stitle{font-family:'Caveat',cursive;font-size:3rem;color:#FFD700;text-align:center;margin-bottom:45px}
+    .sec1{padding:70px 0;background:linear-gradient(180deg,#0a0a1a,#111122)}
+    .cc{background:rgba(255,255,255,.04);border:1px solid rgba(255,215,0,.12);border-radius:20px;padding:28px 22px;text-align:center;transition:all .4s;height:100%;backdrop-filter:blur(5px)}
+    .cc:hover{transform:translateY(-10px);border-color:#FFD700;box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 15px rgba(255,215,0,.15);background:rgba(255,255,255,.08)}
+    .cc .ic{font-size:2.4rem;color:#FFD700;margin-bottom:12px}
+    .cc h4{color:#fff;font-size:1.05rem;margin-bottom:8px;font-weight:700}
+    .cc p{color:rgba(255,255,255,.5);font-size:.82rem;line-height:1.5}
+    .cc a{color:inherit;text-decoration:none}
+    .sec2{padding:70px 0;background:linear-gradient(180deg,#111122,#0d0d22)}
+    .bb{margin-bottom:50px;opacity:0;transform:translateY(35px);transition:all .7s ease-out}
+    .bb.reveal{opacity:1;transform:translateY(0)}
+    .bimg{border-radius:18px;width:100%;max-width:420px;box-shadow:0 12px 35px rgba(0,0,0,.6);border:2px solid rgba(255,215,0,.12)}
+    .bt{font-size:1.12rem;line-height:2;color:#d5cfc4}
+    .bt p{margin-bottom:18px}
+    .lang{display:none}
+    .ftr{text-align:center;padding:35px;background:#0a0a1a;color:rgba(255,255,255,.3);font-size:.88rem}
+    .ftr a{color:#FFD700;text-decoration:none}
+    @media(max-width:768px){.hero h1{font-size:2.6rem}.stitle{font-size:2rem}.nav-top{top:auto;bottom:8px;right:8px}}
+  </style>
 </head>
-
 <body>
-    <div class="position-fixed d-flex justify-content-end p-4" style="position: fixed; right:0; top: 1; z-index: 1;">
-        <select id="language-select" class="custom-select-lg">
-            <option value="english">English</option>
-            <option value="spanish">Español</option>
-            <option value="italian">Italiano</option>
-            <option value="chinese">中文</option>
-            <option value="arabic">العربية</option>
-        </select>
+
+<div class="nav-top">
+  <a href="relato-poema.html" class="nbtn btn btn-outline-warning" style="border:1px solid rgba(255,215,0,.5);color:#FFD700"><i class="fas fa-scroll mr-1"></i>
+    <span class="lang spanish">Relato del Poema</span><span class="lang english">Poem Tale</span><span class="lang russian">Рассказ о стихе</span><span class="lang ukrainian">Розповідь вірша</span><span class="lang italian">Racconto</span><span class="lang chinese">诗歌故事</span><span class="lang arabic">حكاية القصيدة</span><span class="lang aleman">Gedichterzählung</span><span class="lang frances">Récit du Poème</span><span class="lang japones">詩の物語</span><span class="lang portuges">Relato do Poema</span>
+  </a>
+  <a href="../../poetry/paz-de-africa/index.html" class="nbtn btn btn-outline-info" style="border:1px solid rgba(0,200,255,.4);color:#5cf"><i class="fas fa-feather-alt mr-1"></i>
+    <span class="lang spanish">Poema</span><span class="lang english">Poem</span><span class="lang russian">Стихотворение</span><span class="lang ukrainian">Вірш</span><span class="lang italian">Poesia</span><span class="lang chinese">诗歌</span><span class="lang arabic">قصيدة</span><span class="lang aleman">Gedicht</span><span class="lang frances">Poème</span><span class="lang japones">詩</span><span class="lang portuges">Poema</span>
+  </a>
+  <a href="../../linktree.html" class="nbtn btn btn-outline-light" style="border:1px solid rgba(255,255,255,.4);color:#fff"><i class="fas fa-link mr-1"></i> Linktree</a>
+  <select id="ls">
+    <option value="spanish" selected>🇪🇸 Español</option><option value="english">🇺🇸 English</option><option value="russian">🇷🇺 Русский</option><option value="ukrainian">🇺🇦 Українська</option><option value="italian">🇮🇹 Italiano</option><option value="chinese">🇨🇳 中文</option><option value="arabic">🇦🇪 العربية</option><option value="aleman">🇩🇪 Deutsch</option><option value="frances">🇫🇷 Français</option><option value="japones">🇯🇵 日本語</option><option value="portuges">🇵🇹 Português</option>
+  </select>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <a href="https://www.pazaresosset.es"><img src="../../logopazares.png" alt="Logo" style="height:55px;margin-bottom:18px;filter:drop-shadow(0 0 8px rgba(0,0,0,.7))"></a>
+    <h1>Sidi Ifni</h1>
+    <h2>
+      <span class="lang spanish">La Vida Africana de Paz Arés Osset</span><span class="lang english">The African Life of Paz Arés Osset</span><span class="lang russian">Африканская жизнь Пас Арес Оссет</span><span class="lang ukrainian">Африканське життя Пас Арес Оссет</span><span class="lang italian">La Vita Africana di Paz Arés Osset</span><span class="lang chinese">Paz Arés Osset 的非洲生活</span><span class="lang arabic">الحياة الأفريقية لباز أريس أوسيت</span><span class="lang aleman">Das afrikanische Leben von Paz Arés Osset</span><span class="lang frances">La Vie Africaine de Paz Arés Osset</span><span class="lang japones">パス・アレス・オセットのアフリカの生活</span><span class="lang portuges">A Vida Africana de Paz Arés Osset</span>
+    </h2>
+    <div class="sub">
+      <span class="lang spanish">«Paraíso de mi infancia. ¡Siempre ahí mi corazón!»</span><span class="lang english">"Paradise of my childhood. My heart is always there!"</span><span class="lang russian">«Рай моего детства. Моё сердце всегда там!»</span><span class="lang ukrainian">«Рай мого дитинства. Моє серце завжди там!»</span><span class="lang italian">«Paradiso della mia infanzia. Il mio cuore è sempre lì!»</span><span class="lang chinese">«我童年的天堂。我的心永远在那里！»</span><span class="lang arabic">«جنة طفولتي. قلبي دائمًا هناك!»</span><span class="lang aleman">«Paradies meiner Kindheit. Mein Herz ist immer dort!»</span><span class="lang frances">«Paradis de mon enfance. Mon cœur y est toujours !»</span><span class="lang japones">「私の幼少期の楽園。私の心はいつもそこに！」</span><span class="lang portuges">«Paraíso da minha infância. O meu coração está sempre lá!»</span>
     </div>
+  </div>
+</section>
 
-    <div class="custom-header">
-        <a class="brand" href="https://www.pazaresosset.es">
-            <img src="../../logopazares.png" style="
-                                position:absolute; 
-                                margin: 10px;
-                                top:0px; 
-                                left:0px;" alt="Paz Arés Osset, the Artist">
-        </a>
-        <h1 class="display-4 language english">Paz Arés, the Artist</h1>
-        <h1 class="display-4 language spanish" style="display: none;">Paz Arés, la Artista</h1>
-        <h1 class="display-4 language italian" style="display: none;">Paz Arés, l'Artista</h1>
-        <h1 class="display-4 language chinese" style="display: none;">艺术家帕斯·阿雷斯</h1>
-        <h1 class="display-4 language arabic" style="display: none;">الفنانة باز أريس</h1>
+<!-- CHAPTERS -->
+<section class="sec1">
+  <div class="container">
+    <h2 class="stitle"><i class="fas fa-book-open mr-2"></i>
+      <span class="lang spanish">Capítulos de una Vida</span><span class="lang english">Chapters of a Life</span><span class="lang russian">Главы жизни</span><span class="lang ukrainian">Розділи життя</span><span class="lang italian">Capitoli di una Vita</span><span class="lang chinese">人生的篇章</span><span class="lang arabic">فصول حياة</span><span class="lang aleman">Kapitel eines Lebens</span><span class="lang frances">Chapitres d'une Vie</span><span class="lang japones">人生の章</span><span class="lang portuges">Capítulos de uma Vida</span>
+    </h2>
+    <div class="row">
 
-        <h2 class="language english">Sidi Ifni</h2>
-        <h2 class="language spanish" style="display: none;">Sidi Ifni</h2>
-        <h2 class="language italian" style="display: none;">Sidi Ifni</h2>
-        <h2 class="language chinese" style="display: none;">锡迪伊夫尼</h2>
-        <h2 class="language arabic" style="display: none;">سيدي إفني</h2>
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="nacimiento.html"><div class="ic"><i class="fas fa-baby"></i></div>
+        <h4><span class="lang spanish">Nacimiento y Primeros Años</span><span class="lang english">Birth and Early Years</span><span class="lang russian">Рождение и первые годы</span><span class="lang ukrainian">Народження і перші роки</span><span class="lang italian">Nascita e Primi Anni</span><span class="lang chinese">出生和早年</span><span class="lang arabic">الولادة والسنوات الأولى</span><span class="lang aleman">Geburt und erste Jahre</span><span class="lang frances">Naissance et Premières Années</span><span class="lang japones">誕生と幼年期</span><span class="lang portuges">Nascimento e Primeiros Anos</span></h4>
+        <p><span class="lang spanish">29 de octubre de 1954: Paz llega al mundo en Sidi Ifni.</span><span class="lang english">October 29, 1954: Paz arrives in Sidi Ifni.</span><span class="lang russian">29 октября 1954: Пас рождается в Сиди-Ифни.</span><span class="lang ukrainian">29 жовтня 1954: Пас народжується в Сіді-Іфні.</span><span class="lang italian">29 ottobre 1954: Paz nasce a Sidi Ifni.</span><span class="lang chinese">1954年10月29日：Paz在西迪伊夫尼出生。</span><span class="lang arabic">29 أكتوبر 1954: ولدت باز في سيدي إفني.</span><span class="lang aleman">29. Oktober 1954: Paz kommt in Sidi Ifni zur Welt.</span><span class="lang frances">29 octobre 1954 : Paz vient au monde à Sidi Ifni.</span><span class="lang japones">1954年10月29日：パスがシディ・イフニで誕生。</span><span class="lang portuges">29 de outubro de 1954: Paz nasce em Sidi Ifni.</span></p>
+      </a></div></div>
+
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="primeros_anos.html"><div class="ic"><i class="fas fa-child"></i></div>
+        <h4><span class="lang spanish">Primeros Años (1954-1957)</span><span class="lang english">Early Years (1954-1957)</span><span class="lang russian">Первые годы (1954-1957)</span><span class="lang ukrainian">Перші роки (1954-1957)</span><span class="lang italian">Primi Anni (1954-1957)</span><span class="lang chinese">最初几年 (1954-1957)</span><span class="lang arabic">السنوات الأولى (1954-1957)</span><span class="lang aleman">Erste Jahre (1954-1957)</span><span class="lang frances">Premières Années (1954-1957)</span><span class="lang japones">最初の数年 (1954-1957)</span><span class="lang portuges">Primeiros Anos (1954-1957)</span></h4>
+        <p><span class="lang spanish">Tres años de descubrimiento en la costa atlántica.</span><span class="lang english">Three years of discovery on the Atlantic coast.</span><span class="lang russian">Три года открытий на атлантическом побережье.</span><span class="lang ukrainian">Три роки відкриттів на атлантичному узбережжі.</span><span class="lang italian">Tre anni di scoperta sulla costa atlantica.</span><span class="lang chinese">大西洋海岸三年的发现之旅。</span><span class="lang arabic">ثلاث سنوات من الاكتشاف على ساحل الأطلسي.</span><span class="lang aleman">Drei Jahre der Entdeckung an der Atlantikküste.</span><span class="lang frances">Trois ans de découverte sur la côte atlantique.</span><span class="lang japones">大西洋沿岸での3年間の発見。</span><span class="lang portuges">Três anos de descoberta na costa atlântica.</span></p>
+      </a></div></div>
+
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="guerra_ifni.html"><div class="ic"><i class="fas fa-shield-alt"></i></div>
+        <h4><span class="lang spanish">Guerra de Ifni (1957-1958)</span><span class="lang english">Ifni War (1957-1958)</span><span class="lang russian">Война при Ифни (1957-1958)</span><span class="lang ukrainian">Війна за Іфні (1957-1958)</span><span class="lang italian">Guerra di Ifni (1957-1958)</span><span class="lang chinese">伊夫尼战争 (1957-1958)</span><span class="lang arabic">حرب إفني (1957-1958)</span><span class="lang aleman">Ifni-Krieg (1957-1958)</span><span class="lang frances">Guerre d'Ifni (1957-1958)</span><span class="lang japones">イフニ戦争 (1957-1958)</span><span class="lang portuges">Guerra de Ifni (1957-1958)</span></h4>
+        <p><span class="lang spanish">Superviviente de un conflicto que marcó su infancia.</span><span class="lang english">Survivor of a conflict that marked her childhood.</span><span class="lang russian">Выжившая в конфликте, определившем её детство.</span><span class="lang ukrainian">Вижила у конфлікті, що визначив її дитинство.</span><span class="lang italian">Sopravvissuta a un conflitto che ha segnato la sua infanzia.</span><span class="lang chinese">一场标记她童年的冲突的幸存者。</span><span class="lang arabic">ناجية من صراع ترك بصمته على طفولتها.</span><span class="lang aleman">Überlebende eines Konflikts, der ihre Kindheit prägte.</span><span class="lang frances">Survivante d'un conflit qui a marqué son enfance.</span><span class="lang japones">幼少期を決定づけた紛争の生存者。</span><span class="lang portuges">Sobrevivente de um conflito que marcou a sua infância.</span></p>
+      </a></div></div>
+
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="desarrollo_educativo.html"><div class="ic"><i class="fas fa-graduation-cap"></i></div>
+        <h4><span class="lang spanish">Desarrollo Educativo</span><span class="lang english">Educational Development</span><span class="lang russian">Образование</span><span class="lang ukrainian">Освіта</span><span class="lang italian">Sviluppo Educativo</span><span class="lang chinese">教育发展</span><span class="lang arabic">التطور التعليمي</span><span class="lang aleman">Bildung</span><span class="lang frances">Développement Éducatif</span><span class="lang japones">教育の発達</span><span class="lang portuges">Desenvolvimento Educativo</span></h4>
+        <p><span class="lang spanish">Aprender, leer, dibujar y pintar: la formación de una artista.</span><span class="lang english">Learning, reading, drawing and painting: the making of an artist.</span><span class="lang russian">Учёба, чтение, рисование: становление художника.</span><span class="lang ukrainian">Навчання, читання, малювання: становлення художниці.</span><span class="lang italian">Imparare, leggere, disegnare: la formazione di un'artista.</span><span class="lang chinese">学习、阅读、绘画：一位艺术家的养成。</span><span class="lang arabic">التعلم والقراءة والرسم: تكوين فنانة.</span><span class="lang aleman">Lernen, Lesen, Zeichnen: die Ausbildung einer Künstlerin.</span><span class="lang frances">Apprendre, lire, dessiner : la formation d'une artiste.</span><span class="lang japones">学び、読み、描く：芸術家の形成。</span><span class="lang portuges">Aprender, ler, desenhar: a formação de uma artista.</span></p>
+      </a></div></div>
+
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="vida_cotidiana.html"><div class="ic"><i class="fas fa-home"></i></div>
+        <h4><span class="lang spanish">Vida Cotidiana</span><span class="lang english">Daily Life</span><span class="lang russian">Повседневная жизнь</span><span class="lang ukrainian">Повсякденне життя</span><span class="lang italian">Vita Quotidiana</span><span class="lang chinese">日常生活</span><span class="lang arabic">الحياة اليومية</span><span class="lang aleman">Alltag</span><span class="lang frances">Vie quotidienne</span><span class="lang japones">日常生活</span><span class="lang portuges">Vida Quotidiana</span></h4>
+        <p><span class="lang spanish">El sonido del gallo, el trompetista y la casa con higuera.</span><span class="lang english">The rooster's call, the trumpeter and the house with its fig tree.</span><span class="lang russian">Крик петуха, трубач и дом с инжиром.</span><span class="lang ukrainian">Крик півня, сурмач і будинок з інжиром.</span><span class="lang italian">Il canto del gallo, il trombettista e la casa con il fico.</span><span class="lang chinese">公鸡的啼叫、喇叭手和有无花果树的房子。</span><span class="lang arabic">صياح الديك والبوّاق والبيت بشجرة التين.</span><span class="lang aleman">Der Hahnenschrei, der Trompeter und das Haus mit dem Feigenbaum.</span><span class="lang frances">Le chant du coq, le trompettiste et la maison au figuier.</span><span class="lang japones">雄鶏の鳴き声、トランペット奏者、イチジクの木のある家。</span><span class="lang portuges">O canto do galo, o trompetista e a casa com a figueira.</span></p>
+      </a></div></div>
+
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="cambios_vivienda.html"><div class="ic"><i class="fas fa-building"></i></div>
+        <h4><span class="lang spanish">Cambios de Vivienda (1959-1963)</span><span class="lang english">Housing Changes (1959-1963)</span><span class="lang russian">Смена жилья (1959-1963)</span><span class="lang ukrainian">Зміна житла (1959-1963)</span><span class="lang italian">Cambiamenti (1959-1963)</span><span class="lang chinese">住房变化 (1959-1963)</span><span class="lang arabic">تغييرات السكن (1959-1963)</span><span class="lang aleman">Wohnungswechsel (1959-1963)</span><span class="lang frances">Changements (1959-1963)</span><span class="lang japones">住居の変化 (1959-1963)</span><span class="lang portuges">Mudanças (1959-1963)</span></h4>
+        <p><span class="lang spanish">El chalet tras el faro: un nuevo hogar con balcón al Este.</span><span class="lang english">The chalet behind the lighthouse: a new home facing East.</span><span class="lang russian">Шале за маяком: новый дом с балконом на восток.</span><span class="lang ukrainian">Шале за маяком: новий дім з балконом на схід.</span><span class="lang italian">Lo chalet dietro il faro: una nuova casa a Est.</span><span class="lang chinese">灯塔后的小屋：朝东的新家。</span><span class="lang arabic">الشاليه خلف المنارة: منزل جديد يطل شرقاً.</span><span class="lang aleman">Das Chalet hinter dem Leuchtturm: ein Heim nach Osten.</span><span class="lang frances">Le chalet derrière le phare : face à l'Est.</span><span class="lang japones">灯台の裏のシャレー：東向きの新しい家。</span><span class="lang portuges">O chalé atrás do farol: uma casa virada a Este.</span></p>
+      </a></div></div>
+
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="actividades_creativas.html"><div class="ic"><i class="fas fa-palette"></i></div>
+        <h4><span class="lang spanish">Actividades Creativas</span><span class="lang english">Creative Activities</span><span class="lang russian">Творческая деятельность</span><span class="lang ukrainian">Творча діяльність</span><span class="lang italian">Attività Creative</span><span class="lang chinese">创意活动</span><span class="lang arabic">الأنشطة الإبداعية</span><span class="lang aleman">Kreative Aktivitäten</span><span class="lang frances">Activités Créatives</span><span class="lang japones">創造的活動</span><span class="lang portuges">Atividades Criativas</span></h4>
+        <p><span class="lang spanish">Teatro, música, coros y danzas desde los siete años.</span><span class="lang english">Theatre, music, choirs and dances from age seven.</span><span class="lang russian">Театр, музыка, хоры и танцы с семи лет.</span><span class="lang ukrainian">Театр, музика, хори та танці з семи років.</span><span class="lang italian">Teatro, musica, cori e danze dai sette anni.</span><span class="lang chinese">从七岁起参加戏剧、音乐和舞蹈。</span><span class="lang arabic">المسرح والموسيقى والرقص منذ سن السابعة.</span><span class="lang aleman">Theater, Musik, Chöre und Tänze ab sieben Jahren.</span><span class="lang frances">Théâtre, musique, chœurs et danses dès sept ans.</span><span class="lang japones">7歳からの演劇、音楽、合唱、ダンス。</span><span class="lang portuges">Teatro, música, coros e danças desde os sete anos.</span></p>
+      </a></div></div>
+
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="recuerdos.html"><div class="ic"><i class="fas fa-camera-retro"></i></div>
+        <h4><span class="lang spanish">Recuerdos</span><span class="lang english">Memories</span><span class="lang russian">Воспоминания</span><span class="lang ukrainian">Спогади</span><span class="lang italian">Ricordi</span><span class="lang chinese">回忆</span><span class="lang arabic">الذكريات</span><span class="lang aleman">Erinnerungen</span><span class="lang frances">Souvenirs</span><span class="lang japones">思い出</span><span class="lang portuges">Recordações</span></h4>
+        <p><span class="lang spanish">Momentos intensos que dejaron una huella imborrable.</span><span class="lang english">Intense moments that left an indelible mark.</span><span class="lang russian">Яркие моменты, оставившие неизгладимый след.</span><span class="lang ukrainian">Яскраві моменти, що залишили незабутній слід.</span><span class="lang italian">Momenti intensi che hanno lasciato un segno indelebile.</span><span class="lang chinese">留下不可磨灭印记的难忘时刻。</span><span class="lang arabic">لحظات مكثفة تركت بصمة لا تُمحى.</span><span class="lang aleman">Intensive Momente, die eine Spur hinterließen.</span><span class="lang frances">Moments intenses qui ont laissé une marque indélébile.</span><span class="lang japones">消えない痕跡を残した強烈な瞬間。</span><span class="lang portuges">Momentos intensos que deixaram uma marca indelével.</span></p>
+      </a></div></div>
+
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="influencias.html"><div class="ic"><i class="fas fa-lightbulb"></i></div>
+        <h4><span class="lang spanish">Influencias</span><span class="lang english">Influences</span><span class="lang russian">Влияния</span><span class="lang ukrainian">Впливи</span><span class="lang italian">Influenze</span><span class="lang chinese">影响</span><span class="lang arabic">التأثيرات</span><span class="lang aleman">Einflüsse</span><span class="lang frances">Influences</span><span class="lang japones">影響</span><span class="lang portuges">Influências</span></h4>
+        <p><span class="lang spanish">Las raíces culturales que nutrieron su visión artística.</span><span class="lang english">The cultural roots that nourished her artistic vision.</span><span class="lang russian">Культурные корни, питавшие её видение.</span><span class="lang ukrainian">Культурне коріння, що живило її бачення.</span><span class="lang italian">Le radici culturali che hanno nutrito la sua visione.</span><span class="lang chinese">滋养她艺术视野的文化根源。</span><span class="lang arabic">الجذور الثقافية التي غذت رؤيتها.</span><span class="lang aleman">Die kulturellen Wurzeln ihrer Vision.</span><span class="lang frances">Les racines culturelles de sa vision artistique.</span><span class="lang japones">芸術的ビジョンを育んだ文化的ルーツ。</span><span class="lang portuges">As raízes culturais da sua visão artística.</span></p>
+      </a></div></div>
+
     </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6 mb-4"><div class="cc"><a href="legado.html"><div class="ic"><i class="fas fa-globe-africa"></i></div>
+        <h4><span class="lang spanish">Legado Africano</span><span class="lang english">African Legacy</span><span class="lang russian">Африканское наследие</span><span class="lang ukrainian">Африканська спадщина</span><span class="lang italian">Eredità Africana</span><span class="lang chinese">非洲遗产</span><span class="lang arabic">الإرث الأفريقي</span><span class="lang aleman">Afrikanisches Erbe</span><span class="lang frances">Héritage Africain</span><span class="lang japones">アフリカの遺産</span><span class="lang portuges">Legado Africano</span></h4>
+        <p><span class="lang spanish">El espíritu africano vivo en cada pincelada.</span><span class="lang english">The African spirit alive in every brushstroke.</span><span class="lang russian">Африканский дух в каждом мазке кисти.</span><span class="lang ukrainian">Африканський дух у кожному мазку пензля.</span><span class="lang italian">Lo spirito africano vive in ogni pennellata.</span><span class="lang chinese">在每一笔中延续的非洲精神。</span><span class="lang arabic">الروح الأفريقية في كل ضربة فرشاة.</span><span class="lang aleman">Der afrikanische Geist in jedem Pinselstrich.</span><span class="lang frances">L'esprit africain dans chaque coup de pinceau.</span><span class="lang japones">筆の一筆ごとに生きるアフリカの精神。</span><span class="lang portuges">O espírito africano em cada pincelada.</span></p>
+      </a></div></div>
+    </div>
+  </div>
+</section>
 
+<!-- BIO TEXT -->
+<section class="sec2">
+  <div class="container">
+    <h2 class="stitle"><i class="fas fa-feather-alt mr-2"></i>
+      <span class="lang spanish">Sidi Ifni: Paraíso y Exilio</span><span class="lang english">Sidi Ifni: Paradise and Exile</span><span class="lang russian">Сиди-Ифни: Рай и изгнание</span><span class="lang ukrainian">Сіді-Іфні: Рай та вигнання</span><span class="lang italian">Sidi Ifni: Paradiso ed Esilio</span><span class="lang chinese">西迪伊夫尼：天堂与流放</span><span class="lang arabic">سيدي إفني: الجنة والنفي</span><span class="lang aleman">Sidi Ifni: Paradies und Exil</span><span class="lang frances">Sidi Ifni : Paradis et Exil</span><span class="lang japones">シディ・イフニ：楽園と追放</span><span class="lang portuges">Sidi Ifni: Paraíso e Exílio</span>
+    </h2>
 
+    <!-- Block 1 -->
+    <div class="bb"><div class="row align-items-center">
+      <div class="col-md-5 text-center mb-4 mb-md-0"><img src="assets/hero_bg.png" class="bimg" alt="Sidi Ifni"></div>
+      <div class="col-md-7"><div class="bt">
+        <p><span class="lang spanish">La infancia de Paz Arés Osset en Sidi Ifni, una ciudad costera en el desierto del Sahara Occidental, es una etapa profundamente formativa y rica en experiencias que dejaron una huella imborrable en su personalidad y su obra artística. Nacida el 29 de octubre de 1954, Paz creció en un entorno que era una fusión vibrante de culturas, paisajes deslumbrantes y eventos históricos significativos.</span><span class="lang english">Paz Arés Osset's childhood in Sidi Ifni, a coastal town in the Western Sahara desert, was a deeply formative stage rich in experiences that left an indelible mark on her personality and artistic work. Born on October 29, 1954, Paz grew up in a vibrant fusion of cultures, stunning landscapes, and significant historical events.</span><span class="lang russian">Детство Пас Арес Оссет в Сиди-Ифни, прибрежном городе в пустыне Западной Сахары, стало глубоко формирующим этапом, богатым событиями, оставившим неизгладимый след в её личности и художественном творчестве. Родившись 29 октября 1954 года, Пас росла в среде, представлявшей собой яркое слияние культур, потрясающих пейзажей и значимых исторических событий.</span><span class="lang ukrainian">Дитинство Пас Арес Оссет у Сіді-Іфні, прибережному місті в пустелі Західної Сахари, стало глибоко формуючим етапом, багатим на події, що залишили незабутній слід у її особистості та художній творчості. Народившись 29 жовтня 1954 року, Пас зростала в середовищі, що було яскравим злиттям культур, приголомшливих пейзажів та значущих історичних подій.</span><span class="lang italian">L'infanzia di Paz Arés Osset a Sidi Ifni, una città costiera nel deserto del Sahara Occidentale, fu una fase profondamente formativa e ricca di esperienze che lasciarono un segno indelebile nella sua personalità e nella sua opera artistica. Nata il 29 ottobre 1954, Paz crebbe in un ambiente che era una vibrante fusione di culture, paesaggi mozzafiato ed eventi storici significativi.</span><span class="lang chinese">Paz Arés Osset 在西撒哈拉沙漠沿海城市西迪伊夫尼的童年是一个深刻的成长阶段，这段经历非常丰富，在她的性格和艺术作品上留下了不可磨灭的印记。1954年10月29日出生，Paz 在多元文化的鲜活融合、令人惊叹的风景和重大的历史事件中成长。</span><span class="lang arabic">كانت طفولة باز أريس أوسيت في سيدي إفني، وهي مدينة ساحلية في صحراء الصحراء الغربية، مرحلة تكوينية عميقة وغنية بالتجارب التي تركت بصمة لا تمحى على شخصيتها وعملها الفني. ولدت باز في 29 أكتوبر 1954، ونشأت في بيئة كانت عبارة عن مزيج نابض بالحياة من الثقافات والمناظر الطبيعية الخلابة والأحداث التاريخية الهامة.</span><span class="lang aleman">Die Kindheit von Paz Arés Osset in Sidi Ifni, einer Küstenstadt in der Westsahara, war eine zutiefst prägende Phase, die reich an Erfahrungen war und einen unauslöschlichen Eindruck in ihrer Persönlichkeit und ihrem künstlerischen Werk hinterließ. Am 29. Oktober 1954 geboren, wuchs Paz in einer Umgebung auf, die eine lebendige Verschmelzung von Kulturen, atemberaubenden Landschaften und bedeutenden historischen Ereignissen war.</span><span class="lang frances">L'enfance de Paz Arés Osset à Sidi Ifni, une ville côtière dans le désert du Sahara Occidental, fut une étape profondément formatrice et riche en expériences qui ont laissé une marque indélébile sur sa personnalité et son œuvre artistique. Née le 29 octobre 1954, Paz a grandi dans un environnement qui était une fusion vibrante de cultures, de paysages éblouissants et d'événements historiques significatifs.</span><span class="lang japones">西サハラ砂漠の沿岸都市シディ・イフニでのパス・アレス・オセットの幼少期は、彼女の性格や芸術作品に消えない痕跡を残した、深く形成的な段階であり、豊かな経験でした。1954年10月29日に生まれたパスは、文化、息をのむような風景、重要な歴史的出来事が活気に満ちて融合する環境で育ちました。</span><span class="lang portuges">A infância de Paz Arés Osset em Sidi Ifni, uma cidade costeira no deserto do Saara Ocidental, foi uma etapa profundamente formativa e rica em experiências que deixaram uma marca indelével na sua personalidade e obra artística. Nascida a 29 de outubro de 1954, Paz cresceu num ambiente que era uma fusão vibrante de culturas, paisagens deslumbrantes e eventos históricos significativos.</span></p>
+      </div></div>
+    </div></div>
 
+    <!-- Block 2 -->
+    <div class="bb"><div class="row align-items-center flex-md-row-reverse">
+      <div class="col-md-5 text-center mb-4 mb-md-0"><img src="assets/childhood.png" class="bimg" alt="Childhood"></div>
+      <div class="col-md-7"><div class="bt">
+        <p><span class="lang spanish">El sonido del gallo y el trompetista del ejército al amanecer marcaban el ritmo de sus días. La influencia cultural de Sidi Ifni fue igualmente significativa. Crecer en una colonia española en África le permitió experimentar una rica mezcla de tradiciones españolas y marroquíes, fomentando una apreciación profunda por la diversidad y la resiliencia.</span><span class="lang english">The sound of the rooster and the army trumpeter at dawn set the rhythm of her days. The cultural influence of Sidi Ifni was equally significant. Growing up in a Spanish colony in Africa allowed her to experience a rich mix of Spanish and Moroccan traditions, fostering a deep appreciation for diversity and resilience.</span><span class="lang russian">Звук петуха и армейского трубача на рассвете задавали ритм её дней. Культурное влияние Сиди-Ифни было столь же значительным. Жизнь в испанской колонии в Африке позволила ей испытать богатое смешение испанских и марокканских традиций, воспитывая глубокую признательность за разнообразие и стойкость.</span><span class="lang ukrainian">Звук півня і армійського сурмача на світанку задавали ритм її днів. Культурний вплив Сіді-Іфні був настільки ж значним. Життя в іспанській колонії в Африці дозволило їй відчути багате поєднання іспанських та марокканських традицій, виховуючи глибоку повагу до різноманітності та стійкості.</span><span class="lang italian">Il suono del gallo e del trombettista dell'esercito all'alba scandivano il ritmo delle sue giornate. L'influenza culturale di Sidi Ifni fu altrettanto significativa. Crescere in una colonia spagnola in Africa le permise di sperimentare un ricco mix di tradizioni spagnole e marocchine, favorendo un profondo apprezzamento per la diversità e la resilienza.</span><span class="lang chinese">黎明时分公鸡和军号手的鸣声标志着她一天的节奏。西迪伊夫尼的文化影响同样重大。在非洲的西班牙殖民地长大，让她体验了西班牙和摩洛哥传统的丰富融合，培养了她对多样性和坚韧的深刻理解。</span><span class="lang arabic">كان صوت الديك ولاعب البوق في الجيش عند الفجر يحدد إيقاع أيامها. كان التأثير الثقافي لسيدي إفني كبيراً أيضاً. إن نشأتها في مستعمرة إسبانية في أفريقيا سمحت لها بتجربة مزيج غني من التقاليد الإسبانية والمغربية، مما عزز تقديراً عميقاً للتنوع والقدرة على الصمود.</span><span class="lang aleman">Der Klang des Hahns und des Armeetrompeters im Morgengrauen bestimmten den Rhythmus ihrer Tage. Der kulturelle Einfluss von Sidi Ifni war ebenso bedeutend. Das Aufwachsen in einer spanischen Kolonie in Afrika ermöglichte es ihr, eine reiche Mischung aus spanischen und marokkanischen Traditionen zu erleben, was eine tiefe Wertschätzung für Vielfalt und Widerstandsfähigkeit förderte.</span><span class="lang frances">Le son du coq et du trompettiste de l'armée à l'aube rythmaient ses journées. L'influence culturelle de Sidi Ifni était tout aussi significative. Grandir dans une colonie espagnole en Afrique lui a permis de découvrir un riche mélange de traditions espagnoles et marocaines, favorisant une profonde appréciation pour la diversité et la résilience.</span><span class="lang japones">夜明けの雄鶏の鳴き声と軍隊のトランペッターが彼女の日々のリズムを刻みました。シディ・イフニの文化的影響も同様に重要でした。アフリカにあるスペインの植民地で育つことで、スペインとモロッコの伝統が豊かに融合した環境を体験し、多様性と回復力に対する深い感謝の念を育みました。</span><span class="lang portuges">O som do galo e do trompetista do exército ao amanhecer marcavam o ritmo dos seus dias. A influência cultural de Sidi Ifni foi igualmente significativa. Crescer numa colónia espanhola em África permitiu-lhe experimentar uma rica mistura de tradições espanholas e marroquinas, fomentando um profundo apreço pela diversidade e pela resiliência.</span></p>
+      </div></div>
+    </div></div>
 
-    <section style="margin-top: 30px; text-align: center;">
-        <div style="display: inline-block; text-align: left;">
-            <div class="english language">
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li style="margin: 10px 0;"><a href="nacimiento.html"
-                            style="color: lime; text-decoration: none;">Birth
-                            and Early Years</a></li>
-                    <li style="margin: 10px 0;"><a href="primeros_anos.html"
-                            style="color: lime; text-decoration: none;">Early Years in Sidi Ifni (1954-1957)</a></li>
-                    <li style="margin: 10px 0;"><a href="guerra_ifni.html"
-                            style="color: lime; text-decoration: none;">Impact of the Ifni War and its Consequences
-                            (1957-1958)</a></li>
-                    <li style="margin: 10px 0;"><a href="desarrollo_educativo.html"
-                            style="color: lime; text-decoration: none;">Educational and Personal Development</a></li>
-                    <li style="margin: 10px 0;"><a href="vida_cotidiana.html"
-                            style="color: lime; text-decoration: none;">Daily Life and Family Environment</a></li>
-                    <li style="margin: 10px 0;"><a href="cambios_vivienda.html"
-                            style="color: lime; text-decoration: none;">Changes in Housing (1959-1963)</a></li>
-                    <li style="margin: 10px 0;"><a href="actividades_creativas.html"
-                            style="color: lime; text-decoration: none;">Creative and Commercial Activities</a></li>
-                    <li style="margin: 10px 0;"><a href="recuerdos.html"
-                            style="color: lime; text-decoration: none;">Memories and Significant Experiences</a></li>
-                    <li style="margin: 10px 0;"><a href="influencias.html"
-                            style="color: lime; text-decoration: none;">Influences and Personal Reflections</a></li>
-                    <li style="margin: 10px 0;"><a href="legado.html"
-                            style="color: lime; text-decoration: none;">African
-                            Legacy and Love for the Land</a></li>
-                </ul>
-            </div>
+    <!-- Block 3 -->
+    <div class="bb"><div class="bt" style="max-width:850px;margin:0 auto">
+      <p><span class="lang spanish">En medio de los desafíos de la Guerra de Ifni, Paz encontró refugio en las actividades creativas. Desde una edad temprana mostró una inclinación por el teatro, la música y la lectura. Su legado africano, combinado con su amor por la literatura, se reflejan en su obra. Los recuerdos de Sidi Ifni continúan inspirando su arte, celebrando la diversidad, la resiliencia y la belleza de la vida.</span><span class="lang english">Amid the challenges of the Ifni War, Paz found refuge in creative activities. From an early age she showed an inclination for theatre, music, and reading. Her African legacy, combined with her love of literature, is reflected in her work. The memories of Sidi Ifni continue to inspire her art, celebrating diversity, resilience, and the beauty of life.</span><span class="lang russian">Среди испытаний войны при Ифни Пас нашла убежище в творческой деятельности. С раннего возраста она проявляла склонность к театру, музыке и чтению. Её африканское наследие в сочетании с любовью к литературе нашло отражение в её творчестве. Воспоминания о Сиди-Ифни продолжают вдохновлять её искусство, прославляя разнообразие, стойкость и красоту жизни.</span><span class="lang ukrainian">Серед викликів війни за Іфні Пас знайшла притулок у творчій діяльності. З раннього віку вона виявляла схильність до театру, музики та читання. Її африканська спадщина в поєднанні з любов'ю до літератури відображається в її творчості. Спогади про Сіді-Іфні продовжують надихати її мистецтво, прославляючи різноманітність, стійкість та красу життя.</span><span class="lang italian">In mezzo alle sfide della Guerra di Ifni, Paz trovò rifugio nelle attività creative. Fin da piccola mostrò un'inclinazione per il teatro, la musica e la lettura. La sua eredità africana, unita al suo amore per la letteratura, si riflette nelle sue opere. I ricordi di Sidi Ifni continuano a ispirare la sua arte, celebrando la diversità, la resilienza e la bellezza della vita.</span><span class="lang chinese">在伊夫尼战争的挑战中，Paz 在创意活动中找到了避难所。她从小就对戏剧、音乐和阅读表现出浓厚的兴趣。她的非洲遗产加上她对文学的热爱，充分体现在她的作品中。西迪伊夫尼的记忆继续激发着她的艺术创作，颂扬着多样性、坚韧和生命之美。</span><span class="lang arabic">وسط تحديات حرب إفني، وجدت باز ملاذًا في الأنشطة الإبداعية. منذ سن مبكرة، أظهرت ميلاً للمسرح والموسيقى والقراءة. إرثها الأفريقي، بجانب حبها للأدب، ينعكس بنجاح في أعمالها. لا تزال ذكريات سيدي إفني تلهم فنها، محتفية بالتنوع والقدرة على الصمود وجمال الحياة.</span><span class="lang aleman">Inmitten der Herausforderungen des Ifni-Krieges fand Paz Zuflucht in kreativen Aktivitäten. Schon in jungen Jahren zeigte sie eine Neigung zu Theater, Musik und Literatur. Ihr afrikanisches Erbe in Verbindung mit ihrer Liebe zur Literatur spiegelt sich in ihren Werken wider. Die Erinnerungen an Sidi Ifni inspirieren weiterhin ihre Kunst und feiern Vielfalt, Widerstandsfähigkeit und die Schönheit des Lebens.</span><span class="lang frances">Au milieu des défis de la Guerre d'Ifni, Paz a trouvé refuge dans les activités créatives. Dès son plus jeune âge, elle a montré une inclination pour le théâtre, la musique et la lecture. Son héritage africain, combiné à son amour pour la littérature, se reflète dans son œuvre. Les souvenirs de Sidi Ifni continuent d'inspirer son art, célébrant la diversité, la résilience et la beauté de la vie.</span><span class="lang japones">イフニ戦争の困難の中、パスは創造的な活動に心の拠り所を見出しました。幼い頃から、彼女は演劇、音楽、読書への愛着を示していました。文学への愛と結びついたアフリカの遺産は、彼女の作品に反映されています。シディ・イフニの記憶は、多様性、回復力、人生の美しさをたたえ、彼女の芸術にインスピレーションを与え続けています。</span><span class="lang portuges">No meio dos desafios da Guerra de Ifni, Paz encontrou refúgio nas atividades criativas. Desde tenra idade, mostrou uma inclinação para o teatro, a música e a leitura. O seu legado africano, combinado com o seu amor pela literatura, reflete-se na sua obra. As memórias de Sidi Ifni continuam a inspirar a sua arte, celebrando a diversidade, a resiliência e a beleza da vida.</span></p>
+    </div></div>
 
-            <div class="spanish language" style="display: none;">
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li style="margin: 10px 0;"><a href="nacimiento.html"
-                            style="color: lime; text-decoration: none;">Nacimiento y Primeros Años</a></li>
-                    <li style="margin: 10px 0;"><a href="primeros_anos.html"
-                            style="color: lime; text-decoration: none;">Primeros Años en Sidi Ifni (1954-1957)</a></li>
-                    <li style="margin: 10px 0;"><a href="guerra_ifni.html"
-                            style="color: lime; text-decoration: none;">Impacto de la Guerra de Ifni y sus Consecuencias
-                            (1957-1958)</a></li>
-                    <li style="margin: 10px 0;"><a href="desarrollo_educativo.html"
-                            style="color: lime; text-decoration: none;">Desarrollo Educativo y Personal</a></li>
-                    <li style="margin: 10px 0;"><a href="vida_cotidiana.html"
-                            style="color: lime; text-decoration: none;">Vida Cotidiana y Entorno Familiar</a></li>
-                    <li style="margin: 10px 0;"><a href="cambios_vivienda.html"
-                            style="color: lime; text-decoration: none;">Cambios en la Vivienda (1959-1963)</a></li>
-                    <li style="margin: 10px 0;"><a href="actividades_creativas.html"
-                            style="color: lime; text-decoration: none;">Actividades Creativas y Comerciales</a></li>
-                    <li style="margin: 10px 0;"><a href="recuerdos.html"
-                            style="color: lime; text-decoration: none;">Recuerdos y Experiencias Significativas</a></li>
-                    <li style="margin: 10px 0;"><a href="influencias.html"
-                            style="color: lime; text-decoration: none;">Influencias y Reflexiones Personales</a></li>
-                    <li style="margin: 10px 0;"><a href="legado.html" style="color: lime; text-decoration: none;">Legado
-                            Africano y Amor por la Tierra</a></li>
-                </ul>
-            </div>
+  </div>
+</section>
 
-            <div class="italian language" style="display: none;">
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li style="margin: 10px 0;"><a href="nacimiento.html"
-                            style="color: lime; text-decoration: none;">Nascita e Primi Anni</a></li>
-                    <li style="margin: 10px 0;"><a href="primeros_anos.html"
-                            style="color: lime; text-decoration: none;">Primi Anni a Sidi Ifni (1954-1957)</a></li>
-                    <li style="margin: 10px 0;"><a href="guerra_ifni.html"
-                            style="color: lime; text-decoration: none;">Impatto della Guerra di Ifni e le sue
-                            Conseguenze
-                            (1957-1958)</a></li>
-                    <li style="margin: 10px 0;"><a href="desarrollo_educativo.html"
-                            style="color: lime; text-decoration: none;">Sviluppo Educativo e Personale</a></li>
-                    <li style="margin: 10px 0;"><a href="vida_cotidiana.html"
-                            style="color: lime; text-decoration: none;">Vita Quotidiana e Ambiente Familiare</a></li>
-                    <li style="margin: 10px 0;"><a href="cambios_vivienda.html"
-                            style="color: lime; text-decoration: none;">Cambiamenti di Residenza (1959-1963)</a></li>
-                    <li style="margin: 10px 0;"><a href="actividades_creativas.html"
-                            style="color: lime; text-decoration: none;">Attività Creative e Commerciali</a></li>
-                    <li style="margin: 10px 0;"><a href="recuerdos.html"
-                            style="color: lime; text-decoration: none;">Ricordi
-                            ed Esperienze Significative</a></li>
-                    <li style="margin: 10px 0;"><a href="influencias.html"
-                            style="color: lime; text-decoration: none;">Influenze e Riflessioni Personali</a></li>
-                    <li style="margin: 10px 0;"><a href="legado.html"
-                            style="color: lime; text-decoration: none;">Eredità
-                            Africana e Amore per la Terra</a></li>
-                </ul>
-            </div>
+<footer class="ftr">
+  <p><a href="../../index.html">← <span class="lang spanish">Inicio</span><span class="lang english">Home</span><span class="lang russian">Главная</span><span class="lang ukrainian">Головна</span><span class="lang italian">Home</span><span class="lang chinese">首页</span><span class="lang arabic">الرئيسية</span><span class="lang aleman">Startseite</span><span class="lang frances">Accueil</span><span class="lang japones">ホーム</span><span class="lang portuges">Início</span></a> &nbsp;|&nbsp; <a href="relato-poema.html"><span class="lang spanish">Relato del Poema «Paz de África»</span><span class="lang english">Poem Tale "Peace of Africa"</span><span class="lang russian">Рассказ о стихотворении</span><span class="lang ukrainian">Розповідь про вірш</span><span class="lang italian">Racconto della Poesia</span><span class="lang chinese">诗歌故事</span><span class="lang arabic">حكاية القصيدة</span><span class="lang aleman">Gedichterzählung</span><span class="lang frances">Récit du Poème</span><span class="lang japones">詩の物語</span><span class="lang portuges">Relato do Poema</span> →</a></p>
+  <p style="margin-top:10px">© Paz Arés Osset</p>
+</footer>
 
-            <div class="chinese language" style="display: none;">
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li style="margin: 10px 0;"><a href="nacimiento.html"
-                            style="color: lime; text-decoration: none;">出生和早年</a></li>
-                    <li style="margin: 10px 0;"><a href="primeros_anos.html"
-                            style="color: lime; text-decoration: none;">在Sidi Ifni的早年 (1954-1957)</a></li>
-                    <li style="margin: 10px 0;"><a href="guerra_ifni.html"
-                            style="color: lime; text-decoration: none;">伊夫尼战争的影响及其后果 (1957-1958)</a></li>
-                    <li style="margin: 10px 0;"><a href="desarrollo_educativo.html"
-                            style="color: lime; text-decoration: none;">教育和个人发展</a></li>
-                    <li style="margin: 10px 0;"><a href="vida_cotidiana.html"
-                            style="color: lime; text-decoration: none;">日常生活和家庭环境</a></li>
-                    <li style="margin: 10px 0;"><a href="cambios_vivienda.html"
-                            style="color: lime; text-decoration: none;">住房变化 (1959-1963)</a></li>
-                    <li style="margin: 10px 0;"><a href="actividades_creativas.html"
-                            style="color: lime; text-decoration: none;">创意和商业活动</a></li>
-                    <li style="margin: 10px 0;"><a href="recuerdos.html"
-                            style="color: lime; text-decoration: none;">回忆和重要经历</a></li>
-                    <li style="margin: 10px 0;"><a href="influencias.html"
-                            style="color: lime; text-decoration: none;">影响和个人反思</a></li>
-                    <li style="margin: 10px 0;"><a href="legado.html"
-                            style="color: lime; text-decoration: none;">非洲遗产和对土地的热爱</a></li>
-                </ul>
-            </div>
-
-            <div class="arabic language" style="display: none;">
-                <ul style="list-style-type: disc; padding-right: 20px; direction: rtl;">
-                    <li style="margin: 10px 0;"><a href="nacimiento.html"
-                            style="color: lime; text-decoration: none;">الولادة والسنوات الأولى</a></li>
-                    <li style="margin: 10px 0;"><a href="primeros_anos.html"
-                            style="color: lime; text-decoration: none;">السنوات الأولى في سيدي إفني (1954-1957)</a></li>
-                    <li style="margin: 10px 0;"><a href="guerra_ifni.html"
-                            style="color: lime; text-decoration: none;">تأثير
-                            حرب إفني ونتائجها (1957-1958)</a></li>
-                    <li style="margin: 10px 0;"><a href="desarrollo_educativo.html"
-                            style="color: lime; text-decoration: none;">التطور التعليمي والشخصي</a></li>
-                    <li style="margin: 10px 0;"><a href="vida_cotidiana.html"
-                            style="color: lime; text-decoration: none;">الحياة اليومية والبيئة الأسرية</a></li>
-                    <li style="margin: 10px 0;"><a href="cambios_vivienda.html"
-                            style="color: lime; text-decoration: none;">تغييرات السكن (1959-1963)</a></li>
-                    <li style="margin: 10px 0;"><a href="actividades_creativas.html"
-                            style="color: lime; text-decoration: none;">الأنشطة الإبداعية والتجارية</a></li>
-                    <li style="margin: 10px 0;"><a href="recuerdos.html"
-                            style="color: lime; text-decoration: none;">الذكريات والتجارب الهامة</a></li>
-                    <li style="margin: 10px 0;"><a href="influencias.html"
-                            style="color: lime; text-decoration: none;">التأثيرات والتأملات الشخصية</a></li>
-                    <li style="margin: 10px 0;"><a href="legado.html" style="color: lime; text-decoration: none;">الإرث
-                            الأفريقي وحب الأرض</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="multilingual-description">
-        <div class="container">
-            <h2>
-                <div class="english language">Description</div>
-                <div class="spanish language" style="display: none;">Descripción</div>
-                <div class="italian language" style="display: none;">Descrizione</div>
-                <div class="chinese language" style="display: none;">描述</div>
-                <div class="arabic language" style="display: none;">وصف</div>
-
-            </h2>
-
-            <div class="english language">
-                <!-- English description here -->
-                <p>WORK IN PROGRESS</p>
-
-            </div>
-
-            <div class="spanish language" style="display: none;">
-                <!-- Spanish description here -->
-                <p>
-                    La infancia de Paz Arés Osset en Sidi Ifni, una ciudad costera en el desierto del Sahara Occidental,
-                    es una etapa
-                    profundamente formativa y rica en experiencias que dejaron una huella imborrable en su personalidad
-                    y su obra artística.
-                    Nacida el 29 de octubre de 1954, Paz creció en un entorno que era una fusión vibrante de culturas,
-                    paisajes
-                    deslumbrantes y eventos históricos significativos.</p>
-
-                <p>
-                    Desde muy temprana edad, Paz estuvo rodeada de la belleza natural de Sidi Ifni. El entorno de la
-                    costa atlántica
-                    marroquí, con sus playas doradas, el vasto océano y el árido desierto, se convirtió en el escenario
-                    de sus primeros
-                    juegos y exploraciones. La casa de la familia Arés, con su jardín delantero, higuera y gallinero en
-                    el pasaje trasero,
-                    proporcionó un espacio seguro y estimulante para que Paz y sus hermanos crecieran. Estos primeros
-                    años estuvieron llenos
-                    de aventuras al aire libre, donde Paz desarrolló un profundo amor por la naturaleza y un sentido de
-                    asombro ante la
-                    majestuosidad del entorno.</p>
-
-                <p>
-                    El sonido del gallo y el trompetista del ejército al amanecer marcaban el ritmo de sus días,
-                    simbolizando la mezcla de
-                    lo tradicional y lo moderno en su vida cotidiana. Estos sonidos se convirtieron en una parte
-                    integral de sus recuerdos,
-                    representando la estabilidad y la rutina en un mundo que estaba en constante cambio debido a las
-                    tensiones geopolíticas.</p>
-
-                <p>
-                    La influencia cultural de Sidi Ifni fue igualmente significativa. Crecer en una colonia española en
-                    África le permitió a
-                    Paz experimentar una rica mezcla de tradiciones españolas y marroquíes. Este entorno multicultural
-                    fomentó una
-                    apreciación profunda por la diversidad y la resiliencia, aspectos que se reflejarían más tarde en su
-                    obra artística. La
-                    interacción con diferentes culturas y costumbres le dio a Paz una perspectiva amplia y comprensiva,
-                    permitiéndole crear
-                    obras que resuenan con una audiencia global.</p>
-
-                <p>
-                    Las experiencias tempranas de Paz estuvieron marcadas por eventos significativos como la Guerra de
-                    Ifni (1957-1958).
-                    Este conflicto, que surgió en el contexto de la descolonización de África, tuvo un impacto profundo
-                    en la región y en la
-                    vida de Paz. Vivir en una zona de conflicto expuso a Paz a la realidad de las tensiones
-                    internacionales y la importancia
-                    de la resiliencia. A pesar del peligro y la incertidumbre, la comunidad de Sidi Ifni mostró una
-                    notable solidaridad, una
-                    lección que Paz llevaría consigo a lo largo de su vida.</p>
-
-                <p>
-                    En medio de estos desafíos, Paz encontró refugio y alegría en las actividades creativas. Desde una
-                    edad temprana, mostró
-                    una inclinación por el teatro, la música y la lectura. A los siete años, ya estaba creando y
-                    protagonizando sus propias
-                    obras de teatro, participando en coros y danzas, y disfrutando de la lectura. Estas actividades no
-                    solo fomentaron su
-                    creatividad y habilidades expresivas, sino que también le proporcionaron un sentido de propósito y
-                    pertenencia.</p>
-
-                <p>
-                    La llegada de su hermana Teresa en 1959 y la mudanza a un chalet de dos plantas marcaron una nueva
-                    etapa en su vida. El
-                    nuevo hogar, ubicado detrás del faro y rodeado de vecinos como el Almirante de Marina, ofrecía más
-                    espacio y
-                    comodidades. La habitación de Paz, con su balcón orientado al Este, se convirtió en un lugar
-                    especial donde podía
-                    reflexionar y dejar volar su imaginación. Este espacio personal, inundado por la luz del amanecer,
-                    inspiró muchas de sus
-                    futuras obras artísticas.</p>
-
-                <p>
-                    El legado africano de Paz, combinado con su amor por la literatura, se reflejan en su obra de manera
-                    profunda. Los
-                    recuerdos de juegos, amistades y momentos intensos en Sidi Ifni continúan inspirando su arte. La
-                    mezcla de culturas de
-                    España y África, junto con sus reflexiones sobre la democracia y las tradiciones tribales,
-                    enriquecen su visión y su
-                    capacidad de conectar con diversas audiencias. </p>
-
-                <p>
-                    En resumen, la infancia de Paz Arés Osset en Sidi Ifni fue una etapa de descubrimiento, formación y
-                    profunda influencia.
-                    Los años pasados en esta región vibrante y diversa no solo moldearon su carácter y su perspectiva
-                    del mundo, sino que
-                    también dejaron una huella duradera en su creatividad y su obra artística. Paz lleva consigo las
-                    lecciones aprendidas y
-                    los recuerdos de su infancia, utilizando estas experiencias para crear obras que celebran la
-                    diversidad, la resiliencia
-                    y la belleza de la vida. </p>
-
-            </div>
-
-            <div class="italian language" style="display: none;">
-                <!-- Italian description here -->
-
-
-            </div>
-
-            <div class="chinese language" style="display: none;">
-                <!-- Chinese description here -->
-
-
-            </div>
-
-            <div class="arabic language" style="display: none;">
-                <!-- Arabic  description here -->
-
-
-            </div>
-        </div>
-    </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('language-select').addEventListener('change', function () {
-                // Hide all language elements
-                document.querySelectorAll('.language').forEach(function (element) {
-                    element.style.display = 'none';
-                });
-
-                // Show selected language elements
-                document.querySelectorAll('.' + this.value).forEach(function (element) {
-                    element.style.display = 'block';
-                });
-            });
-        });
-    </script>
-
-
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.lang').forEach(e=>e.style.display='none');
+  document.querySelectorAll('.spanish').forEach(e=>e.style.display='inline');
+  document.getElementById('ls').value='spanish';
+  document.getElementById('ls').addEventListener('change',function(){
+    document.querySelectorAll('.lang').forEach(e=>e.style.display='none');
+    document.querySelectorAll('.'+this.value).forEach(e=>e.style.display='inline');
+  });
+  var obs=new IntersectionObserver(function(ee){ee.forEach(function(e){if(e.isIntersecting)e.target.classList.add('reveal')})},{threshold:.1});
+  document.querySelectorAll('.bb').forEach(function(b){obs.observe(b)});
+});
+</script>
 </body>
-
 </html>

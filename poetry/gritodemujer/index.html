@@ -1,229 +1,292 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <!-- tittle and Icon -->
-  <title>Paz Arés Osset, 1957 poem</title>
-  <link rel="icon" type="image/png" href="favicon.ico" />
-  <!-- jQuery, fontawesome, booststrap -->
-  <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="gritodemujer.css">
-  <script src="https://kit.fontawesome.com/f5be7f204b.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://apis.google.com/js/platform.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
-
-
-
-
-  <!-- facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.pazaresosset.es/" />
-  <meta property="og:title" content="Paz Arés Osset" />
-  <meta property="og:image" content="http://www.pazaresosset.es/beta/images/carapaz.jpg" />
-  <meta property="og:description" content="Paz Arés, the Artist" />
-
-
-
+  <title>Grito de Mujer (Hueles a Amor) - Paz Arés Osset</title>
+  <link rel="icon" type="image/png" href="../../favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-
-
-  <main role="main">
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <div class="logotipo">
-          <a class="brand" href=#><img src="../../logopazares.png" style="position:absolute; margin: 10px;top:0px; left:0px;" alt="Paz Arés Osset, the Artist"></a>
-        </div>
-        <h1 class="display-3">Grito de Mujer </br> You Smell of Love</h1>
-        <p>This Poem is and ode to Love.</p>
-        <!-- <p><a class="btn btn-primary btn-lg" href="../../index.html" role="button">Main Page</a></p> -->
-      </div>
-
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="ukrainian">🇺🇦 Українська</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
     </div>
 
-    <section class="poema">
+    <section class="jumbotron text-center">
       <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-6">
-            <h2>❤️Hueles a Amor.❤️</h2>
-            <div class="poesia">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+        </a>
 
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">Grito de Mujer (Hueles a Amor)</div>
+          <div class="english language">Woman's Shout (You Smell of Love)</div>
+          <div class="russian language">Женский крик (Ты пахнешь любовью)</div>
+          <div class="ukrainian language">Жіночий крик (Ти пахнеш коханням)</div>
+          <div class="italian language">Grito de Mujer (Profumi d'Amore)</div>
+          <div class="chinese language">女性的呐喊 (你闻起来像爱情)</div>
+          <div class="arabic language">صرخة امرأة (رائحة الحب)</div>
+          <div class="aleman language">Frauenschrei (Du riechst nach Liebe)</div>
+          <div class="frances language">Cri de Femme (Tu sens l'amour)</div>
+          <div class="japones language">女性の叫び (愛の香りがする)</div>
+          <div class="portuges language">Grito de Mulher (Cheiras a amor)</div>
+        </h1>
 
+        <div class="lead">
+          <div class="spanish language">Un poema místico que celebra la belleza del amor entre flores y atardeceres dorados.</div>
+          <div class="english language">A mystical poem celebrating the beauty of love among flowers and golden sunsets.</div>
+          <div class="russian language">Мистическое стихотворение, воспевающее красоту любви среди цветов и золотых закатов.</div>
+          <div class="ukrainian language">Містичний вірш, що оспівує красу кохання серед квітів та золотих заходів сонця.</div>
+          <div class="italian language">Un poema mistico che celebra la bellezza dell'amore tra fiori e tramonti dorati.</div>
+          <div class="chinese language">一首神秘的诗，赞美花丛和金色日落中爱情的美丽。</div>
+          <div class="arabic language">قصيدة صوفية تحتفي بجمال الحب بين الأزهار وغروب الشمس الذهبي.</div>
+          <div class="aleman language">Ein mystisches Gedicht, das die Schönheit der Liebe zwischen Blumen und goldenen Sonnenuntergängen feiert.</div>
+          <div class="frances language">Un poème mystique célébrant la beauté de l'amour parmi les fleurs et les couchers de soleil dorés.</div>
+          <div class="japones language">花々黄金の夕暮れの中での愛の美しさを祝う神秘的な詩。</div>
+          <div class="portuges language">Um poema místico que celebra a beleza do amor entre flores e pores-do-sol dourados.</div>
+        </div>
+      </div>
+    </section>
 
+    <section class="multilingual-description py-5" style="background-color: transparent;">
+      <div class="container text-center">
 
-
-              <div class="divisionPoesia">
-                <p> Hueles a amor entre las flores.</br>
-                  Bajo el atardecer de la encina dorada,</br>
-                  entre mis brazos el sol se duerme ...</br>
-                  Todo descansa ...</br>
-                  la luz se apaga ...</p>
-              </div>
-
-
-
-              <div class="divisionPoesia">
-                <p>La Luz Eterna difuminada...</br>
-                  como tus ojos en mi mirada.</p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p>¡Cómo te quiero!</br>
-                  ¡Cómo te quiero!</p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p> En tu sonrisa todo se calma...</br>
-                  La Paz tranquila, llega a mi alma.
-                </p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p>¡Cierra tus ojos niña de ensueño!,</br>
-                  ¡Cómo me encanta tu amor risueño!</p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p> Niña bonita, mi amor, mi vida;</br>
-                  entre matojos entrelazados;</br>
-                  entre los cantos de ruiseñores;</br>
-                  hueles a amor entre las flores.</p>
-              </div>
-
-
-              <div class="firma">
-                <p>❤️Paz Arés Osset❤️</p>
-                <p>16 October 2019</p>
-              </div>
-            </div>
-
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #FFD700;">Hueles a Amor</h1>
+          <div class="poem-text">
+            <div class="stanza">Hueles a amor entre las flores.<br>Bajo el atardecer de la encina dorada,<br>entre mis brazos el sol se duerme ...<br>Todo descansa ...<br>la luz se apaga ...</div>
+            <div class="stanza">La Luz Eterna difuminada...<br>como tus ojos en mi mirada.</div>
+            <div class="stanza">¡Cómo te quiero!<br>¡Cómo te quiero!</div>
+            <div class="stanza">En tu sonrisa todo se calma...<br>La Paz tranquila, llega a mi alma.</div>
+            <div class="stanza">¡Cierra tus ojos niña de ensueño!,<br>¡Cómo me encanta tu amor risueño!</div>
+            <div class="stanza">Niña bonita, mi amor, mi vida;<br>entre matojos entrelazados;<br>entre los cantos de ruiseñores;<br>hueles a amor entre las flores.</div>
           </div>
-          <div class="col-md-6">
-            <h2>You smell of Love.❤️</h2>
-            <div class="poesia">
+        </div>
 
-
-
-
-
-              <div class="divisionPoesia">
-                <p>You smell of Love among the flowers</br>
-                  Beneath the sunset of the golden holm oak,</br>
-                  Between my arms the sun goes to sleep ...</br>
-                  Everything rests ...</br>
-                  the light gets dimmer …</br>
-                </p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p> The eternal light faded ... </br>
-                  Like your eyes in my gaze.</p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p> How I love you! </br>
-                  How I love you!</p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p> In your smile all becomes calm... </br>
-                  Tranquil peace, comes to my soul
-                </p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p> Close your eyes enchanting girl!, </br>
-                  How your smiling love delights me!</p>
-              </div>
-
-              <div class="divisionPoesia">
-                <p> Pretty girl, my love, my life.</br>
-                  Among the bushes entwined</br>
-                  among the nightingales songs</br>
-                  you smell of love among the flowers</br>
-                </p>
-              </div>
-
-
-              <div class="firma">
-                <p>❤️Paz Arés Osset❤️</p>
-                <p>16 October 2019</p>
-              </div>
-            </div>
-
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #FFD700;">You Smell of Love</h1>
+          <div class="poem-text">
+            <div class="stanza">You smell of Love among the flowers<br>Beneath the sunset of the golden holm oak,<br>Between my arms the sun goes to sleep ...<br>Everything rests ...<br>the light gets dimmer …</div>
+            <div class="stanza">The eternal light faded ...<br>Like your eyes in my gaze.</div>
+            <div class="stanza">How I love you!<br>How I love you!</div>
+            <div class="stanza">In your smile all becomes calm...<br>Tranquil peace, comes to my soul</div>
+            <div class="stanza">Close your eyes enchanting girl!,<br>How your smiling love delights me!</div>
+            <div class="stanza">Pretty girl, my love, my life.<br>Among the bushes entwined<br>among the nightingales songs<br>you smell of love among the flowers</div>
           </div>
+        </div>
 
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #FFD700;">Ты пахнешь любовью</h1>
+          <div class="poem-text">
+            <div class="stanza">Ты пахнешь любовью среди цветов,<br>Под закатом у золотого дуба...<br>В моих объятиях спит солнце...<br>Всё отдыхает... свет гаснет...</div>
+            <div class="stanza">Вечный свет меркнет...<br>как твои глаза в моём взгляде.</div>
+            <div class="stanza">Как я тебя люблю!<br>Как я тебя люблю!</div>
+            <div class="stanza">В твоей улыбке всё затихает...<br>Мир спокойный достигает моей души.</div>
+            <div class="stanza">Закрой глаза, девушка из снов!<br>Как я люблю твою радостную любовь!</div>
+            <div class="stanza">Милая девушка, любовь моя, жизнь моя;<br>среди переплетённых зарослей,<br>среди песен соловьев,<br>ты пахнешь любовью среди цветов.</div>
+          </div>
+        </div>
+
+        <!-- UKRAINIAN -->
+        <div class="ukrainian language">
+          <h1 class="handwritten" style="color: #FFD700;">Ти пахнеш коханням</h1>
+          <div class="poem-text">
+            <div class="stanza">Ти пахнеш коханням серед квітів.<br>Під заходом сонця золотої діброви,<br>у моїх обіймах засинає сонце ...<br>Все спочиває ...<br>світло гасне ...</div>
+            <div class="stanza">Вічне Світло розмите...<br>як твої очі у моєму погляді.</div>
+            <div class="stanza">Як я тебе кохаю!<br>Як я тебе кохаю!</div>
+            <div class="stanza">У твоїй посмішці все заспокоюється...<br>Тихий спокій приходить до моєї душі.</div>
+            <div class="stanza">Заплющ очі, дівчино моїх мрій!,<br>Як я захоплююся твоїм усміхненим коханням!</div>
+            <div class="stanza">Красива дівчино, кохання моє, життя моє;<br>серед переплетених кущів;<br>серед співу солов'їв;<br>ти пахнеш коханням серед квітів.</div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #FFD700;">Profumi d'Amore</h1>
+          <div class="poem-text">
+            <div class="stanza">Profumi d'amore tra i fiori.<br>Sotto il tramonto della quercia dorata,<br>tra le mie braccia il sole si addormenta...<br>Tutto riposa...<br>la luce si spegne...</div>
+            <div class="stanza">La Luce Eterna sfumata...<br>come i tuoi occhi nel mio sguardo.</div>
+            <div class="stanza">Quanto ti amo!<br>Quanto ti amo!</div>
+            <div class="stanza">Nel tuo sorriso tutto si calma...<br>La Pace tranquilla, arriva alla mia anima.</div>
+            <div class="stanza">Chiudi gli occhi bambina da sogno!,<br>Quanto mi incanta il tuo amore sorridente!</div>
+            <div class="stanza">Bella bambina, amore mio, vita mia;<br>tra cespugli intrecciati;<br>tra i canti degli usignoli;<br>profumi d'amore tra i fiori.</div>
+          </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="chinese language">
+          <h1 class="handwritten" style="color: #FFD700;">你闻起来像爱情</h1>
+          <div class="poem-text">
+            <div class="stanza">你在花丛中，闻起来像爱情。<br>在金色的橡树日落下，<br>在我怀里，太阳沉睡了……<br>万物休息……<br>灯光熄灭……</div>
+            <div class="stanza">永恒的光芒模糊了……<br>就像你注视着我的眼神。</div>
+            <div class="stanza">我多么爱你！<br>我多么爱你！</div>
+            <div class="stanza">在你的微笑中，一切都变得平静……<br>宁静的和平降临在我的灵魂。</div>
+            <div class="stanza">闭上你的眼睛，梦幻般的女孩！<br>我多么喜欢你那愉快的爱情！</div>
+            <div class="stanza">美丽的女孩，我的爱，我的生命；<br>在交错的灌木丛中；<br>在夜莺的歌声中；<br>你在花丛中，闻起来像爱情。</div>
+          </div>
+        </div>
+
+        <!-- ARABIC -->
+        <div class="arabic language">
+          <h1 class="handwritten" style="color: #FFD700;">رائحة الحب</h1>
+          <div class="poem-text">
+            <div class="stanza">تفوح منكِ رائحة الحب بين الأزهار.<br>تحت غروب شمس البلوطة الذهبية،<br>بين ذراعي ينام الشمس ...<br>كل شيء يستريح ...<br>النور ينطفئ ...</div>
+            <div class="stanza">النور الأزلي المتلاشي ...<br>مثل عينيكِ في نظرتي.</div>
+            <div class="stanza">كم أحبكِ!<br>كم أحبكِ!</div>
+            <div class="stanza">في ابتسامتكِ يهدأ كل شيء ...<br>السلام الهادئ يصل إلى روحي.</div>
+            <div class="stanza">أغمضي عينيكِ يا فتاة الأحلام!،<br>كم يسحرني حبكِ المبتسم!</div>
+            <div class="stanza">يا فتاة جميلة، يا حبي، يا حياتي؛<br>بين الشجيرات المتشابكة؛<br>بين غناء العندليب؛<br>تفوح منكِ رائحة الحب بين الأزهار.</div>
+          </div>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="frances language">
+          <h1 class="handwritten" style="color: #FFD700;">Cri de Femme (Tu sens l'amour)</h1>
+          <div class="poem-text">
+            <div class="stanza">Tu sens l'amour parmi les fleurs.<br>Sous le coucher du soleil du chêne doré,<br>entre mes bras le soleil s'endort...<br>Tout se repose...<br>la lumière s'éteint...</div>
+            <div class="stanza">La Lumière Éternelle estompée...<br>comme tes yeux dans mon regard.</div>
+            <div class="stanza">Comme je t'aime !<br>Comme je t'aime !</div>
+            <div class="stanza">Dans ton sourire tout se calme...<br>La Paix tranquille arrive à mon âme.</div>
+            <div class="stanza">Ferme les yeux, fille de rêve !,<br>Combien ton amour souriant m'enchante !</div>
+            <div class="stanza">Jolie fille, mon amour, ma vie ;<br>parmi les buissons entrelacés ;<br>parmi les chants des rossignols ;<br>tu sens l'amour parmi les fleurs.</div>
+          </div>
+        </div>
+
+        <!-- ALEMAN -->
+        <div class="aleman language">
+          <h1 class="handwritten" style="color: #FFD700;">Frauenschrei (Du riechst nach Liebe)</h1>
+          <div class="poem-text">
+            <div class="stanza">Du riechst nach Liebe zwischen den Blumen.<br>Unter dem Sonnenuntergang der goldenen Steineiche,<br>in meinen Armen schläft die Sonne ein...<br>Alles ruht...<br>das Licht erlischt...</div>
+            <div class="stanza">Das Ewige Licht verschwommen...<br>wie deine Augen in meinem Blick.</div>
+            <div class="stanza">Wie ich dich liebe!<br>Wie ich dich liebe!</div>
+            <div class="stanza">In deinem Lächeln beruhigt sich alles...<br>Der ruhige Friede erreicht meine Seele.</div>
+            <div class="stanza">Schließe deine Augen, Traummädchen!,<br>Wie mich deine lächelnde Liebe verzaubert!</div>
+            <div class="stanza">Hübsches Mädchen, meine Liebe, mein Leben;<br>zwischen verschlungenen Gebüschen;<br>zwischen den Gesängen der Nachtigallen;<br>du riechst nach Liebe zwischen den Blumen.</div>
+          </div>
+        </div>
+
+        <!-- JAPONES -->
+        <div class="japones language">
+          <h1 class="handwritten" style="color: #FFD700;">愛の香りがする</h1>
+          <div class="poem-text">
+            <div class="stanza">花の間で愛の香りがする。<br>黄金の樫の夕暮れの下で、<br>私の腕の中で太陽が眠りにつく...<br>すべてが休息し...<br>光が消え...</div>
+            <div class="stanza">永遠の光がぼやけて...<br>私の視線にあるあなたの目のように。</div>
+            <div class="stanza">どれほどあなたを愛しているか！<br>どれほどあなたを愛しているか！</div>
+            <div class="stanza">あなたの笑顔ですべてが静まる...<br>穏やかな平和が魂に届く。</div>
+            <div class="stanza">目を閉じて、夢のような少女よ！<br>あなたの微笑む愛がどれほど私を魅了するか！</div>
+            <div class="stanza">可愛い少女よ、私の愛、私の人生。<br>絡み合った茂みの間で、<br>サヨナキドリの歌声の中で、<br>花の間で愛の香りがする。</div>
+          </div>
+        </div>
+
+        <!-- PORTUGUES -->
+        <div class="portuges language">
+          <h1 class="handwritten" style="color: #FFD700;">Grito de Mulher (Cheiras a amor)</h1>
+          <div class="poem-text">
+            <div class="stanza">Cheiras a amor entre as flores.<br>Sob o pôr-do-sol da azinheira dourada,<br>entre os meus braços o sol adormece ...<br>Tudo descansa ...<br>a luz apaga-se ...</div>
+            <div class="stanza">A Luz Eterna difusa...<br>como os teus olhos no meu olhar.</div>
+            <div class="stanza">Como eu te amo!<br>Como eu te amo!</div>
+            <div class="stanza">No teu sorriso tudo se acalma...<br>A Paz tranquila chega à minha alma.</div>
+            <div class="stanza">Fecha os teus olhos, menina de sonho!,<br>Como me encanta o teu amor risonho!</div>
+            <div class="stanza">Menina bonita, meu amor, mi vida;<br>entre arbustos entrelaçados;<br>entre os cantos de rouxinóis;<br>cheiras a amor entre as flores.</div>
+          </div>
         </div>
 
       </div>
 
-      <hr>
+      <!-- Music Section -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4 text-warning">
+          <i class="fab fa-spotify mr-2"></i>
+          <span class="spanish language">Canciones del Poema</span>
+          <span class="russian language">Песни до стихотворения</span>
+          <span class="ukrainian language">Пісні до вірша</span>
+          <span class="english language">Poem Songs</span>
+        </h2>
 
-      <footer>
-        Made with ❤️ in London.
-      </footer>
+        <div class="row justify-content-center">
+          <!-- Album Spanish -->
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="album-card">
+              <img src="songs/album_es.png" class="album-cover" alt="Versión Castellano">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Versión Castellano</span>
+                  <span class="english language">Spanish Version</span>
+                  <span class="russian language">Испанская версия</span>
+                  <span class="ukrainian language">Іспанська версія</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <!-- Usando el mismo link del Karma como ejemplo pero centrado en el autor -->
+                <a href="https://open.spotify.com/intl-es/album/3aiSHyMT9j4VGNdxA86xSz?si=cIMkWPRcSYaYKAWpwTggkQ" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
 
-      </div> <!-- /container -->
+          <!-- Album English (Soon) -->
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="album-card" style="opacity: 0.6;">
+              <div class="d-flex align-items-center justify-content-center album-cover bg-dark">
+                <i class="fas fa-clock fa-3x text-secondary"></i>
+              </div>
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Versión Inglés</span>
+                  <span class="english language">English Version</span>
+                  <span class="russian language">Английская версия</span>
+                  <span class="ukrainian language">Англійська версія</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <button class="btn btn-sm btn-outline-secondary mt-2" disabled>
+                   <span class="spanish language">Próximamente</span>
+                   <span class="english language">Soon</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  </main>
-
-  </section>
-
-
-
-  <footer class="container">
-
-    <div class="row">
-      <div class="col-md-3">
-        <!-- fb share button -->
-        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fpazaresosset.es%2Fdocs%2Fplugins%2F&layout=button_count&size=small&appId=428249343947308&width=88&height=20" width="88" height="20"
-          style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-        <!-- fb share quit -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-9 mb-4">
+            <h5 class="handwritten text-light mb-3" style="font-size: 1.5rem !important;">Castellano</h5>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3aiSHyMT9j4VGNdxA86xSz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
       </div>
-      <div class="col-md-3">
-        <!-- twitter share button -->
+    </section>
+  </div>
 
-        <div style=" position:relative; left:10%;"> <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi">Tweet</a></div>
-        <script>
-          ! function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-              js = d.createElement(s);
-              js.id = id;
-              js.src = "https://platform.twitter.com/widgets.js";
-              fjs.parentNode.insertBefore(js, fjs);
-            }
-          }(document, "script", "twitter-wjs");
-        </script>
-      </div>
-      <div class="col-md-3">
-        <div class="g-ytsubscribe" data-channel="pazaresosset" data-layout="full" data-count="default"></div>
-      </div>
-      <div class="col-md-3">
-        <a href="https://www.instagram.com/pazaresosset/">instagram</a>
-
-      </div>
-
-
-    </div>
-    <p>&copy; Paz Ares Osset 2019</p>
-
-  </footer>
-  <script src="huelesaamor.js" charset="utf-8"></script>
-  <!-- google -->
-  <script src="https://apis.google.com/js/platform.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
+  <script src="base.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,39 @@
+*,*::before,*::after{box-sizing:border-box}
+body{background:#0a0a1a;color:#e0d8cc;font-family:'Playfair Display',serif;overflow-x:hidden;margin:0}
+
+.hero{position:relative;min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,.35),rgba(10,10,26,.85)),url('assets/hero_bg.png') center/cover no-repeat;background-attachment:fixed}
+.hero-content h1{font-family:'Caveat',cursive;font-size:4.5rem;color:#FFD700;text-shadow:2px 4px 20px rgba(0,0,0,.9);margin-bottom:10px}
+.hero-content h2{font-size:1.6rem;color:rgba(255,255,255,.8);font-weight:400;letter-spacing:2px}
+.hero-content .subtitle{margin-top:20px;font-size:1.1rem;color:rgba(255,215,0,.7);font-style:italic}
+
+.lang-nav{position:fixed;right:20px;top:20px;z-index:1000;display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:90vw}
+#language-select{background:rgba(0,0,0,.6);color:white;border:1px solid rgba(255,215,0,.4);border-radius:30px;padding:6px 18px;font-size:1rem;backdrop-filter:blur(8px);cursor:pointer}
+
+.chapters-section{padding:80px 0;background:linear-gradient(180deg,#0a0a1a,#111122)}
+.section-title{font-family:'Caveat',cursive;font-size:3rem;color:#FFD700;text-align:center;margin-bottom:50px}
+
+.chapter-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,215,0,.12);border-radius:20px;padding:30px 25px;text-align:center;transition:all .4s ease;height:100%;backdrop-filter:blur(5px)}
+.chapter-card:hover{transform:translateY(-10px);border-color:#FFD700;box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 15px rgba(255,215,0,.15);background:rgba(255,255,255,.08)}
+.chapter-card .icon{font-size:2.5rem;color:#FFD700;margin-bottom:15px}
+.chapter-card h4{color:#fff;font-size:1.1rem;margin-bottom:10px;font-weight:700}
+.chapter-card p{color:rgba(255,255,255,.5);font-size:.85rem;line-height:1.5}
+.chapter-card a{color:inherit;text-decoration:none}
+
+.bio-section{padding:80px 0;background:linear-gradient(180deg,#111122,#0d0d22)}
+.bio-block{margin-bottom:60px;opacity:0;transform:translateY(40px);transition:all .8s ease-out}
+.bio-block.reveal{opacity:1;transform:translateY(0)}
+.bio-img{border-radius:20px;width:100%;max-width:450px;box-shadow:0 15px 40px rgba(0,0,0,.6);border:2px solid rgba(255,215,0,.15)}
+.bio-text{font-size:1.15rem;line-height:2;color:#d5cfc4}
+.bio-text p{margin-bottom:20px}
+
+.poem-narrative-section{padding:80px 0;background:linear-gradient(180deg,#0d0d22,#0a0a1a)}
+.poem-verse{font-family:'Caveat',cursive;font-size:1.6rem;color:#FFD700;border-left:3px solid rgba(255,215,0,.4);padding-left:25px;margin:30px 0;font-style:italic;line-height:1.8}
+.narrative-text{font-size:1.15rem;line-height:2;color:#d5cfc4;max-width:800px;margin:0 auto}
+.narrative-text p{margin-bottom:25px}
+.narrative-img-float{border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.5);border:2px solid rgba(255,215,0,.12);max-width:350px;margin:15px}
+
+.lang{display:none}
+.bio-footer{text-align:center;padding:40px;background:#0a0a1a;color:rgba(255,255,255,.3);font-size:.9rem}
+.bio-footer a{color:#FFD700;text-decoration:none}
+
+@media(max-width:768px){.hero-content h1{font-size:2.8rem}.section-title{font-size:2.2rem}.narrative-img-float{float:none!important;max-width:100%;margin:20px auto;display:block}.lang-nav{top:auto;bottom:10px;right:10px;flex-direction:column;gap:5px}}

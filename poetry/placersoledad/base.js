@@ -50,43 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
         audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
       }
 
-      // Update Spotify link and iframe
+      // Update Linktree or top Spotify link
       const spotifyLink = document.getElementById('spotify-link');
-      const spotifyIframe = document.getElementById('spotify-iframe');
-      const spotifyPlaceholder = document.getElementById('spotify-placeholder');
-      
-      const spotifyData = spotifyMapping[selectedLanguage] || spotifyMapping['spanish'];
-      
       if (spotifyLink) {
-        spotifyLink.href = spotifyData.album_link;
-      }
-      
-      if (spotifyIframe) {
-        if (spotifyData.album_iframe) {
-          spotifyIframe.src = spotifyData.album_iframe;
-          spotifyIframe.style.display = 'block';
-          if (spotifyPlaceholder) spotifyPlaceholder.style.display = 'none';
-        } else {
-          spotifyIframe.style.display = 'none';
-          if (spotifyPlaceholder) spotifyPlaceholder.style.display = 'block';
-        }
+        spotifyLink.href = spotifyMapping[selectedLanguage]?.album_link || spotifyMapping['spanish'].album_link;
       }
     });
   }
 
-  // --- Initial Spotify state ---
-  const initialSpotifyData = {
-    'album_link': 'https://open.spotify.com/intl-es/album/6CYcCa7JLOUxMg73MkSnju?si=HLDmvAOcRc6jsxjGRy9uiA',
-    'album_iframe': 'https://open.spotify.com/embed/album/6CYcCa7JLOUxMg73MkSnju?utm_source=generator'
-  };
+  // --- Initial state ---
   const initialSpotifyLink = document.getElementById('spotify-link');
-  const initialSpotifyIframe = document.getElementById('spotify-iframe');
-  
-  if (initialSpotifyLink) initialSpotifyLink.href = initialSpotifyData.album_link;
-  if (initialSpotifyIframe) {
-    initialSpotifyIframe.src = initialSpotifyData.album_iframe;
-    initialSpotifyIframe.style.display = 'block';
-  }
+  if (initialSpotifyLink) initialSpotifyLink.href = 'https://open.spotify.com/intl-es/album/6CYcCa7JLOUxMg73MkSnju?si=HLDmvAOcRc6jsxjGRy9uiA';
 
   // --- Scroll Reveal Animation ---
   const observerOptions = { threshold: 0.1 };

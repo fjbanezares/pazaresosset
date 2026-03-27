@@ -19,6 +19,25 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
         element.style.display = 'block';
       });
+
+      const audioButtonTexts = {
+        'spanish': 'Escuchar Música (ES)',
+        'english': 'Listen to Music (EN)',
+        'italian': 'Ascolta la Musica (IT)',
+        'chinese': '听音乐 (ZH)',
+        'arabic': 'استمع إلى الموسيقى (AR)',
+        'russian': 'Слушать музыку (RU)',
+        'aleman': 'Musik hören (DE)',
+        'frances': 'Écouter la musique (FR)',
+        'japones': '音楽を聴く (JA)',
+        'portuges': 'Ouvir música (PT)',
+        'ukrainian': 'Слухати музику (UK)'
+      };
+
+      const audioButtonText = document.getElementById('audio-button-text');
+      if (audioButtonText) {
+        audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
+      }
     });
   }
 
@@ -54,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         this.speedX = (Math.random() - 0.5) * 0.2;
         this.speedY = (Math.random() - 0.5) * 0.2;
         this.alpha = Math.random() * 0.5 + 0.1;
-        this.color = '255, 215, 150'; // Golden Saharan Sand
+        this.color = '255, 215, 100'; // Golden Sunset
       }
 
       update() {
@@ -73,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const particles = [];
-    for (let i = 0; i < 60; i++) particles.push(new Particle());
+    for (let i = 0; i < 80; i++) particles.push(new Particle());
 
     function animate() {
       ctx.clearRect(0, 0, width, height);

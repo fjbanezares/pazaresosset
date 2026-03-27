@@ -50,45 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
         audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
       }
 
-      // Update Spotify link and iframe
+      // Update Top Spotify link
       const spotifyLink = document.getElementById('spotify-link');
-      const spotifyIframe = document.getElementById('spotify-iframe');
-      const spotifyPlaceholder = document.getElementById('spotify-placeholder');
-      
-      const spotifyData = spotifyMapping[selectedLanguage] || spotifyMapping['spanish'];
-      
       if (spotifyLink) {
-        spotifyLink.href = spotifyData.album_link;
-      }
-      
-      if (spotifyIframe) {
-        if (spotifyData.album_iframe) {
-          spotifyIframe.src = spotifyData.album_iframe;
-          spotifyIframe.style.display = 'block';
-          if (spotifyPlaceholder) spotifyPlaceholder.style.display = 'none';
-        } else {
-          spotifyIframe.style.display = 'none';
-          if (spotifyPlaceholder) spotifyPlaceholder.style.display = 'block';
-        }
+        spotifyLink.href = spotifyMapping[selectedLanguage]?.album_link || spotifyMapping['spanish'].album_link;
       }
     });
   }
 
-  // --- Initial Spotify state ---
-  const initialSpotifyData = {
-    'album_link': 'https://open.spotify.com/intl-es/album/3aiSHyMT9j4VGNdxA86xSz?si=cIMkWPRcSYaYKAWpwTggkQ',
-    'album_iframe': 'https://open.spotify.com/embed/album/3aiSHyMT9j4VGNdxA86xSz?utm_source=generator'
-  };
+  // --- Initial state ---
   const initialSpotifyLink = document.getElementById('spotify-link');
-  const initialSpotifyIframe = document.getElementById('spotify-iframe');
-  const initialSpotifyPlaceholder = document.getElementById('spotify-placeholder');
-  
-  if (initialSpotifyLink) initialSpotifyLink.href = initialSpotifyData.album_link;
-  if (initialSpotifyIframe) {
-    initialSpotifyIframe.src = initialSpotifyData.album_iframe;
-    initialSpotifyIframe.style.display = 'block';
-    if (initialSpotifyPlaceholder) initialSpotifyPlaceholder.style.display = 'none';
-  }
+  if (initialSpotifyLink) initialSpotifyLink.href = 'https://open.spotify.com/intl-es/album/3aiSHyMT9j4VGNdxA86xSz?si=cIMkWPRcSYaYKAWpwTggkQ';
 
   // --- Scroll Reveal Animation for Stanzas ---
   const observerOptions = {

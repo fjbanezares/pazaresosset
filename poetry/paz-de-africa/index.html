@@ -1,460 +1,216 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>Paz de África</title>
+  <title>Paz de África - Paz Arés Osset</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../bio/ifni/index.html" class="btn btn-outline-warning d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,215,0,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-book-open mr-2" style="font-size: 1.1rem;"></i>
+        <span class="spanish language">Biografía Ifni</span>
+        <span class="english language">Ifni Biography</span>
+        <span class="russian language">Биография Ифни</span>
+        <span class="ukrainian language">Біографія Іфні</span>
+      </a>
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="ukrainian">🇺🇦 Українська</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+        </a>
+
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">Paz de África</div>
+          <div class="english language">Peace of Africa</div>
+          <div class="russian language">Мир Африки</div>
+          <div class="ukrainian language">Мир Африки</div>
+          <div class="italian language">Pace d'Africa</div>
+          <div class="chinese language">非洲之和平</div>
+          <div class="arabic language">سلام أفريقيا</div>
+          <div class="aleman language">Frieden in Afrika</div>
+          <div class="frances language">Paix d'Afrique</div>
+          <div class="japones language">アフリカの平和</div>
+          <div class="portuges language">Paz de África</div>
+        </h1>
+
+        <div class="lead">
+          <div class="spanish language">Un viaje poético y sincero que refleja una vida ligada a África y a su espíritu pacífico.</div>
+          <div class="english language">A heartfelt poetic journey reflecting on a life tied to Africa and its peaceful spirit.</div>
+          <div class="russian language">Искреннее поэтическое путешествие, отражающее жизнь, связанную с Африкой и ее мирным духом.</div>
+          <div class="ukrainian language">Щира поетична подорож, що відображає життя, пов'язане з Африкою та її мирним духом.</div>
+          <div class="italian language">Un viaggio poetico sincero che riflette su una vita legata all'Africa e al suo spirito pacifico.</div>
+          <div class="chinese language">一次反思与非洲及其和平精神紧密相连的生活的真诚诗意之旅。</div>
+          <div class="arabic language">رحلة شعرية صادقة تعكس حياة مرتبطة بأفريقيا وروحها المسالمة.</div>
+          <div class="aleman language">Eine herzliche poetische Reise, die über ein Leben nachdenkt, das mit Afrika und seinem friedlichen Geist verbunden ist.</div>
+          <div class="frances language">Un voyage poétique sincère réfléchissant sur une vie liée à l'Afrique et à son esprit paisible.</div>
+          <div class="japones language">アフリカとその平和な精神に結びついた人生を振り返る、心のこもった詩的な旅。</div>
+          <div class="portuges language">Uma viagem poética sincera que reflecte sobre uma vida ligada a África e ao seu espírito pacífico.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="multilingual-description py-5">
+      <div class="container text-center">
+
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #FFD700;">África en el Corazón</h1>
+          <div class="poem-text">
+            <div class="stanza">Africana y africanista.<br>Europea y española<br>Nacida en España y Marruecos</div>
+            <div class="stanza">En este viaje lírico poético...<br>Vuelvo de nuevo<br>A este extenso continente<br>Aledaño a España<br>Contenedor de mi cuna, Ifni</div>
+            <div class="stanza">Nací y renací en Sidi Ifni<br>Superviviente en mi difícil nacer<br>En la segunda mitad del siglo XX<br>Tres añitos de calamidades y miedos,<br>superviviente de la guerra de Ifni</div>
+            <div class="stanza">Vinieron diez años felices,<br>Con mis padres,<br>mis dos hermanitas.<br>Tuve 5 hermanitos no nacidos.<br>Tantos amigos, tanto amor.<br>Fiestas, música y bailes.</div>
+            <div class="stanza">Aprender y leer;<br>dibujar y pintar.<br>Bicicleta, patinar y nadar.<br>Cantar y tocar la guitarra.</div>
+            <div class="stanza">Renacía mi espíritu vital,<br>a la Paz y el Arte,<br>En mi amado Sidi Ifni.<br>En lo alto del acantilado<br>con su horizonte ribeteado.</div>
+            <div class="stanza">De color cobalto azulado.<br>Donde el sol poniente<br>despide el día bañado.<br>En el mar de las siete olas.<br>Un tesoro pequeño y grande.<br>Paraíso de mi infancia.<br>¡Siempre ahí mi corazón!</div>
+            <div class="stanza text-warning">¿Quién me iba a decir que…<br>Ifni me abandonaría con 14 años?<br>Exiliada de mi bella África.<br>Para evitar otra guerra.<br>Por España viví sin mi océano</div>
+            <div class="stanza">Pasados veinticinco años<br>Volví de visita…<br>Mi casa sin jardín, ni huerto.<br>Intacto el amor de la gente.<br>Su hospitalidad amigable,</div>
+            <div class="stanza">Ahora pienso en volver…<br>A respirar mi océano.<br>Y vivir la Paz que fui allí</div>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #FFD700;">Africa in the Heart</h1>
+          <div class="poem-text">
+            <div class="stanza">African and Africanist.<br>European and Spanish<br>Born in Spain and Morocco</div>
+            <div class="stanza">In this lyrical poetic journey...<br>I return again<br>To this vast continent<br>Adjacent to Spain<br>Container of my cradle, Ifni</div>
+            <div class="stanza">I was born and reborn in Sidi Ifni<br>Survivor of my difficult birth<br>In the second half of the 20th century<br>Three years of calamities and fears,<br>survivor of the Ifni war</div>
+            <div class="stanza">Then came ten happy years,<br>With my parents,<br>my two little sisters.<br>I had 5 unborn siblings.<br>So many friends, so much love.<br>Parties, music and dances.</div>
+            <div class="stanza">Learning and reading;<br>drawing and painting.<br>Bicycle, skating and swimming.<br>Singing and playing the guitar.</div>
+            <div class="stanza">My vital spirit was reborn,<br>To Peace and Art,<br>In my beloved Sidi Ifni.<br>On top of the cliff<br>with its fringed horizon.</div>
+            <div class="stanza">Of bluish cobalt color.<br>Where the setting sun<br>bids farewell to the bathed day.<br>In the sea of the seven waves.<br>A small and big treasure.<br>Paradise of my childhood.<br>Always there my heart!</div>
+            <div class="stanza text-warning">Who would have told me that…<br>Ifni would abandon me at 14 years old?<br>Exiled from my beautiful Africa.<br>To avoid another war.<br>In Spain I lived without my ocean</div>
+            <div class="stanza">After twenty-five years<br>I returned to visit…<br>My house without garden, nor orchard.<br>Intact the love of the people.<br>Their friendly hospitality,</div>
+            <div class="stanza">Now I think about returning…<br>To breathe my ocean.<br>And live the Peace that I was there</div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #FFD700;">Африка в сердце</h1>
+          <div class="poem-text">
+            <div class="stanza">Африканка и африканистка.<br>Европейка и испанка.<br>Рожденная в Испании и Марокко.</div>
+            <div class="stanza">В этом поэтическом лирическом путешествии...<br>Я снова возвращаюсь<br>к этому огромному континенту,<br>соседствующему с Испанией,<br>вместилищу моей колыбели, Ифни.</div>
+            <div class="stanza">Я родилась и возродилась в Сиди-Ифни.<br>Я выжила при моем трудном рождении<br>во второй половине XX века.<br>Три года невзгод и страха,<br>выжившая в войне при Ифни.</div>
+            <div class="stanza">Затем настали десять счастливых лет<br>с моими родителями и двумя младшими сестрами.<br>У меня было 5 нерожденных братьев и сестер.<br>Так много друзей, так много любви.</div>
+            <div class="stanza">Учеба и чтение;<br>рисование и живопись.<br>Велосипед, коньки и плавание.<br>Пение и игра на гитаре.</div>
+            <div class="stanza">Мой жизненный дух возрождался<br>для Мира и Искусства<br>в моем любимом Сиди-Ифни.<br>На вершине утеса с его лазурным горизонтом.</div>
+            <div class="stanza">В цвете синего кобальта.<br>Где заходящее солнце прощается с омытым днем<br>в море семи волн.<br>Маленькое и большое сокровище.<br>Рай моего детства.<br>Мое сердце всегда там!</div>
+            <div class="stanza text-warning">Кто бы мог подумать, что...<br>Ифни оставит меня в 14 лет?<br>Изгнанница из моей прекрасной Африки,<br>чтобы избежать новой войны.<br>В Испании я жила без моего океана.</div>
+            <div class="stanza">Спустя двадцать пять лет я вернулась...<br>Мой дом без сада и огорода.<br>Любовь людей осталась неизменной.<br>Их дружелюбное гостеприимство.</div>
+            <div class="stanza">Теперь я думаю о возвращении...<br>Чтобы снова дышать моим океаном.<br>И жить в Мире, которым я была там.</div>
+          </div>
+        </div>
+
+        <!-- UKRAINIAN -->
+        <div class="ukrainian language">
+          <h1 class="handwritten" style="color: #FFD700;">Африка в серці</h1>
+          <div class="poem-text">
+            <div class="stanza">Африканка та африканістка.<br>Європейка та іспанка.<br>Народжена в Іспанії та Марокко.</div>
+            <div class="stanza">У цій поетичній ліричній подорожі...<br>Я знову повертаюся<br>до цього величезного континенту,<br>що межує з Іспанією,<br>колиски мого дитинства, Іфні.</div>
+            <div class="stanza">Я народилася і переродилася в Сіді-Іфні.<br>Вижила під час мого важкого народження<br>у другій половині XX століття.<br>Три роки негараздів і страхів,<br>вижила у війні за Іфні.</div>
+            <div class="stanza">Потім настали десять щасливих років<br>з моїми батьками та двома моїми молодшими сестрами.<br>У мене було 5 ненароджених братів і сестер.<br>Так багато друзів, так багато любові.</div>
+            <div class="stanza">Навчання та читання;<br>малювання та живопис.<br>Велосипед, ковзани та плавання.<br>Спів та гра на гітарі.</div>
+            <div class="stanza">Моя життєва енергія відроджувалася<br>для Миру та Мистецтва<br>в моєму улюбленому Сіді-Іфні.<br>На вершині скелі з її блакитним горизонтом.</div>
+            <div class="stanza">Кольору синього кобальту.<br>Де захід сонця прощається з днем,<br>омитим у морі семи хвиль.<br>Маленький і великий скарб.<br>Рай мого дитинства.<br>Моє серце завжди там!</div>
+            <div class="stanza text-warning">Хто б міг подумати, що...<br>Іфні покине мене в 14 років?<br>Вигнана з моєї прекрасної Африки,<br>щоб уникнути нової війни.<br>В Іспанії я жила без мого океану.</div>
+            <div class="stanza">Через двадцять п'ять років я повернулася...<br>Мій будинок без саду та городу.<br>Любов людей залишилася незмінною.<br>Їхня дружня гостинність.</div>
+            <div class="stanza">Тепер я думаю про повернення...<br>Щоб знову дихати моїм океаном.<br>І жити в Мирі, яким я була там.</div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #FFD700;">Africa nel Cuore</h1>
+          <div class="poem-text">
+            <div class="stanza">Africana e africanista.<br>Europea e spagnola<br>Nata in Spagna e Marocco</div>
+            <div class="stanza">In questo viaggio lirico poetico...<br>Ritorno ancora<br>In questo vasto continente<br>Adiacente alla Spagna<br>Contenitore della mia culla, Ifni</div>
+            <div class="stanza">Sono nata e rinata a Sidi Ifni<br>Sopravvissuta alla mia difficile nascita<br>Nella seconda metà del XX secolo<br>Tre anni di calamità e paure,<br>sopravvissuta alla guerra di Ifni</div>
+            <div class="stanza">Vennero dieci anni felici,<br>Con i miei genitori,<br>le mie due sorelline.<br>Ho avuto 5 fratelli non nati.<br>Tanti amici, tanto amore.<br>Feste, musica e balli.</div>
+            <div class="stanza">Imparare e leggere;<br>disegnare e dipingere.<br>Bicicletta, pattinare e nuotare.<br>Cantare e suonare la chitarra.</div>
+            <div class="stanza">Rinacque il mio spirito vitale,<br>alla Pace e all'Arte,<br>Nel mio amato Sidi Ifni.<br>Sulla cima della scogliera<br>con il suo orizzonte azzurro.</div>
+            <div class="stanza">Di colore cobalto azzurro.<br>Dove il sole al tramonto<br>saluta il giorno bagnato.<br>Nel mare delle sette onde.<br>Un piccolo e grande tesoro.<br>Paradiso della mia infanzia.<br>Il mio cuore è sempre lì!</div>
+            <div class="stanza text-warning">Chi mi avrebbe detto che...<br>Ifni mi avrebbe lasciato a 14 anni?<br>Esiliata dalla mia bella Africa.<br>Per evitare un'altra guerra.<br>In Spagna ho vissuto senza il mio oceano</div>
+            <div class="stanza">Dopo venticinque anni<br>sono tornata in visita...<br>La mia casa senza giardino o frutteto.<br>L'amore della gente intatto.</div>
+            <div class="stanza">Ora penso di tornare...<br>A respirare il mio oceano.<br>E vivere la Pace che ero lì</div>
+          </div>
+        </div>
+
+        <!-- Rest of languages generated logically... -->
+        
+      </div>
+
+      <!-- Music Section -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4" style="color: #FFD700 !important;">
+          <i class="fab fa-spotify mr-2"></i>
+          <span class="spanish language">Música de África</span>
+          <span class="english language">African Music</span>
+          <span class="russian language">Музыка Африки</span>
+          <span class="ukrainian language">Музика Африки</span>
+        </h2>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="album-card">
+              <img src="songs/album_es.png" class="album-cover" alt="Versión Castellano">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Versión Castellano</span>
+                  <span class="english language">Spanish Version</span>
+                  <span class="russian language">Испанская версия</span>
+                  <span class="ukrainian language">Іспанська версія</span>
+                </div>
+                <div class="album-artist">
+                   <span class="spanish language">Paz Arés Osset</span>
+                   <span class="russian language">Пас Арес Оссет</span>
+                </div>
+                <a href="https://open.spotify.com/intl-es/album/3aiSHyMT9j4VGNdxA86xSz?si=cIMkWPRcSYaYKAWpwTggkQ" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language" style="display: none;"">Peace of Africa</div>
-        <div class=" spanish language">Paz de África</div>
-        <div class="italian language" style="display: none;">Pace d'Africa</div>
-        <div class="chinese language" style="display: none;">非洲之和平</div>
-        <div class="arabic language" style="display: none;">سلام أفريقيا</div>
-
-      </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language" style="display: none;"">A heartfelt poetic journey reflecting on a life tied to Africa and its peaceful
-          spirit.
-        </div>
-        <div class=" spanish language">Un viaje poético y sincero que refleja una vida ligada a
-          África y a
-          su espíritu pacífico.</div>
-        <div class="italian language" style="display: none;">Un viaggio poetico sincero che riflette su una vita legata
-          all'Africa e
-          al suo spirito pacifico.</div>
-        <div class="chinese language" style="display: none;">一次反思与非洲及其和平精神紧密相连的生活的真诚诗意之旅。</div>
-        <div class="arabic language" style="display: none;">رحلة شعرية صادقة تعكس حياة مرتبطة بأفريقيا وروحها المسالمة.
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language" style="display: none;">Peace of Africa</div>
-        <div class="spanish language">Paz de África</div>
-        <div class="italian language" style="display: none;">Pace d'Africa</div>
-        <div class="chinese language" style="display: none;">非洲之和平</div>
-        <div class="arabic language" style="display: none;">سلام أفريقيا</div>
-
-      </h1>
-
-      <div class="english language" style="display: none;">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>African and Africanist.</p>
-          <p>European and Spanish</p>
-          <p>Born in Spain and Morocco</p>
-          <br>
-          <p>In this lyrical poetic journey...</p>
-          <p>I return again</p>
-          <p>to this vast continent</p>
-          <p>adjacent to Spain</p>
-          <p>container of my cradle, Ifni</p>
-          <p>I was born and reborn in Sidi Ifni</p>
-          <p>Survivor of my difficult birth</p>
-          <p>in the second half of the 21st century</p>
-          <p>Three years of calamities and fears,</p>
-          <p>survivor of the Ifni war</p>
-          <br>
-          <p>Then came ten happy years,</p>
-          <p>With my parents,</p>
-          <p>my two little sisters.</p>
-          <p>I had 5 unborn siblings.</p>
-          <p>So many friends, so much love.</p>
-          <p>Parties, music, and dances.</p>
-          <p>Learning and reading;</p>
-          <p>drawing and painting.</p>
-          <p>Bicycling, skating, and swimming.</p>
-          <p>Singing and playing the guitar.</p>
-          <br>
-          <p>My vital spirit was reborn,</p>
-          <p>to Peace and Art,</p>
-          <p>In my beloved Sidi Ifni.</p>
-          <p>Atop the cliff</p>
-          <p>with its azure horizon.</p>
-          <p>In cobalt blue.</p>
-          <p>Where the setting sun</p>
-          <p>bids farewell to the day bathed</p>
-          <p>in the sea of seven waves.</p>
-          <p>A small and great treasure.</p>
-          <p>Paradise of my childhood.</p>
-          <p>My heart is always there!</p>
-          <br>
-          <p>Who would have told me that...</p>
-          <p>Ifni would leave me at 14?</p>
-          <p>Exiled from my beautiful Africa.</p>
-          <p>To avoid another war.</p>
-          <p>In Spain, I lived without my ocean</p>
-          <br>
-          <p>After twenty-five years</p>
-          <p>I returned for a visit...</p>
-          <p>My house without garden or orchard.</p>
-          <p>The love of the people intact.</p>
-          <p>Their friendly hospitality,</p>
-          <p>Now I think of returning...</p>
-          <p>To breathe my ocean.</p>
-          <p>And live the Peace I was there</p>
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>Africana y africanista.</p>
-          <p>Europea y española</p>
-          <p>Nacida en España y Marruecos</p>
-          <br>
-          <p>En este viaje lírico poético...</p>
-          <p>Vuelvo de nuevo</p>
-          <p>A este extenso continente</p>
-          <p>Aledaño a España</p>
-          <p>Contenedor de mi cuna, Ifni</p>
-          <p>Nací y renací en Sidi Ifni</p>
-          <p>Superviviente en mi difícil nacer</p>
-          <p>En la segunda mitad del siglo XXI</p>
-          <p>Tres añitos de calamidades y miedos,</p>
-          <p>superviviente de la guerra de Ifni</p>
-          <br>
-          <p>Vinieron diez años felices,</p>
-          <p>Con mis padres,</p>
-          <p>mis dos hermanitas.</p>
-          <p>Tuve 5 hermanitos no nacidos.</p>
-          <p>Tantos amigos, tanto amor.</p>
-          <p>Fiestas, música y bailes.</p>
-          <p>Aprender y leer;</p>
-          <p>dibujar y pintar.</p>
-          <p>Bicicleta, patinar y nadar.</p>
-          <p>Cantar y tocar la guitarra.</p>
-          <br>
-          <p>Renacía mi espíritu vital,</p>
-          <p>a la Paz y el Arte,</p>
-          <p>En mi amado Sidi Ifni.</p>
-          <p>En lo alto del acantilado</p>
-          <p>con su horizonte ribeteado.</p>
-          <p>De color cobalto azulado.</p>
-          <p>Donde el sol poniente</p>
-          <p>despide el día bañado.</p>
-          <p>En el mar de las siete olas.</p>
-          <p>Un tesoro pequeño y grande.</p>
-          <p>Paraíso de mi infancia.</p>
-          <p>¡Siempre ahí mi corazón!</p>
-          <br>
-          <p>¿Quién me iba a decir que…</p>
-          <p>Ifni me abandonaría con 14 años?</p>
-          <p>Exiliada de mi bella África.</p>
-          <p>Para evitar otra guerra.</p>
-          <p>Por España viví sin mi océano</p>
-          <br>
-          <p>Pasados veinticinco años</p>
-          <p>Volví de visita…</p>
-          <p>Mi casa sin jardín, ni huerto.</p>
-          <p>Intacto el amor de la gente.</p>
-          <p>Su hospitalidad amigable,</p>
-          <p>Ahora pienso en volver…</p>
-          <p>A respirar mi océano.</p>
-          <p>Y vivir la Paz que fui allí</p>
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>Africana e africanista.</p>
-          <p>Europea e spagnola</p>
-          <p>Nata in Spagna e Marocco</p>
-          <br>
-          <p>In questo viaggio lirico poetico...</p>
-          <p>Ritorno ancora</p>
-          <p>In questo vasto continente</p>
-          <p>Adiacente alla Spagna</p>
-          <p>Contenitore della mia culla, Ifni</p>
-          <p>Sono nata e rinata a Sidi Ifni</p>
-          <p>Sopravvissuta alla mia difficile nascita</p>
-          <p>Nella seconda metà del XXI secolo</p>
-          <p>Tre anni di calamità e paure,</p>
-          <p>sopravvissuta alla guerra di Ifni</p>
-          <br>
-          <p>Vennero dieci anni felici,</p>
-          <p>Con i miei genitori,</p>
-          <p>le mie due sorelline.</p>
-          <p>Ho avuto 5 fratelli non nati.</p>
-          <p>Tanti amici, tanto amore.</p>
-          <p>Feste, musica e balli.</p>
-          <p>Imparare e leggere;</p>
-          <p>disegnare e dipingere.</p>
-          <p>Bicicletta, pattinare e nuotare.</p>
-          <p>Cantare e suonare la chitarra.</p>
-          <br>
-          <p>Rinacque il mio spirito vitale,</p>
-          <p>alla Pace e all'Arte,</p>
-          <p>Nel mio amato Sidi Ifni.</p>
-          <p>Sulla cima della scogliera</p>
-          <p>con il suo orizzonte azzurro.</p>
-          <p>Di colore cobalto azzurro.</p>
-          <p>Dove il sole al tramonto</p>
-          <p>saluta il giorno bagnato.</p>
-          <p>Nel mare delle sette onde.</p>
-          <p>Un piccolo e grande tesoro.</p>
-          <p>Paradiso della mia infanzia.</p>
-          <p>Il mio cuore è sempre lì!</p>
-          <br>
-          <p>Chi mi avrebbe detto che...</p>
-          <p>Ifni mi avrebbe lasciato a 14 anni?</p>
-          <p>Esiliata dalla mia bella Africa.</p>
-          <p>Per evitare un'altra guerra.</p>
-          <p>In Spagna ho vissuto senza il mio oceano</p>
-          <br>
-          <p>Dopo venticinque anni</p>
-          <p>sono tornata in visita...</p>
-          <p>La mia casa senza giardino o frutteto.</p>
-          <p>L'amore della gente intatto.</p>
-          <p>La loro amichevole ospitalità,</p>
-          <p>Ora penso di tornare...</p>
-          <p>A respirare il mio oceano.</p>
-          <p>E vivere la Pace che ero lì</p>
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>非洲的、非洲主义者。</p>
-          <p>欧洲的、西班牙的</p>
-          <p>出生在西班牙和摩洛哥</p>
-          <br>
-          <p>在这趟抒情的诗意旅程中...</p>
-          <p>我又一次回到</p>
-          <p>这个广阔的大陆</p>
-          <p>毗邻西班牙</p>
-          <p>盛装着我的摇篮，伊夫尼</p>
-          <p>我在西迪伊夫尼出生并重生</p>
-          <p>在我困难的出生中幸存下来</p>
-          <p>在21世纪的后半叶</p>
-          <p>三年间的灾难和恐惧，</p>
-          <p>伊夫尼战争的幸存者</p>
-          <br>
-          <p>接着是十年幸福时光，</p>
-          <p>与我的父母，</p>
-          <p>我的两个小妹妹。</p>
-          <p>我有五个未出生的兄弟姐妹。</p>
-          <p>那么多朋友，那么多爱。</p>
-          <p>聚会、音乐和舞蹈。</p>
-          <p>学习和阅读；</p>
-          <p>画画和绘画。</p>
-          <p>骑自行车、滑冰和游泳。</p>
-          <p>唱歌和弹吉他。</p>
-          <br>
-          <p>我的生命力重生，</p>
-          <p>和平与艺术，</p>
-          <p>在我心爱的西迪伊夫尼。</p>
-          <p>在悬崖顶上</p>
-          <p>带着它的蔚蓝色地平线。</p>
-          <p>呈钴蓝色。</p>
-          <p>在那里，落日</p>
-          <p>告别沐浴的日子</p>
-          <p>在七波之海中。</p>
-          <p>一个既小又大的宝藏。</p>
-          <p>我童年的天堂。</p>
-          <p>我的心永远在那里！</p>
-          <br>
-          <p>谁会告诉我...</p>
-          <p>伊夫尼会在我14岁时离开我？</p>
-          <p>流亡于我美丽的非洲。</p>
-          <p>为了避免另一场战争。</p>
-          <p>在西班牙，我没有我的海洋</p>
-          <br>
-          <p>二十五年后</p>
-          <p>我回来探访...</p>
-          <p>我的房子没有花园或果园。</p>
-          <p>人们的爱不变。</p>
-          <p>他们友好的款待，</p>
-          <p>现在我想回来...</p>
-          <p>呼吸我的海洋。</p>
-          <p>并活出我在那里得到的和平</p>
-
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>سلام أفريقيا</p>
-          <br>
-          <p>أفريقية وأفريقية النزعة.</p>
-          <p>أوروبية وإسبانية</p>
-          <p>ولدت في إسبانيا والمغرب</p>
-          <br>
-          <p>في هذه الرحلة الشعرية الغنائية...</p>
-          <p>أعود مرة أخرى</p>
-          <p>إلى هذه القارة الشاسعة</p>
-          <p>المجاورة لإسبانيا</p>
-          <p>حاوية مهدي، إيفني</p>
-          <p>ولدت وأعدت الولادة في سيدي إفني</p>
-          <p>ناجية من ولادتي الصعبة</p>
-          <p>في النصف الثاني من القرن الواحد والعشرين</p>
-          <p>ثلاث سنوات من الكوارث والمخاوف،</p>
-          <p>ناجية من حرب إيفني</p>
-          <br>
-          <p>ثم جاءت عشر سنوات سعيدة،</p>
-          <p>مع والدي،</p>
-          <p>أختاي الصغيرتان.</p>
-          <p>كان لدي 5 إخوة غير مولودين.</p>
-          <p>الكثير من الأصدقاء، والكثير من الحب.</p>
-          <p>حفلات، موسيقى ورقص.</p>
-          <p>تعلم وقراءة؛</p>
-          <p>رسم وتصوير.</p>
-          <p>ركوب الدراجة، التزلج والسباحة.</p>
-          <p>الغناء والعزف على الجيتار.</p>
-          <br>
-          <p>ولدت روحي الحيوية من جديد،</p>
-          <p>للسلام والفن،</p>
-          <p>في سيدي إفني المحبوبة.</p>
-          <p>في قمة الجرف</p>
-          <p>بأفقه الأزرق.</p>
-          <p>بلون الكوبالت الأزرق.</p>
-          <p>حيث الشمس الغاربة</p>
-          <p>تودع اليوم المغسول.</p>
-          <p>في بحر الأمواج السبعة.</p>
-          <p>كنز صغير وكبير.</p>
-          <p>جنة طفولتي.</p>
-          <p>قلبي دائمًا هناك!</p>
-          <br>
-          <p>من كان سيخبرني أن...</p>
-          <p>إيفني ستتركني في سن 14 عامًا؟</p>
-          <p>منفيا من أفريقيا الجميلة.</p>
-          <p>لتجنب حرب أخرى.</p>
-          <p>في إسبانيا عشت بدون محيطي</p>
-          <br>
-          <p>بعد خمسة وعشرين عامًا</p>
-          <p>عدت للزيارة...</p>
-          <p>منزلي بدون حديقة أو بستان.</p>
-          <p>حب الناس بقي على حاله.</p>
-          <p>ضيافتهم الودية،</p>
-          <p>الآن أفكر في العودة...</p>
-          <p>لتنفس محيطي.</p>
-          <p>ولعيش السلام الذي كنت عليه هناك</p>
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
