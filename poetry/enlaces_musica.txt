@@ -1,0 +1,19 @@
+# Enlaces de Música - Paz Arés Osset
+
+## El Libro del Karma (Álbum en Español)
+**Enlace Spotify:** https://open.spotify.com/intl-es/album/3aiSHyMT9j4VGNdxA86xSz?si=cIMkWPRcSYaYKAWpwTggkQ
+
+**Iframe para incrustar:**
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3aiSHyMT9j4VGNdxA86xSz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+## Soledad Que Tanto Me Places
+### Versión Castellano
+**Enlace Spotify:** https://open.spotify.com/intl-es/album/6CYcCa7JLOUxMg73MkSnju?si=HLDmvAOcRc6jsxjGRy9uiA
+**Iframe:** <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6CYcCa7JLOUxMg73MkSnju?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+### Versión Ruso
+**Enlace Spotify:** https://open.spotify.com/album/1FOXBeSKtgwe0X8MUHTyFn?si=LfPYTipnSN-Bp2vwtqAe_Q
+**Iframe:** <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1FOXBeSKtgwe0X8MUHTyFn?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+---
+*Añadir a continuación los enlaces de los próximos discos en otros idiomas (inglés, italiano, etc.) a medida que se vayan publicando.*

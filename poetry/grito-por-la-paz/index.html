@@ -1,409 +1,277 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>Grito por la paz</title>
+  <title>Grito por la paz - Paz Arés Osset</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-      <option value="russian">Русский</option>
-    </select>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
+      </a>
+      <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+        <i class="fab fa-spotify mr-2" style="font-size: 1.2rem;"></i>
+        <span id="audio-button-text">Escuchar Música</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="ukrainian">🇺🇦 Українська</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+        </a>
+
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">Grito por la paz</div>
+          <div class="english language">Shout for Peace</div>
+          <div class="ukrainian language">Крик за мир</div>
+          <div class="italian language">Grido per la pace</div>
+          <div class="chinese language">为和平呼喊</div>
+          <div class="arabic language">صرخة من أجل السلام</div>
+          <div class="russian language">Крик о мире</div>
+          <div class="aleman language">Schrei nach Frieden</div>
+          <div class="frances language">Cri pour la paix</div>
+          <div class="japones language">平和への叫び</div>
+          <div class="portuges language">Grito pela paz</div>
+        </h1>
+
+        <div class="lead">
+          <div class="spanish language">Grito por la Paz: En el lienzo de la vida, trazos de dolor, un grito ferviente por la tranquilidad en un mundo marcado por la guerra.</div>
+          <div class="english language">Cry for Peace: A canvas of life painted with strokes of pain, a fervent shout for tranquility in a world marred by war.</div>
+          <div class="ukrainian language">Крик за мир: на полотні життя, мазки болю, палкий крик за спокій у світі, понівеченому війною.</div>
+          <div class="italian language">Grido per la Pace: Una tela di vida dipinta con tratti di dolore, un grido fervente per la tranquillità in un mondo segnato dalla guerra.</div>
+          <div class="chinese language">呼吁和平：生活的画布上涂满了痛苦的笔触，对一个被战争玷污的世界中的宁静发出的热切呼声。</div>
+          <div class="arabic language">نداء من أجل السلام: لوحة الحياة مرسومة بضربات من الألم، صرخة حارة للهدوء في عالم مشوه بالحرب.</div>
+          <div class="russian language">Крик о мире: полотно жизни, расписанное мазками боли, горячий призыв к спокойствию в мире, истерзанном войной.</div>
+          <div class="aleman language">Schrei nach Frieden: Auf der Leinwand des Lebens, Striche des Schmerzes, ein leidenschaftlicher Schrei nach Ruhe in einer vom Krieg gezeichneten Welt.</div>
+          <div class="frances language">Cri pour la Paix : Sur la toile de la vie, des traits de douleur, un cri fervent pour la tranquillité dans un monde marqué par la guerre.</div>
+          <div class="japones language">平和への叫び：生命のキャンバスに描かれた痛みの筆致、戦争で傷ついた世界における静寂への熱烈な叫び。</div>
+          <div class="portuges language">Grito pela Paz: Na tela da vida, traços de dor, um grito fervoroso por tranquilidade em um mundo marcado pela guerra.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="multilingual-description py-5" style="background-color: transparent;">
+      <div class="container text-center">
+
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #FFFAEC;">Grito por la paz</h1>
+          <div class="poem-text">
+            <div class="stanza">En el lienzo de la vida, trazos de dolor,<br>Negocios de guerra, un vil error.<br>Grito en oración, sonido sin eco,<br>En el alma, la paz, mi único anhelo.</div>
+            <div class="stanza">En el susurro del alma, grito en silencio<br>Donde la paz se desdibuja, nace el lamento.<br>En el corazón, un clamor rotundo,<br>Ante la guerra, la paz deseo profundo.</div>
+            <div class="stanza">Como un eco lejano, resonancia de paz,<br>En este mundo, buscamos solaz.<br>Dios nos creó con su divina esencia,<br>La paz interior, nuestra mayor presencia.</div>
+            <div class="stanza">¿Cómo se extravía en el trajín terrenal?<br>Guerras por interés, un oscuro ritual.<br>En cada suspiro, en cada albor,<br>Gritamos por la paz con fervor.</div>
+            <div class="stanza">Aunque la tormenta amenace la calma,<br>Mantengo mi paz, mi fuego, mi llama.<br>En el tejido de la creación divina,<br>Grito por la paz, mi constante rutina.</div>
+            <div class="stanza">Que las almas despierten a su esencia,<br>En la paz interior, la verdadera excelencia.<br>Que las naciones dejen caer las armas,<br>Que en cada corazón nazcan calmas.</div>
+            <div class="stanza">En este poema, en mi voz se escuchan,<br>Gritos por la paz, que fronteras cruzan.<br>Que resuene en cada rincón, en cada mente,<br>La llamada a la paz, eternamente.</div>
+          </div>
+        </div>
+
+        <!-- UKRAINIAN -->
+        <div class="ukrainian language">
+          <h1 class="handwritten" style="color: #FFFAEC;">Крик за мир</h1>
+          <div class="poem-text">
+            <div class="stanza">На полотні життя — мазки болю,<br>Військовий бізнес — підла помилка.<br>Кричу в молитві, звук без відлуння,<br>В душі — мир, моє єдине прагнення.</div>
+            <div class="stanza">У шепоті душі кричу мовчки,<br>Де мир стирається, народжується плач.<br>У серці — гучний поклик,<br>Перед обличчям війни, глибоке бажання миру.</div>
+            <div class="stanza">Як далеке відлуння, резонанс миру,<br>У цьому світі ми шукаємо розради.<br>Бог створив нас за Свою божественною сутністю,<br>Внутрішній мир — наша найбільша присутність.</div>
+            <div class="stanza">Як він губиться в земній метушні?<br>Війни за інтереси — темний ритуал.<br>У кожному зітханні, на кожному світанку,<br>Ми палко кричимо про мир.</div>
+            <div class="stanza">Хоча буря загрожує спокою,<br>Я зберігаю свій мир, свій вогонь, своє полум'я.<br>У тканині божественного творіння,<br>Кричу про мир — моя постійна рутина.</div>
+            <div class="stanza">Нехай душі пробудяться до своєї суті,<br>У внутрішньому мирі — справжня досконалість.<br>Нехай країни складуть зброю,<br>Нехай у кожному серці настане спокій.</div>
+            <div class="stanza">У цьому вірші, в моєму голосі чути<br>Крики за мир, що перетинають кордони.<br>Нехай відгукнеться в кожному куточку, в кожному розумі,<br>Заклик до миру, назавжди.</div>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #FFFAEC;">Shout for Peace</h1>
+          <div class="poem-text">
+            <div class="stanza">On the canvas of life, strokes of pain,<br>Businesses of war, a vile mistake.<br>I shout in prayer, sound without echo,<br>In the soul, peace, my only desire.</div>
+            <div class="stanza">In the whisper of the soul, I shout in silence<br>Where peace blurs, lamentation is born.<br>In the heart, a resounding plea,<br>Against war, a deep desire for peace.</div>
+            <div class="stanza">Like a distant echo, resonance of peace,<br>In this world, we seek solace.<br>God created us with His divine essence,<br>Inner peace, our greatest presence.</div>
+            <div class="stanza">How does it stray in the earthly hustle?<br>Wars for interest, a dark ritual.<br>In every sigh, in every dawn,<br>We shout for peace fervently.</div>
+            <div class="stanza">Though the storm threatens calm,<br>I maintain my peace, my fire, my flame.<br>In the fabric of divine creation,<br>I shout for peace, my constant routine.</div>
+            <div class="stanza">May souls awaken to their essence,<br>In inner peace, the true excellence.<br>May nations drop their weapons,<br>May calms be born in every heart.</div>
+            <div class="stanza">In this poem, in my voice are heard,<br>Shouts for peace, crossing borders.<br>May it resonate in every corner, in every mind,<br>The call for peace, forever.</div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #FFFAEC;">Grido per la pace</h1>
+          <div class="poem-text">
+            <div class="stanza">Sulla tela della vita, tratti di dolore,<br>Affari di guerra, un vile errore.<br>Grido in preghiera, suono senza eco,<br>Nell'anima, la pace, il mio unico desiderio.</div>
+            <div class="stanza">Nel sussurro dell'anima, grido in silenzio<br>Dove la pace si sfuma, nasce il lamento.<br>Nel cuore, un appello profondo,<br>Contro la guerra, desidero profondamente la pace.</div>
+            <div class="stanza">Come un eco lontano, risonanza di pace,<br>In questo mondo, cerchiamo sollievo.<br>Dio ci ha creati con la sua essenza divina,<br>La pace interiore, la nostra più grande presenza.</div>
+            <div class="stanza">Come si smarrisce nel trambusto terreno?<br>Guerra per interesse, un rituale oscuro.<br>In ogni sospiro, in ogni alba,<br>Gridiamo per la pace con fervore.</div>
+            <div class="stanza">Anche se la tempesta minaccia la calma,<br>Mantengo la mia pace, il mio fuoco, la mia fiamma.<br>Nel tessuto della creazione divina,<br>Grido per la pace, la mia routine costante.</div>
+            <div class="stanza">Che le anime si sveglino alla loro essenza,<br>Nella pace interiore, la vera eccellenza.<br>Che le nazioni lascino cadere le armi,<br>Che nei cuori nascano le calme.</div>
+            <div class="stanza">In questa poesia, nella mia voce si ascoltano,<br>Grida per la pace, che attraversano frontiere.</div>
+          </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="chinese language">
+          <h1 class="handwritten" style="color: #FFFAEC;">为和平呼喊</h1>
+          <div class="poem-text">
+            <div class="stanza">在生活的画布上，痛苦的笔触，<br>战争的生意，一个卑鄙的错误。<br>我在祷告中呼喊，声音无回响，<br>在灵魂中，和平是我唯一的渴望。</div>
+            <div class="stanza">在灵魂的低语中，我默默呼喊，<br>当和平模糊时，悲叹诞生。</div>
+            <div class="stanza">在心中，一个响亮的呼声，<br>面对战争，我深深地渴望和平。</div>
+            <div class="stanza">如远处的回声，和平的共鸣，<br>在这个世界上，我们寻求安慰。</div>
+            <div class="stanza">上帝以他的神圣本质创造了我们，<br>内心的和平，是我们最大的存在。</div>
+            <div class="stanza">它如何在尘世的喧嚣中迷失？<br>因利益而战，一个黑暗的仪式。</div>
+            <div class="stanza">在每一次叹息，在每一个黎明，<br>我们热切地为和平呼喊。</div>
+          </div>
+        </div>
+
+        <!-- ARABIC -->
+        <div class="arabic language">
+          <h1 class="handwritten" style="color: #FFFAEC;">صرخة من أجل السلام</h1>
+          <div class="poem-text">
+            <div class="stanza">على قماش الحياة، ضربات من الألم،<br>أعمال الحرب، خطأ دنيء.<br>أصرخ في الصلاة، صوت بلا صدى،<br>في الروح، السلام، أمنيتي الوحيدة.</div>
+            <div class="stanza">في همس الروح، أصرخ في الصمت<br>حيث يتلاشى السلام، يولد الندم.</div>
+            <div class="stanza">في القلب، نداء قوي،<br>أمام الحرب، أتمنى السلام بعمق.</div>
+            <div class="stanza">كصدى بعيد، صدى السلام،<br>في هذا العالم، نبحث عن العزاء.</div>
+            <div class="stanza">خلقنا الله بجوهره الإلهي،<br>السلام الداخلي، أعظم حضور لنا.</div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #FFFAEC;">Крик о мире</h1>
+          <div class="poem-text">
+            <div class="stanza">На полотне жизни — мазки боли,<br>Военный бизнес — подлая ошибка.<br>Я кричу в молитве, звук без эха,<br>В душе — мир, мое единственное желание.</div>
+            <div class="stanza">В шепоте души я кричу в тишине,<br>Где мир тускнеет, рождается плач.</div>
+            <div class="stanza">В сердце — звучный призыв,<br>Перед войной — глубокое желание мира.</div>
+            <div class="stanza">Как далекое эхо, резонанс мира,<br>В этом мире мы ищем утешения.</div>
+          </div>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="aleman language">
+          <h1 class="handwritten" style="color: #FFFAEC;">Schrei nach Frieden</h1>
+          <div class="poem-text">
+            <div class="stanza">Auf der Leinwand des Lebens, Striche des Schmerzes,<br>Geschäfte des Krieges, ein fieser Fehler.<br>Ich schreie im Gebet, Klang ohne Echo,<br>In der Seele, Frieden, mein einziger Wunsch.</div>
+            <div class="stanza">Im Flüstern der Seele, schreie ich in der Stille,<br>Wo der Frieden verschwimmt, wird die Klage geboren.</div>
+            <div class="stanza">Im Herzen, ein durchschlagender Ruf,<br>Gegen den Krieg, ein tiefes Bedürfnis nach Frieden.</div>
+          </div>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="frances language">
+          <h1 class="handwritten" style="color: #FFFAEC;">Cri pour la paix</h1>
+          <div class="poem-text">
+            <div class="stanza">Sur la toile de la vie, des traits de douleur,<br>Affaires de guerre, une vile erreur.<br>Je crie en prière, son sans écho,<br>Dans l'âme, la paix, mon seul désir.</div>
+            <div class="stanza">Dans le murmure de l'âme, je crie en silence<br>Où la paix s'estompe, la lamentation naît.</div>
+            <div class="stanza">Dans le cœur, une clameur retentissante,<br>Face à la guerre, un profond désir de paix.</div>
+          </div>
+        </div>
+
+        <!-- JAPANESE -->
+        <div class="japones language">
+          <h1 class="handwritten" style="color: #FFFAEC;">平和への叫び</h1>
+          <div class="poem-text">
+            <div class="stanza">人生のキャンバスに、痛みの筆致、<br>戦争の商売、卑劣な過ち。<br>祈りの叫び、反響のない音、<br>魂に、平和、私の唯一の願い。</div>
+            <div class="stanza">魂のささやきの中で、私は静寂の中に叫ぶ<br>平和がかすむ場所で、嘆きが生まれる。</div>
+            <div class="stanza">心に、響き渡る叫び、<br>戦争を前にして、平和への深い願い。</div>
+          </div>
+        </div>
+
+        <!-- PORTUGUESE -->
+        <div class="portuges language">
+          <h1 class="handwritten" style="color: #FFFAEC;">Grito pela paz</h1>
+          <div class="poem-text">
+            <div class="stanza">Na tela da vida, traços de dor,<br>Negócios de guerra, um vil erro.<br>Grito em oração, som sem eco,<br>Na alma, a paz, meu único desejo.</div>
+            <div class="stanza">No sussurro da alma, grito em silêncio<br>Onde a paz se desvanece, nasce o lamento.</div>
+            <div class="stanza">No coração, un clamore rotundo,<br>Diante da guerra, desejo de paz profundo.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Music Albums/Chips Section -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4 text-warning">
+          <i class="fab fa-spotify text-success mr-2"></i>
+          <span class="spanish language">Canciones del Poema</span>
+          <span class="ukrainian language">Пісні до вірша</span>
+          <span class="english language">Poem Songs</span>
+        </h2>
+
+        <div class="row justify-content-center">
+          <!-- Album Spanish -->
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="album-card border-success">
+              <img src="songs/karma_espanol.png" class="album-cover" alt="El Libro del Karma">
+              <div class="album-info">
+                <div class="album-title">Versión Castellano</div>
+                <div class="album-artist">El Libro del Karma</div>
+                <a href="https://open.spotify.com/intl-es/album/3aiSHyMT9j4VGNdxA86xSz?si=cIMkWPRcSYaYKAWpwTggkQ" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Album English (Placeholder) -->
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="album-card" style="opacity: 0.6;">
+              <div class="d-flex align-items-center justify-content-center album-cover bg-dark">
+                <i class="fas fa-clock fa-3x text-secondary"></i>
+              </div>
+              <div class="album-info">
+                <div class="album-title">English Version</div>
+                <div class="album-artist">Coming Soon</div>
+                <button class="btn btn-sm btn-outline-secondary mt-2" disabled>Soon</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spotify Iframe -->
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-9">
+            <div id="spotify-player-container">
+              <div id="spotify-placeholder" class="p-5 rounded" style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2); display: none;">
+                <i class="fab fa-spotify fa-3x mb-3 text-success"></i>
+                <p>Música próximamente en este idioma.</p>
+              </div>
+              <iframe id="spotify-iframe" style="border-radius:12px;" src="https://open.spotify.com/embed/album/3aiSHyMT9j4VGNdxA86xSz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Shout for Peace</div>
-        <div class="spanish language" style="display: none;">Grito por la paz</div>
-        <div class="italian language" style="display: none;">Grido per la pace</div>
-        <div class="chinese language" style="display: none;">为和平呼喊</div>
-        <div class="arabic language" style="display: none;">صرخة من أجل السلام</div>
-      </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">Cry for Peace: A canvas of life painted with strokes of pain, a fervent shout for
-          tranquility in a world marred by war.</div>
-        <div class="spanish language" style="display: none;">Grito por la Paz: En el lienzo de la vida, trazos de dolor,
-          un
-          grito ferviente por la tranquilidad en un mundo marcado por la guerra.</div>
-        <div class="italian language" style="display: none;">Grido per la Pace: Una tela di vita dipinta con tratti di
-          dolore,
-          un grido fervente per la tranquillità in un mondo segnato dalla guerra.</div>
-        <div class="chinese language" style="display: none;">呼吁和平：生活的画布上涂满了痛苦的笔触，对一个被战争玷污的世界中的宁静发出的热切呼声。</div>
-        <div class="arabic language" style="display: none;">نداء من أجل السلام: لوحة الحياة مرسومة بضربات من الألم، صرخة
-          حارة
-          للهدوء في عالم مشوه بالحرب.</div>
-        <div class="russian language" style="display: none;">Крик о мире: полотно жизни, расписанное мазками боли,
-          горячий призыв к спокойствию в мире, истерзанном войной.</div>
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Shout for Peace</div>
-        <div class="spanish language" style="display: none;">Grito por la paz</div>
-        <div class="italian language" style="display: none;">Grido per la pace</div>
-        <div class="chinese language" style="display: none;">为和平呼喊</div>
-        <div class="arabic language" style="display: none;">صرخة من أجل السلام</div>
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>On the canvas of life, strokes of pain,</p>
-          <p>Businesses of war, a vile mistake.</p>
-          <p>I shout in prayer, sound without echo,</p>
-          <p>In the soul, peace, my only desire.</p>
-          <br>
-          <p>In the whisper of the soul, I shout in silence</p>
-          <p>Where peace blurs, lamentation is born.</p>
-          <p>In the heart, a resounding plea,</p>
-          <p>Against war, a deep desire for peace.</p>
-          <br>
-          <p>Like a distant echo, resonance of peace,</p>
-          <p>In this world, we seek solace.</p>
-          <p>God created us with His divine essence,</p>
-          <p>Inner peace, our greatest presence.</p>
-          <br>
-          <p>How does it stray in the earthly hustle?</p>
-          <p>Wars for interest, a dark ritual.</p>
-          <p>In every sigh, in every dawn,</p>
-          <p>We shout for peace fervently.</p>
-          <br>
-          <p>Though the storm threatens calm,</p>
-          <p>I maintain my peace, my fire, my flame.</p>
-          <p>In the fabric of divine creation,</p>
-          <p>I shout for peace, my constant routine.</p>
-          <br>
-          <p>May souls awaken to their essence,</p>
-          <p>In inner peace, the true excellence.</p>
-          <p>May nations drop their weapons,</p>
-          <p>May calms be born in every heart.</p>
-          <br>
-          <p>In this poem, in my voice are heard,</p>
-          <p>Shouts for peace, crossing borders.</p>
-          <p>May it resonate in every corner, in every mind,</p>
-          <p>The call for peace, forever.</p>
-
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>En el lienzo de la vida, trazos de dolor,</p>
-          <p>Negocios de guerra, un vil error.</p>
-          <p>Grito en oración, sonido sin eco,</p>
-          <p>En el alma, la paz, mi único anhelo.</p>
-          <br>
-          <p>En el susurro del alma, grito en silencio</p>
-          <p>Donde la paz se desdibuja, nace el lamento.</p>
-          <p>En el corazón, un clamor rotundo,</p>
-          <p>Ante la guerra, la paz deseo profundo.</p>
-          <br>
-          <p>Como un eco lejano, resonancia de paz,</p>
-          <p>En este mundo, buscamos solaz.</p>
-          <p>Dios nos creó con su divina esencia,</p>
-          <p>La paz interior, nuestra mayor presencia.</p>
-          <br>
-          <p>¿Cómo se extravía en el trajín terrenal?</p>
-          <p>Guerras por interés, un oscuro ritual.</p>
-          <p>En cada suspiro, en cada albor,</p>
-          <p>Gritamos por la paz con fervor.</p>
-          <br>
-          <p>Aunque la tormenta amenace la calma,</p>
-          <p>Mantengo mi paz, mi fuego, mi llama.</p>
-          <p>En el tejido de la creación divina,</p>
-          <p>Grito por la paz, mi constante rutina.</p>
-          <br>
-          <p>Que las almas despierten a su esencia,</p>
-          <p>En la paz interior, la verdadera excelencia.</p>
-          <p>Que las naciones dejen caer las armas,</p>
-          <p>Que en cada corazón nazcan calmas.</p>
-          <br>
-          <p>En este poema, en mi voz se escuchan,</p>
-          <p>Gritos por la paz, que fronteras cruzan.</p>
-          <p>Que resuene en cada rincón, en cada mente,</p>
-          <p>La llamada a la paz, eternamente.</p>
-
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>Sulla tela della vita, tratti di dolore,</p>
-          <p>Affari di guerra, un vile errore.</p>
-          <p>Grido in preghiera, suono senza eco,</p>
-          <p>Nell'anima, la pace, il mio unico desiderio.</p>
-          <br>
-          <p>Nel sussurro dell'anima, grido in silenzio</p>
-          <p>Dove la pace si sfuma, nasce il lamento.</p>
-          <p>Nel cuore, un appello profondo,</p>
-          <p>Contro la guerra, desidero profondamente la pace.</p>
-          <br>
-          <p>Come un eco lontano, risonanza di pace,</p>
-          <p>In questo mondo, cerchiamo sollievo.</p>
-          <p>Dio ci ha creati con la sua essenza divina,</p>
-          <p>La pace interiore, la nostra più grande presenza.</p>
-          <br>
-          <p>Come si smarrisce nel trambusto terreno?</p>
-          <p>Guerra per interesse, un rituale oscuro.</p>
-          <p>In ogni sospiro, in ogni alba,</p>
-          <p>Gridiamo per la pace con fervore.</p>
-          <br>
-          <p>Anche se la tempesta minaccia la calma,</p>
-          <p>Mantengo la mia pace, il mio fuoco, la mia fiamma.</p>
-          <p>Nel tessuto della creazione divina,</p>
-          <p>Grido per la pace, la mia routine costante.</p>
-          <br>
-          <p>Che le anime si sveglino alla loro essenza,</p>
-          <p>Nella pace interiore, la vera eccellenza.</p>
-          <p>Che le nazioni lascino cadere le armi,</p>
-          <p>Che nellei cuori nascano le calme.</p>
-          <br>
-          <p>In questa poesia, nella mia voce si ascoltano,</p>
-          <p>Grida per la pace, che attraversano frontiere.</p>
-          <p>Che risuoni in ogni angolo, in ogni mente,</p>
-          <p>L'appello alla pace, eternamente.</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>在生活的画布上，痛苦的笔触，</p>
-          <p>战争的生意，一个卑鄙的错误。</p>
-          <p>我在祷告中呼喊，声音无回响，</p>
-          <p>在灵魂中，和平是我唯一的渴望。</p>
-          <br>
-          <p>在灵魂的低语中，我默默呼喊，</p>
-          <p>当和平模糊时，悲叹诞生。</p>
-          <p>在心中，一个响亮的呼声，</p>
-          <p>面对战争，我深深地渴望和平。</p>
-          <br>
-          <p>如远处的回声，和平的共鸣，</p>
-          <p>在这个世界上，我们寻求安慰。</p>
-          <p>上帝以他的神圣本质创造了我们，</p>
-          <p>内心的和平，是我们最大的存在。</p>
-          <br>
-          <p>它如何在尘世的喧嚣中迷失？</p>
-          <p>因利益而战，一个黑暗的仪式。</p>
-          <p>在每一次叹息，在每一个黎明，</p>
-          <p>我们热切地为和平呼喊。</p>
-          <br>
-          <p>即使暴风雨威胁平静，</p>
-          <p>我保持我的和平，我的火焰，我的光芒。</p>
-          <p>在神圣创造的编织中，</p>
-          <p>我为和平呼喊，这是我的常态。</p>
-          <br>
-          <p>愿灵魂唤醒他们的本质，</p>
-          <p>在内心的和平中，找到真正的卓越。</p>
-          <p>愿各国放下武器，</p>
-          <p>愿每个心中诞生平静。</p>
-          <br>
-          <p>在这首诗中，在我的声音中听到，</p>
-          <p>跨越边界的和平呼喊。</p>
-          <p>愿它在每个角落，在每个心中回响，</p>
-          <p>永恒的和平呼唤。</p>
-
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>على قماش الحياة، ضربات من الألم،</p>
-          <p>أعمال الحرب، خطأ دنيء.</p>
-          <p>أصرخ في الصلاة، صوت بلا صدى،</p>
-          <p>في الروح، السلام، أمنيتي الوحيدة.</p>
-          <br>
-          <p>في همس الروح، أصرخ في الصمت</p>
-          <p>حيث يتلاشى السلام، يولد الندم.</p>
-          <p>في القلب، نداء قوي،</p>
-          <p>أمام الحرب، أتمنى السلام بعمق.</p>
-          <br>
-          <p>كصدى بعيد، صدى السلام،</p>
-          <p>في هذا العالم، نبحث عن العزاء.</p>
-          <p>خلقنا الله بجوهره الإلهي،</p>
-          <p>السلام الداخلي، أعظم حضور لنا.</p>
-          <br>
-          <p>كيف يضل في صخب الدنيوي؟</p>
-          <p>حروب لأجل المصالح، طقوس مظلمة.</p>
-          <p>في كل تنهيدة، في كل فجر،</p>
-          <p>نصرخ من أجل السلام بحماس.</p>
-          <br>
-          <p>حتى وإن هددت العاصفة الهدوء،</p>
-          <p>أحافظ على سلامي، ناري، شعلتي.</p>
-          <p>في نسيج الخلق الإلهي،</p>
-          <p>أصرخ من أجل السلام، روتيني المستمر.</p>
-          <br>
-          <p>لتستيقظ الأرواح لجوهرها،</p>
-          <p>في السلام الداخلي، الامتياز الحقيقي.</p>
-          <p>لتترك الأمم أسلحتها تسقط،</p>
-          <p>ليولد الهدوء في كل قلب.</p>
-          <br>
-          <p>في هذه القصيدة، في صوتي تُسمع،</p>
-          <p>صرخات من أجل السلام، تعبر الحدود.</p>
-          <p>لتتردد في كل ركن، في كل عقل،</p>
-          <p>الدعوة إلى السلام، إلى الأبد.</p>
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-      <div class="russian language" style="display: none;">
-        <br>
-        <div
-          style="line-height: 1.2; color: #ffcc00; background-color: rgba(0,0,0,0.8); font-size: 1.1em; padding: 20px; border-radius: 10px; border: 1px solid #ff5500;">
-          <p>На полотне жизни — мазки боли,</p>
-          <p>Военный бизнес — подлая ошибка.</p>
-          <p>Я кричу в молитве, звук без эха,</p>
-          <p>В душе — мир, мое единственное желание.</p>
-          <br>
-          <p>В шепоте души я кричу в тишине,</p>
-          <p>Где мир тускнеет, рождается плач.</p>
-          <p>В сердце — звучный призыв,</p>
-          <p>Перед войной — глубокое желание мира.</p>
-          <br>
-          <p>Как далекое эхо, резонанс мира,</p>
-          <p>В этом мире мы ищем утешения.</p>
-          <p>Бог создал нас своей божественной сущностью,</p>
-          <p>Внутренний мир — наше величайшее присутствие.</p>
-          <br>
-          <p>Как он теряется в земной суете?</p>
-          <p>Войны за интересы — темный ритуал.</p>
-          <p>В каждом вздохе, в каждом рассвете</p>
-          <p>Мы горячо кричим о мире.</p>
-          <br>
-          <p>Хоть буря и угрожает спокойствию,</p>
-          <p>Я храню свой мир, свой огонь, свое пламя.</p>
-          <p>В ткани божественного творения</p>
-          <p>Я кричу о мире — моя постоянная рутина.</p>
-          <br>
-          <p>Пусть души пробудятся к своей сущности,</p>
-          <p>Во внутреннем мире — истинное совершенство.</p>
-          <p>Пусть народы бросят оружие,</p>
-          <p>Пусть в каждом сердце родится покой.</p>
-          <br>
-          <p>В этой поэме, в моем голосе слышны</p>
-          <p>Крики о мире, пересекающие границы.</p>
-          <p>Пусть он отзовется в каждом уголке, в каждом уме —</p>
-          <p>Призыв к миру, вечно.</p>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

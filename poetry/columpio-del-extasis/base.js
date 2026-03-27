@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'aleman': 'comic_escstasy/comic_aleman.png',
         'frances': 'comic_escstasy/comic_frances.png',
         'japones': 'comic_escstasy/comic_japones.png',
-        'portuges': 'comic_escstasy/comic_portuges.png'
+        'portuges': 'comic_escstasy/comic_portuges.png',
+        'ukrainian': 'comic_escstasy/comic_ukrainian.png'
       };
 
       const audioButtonTexts = {
@@ -43,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'aleman': 'Musik hören',
         'frances': 'Écouter la musique',
         'japones': '音楽を聴く',
-        'portuges': 'Ouvir música'
+        'portuges': 'Ouvir música',
+        'ukrainian': 'Слухати музику'
       };
 
       const spotifyMapping = {

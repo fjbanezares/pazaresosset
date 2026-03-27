@@ -1,76 +1,171 @@
-// $(".buttonAudio").click(function pepito(){
-//   alert("me pulsase")
-//   var audio = new Audio("ifni.mp3");
-//       audio.play();
-//     })
-
-function pepito() {
-  var audio = new Audio("twilight.mp3");
-  audio.play();
-  alert("audio playing");
-}
-
-//document.querySelector(".buttonAudio").addEventListener("click", pepito);
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('language-select').addEventListener('change', function () {
-    // Hide all language elements
-    document.querySelectorAll('.language').forEach(function (element) {
-      element.style.display = 'none';
-    });
+  // --- Initialize Spanish as default ---
+  document.querySelectorAll('.language').forEach(function (element) {
+    element.style.display = 'none';
+  });
+  document.querySelectorAll('.spanish').forEach(function (element) {
+    element.style.display = 'block';
+  });
+  const langSelect = document.getElementById('language-select');
+  if (langSelect) langSelect.value = 'spanish';
 
-    // Show selected language elements
-    document.querySelectorAll('.' + this.value).forEach(function (element) {
-      element.style.display = 'block';
+  // --- Language Selector ---
+  if (langSelect) {
+    langSelect.addEventListener('change', function () {
+      const selectedLanguage = this.value;
+      document.querySelectorAll('.language').forEach(function (element) {
+        element.style.display = 'none';
+      });
+      document.querySelectorAll('.' + selectedLanguage).forEach(function (element) {
+        element.style.display = 'block';
+      });
+
+      const audioButtonTexts = {
+        'spanish': 'Escuchar Música (ES)',
+        'english': 'Listen to Music (EN)',
+        'italian': 'Ascolta la Musica (IT)',
+        'chinese': '听音乐 (ZH)',
+        'arabic': 'استمع إلى الموسيقى (AR)',
+        'russian': 'Слушать музыку (RU)',
+        'aleman': 'Musik hören (DE)',
+        'frances': 'Écouter la musique (FR)',
+        'japones': '音楽を聴く (JA)',
+        'portuges': 'Ouvir música (PT)',
+        'ukrainian': 'Слухати музику (UK)'
+      };
+
+      const spotifyMapping = {
+        'spanish': {
+          'album_link': 'https://open.spotify.com/intl-es/album/3aiSHyMT9j4VGNdxA86xSz?si=cIMkWPRcSYaYKAWpwTggkQ',
+          'album_iframe': 'https://open.spotify.com/embed/album/3aiSHyMT9j4VGNdxA86xSz?utm_source=generator'
+        },
+        'english': {
+          'album_link': '#',
+          'album_iframe': ''
+        }
+      };
+
+      const audioButtonText = document.getElementById('audio-button-text');
+      if (audioButtonText) {
+        audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
+      }
+
+      // Update Spotify link and iframe
+      const spotifyLink = document.getElementById('spotify-link');
+      const spotifyIframe = document.getElementById('spotify-iframe');
+      const spotifyPlaceholder = document.getElementById('spotify-placeholder');
+      
+      const spotifyData = spotifyMapping[selectedLanguage] || spotifyMapping['spanish'];
+      
+      if (spotifyLink) {
+        spotifyLink.href = spotifyData.album_link;
+      }
+      
+      if (spotifyIframe) {
+        if (spotifyData.album_iframe) {
+          spotifyIframe.src = spotifyData.album_iframe;
+          spotifyIframe.style.display = 'block';
+          if (spotifyPlaceholder) spotifyPlaceholder.style.display = 'none';
+        } else {
+          spotifyIframe.style.display = 'none';
+          if (spotifyPlaceholder) spotifyPlaceholder.style.display = 'block';
+        }
+      }
     });
+  }
+
+  // --- Initial Spotify state ---
+  const initialSpotifyData = {
+    'album_link': 'https://open.spotify.com/intl-es/album/3aiSHyMT9j4VGNdxA86xSz?si=cIMkWPRcSYaYKAWpwTggkQ',
+    'album_iframe': 'https://open.spotify.com/embed/album/3aiSHyMT9j4VGNdxA86xSz?utm_source=generator'
+  };
+  const initialSpotifyLink = document.getElementById('spotify-link');
+  const initialSpotifyIframe = document.getElementById('spotify-iframe');
+  const initialSpotifyPlaceholder = document.getElementById('spotify-placeholder');
+  
+  if (initialSpotifyLink) initialSpotifyLink.href = initialSpotifyData.album_link;
+  if (initialSpotifyIframe) {
+    initialSpotifyIframe.src = initialSpotifyData.album_iframe;
+    initialSpotifyIframe.style.display = 'block';
+    if (initialSpotifyPlaceholder) initialSpotifyPlaceholder.style.display = 'none';
+  }
+
+  // --- Scroll Reveal Animation for Stanzas ---
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.stanza').forEach(stanza => {
+    revealObserver.observe(stanza);
   });
 
-  ////
-  // Obtiene todas las imágenes con la clase 'zoom-image'
-  var zoomImages = document.querySelectorAll('.zoom-image');
+  // --- Canvas Effects (Peaceful Ethereal Dust) ---
+  const canvas = document.getElementById('effects-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width, height;
 
-  // Recorre todas las imágenes
-  zoomImages.forEach(function (image) {
-    // Variable para controlar el estado del zoom
-    var isZoomed = false;
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
 
-    // Función para realizar el zoom en la imagen
-    function zoomImage() {
-      if (isZoomed) {
-        image.style.transform = 'scale(1)';
-        isZoomed = false;
-      } else {
-        image.style.transform = 'scale(1.5)';
-        isZoomed = true;
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.3;
+        this.alpha = Math.random() * 0.5 + 0.1;
+        this.color = '255, 255, 255'; // Clean white for peace
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.alpha -= 0.001;
+
+        if (this.alpha <= 0 || this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
       }
     }
 
-    // Asigna el evento touchstart (toque) a la imagen
-    image.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del evento touchstart
-      zoomImage(); // Realiza el zoom en la imagen
+    const particles = [];
+    for (let i = 0; i < 100; i++) {
+      particles.push(new Particle());
+    }
 
-      // Establece un temporizador para reducir el zoom después de 3 segundos
-      setTimeout(function () {
-        zoomImage(); // Reduce el zoom en la imagen después de 3 segundos
-      }, 3000);
-    });
-  });
-
-  ////
-
-
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('language-select').addEventListener('change', function () {
-//     // Hide all descriptions
-//     document.querySelectorAll('.language-desc').forEach(function (element) {
-//       element.style.display = 'none';
-//     });
-
-//     // Show selected language description
-//     document.getElementById(this.value + '-desc').style.display = 'block';
-//   });
-// });
