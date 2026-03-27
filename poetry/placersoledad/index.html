@@ -1,296 +1,232 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>Soledad Que Tanto Me Places</title>
+  <title>Placer Soledad - Paz Arés Osset</title>
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="spanish">🇪🇸 Español</option>
-      <option value="english">🇺🇸 English</option>
-      <option value="italian">🇮🇹 Italiano</option>
-      <option value="chinese">🇨🇳 中文</option>
-      <option value="arabic">🇦🇪 العربية</option>
-      <option value="russian">🇷🇺 Русский</option>
-    </select>
-  </div>
-
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
       </a>
+      <a id="spotify-link" href="#" target="_blank" class="btn btn-spotify d-flex align-items-center">
+        <i class="fab fa-spotify mr-2" style="font-size: 1.2rem;"></i>
+        <span id="audio-button-text">Escuchar Música</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="ukrainian">🇺🇦 Українська</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
 
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+        </a>
 
-      <h1 class="jumbotron-heading">
-        <div class="english language">Solitude That Pleases Me So Much</div>
-        <div class="spanish language" style="display: none;">Soledad Que Tanto Me Places</div>
-        <div class="italian language" style="display: none;">Solitudine Che Tanto Mi Piace</div>
-        <div class="chinese language" style="display: none;">如此让我愉悦的孤独</div>
-        <div class="arabic language" style="display: none;">وحدة التي تروق لي كثيرًا</div>
-        <div class="russian language" style="display: none;">Одиночество, которое мне так нравится</div>
-      </h1>
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">Soledad Que Tanto Me Places</div>
+          <div class="english language">Solitude That Pleases Me So Much</div>
+          <div class="russian language">Одиночество, которое мне так нравится</div>
+          <div class="ukrainian language">Приємна самотність</div>
+          <div class="italian language">Solitudine Che Tanto Mi Piace</div>
+          <div class="chinese language">如此让我愉悦的孤独</div>
+          <div class="arabic language">وحدة التي تروق لي كثيرًا</div>
+          <div class="aleman language">Angenehme Einsamkeit</div>
+          <div class="frances language">Plaisante solitude</div>
+          <div class="japones language">心地よい孤独</div>
+          <div class="portuges language">Prazenteira solidão</div>
+        </h1>
 
-
-      <div class="lead text-muted">
-        <div class="english language">In the tranquil embrace of solitude, where the green pines whisper secrets of the
-          soul.
+        <div class="lead">
+          <div class="spanish language">En el tranquilo abrazo de la soledad, donde los pinos verdes susurran secretos del alma.</div>
+          <div class="english language">In the tranquil embrace of solitude, where the green pines whisper secrets of the soul.</div>
+          <div class="russian language">В тихом объятии одиночества, где зеленые сосны шепчут тайны души.</div>
+          <div class="ukrainian language">У спокійних обіймах самотності, де зелені сосни шепочуть таємниці душі.</div>
+          <div class="italian language">Nell'abbraccio tranquillo della solitudine, dove i pini verdi sussurrano segreti dell'anima.</div>
+          <div class="chinese language">在孤独的宁静怀抱中，绿色的松树低语着灵魂的秘密。</div>
+          <div class="arabic language">في حضن الوحدة الهادئة، حيث تهمس أشجار الصنوبر الخضراء بأسرار الروح.</div>
+          <div class="aleman language">In der ruhigen Umarmung der Einsamkeit, wo die grünen Kiefern Geheimnisse der Seele flüstern.</div>
+          <div class="frances language">Dans l'étreinte tranquille de la solitude, où les pins verts murmurent les secrets de l'âme.</div>
+          <div class="japones language">孤独の穏やかな抱擁の中で、緑の松が魂の秘密をささやきます。</div>
+          <div class="portuges language">No abraço tranquilo da solidão, onde os pinheiros verdes sussurram segredos da alma.</div>
         </div>
-        <div class="spanish language" style="display: none;">En el tranquilo abrazo de la soledad, donde los pinos
-          verdes
-          susurran secretos del alma.</div>
-        <div class="italian language" style="display: none;">Nell'abbraccio tranquillo della solitudine, dove i pini
-          verdi
-          sussurrano segreti dell'anima.</div>
-        <div class="chinese language" style="display: none;">在孤独的宁静怀抱中，绿色的松树低语着灵魂的秘密。</div>
-        <div class="arabic language" style="display: none;">في حضن الوحدة الهادئة، حيث تهمس أشجار الصنوبر الخضراء بأسرار
-          الروح.
+      </div>
+    </section>
+
+    <section class="multilingual-description py-5" style="background-color: transparent;">
+      <div class="container text-center">
+
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #90EE90;">Soledad Que Tanto Me Places</h1>
+          <div class="poem-text">
+            <div class="stanza">Tranquila poesía de un día soleado<br>Donde todo parece ralentizado<br>Donde todo se mece en la caricia del aire suave<br>Donde el verde pinar me da su clave.</div>
+            <div class="stanza">Verde oloroso, verde pino<br>Verde musgo, verde oro<br>Verde triste, verde alegre<br>Verde eterno, verde sonoro<br>Verde sombra, verde grave<br>Verde solo acompañado<br>Soledad verde y tranquila<br>Espíritu acompasado<br>Placentera soledad.</div>
+          </div>
         </div>
-        <div class="russian language" style="display: none;">В тихом объятии одиночества, где зеленые сосны шепчут тайны
-          души.</div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #90EE90;">Solitude That Pleases Me So Much</h1>
+          <div class="poem-text">
+            <div class="stanza">Tranquil poetry of a sunny day<br>Where everything seems slowed down<br>Where everything sways in the caress of the soft air<br>Where the green pine gives me its key.</div>
+            <div class="stanza">Fragrant green, pine green<br>Moss green, gold green<br>Sad green, happy green<br>Eternal green, sonorous green<br>Shadow green, grave green<br>Green only accompanied<br>Green and tranquil solitude<br>Measured spirit<br>Pleasant solitude.</div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #90EE90;">Одиночество, которое мне так нравится</h1>
+          <div class="poem-text">
+            <div class="stanza">Спокойная поэзия солнечного дня,<br>Где всё кажется замедленным,<br>Где всё качается в ласке нежного воздуха,<br>Где зеленый сосновый бор дает мне свой ключ.</div>
+            <div class="stanza">Душистая зелень, сосновая зелень,<br>Мховая зелень, золотая зелень,<br>Грустная зелень, веселая зелень,<br>Вечная зелень, звучная зелень,<br>Теневая зелень, серьезная зелень,<br>Зелень только в сопровождении,<br>Зеленое и спокойное одиночество,<br>Размеренный дух,<br>Приятное одиночество.</div>
+          </div>
+        </div>
+
+        <!-- UKRAINIAN -->
+        <div class="ukrainian language">
+          <h1 class="handwritten" style="color: #90EE90;">Приємна самотність</h1>
+          <div class="poem-text">
+            <div class="stanza">Спокійна поезія сонячного дня,<br>Де все здається сповільненим,<br>Де все гойдається в ласці ніжного повітря,<br>Де зелений сосновий бір дає мені свій ключ.</div>
+            <div class="stanza">Ароматна зелень, соснова зелень,<br>Мохово-зелена, золото-зелена,<br>Сумна зелень, весела зелень,<br>Вічна зелень, звучна зелень,<br>Тіниста зелень, серйозна зелень,<br>Зелень лише в супроводі,<br>Зелена і спокійна самотність,<br>Ритмічний дух,<br>Приємна самотність.</div>
+          </div>
+        </div>
+
+        <!-- Other languages: Italian, Chinese, Arabic, French, German, Japanese, Portuguese -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #90EE90;">Solitudine Che Tanto Mi Piace</h1>
+          <div class="poem-text">
+            <div class="stanza">Poesia tranquilla di un giorno soleggiato<br>Dove tutto sembra rallentato<br>Dove tutto dondola nella carezza dell'aria dolce<br>Dove il verde pino mi dà la sua chiave.</div>
+            <div class="stanza">Verde profumato, verde pino<br>Verde muschio, verde oro<br>Verde triste, verde felice<br>Verde eterno, verde sonoro<br>Verde ombra, verde grave<br>Verde solo accompagnato<br>Solitudine verde e tranquilla<br>Spirito misurato<br>Piacevole solitudine.</div>
+          </div>
+        </div>
+
+        <div class="chinese language">
+          <h1 class="handwritten" style="color: #90EE90;">如此让我愉悦的孤独</h1>
+          <div class="poem-text">
+            <div class="stanza">阳光明媚的日子里的宁静诗篇<br>一切似乎都慢了下来<br>一切都在柔和的空气抚摸中摇摆<br>绿色的松树给了我它的钥匙。</div>
+            <div class="stanza">芬芳的绿色，松绿色<br>苔藓绿，金绿<br>悲伤的绿色，快乐的绿色<br>永恒的绿色，洪亮的绿色<br>阴影绿，严肃绿<br>只有陪伴的绿色<br>绿色和宁静的孤独<br>测量的精神<br>愉快的孤独。</div>
+          </div>
+        </div>
+
+        <div class="arabic language">
+          <h1 class="handwritten" style="color: #90EE90;">وحدة التي تروق لي كثيرًا</h1>
+          <div class="poem-text">
+            <div class="stanza">شعر هادئ ليوم مشمس<br>حيث يبدو كل شيء متباطئًا<br>حيث يتأرجح كل شيء في لمسة الهواء الناعم<br>حيث يمنحني الصنوبر الأخضر مفتاحه.</div>
+            <div class="stanza">أخضر معطر، أخضر الصنوبر<br>أخضر الطحالب، أخضر الذهب<br>أخضر حزين، أخضر سعيد<br>أخضر أبدي، أخضر جهير<br>ظل أخضر، أخضر خطير<br>أخضر فقط برفقة<br>وحدة خضراء وهادئة<br>روح مقاسة<br>وحدة ممتعة.</div>
+          </div>
+        </div>
+
+        <div class="aleman language">
+          <h1 class="handwritten" style="color: #90EE90;">Angenehme Einsamkeit</h1>
+          <div class="poem-text">
+            <div class="stanza">Ruhige Poesie eines sonnigen Tages,<br>Wo alles verlangsamt scheint,<br>Wo alles im Liebkoisen der sanften Luft schwingt,<br>Wo der grüne Kiefernwald mir seinen Schlüssel gibt.</div>
+            <div class="stanza">Duftendes Grün, Kieferngrün,<br>Moosgrün, Goldgrün,<br>Trauriges Grün, fröhliches Grün,<br>Ewiges Grün, tönendes Grün,<br>Schattengrün, ernstes Grün,<br>Grün nur begleitet,<br>Grüne und ruhige Einsamkeit,<br>Im Takt des Geistes,<br>Angenehme Einsamkeit.</div>
+          </div>
+        </div>
+
+        <div class="frances language">
+          <h1 class="handwritten" style="color: #90EE90;">Plaisante solitude</h1>
+          <div class="poem-text">
+            <div class="stanza">Tranquille poésie d'un jour ensoleillé,<br>Où tout semble ralenti,<br>Où tout se balance dans la caresse de l'air doux,<br>Où la pinède verte me donne sa clé.</div>
+            <div class="stanza">Vert odorant, vert pin,<br>Vert mousse, vert or,<br>Vert triste, vert joyeux,<br>Vert éternel, vert sonore,<br>Vert ombre, vert grave,<br>Vert seulement accompagné,<br>Solitude verte et tranquille,<br>Esprit cadencé,<br>Plaisante solitude.</div>
+          </div>
+        </div>
+
+        <div class="japones language">
+          <h1 class="handwritten" style="color: #90EE90;">心地よい孤独</h1>
+          <div class="poem-text">
+            <div class="stanza">晴れた日の穏やかな詩、<br>すべてがゆっくりと感じられる場所、<br>柔らかな空気の愛撫にすべてが揺れる場所、<br>緑の松林が私にその鍵をくれる場所。</div>
+            <div class="stanza">香る緑、松の緑、<br>苔の緑、金の緑、<br>悲しい緑、幸せな緑、<br>永遠の緑、響き渡る緑、<br>影の緑、厳かな緑、<br>ただ寄り添う緑、<br>緑の穏やかな孤独、<br>調和した精神、<br>心地よい孤独。</div>
+          </div>
+        </div>
+
+        <div class="portuges language">
+          <h1 class="handwritten" style="color: #90EE90;">Prazenteira solidão</h1>
+          <div class="poem-text">
+            <div class="stanza">Tranquila poesia de um dia ensolarado,<br>Onde tudo parece desacelerado,<br>Onde tudo se balança na carícia do ar suave,<br>Onde o pinhal verde me dá sua chave.</div>
+            <div class="stanza">Verde cheiroso, verde pino,<br>Verde musgo, verde ouro,<br>Verde triste, verde alegre,<br>Verde eterno, verde sonoro,<br>Verde sombra, verde grave,<br>Verde apenas acompanhado,<br>Solidão verde e tranquila,<br>Espírito acompassado,<br>Prazenteira solidão.</div>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </section>
+      <!-- Music Section -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4 text-success">
+          <i class="fab fa-spotify mr-2"></i>
+          <span class="spanish language">Canciones del Poema</span>
+          <span class="russian language">Песни до стихотворения</span>
+          <span class="ukrainian language">Пісні до вірша</span>
+          <span class="english language">Poem Songs</span>
+        </h2>
 
-  <!-- Multimedia Section: Comic & Audio -->
-  <section class="text-center pb-5 pt-3" style="background-color: #000000;">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="d-flex justify-content-center align-items-center mb-3">
-            <a id="audio-button" href="#" target="_blank" class="btn btn-sm rounded-pill mx-2 px-4 py-2"
-              style="background: linear-gradient(45deg, #1DB954, #1ed760); color: white; border: none; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(30, 215, 96, 0.4); text-transform: uppercase;">
-              <i class="fas fa-play mr-2"></i> <span id="audio-button-text">Escuchar Música</span>
-            </a>
-            <a href="../../linktree.html" class="btn btn-outline-light btn-sm rounded-pill mx-2 px-3">
-              <i class="fas fa-link"></i> Linktree
-            </a>
+        <div class="row justify-content-center">
+          <!-- Album Spanish -->
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="album-card">
+              <img src="songs/soledad_es.png" class="album-cover" alt="Placer Soledad ES">
+              <div class="album-info">
+                <div class="album-title">Versión Castellano</div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="https://open.spotify.com/intl-es/album/6CYcCa7JLOUxMg73MkSnju?si=HLDmvAOcRc6jsxjGRy9uiA" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Album Russian -->
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="album-card">
+              <img src="songs/soledad_ru.png" class="album-cover" alt="Placer Soledad RU">
+              <div class="album-info">
+                <div class="album-title">Русская версия</div>
+                <div class="album-artist">Пас Арес Оссет</div>
+                <a href="https://open.spotify.com/album/1FOXBeSKtgwe0X8MUHTyFn?si=LfPYTipnSN-Bp2vwtqAe_Q" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spotify Iframe -->
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-9">
+            <div id="spotify-player-container">
+              <iframe id="spotify-iframe" style="border-radius:12px;" src="https://open.spotify.com/embed/album/6CYcCa7JLOUxMg73MkSnju?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Solitude That Pleases Me So Much</div>
-        <div class="spanish language" style="display: none;">Soledad Que Tanto Me Places</div>
-        <div class="italian language" style="display: none;">Solitudine Che Tanto Mi Piace</div>
-        <div class="chinese language" style="display: none;">如此让我愉悦的孤独</div>
-        <div class="arabic language" style="display: none;">وحدة التي تروق لي كثيرًا</div>
-        <div class="russian language" style="display: none;">Одиночество, которое мне так нравится</div>
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Solitude That Pleases Me So Much</p>
-          <p>Tranquil poetry of a sunny day</p>
-          <p>Where everything seems slowed down</p>
-          <p>Where everything sways in the caress of the soft air</p>
-          <p>Where the green pine gives me its key.</p>
-          <p>Fragrant green, pine green</p>
-          <p>Moss green, gold green</p>
-          <p>Sad green, happy green</p>
-          <p>Eternal green, sonorous green</p>
-          <p>Shadow green, grave green</p>
-          <p>Green only accompanied</p>
-          <p>Green and tranquil solitude</p>
-          <p>Measured spirit</p>
-          <p>Pleasant solitude.</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Tranquila poesía de un día soleado</p>
-          <p>Donde todo parece ralentizado</p>
-          <p>Donde todo se mece en la caricia del aire suave</p>
-          <p>Donde el verde pinar me da su clave.</p>
-          <p>Verde oloroso, verde pino</p>
-          <p>Verde musgo, verde oro</p>
-          <p>Verde triste, verde alegre</p>
-          <p>Verde eterno, verde sonoro</p>
-          <p>Verde sombra, verde grave</p>
-          <p>Verde solo acompañado</p>
-          <p>Soledad verde y tranquila</p>
-          <p>Espíritu acompasado</p>
-          <p>Placentera soledad.</p>
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Poesia tranquilla di un giorno soleggiato</p>
-          <p>Dove tutto sembra rallentato</p>
-          <p>Dove tutto dondola nella carezza dell'aria dolce</p>
-          <p>Dove il verde pino mi dà la sua chiave.</p>
-          <p>Verde profumato, verde pino</p>
-          <p>Verde muschio, verde oro</p>
-          <p>Verde triste, verde felice</p>
-          <p>Verde eterno, verde sonoro</p>
-          <p>Verde ombra, verde grave</p>
-          <p>Verde solo accompagnato</p>
-          <p>Solitudine verde e tranquilla</p>
-          <p>Spirito misurato</p>
-          <p>Piacevole solitudine.</p>
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>如此让我愉悦的孤独</p>
-          <p>阳光明媚的日子里的宁静诗篇</p>
-          <p>一切似乎都慢了下来</p>
-          <p>一切都在柔和的空气抚摸中摇摆</p>
-          <p>绿色的松树给了我它的钥匙。</p>
-          <p>芬芳的绿色，松绿色</p>
-          <p>苔藓绿，金绿</p>
-          <p>悲伤的绿色，快乐的绿色</p>
-          <p>永恒的绿色，洪亮的绿色</p>
-          <p>阴影绿，严肃绿</p>
-          <p>只有陪伴的绿色</p>
-          <p>绿色和宁静的孤独</p>
-          <p>测量的精神</p>
-          <p>愉快的孤独。</p>
-
-        </div>
-        <br>
-
-
-      </div>
-      <div class="arabic language" style="display: none;">
-        <br>
-        <div
-          style="line-height: 0.8; color: limegreen; background-color: rgba(0,0,0,0.8); font-size: 0.7em; padding: 20px; border-radius: 10px; border: 1px solid limegreen;">
-          <p>وحدة التي تروق لي كثيرًا</p>
-          <p>شعر هادئ ليوم مشمس</p>
-          <p>حيث يبدو كل شيء متباطئًا</p>
-          <p>حيث يتأرجح كل شيء في لمسة الهواء الناعم</p>
-          <p>حيث يمنحني الصنوبر الأخضر مفتاحه.</p>
-          <p>أخضر معطر، أخضر الصنوبر</p>
-          <p>أخضر الطحالب، أخضر الذهب</p>
-          <p>أخضر حزين، أخضر سعيد</p>
-          <p>أخضر أبدي، أخضر جهير</p>
-          <p>ظل أخضر، أخضر خطير</p>
-          <p>أخضر فقط برفقة</p>
-          <p>وحدة خضراء وهادئة</p>
-          <p>روح مقاسة</p>
-          <p>وحدة ممتعة.</p>
-        </div>
-      </div>
-
-      <div class="russian language" style="display: none;">
-        <br>
-        <div
-          style="line-height: 0.8; color: limegreen; background-color: rgba(0,0,0,0.8); font-size: 0.7em; padding: 20px; border-radius: 10px; border: 1px solid limegreen;">
-          <p>Спокойная поэзия солнечного дня,</p>
-          <p>Где всё кажется замедленным,</p>
-          <p>Где всё качается в ласке нежного воздуха,</p>
-          <p>Где зеленый сосновый бор дает мне свой ключ.</p>
-          <p>Душистая зелень, сосновая зелень,</p>
-          <p>Мховая зелень, золотая зелень,</p>
-          <p>Грустная зелень, веселая зелень,</p>
-          <p>Вечная зелень, звучная зелень,</p>
-          <p>Теневая зелень, серьезная зелень,</p>
-          <p>Зелень только в сопровождении,</p>
-          <p>Зеленое и спокойное одиночество,</p>
-          <p>Размеренный дух,</p>
-          <p>Приятное одиночество.</p>
-        </div>
-      </div>
-
-
-    </div>
-
-    <!-- Comic Section -->
-    <div class="container mt-5 mb-5 text-center">
-      <img id="comic-image" src="comic_placer_soledad/comic_spanish.png" class="img-fluid rounded shadow-lg"
-        alt="Arte del poema" style="max-height: 800px; border: 1px solid #333;">
-    </div>
-
-  </section>
-
-  <!-- js here -->
   <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

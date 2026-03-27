@@ -1,0 +1,12 @@
+PLATER SOLEDAD - ENLACES DE MÚSICA
+
+CASTELLANO:
+- Link: https://open.spotify.com/intl-es/album/6CYcCa7JLOUxMg73MkSnju?si=HLDmvAOcRc6jsxjGRy9uiA
+- Iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6CYcCa7JLOUxMg73MkSnju?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+RUSO:
+- Link: https://open.spotify.com/album/1FOXBeSKtgwe0X8MUHTyFn?si=LfPYTipnSN-Bp2vwtqAe_Q
+- Iframe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1FOXBeSKtgwe0X8MUHTyFn?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+INGLÉS:
+(Pendiente)
