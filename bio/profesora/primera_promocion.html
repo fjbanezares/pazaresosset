@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera de Promoción | La Profesora - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        /* Document showcase styling */
+        .document-showcase {
+            max-width: 900px;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .document-frame {
+            position: relative;
+            display: inline-block;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.7),
+                0 0 30px rgba(255, 215, 0, 0.08),
+                inset 0 0 80px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            max-width: 100%;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .document-frame:hover {
+            box-shadow:
+                0 30px 70px rgba(0,0,0,0.8),
+                0 0 50px rgba(255, 215, 0, 0.15);
+            border-color: var(--gold);
+            transform: scale(1.02);
+        }
+
+        .document-frame img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+        }
+
+        .document-caption {
+            margin-top: 20px;
+            font-family: 'Lora', serif;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .document-caption strong {
+            color: var(--gold);
+        }
+
+        /* Suárez context box */
+        .suarez-context {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(100, 130, 180, 0.05));
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: 20px;
+            padding: 40px 35px;
+            max-width: 900px;
+            margin: 50px auto;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .suarez-context .context-icon {
+            font-size: 3rem;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .suarez-context h3 {
+            font-family: 'Philosopher', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .suarez-context p {
+            font-size: 0.98rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* Letter transcription */
+        .letter-transcription {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 35px 30px;
+            max-width: 750px;
+            margin: 40px auto;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .letter-transcription .letter-header {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .letter-transcription .salutation {
+            font-style: italic;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .letter-transcription .signature {
+            text-align: right;
+            margin-top: 25px;
+            font-weight: 600;
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .suarez-context {
+                flex-direction: column;
+                gap: 15px;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-back">
+            <span>←</span>
+            <img src="../../logopazares.png" alt="Logo">
+            <span>La Profesora</span>
+        </a>
+    </nav>
+
+    <header class="hero" style="background-image: linear-gradient(to bottom, rgba(5,5,5,0.4), #050505), url('oposiciones_suarez.png');">
+        <div class="hero-content">
+            <div class="hero-badge">Subcapítulo IV</div>
+            <h1>De las Primeras de Promoción</h1>
+            <p class="hero-sub">Cómo Paz entró al cuerpo de funcionarios por nota y lideró una comunicación con Adolfo Suárez para que se reconociera la excelencia.</p>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <!-- Panel: Acceso Directo -->
+        <article class="panel fade-in">
+            <div class="panel-image">
+                <img src="oposiciones_suarez.png" alt="Paz en la ceremonia de reconocimiento">
+            </div>
+            <div class="panel-text">
+                <h2>Funcionaria sin Oposiciones</h2>
+                <p>Lo que muy pocos saben es que Paz <strong>no necesitó presentarse a oposiciones</strong> para entrar al cuerpo de funcionarios de educación. Con apenas 19 años, su expediente académico brillante le abrió las puertas del funcionariado a través de una vía que hoy resultaría impensable: el <strong>acceso directo</strong> por excelencia académica.</p>
+                <p>Gracias al <strong>Plan de Estudios de Magisterio de 1967</strong>, los alumnos más sobresalientes de las Escuelas Normales —aquellos que obtenían un expediente impecable y una nota media de al menos 8 sobre 10, sin ni una sola asignatura suspensa— podían acceder directamente al Cuerpo de Profesores de EGB <strong>sin pasar por el filtro de las oposiciones</strong>. Paz fue, naturalmente, una de las elegidas.</p>
+            </div>
+        </article>
+
+        <!-- DOCUMENTO: Título de Maestra -->
+        <div class="document-showcase fade-in">
+            <div class="document-frame">
+                <img src="titulo_maestra.jpg" alt="Título de Maestra de Primera Enseñanza de María de la Paz Arés Osset, expedido en Madrid el 31 de julio de 1973">
+            </div>
+            <p class="document-caption">
+                <strong>Título de Maestra de Primera Enseñanza</strong> expedido a nombre de Doña María de la Paz Arés Osset, nacida el 29 de octubre de 1954 en Sidi-Ifni. Otorgado por S.E. el Jefe del Estado Español a través del Ministro de Educación y Ciencia, tras haber demostrado su suficiencia en la Escuela Normal de Ávila. Dado en Madrid, a 31 de julio de 1973.
+            </p>
+        </div>
+
+        <!-- ANÁLISIS: El Decreto 375/1974 y el Acceso Directo -->
+        <div class="suarez-context fade-in">
+            <div class="context-icon">📜</div>
+            <div>
+                <h3>El Plan de 1967 y el Acceso Directo</h3>
+                <p>El <strong>Plan de Estudios de Magisterio de 1967</strong> fue una de las reformas educativas más ambiciosas de la España del siglo XX. Por primera vez, la carrera de Magisterio exigía estar en posesión del <em>Bachillerato Superior</em>, elevando significativamente el nivel de formación de los futuros maestros. El plan era generalista, formaba «maestros globales y tutores», y daba una importancia sin precedentes a las prácticas (todo el tercer año era práctico y remunerado).</p>
+                <p>Pero su innovación más audaz fue el <strong>sistema de acceso directo al funcionariado</strong>: el 10% de los alumnos de cada promoción con los mejores expedientes académicos —nota media de al menos 8 sobre 10 y sin ninguna asignatura suspensa en toda la carrera— podían ingresar directamente en el Cuerpo de Profesores de Enseñanza General Básica, <strong>sin necesidad de presentarse a las tradicionales oposiciones</strong>.</p>
+                <p>Este sistema partía de una premisa sencilla y poderosa: <strong>si un alumno ha demostrado excelencia constante durante tres años de formación intensiva, su capacidad ya está más que probada</strong>. ¿Para qué someterlo a un nuevo examen que, en el fondo, evalúa lo mismo que ya ha sido evaluado exhaustivamente?</p>
+            </div>
+        </div>
+
+        <div class="suarez-context fade-in">
+            <div class="context-icon">⚖️</div>
+            <div>
+                <h3>El Decreto 375/1974: la Amenaza</h3>
+                <p>En febrero de 1974, el Gobierno publicó el <strong>Decreto nº 375/1974</strong>, una norma transitoria que regulaba el acceso al Cuerpo de Profesores de EGB ante la urgencia de cubrir <strong>123.500 plazas docentes</strong> presupuestadas para ese año. El decreto establecía dos vías: el acceso directo (para expedientes sobresalientes) y el concurso-oposición libre.</p>
+                <p>Sin embargo, los criterios del nuevo decreto <strong>amenazaban con cambiar las reglas del juego</strong> para la 4ª promoción del Plan de 1967 —la promoción de Paz—. Las listas calificatorias y la adjudicación de plazas se iban a regir por normas distintas a las que se habían aplicado a la 3ª promoción, lo que significaba que alumnos igualmente brillantes podían verse perjudicados por un cambio normativo retroactivo.</p>
+                <p>Fue entonces cuando Paz, con apenas 19 años; y de la mano de otros maestros de Ávila, <strong>tomó la pluma y escribió directamente a Adolfo Suárez</strong> para defender sus derechos.</p>
+            </div>
+        </div>
+
+        <div class="suarez-context fade-in">
+            <div class="context-icon">💡</div>
+            <div>
+                <h3>¿Era Justo el Acceso Directo?</h3>
+                <p>El acceso directo por excelencia académica era, sencillamente, <strong>una de las medidas más justas y eficaces que ha tenido jamás el sistema educativo español</strong>. Y merece la pena reflexionar sobre por qué.</p>
+                <p>Un alumno que mantiene un expediente sobresaliente durante tres años consecutivos, con prácticas incluidas, ha superado <em>decenas de evaluaciones</em> en pedagogía, psicología, didáctica, prácticas de aula y materias específicas. Ha demostrado constancia, capacidad, vocación y resistencia. ¿Qué puede demostrar un examen puntual de oposiciones que tres años de excelencia continuada no hayan demostrado ya?</p>
+                <p>Hoy en día, este sistema <strong>no se practica</strong>. Desde 1985, el acceso directo fue eliminado. Todos los aspirantes al cuerpo docente deben pasar por oposiciones, independientemente de su expediente académico. Un alumno brillante con matrícula de honor en todo recibe exactamente el mismo trato que uno que aprobó raspando: ambos deben memorizar un temario y superar un examen que, en muchos casos, mide más la capacidad de memorización que la auténtica vocación pedagógica.</p>
+                <p><strong>Paz fue beneficiaria de un sistema que premiaba la excelencia real.</strong> Un sistema que reconocía que los mejores maestros no se forjan en un examen de oposiciones, sino en la entrega diaria, en el amor por aprender, en la dedicación constante. Quizá algún día la educación española redescubra esta verdad.</p>
+            </div>
+        </div>
+
+        <!-- Texto sobre la carta -->
+        <div class="text-block fade-in">
+            <h2>La Respuesta de Adolfo Suárez</h2>
+            <p>Ante el agravio del Decreto 375/1974, Paz no se quedó cruzada de brazos. Lideró una comunicación formal dirigida a <strong>Adolfo Suárez</strong>, en representación de los maestros de su promoción en Ávila, pidiendo que las reglas del acceso directo no cambiaran retroactivamente para su generación.</p>
+            <p>Y la respuesta que recibió es un documento histórico que dice tanto de quien escribe como de quien responde.</p>
+        </div>
+
+        <!-- Contexto sobre Adolfo Suárez -->
+        <div class="suarez-context fade-in">
+            <div class="context-icon">🏛️</div>
+            <div>
+                <h3>¿Quién era Adolfo Suárez?</h3>
+                <p><strong>Adolfo Suárez González</strong> (1932–2014) fue el político que pilotó la Transición española hacia la democracia, convirtiéndose en el primer Presidente del Gobierno elegido tras el franquismo. Fue un hombre de Estado que apostó por el diálogo, la reconciliación y la modernización de España. Pero más allá de los grandes gestos históricos, Suárez era un político que <strong>leía y respondía personalmente</strong> a los ciudadanos que le escribían.</p>
+                <p>En la época en que Paz le dirigió su petición (1974), Suárez era Presidente de la <em>Empresa Nacional de Turismo</em> y ya un político influyente. Lo extraordinario de esta historia no es solo que Paz se atreviera a escribirle, sino que <strong>Suárez respondió personalmente</strong>, con cercanía, con respeto, y —lo que es más importante— <strong>actuó</strong>: trasladó la petición directamente al Ministro de Educación y Ciencia en apoyo de las pretensiones de aquellos jóvenes maestros.</p>
+            </div>
+        </div>
+
+        <!-- DOCUMENTO: Carta de Adolfo Suárez -->
+        <div class="document-showcase fade-in">
+            <div class="document-frame">
+                <img src="carta_adolfo_suarez.jpg" alt="Carta de Adolfo Suárez a Mari Paz Arés Osset, 11 de marzo de 1974">
+            </div>
+            <p class="document-caption">
+                <strong>Carta original de Adolfo Suárez</strong> dirigida a la Srta. Mari Paz Arés Osset en Ávila, fechada el 11 de marzo de 1974. Un documento histórico que testimonia la valentía de una joven maestra y la respuesta de un político comprometido con la justicia.
+            </p>
+        </div>
+
+        <!-- Transcripción de la carta -->
+        <div class="letter-transcription fade-in">
+            <div class="letter-header">
+                Empresa Nacional de Turismo, S.A. — Presidente<br>
+                Velázquez, 47 — Madrid<br>
+                11 de marzo de 1974
+            </div>
+            <p class="salutation">Querida amiga:</p>
+            <p>He recibido el escrito que Vd. me dirige con fecha 2 de los corrientes y que firman también otros diversos maestros de esa provincia, relacionado con la instancia dirigida al Ministro de Educación y Ciencia interesando que el Decreto de 7 de febrero nº 375/1974 no sea de aplicación a la 4ª promoción de 1967 por entender que las listas calificatorias y la adjudicación de plazas de acceso directo al profesorado de Enseñanza General Básica, se deben hacer bajo las mismas normas que se aplicaron a los maestros de la 3ª promoción en el citado Plan.</p>
+            <p>Creo sinceramente que es muy justa su petición, y me complazco en comunicarle que con esta misma fecha me he dirigido al Ministro de Educación y Ciencia en apoyo de sus pretensiones.</p>
+            <p>Me gustaría muchísimo poderle comunicar buenas noticias, y con esa esperanza me despido de Vd. con un cordial saludo,</p>
+            <p class="signature">Adolfo Suárez</p>
+        </div>
+
+        <!-- Reflexión final -->
+        <div class="text-block fade-in">
+            <h2>La Valentía de Pedir</h2>
+            <p>Aquella carta, escrita con la misma pluma que más tarde compondría poesía y pintaría cuadros, reflejaba la esencia de Paz: <strong>la valentía de quien cree que las cosas pueden ser mejores y se atreve a pedirlo</strong>. No esperó a que alguien más lo hiciera. No miró si era "apropiado" o "políticamente correcto". Simplemente lo hizo.</p>
+            <p>Y encontró al otro lado a un político que, en lugar de archivar la carta en un cajón, <strong>la tomó en serio, la valoró y actuó en consecuencia</strong>. Un ejemplo que honra tanto a quien escribe como a quien responde.</p>
+        </div>
+
+        <nav class="page-nav">
+            <a href="concurso_literario.html">← El Concurso Literario</a>
+            <a href="index.html" class="next">Volver al índice →</a>
+        </nav>
+    </main>
+
+    <footer><p>© <span id="year"></span> Paz Arés Osset · La Profesora</p></footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

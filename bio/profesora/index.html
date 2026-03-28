@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Profesora | Paz Arés Osset - Biografía</title>
+    <meta name="description" content="Mari Paz Arés Osset, 42 años como funcionaria de educación. Una profesora adelantada a su tiempo que transformó la enseñanza con amor, arte y psicología.">
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --dark-gold: #B8860B;
+            --accent: #FF4C68;
+            --bg-dark: #050505;
+            --glass-bg: rgba(15, 15, 15, 0.85);
+            --glass-border: rgba(255, 215, 0, 0.15);
+            --text-muted: #aaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Hero */
+        #hero {
+            height: 100vh;
+            min-height: 650px;
+            width: 100%;
+            background:
+                linear-gradient(to bottom, rgba(5,5,5,0.3) 0%, rgba(5,5,5,0.15) 40%, rgba(5,5,5,0.85) 80%, var(--bg-dark) 100%),
+                url('profesora_hero.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 76, 104, 0.2);
+            border: 1px solid rgba(255, 76, 104, 0.4);
+            color: var(--accent);
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 5.5rem;
+            color: var(--gold);
+            text-shadow: 2px 4px 20px rgba(0,0,0,0.8);
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.9);
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 20px;
+        }
+
+        .stat-number {
+            font-family: 'Philosopher', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.55);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        .intro-text {
+            max-width: 800px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin: 40px auto 0;
+            font-weight: 300;
+            text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
+            color: rgba(255,255,255,0.85);
+        }
+
+        /* Navigation */
+        .nav-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.95), transparent);
+            transition: background 0.3s;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        .nav-back img { height: 35px; }
+
+        /* Chapter Grid */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 60px 30px 80px;
+            margin: 0 auto;
+        }
+
+        .chapter-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 35px 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .chapter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .chapter-card:hover::before { opacity: 1; }
+
+        .chapter-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 20px rgba(255, 215, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card-number {
+            font-family: 'Philosopher', serif;
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .chapter-card h2 {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .chapter-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .card-action {
+            margin-top: 20px;
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .chapter-card:hover .card-action {
+            color: var(--accent);
+        }
+
+        .card-action .arrow {
+            transition: transform 0.3s;
+        }
+
+        .chapter-card:hover .card-action .arrow {
+            transform: translateX(5px);
+        }
+
+        /* Upcoming badge */
+        .badge-upcoming {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.08);
+            color: var(--text-muted);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.8);
+            border-top: 1px solid var(--glass-border);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3.2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .hero-stats { gap: 30px; }
+            .stat-number { font-size: 2.5rem; }
+            .intro-text { font-size: 1rem; }
+            .nav-top { padding: 10px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-top">
+        <a href="../index.html" class="nav-back">
+            <span>←</span>
+            <img src="../../logopazares.png" alt="Logo Paz Arés">
+            <span>Biografía</span>
+        </a>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-badge">Capítulo III</div>
+        <h1>La Profesora</h1>
+        <p class="hero-subtitle">«Educar no es llenar un recipiente, sino encender una llama.»</p>
+        <div class="hero-stats">
+            <div>
+                <span class="stat-number">42</span>
+                <span class="stat-label">Años de Servicio</span>
+            </div>
+            <div>
+                <span class="stat-number">∞</span>
+                <span class="stat-label">Vidas Tocadas</span>
+            </div>
+            <div>
+                <span class="stat-number">Top</span>
+                <span class="stat-label">De las Primeras</span>
+            </div>
+        </div>
+        <p class="intro-text">
+            Mari Paz Arés Osset fue funcionaria de educación del Estado durante 42 años. Adelantada a su tiempo, impulsó una educación en valores usando la psicología, el amor y el arte, décadas antes de que métodos como Montessori o Waldorf se popularizaran en España.
+        </p>
+    </section>
+
+    <div class="chapter-grid">
+        <a href="educacion_valores.html" class="chapter-card">
+            <div class="card-icon">🌟</div>
+            <div class="card-number">Subcapítulo I</div>
+            <h2>Educación en Valores</h2>
+            <p>Una visión adelantada a su tiempo: psicología, amor y arte al servicio de la enseñanza. Los niños que contaban las horas el domingo esperando el lunes. Las inspecciones del Ministerio.</p>
+            <div class="card-action">Leer historia <span class="arrow">→</span></div>
+        </a>
+
+        <a href="montessori_waldorf.html" class="chapter-card">
+            <div class="card-icon">🌱</div>
+            <div class="card-number">Subcapítulo II</div>
+            <h2>Montessori & Waldorf</h2>
+            <p>Las pedagogías alternativas que hoy buscan las familias más exigentes, Paz las llevaba en el alma décadas antes de que fueran tendencia.</p>
+            <div class="card-action">Leer historia <span class="arrow">→</span></div>
+        </a>
+
+        <a href="concurso_literario.html" class="chapter-card">
+            <div class="card-icon">📝</div>
+            <div class="card-number">Subcapítulo III</div>
+            <h2>El Concurso Literario</h2>
+            <p>Cuando 100 poemas desbordaron al departamento de Literatura: la historia del motivo superior y la valentía pedagógica.</p>
+            <div class="card-action">Leer historia <span class="arrow">→</span></div>
+        </a>
+
+        <a href="primera_promocion.html" class="chapter-card">
+            <div class="card-icon">🏛️</div>
+            <div class="card-number">Subcapítulo IV</div>
+            <h2>De las Primeras de Promoción</h2>
+            <p>Cómo Paz entró al cuerpo de funcionarios por nota y lideró una comunicación con Adolfo Suárez para que se premiase la excelencia.</p>
+            <div class="card-action">Leer historia <span class="arrow">→</span></div>
+        </a>
+    </div>
+
+    <footer>
+        <p>© <span id="year"></span> Paz Arés Osset · La Profesora · Capítulo III</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar solid on scroll
+        const nav = document.querySelector('.nav-top');
+        window.addEventListener('scroll', () => {
+            nav.style.background = window.scrollY > 80
+                ? 'rgba(5,5,5,0.95)'
+                : 'linear-gradient(to bottom, rgba(0,0,0,0.95), transparent)';
+        });
+    </script>
+</body>
+</html>

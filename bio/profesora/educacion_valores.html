@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación en Valores | La Profesora - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --dark-gold: #B8860B;
+            --accent: #FF4C68;
+            --bg-dark: #050505;
+            --glass-bg: rgba(15, 15, 15, 0.85);
+            --glass-border: rgba(255, 215, 0, 0.15);
+            --text-primary: #f0f0f0;
+            --text-muted: #aaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.8;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 76, 104, 0.04), transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.04), transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.95), transparent);
+            transition: background 0.3s;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .nav-back:hover { color: var(--accent); transform: translateX(-5px); }
+        .nav-back img { height: 35px; }
+
+        /* Hero */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.15) 40%, rgba(5,5,5,0.9) 85%, var(--bg-dark) 100%),
+                url('profesora_hero.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 76, 104, 0.2);
+            border: 1px solid rgba(255, 76, 104, 0.4);
+            color: var(--accent);
+            padding: 6px 22px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Philosopher', serif;
+            font-size: 4.5rem;
+            color: var(--gold);
+            text-shadow: 2px 4px 20px rgba(0,0,0,0.8);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-family: 'Lora', serif;
+            font-size: 1.3rem;
+            font-weight: 300;
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px 100px;
+        }
+
+        /* Panels */
+        .panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .panel.reverse { direction: rtl; }
+        .panel.reverse > * { direction: ltr; }
+
+        .panel-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .panel-image img {
+            width: 100%;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .panel-image:hover img { transform: scale(1.05); }
+
+        .panel-text h2 {
+            font-family: 'Philosopher', serif;
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .panel-text p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        .highlight-quote {
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-style: italic;
+            padding: 20px 25px;
+            background: rgba(255, 215, 0, 0.05);
+            border-left: 3px solid var(--dark-gold);
+            border-radius: 0 10px 10px 0;
+            margin: 25px 0;
+        }
+
+        /* Footer nav */
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 60px;
+        }
+
+        .page-nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .page-nav a:hover { color: var(--accent); }
+
+        .page-nav .next { margin-left: auto; }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.8);
+            border-top: 1px solid var(--glass-border);
+        }
+
+        footer p { color: var(--text-muted); font-size: 0.85rem; }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 1024px) {
+            .panel, .panel.reverse {
+                grid-template-columns: 1fr;
+                direction: ltr;
+                gap: 30px;
+            }
+            .hero h1 { font-size: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .panel-text h2 { font-size: 1.7rem; }
+            .nav-bar { padding: 10px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-back">
+            <span>←</span>
+            <img src="../../logopazares.png" alt="Logo">
+            <span>La Profesora</span>
+        </a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Subcapítulo I</div>
+            <h1>Educación en Valores</h1>
+            <p>42 años encendiendo la chispa del conocimiento con amor, arte y psicología.</p>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <!-- Panel 1 -->
+        <article class="panel fade-in">
+            <div class="panel-image">
+                <img src="profesora_hero.png" alt="Paz en su aula llena de vida, arte y color">
+            </div>
+            <div class="panel-text">
+                <h2>Una Funcionaria Diferente</h2>
+                <p>
+                    Mari Paz Arés Osset dedicó <strong>42 años de su vida</strong> al cuerpo de funcionarios de educación del Estado español. Pero decir simplemente que fue "funcionaria" sería como decir que Mozart simplemente "tocaba el piano". Paz transformó cada aula que habitó en un universo de posibilidades, en un espacio donde aprender era sinónimo de vivir.
+                </p>
+                <p>
+                    En una época en la que la educación española todavía arrastraba los métodos rígidos y memorísticos heredados de décadas anteriores, Paz irrumpió con una visión radicalmente distinta: <strong>la educación debía ser un acto de amor</strong>, un despertar de la conciencia, no una simple transmisión de datos.
+                </p>
+                <div class="highlight-quote">
+                    «Para Paz, cada alumno era un jardín esperando florecer. Su tarea no era imponer semillas, sino descubrir las que ya estaban plantadas y ayudarlas a crecer.»
+                </div>
+            </div>
+        </article>
+
+        <!-- Panel 2 -->
+        <article class="panel reverse fade-in">
+            <div class="panel-text">
+                <h2>Psicología, Amor y Arte</h2>
+                <p>
+                    Mucho antes de que los planes educativos incorporasen la <strong>educación emocional</strong> como una necesidad, Paz ya la practicaba de manera instintiva y brillante. Comprendía que un niño no puede aprender si está bloqueado emocionalmente, si tiene miedo al error, si se siente invisible.
+                </p>
+                <p>
+                    En sus clases, la <strong>psicología</strong> no era una asignatura: era el lenguaje con el que se relacionaba con cada alumno. Identificaba las necesidades individuales, los bloqueos, los talentos ocultos. El <strong>arte</strong> era su herramienta predilecta: la pintura, la poesía, la música, el teatro… todo servía para que los niños expresaran lo que las palabras no podían decir.
+                </p>
+                <p>
+                    Y sobre todo, el <strong>amor</strong>. Un amor genuino por cada estudiante, un interés real por su mundo interior. En la clase de Mari Paz, nadie era un número, nadie era "el de la tercera fila". Cada alumno era un ser humano completo, con sueños, miedos y una luz propia que merecía ser descubierta.
+                </p>
+            </div>
+            <div class="panel-image">
+                <img src="educacion_valores.png" alt="Contraste entre educación tradicional y la innovadora de Paz">
+            </div>
+        </article>
+
+        <!-- Panel 3 -->
+        <article class="panel fade-in">
+            <div class="panel-image">
+                <img src="ninos_lunes.png" alt="Un niño contando las horas el domingo para que llegue el lunes">
+            </div>
+            <div class="panel-text">
+                <h2>Los Niños que Contaban las Horas</h2>
+                <p>
+                    El efecto de la metodología de Paz era tan extraordinario que generó un fenómeno insólito: <strong>los niños no querían que acabara la semana escolar</strong>. Los fines de semana se convertían en una cuenta atrás impaciente. Los domingos por la tarde, muchos de sus alumnos miraban el reloj y preguntaban: <em>«¿Cuántas horas faltan para que sea lunes?»</em>
+                </p>
+                <p>
+                    Para los padres, aquello era desconcertante. ¿Un niño que <em>quiere</em> ir al colegio? ¿Que prefiere la escuela al parque, al fin de semana, a no hacer nada? No era normal. O al menos, no era lo que estaban acostumbrados a ver.
+                </p>
+                <div class="highlight-quote">
+                    Algunos padres llegaron a quejarse al colegio, sin entender lo que estaba pasando. El Ministerio de Educación envió inspecciones para verificar qué ocurría en aquella clase tan "extraña" donde los niños eran… demasiado felices.
+                </div>
+                <p>
+                    Las inspecciones, por supuesto, no encontraron irregularidades. Solo encontraron a una profesora excepcional que había descubierto lo que muchos pedagogos tardarían décadas en teorizar: que <strong>la motivación intrínseca es el motor más poderoso que existe</strong>.
+                </p>
+            </div>
+        </article>
+
+        <!-- Navigation between sub-chapters -->
+        <nav class="page-nav">
+            <a href="index.html">← Volver al índice</a>
+            <a href="montessori_waldorf.html" class="next">Montessori & Waldorf →</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Paz Arés Osset · La Profesora</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        const nav = document.querySelector('.nav-bar');
+        window.addEventListener('scroll', () => {
+            nav.style.background = window.scrollY > 80 ? 'rgba(5,5,5,0.95)' : 'linear-gradient(to bottom, rgba(0,0,0,0.95), transparent)';
+        });
+    </script>
+</body>
+</html>

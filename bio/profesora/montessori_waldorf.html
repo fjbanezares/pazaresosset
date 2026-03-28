@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montessori & Waldorf | La Profesora - Paz Arés Osset</title>
+    <link rel="icon" type="image/png" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --dark-gold: #B8860B;
+            --accent: #FF4C68;
+            --bg-dark: #050505;
+            --glass-bg: rgba(15, 15, 15, 0.85);
+            --glass-border: rgba(255, 215, 0, 0.15);
+            --text-primary: #f0f0f0;
+            --text-muted: #aaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.8;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 76, 104, 0.04), transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.04), transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.95), transparent);
+            transition: background 0.3s;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .nav-back:hover { color: var(--accent); transform: translateX(-5px); }
+        .nav-back img { height: 35px; }
+
+        /* Hero */
+        .hero {
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                linear-gradient(to bottom, rgba(5,5,5,0.5), var(--bg-dark)),
+                url('educacion_valores.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content { position: relative; z-index: 2; }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 76, 104, 0.2);
+            border: 1px solid rgba(255, 76, 104, 0.4);
+            color: var(--accent);
+            padding: 6px 22px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Philosopher', serif;
+            font-size: 4rem;
+            color: var(--gold);
+            text-shadow: 2px 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.75);
+            margin-top: 15px;
+            max-width: 600px;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px 100px;
+        }
+
+        /* Text block */
+        .text-block {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, rgba(255,215,0,0.03), rgba(255,76,104,0.03));
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 60px;
+            backdrop-filter: blur(5px);
+        }
+
+        .text-block h2 {
+            font-family: 'Philosopher', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .text-block p {
+            font-size: 1.1rem;
+            max-width: 850px;
+            margin: 0 auto 20px;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        /* Method Grid */
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .method-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px 28px;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .method-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .method-card.paz::before { background: linear-gradient(90deg, var(--accent), var(--gold)); }
+        .method-card.montessori::before { background: linear-gradient(90deg, #34d399, #10b981); }
+        .method-card.waldorf::before { background: linear-gradient(90deg, #a78bfa, #8b5cf6); }
+
+        .method-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .method-icon { font-size: 3rem; margin-bottom: 20px; }
+
+        .method-card h3 {
+            font-family: 'Philosopher', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .method-card.paz h3 { color: var(--gold); }
+        .method-card.montessori h3 { color: #34d399; }
+        .method-card.waldorf h3 { color: #a78bfa; }
+
+        .method-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .method-card ul {
+            list-style: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .method-card ul li {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            padding: 5px 0 5px 20px;
+            position: relative;
+        }
+
+        .method-card ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        /* Nav */
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 40px;
+        }
+
+        .page-nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .page-nav a:hover { color: var(--accent); }
+        .page-nav .next { margin-left: auto; }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.8);
+            border-top: 1px solid var(--glass-border);
+        }
+
+        footer p { color: var(--text-muted); font-size: 0.85rem; }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 1024px) {
+            .method-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.3rem; }
+            .text-block { padding: 35px 20px; }
+            .text-block h2 { font-size: 1.8rem; }
+            .nav-bar { padding: 10px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-back">
+            <span>←</span>
+            <img src="../../logopazares.png" alt="Logo">
+            <span>La Profesora</span>
+        </a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Subcapítulo II</div>
+            <h1>Montessori & Waldorf</h1>
+            <p>Las pedagogías que hoy son tendencia, Paz las llevaba en el alma décadas antes.</p>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <div class="text-block fade-in">
+            <h2>Adelantada a su Tiempo</h2>
+            <p>
+                Hoy en día, las <strong>pedagogías Montessori y Waldorf</strong> son sinónimo de educación progresista y están consideradas como alternativas de élite. Familias de todo el mundo buscan estos colegios para sus hijos, dispuestas a pagar cifras considerables por una educación que respete el ritmo natural del niño, que fomente su creatividad y que eduque en valores humanos.
+            </p>
+            <p>
+                Lo que pocos saben es que, décadas antes de que estas metodologías adquirieran su prestigio actual en España, <strong>una humilde funcionaria del cuerpo de maestras del Estado ya estaba aplicando sus principios</strong> —de manera intuitiva, valiente y a menudo incomprendida— en un colegio público ordinario.
+            </p>
+        </div>
+
+        <div class="method-grid fade-in">
+            <div class="method-card paz">
+                <div class="method-icon">🌟</div>
+                <h3>El Método de Paz</h3>
+                <p>La educación como acto de amor y crecimiento personal integral, aplicada en la escuela pública española desde los años 70.</p>
+                <ul>
+                    <li>Motivación a través del propósito superior</li>
+                    <li>Arte como vehículo de expresión emocional</li>
+                    <li>Psicología aplicada a cada alumno</li>
+                    <li>Ambientes de aprendizaje cálidos y estimulantes</li>
+                    <li>Respeto por el ritmo individual</li>
+                    <li>Valoración del proceso, no solo del resultado</li>
+                </ul>
+            </div>
+
+            <div class="method-card montessori">
+                <div class="method-icon">🌱</div>
+                <h3>Método Montessori</h3>
+                <p>Desarrollado por Maria Montessori a principios del siglo XX, enfatiza la independencia y el aprendizaje autodirigido.</p>
+                <ul>
+                    <li>Ambiente preparado y materiales sensoriales</li>
+                    <li>Libertad dentro de límites claros</li>
+                    <li>Aprendizaje individualizado</li>
+                    <li>Rol del maestro como guía, no como dictador</li>
+                    <li>Grupos de edades mixtas</li>
+                    <li>Énfasis en la autoregulación</li>
+                </ul>
+            </div>
+
+            <div class="method-card waldorf">
+                <div class="method-icon">🎨</div>
+                <h3>Pedagogía Waldorf</h3>
+                <p>Fundada por Rudolf Steiner en 1919, integra el desarrollo intelectual, artístico y práctico del ser humano.</p>
+                <ul>
+                    <li>Artes integradas en todas las asignaturas</li>
+                    <li>Respeto por las etapas de desarrollo</li>
+                    <li>Educación holística del ser humano</li>
+                    <li>Pensamiento imaginativo y creativo</li>
+                    <li>Conexión con la naturaleza y los ritmos</li>
+                    <li>El maestro acompaña varios años al alumno</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-block fade-in">
+            <h2>La Diferencia Fundamental</h2>
+            <p>
+                Hay una diferencia crucial entre Paz y estas escuelas: <strong>Montessori y Waldorf se practican en centros privados con recursos, formación específica y familias que eligen conscientemente esa pedagogía</strong>. Paz aplicó sus principios en un colegio público, sin apoyo institucional, enfrentando un sistema que no comprendía —y a menudo penalizaba— su manera de enseñar.
+            </p>
+            <p>
+                Mientras hoy estas pedagogías son celebradas y admiradas, <strong>Paz fue cuestionada, inspeccionada y en ocasiones reprendida</strong> por hacer exactamente lo mismo: poner al niño en el centro, respetar su mundo interior y encender en él la pasión por aprender.
+            </p>
+            <p>
+                La historia siempre acaba dando la razón a los visionarios. Y Paz fue, sin duda, una de ellos.
+            </p>
+        </div>
+
+        <nav class="page-nav">
+            <a href="educacion_valores.html">← Educación en Valores</a>
+            <a href="concurso_literario.html" class="next">El Concurso Literario →</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Paz Arés Osset · La Profesora</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        const nav = document.querySelector('.nav-bar');
+        window.addEventListener('scroll', () => {
+            nav.style.background = window.scrollY > 80 ? 'rgba(5,5,5,0.95)' : 'linear-gradient(to bottom, rgba(0,0,0,0.95), transparent)';
+        });
+    </script>
+</body>
+</html>
