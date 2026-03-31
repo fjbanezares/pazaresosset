@@ -1,324 +1,385 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Serbia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bulgaria y Serbia - Paz Arés Osset</title>
+  <meta name="description" content="Un poema de viaje por los Balcanes, donde el sol danza en montañas frondosas y los corazones laten al unísono en la danza del kolo.">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
-  <link rel="stylesheet" href="base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
-
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="serbian">🇷🇸 Српски</option>
+        <option value="bulgarian">🇧🇬 Български</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="ukrainian">🇺🇦 Українська</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+        </a>
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">Bulgaria y Serbia</div>
+          <div class="english language">Bulgaria and Serbia</div>
+          <div class="serbian language">Бугарска и Србија</div>
+          <div class="bulgarian language">България и Сърбия</div>
+          <div class="russian language">Болгария и Сербия</div>
+          <div class="ukrainian language">Болгарія і Сербія</div>
+          <div class="italian language">Bulgaria e Serbia</div>
+          <div class="chinese language">保加利亚和塞尔维亚</div>
+          <div class="arabic language">بلغاريا وصربيا</div>
+          <div class="aleman language">Bulgarien und Serbien</div>
+          <div class="frances language">Bulgarie et Serbie</div>
+          <div class="japones language">ブルガリアとセルビア</div>
+          <div class="portuges language">Bulgária e Sérvia</div>
+        </h1>
+        <div class="lead">
+          <div class="spanish language">En mis viajes por los Balcanes, el sol danza en montañas frondosas...</div>
+          <div class="english language">In my travels through the Balkans, the sun dances on lush mountains...</div>
+          <div class="serbian language">На мојим путовањима кроз Балкан, сунце плеше на бујним планинама...</div>
+          <div class="bulgarian language">В пътуванията ми през Балканите, слънцето танцува по буйните планини...</div>
+          <div class="russian language">В моих путешествиях по Балканам солнце танцует на пышных горах...</div>
+          <div class="ukrainian language">У моїх подорожах по Балканах сонце танцює на пишних горах...</div>
+          <div class="italian language">Nei miei viaggi attraverso i Balcani, il sole danza su montagne rigogliose...</div>
+          <div class="chinese language">在我穿越巴尔干半岛的旅程中，阳光在茂密的山脉上跳舞...</div>
+          <div class="arabic language">في رحلاتي عبر البلقان، يرقص الشمس على الجبال الخصبة...</div>
+          <div class="aleman language">Auf meinen Reisen durch den Balkan tanzt die Sonne auf üppigen Bergen...</div>
+          <div class="frances language">Dans mes voyages à travers les Balkans, le soleil danse sur des montagnes luxuriantes...</div>
+          <div class="japones language">バルカン半島を旅する中で、太陽は緑豊かな山々の上で踊る...</div>
+          <div class="portuges language">Nas minhas viagens pelos Balcãs, o sol dança em montanhas luxuriantes...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="multilingual-description py-5">
+      <div class="container text-center">
+
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #FFD700;">Bulgaria y Serbia</h1>
+          <div class="poem-text">
+            <div class="stanza">En mis viajes por los Balcanes<br>el sol danza en montañas frondosas<br>me encuentro envuelta en festivales<br>de melodías y danzas de siglos...</div>
+            <div class="stanza">Bulgaria me regala belleza, Sofía.<br>Su catedral de Alexander Nevsky<br>un santuario de paz de luz dorada<br>caricia de frescos de santos…</div>
+            <div class="stanza">Viaje a un encuentro multicultural...<br>Almas y espíritus grandes<br>en perfecta sintonía con el amor<br>Reflejan un mundo mejor.</div>
+            <div class="stanza">En Serbia, Nis, danzando el kolo,<br>tejiendo círculos de fraternidad,<br>donde corazones laten al unísono.<br>En una coreografía eterna de unidad.</div>
+            <div class="stanza">Siento la dulzura, la magia de la paz<br>en la sonrisa de niños y grandes,<br>en el eco sus risas que resuenan<br>en las danzas de noches estrelladas.</div>
+            <div class="stanza text-warning">Caleidoscopio de culturas y sueños,<br>me invitan a descubrir su alma,<br>en resonancia en mi alma,<br>la esencia de la paz y armonía.</div>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #FFD700;">Bulgaria and Serbia</h1>
+          <div class="poem-text">
+            <div class="stanza">In my travels through the Balkans<br>the sun dances on lush mountains<br>I find myself enveloped in festivals<br>of melodies and dances from centuries past...</div>
+            <div class="stanza">Bulgaria gifts me beauty, Sofia.<br>Its Alexander Nevsky Cathedral<br>a sanctuary of peace with golden light<br>a caress of frescoes of saints...</div>
+            <div class="stanza">Journey to a multicultural encounter...<br>Great souls and spirits<br>in perfect harmony with love<br>reflect a better world.</div>
+            <div class="stanza">In Serbia, Nis, dancing the kolo,<br>weaving circles of fraternity,<br>where hearts beat in unison.<br>In an eternal choreography of unity.</div>
+            <div class="stanza">I feel the sweetness, the magic of peace<br>in the smiles of children and adults,<br>in the echo of their laughter that resonates<br>in the dances of starry nights.</div>
+            <div class="stanza text-warning">A kaleidoscope of cultures and dreams,<br>invites me to discover its soul,<br>in resonance with my soul,<br>the essence of peace and harmony.</div>
+          </div>
+        </div>
+
+        <!-- SERBIAN -->
+        <div class="serbian language">
+          <h1 class="handwritten" style="color: #FFD700;">Бугарска и Србија</h1>
+          <div class="poem-text">
+            <div class="stanza">На мојим путовањима кроз Балкан<br>сунце плеше на бујним планинама<br>налазим се обавијена фестивалима<br>мелодија и плесова столећа...</div>
+            <div class="stanza">Бугарска ми поклања лепоту, Софију.<br>Њена катедрала Александра Невског<br>светилиште мира златне светлости<br>милозвучје фресака светаца…</div>
+            <div class="stanza">Путовање ка мултикултуралном сусрету...<br>Велике душе и духови<br>у савршеном складу са љубављу<br>одражавају бољи свет.</div>
+            <div class="stanza">У Србији, Нишу, плешући коло,<br>преплићући кругове братства,<br>где срца куцају у унисону.<br>У вечној кореографији јединства.</div>
+            <div class="stanza">Осећам слаткоћу, магију мира<br>у осмесима деце и одраслих,<br>у одјеку њиховог смеха који одзвања<br>у плесовима звезданих ноћи.</div>
+            <div class="stanza text-warning">Калеидоскоп култура и снова,<br>позива ме да откријем његову душу,<br>у резонанцији са мојом душом,<br>суштина мира и хармоније.</div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #FFD700;">Болгария и Сербия</h1>
+          <div class="poem-text">
+            <div class="stanza">В моих путешествиях по Балканам<br>солнце танцует на пышных горах.<br>Я оказываюсь окутанной фестивалями<br>мелодий и танцами столетий...</div>
+            <div class="stanza">Болгария дарит мне красоту, Софию.<br>Её собор Александра Невского —<br>святилище мира в золотом свете,<br>ласковые фрески святых…</div>
+            <div class="stanza">Путешествие к мультикультурной встрече...<br>Великие души и духи<br>в совершенной гармонии с любовью<br>отражают лучший мир.</div>
+            <div class="stanza">В Сербии, Нише, танцуя коло,<br>сплетая круги братства,<br>где сердца бьются в унисон.<br>В вечной хореографии единства.</div>
+            <div class="stanza">Я чувствую сладость, магию мира<br>в улыбках детей и взрослых,<br>в эхо их смеха, что звучит<br>в танцах звёздных ночей.</div>
+            <div class="stanza text-warning">Калейдоскоп культур и мечтаний<br>приглашает меня открыть его душу,<br>в резонансе с моей душой —<br>сущность мира и гармонии.</div>
+          </div>
+        </div>
+
+        <!-- UKRAINIAN -->
+        <div class="ukrainian language">
+          <h1 class="handwritten" style="color: #FFD700;">Болгарія і Сербія</h1>
+          <div class="poem-text">
+            <div class="stanza">У моїх подорожах по Балканах<br>сонце танцює на пишних горах.<br>Я опиняюсь оповитою фестивалями<br>мелодій і танцями століть...</div>
+            <div class="stanza">Болгарія дарує мені красу, Софію.<br>Її собор Олександра Невського —<br>святилище миру в золотому світлі,<br>ніжні фрески святих…</div>
+            <div class="stanza">Подорож до мультикультурної зустрічі...<br>Великі душі та духи<br>у досконалій гармонії з любов'ю<br>відображають кращий світ.</div>
+            <div class="stanza">У Сербії, Ніші, танцюючи коло,<br>сплітаючи кола братерства,<br>де серця б'ються в унісон.<br>У вічній хореографії єдності.</div>
+            <div class="stanza">Я відчуваю солодкість, магію миру<br>в усмішках дітей та дорослих,<br>у відлунні їхнього сміху, що лунає<br>у танцях зоряних ночей.</div>
+            <div class="stanza text-warning">Калейдоскоп культур і мрій<br>запрошує мене відкрити його душу,<br>у резонансі з моєю душею —<br>суттєвість миру та гармонії.</div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #FFD700;">Bulgaria e Serbia</h1>
+          <div class="poem-text">
+            <div class="stanza">Nei miei viaggi attraverso i Balcani<br>il sole danza su montagne rigogliose<br>mi trovo avvolta in festival di melodie<br>e danze di secoli passati...</div>
+            <div class="stanza">La Bulgaria mi regala bellezza, Sofia.<br>La sua cattedrale di Alexander Nevsky<br>un santuario di pace con luce dorata<br>una carezza di affreschi di santi...</div>
+            <div class="stanza">Viaggio a un incontro multiculturale...<br>Grandi anime e spiriti<br>in perfetta armonia con l'amore<br>riflettono un mondo migliore.</div>
+            <div class="stanza">In Serbia, Nis, danzando il kolo,<br>tessendo cerchi di fraternità,<br>dove i cuori battono all'unisono.<br>In una coreografia eterna di unità.</div>
+            <div class="stanza">Sento la dolcezza, la magia della pace<br>nel sorriso di bambini e adulti,<br>nell'eco delle loro risate che risuonano<br>nelle danze di notti stellate.</div>
+            <div class="stanza text-warning">Kaleidoscopio di culture e sogni,<br>mi invita a scoprire la sua anima,<br>in risonanza con la mia anima,<br>l'essenza della pace e dell'armonia.</div>
+          </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="chinese language">
+          <h1 class="handwritten" style="color: #FFD700;">保加利亚和塞尔维亚</h1>
+          <div class="poem-text">
+            <div class="stanza">在我穿越巴尔干半岛的旅程中<br>阳光在茂密的山脉上跳舞<br>我被包围在世纪的旋律和舞蹈节日中...</div>
+            <div class="stanza">保加利亚赠予我美丽，索非亚。<br>亚历山大·涅夫斯基大教堂<br>一个充满金色光芒的和平圣地<br>圣徒壁画的抚慰...</div>
+            <div class="stanza">旅行到一个多元文化的相遇...<br>伟大的灵魂和精神<br>与爱完美和谐<br>反映出一个更好的世界。</div>
+            <div class="stanza">在塞尔维亚，尼什，跳着科洛舞<br>编织着友谊的圈子，<br>心脏齐声跳动。<br>在一个永恒的团结编舞中。</div>
+            <div class="stanza">我感受到和平的甜美和魔力<br>在孩子和成年人的微笑中<br>在回响的笑声中<br>在星空下的舞蹈中。</div>
+            <div class="stanza text-warning">文化和梦想的万花筒<br>邀请我发现它的灵魂<br>与我的灵魂共鸣<br>和平与和谐的本质。</div>
+          </div>
+        </div>
+
+        <!-- ARABIC -->
+        <div class="arabic language" dir="rtl">
+          <h1 class="handwritten" style="color: #FFD700;">بلغاريا وصربيا</h1>
+          <div class="poem-text" style="text-align: right;">
+            <div class="stanza">في رحلاتي عبر البلقان<br>يرقص الشمس على الجبال الخصبة<br>أجد نفسي محاطة بمهرجانات<br>من الألحان والرقصات من القرون الماضية...</div>
+            <div class="stanza">بلغاريا تهديني الجمال، صوفيا.<br>كاتدرائية ألكسندر نيفسكي<br>مزار للسلام والنور الذهبي<br>لمسة من لوحات القديسين...</div>
+            <div class="stanza">رحلة إلى لقاء متعدد الثقافات...<br>أرواح عظيمة<br>في تناغم تام مع الحب<br>تعكس عالماً أفضل.</div>
+            <div class="stanza">في صربيا، نيش، راقصة الكولو،<br>نسج دوائر من الأخوة،<br>حيث تنبض القلوب بانسجام.<br>في رقصة دائمة للوحدة.</div>
+            <div class="stanza">أشعر بحلاوة وسحر السلام<br>في ابتسامات الأطفال والكبار،<br>في صدى ضحكاتهم التي تتردد<br>في رقصات الليالي المرصعة بالنجوم.</div>
+            <div class="stanza text-warning">كاليدوسكوب من الثقافات والأحلام،<br>يدعوني لاكتشاف روحه،<br>في تناغم مع روحي،<br>جوهر السلام والوئام.</div>
+          </div>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="aleman language">
+          <h1 class="handwritten" style="color: #FFD700;">Bulgarien und Serbien</h1>
+          <div class="poem-text">
+            <div class="stanza">Auf meinen Reisen durch den Balkan<br>tanzt die Sonne auf üppigen Bergen.<br>Ich finde mich umhüllt von Festivals<br>der Melodien und Tänze der Jahrhunderte...</div>
+            <div class="stanza">Bulgarien schenkt mir Schönheit, Sofia.<br>Die Alexander-Newski-Kathedrale —<br>ein Heiligtum des Friedens im goldenen Licht,<br>eine Liebkosung von Fresken der Heiligen...</div>
+            <div class="stanza">Reise zu einer multikulturellen Begegnung...<br>Große Seelen und Geister<br>in perfekter Harmonie mit der Liebe<br>spiegeln eine bessere Welt wider.</div>
+            <div class="stanza">In Serbien, Niš, den Kolo tanzend,<br>Kreise der Brüderlichkeit webend,<br>wo Herzen im Einklang schlagen.<br>In einer ewigen Choreographie der Einheit.</div>
+            <div class="stanza">Ich spüre die Süße, die Magie des Friedens<br>im Lächeln von Kindern und Erwachsenen,<br>im Echo ihres Lachens, das widerhallt<br>in den Tänzen der Sternennächte.</div>
+            <div class="stanza text-warning">Ein Kaleidoskop der Kulturen und Träume<br>lädt mich ein, seine Seele zu entdecken,<br>in Resonanz mit meiner Seele —<br>das Wesen des Friedens und der Harmonie.</div>
+          </div>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="frances language">
+          <h1 class="handwritten" style="color: #FFD700;">Bulgarie et Serbie</h1>
+          <div class="poem-text">
+            <div class="stanza">Dans mes voyages à travers les Balkans<br>le soleil danse sur des montagnes luxuriantes.<br>Je me retrouve enveloppée de festivals<br>de mélodies et danses des siècles...</div>
+            <div class="stanza">La Bulgarie m'offre la beauté, Sofia.<br>Sa cathédrale Alexandre Nevski —<br>un sanctuaire de paix dans la lumière dorée,<br>une caresse de fresques de saints...</div>
+            <div class="stanza">Voyage vers une rencontre multiculturelle...<br>De grandes âmes et esprits<br>en parfaite harmonie avec l'amour<br>reflètent un monde meilleur.</div>
+            <div class="stanza">En Serbie, Niš, dansant le kolo,<br>tissant des cercles de fraternité,<br>où les cœurs battent à l'unisson.<br>Dans une chorégraphie éternelle d'unité.</div>
+            <div class="stanza">Je ressens la douceur, la magie de la paix<br>dans les sourires des enfants et des grands,<br>dans l'écho de leurs rires qui résonnent<br>dans les danses des nuits étoilées.</div>
+            <div class="stanza text-warning">Un kaléidoscope de cultures et de rêves<br>m'invite à découvrir son âme,<br>en résonance avec mon âme —<br>l'essence de la paix et de l'harmonie.</div>
+          </div>
+        </div>
+
+        <!-- JAPANESE -->
+        <div class="japones language">
+          <h1 class="handwritten" style="color: #FFD700;">ブルガリアとセルビア</h1>
+          <div class="poem-text">
+            <div class="stanza">バルカン半島を旅する中で<br>太陽は緑豊かな山々の上で踊る<br>私は何世紀にもわたる旋律と踊りの祭典に包まれている...</div>
+            <div class="stanza">ブルガリアが私に美を贈る、ソフィア。<br>アレクサンドル・ネフスキー大聖堂<br>黄金の光に満ちた平和の聖地<br>聖人のフレスコ画の優しさ...</div>
+            <div class="stanza">多文化の出会いへの旅...<br>偉大な魂と精神<br>愛と完璧な調和の中で<br>より良い世界を映し出す。</div>
+            <div class="stanza">セルビア、ニシュで、コロを踊りながら<br>友愛の輪を編み、<br>心臓が一斉に鼓動する場所で。<br>統一の永遠の振付の中で。</div>
+            <div class="stanza">平和の甘さと魔法を感じる<br>子どもたちと大人たちの微笑みの中で<br>星空の下の踊りの中で響く<br>彼らの笑い声のこだまの中で。</div>
+            <div class="stanza text-warning">文化と夢の万華鏡<br>その魂を発見するよう私を招く<br>私の魂と共鳴しながら —<br>平和と調和の本質。</div>
+          </div>
+        </div>
+
+        <!-- PORTUGUESE -->
+        <div class="portuges language">
+          <h1 class="handwritten" style="color: #FFD700;">Bulgária e Sérvia</h1>
+          <div class="poem-text">
+            <div class="stanza">Nas minhas viagens pelos Balcãs<br>o sol dança em montanhas luxuriantes.<br>Encontro-me envolvida em festivais<br>de melodias e danças de séculos...</div>
+            <div class="stanza">A Bulgária presenteia-me com beleza, Sófia.<br>A sua catedral de Alexandre Nevski —<br>um santuário de paz com luz dourada,<br>uma carícia de frescos de santos...</div>
+            <div class="stanza">Viagem ao encontro multicultural...<br>Grandes almas e espíritos<br>em perfeita harmonia com o amor<br>refletem um mundo melhor.</div>
+            <div class="stanza">Na Sérvia, Niš, dançando o kolo,<br>tecendo círculos de fraternidade,<br>onde corações batem em uníssono.<br>Numa coreografia eterna de unidade.</div>
+            <div class="stanza">Sinto a doçura, a magia da paz<br>nos sorrisos de crianças e adultos,<br>no eco das suas gargalhadas que ressoam<br>nas danças das noites estreladas.</div>
+            <div class="stanza text-warning">Um caleidoscópio de culturas e sonhos<br>convida-me a descobrir a sua alma,<br>em ressonância com a minha alma —<br>a essência da paz e da harmonia.</div>
+          </div>
+        </div>
+
+        <!-- BULGARIAN -->
+        <div class="bulgarian language">
+          <h1 class="handwritten" style="color: #FFD700;">България и Сърбия</h1>
+          <div class="poem-text">
+            <div class="stanza">В пътуванията ми през Балканите<br>слънцето танцува по буйните планини.<br>Намирам се обвита във фестивали<br>на мелодии и танци от векове...</div>
+            <div class="stanza">България ми подарява красота, София.<br>Катедралата Александър Невски —<br>светилище на мира в златна светлина,<br>нежна прегръдка от стенописи на светци…</div>
+            <div class="stanza">Пътуване към мултикултурна среща...<br>Велики души и духове,<br>в съвършена хармония с любовта,<br>отразяват един по-добър свят.</div>
+            <div class="stanza">В Сърбия, Ниш, танцувайки коло,<br>преплитайки кръгове на братство,<br>където сърцата бият в унисон.<br>Във вечна хореография на единството.</div>
+            <div class="stanza">Чувствам сладостта, магията на мира,<br>в усмивките на деца и възрастни,<br>в ехото на смеха им, който отеква<br>в танците на звездните нощи.</div>
+            <div class="stanza text-warning">Калейдоскоп от култури и мечти,<br>ме кани да открия душата му,<br>в резонанс с моята душа —<br>същността на мира и хармонията.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Music Section -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4" style="color: #FFD700 !important;">
+          <i class="fab fa-spotify mr-2"></i>
+          <span class="spanish language">Música — Bulgaria y Serbia</span>
+          <span class="english language">Music — Bulgaria and Serbia</span>
+          <span class="serbian language">Музика — Бугарска и Србија</span>
+          <span class="bulgarian language">Музика — България и Сърбия</span>
+          <span class="russian language">Музыка — Болгария и Сербия</span>
+          <span class="ukrainian language">Музика — Болгарія і Сербія</span>
+          <span class="italian language">Musica — Bulgaria e Serbia</span>
+          <span class="chinese language">音乐 — 保加利亚和塞尔维亚</span>
+          <span class="arabic language">موسيقى — بلغاريا وصربيا</span>
+          <span class="aleman language">Musik — Bulgarien und Serbien</span>
+          <span class="frances language">Musique — Bulgarie et Serbie</span>
+          <span class="japones language">音楽 — ブルガリアとセルビア</span>
+          <span class="portuges language">Música — Bulgária e Sérvia</span>
+        </h2>
+
+        <div class="row justify-content-center">
+          <!-- Disco Español -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_es.png" class="album-cover" alt="Versión Castellano">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Castellano</span>
+                  <span class="english language">Spanish Album</span>
+                  <span class="serbian language">Шпански диск</span>
+                  <span class="bulgarian language">Испански диск</span>
+                  <span class="russian language">Испанский диск</span>
+                  <span class="ukrainian language">Іспанський диск</span>
+                  <span class="italian language">Disco in Spagnolo</span>
+                  <span class="chinese language">西班牙语专辑</span>
+                  <span class="arabic language">ألبوم بالإسبانية</span>
+                  <span class="aleman language">Spanisches Album</span>
+                  <span class="frances language">Album en Espagnol</span>
+                  <span class="japones language">スペイン語アルバム</span>
+                  <span class="portuges language">Álbum em Espanhol</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disco Inglés -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_en.png" class="album-cover" alt="English Version">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Inglés</span>
+                  <span class="english language">English Album</span>
+                  <span class="serbian language">Енглески диск</span>
+                  <span class="bulgarian language">Английски диск</span>
+                  <span class="russian language">Английский диск</span>
+                  <span class="ukrainian language">Англійський диск</span>
+                  <span class="italian language">Disco in Inglese</span>
+                  <span class="chinese language">英语专辑</span>
+                  <span class="arabic language">ألبوم بالإنجليزية</span>
+                  <span class="aleman language">Englisches Album</span>
+                  <span class="frances language">Album en Anglais</span>
+                  <span class="japones language">英語アルバム</span>
+                  <span class="portuges language">Álbum em Inglês</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disco Serbio -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_sr.png" class="album-cover" alt="Српска верзија">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Serbio</span>
+                  <span class="english language">Serbian Album</span>
+                  <span class="serbian language">Српски диск</span>
+                  <span class="bulgarian language">Сръбски диск</span>
+                  <span class="russian language">Сербский диск</span>
+                  <span class="ukrainian language">Сербський диск</span>
+                  <span class="italian language">Disco in Serbo</span>
+                  <span class="chinese language">塞尔维亚语专辑</span>
+                  <span class="arabic language">ألبوم بالصربية</span>
+                  <span class="aleman language">Serbisches Album</span>
+                  <span class="frances language">Album en Serbe</span>
+                  <span class="japones language">セルビア語アルバム</span>
+                  <span class="portuges language">Álbum em Sérvio</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disco Búlgaro -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_bg.png" class="album-cover" alt="Българска версия">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Búlgaro</span>
+                  <span class="english language">Bulgarian Album</span>
+                  <span class="serbian language">Бугарски диск</span>
+                  <span class="bulgarian language">Български диск</span>
+                  <span class="russian language">Болгарский диск</span>
+                  <span class="ukrainian language">Болгарський диск</span>
+                  <span class="italian language">Disco in Bulgaro</span>
+                  <span class="chinese language">保加利亚语专辑</span>
+                  <span class="arabic language">ألبوم بالبلغارية</span>
+                  <span class="aleman language">Bulgarisches Album</span>
+                  <span class="frances language">Album en Bulgare</span>
+                  <span class="japones language">ブルガリア語アルバム</span>
+                  <span class="portuges language">Álbum em Búlgaro</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Bulgaria and Serbia</div>
-        <div class="spanish language" style="display: none;">Bulgaria y Serbia</div>
-        <div class="italian language" style="display: none;">Bulgaria e Serbia</div>
-        <div class="chinese language" style="display: none;">保加利亚和塞尔维亚</div>
-        <div class="arabic language" style="display: none;">بلغاريا وصربيا</div>
-      </h1>
-
-
-
-      <div class="lead text-muted">
-        <div class="english language">In my travels through the Balkans, the sun dances on lush mountains...</div>
-        <div class="spanish language" style="display: none;">En mis viajes por los Balcanes, el sol danza en montañas
-          frondosas...</div>
-        <div class="italian language" style="display: none;">Nei miei viaggi attraverso i Balcani, il sole danza su
-          montagne
-          rigogliose...</div>
-        <div class="chinese language" style="display: none;">在我穿越巴尔干半岛的旅程中，阳光在茂密的山脉上跳舞...</div>
-        <div class="arabic language" style="display: none;">في رحلاتي عبر البلقان، يرقص الشمس على الجبال الخصبة...</div>
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Bulgaria and Serbia</div>
-        <div class="spanish language" style="display: none;">Bulgaria y Serbia</div>
-        <div class="italian language" style="display: none;">Bulgaria e Serbia</div>
-        <div class="chinese language" style="display: none;">保加利亚和塞尔维亚</div>
-        <div class="arabic language" style="display: none;">بلغاريا وصربيا</div>
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>In my travels through the Balkans</p>
-          <p>the sun dances on lush mountains</p>
-          <p>I find myself enveloped in festivals of melodies and dances from centuries past...</p>
-          <br>
-          <p>Bulgaria gifts me beauty, Sofia.</p>
-          <p>Its Alexander Nevsky Cathedral</p>
-          <p>a sanctuary of peace with golden light</p>
-          <p>a caress of frescoes of saints...</p>
-          <br>
-          <p>Journey to a multicultural encounter...</p>
-          <p>Great souls and spirits</p>
-          <p>in perfect harmony with love</p>
-          <p>reflect a better world.</p>
-          <br>
-          <p>In Serbia, Nis, dancing the kolo,</p>
-          <p>weaving circles of fraternity, where hearts beat in unison.</p>
-          <p>in an eternal choreography of unity.</p>
-          <br>
-          <p>I feel the sweetness, the magic of peace</p>
-          <p>in the smiles of children and adults,</p>
-          <p>in the echo of their laughter that resonates</p>
-          <p>in the dances of starry nights.</p>
-          <br>
-          <p>A kaleidoscope of cultures and dreams,</p>
-          <p>invites me to discover its soul,</p>
-          <p>in resonance with my soul,</p>
-          <p>the essence of peace and harmony.</p>
-
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>En mis viajes por los Balcanes</p>
-          <p>el sol danza en montañas frondosas</p>
-          <p>me encuentro envuelta en festivales de melodías y danzas de siglos...</p>
-          <br>
-          <p>Bulgaria me regala belleza, Sofía.</p>
-          <p>Su catedral de Alexander Nevsky</p>
-          <p>un santuario de paz de luz dorada</p>
-          <p>caricia de frescos de santos…</p>
-          <br>
-          <p>Viaje a un encuentro multicultural...</p>
-          <p>Almas y espíritus grandes</p>
-          <p>en perfecta sintonía con el amor</p>
-          <p>Reflejan un mundo mejor.</p>
-          <br>
-          <p>En Serbia, Nis, danzando el kolo,</p>
-          <p>tejiendo círculos de fraternidad, donde corazones laten al unísono.</p>
-          <p>en una coreografía eterna de unidad.</p>
-          <br>
-          <p>Siento la dulzura, la magia de la paz</p>
-          <p>en la sonrisa de niños y grandes,</p>
-          <p>en el eco sus risas que resuenan</p>
-          <p>en las danzas de noches estrelladas.</p>
-          <br>
-          <p>Caleidoscopio de culturas y sueños,</p>
-          <p>me invitan a descubrir su alma,</p>
-          <p>en resonancia en mi alma,</p>
-          <p>la esencia de la paz y armonía.</p>
-
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Nei miei viaggi attraverso i Balcani</p>
-          <p>il sole danza su montagne rigogliose</p>
-          <p>mi trovo avvolta in festival di melodie e danze di secoli passati...</p>
-          <br>
-          <p>La Bulgaria mi regala bellezza, Sofia.</p>
-          <p>La sua cattedrale di Alexander Nevsky</p>
-          <p>un santuario di pace con luce dorata</p>
-          <p>una carezza di affreschi di santi...</p>
-          <br>
-          <p>Viaggio a un incontro multiculturale...</p>
-          <p>Grandi anime e spiriti</p>
-          <p>in perfetta armonia con l'amore</p>
-          <p>riflettono un mondo migliore.</p>
-          <br>
-          <p>In Serbia, Nis, danzando il kolo,</p>
-          <p>tessendo cerchi di fraternità, dove i cuori battono all'unisono.</p>
-          <p>in una coreografia eterna di unità.</p>
-          <br>
-          <p>Sento la dolcezza, la magia della pace</p>
-          <p>nel sorriso di bambini e adulti,</p>
-          <p>nell'eco delle loro risate che risuonano</p>
-          <p>nelle danze di notti stellate.</p>
-          <br>
-          <p>Kaleidoscopio di culture e sogni,</p>
-          <p>mi invita a scoprire la sua anima,</p>
-          <p>in risonanza con la mia anima,</p>
-          <p>l'essenza della pace e dell'armonia.</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>在我穿越巴尔干半岛的旅程中</p>
-          <p>阳光在茂密的山脉上跳舞</p>
-          <p>我被包围在世纪的旋律和舞蹈节日中...</p>
-          <br>
-          <p>保加利亚赠予我美丽，索非亚。</p>
-          <p>亚历山大·涅夫斯基大教堂</p>
-          <p>一个充满金色光芒的和平圣地</p>
-          <p>圣徒壁画的抚慰...</p>
-          <br>
-          <p>旅行到一个多元文化的相遇...</p>
-          <p>伟大的灵魂和精神</p>
-          <p>与爱完美和谐</p>
-          <p>反映出一个更好的世界。</p>
-          <br>
-          <p>在塞尔维亚，尼什，跳着科洛舞</p>
-          <p>编织着友谊的圈子，心脏齐声跳动。</p>
-          <p>在一个永恒的团结编舞中。</p>
-          <br>
-          <p>我感受到和平的甜美和魔力</p>
-          <p>在孩子和成年人的微笑中</p>
-          <p>在回响的笑声中</p>
-          <p>在星空下的舞蹈中。</p>
-          <br>
-          <p>文化和梦想的万花筒</p>
-          <p>邀请我发现它的灵魂</p>
-          <p>与我的灵魂共鸣</p>
-          <p>和平与和谐的本质。</p>
-
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>في رحلاتي عبر البلقان</p>
-          <p>يرقص الشمس على الجبال الخصبة</p>
-          <p>أجد نفسي محاطًا بمهرجانات من الألحان والرقصات من القرون الماضية...</p>
-          <br>
-          <p>بلغاريا تهديني الجمال، صوفيا.</p>
-          <p>كاتدرائية ألكسندر نيفسكي</p>
-          <p>مزار للسلام والنور الذهبي</p>
-          <p>لمسة من لوحات القديسين...</p>
-          <br>
-          <p>رحلة إلى لقاء متعدد الثقافات...</p>
-          <p>أرواح عظيمة وأرواح</p>
-          <p>في تناغم تام مع الحب</p>
-          <p>تعكس عالمًا أفضل.</p>
-          <br>
-          <p>في صربيا، نيش، راقصًا الكولو،</p>
-          <p>نسج دوائر من الأخوة، حيث تنبض القلوب بانسجام.</p>
-          <p>في رقصة دائمة للوحدة.</p>
-          <br>
-          <p>أشعر بحلاوة وسحر السلام</p>
-          <p>في ابتسامات الأطفال والكبار،</p>
-          <p>في صدى ضحكاتهم التي تتردد</p>
-          <p>في رقصات الليالي المرصعة بالنجوم.</p>
-          <br>
-          <p>كاليدوسكوب من الثقافات والأحلام،</p>
-          <p>يدعوني لاكتشاف روحه،</p>
-          <p>في تناغم مع روحي،</p>
-          <p>جوهر السلام والوئام.</p>
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
-  <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+  <script src="script.js?v=2"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-
 </html>

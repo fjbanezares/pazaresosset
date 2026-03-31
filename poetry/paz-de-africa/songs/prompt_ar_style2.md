@@ -1,5 +1,8 @@
 # 🇦🇪 سلام أفريقيا — Versión Árabe — Estilo 2
 
+سلام أفريقيا 
+سلام أفريقيا
+
 ## Style of Music (pegar en Suno)
 ```
 arabic electronic chill, female vocals clear and prominent, downtempo trip-hop, oriental synths, ambient desert atmosphere, modern spiritual

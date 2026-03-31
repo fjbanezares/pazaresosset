@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lienzo Digital | Webs para Poetas y Escritores</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts for a Literary Feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Chosen Palette: Cream (stone-50) background for a "paper" feel, Deep Charcoal (stone-900) for text, and deep burgundy/rose (rose-800) for elegant accents. -->
+    <!-- Application Structure Plan: 
+         1. Hero: Emotional hook. Your poetry deserves a quiet, beautiful home.
+         2. The Vision: Why a simple web is better than social media noise.
+         3. Pricing & Offer: Clear breakdown of Setup + Monthly fee (1 year min).
+         4. "Las Reglas Claras" (The Fine Print): Firm but polite section detailing the strict boundaries (final texts only, 30€/hr consulting, basic scope).
+         5. FAQ: Accordion to handle common objections using JS.
+         6. CTA/Contact.
+         This structure attracts them emotionally first, presents the solution, and then sets strict professional boundaries before they contact you. -->
+    <!-- Visualization & Content Choices: 
+         - CSS/Typography: Heavy reliance on 'Playfair Display' to evoke a published book feel.
+         - Interactive Accordion (Vanilla JS): Goal: Organize. Justification: Keeps the page clean while allowing users to read detailed answers to common questions (like "what if I want a store later?").
+         - Smooth Scrolling (Vanilla JS): Enhances the elegant, unhurried feel of the page.
+         - NO SVG or Mermaid used. Visuals rely on typography, layout, and Unicode symbols. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Subtle paper texture effect using CSS radial gradients */
+        .bg-paper {
+            background-color: #fafaf9;
+            /* stone-50 */
+            background-image: radial-gradient(#e7e5e4 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fafaf9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d6d3d1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9f1239;
+        }
+
+        /* Accordion transition */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .accordion-content.open {
+            max-height: 500px;
+            /* arbitrary max height for animation */
+            opacity: 1;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-btn.open .accordion-icon {
+            transform: rotate(45deg);
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: {
+                            800: '#9f1239', // Elegant deep red/burgundy
+                            900: '#881337',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-paper text-stone-800 antialiased selection:bg-rose-200 selection:text-rose-900 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-stone-50/90 backdrop-blur-sm border-b border-stone-200 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="font-serif font-bold text-2xl tracking-wide text-stone-900 flex items-center gap-2">
+                    <span class="text-rose-800">🖋️</span> Verso & Código
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#manifiesto"
+                        class="text-sm tracking-widest uppercase text-stone-500 hover:text-rose-800 transition-colors">La
+                        Visión</a>
+                    <a href="#precios"
+                        class="text-sm tracking-widest uppercase text-stone-500 hover:text-rose-800 transition-colors">Tarifas</a>
+                    <a href="#condiciones"
+                        class="text-sm tracking-widest uppercase text-stone-500 hover:text-rose-800 transition-colors">Condiciones</a>
+                    <a href="#contacto"
+                        class="text-sm tracking-widest uppercase px-5 py-2 border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-all">Empezar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold text-stone-900 mb-6 leading-tight">
+                Tu poesía merece un <br><span class="italic text-rose-800">hogar sin ruido.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-stone-600 mb-10 font-light leading-relaxed">
+                Diseñamos páginas web minimalistas para poetas y escritores. Un espacio limpio donde tus palabras son
+                las únicas protagonistas, sin algoritmos ni distracciones.
+            </p>
+            <a href="#precios"
+                class="inline-block bg-stone-900 text-white font-serif text-lg px-8 py-4 hover:bg-rose-800 transition-colors duration-300 shadow-lg">
+                Ver planes y precios
+            </a>
+        </div>
+    </section>
+
+    <!-- The Vision / Manifesto -->
+    <section id="manifiesto" class="py-20 bg-stone-900 text-stone-50">
+        <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-serif mb-6 text-rose-200">El silencio digital</h2>
+                <p class="text-stone-300 mb-4 leading-relaxed text-lg">
+                    Las redes sociales son ruidosas. Tu obra compite con anuncios, vídeos virales y notificaciones. Un
+                    poema necesita espacio, aire y silencio para ser leído correctamente.
+                </p>
+                <p class="text-stone-300 leading-relaxed text-lg">
+                    Construimos <strong>Lienzos Digitales</strong>: webs estáticas, ultrarrápidas y hermosas. Una imagen
+                    de fondo evocadora, tipografía de alta calidad (grado editorial) y tus poemas. Nada más.
+                </p>
+            </div>
+            <div class="border-l border-rose-800/50 pl-8 py-4">
+                <blockquote class="font-serif text-2xl italic text-stone-200 leading-snug">
+                    "La arquitectura de la página debe ser tan invisible que el lector solo sienta el peso del verso."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precios" class="py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-stone-900 mb-4">Tarifas Transparentes</h2>
+                <p class="text-stone-600 text-lg">Sin presupuestos ocultos. Un modelo pensado para la independencia del
+                    autor.</p>
+            </div>
+
+            <div class="bg-white border border-stone-200 shadow-xl p-8 md:p-12 relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 bg-rose-800 text-white text-xs font-bold px-4 py-1 uppercase tracking-widest">
+                    Plan Único Editorial
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Setup -->
+                    <div class="border-b md:border-b-0 md:border-r border-stone-200 pb-8 md:pb-0 md:pr-8">
+                        <h3 class="text-2xl font-serif font-bold text-stone-900 mb-2">Diseño y Montaje Inicial</h3>
+                        <div class="text-4xl font-light text-rose-800 mb-4">190€ <span
+                                class="text-base text-stone-400">pago único</span></div>
+                        <ul class="space-y-3 text-stone-600">
+                            <li class="flex items-center gap-2"><span>✦</span> Diseño minimalista a medida</li>
+                            <li class="flex items-center gap-2"><span>✦</span> 1 Imagen de fondo en alta resolución</li>
+                            <li class="flex items-center gap-2"><span>✦</span> Tipografía seleccionada (Serif/Sans)</li>
+                            <li class="flex items-center gap-2"><span>✦</span> Maquetación de hasta 15 poemas</li>
+                            <li class="flex items-center gap-2"><span>✦</span> Opción: Web bilingüe (Traducciones
+                                provistas por ti)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Monthly -->
+                    <div class="md:pl-4">
+                        <h3 class="text-2xl font-serif font-bold text-stone-900 mb-2">Mantenimiento y Alojamiento</h3>
+                        <div class="text-4xl font-light text-rose-800 mb-4">35€ <span class="text-base text-stone-400">/
+                                mes</span></div>
+                        <div
+                            class="inline-block bg-stone-100 px-3 py-1 text-sm font-bold text-stone-700 mb-4 border border-stone-200">
+                            Compromiso mínimo: 12 meses
+                        </div>
+                        <ul class="space-y-3 text-stone-600">
+                            <li class="flex items-center gap-2"><span>✦</span> Alojamiento web ultrarrápido</li>
+                            <li class="flex items-center gap-2"><span>✦</span> Certificado de seguridad SSL</li>
+                            <li class="flex items-center gap-2"><span>✦</span> Dominio propio (.com / .es) incluido</li>
+                            <li class="flex items-center gap-2"><span>✦</span> Soporte técnico ante caídas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Fine Print / Rules (Crucial Section) -->
+    <section id="condiciones" class="py-20 bg-stone-100 border-y border-stone-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold text-stone-900 mb-4">Las Reglas Claras</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">
+                    Para poder ofrecer este nivel de diseño a un precio accesible, nuestro proceso de trabajo es
+                    estrictamente ágil. Por favor, lee nuestras condiciones antes de empezar.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Rule 1 -->
+                <div class="bg-white p-6 shadow-sm border border-stone-200 hover:border-rose-300 transition-colors">
+                    <div class="text-3xl mb-4">📖</div>
+                    <h4 class="font-bold text-stone-900 text-lg mb-2">Textos 100% Cerrados</h4>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        Los poemas y textos biográficos deben enviarse <strong>ya corregidos y definitivos</strong>. La
+                        maquetación se hace una sola vez. Las correcciones ortográficas o reescrituras posteriores a la
+                        entrega implican costes extra.
+                    </p>
+                </div>
+
+                <!-- Rule 2 -->
+                <div class="bg-white p-6 shadow-sm border border-stone-200 hover:border-rose-300 transition-colors">
+                    <div class="text-3xl mb-4">⏱️</div>
+                    <h4 class="font-bold text-stone-900 text-lg mb-2">Consultoría y Reuniones</h4>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        Nuestra comunicación principal es por email, lo que nos permite ser eficientes. Si necesitas
+                        videollamadas, reuniones presenciales o largas discusiones sobre diseño, se tarificará como
+                        <strong>Hora de Consultoría a 30€/hora</strong>.
+                    </p>
+                </div>
+
+                <!-- Rule 3 -->
+                <div class="bg-white p-6 shadow-sm border border-stone-200 hover:border-rose-300 transition-colors">
+                    <div class="text-3xl mb-4">🧩</div>
+                    <h4 class="font-bold text-stone-900 text-lg mb-2">Alcance Básico</h4>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        Hablamos de una web elegante pero estructuralmente simple (poemas, biografía, contacto). Si tu
+                        proyecto requiere tienda online, animaciones complejas, o un blog interactivo, prepararemos un
+                        <strong>presupuesto a medida</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-serif font-bold text-center text-stone-900 mb-10">Preguntas Frecuentes</h2>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="border border-stone-200 bg-white">
+                    <button
+                        class="accordion-btn w-full px-6 py-4 text-left font-bold text-stone-900 flex justify-between items-center focus:outline-none">
+                        <span>¿Por qué un contrato mínimo de un año?</span>
+                        <span class="accordion-icon text-2xl font-light text-rose-800">+</span>
+                    </button>
+                    <div class="accordion-content px-6 bg-stone-50">
+                        <p class="pb-4 text-stone-600 text-sm leading-relaxed">
+                            El precio de montaje inicial (190€) está muy por debajo del precio de mercado de una web a
+                            medida. Recuperamos esa inversión a través de la relación a largo plazo mediante el
+                            mantenimiento mensual. Es un pacto de confianza mutua.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-stone-200 bg-white">
+                    <button
+                        class="accordion-btn w-full px-6 py-4 text-left font-bold text-stone-900 flex justify-between items-center focus:outline-none">
+                        <span>¿Qué pasa si quiero añadir poemas nuevos cada mes?</span>
+                        <span class="accordion-icon text-2xl font-light text-rose-800">+</span>
+                    </button>
+                    <div class="accordion-content px-6 bg-stone-50">
+                        <p class="pb-4 text-stone-600 text-sm leading-relaxed">
+                            El mantenimiento base de 35€/mes cubre alojamiento y seguridad técnica. Si quieres que
+                            nosotros subamos y maquetemos textos nuevos regularmente, podemos añadir un "Bono de
+                            Actualización" a tu cuota (ej. +20€/mes por subir hasta 3 poemas nuevos al mes, siempre
+                            entregados listos).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-stone-200 bg-white">
+                    <button
+                        class="accordion-btn w-full px-6 py-4 text-left font-bold text-stone-900 flex justify-between items-center focus:outline-none">
+                        <span>¿Puedo vender mis libros en esta web?</span>
+                        <span class="accordion-icon text-2xl font-light text-rose-800">+</span>
+                    </button>
+                    <div class="accordion-content px-6 bg-stone-50">
+                        <p class="pb-4 text-stone-600 text-sm leading-relaxed">
+                            En el plan básico podemos incluir enlaces directos a Amazon o a tu editorial. Si quieres
+                            cobrar directamente tú en la web (E-commerce), requerirá pasarelas de pago, políticas de
+                            privacidad complejas y gestión de envíos. Para eso, elaboraremos un presupuesto a medida
+                            (suele sumar unos 40€-60€ extra al mes).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="contacto" class="py-24 bg-stone-900 text-center px-4 mt-auto">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-4xl font-serif text-rose-200 mb-6">Comencemos tu prólogo</h2>
+            <p class="text-stone-300 mb-10 text-lg">
+                Si estás de acuerdo con nuestra filosofía y quieres una web limpia, rápida y sin complicaciones,
+                escríbenos.
+            </p>
+            <a href="mailto:paz@pazaresosset.es"
+                class="inline-block bg-white text-stone-900 font-bold tracking-widest uppercase px-10 py-4 hover:bg-rose-800 hover:text-white transition-colors duration-300">
+                Solicitar mi Web
+            </a>
+            <p class="mt-6 text-stone-500 text-sm">paz@pazaresosset.es</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-500 py-6 text-center text-sm">
+        <p>© 2026 Verso & Código. Desarrollo Web para Autores.</p>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Navbar Scroll Effect (Add shadow on scroll)
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.replace('bg-stone-50/90', 'bg-white/95');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                    navbar.classList.replace('bg-white/95', 'bg-stone-50/90');
+                }
+            });
+
+            // 2. Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Offset for fixed navbar
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+            // 3. Accordion Logic for FAQ
+            const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+            accordionBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Toggle current button class
+                    this.classList.toggle('open');
+
+                    // Get the content element (next sibling)
+                    const content = this.nextElementSibling;
+
+                    // Toggle content visibility
+                    if (content.classList.contains('open')) {
+                        content.classList.remove('open');
+                        // Reset max-height for collapse animation
+                        content.style.maxHeight = null;
+                    } else {
+                        // Close all other open accordions first (optional, for accordion-style behavior)
+                        accordionBtns.forEach(otherBtn => {
+                            if (otherBtn !== this && otherBtn.classList.contains('open')) {
+                                otherBtn.classList.remove('open');
+                                otherBtn.nextElementSibling.classList.remove('open');
+                                otherBtn.nextElementSibling.style.maxHeight = null;
+                            }
+                        });
+
+                        content.classList.add('open');
+                        // Set max-height dynamically based on content scrollHeight for smooth expansion
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

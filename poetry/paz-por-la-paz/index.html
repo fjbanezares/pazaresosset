@@ -1,441 +1,328 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Paz, poeta y artista de Paz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Paz, Poeta y Artista de Paz - Paz Arés Osset</title>
+  <meta name="description" content="Un poema sobre la guerra, la resiliencia, el arte y la búsqueda de la paz. Desde las cicatrices de Ifni, mis versos buscan esperanza.">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
-  <link rel="stylesheet" href="base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
-
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="ukrainian">🇺🇦 Українська</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+        </a>
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">Paz, Poeta y Artista de Paz</div>
+          <div class="english language">Paz, Poet and Artist of Peace</div>
+          <div class="russian language">Мир, Поэт и Художник Мира</div>
+          <div class="ukrainian language">Мир, Поет і Художник Миру</div>
+          <div class="italian language">Paz, Poeta e Artista di Pace</div>
+          <div class="chinese language">和平，和平的诗人和艺术家</div>
+          <div class="arabic language">باز، شاعرة وفنانة من أجل السلام</div>
+          <div class="aleman language">Paz, Dichterin und Künstlerin des Friedens</div>
+          <div class="frances language">Paz, Poète et Artiste de Paix</div>
+          <div class="japones language">パス、平和の詩人と芸術家</div>
+          <div class="portuges language">Paz, Poeta e Artista da Paz</div>
+        </h1>
+        <div class="lead">
+          <div class="spanish language">Desde las cicatrices de la guerra, mis versos buscan paz y esperanza.</div>
+          <div class="english language">From the scars of war, my verses seek peace and hope.</div>
+          <div class="russian language">Из шрамов войны мои стихи ищут мир и надежду.</div>
+          <div class="ukrainian language">З шрамів війни мої вірші шукають мир і надію.</div>
+          <div class="italian language">Dalle cicatrici della guerra, i miei versi cercano pace e speranza.</div>
+          <div class="chinese language">从战争的伤痕中，我的诗句寻求和平与希望。</div>
+          <div class="arabic language">من ندوب الحرب، تبحث أبياتي عن السلام والأمل.</div>
+          <div class="aleman language">Aus den Narben des Krieges suchen meine Verse Frieden und Hoffnung.</div>
+          <div class="frances language">Des cicatrices de la guerre, mes vers cherchent paix et espoir.</div>
+          <div class="japones language">戦争の傷跡から、私の詩は平和と希望を求める。</div>
+          <div class="portuges language">Das cicatrizes da guerra, os meus versos buscam paz e esperança.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="multilingual-description py-5">
+      <div class="container text-center">
+
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #FFD700;">Paz, Poeta y Artista de Paz</h1>
+          <div class="poem-text">
+            <div class="stanza">Nací en Sidi Ifni, una provincia de España que avanza.<br>donde la guerra de 1957, me dejó su huella,<br>una sombra en la esperanza.<br>A la tierna edad de casi tres años,<br>entre el caos y la desolación,<br>se grabaron recuerdos,<br>en el fondo de mi corazón.</div>
+            <div class="stanza">Los ecos de aquellos días,<br>aún resuenan en mi ser,<br>sombras de una infancia,<br>que apenas pude ver.<br>En cada risa forzada,<br>en cada lágrima oculta,<br>se esconde el dolor<br>de una inocencia culta.</div>
+            <div class="stanza">Artista y poeta, con el alma marcada,<br>caminando por la vida,<br>con una carga pesada.<br>En mi búsqueda de alegría,<br>en este mundo injusto,<br>las cicatrices internas,<br>dificultan sentirse agusto.</div>
+            <div class="stanza">Aunque sonrío y escribo,<br>bajo un cielo gris a veces,<br>en mi ser profundo,<br>se guarda lo que viví a veces.<br>La humanidad a veces desespera,<br>a veces se desvanece,<br>y sigue adelante,<br>gracias a el alma divina que nos mece.</div>
+            <div class="stanza">A pesar del dolor que en mi alma se anida,<br>en cada verso fluye vida,<br>una fuerza no vencida.<br>Como un río que persiste,<br>a pesar de las piedras en su cauce,<br>mi espíritu de poeta y artista,<br>en la adversidad reluce.</div>
+            <div class="stanza">En el arte encuentro refugio,<br>en la poesía un hogar,<br>un lugar donde las heridas<br>pueden empezar a sanar.<br>Mis palabras son puentes,<br>entre el ayer y el mañana,<br>un intento de sanar,<br>de aliviar la guerra en paz.</div>
+            <div class="stanza">Así, cada verso o pincelada<br>son una luz en la oscuridad,<br>intento encontrar balance,<br>entre el dolor y la claridad.<br>En mi viaje humano,<br>como poeta, como artista, como ser,<br>busco sembrar esperanza,<br>en un mundo que a veces parece perecer.</div>
+            <div class="stanza">En los momentos más sombríos,<br>donde la esperanza parece lejana,<br>surge una luz tenue,<br>en el alma aún temprana.<br>Es en la noche más oscura,<br>donde las estrellas brillan con fuerza,<br>recordándome que incluso el dolor,<br>su lección refuerza.</div>
+            <div class="stanza">En cada suspiro de desaliento,<br>en cada instante de desesperación,<br>encuentro un hilo de fuerza,<br>una chispa de inspiración.<br>Como poeta, anhelo mis versos<br>se conviertan en un faro,<br>un refugio en la tormenta,<br>calor en el desamparo.</div>
+            <div class="stanza text-warning">En estos momentos de guerras,<br>deseo que mi voz tenga poder,<br>no solo para expresar dolor,<br>sino también para renacer.<br>Porque incluso en la tristeza<br>más profunda y desgarradora,<br>se esconde la posibilidad de la paz<br>y una nueva aurora.</div>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #FFD700;">Paz, Poet and Artist of Peace</h1>
+          <div class="poem-text">
+            <div class="stanza">I was born in Sidi Ifni,<br>a province of Spain that advances,<br>where the war of 1957 left its mark on me,<br>a shadow in hope.<br>At the tender age of almost three years,<br>amidst chaos and desolation,<br>memories were etched<br>in the depths of my heart.</div>
+            <div class="stanza">The echoes of those days<br>still resonate within me,<br>shadows of a childhood<br>I could barely see.<br>In every forced laugh,<br>in every hidden tear,<br>lies the pain<br>of a cultured innocence.</div>
+            <div class="stanza">Artist and poet, with a marked soul,<br>walking through life,<br>carrying a heavy load.<br>In my quest for joy,<br>in this unjust world,<br>internal scars<br>make it hard to feel at ease.</div>
+            <div class="stanza">Though I smile and write,<br>under a gray sky sometimes,<br>deep within my being,<br>what I lived is sometimes kept.<br>Humanity sometimes despairs,<br>sometimes fades away,<br>and moves forward,<br>thanks to the divine soul that cradles us.</div>
+            <div class="stanza">Despite the pain that nests in my soul,<br>life flows in each verse,<br>an undefeated force.<br>Like a river that persists,<br>despite the stones in its course,<br>my spirit as a poet and artist<br>shines in adversity.</div>
+            <div class="stanza">In art, I find refuge,<br>in poetry, a home,<br>a place where wounds<br>can begin to heal.<br>My words are bridges,<br>between yesterday and tomorrow,<br>an attempt to heal,<br>to ease the war in peace.</div>
+            <div class="stanza">Thus, each verse or brushstroke<br>is a light in the darkness,<br>I try to find balance<br>between pain and clarity.<br>In my human journey,<br>as a poet, as an artist, as a being,<br>I seek to sow hope,<br>in a world that sometimes seems to perish.</div>
+            <div class="stanza">In the darkest moments,<br>where hope seems distant,<br>a faint light arises,<br>in the still young soul.<br>It is in the darkest night,<br>where the stars shine brightly,<br>reminding me that even pain<br>reinforces its lesson.</div>
+            <div class="stanza">In every sigh of discouragement,<br>in every moment of despair,<br>I find a thread of strength,<br>a spark of inspiration.<br>As a poet, I long for my verses<br>to become a beacon,<br>a refuge in the storm,<br>warmth in the desolation.</div>
+            <div class="stanza text-warning">In these times of wars,<br>I wish my voice to have power,<br>not only to express pain<br>but also to be reborn.<br>Because even in the deepest<br>and most heartbreaking sorrow,<br>there lies the possibility of peace<br>and a new dawn.</div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #FFD700;">Мир, Поэт и Художник Мира</h1>
+          <div class="poem-text">
+            <div class="stanza">Я родилась в Сиди-Ифни,<br>провинции Испании, что движется вперёд,<br>где война 1957 года оставила свой след —<br>тень в надежде.<br>В нежном возрасте почти трёх лет,<br>средь хаоса и запустения,<br>воспоминания врезались<br>в глубины моего сердца.</div>
+            <div class="stanza">Эхо тех дней<br>до сих пор звучит во мне,<br>тени детства,<br>которое я едва могла увидеть.<br>В каждом вынужденном смехе,<br>в каждой скрытой слезе<br>притаилась боль<br>изысканной невинности.</div>
+            <div class="stanza">Художник и поэт, с отмеченной душой,<br>шагая по жизни<br>с тяжёлой ношей.<br>В моих поисках радости<br>в этом несправедливом мире<br>внутренние шрамы<br>мешают чувствовать себя свободно.</div>
+            <div class="stanza">Хоть я улыбаюсь и пишу<br>под порой серым небом,<br>в глубине моего существа<br>порой хранится пережитое.<br>Человечество порой отчаивается,<br>порой угасает,<br>и движется вперёд<br>благодаря божественной душе, что нас качает.</div>
+            <div class="stanza">Несмотря на боль, что гнездится в моей душе,<br>в каждом стихе течёт жизнь,<br>непобедимая сила.<br>Как река, что не сдаётся,<br>несмотря на камни в её русле,<br>мой дух поэта и художника<br>сияет в невзгодах.</div>
+            <div class="stanza">В искусстве я нахожу убежище,<br>в поэзии — дом,<br>место, где раны<br>могут начать исцеляться.<br>Мои слова — это мосты<br>между вчера и завтра,<br>попытка исцелить,<br>облегчить войну миром.</div>
+            <div class="stanza">Так, каждый стих или мазок кисти —<br>свет во тьме,<br>я пытаюсь найти равновесие<br>между болью и ясностью.<br>В моём человеческом путешествии<br>как поэт, как художник, как существо,<br>я стремлюсь сеять надежду<br>в мире, что порой кажется гибнущим.</div>
+            <div class="stanza">В самые тёмные мгновения,<br>когда надежда кажется далёкой,<br>рождается слабый свет<br>в ещё юной душе.<br>Именно в самую тёмную ночь<br>звёзды сияют ярче всего,<br>напоминая мне, что даже боль<br>укрепляет свой урок.</div>
+            <div class="stanza">В каждом вздохе уныния,<br>в каждом мгновении отчаяния<br>я нахожу нить силы,<br>искру вдохновения.<br>Как поэт, я мечтаю, чтобы мои стихи<br>стали маяком,<br>убежищем в буре,<br>теплом в одиночестве.</div>
+            <div class="stanza text-warning">В эти времена войн<br>я желаю, чтобы мой голос имел силу —<br>не только выражать боль,<br>но и возрождаться.<br>Ведь даже в самой глубокой<br>и раздирающей печали<br>скрывается возможность мира<br>и новой зари.</div>
+          </div>
+        </div>
+
+        <!-- UKRAINIAN -->
+        <div class="ukrainian language">
+          <h1 class="handwritten" style="color: #FFD700;">Мир, Поет і Художник Миру</h1>
+          <div class="poem-text">
+            <div class="stanza">Я народилася в Сіді-Іфні,<br>провінції Іспанії, що рухається вперед,<br>де війна 1957 року залишила свій слід —<br>тінь у надії.<br>У ніжному віці майже трьох років,<br>серед хаосу та спустошення,<br>спогади вкарбувалися<br>в глибини мого серця.</div>
+            <div class="stanza">Відлуння тих днів<br>досі звучить у мені,<br>тіні дитинства,<br>яке я ледь бачила.<br>У кожному вимушеному сміху,<br>у кожній прихованій сльозі<br>ховається біль<br>витонченої невинності.</div>
+            <div class="stanza">Художник і поет, з позначеною душею,<br>крокуючи по життю<br>з важким тягарем.<br>У моїх пошуках радості<br>в цьому несправедливому світі<br>внутрішні шрами<br>заважають почуватися вільно.</div>
+            <div class="stanza">Хоча я посміхаюся і пишу<br>під часом сірим небом,<br>у глибині мого єства<br>часом зберігається пережите.<br>Людство часом відчаюється,<br>часом згасає,<br>і рухається вперед<br>завдяки божественній душі, що нас колише.</div>
+            <div class="stanza">Попри біль, що гніздиться в моїй душі,<br>в кожному вірші тече життя,<br>непереможна сила.<br>Як річка, що не здається,<br>попри каміння у своєму руслі,<br>мій дух поета і художника<br>сяє в негодах.</div>
+            <div class="stanza">У мистецтві я знаходжу притулок,<br>у поезії — дім,<br>місце, де рани<br>можуть почати зцілюватися.<br>Мої слова — це мости<br>між учора і завтра,<br>спроба зцілити,<br>полегшити війну миром.</div>
+            <div class="stanza">Так, кожен вірш чи мазок пензля —<br>світло у темряві,<br>я намагаюся знайти рівновагу<br>між болем і ясністю.<br>У моїй людській подорожі<br>як поет, як художник, як істота,<br>я прагну сіяти надію<br>у світі, що часом здається гинучим.</div>
+            <div class="stanza">У найтемніші миті,<br>коли надія здається далекою,<br>народжується слабке світло<br>в ще юній душі.<br>Саме в найтемнішу ніч<br>зорі сяють найяскравіше,<br>нагадуючи мені, що навіть біль<br>зміцнює свій урок.</div>
+            <div class="stanza">У кожному зітханні зневіри,<br>в кожній миті відчаю<br>я знаходжу нитку сили,<br>іскру натхнення.<br>Як поет, я мрію, щоб мої вірші<br>стали маяком,<br>притулком у бурі,<br>теплом у самотності.</div>
+            <div class="stanza text-warning">У ці часи воєн<br>я бажаю, щоб мій голос мав силу —<br>не тільки виражати біль,<br>а й відроджуватися.<br>Бо навіть у найглибшому<br>і найболючішому горі<br>ховається можливість миру<br>і нової зорі.</div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #FFD700;">Paz, Poeta e Artista di Pace</h1>
+          <div class="poem-text">
+            <div class="stanza">Sono nata a Sidi Ifni,<br>una provincia della Spagna che avanza,<br>dove la guerra del 1957<br>ha lasciato il suo segno su di me,<br>un'ombra nella speranza.<br>Alla tenera età di quasi tre anni,<br>tra il caos e la desolazione,<br>i ricordi si sono incisi<br>nel profondo del mio cuore.</div>
+            <div class="stanza">Artista e poeta, con l'anima segnata,<br>camminando per la vita,<br>con un carico pesante.<br>Alla ricerca della gioia,<br>in questo mondo ingiusto,<br>le cicatrici interne<br>rendono difficile sentirsi a proprio agio.</div>
+            <div class="stanza">Nonostante il dolore<br>che si annida nella mia anima,<br>in ogni verso scorre la vita,<br>una forza invincibile.<br>Come un fiume che persiste,<br>nonostante le pietre nel suo corso,<br>il mio spirito di poeta e artista<br>risplende nell'avversità.</div>
+            <div class="stanza">Nell'arte trovo rifugio,<br>nella poesia una casa,<br>un luogo dove le ferite<br>possono iniziare a guarire.<br>Le mie parole sono ponti,<br>tra ieri e domani,<br>un tentativo di guarire,<br>di alleviare la guerra con la pace.</div>
+            <div class="stanza text-warning">In questi momenti di guerre,<br>desidero che la mia voce abbia potere,<br>non solo per esprimere dolore,<br>ma anche per rinascere.<br>Perché anche nel dolore<br>più profondo e straziante,<br>si nasconde la possibilità di pace<br>e una nuova aurora.</div>
+          </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="chinese language">
+          <h1 class="handwritten" style="color: #FFD700;">和平，和平的诗人和艺术家</h1>
+          <div class="poem-text">
+            <div class="stanza">我出生在西迪伊夫尼，<br>这是西班牙的一个省份。<br>1957年的战争在我身上留下了印记，<br>希望中的阴影。<br>在将近三岁的幼年时期，<br>在混乱和荒凉中，<br>记忆深深地刻在我的心中。</div>
+            <div class="stanza">艺术家和诗人，灵魂带着印记，<br>在人生中行走，肩负沉重的负担。<br>在这个不公正的世界里寻找快乐，<br>内心的伤痕使人难以感到自在。</div>
+            <div class="stanza">尽管我的灵魂中藏着痛苦，<br>每一行诗中都流淌着生命，<br>一种不屈的力量。<br>像一条坚持不懈的河流，<br>尽管河道中有石头，<br>我的诗人和艺术家的精神<br>在逆境中闪耀。</div>
+            <div class="stanza">在艺术中我找到了避难所，<br>在诗歌中找到了家，<br>一个伤口可以开始愈合的地方。<br>我的话语是桥梁，<br>连接着昨日与明天，<br>试图治愈，缓解战争中的和平。</div>
+            <div class="stanza text-warning">在这些战争的时刻，<br>我希望我的声音有力量，<br>不仅表达痛苦，而且重生。<br>因为即使在最深的、<br>最撕心裂肺的悲伤中，<br>也隐藏着和平和新黎明的可能性。</div>
+          </div>
+        </div>
+
+        <!-- ARABIC -->
+        <div class="arabic language" dir="rtl">
+          <h1 class="handwritten" style="color: #FFD700;">باز، شاعرة وفنانة من أجل السلام</h1>
+          <div class="poem-text" style="text-align: right;">
+            <div class="stanza">ولدت في سيدي إفني،<br>محافظة من إسبانيا التي تتقدم،<br>حيث تركت حرب 1957 بصمتها علي،<br>ظل في الأمل.<br>في سن الرقيقة ما يقرب من ثلاث سنوات،<br>بين الفوضى والخراب،<br>تم حفر الذكريات في عمق قلبي.</div>
+            <div class="stanza">فنان وشاعر، بروح موسومة،<br>أمشي في الحياة، أحمل حملاً ثقيلاً.<br>في سعيي للفرح، في هذا العالم غير العادل،<br>الجروح الداخلية تجعل من الصعب الشعور بالراحة.</div>
+            <div class="stanza">على الرغم من الألم الذي يعشش في روحي،<br>في كل آية تتدفق الحياة، قوة لا تقهر.<br>مثل نهر يستمر،<br>على الرغم من الحجارة في مساره،<br>تلمع روحي كشاعر وفنان في الشدائد.</div>
+            <div class="stanza">في الفن أجد ملجأ، في الشعر أجد منزلاً،<br>مكان حيث يمكن للجروح أن تبدأ في الشفاء.<br>كلماتي جسور، بين الأمس والغد،<br>محاولة للشفاء، لتخفيف الحرب بالسلام.</div>
+            <div class="stanza text-warning">في هذه الأوقات من الحروب،<br>أتمنى أن يكون لصوتي قوة،<br>ليس فقط للتعبير عن الألم،<br>بل للنهضة أيضاً.<br>لأنه حتى في أعمق<br>وأشد الأحزان تمزقاً،<br>يكمن احتمال السلام وفجر جديد.</div>
+          </div>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="aleman language">
+          <h1 class="handwritten" style="color: #FFD700;">Paz, Dichterin und Künstlerin des Friedens</h1>
+          <div class="poem-text">
+            <div class="stanza">Ich wurde in Sidi Ifni geboren,<br>einer Provinz Spaniens, die voranschreitet,<br>wo der Krieg von 1957 seine Spuren hinterließ —<br>ein Schatten in der Hoffnung.<br>Im zarten Alter von fast drei Jahren,<br>inmitten von Chaos und Verwüstung,<br>prägten sich Erinnerungen<br>in die Tiefen meines Herzens.</div>
+            <div class="stanza">Künstlerin und Dichterin, mit gezeichneter Seele,<br>wandelnd durch das Leben<br>mit einer schweren Last.<br>Auf der Suche nach Freude<br>in dieser ungerechten Welt<br>erschweren innere Narben<br>das Gefühl der Geborgenheit.</div>
+            <div class="stanza">Trotz des Schmerzes,<br>der in meiner Seele nistet,<br>fließt in jedem Vers das Leben,<br>eine unbesiegte Kraft.<br>Wie ein Fluss, der beharrt,<br>trotz der Steine in seinem Lauf,<br>leuchtet mein Geist als Dichterin und Künstlerin<br>im Angesicht der Widrigkeiten.</div>
+            <div class="stanza">In der Kunst finde ich Zuflucht,<br>in der Poesie ein Zuhause,<br>einen Ort, wo Wunden<br>beginnen können zu heilen.<br>Meine Worte sind Brücken<br>zwischen Gestern und Morgen,<br>ein Versuch zu heilen,<br>den Krieg im Frieden zu lindern.</div>
+            <div class="stanza text-warning">In diesen Zeiten der Kriege<br>wünsche ich mir, dass meine Stimme Macht hat —<br>nicht nur um Schmerz auszudrücken,<br>sondern auch um wiedergeboren zu werden.<br>Denn selbst im tiefsten<br>und herzzerreißendsten Leid<br>verbirgt sich die Möglichkeit des Friedens<br>und einer neuen Morgendämmerung.</div>
+          </div>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="frances language">
+          <h1 class="handwritten" style="color: #FFD700;">Paz, Poète et Artiste de Paix</h1>
+          <div class="poem-text">
+            <div class="stanza">Je suis née à Sidi Ifni,<br>une province d'Espagne qui avance,<br>où la guerre de 1957 a laissé sa marque —<br>une ombre dans l'espoir.<br>Au tendre âge de presque trois ans,<br>dans le chaos et la désolation,<br>les souvenirs se sont gravés<br>au fond de mon cœur.</div>
+            <div class="stanza">Artiste et poète, l'âme marquée,<br>marchant dans la vie<br>avec un fardeau pesant.<br>Dans ma quête de joie<br>dans ce monde injuste,<br>les cicatrices intérieures<br>rendent difficile de se sentir à l'aise.</div>
+            <div class="stanza">Malgré la douleur<br>qui niche dans mon âme,<br>dans chaque vers coule la vie,<br>une force invaincue.<br>Comme un fleuve qui persiste<br>malgré les pierres dans son cours,<br>mon esprit de poète et d'artiste<br>brille dans l'adversité.</div>
+            <div class="stanza">Dans l'art je trouve refuge,<br>dans la poésie un foyer,<br>un lieu où les blessures<br>peuvent commencer à guérir.<br>Mes mots sont des ponts<br>entre hier et demain,<br>une tentative de guérir,<br>d'apaiser la guerre en paix.</div>
+            <div class="stanza text-warning">En ces temps de guerres,<br>je souhaite que ma voix ait du pouvoir —<br>non seulement pour exprimer la douleur,<br>mais aussi pour renaître.<br>Car même dans la tristesse<br>la plus profonde et déchirante,<br>se cache la possibilité de la paix<br>et d'une nouvelle aurore.</div>
+          </div>
+        </div>
+
+        <!-- JAPANESE -->
+        <div class="japones language">
+          <h1 class="handwritten" style="color: #FFD700;">パス、平和の詩人と芸術家</h1>
+          <div class="poem-text">
+            <div class="stanza">私はシディ・イフニで生まれた、<br>前進するスペインの一県で、<br>1957年の戦争が私に痕跡を残した —<br>希望の中の影。<br>ほぼ3歳の幼い頃、<br>混沌と荒廃の中で、<br>記憶は心の奥深くに刻まれた。</div>
+            <div class="stanza">芸術家であり詩人、刻まれた魂を持ち、<br>重い荷物を背負いながら人生を歩む。<br>この不正な世界で喜びを求めるも、<br>内なる傷跡が安らぎを難しくする。</div>
+            <div class="stanza">魂に宿る痛みにもかかわらず、<br>すべての詩の中に命が流れる、<br>不屈の力。<br>その流れの中の石にもかかわらず<br>耐え続ける川のように、<br>私の詩人と芸術家の精神は<br>逆境の中で輝く。</div>
+            <div class="stanza">芸術の中に避難所を見つけ、<br>詩の中に故郷を見つける、<br>傷が癒え始める場所。<br>私の言葉は橋、<br>昨日と明日をつなぐ、<br>癒す試み、戦争を平和で和らげる。</div>
+            <div class="stanza text-warning">戦争のこの時代に、<br>私の声に力があることを願う —<br>痛みを表現するだけでなく、<br>再び生まれ変わるために。<br>最も深く<br>心を引き裂く悲しみの中にさえ、<br>平和の可能性と<br>新しい夜明けが隠されている。</div>
+          </div>
+        </div>
+
+        <!-- PORTUGUESE -->
+        <div class="portuges language">
+          <h1 class="handwritten" style="color: #FFD700;">Paz, Poeta e Artista da Paz</h1>
+          <div class="poem-text">
+            <div class="stanza">Nasci em Sidi Ifni,<br>uma província de Espanha que avança,<br>onde a guerra de 1957 deixou a sua marca —<br>uma sombra na esperança.<br>Na tenra idade de quase três anos,<br>entre o caos e a desolação,<br>as memórias gravaram-se<br>nas profundezas do meu coração.</div>
+            <div class="stanza">Artista e poeta, com a alma marcada,<br>caminhando pela vida<br>com uma carga pesada.<br>Na minha busca pela alegria<br>neste mundo injusto,<br>as cicatrizes internas<br>dificultam sentir-se à vontade.</div>
+            <div class="stanza">Apesar da dor que aninha na minha alma,<br>em cada verso flui a vida,<br>uma força invencível.<br>Como um rio que persiste<br>apesar das pedras no seu leito,<br>o meu espírito de poeta e artista<br>brilha na adversidade.</div>
+            <div class="stanza">Na arte encontro refúgio,<br>na poesia um lar,<br>um lugar onde as feridas<br>podem começar a sarar.<br>As minhas palavras são pontes<br>entre o ontem e o amanhã,<br>uma tentativa de curar,<br>de aliviar a guerra em paz.</div>
+            <div class="stanza text-warning">Nestes tempos de guerras,<br>desejo que a minha voz tenha poder —<br>não apenas para expressar dor,<br>mas também para renascer.<br>Porque mesmo na tristeza<br>mais profunda e dilacerante,<br>esconde-se a possibilidade da paz<br>e de uma nova aurora.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Music Section -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4" style="color: #FFD700 !important;">
+          <i class="fab fa-spotify mr-2"></i>
+          <span class="spanish language">Música — Paz, Poeta y Artista de Paz</span>
+          <span class="english language">Music — Paz, Poet and Artist of Peace</span>
+          <span class="russian language">Музыка — Мир, Поэт и Художник Мира</span>
+          <span class="ukrainian language">Музика — Мир, Поет і Художник Миру</span>
+          <span class="italian language">Musica — Paz, Poeta e Artista di Pace</span>
+          <span class="chinese language">音乐 — 和平，和平的诗人和艺术家</span>
+          <span class="arabic language">موسيقى — باز، شاعرة وفنانة السلام</span>
+          <span class="aleman language">Musik — Paz, Dichterin und Künstlerin des Friedens</span>
+          <span class="frances language">Musique — Paz, Poète et Artiste de Paix</span>
+          <span class="japones language">音楽 — パス、平和の詩人と芸術家</span>
+          <span class="portuges language">Música — Paz, Poeta e Artista da Paz</span>
+        </h2>
+
+        <div class="row justify-content-center">
+          <!-- Disco Español -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_es.png" class="album-cover" alt="Versión Castellano">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Castellano</span>
+                  <span class="english language">Spanish Album</span>
+                  <span class="russian language">Испанский диск</span>
+                  <span class="ukrainian language">Іспанський диск</span>
+                  <span class="italian language">Disco in Spagnolo</span>
+                  <span class="chinese language">西班牙语专辑</span>
+                  <span class="arabic language">ألبوم بالإسبانية</span>
+                  <span class="aleman language">Spanisches Album</span>
+                  <span class="frances language">Album en Espagnol</span>
+                  <span class="japones language">スペイン語アルバム</span>
+                  <span class="portuges language">Álbum em Espanhol</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disco Inglés -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_en.png" class="album-cover" alt="English Version">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Inglés</span>
+                  <span class="english language">English Album</span>
+                  <span class="russian language">Английский диск</span>
+                  <span class="ukrainian language">Англійський диск</span>
+                  <span class="italian language">Disco in Inglese</span>
+                  <span class="chinese language">英语专辑</span>
+                  <span class="arabic language">ألبوم بالإنجليزية</span>
+                  <span class="aleman language">Englisches Album</span>
+                  <span class="frances language">Album en Anglais</span>
+                  <span class="japones language">英語アルバム</span>
+                  <span class="portuges language">Álbum em Inglês</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disco Ruso -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_ru.png" class="album-cover" alt="Русская версия">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Ruso</span>
+                  <span class="english language">Russian Album</span>
+                  <span class="russian language">Русский диск</span>
+                  <span class="ukrainian language">Російський диск</span>
+                  <span class="italian language">Disco in Russo</span>
+                  <span class="chinese language">俄语专辑</span>
+                  <span class="arabic language">ألبوم بالروسية</span>
+                  <span class="aleman language">Russisches Album</span>
+                  <span class="frances language">Album en Russe</span>
+                  <span class="japones language">ロシア語アルバム</span>
+                  <span class="portuges language">Álbum em Russo</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Paz, Poet and Artist of Peace</div>
-        <div class="spanish language" style="display: none;">Paz, poeta y artista de Paz</div>
-        <div class="italian language" style="display: none;">Paz, poeta e artista di Pace</div>
-        <div class="chinese language" style="display: none;">和平，和平的诗人和艺术家</div>
-        <div class="arabic language" style="display: none;">باز، شاعرة وفنانة من أجل السلام</div>
-
-      </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">
-          <p>From the scars of war, my verses seek peace and hope.</p>
-        </div>
-        <div class="spanish language" style="display: none;">
-          <p>Desde las cicatrices de la guerra, mis versos buscan paz y esperanza.</p>
-        </div>
-        <div class="italian language" style="display: none;">
-          <p>Dalle cicatrici della guerra, i miei versi cercano pace e speranza.</p>
-        </div>
-        <div class="chinese language" style="display: none;">
-          <p>从战争的伤痕中，我的诗句寻求和平与希望。</p>
-        </div>
-        <div class="arabic language" style="display: none;">
-          <p>من ندوب الحرب، تبحث أبياتي عن السلام والأمل.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Paz, Poet and Artist of Peace</div>
-        <div class="spanish language" style="display: none;">Paz, poeta y artista de Paz</div>
-        <div class="italian language" style="display: none;">Paz, poeta e artista di Pace</div>
-        <div class="chinese language" style="display: none;">和平，和平的诗人和艺术家</div>
-        <div class="arabic language" style="display: none;">باز، شاعرة وفنانة من أجل السلام</div>
-
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>I was born in Sidi Ifni, a province of Spain that advances.</p>
-          <p>where the war of 1957 left its mark on me, a shadow in hope.</p>
-          <p>At the tender age of almost three years, amidst chaos and desolation,</p>
-          <p>memories were etched in the depths of my heart.</p>
-          <br>
-          <p>The echoes of those days still resonate within me,</p>
-          <p>shadows of a childhood I could barely see.</p>
-          <p>In every forced laugh, in every hidden tear,</p>
-          <p>lies the pain of a cultured innocence.</p>
-          <br>
-          <p>Artist and poet, with a marked soul,</p>
-          <p>walking through life, carrying a heavy load.</p>
-          <p>In my quest for joy, in this unjust world,</p>
-          <p>internal scars make it hard to feel at ease.</p>
-          <br>
-          <p>Though I smile and write, under a gray sky sometimes</p>
-          <p>deep within my being, what I lived is sometimes kept</p>
-          <p>Humanity sometimes despairs, sometimes fades away,</p>
-          <p>And moves forward, thanks to the divine soul that cradles us.</p>
-          <br>
-          <p>Despite the pain that nests in my soul,</p>
-          <p>life flows in each verse, an undefeated force.</p>
-          <p>Like a river that persists, despite the stones in its course,</p>
-          <p>my spirit as a poet and artist shines in adversity.</p>
-          <br>
-          <p>In art, I find refuge, in poetry, a home,</p>
-          <p>a place where wounds can begin to heal.</p>
-          <p>My words are bridges, between yesterday and tomorrow,</p>
-          <p>an attempt to heal, to ease the war in peace.</p>
-          <br>
-          <p>Thus, each verse or brushstroke is a light in the darkness,</p>
-          <p>I try to find balance between pain and clarity.</p>
-          <p>In my human journey, as a poet, as an artist, as a being,</p>
-          <p>I seek to sow hope, in a world that sometimes seems to perish.</p>
-          <br>
-          <p>In the darkest moments, where hope seems distant,</p>
-          <p>a faint light arises, in the still young soul.</p>
-          <p>It is in the darkest night, where the stars shine brightly,</p>
-          <p>reminding me that even pain reinforces its lesson.</p>
-          <br>
-          <p>In every sigh of discouragement, in every moment of despair,</p>
-          <p>I find a thread of strength, a spark of inspiration.</p>
-          <p>As a poet, I long for my verses to become a beacon,</p>
-          <p>a refuge in the storm, warmth in the desolation.</p>
-          <br>
-          <p>In these times of wars, I wish my voice to have power,</p>
-          <p>not only to express pain but also to be reborn.</p>
-          <p>Because even in the deepest and most heartbreaking sorrow,</p>
-          <p>there lies the possibility of peace and a new dawn.</p>
-
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Nací en Sidi Ifni, una provincia de España que avanza.</p>
-          <p>donde la guerra de 1957, me dejó su huella, una sombra en la esperanza.</p>
-          <p>A la tierna edad de casi tres años, entre el caos y la desolación,</p>
-          <p>se grabaron recuerdos, en el fondo de mi corazón.</p>
-          <br>
-          <p>Los ecos de aquellos días, aún resuenan en mi ser,</p>
-          <p>sombras de una infancia, que apenas pude ver.</p>
-          <p>En cada risa forzada, en cada lágrima oculta,</p>
-          <p>se esconde el dolor de una inocencia culta.</p>
-          <br>
-          <p>Artista y poeta, con el alma marcada,</p>
-          <p>caminando por la vida, con una carga pesada.</p>
-          <p>En mi búsqueda de alegría, en este mundo injusto,</p>
-          <p>las cicatrices internas, dificultan sentirse agusto.</p>
-          <br>
-          <p>Aunque sonrío y escribo, bajo un cielo gris a veces</p>
-          <p>en mi ser profundo, se guarda lo que viví a veces</p>
-          <p>La humanidad a veces desespera, a veces se desvanece,</p>
-          <p>Y sigue adelante, gracias a el alma divina que nos mece.</p>
-          <br>
-          <p>A pesar del dolor que en mi alma se anida,</p>
-          <p>en cada verso fluye vida, una fuerza no vencida.</p>
-          <p>Como un río que persiste, a pesar de las piedras en su cauce,</p>
-          <p>mi espíritu de poeta y artista, en la adversidad reluce.</p>
-          <br>
-          <p>En el arte encuentro refugio, en la poesía un hogar,</p>
-          <p>un lugar donde las heridas pueden empezar a sanar.</p>
-          <p>Mis palabras son puentes, entre el ayer y el mañana,</p>
-          <p>un intento de sanar, de aliviar la guerra en paz.</p>
-          <br>
-          <p>Así, cada verso o pincelada son una luz en la oscuridad,</p>
-          <p>intento encontrar balance, entre el dolor y la claridad.</p>
-          <p>En mi viaje humano, como poeta, como artista, como ser,</p>
-          <p>busco sembrar esperanza, en un mundo que a veces parece perecer.</p>
-          <br>
-          <p>En los momentos más sombríos, donde la esperanza parece lejana,</p>
-          <p>surge una luz tenue, en el alma aún temprana.</p>
-          <p>Es en la noche más oscura, donde las estrellas brillan con fuerza,</p>
-          <p>recordándome que incluso el dolor, su lección refuerza.</p>
-          <br>
-          <p>En cada suspiro de desaliento, en cada instante de desesperación,</p>
-          <p>encuentro un hilo de fuerza, una chispa de inspiración.</p>
-          <p>Como poeta, anhelo mis versos se conviertan en un faro,</p>
-          <p>un refugio en la tormenta, calor en el desamparo.</p>
-          <br>
-          <p>En estos momentos de guerras, deseo que mi voz tenga poder,</p>
-          <p>no solo para expresar dolor, sino también para renacer.</p>
-          <p>Porque incluso en la tristeza más profunda y desgarradora,</p>
-          <p>se esconde la posibilidad de la paz y una nueva aurora.</p>
-
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Sono nato a Sidi Ifni, una provincia della Spagna che avanza.</p>
-          <p>dove la guerra del 1957 ha lasciato il suo segno su di me, un'ombra nella speranza.</p>
-          <p>Alla tenera età di quasi tre anni, tra il caos e la desolazione,</p>
-          <p>i ricordi si sono incisi nel profondo del mio cuore.</p>
-          <br>
-          <p>Gli echi di quei giorni risuonano ancora dentro di me,</p>
-          <p>ombre di un'infanzia che ho potuto a malapena vedere.</p>
-          <p>In ogni risata forzata, in ogni lacrima nascosta,</p>
-          <p>si nasconde il dolore di un'innocenza coltivata.</p>
-          <br>
-          <p>Artista e poeta, con l'anima segnata,</p>
-          <p>camminando per la vita, con un carico pesante.</p>
-          <p>Alla ricerca della gioia, in questo mondo ingiusto,</p>
-          <p>le cicatrici interne rendono difficile sentirsi a proprio agio.</p>
-          <br>
-          <p>Anche se sorrido e scrivo, a volte sotto un cielo grigio,</p>
-          <p>nel profondo del mio essere, a volte è custodito ciò che ho vissuto</p>
-          <p>L'umanità a volte dispera, a volte svanisce,</p>
-          <p>E va avanti, grazie all'anima divina che ci culla.</p>
-          <br>
-          <p>Nonostante il dolore che si annida nella mia anima,</p>
-          <p>in ogni verso scorre la vita, una forza invincibile.</p>
-          <p>Come un fiume che persiste, nonostante le pietre nel suo corso,</p>
-          <p>il mio spirito di poeta e artista risplende nell'avversità.</p>
-          <br>
-          <p>Nell'arte trovo rifugio, nella poesia una casa,</p>
-          <p>un luogo dove le ferite possono iniziare a guarire.</p>
-          <p>Le mie parole sono ponti, tra ieri e domani,</p>
-          <p>un tentativo di guarire, di alleviare la guerra con la pace.</p>
-          <br>
-          <p>Così, ogni verso o pennellata è una luce nell'oscurità,</p>
-          <p>cerco di trovare equilibrio, tra il dolore e la chiarezza.</p>
-          <p>Nel mio viaggio umano, come poeta, come artista, come essere,</p>
-          <p>cerco di seminare speranza, in un mondo che a volte sembra perire.</p>
-          <br>
-          <p>Nei momenti più bui, dove la speranza sembra lontana,</p>
-          <p>sorge una luce tenue, nell'anima ancora giovane.</p>
-          <p>È nella notte più buia, dove le stelle brillano con forza,</p>
-          <p>ricordandomi che anche il dolore rafforza la sua lezione.</p>
-          <br>
-          <p>In ogni sospiro di scoraggiamento, in ogni momento di disperazione,</p>
-          <p>trovo un filo di forza, una scintilla di ispirazione.</p>
-          <p>Come poeta, desidero che i miei versi diventino un faro,</p>
-          <p>un rifugio nella tempesta, calore nel desamparo.</p>
-          <br>
-          <p>In questi momenti di guerre, desidero che la mia voce abbia potere,</p>
-          <p>non solo per esprimere dolore, ma anche per rinascere.</p>
-          <p>Perché anche nel dolore più profondo e straziante,</p>
-          <p>si nasconde la possibilità di pace e una nuova aurora.</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>我出生在西迪伊夫尼，这是西班牙的一个省份，不断进步。</p>
-          <p>在那里，1957年的战争在我身上留下了印记，希望中的阴影。</p>
-          <p>在将近三岁的幼年时期，在混乱和荒凉中，</p>
-          <p>记忆深深地刻在我的心中。</p>
-          <br>
-          <p>那些日子的回声仍在我心中回荡，</p>
-          <p>我几乎看不见的童年的阴影。</p>
-          <p>在每一个被迫的笑容中，在每一滴隐藏的眼泪中，</p>
-          <p>隐藏着一种成熟的纯真之痛。</p>
-          <br>
-          <p>艺术家和诗人，灵魂带着印记，</p>
-          <p>在人生中行走，肩负沉重的负担。</p>
-          <p>在这个不公正的世界里寻找快乐，</p>
-          <p>内心的伤痕使人难以感到自在。</p>
-          <br>
-          <p>尽管有时我微笑着写作，在灰色的天空下，</p>
-          <p>在我深处，有时隐藏着我所经历的。</p>
-          <p>人类有时绝望，有时消逝，</p>
-          <p>并继续前行，感谢抚慰我们的神圣灵魂。</p>
-          <br>
-          <p>尽管我的灵魂中藏着痛苦，</p>
-          <p>每一行诗中都流淌着生命，一种不屈的力量。</p>
-          <p>像一条坚持不懈的河流，尽管河道中有石头，</p>
-          <p>我的诗人和艺术家的精神在逆境中闪耀。</p>
-          <br>
-          <p>在艺术中我找到了避难所，在诗歌中找到了家，</p>
-          <p>一个伤口可以开始愈合的地方。</p>
-          <p>我的话语是桥梁，连接着昨日与明天，</p>
-          <p>试图治愈，缓解战争中的和平。</p>
-          <br>
-          <p>因此，每一行诗或每一笔都是黑暗中的一束光，</p>
-          <p>我试图在痛苦与清晰之间找到平衡。</p>
-          <p>在我作为人类的旅程中，作为诗人，作为艺术家，作为人，</p>
-          <p>我试图在有时似乎会灭亡的世界中播种希望。</p>
-          <br>
-          <p>在最黑暗的时刻，当希望似乎遥远，</p>
-          <p>一缕微光在仍然年轻的灵魂中升起。</p>
-          <p>正是在最黑暗的夜晚，星星闪耀着光芒，</p>
-          <p>提醒我即使是痛苦也在加强它的教训。</p>
-          <br>
-          <p>在每一个气馁的叹息中，在每一个绝望的瞬间，</p>
-          <p>我找到了一丝力量，一点灵感。</p>
-          <p>作为诗人，我希望我的诗句成为灯塔，</p>
-          <p>暴风雨中的避难所，绝望中的温暖。</p>
-          <br>
-          <p>在这些战争的时刻，我希望我的声音有力量，</p>
-          <p>不仅表达痛苦，而且重生。</p>
-          <p>因为即使在最深的、最撕心裂肺的悲伤中，</p>
-          <p>也隐藏着和平和新黎明的可能性。</p>
-
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>ولدت في سيدي إفني، محافظة من إسبانيا التي تتقدم.</p>
-          <p>حيث تركت حرب 1957 بصمتها علي، ظل في الأمل.</p>
-          <p>في سن الرقيقة ما يقرب من ثلاث سنوات، بين الفوضى والخراب،</p>
-          <p>تم حفر الذكريات في عمق قلبي.</p>
-          <br>
-          <p>أصداء تلك الأيام لا تزال تتردد في داخلي،</p>
-          <p>ظلال من الطفولة التي بالكاد رأيتها.</p>
-          <p>في كل ضحكة مجبرة، في كل دمعة مخفية،</p>
-          <p>يختبئ ألم براءة مثقفة.</p>
-          <br>
-          <p>فنان وشاعر، بروح موسومة،</p>
-          <p>أمشي في الحياة، أحمل حملاً ثقيلاً.</p>
-          <p>في سعيي للفرح، في هذا العالم غير العادل،</p>
-          <p>الجروح الداخلية تجعل من الصعب الشعور بالراحة.</p>
-          <br>
-          <p>رغم أنني أبتسم وأكتب، تحت سماء رمادية أحياناً</p>
-          <p>في أعماق نفسي، أحتفظ أحياناً بما عشته</p>
-          <p>الإنسانية أحياناً تيأس، أحياناً تتلاشى،</p>
-          <p>وتستمر بفضل الروح الإلهية التي تواسينا.</p>
-          <br>
-          <p>على الرغم من الألم الذي يعشش في روحي،</p>
-          <p>في كل آية تتدفق الحياة، قوة لا تقهر.</p>
-          <p>مثل نهر يستمر، على الرغم من الحجارة في مساره،</p>
-          <p>تلمع روحي كشاعر وفنان في الشدائد.</p>
-          <br>
-          <p>في الفن أجد ملجأ، في الشعر أجد منزلاً،</p>
-          <p>مكان حيث يمكن للجروح أن تبدأ في الشفاء.</p>
-          <p>كلماتي جسور، بين الأمس والغد،</p>
-          <p>محاولة للشفاء، لتخفيف الحرب بالسلام.</p>
-          <br>
-          <p>وهكذا، كل آية أو ضربة فرشاة هي نور في الظلام،</p>
-          <p>أحاول أن أجد توازناً بين الألم والوضوح.</p>
-          <p>في رحلتي الإنسانية، كشاعر، كفنان، كإنسان،</p>
-          <p>أحاول أن أزرع الأمل، في عالم يبدو أحياناً أنه يهلك.</p>
-          <br>
-          <p>في اللحظات الأكثر ظلاماً، عندما يبدو الأمل بعيداً،</p>
-          <p>يظهر ضوء خافت، في الروح الشابة.</p>
-          <p>في الليل الأكثر ظلاماً، حيث تضيء النجوم بقوة،</p>
-          <p>تذكرني أن حتى الألم يعزز درسه.</p>
-          <br>
-          <p>في كل تنهيدة من الإحباط، في كل لحظة من اليأس،</p>
-          <p>أجد خيطاً من القوة، شرارة من الإلهام.</p>
-          <p>كشاعر، أتمنى أن تصبح آياتي منارة،</p>
-          <p>ملجأ في العاصفة، دفء في الكآبة.</p>
-          <br>
-          <p>في هذه الأوقات من الحروب، أتمنى أن يكون لصوتي قوة،</p>
-          <p>ليس فقط للتعبير عن الألم، بل للنهضة أيضاً.</p>
-          <p>لأنه حتى في أعمق وأشد الأحزان تمزقاً،</p>
-          <p>يكمن احتمال السلام وفجر جديد.</p>
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
-  <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+  <script src="script.js?v=2"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-
 </html>
