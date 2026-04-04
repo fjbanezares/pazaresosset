@@ -1,386 +1,341 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Amor Infinito</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Amor Infinito — Paz Arés Osset</title>
+  <meta name="description" content="Amor Infinito: un poema espiritual sobre el amor divino, la luz y la paz interior. Lo único real es el amor. Paz Arés Osset.">
   <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <!-- css here -->
-  <link rel="stylesheet" href="base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
-
 <body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-    </select>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+    <div class="position-fixed d-flex align-items-center p-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.5); padding: 10px 20px; backdrop-filter: blur(5px); background: rgba(0,0,0,0.3);">
+        <i class="fas fa-link mr-2" style="font-size: 1.1rem;"></i>
+        <span>Linktree</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="ukrainian">🇺🇦 Українська</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="position:absolute; margin: 10px; top:0px; left:0px;" alt="Paz Arés Osset">
+        </a>
+        <h1 class="jumbotron-heading">
+          <div class="spanish language">Amor Infinito</div>
+          <div class="english language">Infinite Love</div>
+          <div class="italian language">Amore Infinito</div>
+          <div class="chinese language">无限的爱</div>
+          <div class="arabic language">حب لا نهائي</div>
+          <div class="russian language">Бесконечная Любовь</div>
+          <div class="ukrainian language">Нескінченна Любов</div>
+          <div class="aleman language">Unendliche Liebe</div>
+          <div class="frances language">Amour Infini</div>
+          <div class="japones language">無限の愛</div>
+          <div class="portuges language">Amor Infinito</div>
+        </h1>
+        <div class="lead">
+          <div class="spanish language">Lo único real es el amor; bailemos y celebremos en su luz infinita.</div>
+          <div class="english language">The only real thing is love; let's dance and celebrate in its infinite light.</div>
+          <div class="italian language">L'unica cosa reale è l'amore; danziamo e celebriamo nella sua luce infinita.</div>
+          <div class="chinese language">唯一真实的是爱；让我们在它无限的光芒中跳舞和庆祝。</div>
+          <div class="arabic language">الشيء الحقيقي الوحيد هو الحب؛ دعونا نرقص ونحتفل في نوره اللامتناهي.</div>
+          <div class="russian language">Единственное реальное — это любовь; давайте танцевать и праздновать в её бесконечном свете.</div>
+          <div class="ukrainian language">Єдине справжнє — це любов; танцюймо й святкуймо в її нескінченному світлі.</div>
+          <div class="aleman language">Das Einzige, was real ist, ist die Liebe; lasst uns tanzen und in ihrem unendlichen Licht feiern.</div>
+          <div class="frances language">La seule chose réelle est l'amour ; dansons et célébrons dans sa lumière infinie.</div>
+          <div class="japones language">唯一の真実は愛です。その無限の光の中で踊り、祝いましょう。</div>
+          <div class="portuges language">A única coisa real é o amor; dancemos e celebremos na sua luz infinita.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="multilingual-description py-5">
+      <div class="container text-center">
+
+        <!-- SPANISH -->
+        <div class="spanish language">
+          <h1 class="handwritten" style="color: #FFC864;">Amor Infinito</h1>
+          <div class="poem-text">
+            <div class="stanza">Lo único real es el amor<br>la verdad es el amor<br>los regalos de Dios nos rodean<br>Dancemos y bailemos</div>
+            <div class="stanza">Dios nos ama<br>En Cristo se unió a los humanos<br>Despierta en su Espíritu Santo<br>Que nos regaló y nos regala</div>
+            <div class="stanza">Él ama como un amante<br>Elévate a la vibración brillante del amor<br>Estate en paz amado ser<br>Él sólo anhela tu felicidad</div>
+            <div class="stanza">Su amor brilla en todas partes<br>Anhela que la luz se extienda<br>Toda sombra se desvanecerá<br>con toda nuestra luz</div>
+            <div class="stanza">El amor de Dios no puede fallar<br>La gratitud de Dios es infinita<br>Y su regalo ahora es necesario<br>en esta Sociedad separada</div>
+            <div class="stanza">estos Gobiernos corruptos<br>en estas sombras que apagan<br>hablará a todos por los despiertos<br>y vencerá a la oscura guerra</div>
+            <div class="stanza">Se expandirá su vibración por los místicos<br>Se mostrará por los poetas artistas<br>Ya llegó, ya llegó</div>
+            <div class="stanza text-warning">Ahora olvida la sombra<br>Céntrate y no olvides la luz divina<br>Olvida todo excepto que el amor está en ti<br>Quédate en tu ser Divino<br>Baila con el éxtasis</div>
+          </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="english language">
+          <h1 class="handwritten" style="color: #FFC864;">Infinite Love</h1>
+          <div class="poem-text">
+            <div class="stanza">The only real thing is love<br>the truth is love<br>the gifts of God surround us<br>Let's dance and celebrate</div>
+            <div class="stanza">God loves us<br>In Christ, He joined humanity<br>Awaken in His Holy Spirit<br>That He gave and gives us</div>
+            <div class="stanza">He loves like a lover<br>Elevate to the bright vibration of love<br>Be at peace, beloved being<br>He only longs for your happiness</div>
+            <div class="stanza">His love shines everywhere<br>He longs for the light to spread<br>Every shadow will fade away<br>with all our light</div>
+            <div class="stanza">God's love cannot fail<br>God's gratitude is infinite<br>And His gift is now needed<br>in this separated Society</div>
+            <div class="stanza">these corrupt Governments<br>in these shadows that extinguish<br>He will speak to all through the awakened<br>and will overcome the dark war</div>
+            <div class="stanza">His vibration will expand through the mystics<br>He will be shown by poets and artists<br>It has arrived, it has arrived</div>
+            <div class="stanza text-warning">Now forget the shadow<br>Focus and do not forget the divine light<br>Forget everything except that love is in you<br>Stay in your Divine being<br>Dance with ecstasy</div>
+          </div>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="italian language">
+          <h1 class="handwritten" style="color: #FFC864;">Amore Infinito</h1>
+          <div class="poem-text">
+            <div class="stanza">L'unica cosa reale è l'amore<br>la verità è l'amore<br>i doni di Dio ci circondano<br>Balliamo e festeggiamo</div>
+            <div class="stanza">Dio ci ama<br>In Cristo si è unito all'umanità<br>Svegliati nel suo Spirito Santo<br>Che ci ha dato e ci dà</div>
+            <div class="stanza">Egli ama come un amante<br>Elevati alla brillante vibrazione dell'amore<br>Sii in pace, amato essere<br>Desidera solo la tua felicità</div>
+            <div class="stanza">Il suo amore brilla ovunque<br>Desidera che la luce si diffonda<br>Ogni ombra svanirà<br>con tutta la nostra luce</div>
+            <div class="stanza">L'amore di Dio non può fallire<br>La gratitudine di Dio è infinita<br>E il suo dono ora è necessario<br>in questa Società separata</div>
+            <div class="stanza">questi Governi corrotti<br>in queste ombre che estinguono<br>Parlerà a tutti attraverso i risvegliati<br>e supererà la guerra oscura</div>
+            <div class="stanza">La sua vibrazione si espanderà attraverso i mistici<br>Sarà mostrato da poeti e artisti<br>È arrivato, è arrivato</div>
+            <div class="stanza text-warning">Ora dimentica l'ombra<br>Concentrati e non dimenticare la luce divina<br>Dimentica tutto tranne che l'amore è in te<br>Rimani nel tuo essere Divino<br>Balla con l'estasi</div>
+          </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="chinese language">
+          <h1 class="handwritten" style="color: #FFC864;">无限的爱</h1>
+          <div class="poem-text">
+            <div class="stanza">唯一真实的是爱<br>真理是爱<br>上帝的礼物围绕着我们<br>让我们跳舞和庆祝</div>
+            <div class="stanza">上帝爱我们<br>在基督里，他与人类结合<br>在圣灵中醒来<br>他给予并赐予我们</div>
+            <div class="stanza">他像情人一样爱<br>提升到爱的明亮振动<br>保持平静，亲爱的存在<br>他只渴望你的幸福</div>
+            <div class="stanza">他的爱无处不在闪耀<br>他渴望光明传播<br>每一个阴影都会消失<br>伴随着我们所有的光</div>
+            <div class="stanza">上帝的爱不会失败<br>上帝的感恩是无限的<br>而他的礼物现在是必要的<br>在这个分离的社会中</div>
+            <div class="stanza">这些腐败的政府<br>在这些熄灭的阴影中<br>他将通过觉醒者与所有人交谈<br>并将战胜黑暗战争</div>
+            <div class="stanza">他的振动将通过神秘主义者扩展<br>他将通过诗人和艺术家展现<br>它已经到来，它已经到来</div>
+            <div class="stanza text-warning">现在忘记阴影<br>专注并不要忘记神圣的光<br>忘记一切，除了爱在你心中<br>保持在你神圣的存在中<br>与狂喜共舞</div>
+          </div>
+        </div>
+
+        <!-- ARABIC -->
+        <div class="arabic language" dir="rtl">
+          <h1 class="handwritten" style="color: #FFC864;">حب لا نهائي</h1>
+          <div class="poem-text" style="text-align: right;">
+            <div class="stanza">الشيء الحقيقي الوحيد هو الحب<br>الحقيقة هي الحب<br>هدايا الله تحيط بنا<br>دعونا نرقص ونحتفل</div>
+            <div class="stanza">الله يحبنا<br>في المسيح انضم إلى البشر<br>استيقظ في روحه القدوس<br>الذي أعطانا وما زال يعطينا</div>
+            <div class="stanza">يحب كعاشق<br>ارتفع إلى اهتزاز الحب اللامع<br>كن في سلام أيها الكائن المحبوب<br>إنه يتوق فقط إلى سعادتك</div>
+            <div class="stanza">حبه يضيء في كل مكان<br>يتوق إلى انتشار النور<br>كل ظل سيتلاشى<br>مع كل نورنا</div>
+            <div class="stanza">حب الله لا يمكن أن يفشل<br>امتنان الله لا نهائي<br>وهديته الآن ضرورية<br>في هذا المجتمع المنفصل</div>
+            <div class="stanza">هذه الحكومات الفاسدة<br>في هذه الظلال التي تخمد<br>سيتحدث إلى الجميع من خلال المستيقظين<br>وسينتصر في الحرب المظلمة</div>
+            <div class="stanza">سيتوسع اهتزازه من خلال الصوفيين<br>سيظهره الشعراء والفنانون<br>لقد وصل، لقد وصل</div>
+            <div class="stanza text-warning">الآن انسَ الظل<br>ركز ولا تنسَ النور الإلهي<br>انسَ كل شيء إلا أن الحب فيك<br>ابقَ في كيانك الإلهي<br>ارقص مع النشوة</div>
+          </div>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div class="russian language">
+          <h1 class="handwritten" style="color: #FFC864;">Бесконечная Любовь</h1>
+          <div class="poem-text">
+            <div class="stanza">Единственно реальное — это любовь<br>истина — это любовь<br>дары Божьи окружают нас<br>Танцуем и празднуем</div>
+            <div class="stanza">Бог нас любит<br>Во Христе Он соединился с людьми<br>Пробудись в Его Святом Духе<br>Который Он дарил и дарит нам</div>
+            <div class="stanza">Он любит как возлюбленный<br>Вознесись к сияющей вибрации любви<br>Пребывай в мире, любимое существо<br>Он жаждет лишь твоего счастья</div>
+            <div class="stanza">Его любовь сияет повсюду<br>Он жаждет, чтобы свет распространился<br>Каждая тень рассеется<br>со всей нашей светом</div>
+            <div class="stanza">Любовь Божья не может потерпеть неудачу<br>Благодарность Божья бесконечна<br>И Его дар теперь необходим<br>в этом разделённом Обществе</div>
+            <div class="stanza">этих коррумпированных Правительствах<br>в этих тенях, что гасят<br>Он заговорит со всеми через пробуждённых<br>и победит тёмную войну</div>
+            <div class="stanza">Его вибрация распространится через мистиков<br>Его явят поэты и художники<br>Он пришёл, Он пришёл</div>
+            <div class="stanza text-warning">Теперь забудь тень<br>Сосредоточься и не забывай божественный свет<br>Забудь всё, кроме того, что любовь в тебе<br>Оставайся в своём Божественном существе<br>Танцуй в экстазе</div>
+          </div>
+        </div>
+
+        <!-- UKRAINIAN -->
+        <div class="ukrainian language">
+          <h1 class="handwritten" style="color: #FFC864;">Нескінченна Любов</h1>
+          <div class="poem-text">
+            <div class="stanza">Єдине справжнє — це любов<br>істина — це любов<br>дари Божі оточують нас<br>Танцюймо й святкуймо</div>
+            <div class="stanza">Бог нас любить<br>У Христі Він з'єднався з людьми<br>Пробудися в Його Святому Дусі<br>Який Він дарував і дарує нам</div>
+            <div class="stanza">Він любить як коханий<br>Піднесися до сяючої вібрації любові<br>Перебувай у мирі, улюблена істота<br>Він прагне лише твого щастя</div>
+            <div class="stanza">Його любов сяє скрізь<br>Він прагне, щоб світло поширилося<br>Кожна тінь розсіється<br>з усім нашим світлом</div>
+            <div class="stanza">Любов Божа не може зазнати невдачі<br>Вдячність Божа нескінченна<br>І Його дар тепер необхідний<br>у цьому розділеному Суспільстві</div>
+            <div class="stanza">цих корумпованих Урядах<br>у цих тінях, що гасять<br>Він заговорить до всіх через пробуджених<br>і переможе темну війну</div>
+            <div class="stanza">Його вібрація поширюватиметься через містиків<br>Його покажуть поети та художники<br>Він прийшов, Він прийшов</div>
+            <div class="stanza text-warning">Тепер забудь тінь<br>Зосередся і не забувай божественне світло<br>Забудь усе, окрім того, що любов у тобі<br>Залишайся у своєму Божественному бутті<br>Танцюй в екстазі</div>
+          </div>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="aleman language">
+          <h1 class="handwritten" style="color: #FFC864;">Unendliche Liebe</h1>
+          <div class="poem-text">
+            <div class="stanza">Das Einzige, was real ist, ist die Liebe<br>die Wahrheit ist die Liebe<br>die Geschenke Gottes umgeben uns<br>Lasst uns tanzen und feiern</div>
+            <div class="stanza">Gott liebt uns<br>In Christus vereinte Er sich mit den Menschen<br>Erwache in Seinem Heiligen Geist<br>Den Er uns geschenkt hat und schenkt</div>
+            <div class="stanza">Er liebt wie ein Liebender<br>Erhebe dich zur strahlenden Schwingung der Liebe<br>Sei in Frieden, geliebtes Wesen<br>Er sehnt sich nur nach deinem Glück</div>
+            <div class="stanza">Seine Liebe leuchtet überall<br>Er sehnt sich danach, dass das Licht sich ausbreitet<br>Jeder Schatten wird vergehen<br>mit all unserem Licht</div>
+            <div class="stanza">Gottes Liebe kann nicht scheitern<br>Gottes Dankbarkeit ist unendlich<br>Und Sein Geschenk ist jetzt nötig<br>in dieser getrennten Gesellschaft</div>
+            <div class="stanza">diesen korrupten Regierungen<br>in diesen Schatten, die erlöschen<br>Er wird zu allen durch die Erwachten sprechen<br>und den dunklen Krieg überwinden</div>
+            <div class="stanza">Seine Schwingung wird sich durch die Mystiker ausbreiten<br>Er wird durch Dichter und Künstler gezeigt werden<br>Es ist angekommen, es ist angekommen</div>
+            <div class="stanza text-warning">Vergiss jetzt den Schatten<br>Konzentriere dich und vergiss das göttliche Licht nicht<br>Vergiss alles, außer dass die Liebe in dir ist<br>Bleibe in deinem göttlichen Sein<br>Tanze mit Ekstase</div>
+          </div>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="frances language">
+          <h1 class="handwritten" style="color: #FFC864;">Amour Infini</h1>
+          <div class="poem-text">
+            <div class="stanza">La seule chose réelle est l'amour<br>la vérité est l'amour<br>les cadeaux de Dieu nous entourent<br>Dansons et célébrons</div>
+            <div class="stanza">Dieu nous aime<br>Dans le Christ, Il s'est uni à l'humanité<br>Éveille-toi dans Son Esprit Saint<br>Qu'Il nous a donné et nous donne</div>
+            <div class="stanza">Il aime comme un amant<br>Élève-toi à la vibration brillante de l'amour<br>Sois en paix, être aimé<br>Il ne désire que ton bonheur</div>
+            <div class="stanza">Son amour brille partout<br>Il aspire à ce que la lumière se répande<br>Chaque ombre s'évanouira<br>avec toute notre lumière</div>
+            <div class="stanza">L'amour de Dieu ne peut faillir<br>La gratitude de Dieu est infinie<br>Et Son don est maintenant nécessaire<br>dans cette Société séparée</div>
+            <div class="stanza">ces Gouvernements corrompus<br>dans ces ombres qui éteignent<br>Il parlera à tous par les éveillés<br>et vaincra la guerre obscure</div>
+            <div class="stanza">Sa vibration se répandra par les mystiques<br>Il sera montré par les poètes et les artistes<br>Il est arrivé, il est arrivé</div>
+            <div class="stanza text-warning">Maintenant oublie l'ombre<br>Concentre-toi et n'oublie pas la lumière divine<br>Oublie tout sauf que l'amour est en toi<br>Reste dans ton être Divin<br>Danse avec l'extase</div>
+          </div>
+        </div>
+
+        <!-- JAPANESE -->
+        <div class="japones language">
+          <h1 class="handwritten" style="color: #FFC864;">無限の愛</h1>
+          <div class="poem-text">
+            <div class="stanza">唯一の真実は愛<br>真理は愛<br>神の贈り物が私たちを包む<br>踊り、祝おう</div>
+            <div class="stanza">神は私たちを愛している<br>キリストにおいて、神は人類と結ばれた<br>聖霊の中で目覚めよ<br>神が与え、今も与えてくださるもの</div>
+            <div class="stanza">神は恋人のように愛する<br>愛の輝く振動へと高まれ<br>平和でいなさい、愛される存在よ<br>神はただあなたの幸せを望んでいる</div>
+            <div class="stanza">その愛はどこにでも輝いている<br>光が広がることを望んでいる<br>すべての影は消え去る<br>私たちのすべての光とともに</div>
+            <div class="stanza">神の愛は失敗しない<br>神の感謝は無限<br>そしてその贈り物は今必要とされている<br>この分断された社会で</div>
+            <div class="stanza">これらの腐敗した政府<br>消え去るこれらの影の中で<br>目覚めた者たちを通じてすべての人に語りかける<br>そして暗い戦争に打ち勝つ</div>
+            <div class="stanza">その振動は神秘家たちを通じて広がる<br>詩人や芸術家たちによって示される<br>もう来た、もう来た</div>
+            <div class="stanza text-warning">今、影を忘れよ<br>集中して神聖な光を忘れるな<br>愛があなたの中にあること以外はすべて忘れよ<br>あなたの神聖な存在にとどまれ<br>恍惚とともに踊れ</div>
+          </div>
+        </div>
+
+        <!-- PORTUGUESE -->
+        <div class="portuges language">
+          <h1 class="handwritten" style="color: #FFC864;">Amor Infinito</h1>
+          <div class="poem-text">
+            <div class="stanza">A única coisa real é o amor<br>a verdade é o amor<br>os presentes de Deus nos rodeiam<br>Dancemos e celebremos</div>
+            <div class="stanza">Deus nos ama<br>Em Cristo, uniu-se à humanidade<br>Desperta no Seu Espírito Santo<br>Que Ele nos deu e nos dá</div>
+            <div class="stanza">Ele ama como um amante<br>Eleva-te à vibração brilhante do amor<br>Fica em paz, ser amado<br>Ele só deseja a tua felicidade</div>
+            <div class="stanza">O Seu amor brilha em todo o lado<br>Deseja que a luz se espalhe<br>Cada sombra se desvanecerá<br>com toda a nossa luz</div>
+            <div class="stanza">O amor de Deus não pode falhar<br>A gratidão de Deus é infinita<br>E o Seu presente agora é necessário<br>nesta Sociedade separada</div>
+            <div class="stanza">estes Governos corruptos<br>nestas sombras que apagam<br>Ele falará a todos através dos despertos<br>e vencerá a guerra escura</div>
+            <div class="stanza">A Sua vibração expandir-se-á pelos místicos<br>Será mostrado pelos poetas e artistas<br>Já chegou, já chegou</div>
+            <div class="stanza text-warning">Agora esquece a sombra<br>Concentra-te e não esqueças a luz divina<br>Esquece tudo excepto que o amor está em ti<br>Permanece no teu ser Divino<br>Dança com o êxtase</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Music Section -->
+      <div class="container mt-5 text-center">
+        <h2 class="handwritten text-light mb-4" style="color: #FFC864 !important;">
+          <i class="fab fa-spotify mr-2"></i>
+          <span class="spanish language">Música — Amor Infinito</span>
+          <span class="english language">Music — Infinite Love</span>
+          <span class="italian language">Musica — Amore Infinito</span>
+          <span class="chinese language">音乐 — 无限的爱</span>
+          <span class="arabic language">موسيقى — حب لا نهائي</span>
+          <span class="russian language">Музыка — Бесконечная Любовь</span>
+          <span class="ukrainian language">Музика — Нескінченна Любов</span>
+          <span class="aleman language">Musik — Unendliche Liebe</span>
+          <span class="frances language">Musique — Amour Infini</span>
+          <span class="japones language">音楽 — 無限の愛</span>
+          <span class="portuges language">Música — Amor Infinito</span>
+        </h2>
+
+        <div class="row justify-content-center">
+          <!-- Disco Español -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_es.png" class="album-cover" alt="Versión Castellano">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Castellano</span>
+                  <span class="english language">Spanish Album</span>
+                  <span class="italian language">Disco in Spagnolo</span>
+                  <span class="chinese language">西班牙语专辑</span>
+                  <span class="arabic language">ألبوم بالإسبانية</span>
+                  <span class="russian language">Испанский диск</span>
+                  <span class="ukrainian language">Іспанський диск</span>
+                  <span class="aleman language">Spanisches Album</span>
+                  <span class="frances language">Album en Espagnol</span>
+                  <span class="japones language">スペイン語アルバム</span>
+                  <span class="portuges language">Álbum em Espanhol</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disco Inglés -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_en.png" class="album-cover" alt="English Version">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Inglés</span>
+                  <span class="english language">English Album</span>
+                  <span class="italian language">Disco in Inglese</span>
+                  <span class="chinese language">英语专辑</span>
+                  <span class="arabic language">ألبوم بالإنجليزية</span>
+                  <span class="russian language">Английский диск</span>
+                  <span class="ukrainian language">Англійський диск</span>
+                  <span class="aleman language">Englisches Album</span>
+                  <span class="frances language">Album en Anglais</span>
+                  <span class="japones language">英語アルバム</span>
+                  <span class="portuges language">Álbum em Inglês</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disco Portugués -->
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <div class="album-card">
+              <img src="songs/album_pt.png" class="album-cover" alt="Versão em Português">
+              <div class="album-info">
+                <div class="album-title">
+                  <span class="spanish language">Disco en Portugués</span>
+                  <span class="english language">Portuguese Album</span>
+                  <span class="italian language">Disco in Portoghese</span>
+                  <span class="chinese language">葡萄牙语专辑</span>
+                  <span class="arabic language">ألبوم بالبرتغالية</span>
+                  <span class="russian language">Португальский диск</span>
+                  <span class="ukrainian language">Португальський диск</span>
+                  <span class="aleman language">Portugiesisches Album</span>
+                  <span class="frances language">Album en Portugais</span>
+                  <span class="japones language">ポルトガル語アルバム</span>
+                  <span class="portuges language">Álbum em Português</span>
+                </div>
+                <div class="album-artist">Paz Arés Osset</div>
+                <a href="#" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
-
-  <section class="jumbotron text-center">
-    <div class="container">
-
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
-
-
-      <h1 class="jumbotron-heading">
-        <div class="english language">Infinite Love</div>
-        <div class="spanish language" style="display: none;">Amor Infinito</div>
-        <div class="italian language" style="display: none;">Amore Infinito</div>
-        <div class="chinese language" style="display: none;">无限的爱</div>
-        <div class="arabic language" style="display: none;">حب لا نهائي</div>
-
-      </h1>
-
-
-      <div class="lead text-muted">
-        <div class="english language">The only real thing is love; let’s dance and celebrate in its infinite light.
-        </div>
-        <div class="spanish language" style="display: none;">Lo único real es el amor; bailemos y celebremos en su luz
-          infinita.
-        </div>
-        <div class="italian language" style="display: none;">L'unica cosa reale è l'amore; danziamo e celebriamo nella
-          sua luce
-          infinita.</div>
-        <div class="chinese language" style="display: none;">唯一真实的是爱；让我们在它无限的光芒中跳舞和庆祝。</div>
-        <div class="arabic language" style="display: none;">الشيء الحقيقي الوحيد هو الحب؛ دعونا نرقص ونحتفل في نوره
-          اللامتناهي.
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Rest of the HTML here... -->
-
-  <!-- <section class="main-description">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 md audio" style="display:flex;">
-          <button class="btn btn-secondary buttonAudio">Play voice of Paz</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Infinite Love</div>
-        <div class="spanish language" style="display: none;">Amor Infinito</div>
-        <div class="italian language" style="display: none;">Amore Infinito</div>
-        <div class="chinese language" style="display: none;">无限的爱</div>
-        <div class="arabic language" style="display: none;">حب لا نهائي</div>
-      </h1>
-
-      <div class="english language">
-        <!-- English description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>The only real thing is love</p>
-          <p>the truth is love</p>
-          <p>the gifts of God surround us</p>
-          <p>Let’s dance and celebrate</p>
-          <br>
-          <p>God loves us</p>
-          <p>In Christ, He joined humanity</p>
-          <p>Awaken in His Holy Spirit</p>
-          <p>That He gave and gives us</p>
-          <br>
-          <p>He loves like a lover</p>
-          <p>Elevate to the bright vibration of love</p>
-          <p>Be at peace, beloved being</p>
-          <p>He only longs for your happiness</p>
-          <br>
-          <p>His love shines everywhere</p>
-          <p>He longs for the light to spread</p>
-          <p>Every shadow will fade away</p>
-          <p>with all our light</p>
-          <br>
-          <p>God’s love cannot fail</p>
-          <p>God’s gratitude is infinite</p>
-          <p>And His gift is now needed</p>
-          <p>in this separated Society</p>
-          <br>
-          <p>these corrupt Governments</p>
-          <p>in these shadows that extinguish</p>
-          <p>He will speak to all through the awakened</p>
-          <p>and will overcome the dark war</p>
-          <br>
-          <p>His vibration will expand through the mystics</p>
-          <p>He will be shown by poets and artists</p>
-          <p>It has arrived, it has arrived</p>
-          <br>
-          <p>Now forget the shadow</p>
-          <p>Focus and do not forget the divine light</p>
-          <p>Forget everything except that love is in you</p>
-          <p>Stay in your Divine being</p>
-          <p>Dance with ecstasy</p>
-
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <!-- Spanish description here -->
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Lo único real es el amor</p>
-          <p>la verdad es el amor</p>
-          <p>los regalos de Dios nos rodean</p>
-          <p>Dancemos y bailemos</p>
-          <br>
-          <p>Dios nos ama</p>
-          <p>En Cristo se unió a los humanos</p>
-          <p>Despierta en su Espíritu Santo</p>
-          <p>Que nos regaló y nos regala</p>
-          <br>
-          <p>Él ama como un amante</p>
-          <p>Elevate a la vibración brillante del amor</p>
-          <p>Estate en paz amado ser</p>
-          <p>Él sólo anhela tu felicidad</p>
-          <br>
-          <p>Su amor brilla en todas partes</p>
-          <p>Anhela que la luz se extienda</p>
-          <p>Toda sombra se desvanecerá</p>
-          <p>con toda nuestra luz</p>
-          <br>
-          <p>El amor de Dios no puede fallar</p>
-          <p>La gratitud de Dios es infinita</p>
-          <p>Y su regalo ahora es necesario</p>
-          <p>en esta Sociedad separada</p>
-          <br>
-          <p>estos Gobiernos corruptos</p>
-          <p>en estas sombras que apagan</p>
-          <p>hablará a todos por los despiertos</p>
-          <p>y vencerá a la oscura guerra</p>
-          <br>
-          <p>Se expandirá su vibración por los místicos</p>
-          <p>Se mostrará por los poetas artistas</p>
-          <p>Ya llegó, ya llegó</p>
-          <br>
-          <p>Ahora olvida la sombra</p>
-          <p>Céntrate y no olvides la luz divina</p>
-          <p>Olvida todo excepto que el amor está en ti</p>
-          <p>Quédate en tu ser Divino</p>
-          <p>Baila con el éxtasis</p>
-
-        </div>
-        <br>
-
-
-
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-
-        <!-- Italian description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>L'unica cosa reale è l'amore</p>
-          <p>la verità è l'amore</p>
-          <p>i doni di Dio ci circondano</p>
-          <p>Balliamo e festeggiamo</p>
-          <br>
-          <p>Dio ci ama</p>
-          <p>In Cristo si è unito all'umanità</p>
-          <p>Svegliati nel suo Spirito Santo</p>
-          <p>Che ci ha dato e ci dà</p>
-          <br>
-          <p>Egli ama come un amante</p>
-          <p>Elevati alla brillante vibrazione dell'amore</p>
-          <p>Sii in pace, amato essere</p>
-          <p>Desidera solo la tua felicità</p>
-          <br>
-          <p>Il suo amore brilla ovunque</p>
-          <p>Desidera che la luce si diffonda</p>
-          <p>Ogni ombra svanirà</p>
-          <p>con tutta la nostra luce</p>
-          <br>
-          <p>L'amore di Dio non può fallire</p>
-          <p>La gratitudine di Dio è infinita</p>
-          <p>E il suo dono ora è necessario</p>
-          <p>in questa Società separata</p>
-          <br>
-          <p>questi Governi corrotti</p>
-          <p>in queste ombre che estinguono</p>
-          <p>Parlerà a tutti attraverso i risvegliati</p>
-          <p>e supererà la guerra oscura</p>
-          <br>
-          <p>La sua vibrazione si espanderà attraverso i mistici</p>
-          <p>Sarà mostrato da poeti e artisti</p>
-          <p>È arrivato, è arrivato</p>
-          <br>
-          <p>Ora dimentica l'ombra</p>
-          <p>Concentrati e non dimenticare la luce divina</p>
-          <p>Dimentica tutto tranne che l'amore è in te</p>
-          <p>Rimani nel tuo essere Divino</p>
-          <p>Balla con l'estasi</p>
-
-        </div>
-        <br>
-
-
-
-
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <!-- Chinese description here -->
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>唯一真实的是爱</p>
-          <p>真理是爱</p>
-          <p>上帝的礼物围绕着我们</p>
-          <p>让我们跳舞和庆祝</p>
-          <br>
-          <p>上帝爱我们</p>
-          <p>在基督里，他与人类结合</p>
-          <p>在圣灵中醒来</p>
-          <p>他给予并赐予我们</p>
-          <br>
-          <p>他像情人一样爱</p>
-          <p>提升到爱的明亮振动</p>
-          <p>保持平静，亲爱的存在</p>
-          <p>他只渴望你的幸福</p>
-          <br>
-          <p>他的爱无处不在闪耀</p>
-          <p>他渴望光明传播</p>
-          <p>每一个阴影都会消失</p>
-          <p>伴随着我们所有的光</p>
-          <br>
-          <p>上帝的爱不会失败</p>
-          <p>上帝的感恩是无限的</p>
-          <p>而他的礼物现在是必要的</p>
-          <p>在这个分离的社会中</p>
-          <br>
-          <p>这些腐败的政府</p>
-          <p>在这些熄灭的阴影中</p>
-          <p>他将通过觉醒者与所有人交谈</p>
-          <p>并将战胜黑暗战争</p>
-          <br>
-          <p>他的振动将通过神秘主义者扩展</p>
-          <p>他将通过诗人和艺术家展现</p>
-          <p>它已经到来，它已经到来</p>
-          <br>
-          <p>现在忘记阴影</p>
-          <p>专注并不要忘记神圣的光</p>
-          <p>忘记一切，除了爱在你心中</p>
-          <p>保持在你神圣的存在中</p>
-          <p>与狂喜共舞</p>
-
-
-        </div>
-        <br>
-
-
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <!-- Arabic description here -->
-
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-
-          <p>الشيء الحقيقي الوحيد هو الحب</p>
-          <p>الحقيقة هي الحب</p>
-          <p>هدايا الله تحيط بنا</p>
-          <p>دعونا نرقص ونحتفل</p>
-          <br>
-          <p>الله يحبنا</p>
-          <p>في المسيح انضم إلى البشر</p>
-          <p>استيقظ في روحه القدوس</p>
-          <p>الذي أعطانا وما زال يعطينا</p>
-          <br>
-          <p>يحب كعاشق</p>
-          <p>ارتفع إلى اهتزاز الحب اللامع</p>
-          <p>كن في سلام أيها الكائن المحبوب</p>
-          <p>إنه يتوق فقط إلى سعادتك</p>
-          <br>
-          <p>حبه يضيء في كل مكان</p>
-          <p>يتوق إلى انتشار النور</p>
-          <p>كل ظل سيتلاشى</p>
-          <p>مع كل نورنا</p>
-          <br>
-          <p>حب الله لا يمكن أن يفشل</p>
-          <p>امتنان الله لا نهائي</p>
-          <p>وهديته الآن ضرورية</p>
-          <p>في هذا المجتمع المنفصل</p>
-          <br>
-          <p>هذه الحكومات الفاسدة</p>
-          <p>في هذه الظلال التي تخمد</p>
-          <p>سيتحدث إلى الجميع من خلال المستيقظين</p>
-          <p>وسينتصر في الحرب المظلمة</p>
-          <br>
-          <p>سيتوسع اهتزازه من خلال الصوفيين</p>
-          <p>سيظهره الشعراء والفنانون</p>
-          <p>لقد وصل، لقد وصل</p>
-          <br>
-          <p>الآن انسَ الظل</p>
-          <p>ركز ولا تنسَ النور الإلهي</p>
-          <p>انسَ كل شيء إلا أن الحب فيك</p>
-          <p>ابقَ في كيانك الإلهي</p>
-          <p>ارقص مع النشوة</p>
-
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- js here -->
-  <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
-
+  <script src="script.js?v=2"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-
 </html>
