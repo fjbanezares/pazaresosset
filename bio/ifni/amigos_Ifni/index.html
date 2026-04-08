@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>La Pandilla de Ifni — Paz Arés Osset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../../favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    :root {
+      --gold: #FFD700;
+      --gold-bright: #fff0a0;
+      --dark-blue: #0a0a1a;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 215, 0, 0.2);
+    }
+
+    body {
+      background: var(--dark-blue);
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(0, 150, 255, 0.05) 0%, transparent 50%);
+      color: #e0d8cc;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .gang-hero {
+      padding: 120px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .gang-hero h1 {
+      font-family: 'Caveat', cursive;
+      font-size: 4.5rem;
+      color: var(--gold);
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      margin-bottom: 20px;
+    }
+
+    .gang-hero h2 {
+      font-size: 1.4rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .photo-container {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 15px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+      transition: transform 0.5s ease;
+    }
+
+    .photo-container:hover {
+      transform: scale(1.02);
+      border-color: var(--gold);
+    }
+
+    .photo-container img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      border: 1px solid rgba(255,215,0,0.1);
+    }
+
+    .content-box {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 30px;
+      border-left: 4px solid var(--gold);
+      box-shadow: 20px 20px 60px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-box::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-family: 'Philosopher', serif;
+      font-size: 12rem;
+      color: rgba(255, 215, 0, 0.05);
+      z-index: 0;
+    }
+
+    .gang-text {
+      font-size: 1.25rem;
+      line-height: 1.9;
+      color: #d5cfc4;
+      position: relative;
+      z-index: 1;
+      text-align: justify;
+    }
+
+    .nav-top {
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    #ls {
+      background: rgba(0,0,0,0.7);
+      color: white;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-back {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .btn-back:hover {
+      background: var(--gold);
+      color: #000;
+      border-color: var(--gold);
+      text-decoration: none;
+    }
+
+    .lang { display: none; }
+
+    @media (max-width: 768px) {
+      .gang-hero h1 { font-size: 2.8rem; }
+      .gang-text { font-size: 1.1rem; }
+      .nav-top { position: relative; top: 20px; right: auto; justify-content: center; width: 100%; margin-bottom: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-top">
+    <a href="../index.html" class="btn-back">
+      <span class="lang spanish">← Volver a Ifni</span>
+      <span class="lang english">← Back to Ifni</span>
+      <span class="lang russian">← Назад в Ифни</span>
+      <span class="lang ukrainian">← Назад в Іфні</span>
+      <span class="lang italian">← Torna a Ifni</span>
+      <span class="lang chinese">← 返回伊夫尼</span>
+      <span class="lang arabic">← العودة إلى إفني</span>
+      <span class="lang aleman">← Zurück nach Ifni</span>
+      <span class="lang frances">← Retour à Ifni</span>
+      <span class="lang japones">← イフニに戻る</span>
+      <span class="lang portuges">← Voltar a Ifni</span>
+    </a>
+    <select id="ls">
+      <option value="spanish">🇪🇸 Español</option>
+      <option value="english">🇺🇸 English</option>
+      <option value="russian">🇷🇺 Русский</option>
+      <option value="ukrainian">🇺🇦 Українська</option>
+      <option value="italian">🇮🇹 Italiano</option>
+      <option value="chinese">🇨🇳 中文</option>
+      <option value="arabic">🇦🇪 العربية</option>
+      <option value="aleman">🇩🇪 Deutsch</option>
+      <option value="frances">🇫🇷 Français</option>
+      <option value="japones">🇯🇵 日本語</option>
+      <option value="portuges">🇵🇹 Português</option>
+    </select>
+  </div>
+
+  <section class="gang-hero">
+    <div class="container">
+      <h1>
+        <span class="lang spanish">La Pandilla de Ifni</span>
+        <span class="lang english">The Ifni Gang</span>
+        <span class="lang russian">Банда Ифни</span>
+        <span class="lang ukrainian">Банда Іфні</span>
+        <span class="lang italian">La Banda di Ifni</span>
+        <span class="lang chinese">伊夫尼帮</span>
+        <span class="lang arabic">عصابة إفني</span>
+        <span class="lang aleman">Die Ifni-Bande</span>
+        <span class="lang frances">La Bande d'Ifni</span>
+        <span class="lang japones">イフニの仲間たち</span>
+        <span class="lang portuges">A Pandilha de Ifni</span>
+      </h1>
+      <h2>
+        <span class="lang spanish">14 años de lazos inquebrantables</span>
+        <span class="lang english">14 years of unbreakable bonds</span>
+        <span class="lang russian">14 лет нерушимых уз</span>
+        <span class="lang ukrainian">14 років непорушних уз</span>
+        <span class="lang italian">14 anni di legami incrollabili</span>
+        <span class="lang chinese">14年牢不可破的羁绊</span>
+        <span class="lang arabic">14 عامًا من الروابط التي لا تنفصم</span>
+        <span class="lang aleman">14 Jahre unzerbrechliche Bande</span>
+        <span class="lang frances">14 ans de liens indestructibles</span>
+        <span class="lang japones">14年にわたる不滅の絆</span>
+        <span class="lang portuges">14 anos de laços inquebrantáveis</span>
+      </h2>
+
+      <div class="photo-container">
+        <img src="fotos/foto_paz_amigos_ifni.png" alt="Paz Arés Osset con sus amigos en Ifni">
+      </div>
+
+      <div class="content-box">
+        <div class="gang-text">
+          <p class="lang spanish">Durante los catorce años que Paz vivió en Sidi Ifni, se forjó una relación extraordinaria con su grupo de amigos, su "pandilla". Eran más que simples amistades; se sentían pioneros de una España lejana en una colonia que era su hogar absoluto. Esos lazos, templados por el sol del Sahara y el aislamiento compartido, crearon una unión tan fuerte que la partida hacia Valencia supuso una ruptura dolorosa. Aunque la distancia física se impuso, la esencia de esa hermandad africana permanece como el pilar emocional más profundo de su juventud.</p>
+          <p class="lang english">During the fourteen years that Paz lived in Sidi Ifni, an extraordinary relationship was forged with her group of friends, her "gang". They were more than just friendships; they felt like pioneers of a distant Spain in a colony that was their absolute home. These bonds, tempered by the Sahara sun and shared isolation, created a union so strong that the departure for Valencia meant a painful rupture. Although physical distance prevailed, the essence of that African brotherhood remains the deepest emotional pillar of her youth.</p>
+          <p class="lang russian">За четырнадцать лет жизни Пас в Сиди-Ифни сложились необычайные отношения с её группой друзей, её «бандой». Это было больше, чем просто дружба; они чувствовали себя первопроходцами далекой Испании в колонии, которая была их единственным домом. Эти узы, закаленные солнцем Сахары и общей изоляцией, создали союз настолько крепкий, что отъезд в Валенсию стал болезненным разрывом. Хотя физическое расстояние взяло своё, сущность этого африканского братства остается глубочайшим эмоциональным столпом её юности.</p>
+          <p class="lang ukrainian">За чотирнадцять років життя Пас у Сіді-Іфні склалися надзвичайні стосунки з її групою друзів, її «бандою». Це було більше, ніж просто дружба; вони відчували себе першопрохідцями далекої Іспанії в колонії, яка була їхнім рідним домом. Ці узи, загартовані сонцем Сахари та спільною ізоляцією, створили союз настільки міцний, що від'їзд до Валенсії став болючим розривом. Хоча фізична відстань взяла своє, сутність цього африканського братерства залишається найглибшим емоційним стовпом її юності.</p>
+          <p class="lang italian">Durante i quattordici anni in cui Paz ha vissuto a Sidi Ifni, si è forgiato un rapporto straordinario con il suo gruppo di amici, la sua "banda". Erano più che semplici amicizie; si sentivano pionieri di una Spagna lontana in una colonia che era la loro casa assoluta. Questi legami, temprati dal sole del Sahara e dall'isolamento condiviso, hanno creato un'unione così forte che la partenza per Valencia ha rappresentato una rottura dolorosa. Nonostante la distanza fisica, l'essenza di quella fratellanza africana rimane il pilastro emotivo più profondo della sua giovinezza.</p>
+          <p class="lang chinese">在 Paz 居住在西迪伊夫尼的十四年里，她和她的朋友们（她的“小团伙”）建立了一种非凡的关系。他们不仅仅是朋友；在那个绝对是他们家园的殖民地里，他们觉得自己是遥远西班牙的先驱。这些羁绊经过撒哈拉阳光的磨练和共同的孤独，创造了一种如此强大的结合，以至于前往瓦伦西亚意味着痛苦的决裂。尽管物理距离不可避免，但这非洲兄弟情谊的本质仍然是她青春最深的情感支柱。</p>
+          <p class="lang arabic">خلال السنوات الأربع عشرة التي عاشتها باز في سيدي إفني، نشأت علاقة استثنائية مع مجموعة أصدقائها، "عصابتها". كانوا أكثر من مجرد أصدقاء؛ شعروا وكأنهم رواد لإسبانيا كبعيدة في مستعمرة كانت موطنهم المطلق. هذه الروابط، التي صقلتها شمس الصحراء والعزلة المشتركة، خلقت اتحادًا قويًا لدرجة أن الرحيل إلى فالنسيا كان بمثابة قطيعة مؤلمة. على الرغم من المسافة الجسدية، تظل جوهر تلك الأخوة الأفريقية أعمق ركيزة عاطفية لشبابها.</p>
+          <p class="lang aleman">Während der vierzehn Jahre, die Paz in Sidi Ifni lebte, entwickelte sich eine außergewöhnliche Beziehung zu ihrer Freundesgruppe, ihrer „Bande“. Es war mehr als nur Freundschaft; sie fühlten sich als Pioniere eines fernen Spaniens in einer Kolonie, die ihr absolutes Zuhause war. Diese Bande, gestählt durch die Wüstensonne und die gemeinsame Isolation, schufen eine so starke Einheit, dass der Aufbruch nach Valencia einen schmerzhaften Bruch bedeutete. Trotz der physischen Distanz bleibt die Essenz dieser afrikanischen Bruderschaft der tiefste emotionale Pfeiler ihrer Jugend.</p>
+          <p class="lang frances">Durant les quatorze années où Paz a vécu à Sidi Ifni, une relation extraordinaire s'est forgée avec son groupe d'amis, sa « bande ». Ils étaient plus que de simples amis ; ils se sentaient comme les pionniers d'une Espagne lointaine dans une colonie qui était leur foyer absolu. Ces liens, tempérés par le soleil du Sahara et l'isolement partagé, ont créé une union si forte que le départ pour Valence a été une rupture douloureuse. Bien que la distance physique se soit imposée, l'essence de cette fraternité africaine reste le pilillar émotionnel le plus profond de sa jeunesse.</p>
+          <p class="lang japones">パスがシディ・イフニで過ごした14年間、友人グループ、つまり彼女の「仲間（パンディージャ）」とは並外れた関係が築かれました。彼らは単なる友人以上の存在でした。絶対的な故郷である植民地において、遠いスペインの先駆者であると感じていたのです。サハラの太陽と共有された孤独によって鍛えられたこれらの絆は、バレンシアへの旅立ちが痛みを伴う決裂を意味するほど強固な結びつきを生み出しました。物理的な距離は生じましたが、そのアフリカの兄弟愛の本質は、彼女の青春時代の最も深い感情の柱として残り続けています。</p>
+          <p class="lang portuges">Durante os catorze anos em que Paz viveu em Sidi Ifni, forjou-se uma relação extraordinária com o seu grupo de amigos, a sua "pandilha". Eram más que simples amizades; sentiam-se pioneiros de uma Espanha longínqua numa colónia que era o seu lar absoluto. Esses laços, temperados pelo sol do Sara e pelo isolamento partilhado, criaram uma união tão forte que a partida para Valência supôs uma rutura dolorosa. Embora a distância física se tenha imposto, a essência dessa irmandade africana permanece como o pilar emocional mais profundo da sua juventude.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bio-footer">
+    <p>© Paz Arés Osset</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const select = document.getElementById('ls');
+      
+      function setLanguage(lang) {
+        document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.' + lang).forEach(el => {
+          if (el.tagName === 'SPAN') el.style.display = 'inline';
+          else el.style.display = 'block';
+        });
+        localStorage.setItem('paz_lang', lang);
+        select.value = lang;
+      }
+
+      select.addEventListener('change', (e) => setLanguage(e.target.value));
+
+      // Initial load
+      const savedLang = localStorage.getItem('paz_lang') || 'spanish';
+      setLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>

@@ -1,72 +1,76 @@
 # 🇪🇸 Amor Infinito — Versión en Español — Estilo Épico y Celebratorio
 
-> **¿Por qué este estilo?** El primer estilo es íntimo y devocional. Este segundo estilo es un antro de alabanza masiva: un pop electrónico épico, diseñado para que sientas la alegría desbordante de saber que el amor divino ha vencido. Tiene un ritmo glorioso y un crescendo espectacular.
+> **¿Por qué este estilo?** Este segundo estilo es una celebración masiva: un pop electrónico épico diseñado para sentir la alegría desbordante del amor divino. Tiene un ritmo glorioso y un crescendo espectacular.
 
 ## Style of Music (copiar en Suno)
 ```
-epic electronic pop, massive stadium worship, euphoric drive, soaring female vocals, pulsing synths, huge drums, triumphant choral elements, joyful spiritual anthem
+vocal-forward, powerful clear female vocals, spacious mix, epic electronic pop, stadium worship, euphoric synths, driving beat, triumphant choral accents, joyful spiritual anthem, dynamic arrangement, contrasting sections
 ```
 
 ## Lyrics (copiar en Suno)
 ```
-[Intro - Pulsing bright synths, driving beat building up, 8 bars]
+[Intro]
 
-[Verse 1 - Voice enters rhythmic and confident]
+[Verse 1]
 Lo único real es el amor
 la verdad es el amor
 los regalos de Dios nos rodean
 Dancemos y bailemos
 
-[Verse 2 - Beat drops, energy increases, joyful]
+[Verse 2]
 Dios nos ama
 En Cristo se unió a los humanos
 Despierta en su Espíritu Santo
 Que nos regaló y nos regala
 
-[Pre-Chorus - Tension building, soaring synths]
+[Pre-Chorus]
 Él ama como un amante
-Elévate a la vibración brillante del amor
+Elévate a la vibración del amor
 Estate en paz amado ser
 Él sólo anhela tu felicidad
 
-[Chorus - Massive explosion of sound, euphoric stadium energy]
+[Chorus]
 Su amor brilla en todas partes
 Anhela que la luz se extienda
 Toda sombra se desvanecerá
 con toda nuestra luz
 
-[Post-Chorus - Choral chant over heavy beat]
+[Verse 3]
 El amor de Dios no puede fallar
 La gratitud de Dios es infinita
-
-[Bridge - Rhythm cuts to just drums and voice, urgent]
 Y su regalo ahora es necesario
 en esta Sociedad separada
-estos Gobiernos corruptos
-en estas sombras que apagan
 
-[Build - Giant snare roll, synth risers, prophetic joy]
+[Bridge]
+Estos Gobiernos corruptos
+en estas sombras que apagan
 hablará a todos por los despiertos
 y vencerá a la oscura guerra
+
+[Chorus]
 Se expandirá su vibración por los místicos
 Se mostrará por los poetas artistas
-
-[Chorus - Maximum energy, wall of sound]
 Ya llegó, ya llegó
+
+[Verse 4]
 Ahora olvida la sombra
 Céntrate y no olvides la luz divina
 Olvida todo excepto que el amor está en ti
 Quédate en tu ser Divino
+
+[Outro]
 Baila con el éxtasis
+Ante la corrupción del mundo
+Él nos ilumina con su luz
+que habita en nosotros
 
-[Breakdown - Sudden drop, pulsing heartbeat bass]
-Ante la corrupción del mundo,
-Él nos ilumina con su luz que habita en nosotros.
+Gracias, Paz Arés Osset
+por ser faro en la sombra
+por recordarnos conectar
+con el amor de Dios
 
-[Outro - Ethereal synths rise, voice full of immense gratitude]
-Gracias, Paz Arés Osset, por ser faro en la sombra,
-por recordarnos conectar con el amor de Dios.
-El amor infinito reina... ¡para siempre!
+El amor infinito reina
+para siempre
 
-[End - Massive final chord reverberating into joy]
+[End]
 ```

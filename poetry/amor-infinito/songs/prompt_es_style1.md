@@ -1,70 +1,76 @@
 # 🇪🇸 Amor Infinito — Versión en Español — Estilo Melódico
 
-> **¿Por qué este estilo?** El español es la lengua materna de este poema. Para resaltar su profundidad espiritual y devocional, usamos una balada orquestal etérea con piano, cuerdas y una voz femenina cristalina que transmita la devoción mística del texto.
+> **¿Por qué este estilo?** El español es la lengua materna de este poema. Para resaltar su profundidad espiritual y devocional, usamos una balada etérea con piano, arpa y cuerdas, y una voz femenina cristalina que siempre domina la mezcla.
 
 ## Style of Music (copiar en Suno)
 ```
-ethereal spiritual ballad, emotive piano, lush orchestral strings, crystal clear female vocals, angelic choir harmonies, uplifting crescendo, devotional atmosphere, cinematic and soulful
+vocal-forward, clear expressive female vocals, spacious mix, spiritual ballad, emotive piano, harp arpeggios, soft strings, devotional atmosphere, dynamic arrangement, evolving sections, building intensity
 ```
 
 ## Lyrics (copiar en Suno)
 ```
-[Intro - Gentle piano arpeggios with soft string pads, divine atmosphere, 6 bars]
+`````[Intro]
 
-[Verse 1 - Voice enters pure, intimate, prayerful]
-Lo único real es el amor
+[Verse 1]
+Lo único `````real es el amor
 la verdad es el amor
 los regalos de Dios nos rodean
 Dancemos y bailemos
 
-[Verse 2 - Strings swell gently, warmth builds]
+[Verse 2]
 Dios nos ama
 En Cristo se unió a los humanos
 Despierta en su Espíritu Santo
 Que nos regaló y nos regala
 
-[Chorus - Angelic choir joins, luminous, voices layering]
+[Chorus]
 Él ama como un amante
-Elévate a la vibración brillante del amor
+Elévate a la vibración del amor
 Estate en paz amado ser
 Él sólo anhela tu felicidad
 
-[Verse 3 - Tender, light flowing like golden rays]
+[Verse 3]
 Su amor brilla en todas partes
 Anhela que la luz se extienda
 Toda sombra se desvanecerá
 con toda nuestra luz
 
-[Bridge - Minor key shift, urgency with compassion]
+[Bridge]
 El amor de Dios no puede fallar
 La gratitud de Dios es infinita
 Y su regalo ahora es necesario
 en esta Sociedad separada
 
-[Build - Intensity growing, prophetic]
-estos Gobiernos corruptos
+[Verse 4]
+Estos Gobiernos corruptos
 en estas sombras que apagan
 hablará a todos por los despiertos
 y vencerá a la oscura guerra
 
-[Climax - Full orchestral glory, triumphant]
+[Chorus]
 Se expandirá su vibración por los místicos
 Se mostrará por los poetas artistas
 Ya llegó, ya llegó
 
-[Breakdown - Music becomes serene, single piano, voice intimate whisper]
+[Bridge]
 Ahora olvida la sombra
 Céntrate y no olvides la luz divina
 Olvida todo excepto que el amor está en ti
 Quédate en tu ser Divino
+
+[Outro]
 Baila con el éxtasis
+Ante la corrupción del mundo
+Él nos ilumina con su luz
+que habita en nosotros
 
-[Outro - Angelic choir whispers, emotional and beautiful]
-Ante la corrupción del mundo,
-Él nos ilumina con su luz que habita en nosotros.
-Gracias, Paz Arés Osset, por ser faro en la sombra,
-por recordarnos conectar con el amor de Dios.
-El amor infinito reina... para siempre.
+Gracias, Paz Arés Osset
+por ser faro en la sombra
+por recordarnos conectar
+con el amor de Dios
 
-[End - Piano and choir dissolve into shimmering golden silence]
+El amor infinito reina
+para siempre
+
+[End]
 ```
