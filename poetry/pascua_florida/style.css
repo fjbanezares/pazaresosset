@@ -1,0 +1,180 @@
+body {
+  transition: background-color 1s ease;
+  background-color: #0c142c; /* Midnight garden */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('background_user.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color: white;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#effects-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.jumbotron {
+  background: transparent;
+  color: white;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
+  padding: 8rem 2rem 4rem;
+  margin-bottom: 0;
+}
+
+.handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 4.5rem !important; /* Larger title */
+  margin-bottom: 25px;
+  color: #FFD700; /* Gold */
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+.poem-text {
+  line-height: 2;
+  color: #fff;
+  background-color: rgba(10, 20, 40, 0.45); /* More translucent */
+  font-size: 1.4rem;
+  padding: 40px 60px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto; /* Centered */
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px); /* Reduced slightly for translucency */
+  max-width: 90%;
+  width: auto; /* Fits verse size */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.stanza {
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+}
+
+.stanza.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Special stanza styles */
+.peace-stanza {
+  color: #FFD700 !important;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  border-left: 3px solid rgba(255, 215, 0, 0.4);
+  padding-left: 20px;
+  text-align: left;
+}
+
+.resurrection-stanza {
+  font-weight: bold;
+  color: #FFD700 !important;
+  font-size: 1.5rem;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.namaste-stanza {
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  color: #FFD700 !important;
+  letter-spacing: 0.1em;
+}
+
+.stanza:last-child {
+  margin-bottom: 0;
+}
+
+#language-select {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 30px;
+  padding: 8px 20px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  font-weight: bold;
+}
+
+.album-card {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  background: rgba(10, 20, 40, 0.6);
+  padding: 15px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.album-card:hover {
+  transform: translateY(-15px) rotate(2deg);
+  border-color: rgba(255, 215, 0, 0.5);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+}
+
+.album-card img {
+  border: 2px solid rgba(255, 215, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+.album-card:hover img {
+  border-color: #FFD700;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.album-info h5 {
+  font-family: 'Philosopher', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-spotify {
+  background-color: #1DB954;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-spotify:hover {
+  background-color: #1ed760;
+  transform: scale(1.1);
+  color: white;
+  text-decoration: none;
+}
+
+/* Base Language support */
+.language {
+  display: none;
+}
+
+.language.spanish {
+  display: block;
+}
+
+span.language.spanish {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .jumbotron { padding: 4rem 1rem 2rem; }
+  .poem-text { padding: 30px; font-size: 1.1rem; }
+  .handwritten { font-size: 2rem !important; }
+}

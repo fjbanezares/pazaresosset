@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Pascua Florida — Paz Arés Osset</title>
+  <meta name="description" content="Pascua Florida: un poema espiritual sobre la resurrección, la danza y el fluir eterno. Paz Arés Osset.">
+  <link rel="icon" type="image/png" href="../../favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Caveat:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <canvas id="effects-canvas"></canvas>
+  <div class="content-wrap">
+
+    <!-- Top Bar -->
+    <div class="position-fixed d-flex align-items-center p-3 p-md-4" style="right: 0; top: 0; z-index: 1000; gap: 15px;">
+      <a href="../../linktree.html" class="btn btn-outline-light d-none d-md-flex align-items-center"
+        style="border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.4); padding: 10px 20px; backdrop-filter: blur(8px); background: rgba(0,0,0,0.2);">
+        <i class="fas fa-link mr-2"></i>
+        <span>Linktree</span>
+      </a>
+      <select id="language-select" class="custom-select-lg">
+        <option value="spanish">🇪🇸 Español</option>
+        <option value="english">🇺🇸 English</option>
+        <option value="italian">🇮🇹 Italiano</option>
+        <option value="chinese">🇨🇳 中文</option>
+        <option value="arabic">🇦🇪 العربية</option>
+        <option value="russian">🇷🇺 Русский</option>
+        <option value="ukrainian">🇺🇦 Українська</option>
+        <option value="aleman">🇩🇪 Deutsch</option>
+        <option value="frances">🇫🇷 Français</option>
+        <option value="japones">🇯🇵 日本語</option>
+        <option value="portuges">🇵🇹 Português</option>
+      </select>
+    </div>
+
+    <!-- Header -->
+    <section class="jumbotron text-center">
+      <div class="container">
+        <a class="brand" href="https://www.pazaresosset.es">
+          <img src="../../logopazares.png" style="width: 80px; margin-bottom: 20px;" alt="Paz Arés Osset">
+        </a>
+        <h1 class="jumbotron-heading handwritten">
+          <span class="spanish language">Pascua Florida</span>
+          <span class="english language">Flowery Easter</span>
+          <span class="italian language">Pasqua Fiorita</span>
+          <span class="chinese language">繁花复活节</span>
+          <span class="arabic language">فصح مزهر</span>
+          <span class="russian language">Цветущая Пасха</span>
+          <span class="ukrainian language">Квітуча Пасха</span>
+          <span class="aleman language">Blühende Ostern</span>
+          <span class="frances language">Pâques Fleuries</span>
+          <span class="japones language">満開のイースター</span>
+          <span class="portuges language">Páscoa Florida</span>
+        </h1>
+        <div class="lead" style="font-style: italic; opacity: 0.9; font-size: 1.1rem;">
+          <span class="spanish language">Danza, resurrección y el giro de la Vida eterna.</span>
+          <span class="english language">Dance, resurrection and the turning of eternal Life.</span>
+          <span class="italian language">Danza, resurrezione e il giro della Vita eterna.</span>
+          <span class="chinese language">舞蹈、复活与永恒生命的旋转。</span>
+          <span class="arabic language">الرقص والقيامة ودوران الحياة الأبدية.</span>
+          <span class="russian language">Танец, воскресение и круговорот вечной Жизни.</span>
+          <span class="ukrainian language">Танець, воскресіння та кружляння вічного Життя.</span>
+          <span class="aleman language">Tanz, Auferstehung und das Drehen des ewigen Lebens.</span>
+          <span class="frances language">Danse, résurrection et le tourbillon de la Vie éternelle.</span>
+          <span class="japones language">踊り、復活、永遠の命の巡り。</span>
+          <span class="portuges language">Dança, ressurreição e o giro da Vida eterna.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Poem Content -->
+    <section class="multilingual-poem py-5">
+      <div class="container text-center">
+        <div class="poem-text">
+
+          <!-- ═══════════════════════════════════════ ESPAÑOL ═══════════════════════════════════════ -->
+          <div class="spanish language">
+            <div class="stanza">Algo Eterno fluye en mi<br>Algo tan sutil se libera ahora<br>Suavemente surge mi danza …<br>Ahora Yo soy.</div>
+            <div class="stanza">Siento mi ritmo.<br>Siento la fluidez.<br>Fluidez del Movimiento lento<br>Surgiendo solo, sin mi acción<br>Wu Wei la Vida baila a través de mi</div>
+            <div class="stanza">Disfruto liberando mi ser<br>Mi aliento vive este momento<br>de creación Divina ocurriendo<br>Ahora Yo soy oración …<br>Yo siento unión</div>
+            <div class="stanza peace-stanza">
+              Me invade la Paz…<br>
+              शान्तिः शान्तिः शान्ति: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">La respiración es liberada<br>El aliento de Dios vive ahora en mi<br>Soy Aquí y Ahora<br>Y siento mi fuego</div>
+            <div class="stanza">Destellos de Amor<br>Destellos de Paz<br>Destellos de Poesía<br>Destellos de Arte</div>
+            <div class="stanza">Chispas danzantes surgen en mi<br>danzan lentamente<br>Mis manos acariciando el aire<br>se mueven sinuosamente</div>
+            <div class="stanza">Mi cuerpo se contornea<br>Ondeante se desliza en el giro Sufi.</div>
+            <div class="stanza">Yo soy universo<br>Me siento naturaleza<br>Me siento flor,<br>como las prímulas de colores,<br>blanca como los jazmines,<br>erguida como los jacintos,<br>sanadora como la flor del romero,<br>aromática como el azahar del naranjo,<br>suave y dulce como los petals de la rosa</div>
+            <div class="stanza">Los pajarillos son mi coro<br>En la aurora suave<br>todo mi Ser saluda con las aves<br>al infinito universo<br>en el fluir eterno</div>
+            <div class="stanza">Yo soy respiración,<br>Yo siento la Vida<br>Siento el fluir de la respiración<br>Respiro profundo en la oración,<br>oración de los santos de la eternidad.</div>
+            <div class="stanza resurrection-stanza">Yo soy resurrección<br>Yo soy en Dios</div>
+            <div class="stanza">En la danza siento la Buena Nueva.<br>La Buena Nueva se expande en mi.<br>Siento ese Presente Eterno.<br>Como Jesús marcó</div>
+            <div class="stanza">El regaló la Vida Eterna.<br>Abrazó la cruz por nosotros.<br>Resucitó. Jamás murió.<br>Su Presente siendo Presente.<br>Ahora eternamente.<br>Presente en mi giro.<br>El giro de la Vida.</div>
+            <div class="stanza">Respira en el regalo de Vida, Paz y Amor<br>Yo soy tú<br>Yo siento tu ser…</div>
+            <div class="stanza namaste-stanza">Namaste<br>Namaskar</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ ENGLISH ═══════════════════════════════════════ -->
+          <div class="english language">
+            <div class="stanza">Something Eternal flows in me<br>Something so subtle is now released<br>Gently my dance emerges …<br>Now I am.</div>
+            <div class="stanza">I feel my rhythm.<br>I feel the fluidity.<br>Fluidity of slow Movement<br>Arising by itself, without my action<br>Wu Wei — Life dances through me</div>
+            <div class="stanza">I enjoy releasing my being<br>My breath lives this moment<br>of Divine creation unfolding<br>Now I am prayer …<br>I feel union</div>
+            <div class="stanza peace-stanza">
+              Peace floods me…<br>
+              शान्तिः शान्तिः शान्ति: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">Breath is released<br>The breath of God lives now in me<br>I am Here and Now<br>And I feel my fire</div>
+            <div class="stanza">Glimmers of Love<br>Glimmers of Peace<br>Glimmers of Poetry<br>Glimmers of Art</div>
+            <div class="stanza">Dancing sparks arise in me<br>they dance slowly<br>My hands caressing the air<br>move sinuously</div>
+            <div class="stanza">My body contours itself<br>Wavering, it glides into the Sufi whirl.</div>
+            <div class="stanza">I am the universe<br>I feel like nature<br>I feel like a flower,<br>like the multicolored primroses,<br>white like jasmine,<br>upright like the hyacinths,<br>healing like the rosemary flower,<br>fragrant like the orange blossom,<br>soft and sweet like the petals of the rose</div>
+            <div class="stanza">The little birds are my choir<br>In the soft dawn<br>my whole Being greets with the birds<br>the infinite universe<br>in the eternal flow</div>
+            <div class="stanza">I am breath,<br>I feel Life<br>I feel the flow of breathing<br>I breathe deep in prayer,<br>prayer of the saints of eternity.</div>
+            <div class="stanza resurrection-stanza">I am resurrection<br>I am in God</div>
+            <div class="stanza">In the dance I feel the Good News.<br>The Good News expands in me.<br>I feel that Eternal Present.<br>As Jesus showed</div>
+            <div class="stanza">He gave the gift of Eternal Life.<br>He embraced the cross for us.<br>He rose. He never died.<br>His Present being Present.<br>Now eternally.<br>Present in my turning.<br>The turning of Life.</div>
+            <div class="stanza">Breathe in the gift of Life, Peace and Love<br>I am you<br>I feel your being…</div>
+            <div class="stanza namaste-stanza">Namaste<br>Namaskar</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ ITALIANO ═══════════════════════════════════════ -->
+          <div class="italian language">
+            <div class="stanza">Qualcosa di Eterno scorre in me<br>Qualcosa di così sottile si libera ora<br>Dolcemente sorge la mia danza …<br>Ora Io sono.</div>
+            <div class="stanza">Sento il mio ritmo.<br>Sento la fluidità.<br>Fluidità del Movimento lento<br>Che sorge da sola, senza la mia azione<br>Wu Wei — la Vita danza attraverso di me</div>
+            <div class="stanza">Godo nel liberare il mio essere<br>Il mio respiro vive este momento<br>di creazione Divina che accade<br>Ora Io sono preghiera …<br>Sento unione</div>
+            <div class="stanza peace-stanza">
+              La Pace mi invade…<br>
+              शान्तिः शान्तिः शान्ति: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">Il respiro viene liberato<br>Il soffio di Dio vive ora in me<br>Sono Qui e Ora<br>E sento il mio fuoco</div>
+            <div class="stanza">Bagliori d'Amore<br>Bagliori di Pace<br>Bagliori di Poesia<br>Bagliori d'Arte</div>
+            <div class="stanza">Scintille danzanti sorgono in me<br>danzano lentamente<br>Le mie mani accarezzano l'aria<br>si muovono sinuosamente</div>
+            <div class="stanza">Il mio corpo si contorna<br>ondeggiante scivola nel giro Sufi.</div>
+            <div class="stanza">Sono universo<br>Mi sento natura<br>Mi sento fiore,<br>come le primule dai mille colori,<br>bianca come i gelsomini,<br>eretta come i giacinti,<br>guaritrice como il fiore di rosmarino,<br>aromatica come il fiore d'arancio,<br>morbida e dolce come i petali della rosa</div>
+            <div class="stanza">Gli uccellini sono il mio coro<br>Nell'aurora dolce<br>tutto il mio Essere saluta con gli uccelli<br>l'infinito universo<br>nel flusso eterno</div>
+            <div class="stanza">Sono respiro,<br>Sento la Vita<br>Sento il fluire del respiro<br>Respiro profondamente nella preghiera,<br>preghiera dei santi dell'eternità.</div>
+            <div class="stanza resurrection-stanza">Sono resurrezione<br>Sono in Dio</div>
+            <div class="stanza">Nella danza sento la Buona Novella.<br>La Buona Novella si espande in me.<br>Sento quel Presente Eterno.<br>Como Gesù ha mostrato</div>
+            <div class="stanza">Ha donato la Vita Eterna.<br>Ha abbracciato la croce per noi.<br>È risorto. Non è mai morto.<br>Il Suo Presente essendo Presente.<br>Ora eternamente.<br>Presente nel mio giro.<br>Il giro della Vita.</div>
+            <div class="stanza">Respira nel dono di Vita, Pace e Amore<br>Io sono te<br>Sento il tuo essere…</div>
+            <div class="stanza namaste-stanza">Namaste<br>Namaskar</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ 中文 ═══════════════════════════════════════ -->
+          <div class="chinese language">
+            <div class="stanza">某种永恒在我体内流淌<br>某种如此微妙的东西此刻正在释放<br>我的舞蹈轻轻地涌现……<br>现在，我在。</div>
+            <div class="stanza">我感受到我的节奏。<br>我感受到流动。<br>缓慢运动的流动<br>自然涌现，无需我的行动<br>无为——生命通过我起舞</div>
+            <div class="stanza">我享受着释放自我<br>我的呼吸活在这一刻<br>神圣创造正在发生<br>现在我是祈祷……<br>我感到合一</div>
+            <div class="stanza peace-stanza">
+              平静涌入我……<br>
+              शान्तिः शान्तिः शान्ति: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">呼吸得到释放<br>上帝的气息此刻活在我体内<br>我在此时此地<br>我感受到我的火焰</div>
+            <div class="stanza">爱的闪光<br>和平的闪光<br>诗意的闪光<br>艺术的闪光</div>
+            <div class="stanza">飞舞的火花在我体内涌现<br>它们缓慢地舞动<br>我的双手轻抚空气<br>蜿蜒地移动着</div>
+            <div class="stanza">我的身体轻轻扭转<br>如波浪般滑入苏菲旋转。</div>
+            <div class="stanza">我是宇宙<br>我感觉自己是自然<br>我感觉自己是花朵，<br>如五彩的报春花，<br>如茉莉般洁白，<br>如风信子般挺立，<br>如迷迭香花般具有疗愈力，<br>如橙花般芳香，<br>如玫瑰花瓣般柔软甜蜜</div>
+            <div class="stanza">小鸟们是我的合唱团<br>在柔和的黎明<br>我整个存在与鸟儿一起问候<br>无限的宇宙<br>在永恒的流动中</div>
+            <div class="stanza">我是呼吸，<br>我感受生命<br>我感受呼吸的流动<br>我在祈祷中深深呼吸，<br>永恒圣者的祈祷。</div>
+            <div class="stanza resurrection-stanza">我是复活<br>我在神里面</div>
+            <div class="stanza">在舞蹈中我感受到福音。<br>福音在我体内扩展。<br>我感受到那永恒的当下。<br>正如耶稣所示</div>
+            <div class="stanza">祂赐予了永恒的生命。<br>祂为我们拥抱了十字架。<br>祂复活了。祂从未死去。<br>祂的当下即是当下。<br>现在，永远如此。<br>存在于我的旋转中。<br>生命的旋转。</div>
+            <div class="stanza">在生命、和平与爱的礼物中呼吸<br>我就是你<br>我感受到你的存在……</div>
+            <div class="stanza namaste-stanza">合十礼<br>Namaskar</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ العربية ═══════════════════════════════════════ -->
+          <div class="arabic language" dir="rtl">
+            <div class="stanza">شيء أبدي يتدفق فيّ<br>شيء دقيق جداً ينطلق الآن<br>برفق تبزغ رقصتي …<br>الآن أنا أكون.</div>
+            <div class="stanza">أشعر بإيقاعي.<br>أشعر بالسيولة.<br>سيولة الحركة البطيئة<br>تنبثق وحدها، دون أي تدخل مني<br>وو وي — الحياة ترقص من خلالي</div>
+            <div class="stanza">أستمتع بتحرير كياني<br>نَفَسي يعيش هذه اللحظة<br>من الخلق الإلهي الحادث<br>الآن أنا صلاة …<br>أشعر بالوحدة</div>
+            <div class="stanza peace-stanza">
+              السلام يغمرني…<br>
+              शान्तिः शान्तिः शान्ति: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">النَفَس محرَّر<br>نَفَس الله يحيا الآن فيّ<br>أنا هنا والآن<br>وأشعر بناري</div>
+            <div class="stanza">ومضات من الحب<br>ومضات من السلام<br>ومضات من الشعر<br>ومضات من الفن</div>
+            <div class="stanza">شرارات راقصة تنبثق فيّ<br>ترقص ببطء<br>يداي تداعبان الهواء<br>تتحركان بتموج رشيق</div>
+            <div class="stanza">جسدي ينحني ويتڤوى<br>تتموج وتنزلق في الدوران الصوفي.</div>
+            <div class="stanza">أنا الكون<br>أشعر أنني الطبيعة<br>أشعر أنني زهرة،<br>كالربيعيات الملونة،<br>بيضاء كالياسمين،<br>منتصبة كالصنوبر،<br>شافية كزهرة إكليل الجبل،<br>عطرية كزهر البرتقال،<br>ناعمة حلوة كبتلات الورد</div>
+            <div class="stanza">العصافير الصغيرة هي كورالي<br>في الفجر الناعم<br>كل كياني يحيّي مع الطيور<br>الكون اللانهائي<br>في التدفق الأبدي</div>
+            <div class="stanza">أنا نَفَس،<br>أشعر بالحياة<br>أشعر بتدفق النَفَس<br>أتنفس بعمق في الصلاة،<br>صلاة أولياء الأبدية.</div>
+            <div class="stanza resurrection-stanza">أنا القيامة<br>أنا في الله</div>
+            <div class="stanza">في الرقص أشعر بالبشرى السارة.<br>البشرى السارة تتسع فيّ.<br>أشعر بذلك الحضور الأبدي.<br>كما أشار يسوع</div>
+            <div class="stanza">لقد أعطى الحياة الأبدية هبةً.<br>اعتنق الصليب من أجلنا.<br>قام. لم يمت أبداً.<br>حضوره يكون حضوراً.<br>الآن وإلى الأبد.<br>حاضر في دورتي.<br>دورة الحياة.</div>
+            <div class="stanza">تنفّس في هبة الحياة والسلام والحب<br>أنا أنت<br>أشعر بكيانك…</div>
+            <div class="stanza namaste-stanza">Namaste<br>Namaskar</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ РУССКИЙ ═══════════════════════════════════════ -->
+          <div class="russian language">
+            <div class="stanza">Что-то Вечное течёт во мне<br>Что-то столь тонкое освобождается сейчас<br>Плавно рождается мой танец …<br>Теперь Я есмь.</div>
+            <div class="stanza">Я чувствую свой ритм.<br>Я чувствую текучесть.<br>Текучесть медленного Движения<br>Возникающая сама по себе, без моего действия<br>У-вэй — Жизнь танцует через меня</div>
+            <div class="stanza">Я наслаждаюсь, освобождая своё существо<br>Моё дыхание живёт в этом мгновении<br>Божественного творения, происходящего сейчас<br>Теперь Я есмь молитва …<br>Я чувствую единство</div>
+            <div class="stanza peace-stanza">
+              Мир наполняет меня…<br>
+              शान्тиः शान्тиः शान्ти: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">Дыхание освобождено<br>Дыхание Бога живёт теперь во мне<br>Я здесь и сейчас<br>И чувствую свой огонь</div>
+            <div class="stanza">Проблески Любви<br>Проблески Мира<br>Проблески Поэзии<br>Проблески Искусства</div>
+            <div class="stanza">Танцующие искры рождаются во мне<br>они танцуют медленно<br>Мои руки ласкают воздух<br>движутся извилисто</div>
+            <div class="stanza">Моё тело изгибается<br>Волнообразно скользит в суфийском кружении.</div>
+            <div class="stanza">Я — вселенная<br>Я чувствую себя природой<br>Я чувствую себя цветком,<br>как разноцветные первоцветы,<br>белым как жасмин,<br>прямым как гиацинт,<br>исцеляющим как цветок розмарина,<br>ароматным как цветок апельсина,<br>нежным и сладким как лепестки розы</div>
+            <div class="stanza">Птички — мой хор<br>На нежном рассвете<br>всё моё Существо вместе с птицами приветствует<br>бескрайнюю вселенную<br>в вечном потоке</div>
+            <div class="stanza">Я — дыхание,<br>Я чувствую Жизнь<br>Ощущаю поток дыхания<br>Дышу глубоко в молитве,<br>молитве святых вечности.</div>
+            <div class="stanza resurrection-stanza">Я — воскресение<br>Я — в Боге</div>
+            <div class="stanza">В танце я чувствую Благую Весть.<br>Благая Весть расширяется во мне.<br>Чувствую это Вечное Настоящее.<br>Как отметил Иисус</div>
+            <div class="stanza">Он подарил Вечную Жизнь.<br>Он обнял крест ради нас.<br>Воскрес. Никогда не умирал.<br>Его Настоящее пребывает Настоящим.<br>Теперь и вовеки.<br>Присутствует в моём кружении.<br>Кружение Жизни.</div>
+            <div class="stanza">Дыши в даре Жизни, Мира и Любви<br>Я — это ты<br>Я чувствую твоё существо…</div>
+            <div class="stanza namaste-stanza">Намасте<br>Намаскар</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ УКРАЇНСЬКА ═══════════════════════════════════════ -->
+          <div class="ukrainian language">
+            <div class="stanza">Щось Вічне тече в мені<br>Щось таке тонке звільняється зараз<br>Плавно народжується мій танець …<br>Тепер Я є.</div>
+            <div class="stanza">Я відчуваю свій ритм.<br>Я відчуваю плинність.<br>Плинність повільного Руху<br>Що виникає сама собою, без моєї дії<br>У-вей — Життя танцює крізь мене</div>
+            <div class="stanza">Я насолоджуюсь, звільняючи своє єство<br>Моє дихання живе в цю мить<br>Божественного творення, що відбувається<br>Тепер Я є молитвою …<br>Я відчуваю єдність</div>
+            <div class="stanza peace-stanza">
+              Мир наповнює мене…<br>
+              शान्тиः शान्тиः शान्ти: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">Дихання звільнено<br>Подих Бога тепер живе в мені<br>Я тут і зараз<br>І відчуваю свій вогонь</div>
+            <div class="stanza">Спалахи Любові<br>Спалахи Миру<br>Спалахи Поезії<br>Спалахи Мистецтва</div>
+            <div class="stanza">Іскри, що танцюють, виникають в мені<br>вони танцюють повільно<br>Мої руки пестять повітря<br>рухаються звивисто</div>
+            <div class="stanza">Моє тіло вигинається<br>Хвилясто ковзає у суфійський оберт.</div>
+            <div class="stanza">Я — всесвіт<br>Я відчуваю себе природою<br>Я відчуваю себе квіткою,<br>як барвисті первоцвіти,<br>біла як жасмин,<br>пряма як гіацинт,<br>цілюща як квітка розмарину,<br>запашна як квітка апельсина,<br>ніжна і солодка як пелюстки троянди</div>
+            <div class="stanza">Пташки — мой хор<br>На лагідному світанку<br>все моє Єство вітає разом з птахами<br>нескінченний всесвіт<br>у вічному плині</div>
+            <div class="stanza">Я — дихання,<br>Я відчуваю Життя<br>Відчуваю плин дихання<br>Дихаю глибоко в молитві,<br>моilitві святих вічності.</div>
+            <div class="stanza resurrection-stanza">Я — воскресіння<br>Я — в Богові</div>
+            <div class="stanza">У танці я відчуваю Добру Новину.<br>Добра Новина розширюється в мені.<br>Відчуваю той Вічний Теперішній.<br>Як Ісус вказав</div>
+            <div class="stanza">Він подарував Вічне Життя.<br>Він обійняв хрест заради нас.<br>Воскрес. Ніколи не помер.<br>Його Теперішнє пребуває Теперішнім.<br>Тепер і навіки.<br>Присутнє в моєму оберті.<br>Оберт Життя.</div>
+            <div class="stanza">Дихай у дарі Життя, Миру і Любові<br>Я — це ти<br>Я відчуваю твоє єство…</div>
+            <div class="stanza namaste-stanza">Намасте<br>Намаскар</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ DEUTSCH ═══════════════════════════════════════ -->
+          <div class="aleman language">
+            <div class="stanza">Etwas Ewiges fließt in mir<br>Etwas so Feines wird jetzt befreit<br>Sanft entsteht mein Tanz …<br>Jetzt bin Ich.</div>
+            <div class="stanza">Ich fühle meinen Rhythmus.<br>Ich fühle die Flüssigkeit.<br>Flüssigkeit der langsamen Bewegung<br>Die allein entsteht, ohne mein Zutun<br>Wu Wei — das Leben tanzt durch mich</div>
+            <div class="stanza">Ich genieße das Befreien meines Wesens<br>Mein Atem lebt diesen Moment<br>göttlicher Schöpfung, die geschieht<br>Jetzt bin Ich Gebet …<br>Ich fühle Einheit</div>
+            <div class="stanza peace-stanza">
+              Frieden durchflutet mich…<br>
+              शान्тиः शान्तिः शान्ति: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">Der Atem wird befreit<br>Der Atem Gottes lebt jetzt in mir<br>Ich bin Hier und Jetzt<br>Und fühle mein Feuer</div>
+            <div class="stanza">Aufblitzende Liebe<br>Aufblitzender Friede<br>Aufblitzende Poesie<br>Aufblitzende Kunst</div>
+            <div class="stanza">Tanzende Funken entstehen in mir<br>sie tanzen langsam<br>Meine Hände streicheln die Luft<br>bewegen sich geschmeidig</div>
+            <div class="stanza">Mein Körper formt sich<br>Wellenartig gleitet er in die Sufi-Drehung.</div>
+            <div class="stanza">Ich bin Universum<br>Ich fühle mich wie die Natur<br>Ich fühle mich wie eine Blume,<br>wie die bunten Primeln,<br>weiß wie der Jasmin,<br>aufrecht wie die Hyazinthen,<br>heilend wie die Rosmarinblüte,<br>duftend wie die Orangenblüte,<br>sanft und süß wie die Rosenblätter</div>
+            <div class="stanza">Die Vögelchen sind mein Chor<br>Im sanften Morgengrauen<br>grüßt mein ganzes Sein mit den Vögeln<br>das unendliche Universum<br>im ewigen Fließen</div>
+            <div class="stanza">Ich bin Atem,<br>Ich fühle das Leben<br>Ich fühle das Fließen des Atems<br>Ich atme tief im Gebet,<br>Gebet der Heiligen der Ewigkeit.</div>
+            <div class="stanza resurrection-stanza">Ich bin Auferstehung<br>Ich bin in Gott</div>
+            <div class="stanza">Im Tanz fühle ich die Frohe Botschaft.<br>Die Frohe Botschaft entfaltet sich in mir.<br>Ich fühle diese Ewige Gegenwart.<br>Wie Jesus es gezeigt hat</div>
+            <div class="stanza">Er schenkte das ewige Leben.<br>Er umarmte das Kreuz für uns.<br>Er ist auferstanden. Er starb nie.<br>Seine Gegenwart ist Gegenwart.<br>Jetzt in Ewigkeit.<br>Gegenwärtig in meiner Drehung.<br>Die Drehung des Lebens.</div>
+            <div class="stanza">Atme das Geschenk von Leben, Frieden und Liebe<br>Ich bin du<br>Ich fühle dein Sein…</div>
+            <div class="stanza namaste-stanza">Namaste<br>Namaskar</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ FRANÇAIS ═══════════════════════════════════════ -->
+          <div class="frances language">
+            <div class="stanza">Quelque chose d'Éternel coule en moi<br>Quelque chose de si subtil se libère maintenant<br>Doucement ma danse surgit …<br>Maintenant Je suis.</div>
+            <div class="stanza">Je sens mon rythme.<br>Je sens la fluidité.<br>Fluidité du Mouvement lent<br>Surgissant seule, sans mon action<br>Wu Wei — la Vie danse à travers moi</div>
+            <div class="stanza">Je me délecte à libérer mon être<br>Mon souffle vit ce moment<br>de création Divine qui se produit<br>Maintenant Je suis prière …<br>Je sens l'union</div>
+            <div class="stanza peace-stanza">
+              La Paix m'envahit…<br>
+              शान्тиः शान्тиः शान्ти: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">La respiration est libérée<br>Le souffle de Dieu vit maintenant en moi<br>Je suis Ici et Maintenant<br>Et je sens mon feu</div>
+            <div class="stanza">Éclats d'Amour<br>Éclats de Paix<br>Éclats de Poésie<br>Éclats d'Art</div>
+            <div class="stanza">Des étincelles dansantes surgissent en moi<br>elles dansent lentement<br>Mes mains caressent l'air<br>se meuvent sinueusement</div>
+            <div class="stanza">Mon corps se contourne<br>Ondulant, il glisse dans la tournoiement Soufi.</div>
+            <div class="stanza">Je suis univers<br>Je me sens nature<br>Je me sens fleur,<br>comme les primevères colorées,<br>blanche como les jasmin,<br>droite comme les jacinthes,<br>guérisseuse comme la fleur de romarin,<br>parfumée como la fleur d'oranger,<br>douce et suave como les pétales de la rose</div>
+            <div class="stanza">Les petits oiseaux sont mon chœur<br>Dans la douce aurore<br>tout mon Être salue avec les oiseaux<br>l'infini univers<br>dans l'éternel flux</div>
+            <div class="stanza">Je suis respiration,<br>Je sens la Vie<br>Je sens le flux de la respiration<br>Je respire profondément dans la prière,<br>prière des saints de l'éternité.</div>
+            <div class="stanza resurrection-stanza">Je suis résurrection<br>Je suis en Dieu</div>
+            <div class="stanza">Dans la dance je sens la Bonne Nouvelle.<br>La Bonne Nouvelle s'étend en moi.<br>Je sens ce Présent Éternel.<br>Comme Jésus l'a montré</div>
+            <div class="stanza">Il a offert la Vie Éternelle.<br>He a embrassé la croix pour nous.<br>Il est ressuscité. Il n'est jamais mort.<br>Son Présent étant Présent.<br>Maintenant pour l'éternité.<br>Présent dans mon tourbillon.<br>Le tourbillon de la Vie.</div>
+            <div class="stanza">Respire dans le don de Vie, Paix et Amour<br>Je suis toi<br>Je sens ton être…</div>
+            <div class="stanza namaste-stanza">Namaste<br>Namaskar</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ 日本語 ═══════════════════════════════════════ -->
+          <div class="japones language">
+            <div class="stanza">永遠の何かが私の中を流れている<br>こんなにも繊細な何かが今、解き放たれる<br>そっと私の舞が生まれる …<br>今、私は在る。</div>
+            <div class="stanza">私は自分のリズムを感じる。<br>私は流動性を感じる。<br>ゆっくりとした動きの流動性<br>行為なしに、自ずと湧き上がる<br>無為（ wu wei）— 生命が私を通して踊る</div>
+            <div class="stanza">私は自分の存在を解き放つことを楽しむ<br>私の息吹はこの瞬間に生きている<br>今まさに起きている神聖な創造の<br>今、私は祈りだ …<br>私は一体感を感じる</div>
+            <div class="stanza peace-stanza">
+              平和が私に満ちる…<br>
+              शान्तिः शान्तिः शान्ति: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">息吹が解き放たれた<br>神の息吹が今、私の中に生きている<br>私は今ここに在る<br>そして自分の炎を感じる</div>
+            <div class="stanza">愛のきらめき<br>平和のきらめき<br>詩のきらめき<br>芸術のきらめき</div>
+            <div class="stanza">踊る火花が私の中に湧き上がる<br>ゆっくりと踊る<br>空気をそっと撫でる私の手<br>曲線を描くように動く</div>
+            <div class="stanza">私の体が形を成す<br>波のように揺れながらスーフィーの回転に滑り込む。</div>
+            <div class="stanza">私は宇宙だ<br>私は自然を感じる<br>私は花を感じる、<br>色とりどりのサクラソウのように、<br>ジャスミンのように白く、<br>ヒヤシンスのようにすっくと立ち、<br>ローズマリーの花のように癒し、<br>オレンジの花のように芳香を放ち、<br>バラの花びらのように柔らかく甘い</div>
+            <div class="stanza">小鳥たちは私の合唱団<br>やわらかな夜明けに<br>私のすべての存在が鳥たちとともに<br>無限の宇宙に挨拶する<br>永遠の流れの中で</div>
+            <div class="stanza">私は息吹だ、<br>私は生命を感じる<br>呼吸の流れを感じる<br>祈りの中で深く息を吸う、<br>永遠の聖人たちの祈り。</div>
+            <div class="stanza resurrection-stanza">私は復活だ<br>私は神の中に在る</div>
+            <div class="stanza">舞の中で私は福音を感じる。<br>福音が私の中で広がる。<br>私はあの永遠の現在を感じる。<br>イエスが示されたように</div>
+            <div class="stanza">彼は永遠の命を贈られた。<br>私たちのために十字架を抱かれた。<br>よみがえられた。決して死なれなかった。<br>彼の現在が現在であり続けている。<br>今、永遠に。<br>私の回転の中に現在している。<br>命の回転.</div>
+            <div class="stanza">命と平和と愛の贈り物の中で呼吸せよ<br>私はあなただ<br>私はあなたの存在を感じる…</div>
+            <div class="stanza namaste-stanza">ナマステ<br>ナマスカル</div>
+          </div>
+
+          <!-- ═══════════════════════════════════════ PORTUGUÊS ═══════════════════════════════════════ -->
+          <div class="portuges language">
+            <div class="stanza">Algo Eterno flui em mim<br>Algo tão sutil se liberta agora<br>Suavemente nasce a minha dança …<br>Agora Eu sou.</div>
+            <div class="stanza">Sinto o meu ritmo.<br>Sinto a fluidez.<br>Fluidez do Movimento lento<br>Surgindo só, sem a minha ação<br>Wu Wei — a Vida dança através de mim</div>
+            <div class="stanza">Deleito-me ao libertar o meu ser<br>O meu sopro vive este momento<br>de criação Divina acontecendo<br>Agora Eu sou oração …<br>Eu sinto união</div>
+            <div class="stanza peace-stanza">
+              A Paz invade-me…<br>
+              शान्तिः शान्तिः शान्ति: <em>(Shanti, Shanti, Shanti)</em><br>
+              سلام سلام سلام <em>(Salam, Salam, Salam)</em><br>
+              Мир, Мир, Мир <em>(Mir, Mir, Mir)</em><br>
+              שלום,שלום,שלום <em>(Shalom, Shalom, Shalom)</em><br>
+              Pax, Pax, Pax<br>
+              Rangimarie, Rangimarie, Rangimarie
+            </div>
+            <div class="stanza">A respiração é libertada<br>O sopro de Deus vive ahora em mim<br>Sou Aqui e Agora<br>E sinto o meu fogo</div>
+            <div class="stanza">Centelhas de Amor<br>Centelhas de Paz<br>Centelhas de Poesia<br>Centelhas de Arte</div>
+            <div class="stanza">Faíscas dançantes surgem em mim<br>dançam lentamente<br>As minhas mãos acariciando o ar<br>movem-se sinuosamente</div>
+            <div class="stanza">O meu corpo contorna-se<br>Ondulante desliza no giro Sufi.</div>
+            <div class="stanza">Eu sou universo<br>Sinto-me natureza<br>Sinto-me flor,<br>como as prímulas de colores,<br>branca como o jasmim,<br>erecta como os jacintos,<br>curadora como a flor do alecrim,<br>aromática como o flor de laranjeira,<br>suave e doce como as pétalas da rosa</div>
+            <div class="stanza">Os passarinhos são o meu coro<br>Na aurora suave<br>todo o meu Ser saúda com as aves<br>o universo infinito<br>no fluir eterno</div>
+            <div class="stanza">Eu sou respiração,<br>Eu sinto a Vida<br>Sinto o fluir da respiração<br>Respiro fundo na oração,<br>oração dos santos da eternidade.</div>
+            <div class="stanza resurrection-stanza">Eu sou ressurreição<br>Eu sou em Dios</div>
+            <div class="stanza">Na dança sinto a Boa Nova.<br>A Boa Nova expande-se em mim.<br>Sinto esse Presente Eterno.<br>Como Jesus marcou</div>
+            <div class="stanza">Ele ofereceu a Vida Eterna.<br>Abraçou a cruz por nós.<br>Ressuscitou. Jamais morreu.<br>O Seu Presente sendo Presente.<br>Ahora eternamente.<br>Presente no meu giro.<br>O giro da Vida.</div>
+            <div class="stanza">Respira no presente de Vida, Paz e Amor<br>Eu sou tu<br>Eu sinto o teu ser…</div>
+            <div class="stanza namaste-stanza">Namaste<br>Namaskar</div>
+          </div>
+
+        </div><!-- end poem-text -->
+
+        <!-- Art Gallery Section -->
+        <div class="ai-artwork-section mt-5 py-5">
+           <h3 class="handwritten text-light mb-4">
+             <span class="spanish language">Galería de Arte</span>
+             <span class="english language">Art Gallery</span>
+             <span class="italian language">Galleria d'Arte</span>
+             <span class="chinese language">艺术画廊</span>
+             <span class="arabic language">معرض الفن</span>
+             <span class="russian language">Арт-галерея</span>
+             <span class="ukrainian language">Арт-галерея</span>
+             <span class="aleman language">Kunstgalerie</span>
+             <span class="frances language">Galerie d'Art</span>
+             <span class="japones language">アートギャラリー</span>
+             <span class="portuges language">Galeria de Arte</span>
+           </h3>
+           <div class="row justify-content-center g-4">
+             <div class="col-md-5 mb-4">
+               <img src="background_user.jpg" class="img-fluid rounded shadow-lg border border-warning"
+                    alt="Arte original — Paz Arés Osset" style="opacity: 0.95; filter: contrast(1.1);">
+             </div>
+             <div class="col-md-5 mb-4">
+               <img src="background_ai.png" class="img-fluid rounded shadow-lg border border-warning"
+                    alt="Arte inspirado — Visión digital" style="opacity: 0.95; filter: brightness(1.1);">
+             </div>
+           </div>
+        </div>
+
+        <!-- Music Section -->
+        <div class="songs-section mt-5 py-5">
+           <h2 class="handwritten text-light mb-5">
+             <i class="fab fa-spotify mr-2"></i>
+             <span class="spanish language">Colección Musical</span>
+             <span class="english language">Musical Collection</span>
+             <span class="italian language">Collezione Musicale</span>
+             <span class="chinese language">音乐系列</span>
+             <span class="arabic language">المجموعة الموسيقية</span>
+             <span class="russian language">Музыкальная коллекция</span>
+             <span class="ukrainian language">Музична колекція</span>
+             <span class="aleman language">Musiksammlung</span>
+             <span class="frances language">Collection Musicale</span>
+             <span class="japones language">ミュージックコレクション</span>
+             <span class="portuges language">Coleção Musical</span>
+           </h2>
+           <div class="row justify-content-center">
+             <!-- Spanish Album -->
+             <div class="col-6 col-md-4 mb-4">
+               <div class="album-card">
+                 <img src="songs/album_es.png" class="img-fluid rounded shadow-lg" alt="Pascua Florida - Album ES">
+                 <div class="album-info mt-3">
+                   <h5 class="text-light mb-0">Español</h5>
+                   <p class="small text-warning">Flamenco / Afro House / Ambient</p>
+                 </div>
+               </div>
+             </div>
+             <!-- English Album -->
+             <div class="col-6 col-md-4 mb-4">
+               <div class="album-card">
+                 <img src="songs/album_en.png" class="img-fluid rounded shadow-lg" alt="Flowery Easter - Album EN">
+                 <div class="album-info mt-3">
+                   <h5 class="text-light mb-0">English</h5>
+                   <p class="small text-warning">Gospel / Indie Folk</p>
+                 </div>
+               </div>
+             </div>
+             <!-- Portuguese Album -->
+             <div class="col-6 col-md-4 mb-4">
+               <div class="album-card">
+                 <img src="songs/album_pt.png" class="img-fluid rounded shadow-lg" alt="Páscoa Florida - Album PT">
+                 <div class="album-info mt-3">
+                   <h5 class="text-light mb-0">Português</h5>
+                   <p class="small text-warning">Bossa Nova / Neo-Soul</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js?v=2"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paz de Colores — Poesía de Paz Arés Osset</title>
+    <!-- Social Meta Tags -->
+    <meta name="description" content="Paz de Colores: Una obra poética sobre la unión universal, el amor y la fusión de razas y religiones.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=1.1">
+</head>
+<body data-lang="spanish">
+
+    <!-- Canvas for Particle Effects -->
+    <canvas id="effects-canvas"></canvas>
+
+    <div class="main-wrapper">
+        
+        <!-- Logo -->
+        <a class="brand" href="https://www.pazaresosset.es">
+            <img src="../../logopazares.png" class="paz-logo" alt="Paz Arés Osset">
+        </a>
+
+        <!-- Language & Navigation Selector -->
+        <nav class="lang-nav">
+            <div class="nav-container">
+                <a href="../../linktree.html" class="nav-btn linktree-btn">
+                    <i class="fas fa-link"></i>
+                    <span>Linktree</span>
+                </a>
+                <div class="lang-selector">
+                    <button class="current-lang" id="langBtn">
+                        <span id="currentFlag">🇪🇸</span>
+                        <span id="langText">Castellano</span>
+                    </button>
+                    <div class="lang-dropdown" id="langPicker">
+                        <div class="lang-opt" data-value="spanish"><span>🇪🇸</span> Castellano</div>
+                        <div class="lang-opt" data-value="english"><span>🇬🇧</span> English</div>
+                        <div class="lang-opt" data-value="italian"><span>🇮🇹</span> Italiano</div>
+                        <div class="lang-opt" data-value="chinese"><span>🇨🇳</span> 中文</div>
+                        <div class="lang-opt" data-value="arabic"><span>🇦🇪</span> العربية</div>
+                        <div class="lang-opt" data-value="russian"><span>🇷🇺</span> Русский</div>
+                        <div class="lang-opt" data-value="ukrainian"><span>🇺🇦</span> Українська</div>
+                        <div class="lang-opt" data-value="aleman"><span>🇩🇪</span> Deutsch</div>
+                        <div class="lang-opt" data-value="frances"><span>🇫🇷</span> Français</div>
+                        <div class="lang-opt" data-value="japones"><span>🇯🇵</span> 日本語</div>
+                        <div class="lang-opt" data-value="portuges"><span>🇵🇹</span> Português</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Poem Container -->
+        <section class="poem-section">
+            <div class="container">
+                
+                <div class="poem-wrapper">
+                    <!-- Title -->
+                    <h1 class="poem-title reveal">
+                        <span class="spanish">Paz de Colores</span>
+                        <span class="english">Peace of Colors</span>
+                        <span class="italian">Pace di Colori</span>
+                        <span class="chinese">彩色的和平</span>
+                        <span class="arabic">سلام الألوان</span>
+                        <span class="russian">Мир Цветов</span>
+                        <span class="ukrainian">Мир Кольорів</span>
+                        <span class="aleman">Frieden der Farben</span>
+                        <span class="frances">Paix de Couleurs</span>
+                        <span class="japones">彩りの平和</span>
+                        <span class="portuges">Paz de Cores</span>
+                    </h1>
+
+                    <!-- Body -->
+                    <div class="poem-content reveal-stagger">
+                        
+                        <div class="stanza">
+                            <span class="spanish">La Paz es de colores<br>y el amor de emociones<br>como flores de ilusiones</span>
+                            <span class="english">Peace is made of colors<br>and love of emotions<br>like flowers of illusions</span>
+                            <span class="italian">La Pace è di colori<br>e l'amore di emociones<br>come fiori di illusioni</span>
+                            <span class="chinese">和平是彩色的<br>爱是情感的<br>如同幻影之花</span>
+                            <span class="arabic">السلام من ألوان<br>والحب من عواطف<br>مثل زهور الأوهام</span>
+                            <span class="russian">Мир состоит из красок<br>а любовь из эмоций<br>как цветы иллюзий</span>
+                            <span class="ukrainian">Мир складається з кольорів<br>а любов з емоцій<br>як квіти ілюзій</span>
+                            <span class="aleman">Der Frieden ist aus Farben<br>und die Liebe aus Emotionen<br>wie Blumen der Illusionen</span>
+                            <span class="frances">La Paix est de couleurs<br>et l'amour d'émotions<br>comme des fleurs d'illusions</span>
+                            <span class="japones">平和は彩りでできている<br>愛は感情でできている<br>幻想の花のように</span>
+                            <span class="portuges">A Paz é de cores<br>e o amor de emoções<br>como flores de ilusões</span>
+                        </div>
+
+                        <div class="stanza main-stanza">
+                            <span class="spanish">La Paz es una fusión<br>entre el amor y la unión<br>entre razas y religiones</span>
+                            <span class="english">Peace is a fusion<br>between love and union<br>between races and religions</span>
+                            <span class="italian">La Pace è una fusione<br>tra l'amore e l'unione<br>tra razze e religiones</span>
+                            <span class="chinese">和平是一种融合<br>存在于爱与统一之间<br>存在于种族与宗教之间</span>
+                            <span class="arabic">السلام هو اندماج<br>بين الحب والاتحاد<br>بين الأعراق والأديان</span>
+                            <span class="russian">Мир — это слияние<br>между любовью и единством<br>между расами и религиями</span>
+                            <span class="ukrainian">Мир — це злиття<br>між любов'ю та єдністю<br>між расами та релігіями</span>
+                            <span class="aleman">Der Frieden ist eine Verschmelzung<br>zwischen Liebe und Einigkeit<br>zwischen Rassen und Religionen</span>
+                            <span class="frances">La Paix est une fusion<br>entre l'amour et l'union<br>entre races et religions</span>
+                            <span class="japones">平和とは融合である<br>愛と調和の間に<br>人種と宗教の間に</span>
+                            <span class="portuges">A Paz é una fusão<br>entre o amor e a união<br>entre raças e religiões</span>
+                        </div>
+
+                        <div class="stanza closing-stanza">
+                            <span class="spanish">ya todo son amores</span>
+                            <span class="english">now everything is love</span>
+                            <span class="italian">ormai tutto è amore</span>
+                            <span class="chinese">现在一切皆是爱</span>
+                            <span class="arabic">الآن كل شيء هو حب</span>
+                            <span class="russian">теперь всё есть любовь</span>
+                            <span class="ukrainian">тепер усе є любов'ю</span>
+                            <span class="aleman">jetzt ist alles Liebe</span>
+                            <span class="frances">désormais tout est amour</span>
+                            <span class="japones">今や全てが愛である</span>
+                            <span class="portuges">já tudo son amores</span>
+                        </div>
+
+                        <div class="stanza signature">
+                            Paz Arés Osset
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Music Section -->
+                <div class="music-section mt-5 py-5 reveal">
+                    <h2 class="handwritten text-light mb-5">
+                        <i class="fab fa-spotify mr-2"></i>
+                        <span class="spanish">El poema en forma musical</span>
+                        <span class="english">The poem in musical form</span>
+                        <span class="italian">La poesia in forma musicale</span>
+                        <span class="chinese">音乐形式的诗</span>
+                        <span class="arabic">القصيدة في شكل موسيقي</span>
+                        <span class="russian">Стихотворение в музыкальной форме</span>
+                        <span class="ukrainian">Вірш у музичній формі</span>
+                        <span class="aleman">Das Gedicht in musikalischer Form</span>
+                        <span class="frances">Le poème sous forme musicale</span>
+                        <span class="japones">音楽形式の詩</span>
+                        <span class="portuges">O poema em forma musical</span>
+                    </h2>
+                    <div class="row justify-content-center">
+                        <!-- Spanish Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_es.png" alt="Disco en Castellano">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Castellano</h4>
+                                    <h4 class="english">Spanish Album</h4>
+                                    <h4 class="italian">Disco in Spagnolo</h4>
+                                    <h4 class="chinese">西班牙语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالإسبانية</h4>
+                                    <h4 class="russian">Испанский диск</h4>
+                                    <h4 class="ukrainian">Іспанський диск</h4>
+                                    <h4 class="aleman">Spanisches Album</h4>
+                                    <h4 class="frances">Album en Espagnol</h4>
+                                    <h4 class="japones">スペイン語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Espanhol</h4>
+                                    <p class="small text-warning">Flamenco-Jazz Fusion</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- English Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_en.png" alt="Disco en Inglés">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Inglés</h4>
+                                    <h4 class="english">English Album</h4>
+                                    <h4 class="italian">Disco in Inglese</h4>
+                                    <h4 class="chinese">英语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالإنجليزية</h4>
+                                    <h4 class="russian">Английский диск</h4>
+                                    <h4 class="ukrainian">Англійський диск</h4>
+                                    <h4 class="aleman">Englisches Album</h4>
+                                    <h4 class="frances">Album en Anglais</h4>
+                                    <h4 class="japones">英語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Inglês</h4>
+                                    <p class="small text-warning">Global Pop Fusion</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Arabic Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_ar.png" alt="Disco en Árabe">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Árabe</h4>
+                                    <h4 class="english">Arabic Album</h4>
+                                    <h4 class="italian">Disco in Arabo</h4>
+                                    <h4 class="chinese">阿拉伯语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالعربية</h4>
+                                    <h4 class="russian">Арабский диск</h4>
+                                    <h4 class="ukrainian">Арабський диск</h4>
+                                    <h4 class="aleman">Arabisches Album</h4>
+                                    <h4 class="frances">Album en Arabe</h4>
+                                    <h4 class="japones">アラビア語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Árabe</h4>
+                                    <p class="small text-warning">Afro-Arabic Fusion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Gallery Section -->
+                <div class="art-gallery-section mt-5 py-5 reveal">
+                    <h2 class="handwritten text-light mb-5">
+                        <i class="fas fa-paint-brush mr-2"></i>
+                        <span class="spanish">Arte y Visión</span>
+                        <span class="english">Art & Vision</span>
+                        <span class="italian">Arte e Visione</span>
+                        <span class="chinese">艺术与视觉</span>
+                        <span class="arabic">الفن والرؤية</span>
+                        <span class="russian">Искусство и видение</span>
+                        <span class="ukrainian">Мистецтво та бачення</span>
+                        <span class="aleman">Kunst & Vision</span>
+                        <span class="frances">Art et Vision</span>
+                        <span class="japones">アート＆ビジョン</span>
+                        <span class="portuges">Arte e Visão</span>
+                    </h2>
+                    <div class="framed-image-container">
+                        <div class="art-frame">
+                            <img src="background.png" alt="Paz de Colores Art" class="img-fluid rounded shadow-lg">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js?v=1.1"></script>
+</body>
+</html>

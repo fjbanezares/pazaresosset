@@ -1,0 +1,327 @@
+:root {
+    --primary-glow: rgba(100, 149, 237, 0.4);
+    --accent-silver: #c0c0c0;
+    --accent-gold: #ffd700;
+    --text-white: #ffffff;
+    --bg-dark: rgba(0, 0, 0, 0.25);
+    --bg-deep: #050515;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-deep);
+    color: var(--text-white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -2;
+    filter: brightness(0.7);
+}
+
+#effects-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.main-wrapper {
+    position: relative;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+/* Logo & Nav */
+.paz-logo {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    height: 80px;
+    z-index: 1000;
+    transition: 0.3s;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+.paz-logo:hover { transform: scale(1.05); }
+
+.lang-nav {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.linktree-btn {
+    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.linktree-btn i { color: var(--accent-gold); }
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Language Selector */
+.lang-selector { position: relative; }
+.current-lang {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: rgba(5, 5, 25, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 1rem;
+    min-width: 200px;
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+.lang-dropdown.active { display: block; animation: fadeInDown 0.3s ease forwards; }
+
+.lang-opt {
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-opt:hover { background: rgba(255, 255, 255, 0.1); color: var(--accent-gold); }
+
+/* Poem Section */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+.poem-wrapper {
+    width: fit-content;
+    max-width: 800px;
+    margin: 8rem auto;
+    background: var(--bg-dark);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 3.5rem;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.poem-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at top right, rgba(100, 149, 237, 0.1), transparent);
+    pointer-events: none;
+}
+
+.poem-title {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    color: var(--accent-silver);
+    text-shadow: 0 0 30px rgba(192, 192, 192, 0.4);
+}
+
+.poem-content {
+    font-family: 'Philosopher', serif;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.stanza { margin-bottom: 3.5rem; }
+
+.aggression-stanza {
+    color: #ffcccb;
+    border-left: 2px solid rgba(255, 0, 0, 0.2);
+    padding: 1rem 0;
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.prayer-stanza {
+    color: #e0f0ff;
+    font-style: italic;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 2rem;
+    background: rgba(255, 215, 0, 0.03);
+    border-radius: 20px;
+}
+
+.realization-stanza {
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Caveat', cursive;
+}
+
+.signature {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    margin-top: 5rem;
+    opacity: 0.6;
+}
+
+/* Art Gallery */
+.art-frame {
+    position: relative;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+    margin: 4rem auto;
+    max-width: 900px;
+}
+
+.art-frame::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border: 2px solid rgba(192, 192, 192, 0.3);
+    border-radius: 35px;
+    pointer-events: none;
+}
+
+.handwritten { font-family: 'Caveat', cursive; font-size: 3rem; }
+
+/* Visibility Control */
+[data-lang="spanish"] .spanish,
+[data-lang="english"] .english,
+[data-lang="italian"] .italian,
+[data-lang="chinese"] .chinese,
+[data-lang="arabic"] .arabic,
+[data-lang="russian"] .russian,
+[data-lang="ukrainian"] .ukrainian,
+[data-lang="aleman"] .aleman,
+[data-lang="frances"] .frances,
+[data-lang="japones"] .japones,
+[data-lang="portuges"] .portuges {
+    display: block;
+}
+
+.spanish, .english, .italian, .chinese, .arabic, .russian, 
+.ukrainian, .aleman, .frances, .japones, .portuges {
+    display: none;
+}
+
+/* Scroll Animation */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Music Section & Grid */
+.music-section { text-align: center; }
+.row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.justify-content-center { justify-content: center; }
+.col-6 { width: 50%; padding: 0 15px; }
+.col-md-4 { width: 33.333%; padding: 0 15px; }
+
+.album-card {
+    position: relative;
+    background: rgba(10, 20, 40, 0.6);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 25px;
+    padding: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.album-card:hover {
+    transform: translateY(-15px) rotate(2deg);
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+}
+
+.album-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.5s ease;
+}
+
+.album-card:hover img {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.small { font-size: 0.8rem; }
+.text-warning { color: var(--accent-gold); }
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .poem-wrapper { padding: 3rem 1.5rem; }
+    .poem-title { font-size: 2.2rem; }
+    .poem-content { font-size: 1.2rem; }
+    .paz-logo { height: 60px; }
+    .lang-nav { top: 1rem; right: 1rem; }
+    .nav-btn span { display: none; }
+}
