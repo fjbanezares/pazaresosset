@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor de Poesía — Paz Arés Osset</title>
+    <meta name="description" content="Amor de Poesía: una reflexión sobre la naturaleza transitoria del amor que permanece eterno a través de la poesía.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
+</head>
+<body data-lang="spanish">
+    <canvas id="effects-canvas"></canvas>
+    <div class="main-wrapper">
+        <a class="brand" href="https://www.pazaresosset.es"><img src="../../logopazares.png" class="paz-logo" alt="Paz Arés Osset"></a>
+        <nav class="lang-nav"><div class="nav-container">
+            <a href="../../linktree.html" class="nav-btn linktree-btn"><i class="fas fa-link"></i><span>Linktree</span></a>
+            <div class="lang-selector">
+                <button class="current-lang" id="langBtn"><span id="currentFlag">🇪🇸</span><span id="langText">Castellano</span></button>
+                <div class="lang-dropdown" id="langPicker">
+                    <div class="lang-opt" data-value="spanish"><span>🇪🇸</span> Castellano</div>
+                    <div class="lang-opt" data-value="english"><span>🇬🇧</span> English</div>
+                    <div class="lang-opt" data-value="italian"><span>🇮🇹</span> Italiano</div>
+                    <div class="lang-opt" data-value="chinese"><span>🇨🇳</span> 中文</div>
+                    <div class="lang-opt" data-value="arabic"><span>🇦🇪</span> العربية</div>
+                    <div class="lang-opt" data-value="russian"><span>🇷🇺</span> Русский</div>
+                    <div class="lang-opt" data-value="ukrainian"><span>🇺🇦</span> Українська</div>
+                    <div class="lang-opt" data-value="aleman"><span>🇩🇪</span> Deutsch</div>
+                    <div class="lang-opt" data-value="frances"><span>🇫🇷</span> Français</div>
+                    <div class="lang-opt" data-value="japones"><span>🇯🇵</span> 日本語</div>
+                    <div class="lang-opt" data-value="portuges"><span>🇵🇹</span> Português</div>
+                </div>
+            </div>
+        </div></nav>
+
+        <section class="poem-section"><div class="container">
+            <div class="poem-wrapper">
+                <h1 class="poem-title reveal">
+                    <span class="spanish">Amor de Poesía</span>
+                    <span class="english">Love of Poetry</span>
+                    <span class="italian">Amore di Poesia</span>
+                    <span class="chinese">诗之爱</span>
+                    <span class="arabic">حب الشعر</span>
+                    <span class="russian">Любовь к Поэзии</span>
+                    <span class="ukrainian">Любов до Поезії</span>
+                    <span class="aleman">Liebe zur Poesie</span>
+                    <span class="frances">Amour de Poésie</span>
+                    <span class="japones">詩の愛</span>
+                    <span class="portuges">Amor de Poesia</span>
+                </h1>
+                <div class="poem-content reveal">
+
+                    <div class="stanza farewell-stanza">
+                        <span class="spanish">Me dices adiós de forma suave,<br>Adiós, amor de poesía.</span>
+                        <span class="english">You say goodbye to me softly,<br>Goodbye, love of poetry.</span>
+                        <span class="italian">Mi dici addio dolcemente,<br>Addio, amore di poesia.</span>
+                        <span class="chinese">你轻声对我说再见，<br>再见，诗之爱。</span>
+                        <span class="arabic">تقولين لي وداعاً برقة،<br>وداعاً، حُبَّ الشعر.</span>
+                        <span class="russian">Ты тихо говоришь мне «прощай»,<br>Прощай, любовь поэзии.</span>
+                        <span class="ukrainian">Ти кажеш мені «прощавай» лагідно,<br>Прощавай, любов поезії.</span>
+                        <span class="aleman">Du sagst mir sanft auf Wiedersehen,<br>Leb wohl, Liebe der Poesie.</span>
+                        <span class="frances">Tu me dis adieu doucement,<br>Adieu, amour de poésie.</span>
+                        <span class="japones">あなたは静かにさよならを告げる、<br>さよなら、詩の愛。</span>
+                        <span class="portuges">Dizes-me adeus suavemente,<br>Adeus, amor de poesia.</span>
+                    </div>
+
+                    <div class="stanza longing-stanza">
+                        <span class="spanish">Acercas de forma lenta tu lejanía,<br>mas que te deje, temes la alegría,<br>languidece el amor de poesía.</span>
+                        <span class="english">Slowly you bring your distance near,<br>yet more than leaving, you fear the joy,<br>the love of poetry languishes.</span>
+                        <span class="italian">Avvicini lentamente la tua lontananza,<br>ma più che lasciarti, temi la gioia,<br>languisce l'amore di poesia.</span>
+                        <span class="chinese">你缓缓拉近你的遥远，<br>比起离别，你更惧怕欢愉，<br>诗的爱在凋零。</span>
+                        <span class="arabic">تُقرِّبين بُعدكِ ببطء،<br>لكنكِ تخشين الفرح أكثر من الرحيل،<br>يذبل حُبُّ الشعر.</span>
+                        <span class="russian">Ты медленно приближаешь свою даль,<br>но больше, чем уйти, ты боишься радости,<br>томится любовь поэзии.</span>
+                        <span class="ukrainian">Ти повільно наближаєш свою далечінь,<br>але більше, ніж піти, ти боїшся радості,<br>в'яне любов поезії.</span>
+                        <span class="aleman">Langsam bringst du deine Ferne nah,<br>doch mehr als zu gehen, fürchtest du die Freude,<br>es welkt die Liebe zur Poesie.</span>
+                        <span class="frances">Tu rapproches lentement ton éloignement,<br>mais plus que de partir, tu crains la joie,<br>languit l'amour de poésie.</span>
+                        <span class="japones">あなたはゆっくりと遠ざかりを近づける、<br>去ることよりも、喜びを恐れて、<br>詩の愛は衰えゆく。</span>
+                        <span class="portuges">Aproximas lentamente a tua distância,<br>mas mais que partir, temes a alegria,<br>languidece o amor de poesia.</span>
+                    </div>
+
+                    <div class="stanza">
+                        <span class="spanish">Por temor a su felicidad,<br>felicidad de difícil eternidad.</span>
+                        <span class="english">For fear of its happiness,<br>a happiness of difficult eternity.</span>
+                        <span class="italian">Per timore della sua felicità,<br>felicità di difficile eternità.</span>
+                        <span class="chinese">因为害怕那幸福，<br>那难以永恒的幸福。</span>
+                        <span class="arabic">خوفاً من سعادته،<br>سعادةٌ صعبة الأبدية.</span>
+                        <span class="russian">Из страха перед его счастьем,<br>счастьем трудной вечности.</span>
+                        <span class="ukrainian">Зі страху перед його щастям,<br>щастям складної вічності.</span>
+                        <span class="aleman">Aus Angst vor seinem Glück,<br>einem Glück von schwieriger Ewigkeit.</span>
+                        <span class="frances">Par crainte de son bonheur,<br>bonheur d'éternité difficile.</span>
+                        <span class="japones">その幸せを恐れて、<br>永遠になり難い幸福。</span>
+                        <span class="portuges">Por temor à sua felicidade,<br>felicidade de difícil eternidade.</span>
+                    </div>
+
+                    <div class="stanza memory-stanza">
+                        <span class="spanish">Oleadas de recuerdos,<br>un amor puro, poesía,<br>en él renació una vida,</span>
+                        <span class="english">Waves of memories,<br>a pure love, poetry,<br>in it a life was reborn,</span>
+                        <span class="italian">Onde di ricordi,<br>un amore puro, poesia,<br>in esso rinacque una vita,</span>
+                        <span class="chinese">回忆如潮水涌来，<br>一份纯爱，诗歌，<br>在其中重生了一世，</span>
+                        <span class="arabic">موجات من الذكريات،<br>حُبٌّ نقيٌّ، شعرٌ،<br>فيه وُلِدت حياةٌ من جديد،</span>
+                        <span class="russian">Волны воспоминаний,<br>чистая любовь, поэзия,<br>в ней возродилась жизнь,</span>
+                        <span class="ukrainian">Хвилі спогадів,<br>чисте кохання, поезія,<br>у ній відродилося життя,</span>
+                        <span class="aleman">Wellen von Erinnerungen,<br>eine reine Liebe, Poesie,<br>in ihr wurde ein Leben wiedergeboren,</span>
+                        <span class="frances">Vagues de souvenirs,<br>un amour pur, poésie,<br>en lui est renée une vie,</span>
+                        <span class="japones">思い出の波が押し寄せる、<br>純粋な愛、詩、<br>その中で命が甦った、</span>
+                        <span class="portuges">Ondas de recordações,<br>um amor puro, poesia,<br>nele renasceu uma vida,</span>
+                    </div>
+
+                    <div class="stanza rebirth-stanza">
+                        <span class="spanish">vida que vivirá de amor,<br>amor de poesía.</span>
+                        <span class="english">a life that shall live on love,<br>love of poetry.</span>
+                        <span class="italian">vita che vivrà d'amore,<br>amore di poesia.</span>
+                        <span class="chinese">生命将因爱而延续，<br>诗之爱。</span>
+                        <span class="arabic">حياةٌ ستحيا بالحُب،<br>حُبِّ الشعر.</span>
+                        <span class="russian">жизнь, что будет жить любовью,<br>любовью поэзии.</span>
+                        <span class="ukrainian">життя, що житиме любов'ю,<br>любов'ю поезії.</span>
+                        <span class="aleman">ein Leben, das von Liebe lebt,<br>Liebe zur Poesie.</span>
+                        <span class="frances">vie qui vivra d'amour,<br>amour de poésie.</span>
+                        <span class="japones">愛に生きる命、<br>詩の愛。</span>
+                        <span class="portuges">vida que viverá de amor,<br>amor de poesia.</span>
+                    </div>
+
+                    <div class="stanza signature">
+                        Paz Arés Osset
+                    </div>
+                    <div class="poem-date">1995</div>
+                </div>
+            </div>
+
+            <!-- Musical Section -->
+            <div class="music-section mt-5 py-5 reveal">
+                <h2 class="handwritten text-light mb-5"><i class="fas fa-music mr-2"></i>
+                    <span class="spanish">El poema en forma musical</span><span class="english">The poem in musical form</span><span class="italian">La poesia in forma musicale</span><span class="portuges">O poema em forma musical</span>
+                </h2>
+                <div class="row justify-content-center">
+                    <!-- Album Castellano -->
+                    <div class="col-md-4 mb-4"><div class="album-card">
+                        <img src="songs/album_es.png" alt="Disco en Castellano">
+                        <div class="album-info">
+                            <h4 class="spanish">Disco en Castellano</h4><h4 class="english">Spanish Album</h4><h4 class="italian">Disco in Spagnolo</h4><h4 class="portuges">Álbum em Espanhol</h4>
+                            <p class="small" style="color: var(--accent-gold);">Amor de Poesía</p>
+                            <p class="small" style="opacity:0.5;"><span class="spanish">Bolero electrónico × Neo-soul nocturno</span><span class="english">Electronic bolero × Nocturnal neo-soul</span><span class="portuges">Bolero eletrónico × Neo-soul noturno</span></p>
+                        </div>
+                    </div></div>
+
+                    <!-- Album English -->
+                    <div class="col-md-4 mb-4"><div class="album-card">
+                        <img src="songs/album_en.png" alt="English Album">
+                        <div class="album-info">
+                            <h4 class="spanish">Disco en Inglés</h4><h4 class="english">English Album</h4><h4 class="italian">Disco in Inglese</h4><h4 class="portuges">Álbum em Inglês</h4>
+                            <p class="small" style="color: var(--accent-gold);">Love of Poetry</p>
+                            <p class="small" style="opacity:0.5;"><span class="spanish">Folk ambiental × Trip-hop etéreo</span><span class="english">Ambient folk × Ethereal trip-hop</span></p>
+                        </div>
+                    </div></div>
+
+                    <!-- Album Português -->
+                    <div class="col-md-4 mb-4"><div class="album-card">
+                        <img src="songs/album_pt.png" alt="Álbum em Português">
+                        <div class="album-info">
+                            <h4 class="spanish">Disco en Portugués</h4><h4 class="english">Portuguese Album</h4><h4 class="italian">Disco in Portoghese</h4><h4 class="portuges">Álbum em Português</h4>
+                            <p class="small" style="color: var(--accent-gold);">Amor de Poesia — Saudade</p>
+                            <p class="small" style="opacity:0.5;"><span class="spanish">Fado eletrónico × Downtempo saudade</span><span class="english">Electronic fado × Downtempo saudade</span></p>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+
+            <!-- Inspiration Section -->
+            <div class="inspiration-section mt-5 py-5 reveal">
+                <h2 class="handwritten text-light mb-5"><i class="fas fa-feather-alt mr-2"></i>
+                    <span class="spanish">Inspiración</span><span class="english">Inspiration</span><span class="italian">Ispirazione</span><span class="portuges">Inspiração</span>
+                </h2>
+                <div class="inspiration-text">
+                    <span class="spanish">Escrito en mil novecientos noventa y cinco, este poema es un diálogo con la despedida. Paz explora el momento exacto en que el amor comienza a disolverse — no con violencia, sino con la suavidad de quien dice "adiós" sabiendo que la separación es inevitable. Lo extraordinario del poema reside en su paradoja central: el amor teme su propia felicidad, porque sabe que lo bello es frágil y lo eterno, difícil.<br><br>Pero hay una victoria secreta en estos versos. Aunque el amor se desvanezca entre los cuerpos, renace como poesía. Las oleadas de recuerdos no destruyen: alimentan una vida nueva, una vida que existirá para siempre en las palabras. El amor de poesía no muere; se transforma en el refugio donde lo que el tiempo no puede retener sigue existiendo, más allá de toda separación.</span>
+                    <span class="english">Written in nineteen ninety-five, this poem is a dialogue with farewell. Paz explores the precise moment when love begins to dissolve — not with violence, but with the softness of someone saying "goodbye" knowing that separation is inevitable. The extraordinary thing about this poem lies in its central paradox: love fears its own happiness, because it knows that what is beautiful is fragile and what is eternal is difficult.<br><br>But there is a secret victory in these verses. Although love may fade between bodies, it is reborn as poetry. The waves of memories do not destroy: they nourish a new life, a life that will exist forever in words. The love of poetry does not die; it transforms into the refuge where what time cannot hold continues to exist, beyond all separation.</span>
+                    <span class="italian">Scritto nel millenovecentonovantacinque, questo poema è un dialogo con l'addio. Paz esplora il momento preciso in cui l'amore comincia a dissolversi — non con violenza, ma con la dolcezza di chi dice "addio" sapendo che la separazione è inevitabile. La cosa straordinaria di questo poema risiede nel suo paradosso centrale: l'amore teme la propria felicità, perché sa che ciò che è bello è fragile e ciò che è eterno è difficile.<br><br>Ma c'è una vittoria segreta in questi versi. Anche se l'amore svanisce tra i corpi, rinasce come poesia. Le onde dei ricordi non distruggono: nutrono una vita nuova, una vita che esisterà per sempre nelle parole. L'amore di poesia non muore; si trasforma nel rifugio dove ciò che il tempo non può trattenere continua a esistere, oltre ogni separazione.</span>
+                    <span class="portuges">Escrito em mil novecentos e noventa e cinco, este poema é um diálogo com a despedida. Paz explora o momento exato em que o amor começa a dissolver-se — não com violência, mas com a suavidade de quem diz "adeus" sabendo que a separação é inevitável. O extraordinário deste poema reside no seu paradoxo central: o amor teme a sua própria felicidade, porque sabe que o belo é frágil e o eterno é difícil.<br><br>Mas há uma vitória secreta nestes versos. Embora o amor se desvanesça entre os corpos, renasce como poesia. As ondas de recordações não destroem: alimentam uma vida nova, uma vida que existirá para sempre nas palavras. O amor de poesia não morre; transforma-se no refúgio onde aquilo que o tempo não pode reter continua a existir, para além de toda a separação.</span>
+                </div>
+            </div>
+
+        </div></section>
+    </div>
+    <script src="script.js?v=1.0"></script>
+</body>
+</html>

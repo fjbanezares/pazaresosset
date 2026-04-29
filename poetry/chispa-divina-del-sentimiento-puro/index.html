@@ -1,253 +1,169 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Poesía - Paz Arés</title>
-  <link rel="icon" type="image/png" href="../../favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lemonada|Manjari|Monoton|Philosopher&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <link rel="stylesheet" href="base.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poesía — Paz Arés Osset</title>
+    <meta name="description" content="Poesía: Chispa divina del sentimiento puro. Un poema sobre la inspiración, la luz interior y la esencia del arte.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
 </head>
+<body data-lang="spanish">
+    <canvas id="effects-canvas"></canvas>
+    <div class="main-wrapper">
+        <a class="brand" href="https://www.pazaresosset.es"><img src="../../logopazares.png" class="paz-logo" alt="Paz Arés Osset"></a>
+        <nav class="lang-nav"><div class="nav-container">
+            <a href="../../linktree.html" class="nav-btn linktree-btn"><i class="fas fa-link"></i><span>Linktree</span></a>
+            <div class="lang-selector">
+                <button class="current-lang" id="langBtn"><span id="currentFlag">🇪🇸</span><span id="langText">Castellano</span></button>
+                <div class="lang-dropdown" id="langPicker">
+                    <div class="lang-opt" data-value="spanish"><span>🇪🇸</span> Castellano</div>
+                    <div class="lang-opt" data-value="english"><span>🇬🇧</span> English</div>
+                    <div class="lang-opt" data-value="italian"><span>🇮🇹</span> Italiano</div>
+                    <div class="lang-opt" data-value="chinese"><span>🇨🇳</span> 中文</div>
+                    <div class="lang-opt" data-value="arabic"><span>🇦🇪</span> العربية</div>
+                    <div class="lang-opt" data-value="russian"><span>🇷🇺</span> Русский</div>
+                    <div class="lang-opt" data-value="ukrainian"><span>🇺🇦</span> Українська</div>
+                    <div class="lang-opt" data-value="aleman"><span>🇩🇪</span> Deutsch</div>
+                    <div class="lang-opt" data-value="frances"><span>🇫🇷</span> Français</div>
+                    <div class="lang-opt" data-value="japones"><span>🇯🇵</span> 日本語</div>
+                    <div class="lang-opt" data-value="portuges"><span>🇵🇹</span> Português</div>
+                </div>
+            </div>
+        </div></nav>
 
-<body>
-  <div class="position-fixed d-flex justify-content-end p-4" style="right: 0; top: 0; z-index: 1;">
-    <select id="language-select" class="custom-select-lg">
-      <option value="english">English</option>
-      <option value="spanish">Español</option>
-      <option value="italian">Italiano</option>
-      <option value="chinese">中文</option>
-      <option value="arabic">العربية</option>
-      <option value="russian">Русский</option>
-    </select>
-  </div>
+        <section class="poem-section"><div class="container">
+            <div class="poem-wrapper">
+                <h1 class="poem-title reveal">
+                    <span class="spanish">Poesía</span>
+                    <span class="english">Poetry</span>
+                    <span class="italian">Poesia</span>
+                    <span class="chinese">诗歌</span>
+                    <span class="arabic">الشعر</span>
+                    <span class="russian">Поэзия</span>
+                    <span class="ukrainian">Поезія</span>
+                    <span class="aleman">Poesie</span>
+                    <span class="frances">Poésie</span>
+                    <span class="japones">詩</span>
+                    <span class="portuges">Poesia</span>
+                </h1>
+                <div class="poem-content reveal">
 
+                    <div class="stanza spark-stanza">
+                        <span class="spanish">Chispa divina<br>Del sentimiento puro,<br>chispa de claridad y de certeza<br>de inspiración e inspiradora.</span>
+                        <span class="english">Divine spark<br>Of pure feeling,<br>spark of clarity and certainty<br>of inspiration and inspiring.</span>
+                        <span class="italian">Scintilla divina<br>Del sentimento puro,<br>scintilla di chiarezza e di certezza<br>di ispirazione e ispirante.</span>
+                        <span class="chinese">神圣的火花<br>纯洁的情感，<br>清晰和确定的火花<br>灵感与启发。</span>
+                        <span class="arabic">شرارة إلهية<br>من الشعور النقي،<br>شرارة من الوضوح واليقين<br>من الإلهام والإلهام.</span>
+                        <span class="russian">Божественная искра<br>Чистого чувства,<br>искра ясности и уверенности<br>вдохновения и вдохновляющая.</span>
+                        <span class="ukrainian">Божественна іскра<br>Чистого почуття,<br>іскра ясності та впевненості<br>натхнення та надихаюча.</span>
+                        <span class="aleman">Göttlicher Funke<br>Reinen Gefühls,<br>Funke der Klarheit und Gewissheit<br>der Inspiration und inspirierend.</span>
+                        <span class="frances">Étincelle divine<br>Du sentiment pur,<br>étincelle de clarté et de certitude<br>d'inspiration et inspirante.</span>
+                        <span class="japones">聖なる火花<br>純粋な感情の、<br>明晰さと確信の火花<br>インスピレーションと、奮い立たせるもの。</span>
+                        <span class="portuges">Faísca divina<br>Do sentimento puro,<br>faísca de clareza e de certeza<br>de inspiração e inspiradora.</span>
+                    </div>
 
-  <section class="jumbotron text-center">
-    <div class="container">
+                    <div class="stanza">
+                        <span class="spanish">Enciendes llamas<br>de vivencias eternas.<br>Sin tiempo en el tiempo,<br>Fuego de emociones,<br>Vehículo de amor,<br>Chispa del sueño.</span>
+                        <span class="english">You ignite flames<br>of eternal experiences.<br>Timeless in Time,<br>Fire of Emotions,<br>Vehicle of Love,<br>Spark of Dreams.</span>
+                        <span class="italian">Accendi fiamme<br>di esperienze eterne.<br>Senza tempo nel tempo,<br>Fuoco di emozioni,<br>Veicolo d'amore,<br>Scintilla del sogno.</span>
+                        <span class="chinese">你点燃火焰<br>永恒的体验。<br>时间中的永恒，<br>情感之火，<br>爱的载体，<br>梦之火花。</span>
+                        <span class="arabic">أنت تشعل اللهب<br>من تجارب أبدية.<br>خارج الوقت في الزمن،<br>نار المشاعر،<br>مركبة الحب،<br>شرارة الأحلام.</span>
+                        <span class="russian">Ты зажигаешь пламя<br>вечных переживаний.<br>Вне времени во Времени,<br>Огонь Эмоций,<br>Проводник любви,<br>Искра Мечты.</span>
+                        <span class="ukrainian">Ти запалюєш полум'я<br>вічних переживань.<br>Поза часом у часі,<br>Вогонь емоцій,<br>Провідник любові,<br>Іскра мрії.</span>
+                        <span class="aleman">Du entzündest Flammen<br>ewiger Erlebnisse.<br>Zeitlos in der Zeit,<br>Feuer der Emotionen,<br>Vehikel der Liebe,<br>Funke des Traums.</span>
+                        <span class="frances">Tu allumes des flammes<br>d'expériences éternelles.<br>Hors du temps dans le temps,<br>Feu des émotions,<br>Véhicule de l'amour,<br>Étincelle du rêve.</span>
+                        <span class="japones">あなたは炎を灯す<br>永遠の体験の。<br>時を越えた時間の中で、<br>感情の炎、<br>愛の乗り物、<br>夢の火花。</span>
+                        <span class="portuges">Acendes chamas<br>de vivências eternas.<br>Atemporal no tempo,<br>Fogo de emoções,<br>Veículo de amor,<br>Faísca do sonho.</span>
+                    </div>
 
-      <a class="brand" href="https://www.pazaresosset.es">
-        <img src="../../logopazares.png" style="
-        position:absolute; 
-        margin: 10px;
-        top:0px; 
-        left:0px;" alt="Paz Arés Osset, the Artist">
-      </a>
+                    <div class="stanza fire-stanza">
+                        <span class="spanish">¿Quién en el interior te enciende?<br>¿Quién hace romper el silencio?</span>
+                        <span class="english">Who lights you up inside?<br>Who breaks the silence?</span>
+                        <span class="italian">Chi ti accende dentro?<br>Chi rompe il silenzio?</span>
+                        <span class="chinese">谁在你内心点亮？<br>谁打破了沉默？</span>
+                        <span class="arabic">من الذي يضيءك من الداخل؟<br>من يكسر الصمت؟</span>
+                        <span class="russian">Кто зажигает тебя изнутри?<br>Кто нарушает тишину?</span>
+                        <span class="ukrainian">Хто запалює тебе зсередини?<br>Хто розбиває тишу?</span>
+                        <span class="aleman">Wer tief im Inneren entzündet dich?<br>Wer lässt das Schweigen brechen?</span>
+                        <span class="frances">Qui à l'intérieur t'enclenche ?<br>Qui fait rompre le silence ?</span>
+                        <span class="japones">内側から誰があなたを灯すのか？<br>誰が沈黙を破らせるのか？</span>
+                        <span class="portuges">Quem no interior te acende?<br>Quem faz romper o silêncio?</span>
+                    </div>
 
-      <h1 class="jumbotron-heading">
-        <div class="english language">Poetry</div>
-        <div class="spanish language" style="display: none;">Poesía</div>
-        <div class="italian language" style="display: none;">Poesia</div>
-        <div class="chinese language" style="display: none;">诗歌</div>
-        <div class="arabic language" style="display: none;">الشعر</div>
-        <div class="russian language" style="display: none;">Поэзия</div>
-      </h1>
+                    <div class="stanza divine-stanza">
+                        <span class="spanish">Chispa de transmisión externa<br>de la profundidad interna,<br>Chispa divina del sentimiento puro.</span>
+                        <span class="english">Spark of external transmission<br>from internal depth,<br>Divine spark of pure feeling.</span>
+                        <span class="italian">Scintilla di trasmissione esterna<br>dalla profondità interna,<br>Scintilla divina del sentimento puro.</span>
+                        <span class="chinese">外部传输的火花<br>来自内部的深度，<br>纯洁情感的神圣火花。</span>
+                        <span class="arabic">شرارة النقل الخارجي<br>من العمق الداخلي،<br>شرارة إلهية من الشعور النقي.</span>
+                        <span class="russian">Искра внешней передачи<br>из внутренней глубины,<br>Божественная искра чистого чувства.</span>
+                        <span class="ukrainian">Іскра зовнішньої передачі<br>з внутрішньої глибини,<br>Божественна іскра чистого почуття.</span>
+                        <span class="aleman">Funke der äußeren Übertragung<br>aus innerer Tiefe,<br>Göttlicher Funke reinen Gefühls.</span>
+                        <span class="frances">Étincelle de transmission externe<br>de la profondeur interne,<br>Étincelle divine du sentiment pur.</span>
+                        <span class="japones">内なる深淵からの<br>外なる伝達ের 火花、<br>純粋な感情の聖なる火花。</span>
+                        <span class="portuges">Faísca de transmissão externa<br>da profundidade interna,<br>Faísca divina do sentimento puro.</span>
+                    </div>
 
-      <div class="lead text-muted">
-        <div class="english language">Divine Spark of Pure Feeling</div>
-        <div class="spanish language" style="display: none;">Chispa Divina Del Sentimiento Puro</div>
-        <div class="italian language" style="display: none;">Scintilla Divina del Sentimento Puro</div>
-        <div class="chinese language" style="display: none;">纯洁情感的神圣火花</div>
-        <div class="arabic language" style="display: none;">شرارة إلهية من الشعور النقي</div>
-        <div class="russian language" style="display: none;">Божественная Искра Чистого Чувства</div>
-      </div>
+                    <div class="stanza signature">
+                        Paz Arés Osset
+                    </div>
+                </div>
+            </div>
 
-      <div class="music-button-container" style="margin-top: 25px;">
-        <div class="english language">
-          <a href="https://music.youtube.com/watch?v=dIavPsVq2K8&si=fUc2O5AmOfmj8c9c" target="_blank"
-            class="btn-spotify">🎵 Listen to the song</a>
-        </div>
-        <div class="spanish language" style="display: none;">
-          <a href="https://music.youtube.com/watch?v=dIavPsVq2K8&si=fUc2O5AmOfmj8c9c" target="_blank"
-            class="btn-spotify">🎵 Escuchar la canción</a>
-        </div>
-        <div class="italian language" style="display: none;">
-          <a href="https://...LINK-CANCION..." target="_blank" class="btn-spotify">🎵 Ascolta la canzone</a>
-        </div>
-        <div class="chinese language" style="display: none;">
-          <a href="https://...LINK-CANCION..." target="_blank" class="btn-spotify">🎵 听这首歌</a>
-        </div>
-        <div class="arabic language" style="display: none;" dir="rtl">
-          <a href="https://...LINK-CANCION..." target="_blank" class="btn-spotify">🎵 استمع للأغنية</a>
-        </div>
-        <div class="russian language" style="display: none;">
-          <a href="https://...LINK-CANCION..." target="_blank" class="btn-spotify">🎵 Слушать песню</a>
-        </div>
-      </div>
+            <!-- Musical Section -->
+            <div class="music-section mt-5 py-5 reveal">
+                <h2 class="handwritten text-light mb-5"><i class="fab fa-spotify mr-2"></i>
+                    <span class="spanish">El poema en forma musical</span><span class="english">The poem in musical form</span><span class="italian">La poesia in forma musicale</span>
+                </h2>
+                <div class="row justify-content-center">
+                    <!-- Album Castellano (Linkeado a Spotify) -->
+                    <div class="col-md-4 mb-4"><div class="album-card">
+                        <img src="songs/album_es.png" alt="Disco en Castellano">
+                        <div class="album-info">
+                            <h4 class="spanish">Disco en Castellano</h4><h4 class="english">Spanish Album</h4><h4 class="italian">Disco in Spagnolo</h4>
+                            <p class="small text-warning">Chispa Divina (Spotify Album)</p>
+                            <div class="spotify-container">
+                                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1Wfnn0hvj8hawd3OkvmI9g?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div></div>
 
+                    <!-- Album English (No link yet) -->
+                    <div class="col-md-4 mb-4"><div class="album-card">
+                        <img src="songs/album_en.png" alt="English Album">
+                        <div class="album-info">
+                            <h4 class="spanish">Disco en Inglés</h4><h4 class="english">English Album</h4><h4 class="italian">Disco in Inglese</h4>
+                            <p class="small text-warning">Spoken Word × Deep House</p>
+                        </div>
+                    </div></div>
+
+                    <!-- Album Italiano (No link yet) -->
+                    <div class="col-md-4 mb-4"><div class="album-card">
+                        <img src="songs/album_it.png" alt="Italian Album">
+                        <div class="album-info">
+                            <h4 class="spanish">Disco en Italiano</h4><h4 class="english">Italian Album</h4><h4 class="italian">Disco in Italiano</h4>
+                            <p class="small text-warning">Scintilla Divina (Italo House)</p>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+
+            <!-- Inspiration Section -->
+            <div class="inspiration-section mt-5 py-5 reveal">
+                <h2 class="handwritten text-light mb-5"><i class="fas fa-sparkles mr-2"></i>
+                    <span class="spanish">La esencia de la Poesía</span><span class="english">The essence of Poetry</span><span class="italian">L'essenza della Poesia</span>
+                </h2>
+                <div class="inspiration-text">
+                    <span class="spanish">Este poema es una oda al instante creativo, a ese momento en que la mente se silencia y deja paso a una "chispa" externa que nace de lo más profundo. Paz define la poesía no solo como palabras, sino como un vehículo de amor y un fuego de emociones que trasciende el tiempo.<br><br>Es una reflexión sobre quién enciende ese fuego interior, quién rompe el silencio para permitir la transmisión de lo eterno hacia lo cotidiano. La poesía es, en sí misma, esa chispa divina del sentimiento puro.</span>
+                    <span class="english">This poem is an ode to the creative moment, to that instant when the mind falls silent and gives way to an external "spark" that arises from the deepest depths. Paz defines poetry not just as words, but as a vehicle of love and a fire of emotions that transcends time.<br><br>It is a reflection on who ignites that inner fire, who breaks the silence to allow the transmission of the eternal into the everyday. Poetry is, in itself, that divine spark of pure feeling.</span>
+                    <span class="italian">Questa poesia è un'ode all'istante creativo, a quel momento in cui la mente tace e lascia il posto a una "scintilla" esterna che nasce dal profondo. Paz definisce la poesia non solo come parole, ma come un veicolo d'amore e un fuoco di emozioni che trascende il tempo.<br><br>È una riflessione su chi accende quel fuoco interiore, chi rompe il silenzio per permettere la trasmissione dell'eterno nel quotidiano. La poesia è, in se stessa, quella scintilla divina del sentimento puro.</span>
+                </div>
+            </div>
+
+        </div></section>
     </div>
-  </section>
-
-
-  <section class="multilingual-description">
-    <div class="container">
-
-      <h1 style="color: gold;">
-        <div class="english language">Poetry</div>
-        <div class="spanish language" style="display: none;">Poesía</div>
-        <div class="italian language" style="display: none;">Poesia</div>
-        <div class="chinese language" style="display: none;">诗歌</div>
-        <div class="arabic language" style="display: none;">الشعر</div>
-        <div class="russian language" style="display: none;">Поэзия</div>
-      </h1>
-
-      <div class="english language">
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Divine spark</p>
-          <p>Of pure feeling,</p>
-          <p>spark of clarity and certainty</p>
-          <p>of inspiration and inspiring.</p>
-          <p>You ignite flames</p>
-          <p>of eternal experiences.</p>
-          <p>Timeless in Time,</p>
-          <p>Fire of Emotions,</p>
-          <p>Vehicle of Love,</p>
-          <p>Spark of Dreams.</p>
-          <p>Who lights you up inside?</p>
-          <p>Who breaks the silence?</p>
-          <p>Spark of external transmission</p>
-          <p>from internal depth,</p>
-          <p>Divine spark of pure feeling.</p>
-        </div>
-        <br>
-      </div>
-
-      <div class="spanish language" style="display: none;">
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Chispa divina</p>
-          <p>Del sentimiento puro,</p>
-          <p>chispa de claridad y de certeza</p>
-          <p>de inspiración e inspiradora.</p>
-          <p>Enciendes llamas</p>
-          <p>de vivencias eternas.</p>
-          <p>Sin tiempo en el tiempo,</p>
-          <p>Fuego de emociones,</p>
-          <p>Vehículo de amor,</p>
-          <p>Chispa del sueño.</p>
-          <p>¿Quién en el interior te enciende?</p>
-          <p>¿Quién hace romper el silencio?</p>
-          <p>Chispa de transmisión externa</p>
-          <p>de la profundidad interna,</p>
-          <p>Chispa divina del sentimiento puro.</p>
-        </div>
-        <br>
-      </div>
-
-
-      <div class="italian language" style="display: none;">
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Scintilla divina</p>
-          <p>Del sentimento puro,</p>
-          <p>scintilla di chiarezza e di certezza</p>
-          <p>di ispirazione e ispirante.</p>
-          <p>Accendi fiamme</p>
-          <p>di esperienze eterne.</p>
-          <p>Senza tempo nel tempo,</p>
-          <p>Fuoco di emozioni,</p>
-          <p>Veicolo d'amore,</p>
-          <p>Scintilla del sogno.</p>
-          <p>Chi ti accende dentro?</p>
-          <p>Chi rompe il silenzio?</p>
-          <p>Scintilla di trasmissione esterna</p>
-          <p>dalla profondità interna,</p>
-          <p>Scintilla divina del sentimento puro.</p>
-        </div>
-        <br>
-      </div>
-
-      <div class="chinese language" style="display: none;">
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>神圣的火花</p>
-          <p>纯洁的情感，</p>
-          <p>清晰和确定的火花</p>
-          <p>灵感与启发。</p>
-          <p>你点燃火焰</p>
-          <p>永恒的体验。</p>
-          <p>时间中的永恒，</p>
-          <p>情感之火，</p>
-          <p>爱的载体，</p>
-          <p>梦之火花。</p>
-          <p>谁在你内心点亮？</p>
-          <p>谁打破了沉默？</p>
-          <p>外部传输的火花</p>
-          <p>来自内部的深度，</p>
-          <p>纯洁情感的神圣火花。</p>
-        </div>
-        <br>
-      </div>
-
-      <div class="arabic language" style="display: none;">
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>شرارة إلهية</p>
-          <p>من الشعور النقي،</p>
-          <p>شرارة من الوضوح واليقين</p>
-          <p>من الإلهام والإلهام.</p>
-          <p>أنت تشعل اللهب</p>
-          <p>من تجارب أبدية.</p>
-          <p>خارج الوقت في الزمن،</p>
-          <p>نار المشاعر،</p>
-          <p>مركبة الحب،</p>
-          <p>شرارة الأحلام.</p>
-          <p>من الذي يضيءك من الداخل؟</p>
-          <p>من يكسر الصمت؟</p>
-          <p>شرارة النقل الخارجي</p>
-          <p>من العمق الداخلي،</p>
-          <p>شرارة إلهية من الشعور النقي.</p>
-        </div>
-      </div>
-
-      <div class="russian language" style="display: none;">
-        <br>
-        <div style="line-height: 0.8; color: limegreen; background-color: black; font-size: 0.7em;">
-          <p>Божественная искра</p>
-          <p>Чистого чувства,</p>
-          <p>искра ясности и уверенности</p>
-          <p>вдохновения и вдохновляющая.</p>
-          <p>Ты зажигаешь пламя</p>
-          <p>вечных переживаний.</p>
-          <p>Вне времени во Времени,</p>
-          <p>Огонь Эмоций,</p>
-          <p>Проводник любви,</p>
-          <p>Искра Мечты.</p>
-          <p>Кто зажигает тебя изнутри?</p>
-          <p>Кто нарушает тишину?</p>
-          <p>Искра внешней передачи</p>
-          <p>из внутренней глубины,</p>
-          <p>Божественная искра чистого чувства.</p>
-        </div>
-        <br>
-      </div>
-
-    </div>
-  </section>
-
-  <script src="base.js"></script>
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script>
-    var zoomImages = document.querySelectorAll('.zoom-image');
-
-    zoomImages.forEach(function (image) {
-      image.addEventListener('touchstart', function () {
-        image.classList.toggle('hover');
-      });
-    });
-  </script>
-
+    <script src="script.js?v=1.1"></script>
 </body>
-
 </html>

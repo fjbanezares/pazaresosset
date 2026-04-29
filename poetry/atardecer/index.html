@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atardecer — Paz Arés Osset</title>
+    <meta name="description" content="Atardecer: un ruego al Dios existente por el amor en la brevedad de la vida humana. Poesía de Paz Arés Osset.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-lang="spanish">
+    <canvas id="effects-canvas"></canvas>
+    
+    <div class="main-wrapper">
+        <a class="brand" href="https://www.pazaresosset.es">
+            <img src="../../logopazares.png" class="paz-logo" alt="Paz Arés Osset">
+        </a>
+
+        <nav class="lang-nav">
+            <div class="nav-container">
+                <a href="../../linktree.html" class="nav-btn linktree-btn">
+                    <i class="fas fa-link"></i><span>Linktree</span>
+                </a>
+                <div class="lang-selector">
+                    <button class="current-lang" id="langBtn">
+                        <span id="currentFlag">🇪🇸</span><span id="langText">Castellano</span>
+                    </button>
+                    <div class="lang-dropdown" id="langPicker">
+                        <div class="lang-opt" data-value="spanish"><span>🇪🇸</span> Castellano</div>
+                        <div class="lang-opt" data-value="english"><span>🇬🇧</span> English</div>
+                        <div class="lang-opt" data-value="italian"><span>🇮🇹</span> Italiano</div>
+                        <div class="lang-opt" data-value="frances"><span>🇫🇷</span> Français</div>
+                        <div class="lang-opt" data-value="portuges"><span>🇵🇹</span> Português</div>
+                        <div class="lang-opt" data-value="aleman"><span>🇩🇪</span> Deutsch</div>
+                        <div class="lang-opt" data-value="chinese"><span>🇨🇳</span> 中文</div>
+                        <div class="lang-opt" data-value="arabic"><span>🇦🇪</span> العربية</div>
+                        <div class="lang-opt" data-value="russian"><span>🇷🇺</span> Русский</div>
+                        <div class="lang-opt" data-value="japones"><span>🇯🇵</span> 日本語</div>
+                        <div class="lang-opt" data-value="ukrainian"><span>🇺🇦</span> Українська</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="poem-section">
+            <div class="container">
+                <div class="poem-wrapper reveal">
+                    <h1 class="poem-title reveal">
+                        <span class="spanish">Atardecer</span>
+                        <span class="english">Sunset</span>
+                        <span class="italian">Tramonto</span>
+                        <span class="frances">Crépuscule</span>
+                        <span class="portuges">Entardecer</span>
+                        <span class="aleman">Abendrot</span>
+                        <span class="chinese">黄昏</span>
+                        <span class="arabic">غروب الشمس</span>
+                        <span class="russian">Закат</span>
+                        <span class="japones">夕暮れ</span>
+                        <span class="ukrainian">Закат</span>
+                    </h1>
+
+                    <div class="poem-content reveal">
+                        <!-- Spanish -->
+                        <div class="language spanish">
+                            <div class="stanza request-stanza">No te pedía nada,<br>tan sólo verte, besarte, amarte.<br>¿Qué temor del alma rompió tal grandeza?<br>¿Qué notas componen esta vida extraña?</div>
+                            <div class="stanza symphony-stanza">Estar con tu ternura,<br>deseos que fueron luz y amargura.<br>Sinfonía inacabada, sinfonía del alma,<br>encanto abrumador, vida del universo.</div>
+                            <div class="stanza prayer-stanza">En este atardecer de oro,<br>nubes calientes,<br>doy las gracias al Dios existente,<br>y le hago un ruego grande, muy grande.</div>
+                            <div class="stanza realization-stanza">En esta vida corta y humana,<br>quien sueña con amar, sea amada.</div>
+                        </div>
+
+                        <!-- English -->
+                        <div class="language english">
+                            <div class="stanza request-stanza">I asked for nothing,<br>only to see you, kiss you, love you.<br>What fear of the soul broke such greatness?<br>What notes compose this strange life?</div>
+                            <div class="stanza symphony-stanza">To be with your tenderness,<br>desires that were light and bitterness.<br>Unfinished symphony, symphony of the soul,<br>overwhelming charm, life of the universe.</div>
+                            <div class="stanza prayer-stanza">In this golden sunset,<br>warm clouds,<br>I give thanks to the existing God,<br>and I make a great plea, a very great one.</div>
+                            <div class="stanza realization-stanza">In this short and human life,<br>whoever dreams of loving, let her be loved.</div>
+                        </div>
+
+                        <!-- Italian -->
+                        <div class="language italian">
+                            <div class="stanza request-stanza">Non ti chiedevo nulla,<br>solo vederti, baciarti, amarti.<br>Quale timore dell'anima ha infranto tale grandezza?<br>Quali note compongono questa strana vita?</div>
+                            <div class="stanza symphony-stanza">Stare con la tua tenerezza,<br>desideri que furono luce e amarezza.<br>Sinfonia incompiuta, sinfonia dell'anima,<br>incanto travolgente, vita dell'universo.</div>
+                            <div class="stanza prayer-stanza">In questo tramonto d'oro,<br>nuvole calde,<br>rendo grazie al Dio esistente,<br>e Gli rivolgo una preghiera grande, molto grande.</div>
+                            <div class="stanza realization-stanza">In questa vita breve e umana,<br>chi sogna di amare, possa essere amata.</div>
+                        </div>
+                        
+                        <!-- Rest of languages (Portuguese, German, Chinese, Arabic, Russian, Japanese, Ukrainian) -->
+                        <div class="language frances">
+                            <div class="stanza request-stanza">Je ne te demandais rien,<br>seulement te voir, t'embrasser, t'aimer.<br>Quelle peur de l'âme a brisé une telle grandeur ?<br>Quelles notes composent cette vie étrange ?</div>
+                            <div class="stanza symphony-stanza">Être avec ta tendresse,<br>des désirs qui furent lumière et amertume.<br>Symphonie inachevée, symphonie de l'âme,<br>charme accablant, vie de l'univers.</div>
+                            <div class="stanza prayer-stanza">Dans ce crépuscule d'or,<br>nuages chauds,<br>je rends grâce au Dieu existant,<br>et je lui adresse une prière grande, très grande.</div>
+                            <div class="stanza realization-stanza">Dans cette vie courte et humaine,<br>que celle qui rêve d'aimer, soit aimée.</div>
+                        </div>
+
+                        <div class="language portuges">
+                            <div class="stanza request-stanza">Não te pedia nada,<br>apenas ver-te, beijar-te, amar-te.<br>Que temor da alma quebrou tamanha grandeza?</div>
+                            <div class="stanza symphony-stanza">Estar com a tua ternura,<br>desejos que foram luz e amargura.<br>Sinfonia inacabada, sinfonia da alma.</div>
+                            <div class="stanza prayer-stanza">Neste entardecer de ouro,<br>nuvens quentes,<br>dou graças ao Deus existente.</div>
+                            <div class="stanza realization-stanza">Nesta vida curta e humana,<br>quem sonha em amar, seja amada.</div>
+                        </div>
+
+                        <div class="language aleman">
+                            <div class="stanza request-stanza">Ich bat dich um nichts,<br>nur darum, dich zu sehen, dich zu küssen, dich zu lieben.</div>
+                            <div class="stanza symphony-stanza">Mit deiner Zärtlichkeit zu sein,<br>Wünsche, die Licht und Bitterkeit waren.</div>
+                            <div class="stanza prayer-stanza">In diesem goldenen Sonnenuntergang,<br>warme Wolken,<br>danke ich dem existierenden Gott.</div>
+                            <div class="stanza realization-stanza">En esta vida corta y humana,<br>wer davon träumt zu lieben, soll geliebt werden.</div>
+                        </div>
+
+                        <!-- Chinese -->
+                        <div class="language chinese">
+                            <div class="stanza request-stanza">我不求你任何回报，<br>只想见你，吻你，爱你。<br>灵魂的何种恐惧打破了如此的伟大？<br>什么样的音符组成了这奇异的人生？</div>
+                            <div class="stanza symphony-stanza">在你的温柔里，<br>曾是光明与苦涩的渴望。<br>未完成的交响曲，灵魂的交响曲，<br>压倒性的魅力，宇宙的生命。</div>
+                            <div class="stanza prayer-stanza">在这金色的黄昏，<br>火热的云彩，<br>我感谢现存的上帝，<br>向他发出一个伟大的恳求，非常伟大。</div>
+                            <div class="stanza realization-stanza">在这短暂的人类生命中，<br>愿梦想爱的人，能被爱。</div>
+                        </div>
+
+                        <!-- Arabic -->
+                        <div class="language arabic">
+                            <div class="stanza request-stanza">لم أسألك شيئاً،<br>فقط أن أراك، أن أقبلك، أن أحبك。<br>أي خوف في الروح كسر هذه العظمة؟<br>أي نوتات تشكل هذه الحياة الغريبة؟</div>
+                            <div class="stanza symphony-stanza">أن أكون مع حنانك،<br>رغبات كانت نوراً ومرارة。<br>سيمفونية غير مكتملة، سيمفونية الروح،<br>سحر طاغٍ، حياة الكون.</div>
+                            <div class="stanza prayer-stanza">في هذا الغروب الذهبي،<br>سحب دافئة،<br>أشكر الله الموجود،<br>وأتوسل إليه توسلاً كبيراً، كبيراً جداً.</div>
+                            <div class="stanza realization-stanza">في هذه الحياة القصيرة والبشرية،<br>من تحلم بأن تُحب، فلتكن محبوبة.</div>
+                        </div>
+
+                        <!-- Russian -->
+                        <div class="language russian">
+                            <div class="stanza request-stanza">Я ничего не просила у тебя,<br>только видеть тебя, целовать тебя, любить тебя.<br>Какой страх души разрушил такое величие?<br>Какие ноты составляют эту странную жизнь?</div>
+                            <div class="stanza symphony-stanza">Быть с твоей нежностью,<br>желания, которые были светом и горечью.<br>Неоконченная симфония, симфония души,<br>подавляющее очарование, жизнь вселенной.</div>
+                            <div class="stanza prayer-stanza">В этом золотом закате,<br>теплые облака,<br>я благодарю сущего Бога,<br>и обращаюсь к Нему с великой просьбой, очень большой.</div>
+                            <div class="stanza realization-stanza">В этой короткой человеческой жизни,<br>пусть та, кто мечтает любить, будет любима.</div>
+                        </div>
+
+                        <!-- Japanese -->
+                        <div class="language japones">
+                            <div class="stanza request-stanza">私はあなたに何も求めなかった、<br>ただあなたに会い、口づけし、愛することだけを。<br>魂のどのような恐れが、これほどまでの偉大さを壊したのか？<br>どのような音符が、この奇妙な人生を構成しているのか？</div>
+                            <div class="stanza symphony-stanza">あなたの優しさと共に、<br>光であり苦しみであった願い。<br>未完成の交響曲、魂の交響曲、<br>圧倒的な魅力、宇宙の命。</div>
+                            <div class="stanza prayer-stanza">この黄金の夕暮れ、<br>暖かい雲、<br>私は存在する神に感謝し、<br>その神に大きな、とても大きな願いを捧げる。</div>
+                            <div class="stanza realization-stanza">この短く人間的な人生において、<br>愛を夢見る者が、愛されますように。</div>
+                        </div>
+
+                        <!-- Ukrainian -->
+                        <div class="language ukrainian">
+                            <div class="stanza request-stanza">Я нічого не просила у тебе,<br>тільки бачити тебе, цілувати тебе, любити тебе.<br>Який страх душі зруйнував таку велич?<br>Які ноти складають це дивне життя?</div>
+                            <div class="stanza symphony-stanza">Бути з твоєю ніжністю,<br>бажання, що були світлом і гіркотою.<br>Незакінчена симфонія, симфонія душі,<br>приголомшлива чарівність, життя всесвіту.</div>
+                            <div class="stanza prayer-stanza">У цьому золотому заході сонця,<br>теплі хмари,<br>я дякую існуючому Богу,<br>і звертаюся до Нього з великим проханням, дуже великим.</div>
+                            <div class="stanza realization-stanza">У цьому короткому людському житті,<br>хай та, хто мріє любити, буде коханою.</div>
+                        </div>
+
+                        <div class="signature">Paz Arés Osset</div>
+                        <div class="poem-date">1992</div>
+                    </div>
+                </div>
+
+                <!-- Musical Section -->
+                <div class="music-section mt-5 py-5 reveal">
+                    <h2 class="handwritten text-light mb-5">
+                        <span class="spanish">Sinfonía del Alma</span>
+                        <span class="english">Symphony of the Soul</span>
+                        <span class="italian">Sinfonia dell'Anima</span>
+                        <span class="frances">Symphonie de l'âme</span>
+                        <span class="portuges">Sinfonia da Alma</span>
+                        <span class="aleman">Symphonie der Seele</span>
+                        <span class="chinese">灵魂交响曲</span>
+                        <span class="arabic">سيمفونية الروح</span>
+                        <span class="russian">Симфония души</span>
+                        <span class="japones">魂の交響曲</span>
+                        <span class="ukrainian">Симфонія душі</span>
+                    </h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_es.png" alt="Disco en Castellano">
+                                <div class="album-info text-center p-3">
+                                    <h4 class="spanish">Versión Castellano</h4>
+                                    <h4 class="english">Spanish Version</h4>
+                                    <h4 class="italian">Versione in Spagnolo</h4>
+                                    <h4 class="frances">Version Espagnole</h4>
+                                    <h4 class="portuges">Versão em Espanhol</h4>
+                                    <h4 class="aleman">Spanische Version</h4>
+                                    <h4 class="chinese">西班牙语版本</h4>
+                                    <h4 class="arabic">النسخة الإسبانية</h4>
+                                    <h4 class="russian">Испанская версия</h4>
+                                    <h4 class="japones">スペイン語版</h4>
+                                    <h4 class="ukrainian">Іспанська версія</h4>
+                                    <p class="small" style="color: var(--accent-gold);">Atardecer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_en.png" alt="English Album">
+                                <div class="album-info text-center p-3">
+                                    <h4 class="spanish">Versión Inglés</h4>
+                                    <h4 class="english">English Version</h4>
+                                    <h4 class="italian">Versione in Inglese</h4>
+                                    <h4 class="frances">Version Anglaise</h4>
+                                    <h4 class="portuges">Versão em Inglês</h4>
+                                    <h4 class="aleman">Englische Version</h4>
+                                    <h4 class="chinese">英语版本</h4>
+                                    <h4 class="arabic">النسخة الإنجليزية</h4>
+                                    <h4 class="russian">Английская версия</h4>
+                                    <h4 class="japones">英語版</h4>
+                                    <h4 class="ukrainian">Англійська версія</h4>
+                                    <p class="small" style="color: var(--accent-gold);">Sunset</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_fr.png" alt="Álbum en Francés">
+                                <div class="album-info text-center p-3">
+                                    <h4 class="spanish">Versión Francés</h4>
+                                    <h4 class="english">French Version</h4>
+                                    <h4 class="italian">Versione in Francese</h4>
+                                    <h4 class="frances">Version Française</h4>
+                                    <h4 class="portuges">Versão em Francês</h4>
+                                    <h4 class="aleman">Französische Version</h4>
+                                    <h4 class="chinese">法语版本</h4>
+                                    <h4 class="arabic">النسخة الفرنسية</h4>
+                                    <h4 class="russian">Французская версия</h4>
+                                    <h4 class="japones">フランス語版</h4>
+                                    <h4 class="ukrainian">Французька версія</h4>
+                                    <p class="small" style="color: var(--accent-gold);">Crépuscule</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Gallery Section -->
+                <div class="art-gallery reveal">
+                    <div class="art-frame">
+                        <img src="background_footer.jpg" alt="Atardecer - Visión">
+                        <div class="art-caption">
+                            <span class="spanish">El diálogo entre el alma y el horizonte.</span>
+                            <span class="english">The dialogue between the soul and the horizon.</span>
+                            <span class="italian">Il dialogo tra l'anima e l'orizzonte.</span>
+                            <span class="frances">Le dialogue entre l'âme et l'horizon.</span>
+                            <span class="portuges">O diálogo entre a alma e o horizonte.</span>
+                            <span class="aleman">Der Dialog zwischen der Seele und dem Horizont.</span>
+                            <span class="chinese">灵魂与地平线之间的对话。</span>
+                            <span class="arabic">الحوار بين الروح والأفق.</span>
+                            <span class="russian">Диалог между душой и горизонтом.</span>
+                            <span class="japones">魂と地平線の間の対話。</span>
+                            <span class="ukrainian">Діалог між душею та горизонтом.</span>
+                        </div>
+                    </div>
+                    <div class="art-frame">
+                        <img src="background.png" alt="Atardecer - Paisaje">
+                        <div class="art-caption">
+                            <span class="spanish">Sinfonía inacabada de luz y oro.</span>
+                            <span class="english">Unfinished symphony of light and gold.</span>
+                            <span class="italian">Sinfonia incompiuta di luce e oro.</span>
+                            <span class="frances">Symphonie inachevée de lumière et d'or.</span>
+                            <span class="portuges">Sinfonia inacabada de luz e ouro.</span>
+                            <span class="aleman">Unvollendete Symphonie aus Licht und Gold.</span>
+                            <span class="chinese">光与金色的未完成交响曲。</span>
+                            <span class="arabic">سيمفونية غير مكتملة من النور والذهب.</span>
+                            <span class="russian">Неоконченная симфония света и золота.</span>
+                            <span class="japones">光と金の未完成の交響曲。</span>
+                            <span class="ukrainian">Незакінчена симфонія світла і золота.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inspiration Section -->
+                <div class="inspiration-section mt-5 py-5 reveal">
+                    <div class="inspiration-wrapper">
+                        <h2 class="handwritten text-light mb-4 text-center">
+                            <span class="spanish">Inspiración</span>
+                            <span class="english">Inspiration</span>
+                            <span class="italian">Ispirazione</span>
+                            <span class="frances">Inspiration</span>
+                            <span class="portuges">Inspiração</span>
+                            <span class="aleman">Inspiration</span>
+                            <span class="chinese">灵感</span>
+                            <span class="arabic">إلهام</span>
+                            <span class="russian">Вдохновение</span>
+                            <span class="japones">インスピレーション</span>
+                            <span class="ukrainian">Натхнення</span>
+                        </h2>
+                        <div class="inspiration-text">
+                            <span class="spanish">Escrito en mil novecientos noventa y dos, "Atardecer" es una sinfonía de sentimientos que captura la transición entre la luz y la sombra, tanto en el cielo como en el alma. Paz Arés Osset nos entrega un diálogo íntimo con lo divino y lo humano, donde el fin del día se convierte en la partitura de un amor que busca su resolución. El poema no solo describe un paisaje físico, sino un estado emocional donde la "sinfonía inacabada" del alma encuentra su refugio en la gratitud. Su verso final es un ruego eterno, una plegaria que resuena en la brevedad de nuestra existencia: el deseo universal de amar y ser amado antes de que el sol se oculte definitivamente.</span>
+                            <span class="english">Written in nineteen ninety-two, "Sunset" is a symphony of feelings that captures the transition between light and shadow, both in the sky and in the soul. Paz Arés Osset gives us an intimate dialogue with the divine and the human, where the end of the day becomes the score of a love seeking its resolution. The poem not only describes a physical landscape, but an emotional state where the "unfinished symphony" of the soul finds its refuge in gratitude. Its final verse is an eternal plea, a prayer that resonates in the brevity of our existence: the universal desire to love and be loved before the sun finally sets.</span>
+                            <span class="italian">Scritto nel millenovecentonovantadue, "Tramonto" è una sinfonia di sentimenti che cattura la transizione tra luce e ombra, sia nel cielo che nell'anima. Paz Arés Osset ci regala un dialogo intimo con il divino e l'umano, dove la fine del giorno diventa lo spartito di un amore in cerca di risoluzione. Il poema non descrive solo un paesaggio fisico, ma uno stato emotivo in cui la "sinfonia incompiuta" dell'anima trova rifugio nella gratitudine. Il suo verso finale è una supplica eterna, una preghiera che risuona nella brevità della nostra esistenza: il desiderio universale di amare ed essere amati prima che il sole tramonti per sempre.</span>
+                            <span class="frances">Écrit en mil neuf cent quatre-vingt-douze, "Crépuscule" est une symphonie de sentiments qui capture la transition entre l'ombre et la lumière, tant dans le ciel que dans l'âme. Paz Arés Osset nous livre un dialogue intime avec le divin et l'humain, où la fin du jour devient la partition d'un amour en quête de sa résolution. Le poème ne décrit pas seulement un paysage physique, mas un état émotionnel où la « symphonie inachevée » de l'âme trouve son refuge dans la gratitude. Son vers final est une supplique éternelle, une prière qui résonne dans la brièveté de notre existence : le désir universel d'aimer et d'être aimé avant que le soleil ne se couche définitivement.</span>
+                            <span class="portuges">Escrito em mil novecentos e noventa e dois, "Entardecer" é uma sinfonia de sentimentos que captura a transição entre a luz e a sombra, tanto no céu quanto na alma. Paz Arés Osset nos entrega um diálogo íntimo com o divino e o humano, onde o fim do dia se torna a partitura de um amor que busca sua resolução. O poema não apenas descreve uma paisagem física, mas um estado emocional onde a "sinfonia inacabada" da alma encontra seu refúgio na gratidão. Seu verso final é um rogo eterno, uma prece que ressoa na brevidade de nossa existência: o desejo universal de amar e ser amado antes que o sol se oculte definitivamente.</span>
+                            <span class="aleman">Geschrieben im Jahr neunzehnhundertzweiundneunzig, ist "Abendrot" eine Sinfonie der Gefühle, die den Übergang zwischen Licht und Schatten sowohl am Himmel als auch in der Seele einfängt. Paz Arés Osset schenkt uns einen intimen Dialog mit dem Göttlichen und Menschlichen, bei dem das Ende des Tages zur Partitur einer Liebe wird, die nach ihrer Erlösung sucht. Das Gedicht beschreibt nicht nur eine physische Landschaft, sondern einen emotionalen Zustand, in dem die "unvollendete Symphonie" der Seele ihre Zuflucht in der Dankbarkeit findet. Sein letzter Vers ist ein ewiges Flehen, ein Gebet, das in der Kürze unserer Existenz nachhallt: der universelle Wunsch, zu lieben und geliebt zu werden, bevor die Sonne endgültig untergeht.</span>
+                            <span class="chinese">写于一九九二年，《黄昏》是一首情感的交响曲，捕捉了天空与灵魂中光与影的转换。佩斯·阿雷斯·奥塞特为我们呈现了一场与神圣和人性的亲密对话，在这里，一天的结束成为追寻其归宿的爱情的乐谱。这首诗不仅描述了物理上的风景，还描绘了一种情感状态，在这里，灵魂的“未完成交响曲”在感恩中找到了避难所。它的最后一行是永恒的恳求，是在我们短暂存在中回响的祈祷：在太阳最终落下之前，爱与被爱的普遍愿望。</span>
+                            <span class="arabic">كُتِبَت عام ألف وتسعمائة واثنان وتسعون， "الغروب" هي سيمفونية من المشاعر تلتقط الانتقال بين النور والظل， سواء في السماء أو في الروح。 تقدم لنا باز أريس أوسيت حواراً حميماً مع الإلهي والإنساني， حيث يصبح نهاية اليوم نوتة لحب يبحث عن حله。 القصيدة لا تصف منظراً طبيعياً فحسب， بل تصف حالة عاطفية تجد فيها "السيمفونية غير المكتملة" للروح ملجأها في الامتنان。 بيت القصيدة الأخير هو التماس أبدي， صلاة تتردد في قصر وجودنا： الرغبة العالمية في الحب وأن نُحَب قبل أن تغرب الشمس نهائياً。</span>
+                            <span class="russian">Написанная в тысяча девятьсот девяносто втором году, "Закат" - это симфония чувств, которая улавливает переход между светом и тенью как на небе, так и в душе. Пас Арес Оссет дарит нам интимный диалог с божественным и человеческим, где конец дня становится партитурой любви, ищущей своего разрешения. Стихотворение описывает не только физический пейзаж, но и эмоциональное состояние, в котором "неоконченная симфония" души находит свое убежище в благодарности. Его последняя строфа - это вечная мольба, молитва, которая резонирует в краткости нашего существования: всеобщее желание любить и быть любимым до того, как солнце окончательно зайдет.</span>
+                            <span class="japones">1992年に書かれた「夕暮れ」は、空と魂の両方で光と影の移り変わりを捉えた感情の交響曲です。パス・アレス・オセットは、神聖なものと人間的なものとの親密な対話を提供してくれます。そこでは、一日の終わりが、その解決を求める愛の楽譜となります。この詩は、物理的な風景だけでなく、魂の「未完成の交響曲」が感謝の中に避難所を見つける感情的な状態も描写しています。その最後の行は永遠の嘆願であり、私たちの存在の短さに響き渡る祈りです：太陽が最終的に沈む前に、愛し愛されたいという普遍的な願い。</span>
+                            <span class="ukrainian">Написаний у тисяча дев'ятсот дев'яносто другому році, "Захід сонця" — це симфонія почуттів, що фіксує перехід між світлом і тінню як на небі, так і в душі. Пас Арес Оссет дарує нам інтимний діалог з божественним і людським, де кінець дня стає партитурою кохання, яке шукає свого вирішення. Вірш описує не лише фізичний пейзаж, але й емоційний стан, у якому "незакінчена симфонія" душі знаходить свій прихисток у вдячності. Його остання строфа — це вічне благання, молитва, що резонує у стислості нашого існування: універсальне бажання любити й бути коханим до того, як сонце остаточно зайде.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="mt-5 pb-5 text-center">
+            <p class="text-muted small">© 1992 - 2026 Maria Paz Arés Osset. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latido Verde — Poesía de Paz Arés Osset</title>
+    <meta name="description" content="Latido Verde: Un canto de protesta y amor hacia la naturaleza. Abrazo a los árboles, defensa de la Madre Tierra y un pacto silente de energía y esperanza.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
+</head>
+<body data-lang="spanish">
+
+    <canvas id="effects-canvas"></canvas>
+
+    <div class="main-wrapper">
+        
+        <!-- Logo -->
+        <a class="brand" href="https://www.pazaresosset.es">
+            <img src="../../logopazares.png" class="paz-logo" alt="Paz Arés Osset">
+        </a>
+
+        <!-- Language & Navigation Selector -->
+        <nav class="lang-nav">
+            <div class="nav-container">
+                <a href="../../linktree.html" class="nav-btn linktree-btn">
+                    <i class="fas fa-link"></i>
+                    <span>Linktree</span>
+                </a>
+                <div class="lang-selector">
+                    <button class="current-lang" id="langBtn">
+                        <span id="currentFlag">🇪🇸</span>
+                        <span id="langText">Castellano</span>
+                    </button>
+                    <div class="lang-dropdown" id="langPicker">
+                        <div class="lang-opt" data-value="spanish"><span>🇪🇸</span> Castellano</div>
+                        <div class="lang-opt" data-value="english"><span>🇬🇧</span> English</div>
+                        <div class="lang-opt" data-value="italian"><span>🇮🇹</span> Italiano</div>
+                        <div class="lang-opt" data-value="chinese"><span>🇨🇳</span> 中文</div>
+                        <div class="lang-opt" data-value="arabic"><span>🇦🇪</span> العربية</div>
+                        <div class="lang-opt" data-value="russian"><span>🇷🇺</span> Русский</div>
+                        <div class="lang-opt" data-value="ukrainian"><span>🇺🇦</span> Українська</div>
+                        <div class="lang-opt" data-value="aleman"><span>🇩🇪</span> Deutsch</div>
+                        <div class="lang-opt" data-value="frances"><span>🇫🇷</span> Français</div>
+                        <div class="lang-opt" data-value="japones"><span>🇯🇵</span> 日本語</div>
+                        <div class="lang-opt" data-value="portuges"><span>🇵🇹</span> Português</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Poem Container -->
+        <section class="poem-section">
+            <div class="container">
+                
+                <div class="poem-wrapper">
+                    <!-- Title -->
+                    <h1 class="poem-title reveal">
+                        <span class="spanish">Latido Verde</span>
+                        <span class="english">Green Heartbeat</span>
+                        <span class="italian">Battito Verde</span>
+                        <span class="chinese">绿色的心跳</span>
+                        <span class="arabic">نبض أخضر</span>
+                        <span class="russian">Зелёное Сердцебиение</span>
+                        <span class="ukrainian">Зелене Серцебиття</span>
+                        <span class="aleman">Grüner Herzschlag</span>
+                        <span class="frances">Battement Vert</span>
+                        <span class="japones">緑の鼓動</span>
+                        <span class="portuges">Batida Verde</span>
+                    </h1>
+
+                    <!-- Body -->
+                    <div class="poem-content reveal-stagger">
+                        
+                        <!-- Stanza 1 - Contemplation & Embrace -->
+                        <div class="stanza embrace-stanza">
+                            <span class="spanish">Por bosques y jardines, mi espíritu contempla y siente,<br>Abrazo a cada árbol, sintiendo su latir latente.<br>En cada hoja que cae, en cada rama que se mece,<br>Oigo el susurro místico que a mi alma estremece.</span>
+                            <span class="english">Through forests and gardens, my spirit contemplates and feels,<br>I embrace each tree, sensing its latent beating.<br>In every leaf that falls, in every branch that sways,<br>I hear the mystic whisper that makes my soul tremble.</span>
+                            <span class="italian">Per boschi e giardini, il mio spirito contempla e sente,<br>Abbraccio ogni albero, sentendo il suo battito latente.<br>In ogni foglia che cade, in ogni ramo che si dondola,<br>Sento il sussurro mistico che la mia anima fa tremare.</span>
+                            <span class="chinese">穿越森林和花园，我的灵魂在凝视和感受，<br>我拥抱每一棵树，感受它潜在的脉动。<br>在每一片飘落的叶子中，在每一根摇曳的枝条中，<br>我听到那神秘的低语，令我的灵魂颤栗。</span>
+                            <span class="arabic">عبر الغابات والحدائق، تتأمل روحي وتشعر،<br>أحتضن كل شجرة، أحسّ بنبضها الكامن.<br>في كل ورقة تسقط، في كل غصن يتمايل،<br>أسمع الهمس الصوفي الذي يهزّ روحي.</span>
+                            <span class="russian">По лесам и садам мой дух созерцает и чувствует,<br>Обнимаю каждое дерево, ощущая его скрытый пульс.<br>В каждом падающем листе, в каждой качающейся ветке<br>Слышу мистический шёпот, что потрясает мою душу.</span>
+                            <span class="ukrainian">По лісах і садах мій дух споглядає й відчуває,<br>Обіймаю кожне дерево, відчуваючи його прихований пульс.<br>У кожному листку, що падає, у кожній гілці, що хитається,<br>Чую містичний шепіт, що зворушує мою душу.</span>
+                            <span class="aleman">Durch Wälder und Gärten betrachtet und fühlt mein Geist,<br>Ich umarme jeden Baum und spüre seinen verborgenen Puls.<br>In jedem Blatt, das fällt, in jedem Ast, der sich wiegt,<br>Höre ich das mystische Flüstern, das meine Seele erschüttert.</span>
+                            <span class="frances">À travers forêts et jardins, mon esprit contemple et ressent,<br>J'embrasse chaque arbre, sentant son battement latent.<br>Dans chaque feuille qui tombe, dans chaque branche qui se balance,<br>J'entends le murmure mystique qui fait frémir mon âme.</span>
+                            <span class="japones">森と庭を巡り、わが魂は見つめ感じる、<br>一本一本の木を抱きしめ、その潜む鼓動を感じる。<br>落ちる葉の一枚一枚、揺れる枝の一本一本に、<br>魂を震わせる神秘のささやきを聞く。</span>
+                            <span class="portuges">Por bosques e jardins, meu espírito contempla e sente,<br>Abraço cada árvore, sentindo o seu latir latente.<br>Em cada folha que cai, em cada ramo que se balança,<br>Ouço o sussurro místico que a minha alma estremece.</span>
+                        </div>
+
+                        <!-- Stanza 2 - Call to Poets -->
+                        <div class="stanza call-stanza">
+                            <span class="spanish">Con ilusión me uno a poetas, a almas que riman con amor,<br>Juntos elevamos nuestra voz, en un eco protector.<br>Cantamos sobre frutales, de colores que deslumbran,<br>Sobre pájaros que sobrevuelan, con trinos que nunca se esfuman.</span>
+                            <span class="english">With hope I join the poets, souls who rhyme with love,<br>Together we raise our voice, in a protective echo.<br>We sing about fruit trees, of dazzling colors,<br>About birds that fly above, with songs that never fade.</span>
+                            <span class="italian">Con illusione mi unisco ai poeti, ad anime che rimano con amore,<br>Insieme alziamo la voce, in un eco protettore.<br>Cantiamo degli alberi da frutto, dai colori che abbagliano,<br>Degli uccelli che sorvolano, con trilli che mai svaniscono.</span>
+                            <span class="chinese">我满怀希望地加入诗人的行列，那些以爱入韵的灵魂，<br>我们共同发出声音，形成保护的回声。<br>我们歌唱果树，歌唱令人目眩的色彩，<br>歌唱飞翔的鸟儿，它们的啼鸣永不消逝。</span>
+                            <span class="arabic">بأمل أنضم إلى الشعراء، إلى أرواح تقافي بالحب،<br>معاً نرفع صوتنا، في صدى حامٍ.<br>نغنّي عن أشجار الفاكهة، بألوان تبهر،<br>عن طيور تحلّق، بزقزقات لا تتلاشى أبداً.</span>
+                            <span class="russian">С надеждой я присоединяюсь к поэтам, к душам, рифмующим с любовью,<br>Вместе мы возвышаем голос, в защитном эхе.<br>Поём о фруктовых деревьях, об ослепительных красках,<br>О птицах, парящих над нами, с трелями, что не стихают.</span>
+                            <span class="ukrainian">З надією я приєднуюся до поетів, до душ, що римують з любов'ю,<br>Разом ми підносимо голос, у захисному відлунні.<br>Співаємо про фруктові дерева, про кольори, що осліплюють,<br>Про птахів, що ширяють, з тріллями, що ніколи не вщухають.</span>
+                            <span class="aleman">Mit Hoffnung schließe ich mich den Dichtern an, Seelen, die mit Liebe reimen,<br>Gemeinsam erheben wir unsere Stimme, in einem schützenden Echo.<br>Wir singen von Obstbäumen, von schillernden Farben,<br>Von Vögeln, die darüber fliegen, mit Liedern, die nie verblassen.</span>
+                            <span class="frances">Avec espoir je rejoins les poètes, les âmes qui riment avec l'amour,<br>Ensemble nous élevons notre voix, dans un écho protecteur.<br>Nous chantons les fruitiers, aux couleurs éblouissantes,<br>Les oiseaux qui survolent, aux trilles qui jamais ne s'estompent.</span>
+                            <span class="japones">希望を胸に詩人たちに加わる、愛で韻を踏む魂たちと、<br>共に声を上げる、守りの響きとなって。<br>果樹を歌う、まばゆい色彩を、<br>頭上を飛ぶ鳥たちを、決して消えないさえずりを。</span>
+                            <span class="portuges">Com ilusão me uno a poetas, a almas que rimam com amor,<br>Juntos elevamos nossa voz, num eco protetor.<br>Cantamos sobre fruteiras, de cores que deslumbram,<br>Sobre pássaros que sobrevoam, com trinados que nunca se apagam.</span>
+                        </div>
+
+                        <!-- Stanza 3 - Call to Artists / Protest -->
+                        <div class="stanza protest-stanza">
+                            <span class="spanish">Convoco a artistas, músicos y actores de renombre,<br>Que se sumen a este canto, que resuene en cada hombre.<br>Porque talar sin motivo, solo por construir sin cesar,<br>Es olvidar la esencia, es dejar de respirar.</span>
+                            <span class="english">I summon artists, musicians and actors of renown,<br>To join this song, to resound in every soul.<br>Because felling without reason, just to build without end,<br>Is to forget the essence, is to stop breathing.</span>
+                            <span class="italian">Convoco artisti, musicisti e attori di fama,<br>Che si uniscano a questo canto, che risuoni in ogni uomo.<br>Perché abbattere senza motivo, solo per costruire senza sosta,<br>È dimenticare l'essenza, è smettere di respirare.</span>
+                            <span class="chinese">我召唤艺术家、音乐家和著名演员，<br>加入这首歌，让它在每个人心中回响。<br>因为无缘无故地砍伐，只为无休止地建造，<br>就是遗忘本质，就是停止呼吸。</span>
+                            <span class="arabic">أستدعي الفنانين والموسيقيين والممثلين المشهورين،<br>ليُضافوا إلى هذا النشيد، ليتردد في كل نفس.<br>لأن القطع دون سبب، فقط للبناء دون توقف،<br>هو نسيان الجوهر، هو التوقف عن التنفس.</span>
+                            <span class="russian">Призываю художников, музыкантов и знаменитых актёров,<br>Присоединиться к этой песне, чтоб звучала в каждом сердце.<br>Потому что рубить без причины, лишь строить без конца —<br>Это забыть суть, это перестать дышать.</span>
+                            <span class="ukrainian">Закликаю митців, музикантів і відомих акторів,<br>Долучитися до цієї пісні, щоб лунала в кожному серці.<br>Бо рубати без причини, лише будувати без кінця —<br>Це забути суть, це перестати дихати.</span>
+                            <span class="aleman">Ich rufe Künstler, Musiker und berühmte Schauspieler,<br>Sich diesem Lied anzuschließen, das in jeder Seele erklingt.<br>Denn ohne Grund zu fällen, nur um endlos zu bauen,<br>Heißt das Wesentliche vergessen, heißt aufhören zu atmen.</span>
+                            <span class="frances">Je convoque artistes, musiciens et acteurs de renom,<br>Qu'ils se joignent à ce chant, qu'il résonne en chaque homme.<br>Car abattre sans raison, juste pour bâtir sans cesse,<br>C'est oublier l'essence, c'est cesser de respirer.</span>
+                            <span class="japones">名高い芸術家、音楽家、俳優たちに呼びかける、<br>この歌に加わり、すべての人の心に響かせよう。<br>理由なく木を倒し、ただ際限なく建てることは、<br>本質を忘れること、呼吸をやめること。</span>
+                            <span class="portuges">Convoco artistas, músicos e atores de renome,<br>Que se juntem a este canto, que ressoe em cada homem.<br>Porque abater sem motivo, só por construir sem cessar,<br>É esquecer a essência, é deixar de respirar.</span>
+                        </div>
+
+                        <!-- Stanza 4 - Importance -->
+                        <div class="stanza">
+                            <span class="spanish">Los árboles nos brindan vida, sombra, refugio y alimento,<br>Su importancia es vital, en este y todo momento.<br>Así, con poemas y arte, a todos quiero enseñar,<br>La urgencia de salvar árboles, y a la Madre Tierra abrazar.</span>
+                            <span class="english">The trees give us life, shade, shelter and nourishment,<br>Their importance is vital, in this and every moment.<br>Thus, with poems and art, I want to teach everyone,<br>The urgency of saving trees, and embracing Mother Earth.</span>
+                            <span class="italian">Gli alberi ci donano vita, ombra, rifugio e nutrimento,<br>La loro importanza è vitale, in questo e ogni momento.<br>Così, con poesie e arte, a tutti voglio insegnare,<br>L'urgenza di salvare gli alberi, e la Madre Terra abbracciare.</span>
+                            <span class="chinese">树木赐予我们生命、阴凉、庇护和食物，<br>它们的重要性是至关紧要的，在此刻和每一刻。<br>因此，用诗歌和艺术，我想教会所有人，<br>拯救树木的紧迫性，以及拥抱大地母亲。</span>
+                            <span class="arabic">الأشجار تمنحنا الحياة والظل والمأوى والغذاء،<br>أهميتها حيوية، في هذه اللحظة وكل لحظة.<br>هكذا، بالشعر والفن، أريد أن أعلّم الجميع،<br>ضرورة إنقاذ الأشجار، واحتضان أمنا الأرض.</span>
+                            <span class="russian">Деревья дарят нам жизнь, тень, убежище и пищу,<br>Их значение жизненно важно, в этот и каждый миг.<br>И вот стихами и искусством я хочу всех научить:<br>Спасать деревья — это срочно, обнять Мать-Землю.</span>
+                            <span class="ukrainian">Дерева дарують нам життя, тінь, притулок і їжу,<br>Їхня важливість життєво необхідна, у цю і кожну мить.<br>Тож віршами й мистецтвом я хочу всіх навчити:<br>Рятувати дерева — це невідкладно, обійняти Матір-Землю.</span>
+                            <span class="aleman">Die Bäume schenken uns Leben, Schatten, Zuflucht und Nahrung,<br>Ihre Bedeutung ist lebenswichtig, in diesem und jedem Moment.<br>So will ich mit Gedichten und Kunst allen vermitteln,<br>Die Dringlichkeit, Bäume zu retten und Mutter Erde zu umarmen.</span>
+                            <span class="frances">Les arbres nous offrent la vie, l'ombre, le refuge et la nourriture,<br>Leur importance est vitale, en cet instant et en tout moment.<br>Ainsi, par la poésie et l'art, je veux enseigner à tous,<br>L'urgence de sauver les arbres, et d'embrasser la Terre Mère.</span>
+                            <span class="japones">木々は私たちに命、木陰、避難所、そして糧を与える、<br>その重要さは不可欠、今この瞬間も、いつの時も。<br>だからこそ詩と芸術で、すべての人に教えたい、<br>木を救う緊急性を、そして母なる大地を抱きしめることを。</span>
+                            <span class="portuges">As árvores nos dão vida, sombra, refúgio e alimento,<br>A sua importância é vital, neste e em todo momento.<br>Assim, com poemas e arte, a todos quero ensinar,<br>A urgência de salvar árvores, e a Mãe Terra abraçar.</span>
+                        </div>
+
+                        <!-- Stanza 5 - Salvation -->
+                        <div class="stanza salvation-stanza">
+                            <span class="spanish">Porque en cada trino y fruto, en cada hoja que se mece,<br>Hay un mensaje profundo, que al corazón estremece.<br>Amemos a los árboles, cuidémoslos con devoción,<br>Pues en su bienestar, hallamos nuestra salvación.</span>
+                            <span class="english">Because in every birdsong and fruit, in every leaf that sways,<br>There is a profound message, that makes the heart tremble.<br>Let us love the trees, let us tend them with devotion,<br>For in their well-being, we find our salvation.</span>
+                            <span class="italian">Perché in ogni trillo e frutto, in ogni foglia che si dondola,<br>C'è un messaggio profondo, che fa tremare il cuore.<br>Amiamo gli alberi, curiamoli con devozione,<br>Perché nel loro benessere, troviamo la nostra salvezza.</span>
+                            <span class="chinese">因为在每一声鸟鸣和果实中，在每一片摇曳的叶子中，<br>有一条深刻的信息，令心灵震颤。<br>让我们热爱树木，用虔诚呵护它们，<br>因为在它们的安好中，我们找到了救赎。</span>
+                            <span class="arabic">لأن في كل زقزقة وثمرة، في كل ورقة تتمايل،<br>هناك رسالة عميقة، تهزّ القلب.<br>لنحب الأشجار، لنعتنِ بها بتفانٍ،<br>ففي رفاهيتها، نجد خلاصنا.</span>
+                            <span class="russian">Ведь в каждой трели и каждом плоде, в каждом качающемся листе<br>Есть глубокое послание, что потрясает сердце.<br>Давайте любить деревья, давайте ухаживать за ними с преданностью,<br>Ибо в их благополучии мы находим наше спасение.</span>
+                            <span class="ukrainian">Бо в кожній тріллі й кожному плоді, в кожному листку, що хитається,<br>Є глибоке послання, що зворушує серце.<br>Давайте любити дерева, доглядати їх з відданістю,<br>Бо в їхньому благополуччі ми знаходимо наше спасіння.</span>
+                            <span class="aleman">Denn in jedem Gesang und jeder Frucht, in jedem Blatt, das sich wiegt,<br>Liegt eine tiefe Botschaft, die das Herz erschüttert.<br>Lasst uns die Bäume lieben, lasst uns sie mit Hingabe pflegen,<br>Denn in ihrem Wohlergehen finden wir unsere Erlösung.</span>
+                            <span class="frances">Car dans chaque trille et chaque fruit, dans chaque feuille qui se balance,<br>Il y a un message profond, qui fait frémir le cœur.<br>Aimons les arbres, prenons-en soin avec dévotion,<br>Car dans leur bien-être, nous trouvons notre salut.</span>
+                            <span class="japones">なぜならすべてのさえずりと果実の中に、揺れるすべての葉の中に、<br>心を震わせる深いメッセージがあるから。<br>木々を愛し、献身的に世話をしよう、<br>木々の幸せの中に、私たちの救いがあるのだから。</span>
+                            <span class="portuges">Porque em cada trinado e fruto, em cada folha que se balança,<br>Há uma mensagem profunda, que ao coração estremece.<br>Amemos as árvores, cuidemo-las com devoção,<br>Pois no seu bem-estar, encontramos a nossa salvação.</span>
+                        </div>
+
+                        <!-- Stanza 6 - Silent Pact -->
+                        <div class="stanza embrace-stanza">
+                            <span class="spanish">En un pacto silente, a cada árbol me acerco,<br>Abrazo su esencia, siento su pulso interno.<br>Con ellos intercambio energía, esperanza y amor,<br>Por un mundo en armonía, sin guerra ni dolor.</span>
+                            <span class="english">In a silent pact, I approach each tree,<br>I embrace its essence, I feel its inner pulse.<br>With them I exchange energy, hope and love,<br>For a world in harmony, without war or pain.</span>
+                            <span class="italian">In un patto silente, ad ogni albero mi avvicino,<br>Abbraccio la sua essenza, sento il suo polso interno.<br>Con loro scambio energia, speranza e amore,<br>Per un mondo in armonia, senza guerra né dolore.</span>
+                            <span class="chinese">在一个沉默的契约中，我走近每一棵树，<br>拥抱它的本质，感受它内在的脉搏。<br>与它们交换能量、希望和爱，<br>为了一个和谐的世界，没有战争也没有痛苦。</span>
+                            <span class="arabic">في ميثاق صامت، أقترب من كل شجرة،<br>أحتضن جوهرها، أشعر بنبضها الداخلي.<br>معها أتبادل الطاقة والأمل والحب،<br>من أجل عالم في انسجام، بلا حرب ولا ألم.</span>
+                            <span class="russian">В молчаливом пакте я подхожу к каждому дереву,<br>Обнимаю его суть, чувствую его внутренний пульс.<br>С ними я обмениваюсь энергией, надеждой и любовью<br>Ради мира в гармонии, без войны и без боли.</span>
+                            <span class="ukrainian">У мовчазному пакті я наближаюся до кожного дерева,<br>Обіймаю його сутність, відчуваю його внутрішній пульс.<br>З ними я обмінюю енергію, надію й любов<br>Заради світу в гармонії, без війни і без болю.</span>
+                            <span class="aleman">In einem stillen Pakt nähere ich mich jedem Baum,<br>Umarme sein Wesen, fühle seinen inneren Puls.<br>Mit ihnen tausche ich Energie, Hoffnung und Liebe<br>Für eine Welt in Harmonie, ohne Krieg und ohne Schmerz.</span>
+                            <span class="frances">Dans un pacte silencieux, je m'approche de chaque arbre,<br>J'embrasse son essence, je sens son pouls intérieur.<br>Avec eux j'échange de l'énergie, de l'espoir et de l'amour,<br>Pour un monde en harmonie, sans guerre ni douleur.</span>
+                            <span class="japones">沈黙の契約の中で、一本一本の木に近づく、<br>その本質を抱きしめ、内なる脈動を感じる。<br>木々とエネルギーを、希望を、愛を交わす、<br>調和ある世界のために、戦争も痛みもない世界のために。</span>
+                            <span class="portuges">Num pacto silente, a cada árvore me aproximo,<br>Abraço a sua essência, sinto o seu pulso interno.<br>Com eles intercambio energia, esperança e amor,<br>Por um mundo em harmonia, sem guerra nem dor.</span>
+                        </div>
+
+                        <!-- Coda - After the Poem -->
+                        <div class="stanza coda-stanza">
+                            <span class="spanish">Tras escribir el poema,<br>yo me voy a abrazar a todos los árboles<br>desde ahora para saludarles<br>y hacer un intercambio de energía.</span>
+                            <span class="english">After writing the poem,<br>I go to embrace all the trees<br>from now on to greet them<br>and exchange energy.</span>
+                            <span class="italian">Dopo aver scritto la poesia,<br>vado ad abbracciare tutti gli alberi<br>d'ora in poi per salutarli<br>e fare uno scambio di energia.</span>
+                            <span class="chinese">写完这首诗后，<br>我要去拥抱所有的树，<br>从现在起向它们问好，<br>进行能量的交换。</span>
+                            <span class="arabic">بعد كتابة القصيدة،<br>سأذهب لأحتضن كل الأشجار<br>من الآن لأحيّيها<br>وأتبادل معها الطاقة.</span>
+                            <span class="russian">После написания стихотворения<br>я пойду обнимать все деревья,<br>отныне приветствуя их<br>и обмениваясь энергией.</span>
+                            <span class="ukrainian">Після написання вірша<br>я піду обіймати всі дерева,<br>відтепер вітаючи їх<br>і обмінюючись енергією.</span>
+                            <span class="aleman">Nach dem Schreiben des Gedichts<br>gehe ich, alle Bäume zu umarmen,<br>von nun an sie zu begrüßen<br>und Energie auszutauschen.</span>
+                            <span class="frances">Après avoir écrit le poème,<br>je vais embrasser tous les arbres<br>désormais pour les saluer<br>et faire un échange d'énergie.</span>
+                            <span class="japones">詩を書き終えた後、<br>すべての木々を抱きしめに行く、<br>今日からは挨拶をして<br>エネルギーを交換するために。</span>
+                            <span class="portuges">Após escrever o poema,<br>vou abraçar todas as árvores<br>a partir de agora para saudá-las<br>e fazer uma troca de energia.</span>
+                        </div>
+
+                        <div class="stanza signature">
+                            Paz Arés Osset
+                            <div class="poem-date">23 octubre 2023</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Musical Section -->
+                <div class="music-section mt-5 py-5 reveal">
+                    <h2 class="handwritten text-light mb-5">
+                        <i class="fab fa-spotify mr-2"></i>
+                        <span class="spanish">El poema en forma musical</span>
+                        <span class="english">The poem in musical form</span>
+                        <span class="italian">La poesia in forma musicale</span>
+                        <span class="chinese">音乐形式的诗</span>
+                        <span class="arabic">القصيدة في شكل موسيقي</span>
+                        <span class="russian">Стихотворение в музыкальной форме</span>
+                        <span class="ukrainian">Вірш у музичній формі</span>
+                        <span class="aleman">Das Gedicht in musikalischer Form</span>
+                        <span class="frances">Le poème sous forme musicale</span>
+                        <span class="japones">音楽形式の詩</span>
+                        <span class="portuges">O poema em forma musical</span>
+                    </h2>
+                    <div class="row justify-content-center">
+                        <!-- Spanish Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_es.png" alt="Disco en Castellano">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Castellano</h4>
+                                    <h4 class="english">Spanish Album</h4>
+                                    <h4 class="italian">Disco in Spagnolo</h4>
+                                    <h4 class="chinese">西班牙语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالإسبانية</h4>
+                                    <h4 class="russian">Испанский диск</h4>
+                                    <h4 class="ukrainian">Іспанський диск</h4>
+                                    <h4 class="aleman">Spanisches Album</h4>
+                                    <h4 class="frances">Album en Espagnol</h4>
+                                    <h4 class="japones">スペイン語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Espanhol</h4>
+                                    <p class="small text-warning">Folk Orgánico / Indie</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- English Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_en.png" alt="Disco en Inglés">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Inglés</h4>
+                                    <h4 class="english">English Album</h4>
+                                    <h4 class="italian">Disco in Inglese</h4>
+                                    <h4 class="chinese">英语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالإنجليزية</h4>
+                                    <h4 class="russian">Английский диск</h4>
+                                    <h4 class="ukrainian">Англійський диск</h4>
+                                    <h4 class="aleman">Englisches Album</h4>
+                                    <h4 class="frances">Album en Anglais</h4>
+                                    <h4 class="japones">英語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Inglês</h4>
+                                    <p class="small text-warning">Uplifting Indie Folk</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- French Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_fr.png" alt="Disco en Francés">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Francés</h4>
+                                    <h4 class="english">French Album</h4>
+                                    <h4 class="italian">Disco in Francese</h4>
+                                    <h4 class="chinese">法语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالفرنسية</h4>
+                                    <h4 class="russian">Французский диск</h4>
+                                    <h4 class="ukrainian">Французький диск</h4>
+                                    <h4 class="aleman">Französisches Album</h4>
+                                    <h4 class="frances">Album en Français</h4>
+                                    <h4 class="japones">フランス語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Francês</h4>
+                                    <p class="small text-warning">Chanson Organique</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Gallery Section - Personal Images 2023 -->
+                <div class="art-gallery-section mt-5 py-5 reveal">
+                    <h2 class="handwritten text-light mb-5">
+                        <i class="fas fa-paint-brush mr-2"></i>
+                        <span class="spanish">Imágenes que inspiraron el poema (2023)</span>
+                        <span class="english">Images that inspired the poem (2023)</span>
+                        <span class="italian">Immagini che hanno ispirato la poesia (2023)</span>
+                        <span class="chinese">启发这首诗的图像 (2023)</span>
+                        <span class="arabic">صور ألهمت القصيدة (2023)</span>
+                        <span class="russian">Изображения, вдохновившие стихотворение (2023)</span>
+                        <span class="ukrainian">Зображення, що надихнули вірш (2023)</span>
+                        <span class="aleman">Bilder, die das Gedicht inspirierten (2023)</span>
+                        <span class="frances">Images qui ont inspiré le poème (2023)</span>
+                        <span class="japones">詩に霊感を与えた画像 (2023)</span>
+                        <span class="portuges">Imagens que inspiraram o poema (2023)</span>
+                    </h2>
+
+                    <div class="personal-gallery">
+                        <!-- Image 1: Renoir style -->
+                        <div class="art-frame personal-art">
+                            <img src="image_Renoir.png" alt="Abrazo al árbol - Estilo Renoir" class="img-fluid rounded shadow-lg">
+                            <div class="art-caption">
+                                <span class="spanish">La ternura del abrazo: una mujer se funde con el árbol frutal en un jardín de colores impressionistas.</span>
+                                <span class="english">The tenderness of the embrace: a woman merges with the fruit tree in an impressionist garden of colors.</span>
+                                <span class="italian">La tenerezza dell'abbraccio: una donna si fonde con l'albero da frutto in un giardino di colori impressionisti.</span>
+                                <span class="chinese">拥抱的温柔：一位女人在印象派色彩的花园中与果树融为一体。</span>
+                                <span class="arabic">حنان العناق: امرأة تندمج مع شجرة الفاكهة في حديقة ألوان انطباعية.</span>
+                                <span class="russian">Нежность объятия: женщина сливается с фруктовым деревом в импрессионистском саду красок.</span>
+                                <span class="ukrainian">Ніжність обіймів: жінка зливається з фруктовим деревом в імпресіоністському саді кольорів.</span>
+                                <span class="aleman">Die Zärtlichkeit der Umarmung: Eine Frau verschmilzt mit dem Obstbaum in einem impressionistischen Farbgarten.</span>
+                                <span class="frances">La tendresse de l'étreinte : une femme se fond avec l'arbre fruitier dans un jardin de couleurs impressionnistes.</span>
+                                <span class="japones">抱擁の優しさ：印象派の色彩の庭で、女性が果樹と一体になる。</span>
+                                <span class="portuges">A ternura do abraço: uma mulher funde-se com a árvore frutífera num jardim de cores impressionistas.</span>
+                            </div>
+                        </div>
+
+                        <!-- Image 2: No Talar -->
+                        <div class="art-frame personal-art">
+                            <img src="image_no_talar.png" alt="No Talar - Abrazo de protección" class="img-fluid rounded shadow-lg">
+                            <div class="art-caption">
+                                <span class="spanish">El abrazo protector: una mujer abraza el árbol de la paz, de los corazones y de las palomas, mientras las flores brotan como símbolo de esperanza.</span>
+                                <span class="english">The protective embrace: a woman hugs the tree of peace, of hearts and doves, while flowers bloom as a symbol of hope.</span>
+                                <span class="italian">L'abbraccio protettore: una donna abbraccia l'albero della pace, dei cuori e delle colombe, mentre i fiori sbocciano come simbolo di speranza.</span>
+                                <span class="chinese">保护的拥抱：一位女人拥抱和平之树、心和鸽子之树，花朵绽放象征着希望。</span>
+                                <span class="arabic">العناق الحامي: امرأة تحتضن شجرة السلام والقلوب والحمام، بينما تتفتح الأزهار رمزاً للأمل.</span>
+                                <span class="russian">Защитное объятие: женщина обнимает дерево мира, сердец и голубей, а цветы распускаются как символ надежды.</span>
+                                <span class="ukrainian">Захисні обійми: жінка обіймає дерево миру, сердець і голубів, а квіти розквітають як символ надії.</span>
+                                <span class="aleman">Die schützende Umarmung: Eine Frau umarmt den Baum des Friedens, der Herzen und Tauben, während Blumen als Symbol der Hoffnung blühen.</span>
+                                <span class="frances">L'étreinte protectrice : une femme enlace l'arbre de la paix, des cœurs et des colombes, tandis que les fleurs éclosent en symbole d'espoir.</span>
+                                <span class="japones">守りの抱擁：平和、ハート、鳩の木を女性が抱きしめ、花が希望の象徴として咲く。</span>
+                                <span class="portuges">O abraço protetor: uma mulher abraça a árvore da paz, dos corações e das pombas, enquanto as flores brotam como símbolo de esperança.</span>
+                            </div>
+                        </div>
+
+                        <!-- Image 3: Clint style -->
+                        <div class="art-frame personal-art">
+                            <img src="image _Clint.png" alt="Conexión mística con el árbol" class="img-fluid rounded shadow-lg">
+                            <div class="art-caption">
+                                <span class="spanish">La conexión mística: dos almas se encuentran junto al árbol ancestral, rodeados de búhos, aves y mariposas — mensajeros del bosque.</span>
+                                <span class="english">The mystic connection: two souls meet by the ancestral tree, surrounded by owls, birds and butterflies — messengers of the forest.</span>
+                                <span class="italian">La connessione mistica: due anime si incontrano presso l'albero ancestrale, circondati da gufi, uccelli e farfalle — messaggeri della foresta.</span>
+                                <span class="chinese">神秘的连接：两个灵魂在古树旁相遇，被猫头鹰、鸟类和蝴蝶——森林的信使——环绕。</span>
+                                <span class="arabic">الاتصال الصوفي: روحان تلتقيان بجوار الشجرة العتيقة، محاطتان بالبوم والطيور والفراشات — رسل الغابة.</span>
+                                <span class="russian">Мистическая связь: две души встречаются у древнего дерева в окружении сов, птиц и бабочек — посланников леса.</span>
+                                <span class="ukrainian">Містичний зв'язок: дві душі зустрічаються біля прадавнього дерева, оточені совами, птахами і метеликами — посланцями лісу.</span>
+                                <span class="aleman">Die mystische Verbindung: Zwei Seelen treffen sich am Ahnenbaum, umgeben von Eulen, Vögeln und Schmetterlingen — Boten des Waldes.</span>
+                                <span class="frances">La connexion mystique : deux âmes se rencontrent près de l'arbre ancestral, entourées de hiboux, d'oiseaux et de papillons — messagers de la forêt.</span>
+                                <span class="japones">神秘的なつながり：二つの魂が祖先の木のそばで出会い、フクロウ、鳥、蝶——森の使者たちに囲まれている。</span>
+                                <span class="portuges">A conexão mística: duas almas encontram-se junto à árvore ancestral, rodeadas de corujas, aves e borboletas — mensageiros da floresta.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inspiration Section -->
+                <div class="inspiration-section mt-5 py-5 reveal">
+                    <h2 class="handwritten text-light mb-5">
+                        <i class="fas fa-seedling mr-2"></i>
+                        <span class="spanish">Lo que inspiró este poema</span>
+                        <span class="english">What inspired this poem</span>
+                        <span class="italian">Cosa ha ispirato questa poesia</span>
+                        <span class="chinese">这首诗的灵感来源</span>
+                        <span class="arabic">ما ألهم هذه القصيدة</span>
+                        <span class="russian">Что вдохновило это стихотворение</span>
+                        <span class="ukrainian">Що надихнуло цей вірш</span>
+                        <span class="aleman">Was dieses Gedicht inspirierte</span>
+                        <span class="frances">Ce qui a inspiré ce poème</span>
+                        <span class="japones">この詩のインスピレーション</span>
+                        <span class="portuges">O que inspirou este poema</span>
+                    </h2>
+                    <div class="inspiration-text">
+                        <span class="spanish">Este poema nació de la indignación de ver cómo se talan árboles sanos solo para levantar hormigón sin alma. En los paseos por bosques y jardines, Paz comenzó a sentir el latido silencioso de cada tronco, a escuchar el susurro de las hojas como una conversación pendiente entre el ser humano y la naturaleza. Quiso entonces convocar a poetas, artistas y músicos para elevar una voz común de protesta y de amor.<br><br>Pero el poema va más allá de la denuncia. Es también un acto íntimo: abrazar a cada árbol, apoyar las manos en su corteza y sentir cómo fluye un intercambio invisible de energía, esperanza y gratitud. Desde que escribió estos versos, Paz abraza cada árbol que encuentra — un pacto silente con la Madre Tierra, la promesa de que construir nunca debería significar destruir.</span>
+                        <span class="english">This poem was born from the outrage of seeing healthy trees cut down just to raise soulless concrete. On walks through forests and gardens, Paz began to feel the silent heartbeat of every trunk, to hear the whisper of leaves as a conversation long overdue between human beings and nature. She wanted to summon poets, artists and musicians to raise one common voice of protest and love.<br><br>But the poem goes beyond protest. It is also an intimate act: embracing each tree, pressing her hands on its bark and feeling an invisible exchange of energy, hope and gratitude flow between them. Since writing these verses, Paz hugs every tree she meets — a silent pact with Mother Earth, the promise that building should never mean destroying.</span>
+                        <span class="italian">Questa poesia è nata dall'indignazione di vedere alberi sani abbattuti solo per innalzare cemento senza anima. Nelle passeggiate per boschi e giardini, Paz cominciò a sentire il battito silenzioso di ogni tronco, ad ascoltare il sussurro delle foglie come una conversazione in sospeso tra l'essere umano e la natura. Volle allora convocare poeti, artisti e musicisti per elevare una voce comune di protesta e d'amore.<br><br>Ma la poesia va oltre la denuncia. È anche un atto intimo: abbracciare ogni albero, posare le mani sulla sua corteccia e sentire come scorre uno scambio invisibile di energia, speranza e gratitudine. Da quando ha scritto questi versi, Paz abbraccia ogni albero che incontra — un patto silente con la Madre Terra, la promessa che costruire non dovrebbe mai significare distruggere.</span>
+                        <span class="chinese">这首诗源于一种愤怒：看到健康的树木被砍伐，只为竖起没有灵魂的混凝土。在森林和花园的漫步中，Paz开始感受到每根树干沉默的心跳，倾听树叶的低语——那是人类与自然之间一场迟到已久的对话。于是她想召唤诗人、艺术家和音乐家，共同发出一个抗议与爱的声音。<br><br>但这首诗不止于抗议。它也是一个亲密的行为：拥抱每一棵树，将双手贴在树皮上，感受一种无形的能量、希望和感恩在彼此之间流动。自从写下这些诗句，Paz拥抱她遇到的每一棵树——与大地母亲的沉默契约，建设永远不应意味着毁灭的承诺。</span>
+                        <span class="arabic">وُلدت هذه القصيدة من الغضب على رؤية أشجار سليمة تُقطع فقط لرفع خرسانة بلا روح. في نزهاتها عبر الغابات والحدائق، بدأت باث تشعر بنبض كل جذع صامت، وتسمع همس الأوراق كحوار متأخر بين الإنسان والطبيعة. فأرادت أن تستدعي الشعراء والفنانين والموسيقيين ليرفعوا صوتاً مشتركاً من الاحتجاج والحب.<br><br>لكن القصيدة تتجاوز الاحتجاج. إنها أيضاً فعل حميمي: احتضان كل شجرة، ووضع اليدين على لحائها والشعور بتبادل خفيّ للطاقة والأمل والامتنان. منذ كتابة هذه الأبيات، أصبحت باث تحتضن كل شجرة تصادفها — ميثاق صامت مع الأرض الأم، وعد بأن البناء يجب ألا يعني الهدم أبداً.</span>
+                        <span class="russian">Это стихотворение родилось из возмущения: видеть, как здоровые деревья вырубают ради бездушного бетона. На прогулках по лесам и садам Пас стала ощущать тихое биение каждого ствола, слышать шёпот листьев как давно назревший разговор между человеком и природой. Она захотела призвать поэтов, художников и музыкантов, чтобы поднять общий голос протеста и любви.<br><br>Но стихотворение больше, чем протест. Это и сокровенный жест: обнять каждое дерево, прижать ладони к его коре и почувствовать, как течёт невидимый обмен энергией, надеждой и благодарностью. С тех пор как были написаны эти строки, Пас обнимает каждое дерево на своём пути — молчаливый пакт с Матерью-Землёй, обещание того, что строить не должно означать разрушать.</span>
+                        <span class="ukrainian">Цей вірш народився з обурення: бачити, як здорові дерева зрубують заради бездушного бетону. Під час прогулянок лісами й садами Пас почала відчувати тихе биття кожного стовбура, чути шепіт листя як давно назрілу розмову між людиною і природою. Вона захотіла закликати поетів, митців і музикантів, щоб піднести спільний голос протесту й любові.<br><br>Але вірш — це більше ніж протест. Це ще й інтимний жест: обійняти кожне дерево, притиснути долоні до його кори і відчути, як тече невидимий обмін енергією, надією і вдячністю. Відтоді як були написані ці рядки, Пас обіймає кожне дерево на своєму шляху — мовчазний пакт з Матір'ю-Землею, обіцянка того, що будувати не повинно означати руйнувати.</span>
+                        <span class="aleman">Dieses Gedicht entstand aus der Empörung, gesunde Bäume fällen zu sehen, nur um seelenlosen Beton zu errichten. Bei Spaziergängen durch Wälder und Gärten begann Paz den stillen Herzschlag jedes Stammes zu spüren, das Flüstern der Blätter zu hören wie ein längst fälliges Gespräch zwischen Mensch und Natur. Sie wollte Dichter, Künstler und Musiker zusammenrufen, um eine gemeinsame Stimme des Protests und der Liebe zu erheben.<br><br>Doch das Gedicht geht über den Protest hinaus. Es ist auch eine intime Geste: jeden Baum umarmen, die Hände auf seine Rinde legen und spüren, wie ein unsichtbarer Austausch von Energie, Hoffnung und Dankbarkeit zwischen ihnen fließt. Seit sie diese Verse schrieb, umarmt Paz jeden Baum, dem sie begegnet — ein stiller Pakt mit Mutter Erde, das Versprechen, dass Bauen niemals Zerstören bedeuten sollte.</span>
+                        <span class="frances">Ce poème est né de l'indignation de voir des arbres sains abattus pour dresser du béton sans âme. Au fil de ses promenades dans les forêts et les jardins, Paz a commencé à sentir le battement silencieux de chaque tronc, à entendre le murmure des feuilles comme une conversation en suspens entre l'être humain et la nature. Elle a voulu convoquer poètes, artistes et musiciens pour élever une voix commune de protestation et d'amour.<br><br>Mais le poème va au-delà de la dénonciation. C'est aussi un acte intime : embrasser chaque arbre, poser les mains sur son écorce et sentir un échange invisible d'énergie, d'espoir et de gratitude. Depuis qu'elle a écrit ces vers, Paz enlace chaque arbre qu'elle rencontre — un pacte silencieux avec la Terre Mère, la promesse que bâtir ne devrait jamais signifier détruire.</span>
+                        <span class="japones">この詩は、健康な木々が魂なきコンクリートのために伐られるのを見た憤りから生まれた。森や庭の散歩の中で、Pazは一本一本の幹の静かな鼓動を感じ始め、葉のささやきを、人間と自然の間で長く遅れていた対話として聴くようになった。彼女は詩人、芸術家、音楽家を呼び集め、抗議と愛の声をひとつにしたいと願った。<br><br>しかしこの詩は抗議を超えている。それは親密な行為でもある：一本一本の木を抱きしめ、手を樹皮にあて、見えないエネルギー、希望、感謝の交換が流れるのを感じること。これらの詩を書いて以来、Pazは出会うすべての木を抱きしめている——母なる大地との沈黙の契約、建てることは決して壊すことを意味すべきではないという約束。</span>
+                        <span class="portuges">Este poema nasceu da indignação de ver árvores saudáveis abatidas apenas para erguer betão sem alma. Nos passeios por bosques e jardins, Paz começou a sentir o batimento silencioso de cada tronco, a ouvir o sussurro das folhas como uma conversa há muito pendente entre o ser humano e a natureza. Quis então convocar poetas, artistas e músicos para elevar uma voz comum de protesto e de amor.<br><br>Mas o poema vai além da denúncia. É também um ato íntimo: abraçar cada árvore, pousar as mãos na sua casca e sentir como flui uma troca invisível de energia, esperança e gratidão. Desde que escreveu estes versos, Paz abraça cada árvore que encontra — um pacto silencioso com a Mãe Terra, a promessa de que construir nunca deveria significar destruir.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js?v=1.0"></script>
+</body>
+</html>
