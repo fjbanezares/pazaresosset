@@ -240,30 +240,30 @@ body::before {
 
 .poem-content {
     font-family: 'Philosopher', serif;
-    font-size: 1.8rem;
-    line-height: 1.6;
+    font-size: 2.4rem; /* Significantly enlarged for extra elegance and legibility */
+    line-height: 1.65;
     color: rgba(255, 255, 255, 0.95);
 }
 
 .stanza {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.8rem;
 }
 
 .main-stanza {
-    font-size: 2.2rem;
+    font-size: 2.8rem; /* Significantly enlarged */
     font-style: italic;
     color: #fff;
     border-left: 2px solid var(--accent-gold);
     border-right: 2px solid var(--accent-gold);
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     background: rgba(255, 215, 0, 0.05);
 }
 
 .closing-stanza {
-    font-size: 2.5rem;
+    font-size: 3.4rem; /* Significantly enlarged */
     font-family: 'Caveat', cursive;
     color: var(--accent-gold);
-    margin-top: 3rem;
+    margin-top: 3.5rem;
 }
 
 .signature {
@@ -380,8 +380,9 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .poem-wrapper { padding: 3rem 1.5rem; margin: 4rem 1rem; }
-    .poem-title { font-size: 2.5rem; }
-    .poem-content { font-size: 1.3rem; }
-    .main-stanza { font-size: 1.5rem; }
+    .poem-wrapper { padding: 3.5rem 2rem; margin: 4rem 1.2rem; }
+    .poem-title { font-size: 2.8rem; }
+    .poem-content { font-size: 1.95rem; } /* Significantly enlarged for excellent mobile readability */
+    .main-stanza { font-size: 2.2rem; } /* Enlarged */
+    .closing-stanza { font-size: 2.6rem; margin-top: 2rem; } /* Added for mobile sizing */
 }
