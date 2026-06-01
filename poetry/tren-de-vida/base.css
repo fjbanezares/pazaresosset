@@ -29,12 +29,12 @@ body {
   color: #a8e6cf;
   /* Verde hermoso y brillante, resalta perfecto en el oscuro */
   background-color: rgba(0, 0, 0, 0.4);
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   padding: 60px;
   border-radius: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.25); /* Elegant gold border */
   display: inline-block;
-  text-align: left;
+  text-align: center; /* Centered! */
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
   max-width: 850px;
@@ -135,7 +135,7 @@ body {
 /* Album Grid and Music styles */
 .album-card {
   background: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 215, 0, 0.15); /* Elegant gold outline */
+  border: 3px solid rgba(255, 215, 0, 0.35); /* Elegant gold picture frame */
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -208,7 +208,8 @@ body {
   /* Optimizes the poem card layout on smaller screens */
   .poem-text {
     padding: 25px !important;
-    font-size: 1.1rem !important;
+    font-size: 1.35rem !important; /* Larger text on mobile! */
+    text-align: center !important; /* Centered! */
     border-radius: 20px !important;
     max-width: 95% !important;
     line-height: 1.6 !important;
@@ -218,9 +219,26 @@ body {
     font-size: 1.8rem !important;
   }
 
-  /* Stacks album cards on separate lines with clear margins */
+  /* Stacks album cards on separate lines, making them smaller and discrete with a neat frame */
   .album-card {
     margin-bottom: 25px !important;
-    max-width: 250px !important;
+    max-width: 170px !important; /* Smaller and more discrete on mobile! */
+    border: 2px solid rgba(255, 215, 0, 0.4) !important; /* Fine golden mobile border */
+    border-radius: 12px !important;
+  }
+
+  .album-title {
+    font-size: 0.85rem !important; /* Perfectly sized titles for small cards */
+    min-height: auto !important;
+    padding: 3px 0 !important;
+  }
+
+  .album-artist {
+    font-size: 0.7rem !important;
+  }
+
+  .btn-spotify.btn-sm {
+    padding: 4px 10px !important;
+    font-size: 0.75rem !important;
   }
 }
