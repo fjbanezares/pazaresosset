@@ -187,8 +187,8 @@ body::before {
 
 .poem-content {
     font-family: 'Philosopher', serif;
-    font-size: 1.6rem;
-    line-height: 1.8;
+    font-size: 2.4rem; /* Enlarged for majestic beauty and readability */
+    line-height: 1.7;
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
@@ -206,20 +206,20 @@ body::before {
     color: #e0f0ff;
     font-style: italic;
     border: 1px solid rgba(255, 215, 0, 0.2);
-    padding: 2rem;
+    padding: 2.5rem;
     background: rgba(255, 215, 0, 0.03);
     border-radius: 20px;
 }
 
 .realization-stanza {
-    font-size: 2rem;
+    font-size: 3.1rem; /* Significantly enlarged */
     color: #fff;
     font-family: 'Caveat', cursive;
 }
 
 .signature {
     font-family: 'Caveat', cursive;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Enlarged */
     margin-top: 5rem;
     opacity: 0.6;
 }
@@ -318,9 +318,10 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .poem-wrapper { padding: 3rem 1.5rem; }
-    .poem-title { font-size: 2.2rem; }
-    .poem-content { font-size: 1.2rem; }
+    .poem-wrapper { padding: 3.5rem 2rem; margin: 4rem 1.2rem; }
+    .poem-title { font-size: 2.8rem; }
+    .poem-content { font-size: 1.95rem; } /* Significantly enlarged for mobile readability */
+    .realization-stanza { font-size: 2.4rem; } /* Enlarged */
     .paz-logo { height: 60px; }
     .lang-nav { top: 1rem; right: 1rem; }
     .nav-btn span { display: none; }
