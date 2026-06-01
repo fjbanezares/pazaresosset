@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atardeceres en mi Terraza — Paz Arés Osset</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
+</head>
+<body data-lang="spanish">
+    <canvas id="effects-canvas"></canvas>
+    <div class="main-wrapper">
+        <a href="https://www.pazaresosset.es"><img src="../../logopazares.png" class="paz-logo" alt="Paz Arés Osset"></a>
+        
+        <nav class="lang-nav">
+            <div class="lang-selector">
+                <button class="current-lang" id="langBtn"><span id="currentFlag">🇪🇸</span> <span id="langText">Castellano</span></button>
+                <div class="lang-dropdown" id="langPicker">
+                    <div class="lang-opt" data-value="spanish"><span>🇪🇸</span> Castellano</div>
+                    <div class="lang-opt" data-value="english"><span>🇬🇧</span> English</div>
+                    <div class="lang-opt" data-value="english_paz"><span>🕊️</span> Ingles Paz</div>
+                    <div class="lang-opt" data-value="italian"><span>🇮🇹</span> Italiano</div>
+                    <div class="lang-opt" data-value="french"><span>🇫🇷</span> Français</div>
+                    <div class="lang-opt" data-value="portuguese"><span>🇵🇹</span> Português</div>
+                    <div class="lang-opt" data-value="german"><span>🇩🇪</span> Deutsch</div>
+                    <div class="lang-opt" data-value="chinese"><span>🇨🇳</span> 中文</div>
+                    <div class="lang-opt" data-value="arabic"><span>🇦🇪</span> العربية</div>
+                    <div class="lang-opt" data-value="russian"><span>🇷🇺</span> Русский</div>
+                    <div class="lang-opt" data-value="ukrainian"><span>🇺🇦</span> Українська</div>
+                    <div class="lang-opt" data-value="japanese"><span>🇯🇵</span> 日本語</div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container">
+            <div class="poem-wrapper reveal">
+                <h1 class="poem-title">
+                    <span class="spanish">Atardeceres en mi Terraza</span>
+                    <span class="english">Sunsets on my Terrace</span>
+                    <span class="english_paz">Sunsets From my Terrace</span>
+                    <span class="italian">Tramonti sulla mia Terrazza</span>
+                    <span class="french">Couchers de soleil sur ma terrasse</span>
+                    <span class="portuguese">Pôr do sol no meu terraço</span>
+                    <span class="german">Sonnenuntergänge auf meiner Terrasse</span>
+                    <span class="chinese">我阳台上的落日</span>
+                    <span class="arabic">غروب الشمس في شرفتي</span>
+                    <span class="russian">Закаты на моей террасе</span>
+                    <span class="ukrainian">Заходи сонця на моїй терасі</span>
+                    <span class="japanese">私のテラスの夕日</span>
+                </h1>
+
+                <div class="poem-content">
+                    <div class="stanza contemplation-stanza">
+                        <span class="spanish">Soledades en contemplación ante la maravilla<br>Mientras la brisa baila con la ropa tendida<br>Y las aves danzan en los últimos vuelos de despedida<br>Sintiendo la eternidad.</span>
+                        <span class="english">Solitude in contemplation before the wonder<br>While the breeze dances with the hanging clothes<br>And the birds dance in their last flights of farewell<br>Feeling eternity.</span>
+                        <span class="english_paz">Solitudes in contemplation before the wonder<br>While the breeze dances with the hanging laundry<br>And the birds dance their last farewell flights<br>Feeling eternity</span>
+                        <span class="italian">Solitudini in contemplazione davanti alla meraviglia<br>Mentre la brezza danza con i vestiti stesi<br>E gli uccelli danzano negli ultimi voli di addio<br>Sentendo l'eternità.</span>
+                        <span class="french">Solitudes en contemplation devant la merveille<br>Pendant que la brise danse avec le linge suspendu<br>Et les oiseaux dansent dans les derniers vols d'adieu<br>Sentant l'éternité.</span>
+                        <span class="portuguese">Solidões em contemplação diante da maravilha<br>Enquanto a brisa dança com a roupa estendida<br>E as aves dançam nos últimos voos de despedida<br>Sentindo a eternidade.</span>
+                        <span class="german">Einsamkeiten in Kontemplation vor dem Wunder<br>Während die Brise mit der aufgehängten Wäsche tanzt<br>Und die Vögel in den letzten Abschiedsflügen tanzen<br>Die Ewigkeit spürend.</span>
+                        <span class="chinese">凝视奇迹中的孤独<br>微风掠过晾晒衣物翩翩起舞<br>飞鸟在最后的告别飞行中曼妙起舞<br>感受着永恒。</span>
+                        <span class="arabic">عزلة في تأمل أمام المعجزة<br>بينما النسيم يراقص الغسيل المنشور<br>والطيور ترقص في رحلات الوداع الأخيرة<br>شاعرًا بالأبدية.</span>
+                        <span class="russian">Одиночество в созерцании чуда<br>Пока ветерок танцует с развешанным бельем<br>И птицы кружатся в последних прощальных полетах<br>Ощущая вечность.</span>
+                        <span class="ukrainian">Самотність у спогляданні дива<br>Поки вітерець танцює з розвішаною білизною<br>І птахи кружляють в останніх прощальних польотах<br>Відчуваючи вічність.</span>
+                        <span class="japanese">奇跡を前にして、瞑想の中の孤独<br>そよ風が干された衣服と踊るあいだ<br>そして鳥たちが最後の別れの飛行で舞う<br>永遠を感じながら。</span>
+                    </div>
+
+                    <div class="stanza transformation-stanza">
+                        <span class="spanish">Las Sierras cercanas del Sistema Central<br>me acompañan en el horizonte<br>difuminândose en múltiples grises azulados<br>Variaciones de la luz.</span>
+                        <span class="english">The nearby mountains of the Central System<br>accompany me on the horizon<br>fading into multiple bluish grays<br>Variations of light.</span>
+                        <span class="english_paz">The nearby mountains of the Central System<br>Accompany me on the horizon<br>Fading into múltiple blueish greys<br>Variations of light</span>
+                        <span class="italian">Le montagne vicine del Sistema Centrale<br>mi accompagnano all'orizzonte<br>sfumando in molteplici grigi bluastri<br>Variazioni della luce.</span>
+                        <span class="french">Les montagnes proches du Système Central<br>m'accompagnent à l'horizon<br>se fondant en de multiples gris bleutés<br>Variations de la lumière.</span>
+                        <span class="portuguese">As serras próximas do Sistema Central<br>acompanham-me no horizonte<br>esbatendo-se em múltiplos cinzas azulados<br>Variações da luz.</span>
+                        <span class="german">Die nahen Berge des Kastilischen Scheidegebirges<br>begleiten mich am Horizont<br>verschwimmend in vielfältigen bläulichen Grautönen<br>Variationen des Lichts.</span>
+                        <span class="chinese">中央山系的近山<br>在海平线上与我相伴<br>在重重蓝灰中渐隐渐现<br>光之变幻。</span>
+                        <span class="arabic">جبال السلسلة المركزية القريبة<br>ترافقني في الأفق<br>متلاشية في درجات متعددة من الرمادي المزرق<br>تنوعات الضوء.</span>
+                        <span class="russian">Близкие горы Центральной системы<br>сопровождают меня на горизонте<br>растворяясь во множестве синевато-серых оттенков<br>Вариации света.</span>
+                        <span class="ukrainian">Близькі гори Центральної системи<br>супроводжують мене на горизонті<br>розчиняючись у безлічі синювато-сірих відтінків<br>Варіації світла.</span>
+                        <span class="japanese">中央山系の近くの山々が<br>地平線で私に付き添う<br>重なり合う青灰色の中へとかすみながら<br>光の変奏。</span>
+                    </div>
+
+                    <div class="stanza perception-stanza">
+                        <span class="spanish">Continua transformación<br>Cambio externo, cambio interno<br>Se acerca el otoño y el invierno<br>Sintiendo la infinitud</span>
+                        <span class="english">Continuous transformation<br>External change, internal change<br>Autumn and winter approach<br>Feeling infinitude</span>
+                        <span class="english_paz">Continual transformation<br>External changes, internal changes<br>The autumn and winter draw close<br>Feeling infinity</span>
+                        <span class="italian">Continua trasformazione<br>Cambiamento esterno, cambiamento interno<br>L'autunno e l'inverno si avvicinano<br>Sentendo l'infinito</span>
+                        <span class="french">Transformation continue<br>Changement externe, changement interne<br>L'automne et l'hiver approchent<br>Sentant l'infinitude.</span>
+                        <span class="portuguese">Mudança contínua<br>Mudança externa, mudança interna<br>Aproxima-se o outono e o inverno<br>Sentindo a infinitude.</span>
+                        <span class="german">Kontinuierliche Transformation<br>Äußerer Wandel, innerer Wandel<br>Der Herbst und der Winter nahen<br>Die Unendlichkeit spürend.</span>
+                        <span class="chinese">持续的蜕变<br>外在的改变，内在的改变<br>秋与冬悄然临近<br>感受着无垠。</span>
+                        <span class="arabic">تحول مستمر<br>تغير خارجي، تغير داخلي<br>يقترب الخريف والشتاء<br>شاعرًا باللانهاية.</span>
+                        <span class="russian">Непрерывное превращение<br>Внешняя перемена, внутренняя перемена<br>Приближаются осень и зима<br>Ощущая бесконечность.</span>
+                        <span class="ukrainian">Безперервне перетворення<br>Зовнішня зміна, внутрішня зміна<br>Наближаються осінь і зима<br>Відчуваючи безкінечність.</span>
+                        <span class="japanese">絶え間ない変容<br>外なる変化、内なる変化<br>秋と冬が近づいてくる<br>無限を感じながら。</span>
+                    </div>
+
+                    <div class="stanza solar-stanza">
+                        <span class="spanish">Oh sol, que hace rosas mis nubes…<br>Sol que pintas tan luminosos sus bordes<br>Y en contornos de figuras chispeantes<br>las dibujas jugando como el mejor dibujante.</span>
+                        <span class="english">Oh sun, that makes my clouds pink…<br>Sun that paints their edges so bright<br>And in contours of sparkling figures<br>you draw them playing like the best artist.</span>
+                        <span class="english_paz">Farewell, beautiful sun, that pinken my clouds<br>Sun that paints so brightly their bordees<br>And in outlines of sparkling figures<br>Draws them playing like the best drawer.</span>
+                        <span class="italian">Oh sole, che rendi rosa le mie nuvole…<br>Sole che dipingi così luminosi i loro bordi<br>E in contorni di figure scintillanti<br>le disegni giocando come il miglior disegnatore.</span>
+                        <span class="french">Oh soleil, qui rends roses mes nuages…<br>Soleil qui peins si lumineux leurs contours<br>Et en silhouettes de figures étincelantes<br>tu les dessines en jouant comme le meilleur dessinateur.</span>
+                        <span class="portuguese">Oh sol, que tornas cor-de-rosa as minhas nuvens…<br>Sol que pintas tão luminosas as suas bordas<br>E em contornos de figuras cintilantes<br>tu as desenhas brincando como o melhor desenhador.</span>
+                        <span class="german">Oh Sonne, die meine Wolken rosa macht…<br>Sonne, die ihre Ränder so leuchtend bemalt<br>Und in Umrissen funkelnder Figuren<br>zeichnest du sie spielend wie der beste Zeichner.</span>
+                        <span class="chinese">哦，太阳，你将我的云朵染成粉红……<br>太阳，你将云朵的边缘描绘得如此明亮<br>并在闪烁图景的轮廓里<br>你嬉戏着勾勒它们，宛如最杰出的画师。</span>
+                        <span class="arabic">يا شمس، يا من تجعلين غيومي وردية…<br>يا شمس، يا من تلونين حوافها ببريق شديد<br>وفي خطوط أشكال متلألئة<br>ترسمينها لاعبة كأفضل رسام.</span>
+                        <span class="russian">О солнце, что делает розовыми мои облака…<br>Солнце, что красит столь ярким их края<br>И в контурах сверкающих фигур<br>рисуешь их, играя, как лучший художник.</span>
+                        <span class="ukrainian">О сонце, що робить рожевими мої хмари…<br>Сонце, що фарбує такими яскравими їхні краї<br>І в контурах блискучих фігур<br>малюєш їх, граючись, як найкращий художник.</span>
+                        <span class="japanese">おお太陽よ、私の雲をピンクに染める者…<br>雲の端をこれほど明るく彩る太陽よ<br>Gentle on the soul.<br>きらめく姿の輪郭の中に<br>最高の絵描きのように、遊びながら描き出す。</span>
+                    </div>
+
+                    <div class="stanza perception-stanza">
+                        <span class="spanish">Hoy resaltan como un águila<br>o quizás una paloma<br>Ayer una bella mujer volaba<br>Subjetivas percepciones de múltiples sensaciones</span>
+                        <span class="english">Today they stand out like an eagle<br>or perhaps a dove<br>Yesterday a beautiful woman was flying<br>Subjective perceptions of multiple sensations</span>
+                        <span class="english_paz">Today they jump out like an eagle<br>Or maybe a pigeon.<br>YEsterday a beautiful woman flew<br>Subjetive perceptión of múltiple sensatións.</span>
+                        <span class="italian">Oggi risaltano como un'aquila<br>o forse una colomba<br>Ieri una bella donna volava<br>Percezioni soggettive di molteplici sensazioni</span>
+                        <span class="french">Aujourd'hui ils se détachent comme un aigle<br>ou peut-être une colombe<br>Hier une belle femme s'envolait<br>Perceptions subjectives de multiples sensations.</span>
+                        <span class="portuguese">Hoje destacam-se como uma águia<br>ou talvez uma pomba<br>Ontem uma bela mulher voava<br>Percepções subjetivas de múltiplas sensações.</span>
+                        <span class="german">Heute stechen sie hervor wie ein Adler<br>oder vielleicht eine Taube<br>Gestern flog eine wunderschöne Frau<br>Subjektive Wahrnehmungen vielfältiger Empfindungen.</span>
+                        <span class="chinese">今天，它们宛如雄鹰展翅<br>或是一只白鸽<br>昨日，一位美丽的女子在飞翔<br>多元感官的主观知觉。</span>
+                        <span class="arabic">اليوم تبرز كأنها نسر<br>أو ربما حمامة<br>بالأمس كانت امرأة جميلة تحلق<br>إدراكات ذاتية لأحاسيس متعددة.</span>
+                        <span class="russian">Сегодня они выделяются словно орел<br>или, быть может, голубь<br>Вчера летела прекрасная женщина<br>Субъективное восприятие множества ощущений.</span>
+                        <span class="ukrainian">Сьогодні вони виділяються ніби орел<br>або, можливо, голуб<br>Учора летіла прекрасна жінка<br>Суб'єктивне сприйняття безлічі відчуттів.</span>
+                        <span class="japanese">今日は鷲のように際立っている<br>あるいは鳩のようにも<br>昨日は美しい女性が飛んでいた<br>多様な感覚の主観的な知覚。</span>
+                    </div>
+
+                    <div class="stanza farewell-stanza">
+                        <span class="spanish">Sintiendo la finitud<br>Tú detrás con tu abanico de luces sigues ardiente<br>Yo delante entro en la oscuridad<br>Y paso a la frialdad, un adiós, la despedida.</span>
+                        <span class="english">Feeling finitude<br>You behind with your fan of lights still burning<br>I ahead enter the darkness<br>And I pass to the coldness, a goodbye, the farewell.</span>
+                        <span class="english_paz">Feeling finity.<br>You behind with your fan of lights are sTill burning<br>I in front enter into Darkness.<br>And pass into coldness, a goodbye, the farewell</span>
+                        <span class="italian">Sentendo la finitezza<br>Tu dietro con il tuo ventaglio di luci continui ardente<br>Io davanti entro nell'oscurità<br>E passo alla freddezza, un addio, il congedo.</span>
+                        <span class="french">Sentant la finitude<br>Toi derrière avec ton éventail de lumières tu restes ardent<br>Moi devant j'entre dans l'obscurité<br>Et je passe à la froideur, un adieu, la séparation.</span>
+                        <span class="portuguese">Sentindo a finitude<br>Tu atrás com o teu leque de luzes continuas ardente<br>Eu à frente entro na escuridão<br>E passo para a frieza, um adeus, a despedida.</span>
+                        <span class="german">Die Endlichkeit spürend<br>Du dahinter mit deinem Fächer aus Licht brennst weiter<br>Ich davor trete ein in die Dunkelheit<br>Und gehe über in die Kälte, ein Lebewohl, der Abschied.</span>
+                        <span class="chinese">感受着局限<br>你在身后，手持光之折扇，依然炽热<br>我在身前，步入黑暗<br>我走向寒冷，一声再见，诀别。</span>
+                        <span class="arabic">شاعرًا بالفناء<br>أنتِ في الخلف بمروحة أضوائكِ تظلين متقدة<br>وأنا في الأمام أدخل في الظلام<br>وأنتقل إلى البرود، وداع، الفراق.</span>
+                        <span class="russian">Ощущая конечность бытия<br>Ты позади со своим веером лучей горишь всё так же жарко<br>Я впереди вхожу в темноту<br>И перехожу в холод, прощание, разлуку.</span>
+                        <span class="ukrainian">Відчуваючи конечність<br>Ти позаду зі своїм віялом променів палахкотиш так само жарко<br>Я попереду входжу в темряву<br>I переходжу в холод, прощання, розлуку.</span>
+                        <span class="japanese">有限を感じながら<br>光の扇を手にしたあなたは後ろで燃え続け<br>私は前で暗闇へと入る<br>And I pass to the coldness, a goodbye, the farewell.<br>そして冷たさ、さようなら、別れへと移行する。</span>
+                    </div>
+
+                    <div class="stanza night-stanza">
+                        <span class="spanish">En la noche de lentejuelas<br>que tu brillo me recuerda<br>En la noche de poesía<br>En la noche de la hermosa luna<br>En la noche del descanso<br>Hasta mañana te esperaré.</span>
+                        <span class="english">In the night of sequins<br>that your brilliance reminds me of<br>In the night of poetry<br>In the night of the beautiful moon<br>In the night of rest<br>Until tomorrow I will wait for you.</span>
+                        <span class="english_paz">Ín the night of sequins<br>That your Shine reminds me<br>In the night of poetry<br>In the night of beautiful Moon<br>Until tomorrow I Will wait for you</span>
+                        <span class="italian">Nella notte di paillettes<br>che il tuo splendore mi ricorda<br>Nella notte di poesia<br>Nella notte della bella luna<br>Nella notte del riposo<br>Fino a domani ti aspetterò.</span>
+                        <span class="french">Dans la nuit de paillettes<br>que ton éclat me rappelle<br>Dans la nuit de poésie<br>Dans la nuit de la belle lune<br>Dans la nuit du repos<br>Jusqu'à demain je t'attendrai.</span>
+                        <span class="portuguese">Na noite de lantejoulas<br>que o teu brilho me recorda<br>Na noite de poesia<br>Na noite da bela lua<br>Na noite do descanso<br>Até amanhã te esperarei.</span>
+                        <span class="german">In der Paillettennacht<br>an die mich dein Glanz erinnert<br>In der Nacht der Poesie<br>In der Nacht des schönen Mondes<br>In der Nacht der Ruhe<br>Bis morgen werde ich auf dich warten.</span>
+                        <span class="chinese">在闪烁的亮片之夜<br>你的光芒令我忆起<br>在诗意之夜<br>在皎洁明月之夜<br>在安息之夜<br>直到明天，我将等待着你。</span>
+                        <span class="arabic">في ليلة الترتر<br>التي يذكرني بها بريقكِ<br>في ليلة الشعر<br>في ليلة القمر الجميل<br>في ليلة الراحة<br>حتى الغد سأنتظركِ.</span>
+                        <span class="russian">В ночь пайеток<br>о которой мне напоминает твой блеск<br>В ночь поэзии<br>В ночь прекрасной луны<br>В ночь отдыха<br>До завтра я буду ждать тебя.</span>
+                        <span class="ukrainian">У ніч паєток<br>про яку мені нагадує твій блиск<br>У ніч поезії<br>У ніч прекрасного місяця<br>У ніч відпочинку<br>До завтра я чекатиму на тебе.</span>
+                        <span class="japanese">スパンコールの夜に<br>あなたの輝きを思い出させる<br>詩の夜に<br>美しい月の夜に<br>休息の夜に<br>明日まであなたを待っています。</span>
+                    </div>
+
+                    <div class="stanza dawn-stanza">
+                        <span class="spanish">Oh sol, es un gran consuelo saber que te encontraré,<br>y en el amanecer silencioso saldré y te saludaré.<br><br>Círculo rojo de fuego<br>besando mi dulce ser,<br>nuevo día iluminado<br>en que mi vida amaré</span>
+                        <span class="english">Oh sun, it is a great comfort to know that I will find you,<br>and in the silent dawn I will go out and greet you.<br><br>Red circle of fire<br>kissing my sweet being,<br>new illuminated day<br>in which I will love my life</span>
+                        <span class="english_paz">Oh! Sun, It is a Great Comfort knowing that I Will find you<br>And in the silent sunrise I Will Go out and Greet you<br>Red circle of fire<br>Kissing my Sweet Being<br>New day illuminated<br>In Which I Will Love my life</span>
+                        <span class="italian">Oh sole, è un grande conforto sapere che ti troverò,<br>e nel silenzioso mattino uscirò e ti saluterò.<br><br>Cerchio rosso di fuoco<br>che bacia il mio dolce essere,<br>nuovo giorno illuminato<br>in cui la mia vita amerò</span>
+                        <span class="french">Oh soleil, c'est un grand réconfort de savoir que je te retrouverai,<br>et dans l'aube silencieuse je sortirai et te saluerai.<br><br>Cercle rouge de feu<br>baisant mon doux être,<br>nouveau jour illuminé<br>où ma vie j'aimerai.</span>
+                        <span class="portuguese">Oh sol, é um grande consolo saber que te encontrarei,<br>e no amanhecer silencioso sairei e te saudarei.<br><br>Círculo vermelho de fogo<br>beijando o meu doce ser,<br>novo dia iluminado<br>em que a minha vida amarei.</span>
+                        <span class="german">Oh Sonne, es ist ein großer Trost zu wissen, dass ich dich finden werde,<br>und im stillen Morgengrauen werde ich hinausgehen und dich grüßen.<br><br>Roter Kreis aus Feuer<br>der mein süßes Wesen küsst,<br>neuer erleuchteter Tag<br>an dem ich mein Leben lieben werde.</span>
+                        <span class="chinese">哦，太阳，知道我终将与你相遇，是极大的慰藉，<br>在静谧的黎明，我将走出门外，向你致敬。<br><br>赤红的烈焰之圆<br>吻着我甜美的生命，<br>崭新而明亮的一天<br>我将深爱我的生活。</span>
+                        <span class="arabic">يا شمس، إنه لعزاء كبير أن أعرف أنني سألقاكِ،<br>وفي الفجر الصامت سأخرج وأحييكِ.<br><br>دائرة حمراء من نار<br>تقبل كياني العذب،<br>يوم جديد مضيء<br>سأحب فيه حياتي.</span>
+                        <span class="russian">О солнце, великое утешение знать, что я встречу тебя,<br>и в безмолвном рассвете я выйду и поприветствую тебя.<br><br>Красный огненный круг<br>целующий мое нежное существо,<br>новый озаренный день<br>в котором я буду любить свою жизнь.</span>
+                        <span class="ukrainian">О сонце, велика втіха знати, що я зустріну тебе,<br>і в беззвучному світанку я вийду і привітаю тебе.<br><br>Червоне вогняне коло<br>що цілує моє ніжне єство,<br>новий осяяний день<br>у якому я любитиму своє життя.</span>
+                        <span class="japanese">おお太陽よ、あなたに巡り会えると知ることは大きな慰めです、<br>And in the silent sunrise I Will Go out and Greet you.<br><br>赤く燃える火の輪が<br>愛おしい我が存在に口づけし、<br>新しく照らされた一日に<br>私は我が人生を愛するだろう。</span>
+                    </div>
+
+                    <div class="signature">María Paz Arés Osset</div>
+                </div>
+            </div>
+
+            <div class="music-section py-5 reveal">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                    <div class="album-card">
+                        <img src="songs/album_es.png" alt="Español">
+                        <h3>Atardeceres</h3>
+                        <p>Symphonic House (ES)</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="songs/album_en.png" alt="English">
+                        <h3>Sunsets</h3>
+                        <p>Progressive House (EN)</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="songs/album_it.png" alt="Italiano">
+                        <h3>Tramonti</h3>
+                        <p>Symphonic House (IT)</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="songs/album_ru.png" alt="Русский">
+                        <h3>Закаты</h3>
+                        <p>Dark Groove Pop (RU)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Frame -->
+            <div class="py-5 reveal" style="text-align:center;">
+                <div style="padding: 20px; background: rgba(0,0,0,0.4); border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); display: inline-block;">
+                    <img src="background.png" alt="Atardecer" style="max-width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                    <p style="margin-top: 1.5rem; font-family: 'Caveat', cursive; font-size: 1.5rem; color: var(--accent-gold);">"Variaciones de la luz... sintiendo la infinitud."</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

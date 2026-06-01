@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Desinfección - Nuestra Piscina</title>
+    <style>
+        :root {
+            --primary: #005b96;
+            --bg-color: #f4f7f6;
+            --text: #333;
+            --liquid: #d9534f;
+            --solid: #f0ad4e;
+            --salt: #5cb85c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            flex: 1 1 300px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+        }
+
+        .card.liquid::before {
+            background-color: var(--liquid);
+        }
+
+        .card.solid::before {
+            background-color: var(--solid);
+        }
+
+        .card.salt::before {
+            background-color: var(--salt);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .liquid h2 {
+            color: var(--liquid);
+        }
+
+        .solid h2 {
+            color: var(--solid);
+        }
+
+        .salt h2 {
+            color: var(--salt);
+        }
+
+        .pro-con {
+            margin-top: 1.5rem;
+        }
+
+        .pro-con ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pro-con li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .pro-con li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--salt);
+            font-weight: bold;
+        }
+
+        .pro-con.cons li::before {
+            content: '✗';
+            color: var(--liquid);
+        }
+
+        .table-container {
+            margin-top: 4rem;
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .best {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .worst {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+
+        .conclusion {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>El Futuro de Nuestra Piscina</h1>
+        <p>Salud, Seguridad Laboral y Cumplimiento Normativo</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <p>Estimados vecinos, para tomar la mejor decisión sobre el mantenimiento de nuestra piscina este verano, es
+                vital conocer los hechos objetivos. Aquí presentamos una comparativa clara entre el sistema actual y las
+                alternativas más seguras para nuestra salud y la de los trabajadores.</p>
+        </div>
+
+        <div class="cards">
+            <!-- Tarjeta Cloro Líquido -->
+            <div class="card liquid">
+                <h2>⚠️ Cloro Líquido</h2>
+                <p><em>(Hipoclorito Sódico industrial en bidones). El sistema del pasado.</em></p>
+                <div class="pro-con cons">
+                    <h3>El Problema:</h3>
+                    <ul>
+                        <li><strong>Riesgo Laboral Extremo:</strong> Salpicaduras cáusticas. Ya ha causado daños y
+                            quemaduras en la ropa de los socorristas (2024 y 2025).</li>
+                        <li><strong>Daña la Salud:</strong> Genera picos descontrolados de Cloraminas. Es el responsable
+                            de los ojos rojos, picores, alergias dérmicas y problemas respiratorios.</li>
+                        <li><strong>Al borde de la legalidad:</strong> La normativa (RD 742/2013) prohíbe echarlo a
+                            mano. Requiere costosas obras de dosificación automática y cuartos ventilados anti-gases.
+                        </li>
+                        <li><strong>Desequilibra el pH:</strong> Altera constantemente el agua, perdiendo poder
+                            desinfectante.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tarjeta Cloro Sólido -->
+            <div class="card solid">
+                <h2>⏳ Cloro Sólido</h2>
+                <p><em>(Granulado / Pastillas). La medida de urgencia inmediata.</em></p>
+                <div class="pro-con">
+                    <h3>Ventajas sobre el líquido:</h3>
+                    <ul>
+                        <li><strong>100% Seguro para los trabajadores:</strong> Elimina de raíz el riesgo de derrames
+                            corrosivos y salpicaduras al socorrista.</li>
+                        <li><strong>Mejor desinfección:</strong> No altera tanto el pH del agua, permitiendo que el
+                            ácido hipocloroso actúe con mucha más fuerza contra parásitos y bacterias.</li>
+                        <li><strong>Sin obras:</strong> Se puede aplicar desde hoy mismo sin riesgo legal de sanciones
+                            por almacenamiento peligroso.</li>
+                    </ul>
+                </div>
+                <div class="pro-con cons">
+                    <ul>
+                        <li><em>Sigue sin destruir las cloraminas que irritan la piel (solución temporal).</em></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tarjeta Clorador Salino -->
+            <div class="card salt">
+                <h2>✅ Clorador Salino</h2>
+                <p><em>La solución definitiva y moderna.</em></p>
+                <div class="pro-con">
+                    <h3>Por qué es el futuro:</h3>
+                    <ul>
+                        <li><strong>Salud Absoluta:</strong> Destruye las cloraminas de forma natural. Se acabó el olor
+                            a químico, la piel seca, las alergias y los ojos rojos.</li>
+                        <li><strong>Seguridad Total:</strong> Adiós a los bidones tóxicos en la comunidad. Solo se
+                            necesita sal común.</li>
+                        <li><strong>Generación In Situ:</strong> Fabrica el desinfectante exacto cuando se necesita de
+                            forma automática, cumpliendo la Ley al 100%.</li>
+                        <li><strong>Rentable:</strong> Aunque tiene una mínima inversión inicial, el ahorro en químicos
+                            a lo largo de los años es inmenso.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h2>Resumen Comparativo Directo</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Líquido (Actual)</th>
+                        <th>Sólido (Urgencia)</th>
+                        <th>Sal (Definitivo)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Riesgo Laboral (Quemaduras)</strong></td>
+                        <td class="worst">Muy Alto</td>
+                        <td class="best">Nulo</td>
+                        <td class="best">Nulo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Irritación Ocular y Dérmica</strong></td>
+                        <td class="worst">Alta (Cloraminas)</td>
+                        <td>Media</td>
+                        <td class="best">Nula</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cumplimiento de Ley de Biocidas</strong></td>
+                        <td class="worst">Requiere obras/inversión</td>
+                        <td>Cumple</td>
+                        <td class="best">Cumple sin esfuerzo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calidad del Agua</strong></td>
+                        <td class="worst">Inestable / Picos de pH</td>
+                        <td>Estable</td>
+                        <td class="best">Perfecta / Sedosa</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conclusion">
+            <h2>Nuestra Propuesta</h2>
+            <p><strong>Urgencia 2026:</strong> Exigir el uso inmediato de Cloro Sólido para evitar accidentes laborales
+                y mejorar el pH este verano.</p>
+            <p><strong>Objetivo:</strong> Votar a favor de la Cloración Salina para proteger nuestra salud, nuestra piel
+                y el dinero de la comunidad a largo plazo.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

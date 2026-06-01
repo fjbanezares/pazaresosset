@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madres Buscadoras — Poesía de Paz Arés Osset</title>
+    <meta name="description" content="Madres Buscadoras: Un homenaje a las madres que buscan a sus hijos desaparecidos en México. Un grito de paz, justicia y amor que no conoce fronteras.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
+</head>
+<body data-lang="spanish">
+
+    <canvas id="effects-canvas"></canvas>
+
+    <div class="main-wrapper">
+        
+        <!-- Logo -->
+        <a class="brand" href="https://www.pazaresosset.es">
+            <img src="../../logopazares.png" class="paz-logo" alt="Paz Arés Osset">
+        </a>
+
+        <!-- Language & Navigation Selector -->
+        <nav class="lang-nav">
+            <div class="nav-container">
+                <a href="../../linktree.html" class="nav-btn linktree-btn">
+                    <i class="fas fa-link"></i>
+                    <span>Linktree</span>
+                </a>
+                <div class="lang-selector">
+                    <button class="current-lang" id="langBtn">
+                        <span id="currentFlag">🇪🇸</span>
+                        <span id="langText">Castellano</span>
+                    </button>
+                    <div class="lang-dropdown" id="langPicker">
+                        <div class="lang-opt" data-value="spanish"><span>🇪🇸</span> Castellano</div>
+                        <div class="lang-opt" data-value="english"><span>🇬🇧</span> English</div>
+                        <div class="lang-opt" data-value="italian"><span>🇮🇹</span> Italiano</div>
+                        <div class="lang-opt" data-value="chinese"><span>🇨🇳</span> 中文</div>
+                        <div class="lang-opt" data-value="arabic"><span>🇦🇪</span> العربية</div>
+                        <div class="lang-opt" data-value="russian"><span>🇷🇺</span> Русский</div>
+                        <div class="lang-opt" data-value="ukrainian"><span>🇺🇦</span> Українська</div>
+                        <div class="lang-opt" data-value="aleman"><span>🇩🇪</span> Deutsch</div>
+                        <div class="lang-opt" data-value="frances"><span>🇫🇷</span> Français</div>
+                        <div class="lang-opt" data-value="japones"><span>🇯🇵</span> 日本語</div>
+                        <div class="lang-opt" data-value="portuges"><span>🇵🇹</span> Português</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Poem Container -->
+        <section class="poem-section">
+            <div class="container">
+                
+                <div class="poem-wrapper">
+                    <!-- Title -->
+                    <h1 class="poem-title reveal">
+                        <span class="spanish">Madres Buscadoras</span>
+                        <span class="english">Searching Mothers</span>
+                        <span class="italian">Madri Cercatrici</span>
+                        <span class="chinese">寻子母亲</span>
+                        <span class="arabic">الأمهات الباحثات</span>
+                        <span class="russian">Ищущие Матери</span>
+                        <span class="ukrainian">Шукаючі Матері</span>
+                        <span class="aleman">Suchende Mütter</span>
+                        <span class="frances">Mères Chercheuses</span>
+                        <span class="japones">探し続ける母親たち</span>
+                        <span class="portuges">Mães Buscadoras</span>
+                    </h1>
+
+                    <!-- Body -->
+                    <div class="poem-content reveal-stagger">
+                        
+                        <!-- Stanza 1 -->
+                        <div class="stanza">
+                            <span class="spanish">Doce uvas en vuelo a Mendoza,<br>nacía el 2010 con deseos de Paz.</span>
+                            <span class="english">Twelve grapes in flight to Mendoza,<br>2010 was born with wishes for Peace.</span>
+                            <span class="italian">Dodici uva in volo verso Mendoza,<br>nasceva il 2010 con desideri di Pace.</span>
+                            <span class="chinese">十二颗飞往门多萨的葡萄，<br>在对和平的期盼中，2010年诞生了。</span>
+                            <span class="arabic">اثنتا عشرة حبة عنب طائرة إلى ميندوزا،<br>وُلد عام 2010 محملًا بأماني السلام.</span>
+                            <span class="russian">Двенадцать виноградин в полете на Мендосу,<br>рождался 2010 год с пожеланиями Мира.</span>
+                            <span class="ukrainian">Дванадцять виноградин у польоті на Мендосу,<br>народжувався 2010 рік із побажаннями Миру.</span>
+                            <span class="aleman">Zwölf Trauben im Flug nach Mendoza,<br>das Jahr 2010 wurde mit Wünschen nach Frieden geboren.</span>
+                            <span class="frances">Douze raisins en vol vers Mendoza,<br>l'année 2010 naissait avec des désirs de Paix.</span>
+                            <span class="japones">メンドーサへと飛ぶ十二粒の葡萄、<br>平和への願いとともに二〇一〇年が生まれた。</span>
+                            <span class="portuges">Doze uvas em voo para Mendoza,<br>nascia o ano de 2010 com desejos de Paz.</span>
+                        </div>
+
+                        <!-- Stanza 2 - Call / March -->
+                        <div class="stanza call-stanza">
+                            <span class="spanish">En la cima de Punta de Vacas,<br>participando en la Marcha,<br>la Primera Marcha Mundial de la Paz.<br>Viviendo su final apoteósico.</span>
+                            <span class="english">On the summit of Punta de Vacas,<br>participating in the March,<br>the First World March for Peace.<br>Living its triumphant climax.</span>
+                            <span class="italian">Sulla cima di Punta de Vacas,<br>partecipando alla Marcia,<br>la Prima Marcia Mondiale per la Pace.<br>Vivendo il suo finale apoteotico.</span>
+                            <span class="chinese">在蓬塔德瓦卡斯的山巅，<br>参加着和平大游行，<br>第一届世界和平大游行。<br>体验着它那壮丽的终章。</span>
+                            <span class="arabic">على قمة بونتا دي فاكاس،<br>مُشَارِكَةً في المسيرة،<br>المسيرة العالمية الأولى من أجل السلام،<br>عائشةً خاتمتها الملحمية الرائعة.</span>
+                            <span class="russian">На вершине Пунта-де-Вакас,<br>участвуя в Марше,<br>Первом Всемирном Марше за Мир,<br>переживая его грандиозный финал.</span>
+                            <span class="ukrainian">На вершині Пунта-де-Вакас,<br>беручи участь у Марші,<br>Першому Всесвітньому Марші за Мир,<br>переживаючи його грандіозний фінал.</span>
+                            <span class="aleman">Auf dem Gipfel von Punta de Vacas,<br>teilnehmend am Marsch,<br>dem Ersten Weltmarsch für den Frieden,<br>sein grandioses Finale erlebend.</span>
+                            <span class="frances">Au sommet de Punta de Vacas,<br>participant à la Marche,<br>la Première Marche Mondiale pour la Paix,<br>vivant son final apothéosique.</span>
+                            <span class="japones">プンタ・デ・バカスの頂で、<br>第一回世界平和大行進に<br>参加しながら、<br>その見事なフィナーレを体験する。</span>
+                            <span class="portuges">No topo de Punta de Vacas,<br>participando da Marcha,<br>a Primeira Marcha Mundial pela Paz,<br>vivendo seu final apoteótico.</span>
+                        </div>
+
+                        <!-- Stanza 3 - Empathy / Voices -->
+                        <div class="stanza embrace-stanza">
+                            <span class="spanish">Allí escuché las voces de las madres ...<br>que buscaban y buscaban<br>Madres que guardan amados nombres.</span>
+                            <span class="english">There I heard the voices of the mothers ...<br>who searched and searched,<br>Mothers who guard beloved names.</span>
+                            <span class="italian">Lì ho ascoltato le voci delle madri ...<br>que cercavano e cercavano,<br>Madri che custodiscono amati nomi.</span>
+                            <span class="chinese">在那里，我听到了母亲们的声音 ...<br>她们在不停地寻找，寻找，<br>守护着深爱名字的母亲们。</span>
+                            <span class="arabic">هناك استمعتُ إلى أصوات الأمهات ...<br>اللائي يبحثن ويبحثن،<br>أمهات يحفظن أسماء حبيبة.</span>
+                            <span class="russian">Там я услышала голоса матерей ...<br>которые искали и искали,<br>Матерей, что хранят любимые имена.</span>
+                            <span class="ukrainian">Там я почула голоси матерів ...<br>які шукали й шукали,<br>Матерів, що бережуть кохані імена.</span>
+                            <span class="aleman">Dort hörte ich die Stimmen der Mütter ...<br>die suchten und suchten,<br>Mütter, die geliebte Namen hüten.</span>
+                            <span class="frances">Là-bas, j'ai entendu les voix des mères ...<br>qui cherchaient et cherchaient encore,<br>Des mères qui gardent des noms aimés.</span>
+                            <span class="japones">そこで私は母親たちの声を聞いた...<br>探し、探し続ける母親たち、<br>愛する名前を胸に抱く母親たち。</span>
+                            <span class="portuges">Ali escutei as vozes das mães ...<br>que buscavam e buscavam,<br>Mães que guardam amados nomes.</span>
+                        </div>
+
+                        <!-- Stanza 4 - Realization -->
+                        <div class="stanza realization-stanza">
+                            <span class="spanish">Y comprendí:<br>que el amor de una madre<br>no conoce fronteras.</span>
+                            <span class="english">And I understood:<br>that a mother's love<br>knows no borders.</span>
+                            <span class="italian">E ho capito:<br>che l'amore di una madre<br>non conosce confini.</span>
+                            <span class="chinese">于是我明白了：<br>母亲的爱<br>没有国界。</span>
+                            <span class="arabic">وفهمتُ:<br>أن حب الأم<br>لا يعرف حدودًا.</span>
+                            <span class="russian">И я поняла:<br>что материнская любовь<br>не знает границ.</span>
+                            <span class="ukrainian">І я зрозуміла:<br>що материнська любов<br>не знає кордонів.</span>
+                            <span class="aleman">Und ich verstand:<br>dass die Liebe einer Mutter<br>keine Grenzen kennt.</span>
+                            <span class="frances">Et j'ai compris :<br>que l'amour d'une mère<br>ne connaît pas de frontières.</span>
+                            <span class="japones">そして理解した、<br>母親の愛に<br>国境はないのだと。</span>
+                            <span class="portuges">E compreendi:<br>que o amor de uma mãe<br>não conhece fronteiras.</span>
+                        </div>
+
+                        <!-- Stanza 5 - Protest / Mexico -->
+                        <div class="stanza protest-stanza">
+                            <span class="spanish">Hoy mi corazón viaja hasta México,<br>donde la tierra es interrogada,<br>con palas y bastones.<br>¿Dónde está mi hijo?<br>¿Dónde está mi hija?<br>¿Dónde están mis hijos?</span>
+                            <span class="english">Today my heart travels to Mexico,<br>where the earth is questioned,<br>with shovels and sticks.<br>Where is my son?<br>Where is my daughter?<br>Where are my children?</span>
+                            <span class="italian">Oggi il mio cuore viaggia verso il Messico,<br>dove la terra viene interrogata,<br>con pale e bastoni.<br>Dov'è mio figlio?<br>Dov'è mia figlia?<br>Dove sono i miei figli?</span>
+                            <span class="chinese">今天，我的心飞到了墨西哥，<br>在那里，土地被不停地拷问，<br>用铁铲与木棍。<br>我的儿子在哪里？<br>我的女儿在哪里？<br>我的孩子们在哪里？</span>
+                            <span class="arabic">اليوم يسافر قلبي إلى المكسيك،<br>حيث تُستجوب الأرض كل يوم،<br>بالمجارف والعصي.<br>أين ابني؟<br>أين ابنتي؟<br>أين أطفالي؟</span>
+                            <span class="russian">Сегодня мое сердце летит в Мексику,<br>где землю допрашивают<br>лопатами и тростями.<br>Где мой сын?<br>Где моя дочь?<br>Где мои дети?</span>
+                            <span class="ukrainian">Сьогодні моє серце лине до Мексики,<br>де землю допитують<br>лопатами й палицями.<br>Де мій син?<br>Де моя донька?<br>Де мої діти?</span>
+                            <span class="aleman">Heute reist mein Herz nach Mexiko,<br>wo die Erde befragt wird,<br>mit Schaufeln und Stöcken.<br>Wo ist mein Sohn?<br>Wo ist meine Tochter?<br>Wo sind meine Kinder?</span>
+                            <span class="frances">Aujourd'hui, mon cœur voyage jusqu'au Mexique,<br>où la terre est interrogée,<br>avec des pelles et des bâtons.<br>Où est mon fils ?<br>Où est ma fille ?<br>Où sont mes enfants ?</span>
+                            <span class="japones">今日、私の心はメキシコへと旅立つ、<br>そこでは土地が問い詰められている、<br>シャベルと杖によって。<br>私の息子はどこ？<br>私の娘はどこ？<br>私の子供たちはどこ？</span>
+                            <span class="portuges">Hoje meu coração viaja até ao México,<br>onde a terra é interrogada,<br>com pás e bastões.<br>Onde está meu filho?<br>Onde está minha filha?<br>Onde estão meus filhos?</span>
+                        </div>
+
+                        <!-- Stanza 6 -->
+                        <div class="stanza">
+                            <span class="spanish">Allí donde una fotografía<br>es lo que le queda,<br>la esperanza nunca abandona.</span>
+                            <span class="english">There where a photograph<br>is all that is left to her,<br>hope never abandons.</span>
+                            <span class="italian">Lì dove una fotografia<br>è ciò che le rimane,<br>la speranza non abbandona mai.</span>
+                            <span class="chinese">在那仅存一张照片<br>相伴的地方，<br>希望永远不会熄灭。</span>
+                            <span class="arabic">هناك حيث الصورة الفوتوغرافية<br>هي كل ما تبقى لها،<br>والأمل لا يغادرها أبدًا.</span>
+                            <span class="russian">Там, где фотография —<br>это всё, что у нее осталось,<br>надежда никогда не угасает.</span>
+                            <span class="ukrainian">Там, де фотографія —<br>це все, що в неї залишилося,<br>надія ніколи не згасає.</span>
+                            <span class="aleman">Dort, wo ein Foto<br>alles ist, was ihr bleibt,<br>verlässt die Hoffnung sie nie.</span>
+                            <span class="frances">Là où une photographie<br>est tout ce qui lui reste,<br>l'espoir ne l'abandonne jamais.</span>
+                            <span class="japones">写真一枚だけが<br>残されたその場所で、<br>希望が彼女たちを見捨てることはない。</span>
+                            <span class="portuges">Ali onde uma fotografia<br>é o que lhe resta,<br>a esperança nunca abandona.</span>
+                        </div>
+
+                        <!-- Stanza 7 - Path -->
+                        <div class="stanza embrace-stanza">
+                            <span class="spanish">Y las vi caminar.<br>Preguntar al viento, al silencio<br>Buscando un abrazo pendiente.</span>
+                            <span class="english">And I saw them walk.<br>Ask the wind, ask the silence,<br>Seeking a pending embrace.</span>
+                            <span class="italian">E le ho viste camminare.<br>Chiedere al vento, al silenzio,<br>Cercando un abbraccio in sospeso.</span>
+                            <span class="chinese">我看见她们行进。<br>向风发问，向沉默发问，<br>寻找那份未竟的拥抱。</span>
+                            <span class="arabic">ورأيتهن يمشين.<br>يسألن الريح، يسألن الصمت،<br>بحثًا عن عناق معلق.</span>
+                            <span class="russian">И я видела, как они шли.<br>Вопрошали ветер, тишину,<br>В поисках несостоявшихся объятий.</span>
+                            <span class="ukrainian">І я бачила, як вони йшли.<br>Питали вітер, тишу,<br>Шукаючи незавершених обіймів.</span>
+                            <span class="aleman">Und ich sah sie gehen.<br>Den Wind befragen, die Stille,<br>Auf der Suche nach einer ausstehenden Umarmung.</span>
+                            <span class="frances">Et je les ai vues marcher.<br>Demander au vent, au silence,<br>Cherchant une étreinte suspendue.</span>
+                            <span class="japones">そして彼女たちが歩く姿を見た。<br>風に問い、沈黙に問い、<br>果たされぬ抱擁を求めながら。</span>
+                            <span class="portuges">E as vi caminhar.<br>Perguntar ao vento, ao silêncio,<br>Buscando um abraço pendente.</span>
+                        </div>
+
+                        <!-- Stanza 8 - Aggression -->
+                        <div class="stanza aggression-stanza">
+                            <span class="spanish">En la inhumanidad de México<br>por buscar a su hijo,<br>las persiguen, Las amenazan.<br>Y Las matan ...</span>
+                            <span class="english">In the inhumanity of Mexico<br>for seeking their child,<br>they are persecuted, they are threatened.<br>And they are killed ...</span>
+                            <span class="italian">Nell'inumanità del Messico<br>per cercare il proprio figlio,<br>le perseguitano, le minacciano.<br>E le uccidono ...</span>
+                            <span class="chinese">在墨西哥的残酷现实中，<br>仅因寻找自己的孩子，<br>她们被追捕，被威胁。<br>甚至被杀害 ...</span>
+                            <span class="arabic">في قسوة المكسيك،<br>لمجرد البحث عن ابنهن،<br>يلاحقونهن، يهددونهن.<br>ويقتلونهن ...</span>
+                            <span class="russian">В бесчеловечной жестокости Мексики<br>за поиски своего ребенка<br>их преследуют, им угрожают.<br>И их убивают ...</span>
+                            <span class="ukrainian">У нелюдській жорстокості Мексики<br>за пошуки своєї дитини<br>їх переслідують, їм погрожують.<br>І їх убивають ...</span>
+                            <span class="aleman">In der Unmenschlichkeit Mexikos,<br>weil sie nach ihrem Kind suchen,<br>verfolgen sie sie, bedrohen sie sie.<br>Und sie töten sie ...</span>
+                            <span class="frances">Dans l'inhumanité du Mexique,<br>pour avoir chercher son enfant,<br>on les poursuit, on les menace.<br>Et on les tue ...</span>
+                            <span class="japones">メキシコの非情さの中で、<br>我が子を探すというだけで、<br>彼女たちは追われ、脅される。<br>そして殺される...</span>
+                            <span class="portuges">Na desumanidade do México,<br>por buscar o seu filho,<br>elas são perseguidas, ameaçadas.<br>E são mortas ...</span>
+                        </div>
+
+                        <!-- Stanza 9 - Realization -->
+                        <div class="stanza realization-stanza">
+                            <span class="spanish">Como si AMAR fuera un delito ...</span>
+                            <span class="english">As if LOVING were a crime ...</span>
+                            <span class="italian">Come se AMARE fosse un delitto ...</span>
+                            <span class="chinese">仿佛“爱”是一种罪行 ...</span>
+                            <span class="arabic">كأن الحب جريمة ...</span>
+                            <span class="russian">Как будто ЛЮБИТЬ — это преступление ...</span>
+                            <span class="ukrainian">Немовби ЛЮБИТЬ — це злочин ...</span>
+                            <span class="aleman">Als ob LIEBEN ein Verbrechen wäre ...</span>
+                            <span class="frances">Comme si AIMER était un crime ...</span>
+                            <span class="japones">まるで「愛すること」が罪であるかのように...</span>
+                            <span class="portuges">Como se AMAR fosse um crime ...</span>
+                        </div>
+
+                        <!-- Stanza 10 - Salvation -->
+                        <div class="stanza salvation-stanza">
+                            <span class="spanish">Pero ninguna madre se rinde.<br>Se transforman en camino,<br>en memoria y luz.</span>
+                            <span class="english">But no mother surrenders.<br>They transform themselves into paths,<br>into memory and light.</span>
+                            <span class="italian">Ma nessuna madre si arrende.<br>Si trasformano in cammino,<br>in memoria e luce.</span>
+                            <span class="chinese">但没有一位母亲会屈服。<br>她们化作道路，<br>化作记忆与光芒。</span>
+                            <span class="arabic">لكن لا توجد أم تستسلم.<br>إنهن يتحولن إلى طريق،<br>إلى ذاكرة وضياء.</span>
+                            <span class="russian">Но ни одна мать не сдается.<br>Они превращаются в дорогу,<br>в память и свет.</span>
+                            <span class="ukrainian">Але жодна матір не здається.<br>Вони перетворюються на шлях,<br>на пам'ять і світло.</span>
+                            <span class="aleman">Aber keine Mutter gibt auf.<br>Sie verwandeln sich in einen Weg,<br>in Erinnerung und Licht.</span>
+                            <span class="frances">Mais aucune mère ne se rend.<br>Elles se transforment en chemin,<br>en mémoire et en lumière.</span>
+                            <span class="japones">しかし、屈する母親は一人もいない。<br>彼女たちは道となり、<br>記憶となり、光となる。</span>
+                            <span class="portuges">Mas nenhuma mãe se rende.<br>Elas se transformam em caminho,<br>em memória e luz.</span>
+                        </div>
+
+                        <!-- Stanza 11 -->
+                        <div class="stanza">
+                            <span class="spanish">Desde esta tierra herida<br>siguen llamando<br>al corazón del mundo.</span>
+                            <span class="english">From this wounded land<br>they keep calling<br>to the heart of the world.</span>
+                            <span class="italian">Da questa terra ferita<br>continuano a chiamare<br>il cuore del mondo.</span>
+                            <span class="chinese">从这片受伤的土地上，<br>她们继续呼唤，<br>呼唤着世界的灵魂。</span>
+                            <span class="arabic">من هذه الأرض الجريحة<br>يواصلن النداء<br>إلى قلب العالم.</span>
+                            <span class="russian">Из этой раненой земли<br>они продолжают взывать<br>к сердцу мира.</span>
+                            <span class="ukrainian">Із цієї пораненої землі<br>вони продовжують кликати<br>до серця світу.</span>
+                            <span class="aleman">Aus dieser verwundeten Erde<br>rufen sie weiterhin<br>das Herz der Welt.</span>
+                            <span class="frances">Depuis cette terre blessée,<br>elles continuent d'appeler<br>le cœur du monde.</span>
+                            <span class="japones">この傷ついた大地から<br>彼女たちは呼びかけ続ける、<br>世界の心へと。</span>
+                            <span class="portuges">Desta terra ferida<br>continuam chamando<br>o coração do mundo.</span>
+                        </div>
+
+                        <!-- Stanza 12 - Love -->
+                        <div class="stanza embrace-stanza">
+                            <span class="spanish">Madre que busca a su hijo,<br>madre que llama a su hijo,<br>con lágrimas y amor.</span>
+                            <span class="english">Mother who searches for her child,<br>mother who calls her child,<br>with tears and love.</span>
+                            <span class="italian">Madre che cerca suo figlio,<br>madre che chiama suo figlio,<br>con lacrime e amore.</span>
+                            <span class="chinese">寻找儿子的母亲，<br>呼唤儿子的母亲，<br>带着泪水与挚爱。</span>
+                            <span class="arabic">أم تبحث عن ابنها،<br>أم تنادي ابنها،<br>بالدموع والحب.</span>
+                            <span class="russian">Мать, которая ищет своего сына,<br>мать, которая зовет своего сына,<br>со слезами и любовью.</span>
+                            <span class="ukrainian">Мати, яка шукає свого сина,<br>мати, яка кличе свого сина,<br>зі сльозами та любов'ю.</span>
+                            <span class="aleman">Mutter, die ihren Sohn sucht,<br>Mutter, die ihren Sohn ruft,<br>mit Tränen und Liebe.</span>
+                            <span class="frances">Mère qui cherche son fils,<br>mère qui appelle son fils,<br>avec des larmes et de l'amour.</span>
+                            <span class="japones">息子を探す母、<br>息子を呼ぶ母、<br>涙と愛を抱いて。</span>
+                            <span class="portuges">Mãe que busca o seu filho,<br>mãe que chama o seu filho,<br>com lágrimas e amor.</span>
+                        </div>
+
+                        <!-- Stanza 13 - Prayer -->
+                        <div class="stanza prayer-stanza">
+                            <span class="spanish">Enciende una luz en México,<br>enciende una luz para Dios.</span>
+                            <span class="english">Light a light in Mexico,<br>light a light for God.</span>
+                            <span class="italian">Accendi una luce in Messico,<br>accendi una luce per Dio.</span>
+                            <span class="chinese">在墨西哥点亮一盏灯，<br>为上帝点亮一盏灯。</span>
+                            <span class="arabic">أشعل نورًا في Mكسيك،<br>أشعل نورًا من أجل الله.</span>
+                            <span class="russian">Зажги свет в Мексике,<br>зажги свет для Бога.</span>
+                            <span class="ukrainian">Засвіти світло в Мексиці,<br>засвіти світло для Бога.</span>
+                            <span class="aleman">Zünde ein Licht in Mexiko an,<br>zünde ein Licht für Gott an.</span>
+                            <span class="frances">Allume une lumière au Mexique,<br>allume une lumière pour Dieu.</span>
+                            <span class="japones">メキシコに光を灯しなさい、<br>神のために光を灯しなさい。</span>
+                            <span class="portuges">Acenda uma luz no México,<br>acenda uma luz para Dios.</span>
+                        </div>
+
+                        <div class="stanza signature">
+                            Paz Arés Osset
+                            <div class="poem-date">30 mayo 2026</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Musical Section -->
+                <div class="music-section mt-5 py-5 reveal">
+                    <h2 class="handwritten text-light mb-5">
+                        <i class="fab fa-spotify mr-2"></i>
+                        <span class="spanish">El poema en forma musical</span>
+                        <span class="english">The poem in musical form</span>
+                        <span class="italian">La poesia in forma musicale</span>
+                        <span class="chinese">音乐形式的诗</span>
+                        <span class="arabic">القصيدة في شكل موسيقي</span>
+                        <span class="russian">Стихотворение в музыкальной форме</span>
+                        <span class="ukrainian">Вірш у музичній формі</span>
+                        <span class="aleman">Das Gedicht in musikalischer Form</span>
+                        <span class="frances">Le poème sous forme musicale</span>
+                        <span class="japones">音楽形式の詩</span>
+                        <span class="portuges">O poema em forma musical</span>
+                    </h2>
+                    <div class="row justify-content-center">
+                        <!-- Spanish Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_es.png" alt="Disco en Castellano">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Castellano</h4>
+                                    <h4 class="english">Spanish Album</h4>
+                                    <h4 class="italian">Disco in Spagnolo</h4>
+                                    <h4 class="chinese">西班牙语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالإسبانية</h4>
+                                    <h4 class="russian">Испанский диск</h4>
+                                    <h4 class="ukrainian">Іспанський диск</h4>
+                                    <h4 class="aleman">Spanisches Album</h4>
+                                    <h4 class="frances">Album en Espagnol</h4>
+                                    <h4 class="japones">スペイン語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Espanhol</h4>
+                                    <p class="small text-warning">Folk Mexicano / Cello</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- English Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_en.png" alt="Disco en Inglés">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Inglés</h4>
+                                    <h4 class="english">English Album</h4>
+                                    <h4 class="italian">Disco in Inglese</h4>
+                                    <h4 class="chinese">英语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالإنجليزية</h4>
+                                    <h4 class="russian">Английский диск</h4>
+                                    <h4 class="ukrainian">Англійський диск</h4>
+                                    <h4 class="aleman">Englisches Album</h4>
+                                    <h4 class="frances">Album en Anglais</h4>
+                                    <h4 class="japones">英語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Inglês</h4>
+                                    <p class="small text-warning">Acoustic Indie Folk</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- French Album -->
+                        <div class="col-6 col-md-4 mb-4">
+                            <div class="album-card">
+                                <img src="songs/album_fr.png" alt="Disco en Francés">
+                                <div class="album-info">
+                                    <h4 class="spanish">Disco en Francés</h4>
+                                    <h4 class="english">French Album</h4>
+                                    <h4 class="italian">Disco in Francese</h4>
+                                    <h4 class="chinese">法语专辑</h4>
+                                    <h4 class="arabic">ألبوم بالفرنسية</h4>
+                                    <h4 class="russian">Французский диск</h4>
+                                    <h4 class="ukrainian">Французький диск</h4>
+                                    <h4 class="aleman">Französisches Album</h4>
+                                    <h4 class="frances">Album en Français</h4>
+                                    <h4 class="japones">フランス語アルバム</h4>
+                                    <h4 class="portuges">Álbum em Francês</h4>
+                                    <p class="small text-warning">Chanson Acoustique / Harpe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inspiration Section -->
+                <div class="inspiration-section mt-5 py-5 reveal">
+                    <h2 class="handwritten text-light mb-5">
+                        <i class="fas fa-seedling mr-2"></i>
+                        <span class="spanish">Lo que inspiró este poema</span>
+                        <span class="english">What inspired this poem</span>
+                        <span class="italian">Cosa ha ispirato questa poesia</span>
+                        <span class="chinese">这首诗的灵感来源</span>
+                        <span class="arabic">ما ألهم هذه القصيدة</span>
+                        <span class="russian">Что вдохновило это стихотворение</span>
+                        <span class="ukrainian">Що надихнуло цей вірш</span>
+                        <span class="aleman">Was dieses Gedicht inspirierte</span>
+                        <span class="frances">Ce qui a inspiré ce poème</span>
+                        <span class="japones">この詩のインスピレーション</span>
+                        <span class="portuges">O que inspirou este poema</span>
+                    </h2>
+                    <div class="inspiration-text">
+                        <span class="spanish">Este poema nació de la profunda conmoción de Paz Arés Osset ante la dolorosa e inhumana realidad de las Madres Buscadoras en México. Mujeres valientes que, armadas solo con palas, bastones y un amor inquebrantable, remueven la tierra cada día buscando los restos de sus hijos desaparecidos. El dolor se multiplica ante la atroz injusticia de saber que, por el solo hecho de buscar justicia y amor, estas madres son perseguidas, amenazadas y cruelmente asesinadas, desamparadas por la protección del Estado y a merced del crimen organizado. En los últimos 15 años, más de 22 buscadoras han sido asesinadas en México.<br><br>Pero en medio de la inhumanidad, este poema es un faro de resistencia. Desde Punta de Vacas, en los Andes, donde comenzó la Marcha Mundial por la Paz en 2010, Paz eleva un grito que no conoce fronteras. Es una llamada a la conciencia humana, una súplica colectiva para que la sociedad no permanezca indiferente. "Ninguna madre se rinde", y en cada vela encendida, hay una promesa eterna de memoria, justicia y luz para Dios.</span>
+                        <span class="english">This poem was born from Paz Arés Osset's profound shock at the painful and inhuman reality of the Searching Mothers in Mexico. Brave women who, armed only with shovels, sticks, and an unbreakable love, dig the earth every day searching for the remains of their disappeared children. The pain is multiplied by the atrocious injustice of knowing that, simply for seeking justice and love, these mothers are persecuted, threatened, and cruelly murdered, without state protection and at the mercy of organized crime. In the last 15 years, more than 22 searching mothers have been killed in Mexico.<br><br>But in the midst of this inhumanity, this poem is a beacon of resistance. From Punta de Vacas, in the Andes, where the World March for Peace began in 2010, Paz raises a cry that knows no borders. It is a call to human conscience, a collective plea so that society does not remain indifferent. "No mother surrenders", and in every lit candle, there is an eternal promise of memory, justice, and light for God.</span>
+                        <span class="italian">Questa poesia è nata dal profondo turbamento di Paz Arés Osset di fronte alla dolorosa e disumana realtà delle Madri Cercatrici in Messico. Donne coraggiose che, armate solo di pale, bastoni e un amore incrollabile, scavano la terra ogni giorno alla ricerca dei resti dei loro figli scomparsi. Il dolore si moltiplica di fronte all'atroce ingiustizia di sapere che, per il solo fatto di cercare giustizia e amore, queste madri vengono perseguitate, minacciate e crudelmente uccise, prive di protezione statale e alla mercé della criminalità organizzata. Negli ultimi 15 anni, più di 22 madri cercatrici sono state assassinate in Messico.<br><br>Ma nel mezzo di questa disumanità, questa poesia è un faro di resistenza. Da Punta de Vacas, nelle Ande, dove è iniziata la Marcia Mondiale per la Pace nel 2010, Paz alza un grido che non conosce confini. È un appello alla coscienza umana, una supplica collettiva affinché la società no rimanga indifferente. "Nessuna madre si arrende", e in ogni candela accesa c'è una promessa eterna di memoria, giustizia e luce per Dio.</span>
+                        <span class="chinese">这首诗诞生于巴斯·阿雷斯·奥塞特对墨西哥寻子母亲们痛苦与非人现实 invest 得到的深刻震撼。这些勇敢 plan 的女性仅凭铁铲、木棍和无比坚贞的爱，每日挖掘着土地，寻找失踪孩子的遗骸。更加令人发指的非正义是，仅因寻找正义与爱，这些母亲便遭到追捕、威胁和残酷杀害，失去国家保护而任由有组织犯罪宰割。在过去的15年中，墨西哥已有超过22名寻子母亲遇害。<br><br>然而在冷酷的现实中，这首诗化作了一盏抗争的明灯。自2010年世界和平大游行始发地安第斯山脉的蓬塔德瓦卡斯起，巴斯发出了超越国界的呐喊。这是一次对人类良知的唤醒，一场集体的呼吁，旨在让社会不再冷漠。“没有一位母亲会屈服”，在点燃的每盏明灯中，都蕴含着对记忆、正义以及上帝之光的永恒诺言。</span>
+                        <span class="arabic">وُلدت هذه القصيدة من صدمة باث أريس أوسيت العميقة أمام الواقع المؤلم واللاإنساني للأمهات الباحثات في المكسيك. نساء شجاعات، متسلحات فقط بالمجارف والعصي وحب لا يتزعزع، ينبشن الأرض كل يوم بحثًا عن رفات أطفالهن المفقودين. يتضاعف الألم أمام الظلم الفادح لمعرفة أنه، لمجرد سعيهن وراء العدالة والحب، يتعرض هؤلاء الأمهات للملاحقة والتهديد والقتل بوحشية، دون أي حماية من الدولة وتحت رحمة الجريمة المنظمة. في السنوات الـ15 الماضية، قُتلت أكثر من 22 باحثة في المكسيك.<br><br>ولكن في وسط هذه اللاإنسانية، تعتبر هذه القصيدة منارة للمقاومة. من بونتا دي فاكاس في جبال الأنديز، حيث بدأت المسيرة العالمية للسلام في عام 2010، ترفع باث صرخة لا تعرف حدودًا. إنها دعوة للضمير الإنساني، ومناشدة جماعية حتى لا يقف المجتمع مكتوف الأيدي. "لا توجد أم تستسلم"، وفي كل شمعة مضاءة، هناك وعد أبدي بالذاكرة والعدالة والنور لله.</span>
+                        <span class="russian">Это стихотворение родилось из глубокого потрясения Пас Арес Оссет перед лицом болезненной и бесчеловечной реальности Ищущих Матерей в Мексике. Храбрые женщины, вооруженные лишь лопатами, посохами и непоколебимой любовью, каждый день раскапывают землю в поисках останков своих пропавших детей. Боль умножается перед лицом ужасающей несправедливости: зная, что просто за поиск справедливости и любви эти матери подвергаются преследованиям, угрозам и жестоким убийствам, оставаясь без защиты государства и во власти организованной преступности. За последние 15 лет в Мексике были убиты более 22 ищущих матерей.<br><br>Но посреди этого бесчеловечия стихотворение становится маяком сопротивления. Из Пунта-де-Вакас в Андах, где в 2010 году начался Всемирный марш за мир, Пас возвышает крик, не знающий границ. Это призыв к человеческой совести, коллективная мольба о том, чтобы общество не оставалось равнодушным. «Ни одна мать не сдается», и в каждой зажженной свече есть вечное обещание памяти, справедливости и света для Бога.</span>
+                        <span class="ukrainian">Цей вірш народився з глибокого потрясіння Пас Арес Оссет перед обличчям болючої та нелюдської реальності Шукаючих Матерів у Мексиці. Хоробрі жінки, озброєні лише лопатами, палицями та непохитною любов'ю, щодня розкопують землю в пошуках останків своїх зниклих безвісти дітей. Біль помножується перед обличчям жахливої несправедливості: знаючи, що просто за пошук справедливості та любові ці матері зазнають переслідувань, погроз і жорстоких вбивств, залишаючись без захисту держави та у владі організованої злочинності. За останні 15 років у Мексиці було вбито понад 22 матері-шукачки.<br><br>Але серед цього нелюдства вірш стає маяком опору. З Пунта-де-Вакас в Андах, де в 2010 році розпочався Всесвітній марш за мир, Пас підносить крик, що не знає кордонів. Це заклик до людської совісті, колективне благання про те, щоб суспільство не залишалося байдужим. «Жодна матір не здається», і в кожній запаленій свічці є вічна обіцянка пам'яті, справедливості та світла для Бога.</span>
+                        <span class="aleman">Dieses Gedicht entstand aus Paz Arés Ossets tiefer Erschütterung über die schmerzhafte und unmenschliche Realität der Suchenden Mütter in Mexiko. Tapfere Frauen, nur mit Schaufeln, Stöcken und einer unerschütterlichen Liebe bewaffnet, graben jeden Tag die Erde um, um nach den sterblichen Überresten ihrer verschwundenen Kinder zu suchen. Der Schmerz vervielfacht sich angesichts der grausamen Ungerechtigkeit zu wissen, dass diese Mütter, nur weil sie Gerechtigkeit und Liebe suchen, verfolgt, bedroht und grausam ermordet werden, schutzlos vor dem Staat und dem organisierten Verbrechen ausgeliefert. In den letzten 15 Jahren wurden in Mexiko mehr als 22 suchende Mütter getötet.<br><br>Doch mitten in dieser Unmenschlichkeit ist dieses Gedicht ein Leuchtfeuer des Widerstands. Von Punta de Vacas in den Anden aus, wo 2010 der Weltmarsch für den Frieden begann, erhebt Paz einen Schrei, der keine Grenzen kennt. Es ist ein Appell an das menschliche Gewissen, ein kollektives Plädoyer, damit die Gesellschaft nicht gleichgültig bleibt. "Keine Mutter gibt auf", und in jeder entzündeten Kerze liegt ein ewiges Versprechen an Erinnerung, Gerechtigkeit und Licht für Gott.</span>
+                        <span class="frances">Ce poème est né du profond bouleversement de Paz Arés Osset face à la douloureuse et inhumaine réalité des Mères Chercheuses au Mexique. Des femmes courageuses qui, armées seulement de pelles, de bâtons et d'un amour inébranlable, retournent la terre chaque jour à la recherche des restes de leurs enfants disparus. La douleur se multiplie face à l'atroce injustice de savoir que, pour le seul fait de chercher la justice et l'amour, ces mères sont poursuivies, menacées et cruellement assassinées, privées de la protection de l'État et à la merci du crime organisé. Au cours des 15 dernières années, plus de 22 chercheuses ont été assassinées au Mexique.<br><br>Mais au milieu de l'inhumanité, ce poème est un phare de résistance. Depuis Punta de Vacas, dans les Andes, où a débuté la Marche Mondiale pour la Paix en 2010, Paz élève un cri qui ne connaît pas de frontières. C'est un appel à la conscience humaine, un plaidoyer collectif pour que la société ne reste pas indifférente. "Aucune mère ne se rend", et dans chaque bougie allumée, il y a une promesse éternelle de mémoire, de justice et de lumière pour Dieu.</span>
+                        <span class="japones">この詩は、メキシコの「探し続ける母親たち」の苦痛に満ちた非人道的な現実に、パス・アレス・オセットが深く衝撃を受けたことから生まれました。シャベルと杖、そして揺るぎない愛だけを武器に、行方不明になった我が子の遺骨を求めて毎日土を掘り返す勇敢な女性たち。正義と愛を求めるというだけで、これらの母親たちが追われ、脅され、残酷に殺害され、国家の保護もなく組織犯罪のなすがままになっているという非道な不条理に、痛みは倍増します。過去15年間で、メキシコでは22人以上の捜索する母親が殺害されました。<br><br>しかし、その非道さの中で、この詩は抵抗の灯台となっています。2010年に世界平和大行進が始まったアンデス山脈のプンタ・デ・バカスから、パスは国境なき叫びを上げます。それは人類の良心への呼びかけであり、社会が冷淡なままでいないための集団的な懇願です。「屈する母親は一人もいない」。そして点灯されたすべての蝋燭の中に、記憶、正義、そして神のための光の永遠の約束があります。</span>
+                        <span class="portuges">Este poema nasceu da profunda comoção de Paz Arés Osset diante da dolorosa e desumana realidade das Mães Buscadoras no México. Mulheres corajosas que, armadas apenas com pás, bastões e um amor inabalável, removem a terra todos os dias em busca dos restos mortais dos seus filhos desaparecidos. A dor multiplica-se diante da atroz injustiça de saber que, pelo simples fato de buscar justiça e amor, estas mães são perseguidas, ameaçadas e cruelmente assassinadas, desamparadas pela proteção do Estado e à mercê do crime organizado. Nos últimos 15 anos, mais de 22 buscadoras foram assassinadas no México.<br><br>Mas no meio da desumanidade, este poema é um farol de resistência. Desde Punta de Vacas, nos Andes, onde começou a Marcha Mundial pela Paz em 2010, Paz eleva um grito que não conhece fronteiras. É um apelo à consciência humana, uma súplica coletiva para que a sociedade não permaneça indiferente. "Nenhuma mãe se rende", e em cada vela acesa, há uma promessa eterna de memória, justiça e luz para Deus.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2026 Paz Arés Osset - 
+                <span class="spanish">Todos los derechos reservados</span>
+                <span class="english">All rights reserved</span>
+                <span class="italian">Tutti i diritti riservati</span>
+                <span class="chinese">版权所有</span>
+                <span class="arabic">كل الحقوق محفوظة</span>
+                <span class="russian">Все права защищены</span>
+                <span class="ukrainian">Всі права захищені</span>
+                <span class="aleman">Alle Rechte vorbehalten</span>
+                <span class="frances">Tous droits réservés</span>
+                <span class="japones">無断転載を禁じます</span>
+                <span class="portuges">Todos os direitos reservados</span>
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

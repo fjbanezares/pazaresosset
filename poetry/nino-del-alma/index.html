@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niño Del Alma — Paz Arés Osset</title>
+    <meta name="description" content="Niño Del Alma — Un poema de contemplación, inocencia y ternura bajo un cielo de fuego de Paz Arés Osset.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
+</head>
+<body data-lang="spanish">
+    <canvas id="effects-canvas"></canvas>
+    <div class="main-wrapper">
+        <a class="brand" href="https://www.pazaresosset.es"><img src="../../logopazares.png" class="paz-logo" alt="Paz Arés Osset"></a>
+        
+        <nav class="lang-nav">
+            <div class="nav-container">
+                <a href="../../linktree.html" class="nav-btn linktree-btn"><i class="fas fa-link"></i><span>Linktree</span></a>
+                <div class="lang-selector">
+                    <button class="current-lang" id="langBtn"><span id="currentFlag">🇪🇸</span><span id="langText">Castellano</span></button>
+                    <div class="lang-dropdown" id="langPicker">
+                        <div class="lang-opt" data-value="spanish"><span>🇪🇸</span> Castellano</div>
+                        <div class="lang-opt" data-value="english"><span>🇬🇧</span> English</div>
+                        <div class="lang-opt" data-value="portuges"><span>🇵🇹</span> Português</div>
+                        <div class="lang-opt" data-value="italian"><span>🇮🇹</span> Italiano</div>
+                        <div class="lang-opt" data-value="frances"><span>🇫🇷</span> Français</div>
+                        <div class="lang-opt" data-value="aleman"><span>🇩🇪</span> Deutsch</div>
+                        <div class="lang-opt" data-value="chinese"><span>🇨🇳</span> 中文</div>
+                        <div class="lang-opt" data-value="arabic"><span>🇦🇪</span> العربية</div>
+                        <div class="lang-opt" data-value="russian"><span>🇷🇺</span> Русский</div>
+                        <div class="lang-opt" data-value="ukrainian"><span>🇺🇦</span> Українська</div>
+                        <div class="lang-opt" data-value="japones"><span>🇯🇵</span> 日本語</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="poem-section">
+            <div class="container">
+                <div class="poem-wrapper">
+                    <h1 class="poem-title reveal">
+                        <span class="spanish">Niño Del Alma</span>
+                        <span class="english">Child of My Soul</span>
+                        <span class="portuges">Menino da Minha Alma</span>
+                        <span class="italian">Bambino dell'Anima</span>
+                        <span class="frances">Enfant de mon Âme</span>
+                        <span class="aleman">Kind meiner Seele</span>
+                        <span class="chinese">灵魂的孩子</span>
+                        <span class="arabic">طفل الروح</span>
+                        <span class="russian">Дитя Души</span>
+                        <span class="ukrainian">Дитя Душі</span>
+                        <span class="japones">愛しき我が子</span>
+                    </h1>
+
+                    <div class="poem-content reveal">
+                        <!-- Stanza 1 (Nature/Storm) - sentence-stanza (austere) -->
+                        <div class="stanza sentence-stanza">
+                            <span class="spanish">El cielo llora, llora; con furia llora.<br>Luna creciente.<br>El viento ruge; huele la tierra, la tierra cruje.<br>Surcan destellos relucientes,<br>cielo de fuego<br>de oscuridades y claridades.</span>
+                            <span class="english">The sky cries, cries; with fury it cries.<br>Crescent moon.<br>The wind roars; the earth smells, the earth creaks.<br>Glistening flashes streak,<br>sky of fire<br>of darkness and clarity.</span>
+                            <span class="portuges">O céu chora, chora; com fúria chora.<br>Lua crescente.<br>O vento ruge; a terra cheira, a terra estala.<br>Deslizam faíscas brilhantes,<br>céu de fogo<br>de trevas e claridades.</span>
+                            <span class="italian">Il cielo piange, piange; con furia piange.<br>Luna crescente.<br>Il vento ruggisce; la terra odora, la terra scricchiola.<br>Sfrecciano bagliori lucenti,<br>cielo di fuoco<br>di oscurità e chiarezza.</span>
+                            <span class="frances">Le ciel pleure, pleure ; avec fureur il pleure.<br>Lune croissante.<br>Le vent rugit ; la terre sent bon, la terre craque.<br>Des éclairs étincelants sillonnent,<br>ciel de feu<br>d'obscurités et de clartés.</span>
+                            <span class="aleman">Der Himmel weint, weint; wütend weint er.<br>Zunehmender Mond.<br>Der Wind brüllt; die Erde riecht, die Erde knirscht.<br>Glänzende Blitze zucken,<br>Feuerhimmel<br>aus Dunkelheit und Klarheit.</span>
+                            <span class="chinese">天空在哭，在哭；愤怒地哭泣。<br>新月。<br>风在怒吼；大地下雨，大地在碎裂。<br>闪烁的光芒划过，<br>火红的天空<br>充满黑暗与光明。</span>
+                            <span class="arabic">السماء تبكي، تبكي؛ بغضب تبكي.<br>هلال.<br>الريح تزمجر؛ تفوح رائحة الأرض، الأرض تصدر صريراً.<br>تخترق ومضات لامعة،<br>سماء من نار<br>من ظلمات وأنوار.</span>
+                            <span class="russian">Небо плачет, плачет; неистово плачет.<br>Растущая луна.<br>Ветер ревет; земля пахнет, земля трещит.<br>Пролетают яркие искры,<br>огненное небо<br>тьмы и ясности.</span>
+                            <span class="ukrainian">Небо плаче, плаче; люто плаче.<br>Молодий місяць.<br>Вітер реве; земля пахне, земля тріщить.<br>Пролітають яскраві іскри,<br>вогняне небо<br>темряви та ясності.</span>
+                            <span class="japones">天は泣き、泣く。激しく泣き崩れる。<br>三日月。<br>風は吠え、大地は薫り、大地は軋む。<br>まばゆい閃光が走り抜け、<br>炎の空が<br>暗闇と明晰さを織りなす。</span>
+                        </div>
+
+                        <!-- Stanza 2 (Sleeping child/love) - embrace-stanza -->
+                        <div class="stanza embrace-stanza">
+                            <span class="spanish">La vida sigue, todo se mueve<br>y en el suelo un niño duerme.<br>Niño de mi alma, amo tu calma,<br>Tu cielo puro,<br>Tu ser de juego.<br>Que nada rompa tu dulce sueño.<br>Amor latente.</span>
+                            <span class="english">Life goes on, everything moves<br>and on the ground a child sleeps.<br>Child of my soul, I love your calm,<br>Your pure sky,<br>Your playful being.<br>Let nothing break your sweet dream.<br>Latent love.</span>
+                            <span class="portuges">A vida continua, tudo se move<br>e no chão um menino dorme.<br>Menino da minha alma, amo a tua calma,<br>Teu céu puro,<br>Teu ser brincalhão.<br>Que nada quebre o teu doce sonho.<br>Amor latente.</span>
+                            <span class="italian">La vita va avanti, tutto si muove<br>e sul terreno un bambino dorme.<br>Bambino dell'anima mia, amo la tua calma,<br>Il tuo cielo puro,<br>Il tuo essere giocoso.<br>Che nulla rompa il tuo dolce sogno.<br>Amore latente.</span>
+                            <span class="frances">La vie continue, tout bouge<br>et sur le sol un enfant dort.<br>Enfant de mon âme, j'aime ton calme,<br>Ton ciel pur,<br>Ton être de jeu.<br>Que rien ne brise ton doux rêve.<br>Amour latent.</span>
+                            <span class="aleman">Das Leben geht weiter, alles bewegt sich<br>und auf dem Boden schläft ein Kind.<br>Kind meiner Seele, ich liebe deine Ruhe,<br>Deinen reinen Himmel,<br>Dein spielerisches Wesen.<br>Möge nichts deinen süßen Traum stören.<br>Latente Liebe.</span>
+                            <span class="chinese">生命在继续，一切都在运转<br>在地上一个孩子沉睡着。<br>我灵魂的孩子，我爱你的平静，<br>你纯净的天空，<br>你爱玩耍的生命。<br>愿什么都无法打破你甜美的梦境。<br>潜藏的爱。</span>
+                            <span class="arabic">الحياة تستمر، كل شيء يتحرك<br>وعلى الأرض طفل ينام.<br>يا طفل روحي، أعشق هدوءك،<br>سماءك النقية،<br>كيانك المرح.<br>ألا يكسر أي شيء حلمك العذب.<br>حب كامن.</span>
+                            <span class="russian">Жизнь идет своим чередом, все движется,<br>а на земле спит ребенок.<br>Дитя души моей, я люблю твой покой,<br>Твое чистое небо,<br>Твою игривую суть.<br>Пусть ничто не нарушит твой сладкий сон.<br>Скрытая любовь.</span>
+                            <span class="ukrainian">Життя триває, все рухається,<br>а на землі спить дитина.<br>Дитя моєї душі, я люблю твій спокій,<br>Твоє чисте небо,<br>Твою грайливу суть.<br>Нехай ніщо не порушить твій солодкий сон.<br>Прихована любов.</span>
+                            <span class="japones">人生は続き、すべては移ろい、<br>大地の上で子供が眠る。<br>我が愛しき子よ、お前の静けさを愛す、<br>お前の純粋な空、<br>お前のお茶目な姿を。<br>何ものもお前の甘い夢を壊さぬように。<br>秘められた愛よ。</span>
+                        </div>
+
+                        <!-- Stanza 3 (Philosopher child/Neptune) - call-stanza -->
+                        <div class="stanza call-stanza">
+                            <span class="spanish">Oscuros ojos me preguntaron:<br>¿Qué me importa Neptuno? ¿Qué nombre raro?<br>Niño filósofo,<br>Has de vivir<br>y hay unas reglas que hay que seguir.</span>
+                            <span class="english">Dark eyes asked me:<br>What do I care about Neptune? What a strange name!<br>Philosopher child,<br>You must live<br>and there are rules that you must follow.</span>
+                            <span class="portuges">Olhos escuros perguntaram-me:<br>Que me importa Neptuno? Que nome estranho?<br>Menino filósofo,<br>Hás de viver<br>e há regras que deves seguir.</span>
+                            <span class="italian">Occhi oscuri mi hanno chiesto:<br>Cosa m'importa di Nettuno? Che strano nome?<br>Bambino filosofo,<br>Devi vivere<br>e ci sono regole da seguire.</span>
+                            <span class="frances">Des yeux sombres m'ont demandé :<br>Qu'est-ce que Neptune m'importe ? Quel nom bizarre !<br>Enfant philosophe,<br>Tu dois vivre<br>et il y a des règles qu'il faut suivre.</span>
+                            <span class="aleman">Dunkle Augen fragten mich:<br>Was kümmert mich Neptun? Was für ein seltsamer Name?<br>Philosophenkind,<br>Du musst leben<br>und es gibt Regeln, die man befolgen muss.</span>
+                            <span class="chinese">黑色的眼睛问我：<br>海王星关我什么事？好奇怪的名字！<br>哲学家的孩子，<br>你必须活下去<br>而且必须遵守一些规则。</span>
+                            <span class="arabic">سألتني عيون مظلمة:<br>ما شأني بنبتون؟ ما هذا الاسم الغريب؟<br>يا طفل الفيلسوف،<br>عليك أن تعيش<br>وهناك قواعد يجب اتباعها.</span>
+                            <span class="russian">Темные глаза спросили меня:<br>Какое мне дело до Нептуна? Что за странное имя?<br>Дитя-философ,<br>Тебе предстоит жить,<br>и есть правила, которым нужно следовать.</span>
+                            <span class="ukrainian">Темні очі запитали мене:<br>Яке мені діло до Нептуна? Що за дивне ім'я?<br>Дитя-філософ,<br>Тобі належить жити,<br>і є правила, яких слід дотримуватися.</span>
+                            <span class="japones">黒い瞳が私に問いかけた。<br>海王星なんてどうでもいい。なんて奇妙な名前なの？<br>哲学者なる幼子よ、<br>お前は生きるのだ、<br>そして従うべきルールがあるのだと。</span>
+                        </div>
+
+                        <!-- Stanza 4 (Smiling child/truth) - salvation-stanza -->
+                        <div class="stanza salvation-stanza">
+                            <span class="spanish">El cielo llora, llora la vida.<br>Niño no llores, ríe con fuerza.<br>Niño sonriente.<br>Niño naciente.<br>Mi sol ardiente.</span>
+                            <span class="english">The sky cries, life cries.<br>Child do not cry, laugh with strength.<br>Smiling child.<br>Rising child.<br>My burning sun.</span>
+                            <span class="portuges">O céu chora, chora a vida.<br>Menino não chores, ri com força.<br>Menino sorridente.<br>Menino nascente.<br>Meu sol ardente.</span>
+                            <span class="italian">Il cielo piange, piange la vita.<br>Bambino non piangere, ridi forte.<br>Bambino sorridente.<br>Bambino nascente.<br>Mio sole ardente.</span>
+                            <span class="frances">Le ciel pleure, la vie pleure.<br>Enfant ne pleure pas, ris avec force.<br>Enfant souriant.<br>Enfant naissant.<br>Mon soleil ardent.</span>
+                            <span class="aleman">Der Himmel weint, das Leben weint.<br>Kind weine nicht, lache laut.<br>Lächelndes Kind.<br>Neues Kind.<br>Meine brennende Sonne.</span>
+                            <span class="chinese">天空在哭泣，生命在哭泣。<br>孩子不要哭，大声地笑吧。<br>微笑的孩子。<br>新生的孩子。<br>我炽热的太阳。</span>
+                            <span class="arabic">السماء تبكي، الحياة تبكي.<br>يا طفل لا تبكِ، اضحك بقوة.<br>طفل مبتسم.<br>طفل وليد.<br>شمسي الحارقة.</span>
+                            <span class="russian">Небо плачет, жизнь плачет.<br>Дитя, не плачь, смейся во весь голос.<br>Улыбающийся ребенок.<br>Рождающийся ребенок.<br>Мое горячее солнце.</span>
+                            <span class="ukrainian">Небо плаче, життя плаче.<br>Дитя, не плач, смійся з усієї сили.<br>Усміхнене дитя.<br>Дитя, що народжується.<br>Моє палке сонце.</span>
+                            <span class="japones">空は泣き、命は涙を流す。<br>我が子よ、泣かないで、力強く笑うのだ。<br>微笑む幼子。<br>生まれ出づる幼子。<br>私の燃え盛る太陽よ。</span>
+                        </div>
+
+                        <div class="stanza signature">María Paz Arés Osset</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Music Section -->
+            <div class="music-section mt-5 py-5 reveal">
+                <h2 class="handwritten text-light mb-5"><i class="fas fa-music mr-2"></i>
+                    <span class="spanish">El poema en forma musical</span>
+                    <span class="english">El poema en forma musical</span>
+                    <span class="portuges">El poema en forma musical</span>
+                    <span class="italian">El poema en forma musical</span>
+                    <span class="frances">El poema en forma musical</span>
+                    <span class="aleman">El poema en forma musical</span>
+                    <span class="chinese">El poema en forma musical</span>
+                    <span class="arabic">El poema en forma musical</span>
+                    <span class="russian">El poema en forma musical</span>
+                    <span class="ukrainian">El poema en forma musical</span>
+                    <span class="japones">El poema en forma musical</span>
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="album-card">
+                            <img src="songs/album_es.png" alt="Disco en Castellano">
+                            <div class="album-info">
+                                <p class="small" style="color:var(--accent-gold);">NIÑO DEL ALMA</p>
+                                <p class="small">
+                                    <span class="spanish">Música en español</span>
+                                    <span class="english">Música en español</span>
+                                    <span class="portuges">Música en español</span>
+                                    <span class="italian">Música en español</span>
+                                    <span class="frances">Música en español</span>
+                                    <span class="aleman">Música en español</span>
+                                    <span class="chinese">Música en español</span>
+                                    <span class="arabic">Música en español</span>
+                                    <span class="russian">Música en español</span>
+                                    <span class="ukrainian">Música en español</span>
+                                    <span class="japones">Música en español</span>
+                                </p>
+                                <p class="small" style="opacity:0.35;"><i class="fab fa-spotify" style="color:#1DB954;margin-right:5px;"></i><span class="spanish">Disponible pronto</span><span class="english">Coming soon</span><span class="portuges">Disponível em breve</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="album-card">
+                            <img src="songs/album_en.png" alt="English Album">
+                            <div class="album-info">
+                                <p class="small" style="color:var(--accent-gold);">CHILD OF MY SOUL</p>
+                                <p class="small">
+                                    <span class="spanish">Música en inglés</span>
+                                    <span class="english">Música en inglés</span>
+                                    <span class="portuges">Música en inglés</span>
+                                    <span class="italian">Música en inglés</span>
+                                    <span class="frances">Música en inglés</span>
+                                    <span class="aleman">Música en inglés</span>
+                                    <span class="chinese">Música en inglés</span>
+                                    <span class="arabic">Música en inglés</span>
+                                    <span class="russian">Música en inglés</span>
+                                    <span class="ukrainian">Música en inglés</span>
+                                    <span class="japones">Música en inglés</span>
+                                </p>
+                                <p class="small" style="opacity:0.35;"><i class="fab fa-spotify" style="color:#1DB954;margin-right:5px;"></i><span class="spanish">Disponible pronto</span><span class="english">Coming soon</span><span class="portuges">Disponível em breve</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="album-card">
+                            <img src="songs/album_fr.png" alt="French Album">
+                            <div class="album-info">
+                                <p class="small" style="color:var(--accent-gold);">ENFANT DE MON ÂME</p>
+                                <p class="small">
+                                    <span class="spanish">Música en francés</span>
+                                    <span class="english">Música en francés</span>
+                                    <span class="portuges">Música en francés</span>
+                                    <span class="italian">Música en francés</span>
+                                    <span class="frances">Música en francés</span>
+                                    <span class="aleman">Música en francés</span>
+                                    <span class="chinese">Música en francés</span>
+                                    <span class="arabic">Música en francés</span>
+                                    <span class="russian">Música en francés</span>
+                                    <span class="ukrainian">Música en francés</span>
+                                    <span class="japones">Música en francés</span>
+                                </p>
+                                <p class="small" style="opacity:0.35;"><i class="fab fa-spotify" style="color:#1DB954;margin-right:5px;"></i><span class="spanish">Disponible pronto</span><span class="english">Coming soon</span><span class="portuges">Disponível em breve</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inspiration Section -->
+            <div class="inspiration-section mt-5 py-5 reveal">
+                <h2 class="handwritten text-light mb-5"><i class="fas fa-feather-alt mr-2"></i>
+                    <span class="spanish">Inspiración</span>
+                    <span class="english">Inspiración</span>
+                    <span class="portuges">Inspiración</span>
+                    <span class="italian">Inspiración</span>
+                    <span class="frances">Inspiración</span>
+                    <span class="aleman">Inspiración</span>
+                    <span class="chinese">Inspiración</span>
+                    <span class="arabic">Inspiración</span>
+                    <span class="russian">Inspiración</span>
+                    <span class="ukrainian">Inspiración</span>
+                    <span class="japones">Inspiración</span>
+                </h2>
+                <div class="inspiration-text">
+                    <span class="spanish">"Niño Del Alma" es una joya de contemplación y ternura que retrata el contraste entre la tormenta exterior y la paz inviolable del sueño infantil. A través de la figura del "niño filósofo", Paz Arés Osset nos conecta con la inocencia ante los misterios del cosmos, recordándonos que, a pesar de las lágrimas de la vida, el deber de la inocencia es brillar como un sol ardiente.</span>
+                    <span class="english">"Child of My Soul" is a gem of contemplation and tenderness that portrays the contrast between the external storm and the inviolable peace of a child's sleep. Through the figure of the "philosopher child," Paz Arés Osset connects us with innocence before the mysteries of the cosmos, reminding us that, despite the tears of life, the duty of innocence is to shine like a burning sun.</span>
+                    <span class="portuges">"Menino da Minha Alma" é uma joia de contemplação e ternura que retrata o contraste entre a tempestade exterior e a paz inviolável do sono infantil. Através do "menino filósofo", Paz Arés Osset liga-nos à inocência face aos mistérios do cosmos, lembrando-nos que, apesar das lágrimas da vida, o dever da inocência é brilhar como um sol ardente.</span>
+                    <span class="italian">"Bambino dell'Anima" è un gioiello di contemplazione e tenerezza che ritrae il contrasto tra la tempesta esterna e la pace inviolabile del sonno infantile. Attraverso la figura del "bambino filosofo", Paz Arés Osset ci connette con l'innocenza davanti ai misteri del cosmo, ricordandoci che, nonostante le lacrime della vita, il dovere dell'innocenza è brillare come un sole ardente.</span>
+                    <span class="frances">"Enfant de mon Âme" est un chef-d'œuvre de contemplation et de tendresse qui dépeint le contraste entre la tempête extérieure et la paix inviolable du sommeil de l'enfant. À travers la figure de l'"enfant philosophe", Paz Arés Osset nous connecte à l'innocence face aux mystères du cosmos, nous rappelant que, malgré les larmes de la vie, le devoir de l'innocence est de briller comme un soleil ardent.</span>
+                    <span class="aleman">"Kind meiner Seele" ist ein Juwel der Kontemplation und Zärtlichkeit, das den Kontrast zwischen dem äußeren Sturm und dem unverletzlichen Frieden des Kinderschlafs darstellt. Durch die Figur des "Philosophenkindes" verbindet uns Paz Arés Osset mit der Unschuld vor den Geheimnissen des Kosmos und erinnert uns daran, dass trotz der Tränen des Lebens die Pflicht der Unschuld darin besteht, wie eine brennende Sonne zu leuchten.</span>
+                    <span class="chinese">《灵魂的孩子》是一首冥想与温柔的杰作，描绘了外界风暴与孩子梦境中神圣不可侵犯的平静之间的对比。帕斯·阿雷斯·奥塞特通过“哲学家的孩子”这一形象，将我们与宇宙奥秘前的天真联系在一起，提醒我们，尽管生命中有泪水，天真的使命依然像炽热的太阳般闪耀。</span>
+                    <span class="arabic">تعتبر قصيدة "طفل الروح" جوهرة من التأمل والرقّة التي تصور التباين بين العاصفة الخارجية والسلام المطلق لنوم الطفل. من خلال شخصية "الطفل الفيلسوف"، تربطنا باث أريس أوسيت بالبراءة أمام أسرار الكون، وتذكرنا بأنه على الرغم من دموع الحياة، فإن واجب البراءة هو أن تشرق كشمس حارقة.</span>
+                    <span class="russian">«Дитя Души» — шедевр созерцания и нежности, отражающий контраст между внешней бурей и нерушимым покоем спящего ребенка. Через образ «ребенка-философа» Пас Арес Оссет призывает нас к невинности перед лицом тайн космоса, напоминая, что вопреки всем слезам жизни долг невинности — сиять, подобно горячему солнцу.</span>
+                    <span class="ukrainian">«Дитя Душі» — це перлина споглядання та ніжності, яка змальовує контраст між зовнішньою бурею та непорушним спокоєм дитячого сну. Через образ «дитини-філософа» Паз Арес Оссет поєднує нас із невинністю перед таємницями космосу, нагадуючи, що, незважаючи на сльози життя, обов’язок невинності — світитися, як палке сонце.</span>
+                    <span class="japones">『愛しき我が子』は、外の嵐と子供の眠りの不可侵の静けさとの対比を描いた、瞑想と慈愛の結晶です。パス・アレス・オセットは「哲学者なる幼子」という姿を通して、宇宙の神秘を前にした純真さへと私たちを導き、人生の涙の中でも、純真さの務めは燃え盛る太陽のように輝き続けることであると教えてくれます。</span>
+                </div>
+            </div>
+
+            <!-- Art Frame Section 1 (Sleeping Child) -->
+            <div class="mt-5 py-5 reveal" style="display:flex;justify-content:center;">
+                <div class="art-frame">
+                    <img src="background.png" alt="Niño Del Alma">
+                    <p class="art-caption">
+                        <span class="spanish">Entre el rugido del viento y el llanto del cielo, el alma encuentra su calma en el sueño del niño.</span>
+                        <span class="english">Between the roar of the wind and the weeping of the sky, the soul finds its calm in the child's sleep.</span>
+                        <span class="portuges">Entre o rugido do vento e o pranto do céu, a alma encontra a sua calma no sono da criança.</span>
+                        <span class="italian">Tra il ruggito del vento e il pianto del cielo, l'anima trova la sua calma nel sonno del bambino.</span>
+                        <span class="frances">Entre le rugissement du vent et les pleurs du ciel, l'âme trouve son calme dans le sommeil de l'enfant.</span>
+                        <span class="aleman">Zwischen dem Brüllen des Windes und dem Weinen des Himmels findet die Seele im Schlaf des Kindes ihre Ruhe.</span>
+                        <span class="chinese">在风的怒吼与天空的哭泣之间，灵魂在孩子的梦境中找到了安宁。</span>
+                        <span class="arabic">بين زمجرة الرياح وبكاء السماء، تجد الروح هدوءها في نوم الطفل.</span>
+                        <span class="russian">Между ревом ветра и плачем неба душа обретает свой покой в детском сне.</span>
+                        <span class="ukrainian">Між ревом вітру і плачем неба душа знаходить свій спокій у дитячому сні.</span>
+                        <span class="japones">風の咆哮と天の涙の間で、魂は眠る子供の中に自らの静けさを見出します。</span>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script src="script.js?v=1.1"></script>
+</body>
+</html>

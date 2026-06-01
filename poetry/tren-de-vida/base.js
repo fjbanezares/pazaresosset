@@ -9,6 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const langSelect = document.getElementById('language-select');
   if (langSelect) langSelect.value = 'spanish';
 
+  // --- Initial state for Spotify ---
+  const initialSpotifyLink = document.getElementById('spotify-link');
+  if (initialSpotifyLink) {
+    initialSpotifyLink.href = 'https://open.spotify.com/album/0SzfSus7uL94B6WU8Jo5hV';
+  }
+  const initialSpotifyIframe = document.getElementById('spotify-iframe');
+  if (initialSpotifyIframe) {
+    initialSpotifyIframe.src = 'https://open.spotify.com/embed/album/0SzfSus7uL94B6WU8Jo5hV?utm_source=generator';
+    initialSpotifyIframe.style.display = 'block';
+  }
+
   // --- Language Selector ---
   if (langSelect) {
     langSelect.addEventListener('change', function () {
@@ -36,16 +47,17 @@ document.addEventListener('DOMContentLoaded', function () {
       };
 
       const spotifyMap = {
-        'spanish': 'placeholder',
-        'english': 'placeholder',
-        'italian': 'placeholder',
-        'russian': 'placeholder',
-        'chinese': 'placeholder',
-        'arabic': 'placeholder',
-        'aleman': 'placeholder',
-        'frances': 'placeholder',
-        'japones': 'placeholder',
-        'portuges': 'placeholder'
+        'spanish': '0SzfSus7uL94B6WU8Jo5hV',
+        'english': '2lYZxDmBIbZfgNr7UqmZoZ',
+        'italian': '1mWU5JwEPgkRrU3xqYO0rM',
+        'russian': '2Hqwkra81fIpb7sFKoYT43',
+        'ukrainian': '2Hqwkra81fIpb7sFKoYT43', // Fallback to Russian
+        'chinese': '0SzfSus7uL94B6WU8Jo5hV',
+        'arabic': '0SzfSus7uL94B6WU8Jo5hV',
+        'aleman': '0SzfSus7uL94B6WU8Jo5hV',
+        'frances': '0SzfSus7uL94B6WU8Jo5hV',
+        'japones': '0SzfSus7uL94B6WU8Jo5hV',
+        'portuges': '0SzfSus7uL94B6WU8Jo5hV'
       };
 
       const audioButtonTexts = {

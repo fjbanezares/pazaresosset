@@ -1,0 +1,20 @@
+Spotify_link_castellano: https://open.spotify.com/album/2wfwtLIpuzVdzYByWG4ZTQ?si=G0p9DK1OSmCOLyRsU5uUSA
+Spotify_iframe_castellano: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2wfwtLIpuzVdzYByWG4ZTQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Spotify_link_ingles: https://open.spotify.com/intl-es/album/0cX7k8W7IvlEF2RLJ92ddu?si=8ItIOpnWT1W2-pCqzOWhHg
+Spotify_iframe_ingles: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/0cX7k8W7IvlEF2RLJ92ddu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Spotify_link_italiano: https://open.spotify.com/album/1PKJ2zMcGgPsTU3KpsVcuG?si=3g4-Qq-2TpW-0ldG7T8s0w
+Spotify_iframe_italiano: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1PKJ2zMcGgPsTU3KpsVcuG?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Spotify_link_chino: https://open.spotify.com/album/2hawVluPMRIlfIjFoqbhoz?si=7lBOD9lXSayvRlTD4vGGJQ
+Spotify_iframe_chino:<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2hawVluPMRIlfIjFoqbhoz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Spotify_link_arabe: 
+Spotify_iframe_arabe: 
+Spotify_link_ruso: https://open.spotify.com/album/4yYCb8WX4q6iEldFjDcDli?si=oNakA5sgR_iKEqzJjokbfg
+Spotify_iframe_ruso: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4yYCb8WX4q6iEldFjDcDli?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Spotify_link_aleman: 
+Spotify_iframe_aleman: 
+Spotify_link_frances: 
+Spotify_iframe_frances: 
+Spotify_link_japones: 
+Spotify_iframe_japones: 
+Spotify_link_portugues: 
+Spotify_iframe_portugues: 

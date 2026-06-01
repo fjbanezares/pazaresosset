@@ -1060,35 +1060,141 @@
 
             </div>
 
-            <!-- Music Section Placeholder -->
+            <!-- Music Section -->
             <div class="container mt-5 text-center">
-                <h2 class="handwritten text-light mb-4">
+                <h2 class="handwritten text-light mb-4 text-warning">
                     <i class="fab fa-spotify text-success mr-2"></i>
-                    <span class="spanish language">Música Sugerida (Próximamente)</span>
-                    <span class="english language">Suggested Music (Coming Soon)</span>
-                    <span class="italian language">Musica Suggerita (Prossimamente)</span>
-                    <span class="chinese language">建议音乐（即将推出）</span>
-                    <span class="arabic language">الموسيقى المقترحة (قريباً)</span>
-                    <span class="russian language">Предлагаемая музыка (Скоро)</span>
-                    <span class="aleman language">Empfohlene Musik (Demnächst)</span>
-                    <span class="frances language">Musique suggérée (Bientôt)</span>
-                    <span class="japones language">おすすめの音楽（間もなく）</span>
-                    <span class="portuges language">Música Sugerida (Em breve)</span>
+                    <span class="spanish language">Canciones del Poema</span>
+                    <span class="english language">Poem Songs</span>
+                    <span class="russian language">Песни к стихотворению</span>
+                    <span class="ukrainian language">Пісні до вірша</span>
+                    <span class="italian language">Canzoni del Poema</span>
+                    <span class="chinese language">诗歌歌曲</span>
+                    <span class="arabic language">أغاني القصيدة</span>
+                    <span class="aleman language">Gedichtlieder</span>
+                    <span class="frances language">Chansons du poème</span>
+                    <span class="japones language">詩の曲</span>
+                    <span class="portuges language">Canções do Poema</span>
                 </h2>
 
-                <div class="row justify-content-center">
-                    <div class="col-md-9 mb-4">
-                        <div id="spotify-player-container">
-                            <div class="p-5 rounded" style="background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2);">
-                                <i class="fab fa-spotify fa-3x mb-3 text-success"></i>
-                                <p>El reproductor se activará cuando la música esté disponible.</p>
+                <!-- Grid of Album Cards -->
+                <div class="row justify-content-center mb-5">
+                    <!-- Album Castellano -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="album-card">
+                            <a href="https://open.spotify.com/album/0SzfSus7uL94B6WU8Jo5hV?si=_quxs-tjRr-J8BIq-NItSw" target="_blank">
+                                <img src="musica_tren_vida/portada del tren de la vida.png" class="album-cover" alt="Canciones en Castellano">
+                            </a>
+                            <div class="album-info">
+                                <div class="album-title">
+                                    <span class="spanish language">Canciones en Castellano</span>
+                                    <span class="english language">Songs in Spanish</span>
+                                    <span class="russian language">Песни на испанском</span>
+                                    <span class="ukrainian language">Пісні іспанською</span>
+                                    <span class="italian language">Canzoni in Spagnolo</span>
+                                    <span class="chinese language">西班牙语歌曲</span>
+                                    <span class="arabic language">أغاني بالإسبانية</span>
+                                    <span class="aleman language">Lieder auf Spanisch</span>
+                                    <span class="frances language">Chansons en Espagnol</span>
+                                    <span class="japones language">スペイン語の曲</span>
+                                    <span class="portuges language">Canções em Espanhol</span>
+                                </div>
+                                <div class="album-artist">Paz Arés Osset</div>
+                                <a href="https://open.spotify.com/album/0SzfSus7uL94B6WU8Jo5hV?si=_quxs-tjRr-J8BIq-NItSw" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
                             </div>
-                            <iframe id="spotify-iframe" style="border-radius:12px; display:none;" src="" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Album Inglés -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="album-card">
+                            <a href="https://open.spotify.com/album/2lYZxDmBIbZfgNr7UqmZoZ?si=eMe9BE6uSay79Yswe-apNw" target="_blank">
+                                <img src="musica_tren_vida/portada del tren de la vida ingles.png" class="album-cover" alt="Canciones en Inglés">
+                            </a>
+                            <div class="album-info">
+                                <div class="album-title">
+                                    <span class="spanish language">Canciones en Inglés</span>
+                                    <span class="english language">Songs in English</span>
+                                    <span class="russian language">Песни на английском</span>
+                                    <span class="ukrainian language">Пісні англійською</span>
+                                    <span class="italian language">Canzoni in Inglese</span>
+                                    <span class="chinese language">英语歌曲</span>
+                                    <span class="arabic language">أغاني بالإنجليزية</span>
+                                    <span class="aleman language">Lieder auf Englisch</span>
+                                    <span class="frances language">Chansons en Anglais</span>
+                                    <span class="japones language">英語の曲</span>
+                                    <span class="portuges language">Canções em Inglês</span>
+                                </div>
+                                <div class="album-artist">Paz Arés Osset</div>
+                                <a href="https://open.spotify.com/album/2lYZxDmBIbZfgNr7UqmZoZ?si=eMe9BE6uSay79Yswe-apNw" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Album Italiano -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="album-card">
+                            <a href="https://open.spotify.com/album/1mWU5JwEPgkRrU3xqYO0rM?si=qpUD_j93RU-Fks9b8IiRSg" target="_blank">
+                                <img src="musica_tren_vida/portada del tren de la vida italiana.png" class="album-cover" alt="Canciones en Italiano">
+                            </a>
+                            <div class="album-info">
+                                <div class="album-title">
+                                    <span class="spanish language">Canciones en Italiano</span>
+                                    <span class="english language">Songs in Italian</span>
+                                    <span class="russian language">Песни на итальянском</span>
+                                    <span class="ukrainian language">Пісні італійською</span>
+                                    <span class="italian language">Canzoni in Italiano</span>
+                                    <span class="chinese language">意大利语歌曲</span>
+                                    <span class="arabic language">أغاني بالإيطالية</span>
+                                    <span class="aleman language">Lieder auf Italienisch</span>
+                                    <span class="frances language">Chansons en Italien</span>
+                                    <span class="japones language">イタリア語の曲</span>
+                                    <span class="portuges language">Canções em Italiano</span>
+                                </div>
+                                <div class="album-artist">Paz Arés Osset</div>
+                                <a href="https://open.spotify.com/album/1mWU5JwEPgkRrU3xqYO0rM?si=qpUD_j93RU-Fks9b8IiRSg" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Album Ruso -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="album-card">
+                            <a href="https://open.spotify.com/album/2Hqwkra81fIpb7sFKoYT43?si=GP--F3WNT8GaSRUOzDPA8A" target="_blank">
+                                <img src="musica_tren_vida/portada del tren de la vida ruso.png" class="album-cover" alt="Canciones en Ruso">
+                            </a>
+                            <div class="album-info">
+                                <div class="album-title">
+                                    <span class="spanish language">Canciones en Ruso</span>
+                                    <span class="english language">Songs in Russian</span>
+                                    <span class="russian language">Песни на русском</span>
+                                    <span class="ukrainian language">Пісні російською</span>
+                                    <span class="italian language">Canzoni in Russo</span>
+                                    <span class="chinese language">俄语歌曲</span>
+                                    <span class="arabic language">أغاني بالروسية</span>
+                                    <span class="aleman language">Lieder auf Russisch</span>
+                                    <span class="frances language">Chansons en Russe</span>
+                                    <span class="japones language">ロシア語の曲</span>
+                                    <span class="portuges language">Canções en Ruso</span>
+                                </div>
+                                <div class="album-artist">Paz Arés Osset</div>
+                                <a href="https://open.spotify.com/album/2Hqwkra81fIpb7sFKoYT43?si=GP--F3WNT8GaSRUOzDPA8A" target="_blank" class="btn btn-sm btn-spotify mt-2">Spotify</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Video Section -->
+
+                <!-- Spotify Embed Player -->
+                <div class="row justify-content-center">
+                    <div class="col-md-9 mb-4">
+                        <div id="spotify-player-container">
+                            <iframe id="spotify-iframe" style="border-radius:12px; display:block;" src="https://open.spotify.com/embed/album/0SzfSus7uL94B6WU8Jo5hV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Section -->
                 <div class="container mt-5">
                     <h2 class="handwritten text-light align-middle text-center">
                         <i class="fab fa-youtube text-danger mr-2"></i>
@@ -1123,7 +1229,27 @@
                         <span class="portuges language">O Poema em Imagens</span>
                     </h2>
                     <div class="mt-4">
-                        <img id="comic-image" src="comic/comic_tren.png" class="img-fluid rounded shadow-lg" alt="Arte del poema" style="max-height: 1000px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.6);">
+                        <img id="comic-image" src="comic/comic_tren.png" class="img-fluid rounded shadow-lg" alt="Arte del poema" style="max-height: none; border: 1px solid rgba(255, 215, 0, 0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 25px rgba(255, 215, 0, 0.15); filter: brightness(1.2) contrast(1.05);">
+                    </div>
+                </div>
+
+                <!-- Background Image Showcase -->
+                <div class="container mt-5 mb-5 text-center">
+                    <h2 class="handwritten text-light mb-4">
+                        <span class="spanish language">Paisaje de Fondo</span>
+                        <span class="english language">Background Landscape</span>
+                        <span class="italian language">Paesaggio di Sfondo</span>
+                        <span class="chinese language">背景风景</span>
+                        <span class="arabic language">منظر الخلفية</span>
+                        <span class="russian language">Фоновый пейзаж</span>
+                        <span class="aleman language">Hintergrundlandschaft</span>
+                        <span class="frances language">Paysage d'arrière-plan</span>
+                        <span class="japones language">背景の風景</span>
+                        <span class="portuges language">Paisagem de Fundo</span>
+                        <span class="ukrainian language">Фоновий пейзаж</span>
+                    </h2>
+                    <div class="mt-4">
+                        <img src="background.png" class="img-fluid rounded shadow-lg" alt="Fondo" style="max-height: none; border: 1px solid rgba(255, 215, 0, 0.35); box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 25px rgba(255, 215, 0, 0.2); filter: brightness(1.25) contrast(1.05);">
                     </div>
                 </div>
 

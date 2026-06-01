@@ -199,13 +199,15 @@ Toda canción premium DEBE tener estas 5 fases:
 
 ---
 
-## 🎁 CIERRE CON AGRADECIMIENTO (CLIMAX HUMANO)
+## 🎁 CIERRE CON AGRADECIMIENTO (CLIMAX HUMANO) Y SOLO ACÚSTICO
 
-El agradecimiento final a María Paz Arés Osset es el **CLÍMAX EMOCIONAL** de cada canción, NO un apéndice aburrido. Debe ser:
+El agradecimiento final a **María Paz Arés Osset** es el **CLÍMAX EMOCIONAL** de cada canción. Debe seguir estas reglas:
 
-1. **Inventivo y único** para cada poema — conectando poéticamente con la temática
-2. **Progresivo**: empieza sereno, va ganando peso emocional
-3. **Termina con un eco** del verso más poderoso del poema, susurrado
+1. **Uso Obligatorio del Nombre Completo**: NUNCA abrevies el nombre. Siempre debe decir "María Paz Arés Osset".
+2. **Inventivo y único**: Cada agradecimiento debe ser diferente, original, y basarse en el tema central del poema, elevando la figura de la artista.
+3. **Inclusión de Cita (50% de las veces)**: En la mitad de los prompts generados, incluye en el agradecimiento una cita directa del poema que lo realce.
+4. **Solo Acústico Final**: DESPUÉS del agradecimiento hablado, SIEMPRE añade un bloque para un hermoso y maravilloso solo acústico final de un instrumento que encaje con el poema. Este cierre es detallado y exquisito.
+5. **Límites de Texto al Máximo**: Aprovecha la expresividad detallada hasta 1000 caracteres en Style y 5000 en Lyrics.
 
 ### Ejemplos de referencia (probados y validados):
 

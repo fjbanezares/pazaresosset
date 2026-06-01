@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Estrategia Legal: Herencia y Colación en Madrid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f5f5f4;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 450px;
+        }
+
+        .nav-btn {
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn.active {
+            background-color: #1e293b;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .checklist-item.checked {
+            text-decoration: line-through;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800">
+
+    <!-- Chosen Palette: Warm neutral background (stone-100) for a calming effect, deep slate (slate-800/900) for authoritative typography, and subtle gold/amber accents for a professional, legal aesthetic. -->
+    <!-- Application Structure Plan: The SPA uses a guided, section-based dashboard layout. It starts with an overview of the legal situation (Context), moves to a visual analysis of time and money (Projections), provides the requested evaluation of Madrid lawyers (Market Analysis), and ends with an interactive checklist (Action Plan). This structure directly addresses the user's confusion, validates their received quote, and provides a structured way to assess the "3 or 4 quotes" they want to get. -->
+    <!-- Visualization & Content Choices: 
+        1. Quote Analysis -> Chart.js Bar Chart -> Visually separates the 500€/1500€/Litigation costs and timelines to make the abstract quote concrete and understandable. 
+        2. Lawyer Archetypes -> Interactive Grid Cards -> Organizes the criteria for selecting a Madrid lawyer into digestible profiles, focusing on "how they breathe" (their approach).
+        3. Visuals -> Unicode Icons -> Used for thematic sectioning and lists, adhering strictly to the NO SVG/Mermaid constraint. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <div class="max-w-6xl mx-auto px-4 py-8">
+
+        <header class="mb-10 text-center">
+            <div
+                class="inline-block bg-slate-900 text-amber-50 px-4 py-1 rounded-full text-sm font-semibold tracking-wide mb-4">
+                🏛️ DERECHO DE SUCESIONES MADRID
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Estrategia Legal: Acción de Colación</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto">Análisis de viabilidad, costes y criterios para la
+                selección de representación letrada en casos de donaciones encubiertas.</p>
+        </header>
+
+        <nav
+            class="flex flex-wrap justify-center gap-2 mb-10 bg-white p-2 rounded-xl shadow-sm border border-slate-200 sticky top-4 z-50">
+            <button onclick="showSection('contexto')" id="btn-contexto"
+                class="nav-btn active px-6 py-2 rounded-lg font-semibold text-slate-600 hover:bg-slate-100">1. Tu
+                Situación</button>
+            <button onclick="showSection('proyeccion')" id="btn-proyeccion"
+                class="nav-btn px-6 py-2 rounded-lg font-semibold text-slate-600 hover:bg-slate-100">2. Tiempos y
+                Costes</button>
+            <button onclick="showSection('abogados')" id="btn-abogados"
+                class="nav-btn px-6 py-2 rounded-lg font-semibold text-slate-600 hover:bg-slate-100">3. Perfiles de
+                Abogados</button>
+            <button onclick="showSection('accion')" id="btn-accion"
+                class="nav-btn px-6 py-2 rounded-lg font-semibold text-slate-600 hover:bg-slate-100">4. Plan de
+                Acción</button>
+        </nav>
+
+        <main class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden min-h-[60vh]">
+
+            <section id="contexto" class="p-8 md:p-12 fade-in">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">Diagnóstico de la
+                    Situación</h2>
+                <p class="text-lg text-slate-700 mb-6">
+                    Esta sección resume el núcleo del conflicto patrimonial. Entender estos conceptos es el primer paso
+                    antes de sentarse con cualquier despacho de abogados en Madrid.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-stone-50 p-6 rounded-xl border border-stone-200">
+                        <h3 class="text-xl font-bold mb-4 text-amber-700">⚖️ El Problema Central</h3>
+                        <ul class="space-y-3 text-slate-700">
+                            <li><span class="font-bold">Hecho:</span> Compraventa de un piso a bajo precio por parte de
+                                una hermana en vida de los progenitores.</li>
+                            <li><span class="font-bold">Calificación Jurídica:</span> Posible <em>Donación
+                                    Encubierta</em> bajo la apariencia de compraventa.</li>
+                            <li><span class="font-bold">Objetivo Legal:</span> Ejercer la <em>Acción de Colación</em>
+                                (Art. 1035 del Código Civil) para que ese bien compute en el cálculo de la legítima y se
+                                reste de la cuota de tu hermana.</li>
+                            <li><span class="font-bold">Contexto:</span> 11 años de desgaste emocional y bloqueo en las
+                                negociaciones desde enero.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <h3 class="text-xl font-bold mb-4 text-slate-800">💡 Análisis del Presupuesto Recibido</h3>
+                        <p class="mb-4 text-slate-700">El presupuesto que te ha dado la primera abogada es
+                            <strong>completamente realista y ético</strong> para el mercado de Madrid. Refleja un
+                            enfoque prudente por fases:
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b border-slate-200 pb-2">
+                                <span>Fase 1: Estudio de viabilidad</span>
+                                <span class="font-bold">500 €</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-slate-200 pb-2">
+                                <span>Fase 2: Negociación extrajudicial (aprox. 1 año)</span>
+                                <span class="font-bold">1.500 €</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 text-amber-700">
+                                <span>Fase 3: Vía judicial (Colación - hasta 3 años)</span>
+                                <span class="font-bold italic">A valorar s/ cuantía</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="proyeccion" class="p-8 md:p-12 hidden">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">Proyección de Tiempos
+                    y Costes</h2>
+                <p class="text-lg text-slate-700 mb-8">
+                    La visualización inferior desglosa el compromiso financiero y temporal de tu caso. Un litigio por
+                    colación es complejo; requiere peritajes e investigación patrimonial. Usa este gráfico para evaluar
+                    si el desgaste mental compensa el valor económico a recuperar.
+                </p>
+
+                <div class="chart-container mb-8">
+                    <canvas id="costChart"></canvas>
+                </div>
+
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg">
+                    <h4 class="font-bold text-amber-800 mb-2">⚠️ Nota sobre la Fase Judicial:</h4>
+                    <p class="text-sm text-amber-900">
+                        Los honorarios de la fase judicial en Madrid (Fase 3) no son fijos. Se calculan según la
+                        <strong>Cuantía del Procedimiento</strong> (el valor del piso que se discute) aplicando los
+                        baremos orientativos del Ilustre Colegio de Abogados de Madrid (ICAM). Además, deberás sumar el
+                        coste del <strong>Procurador</strong> y de un <strong>Perito Tasador</strong> que demuestre que
+                        el precio de venta fue irrisorio.
+                    </p>
+                </div>
+            </section>
+
+            <section id="abogados" class="p-8 md:p-12 hidden">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">Criterios y Perfiles
+                    en Madrid</h2>
+                <p class="text-lg text-slate-700 mb-8">
+                    Para pedir tus 3 o 4 presupuestos, necesitas saber identificar "cómo respira" cada profesional. En
+                    Madrid no buscas un abogado generalista, buscas un experto en Sucesiones. Aquí tienes los cuatro
+                    perfiles que encontrarás y cómo evaluarlos.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border-2 border-slate-100 rounded-xl p-6 hover:border-slate-300 transition-colors cursor-pointer"
+                        onclick="toggleDetails('perfil1')">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900">🤝 El Negociador Estratégico</h3>
+                            <span class="text-2xl">🕊️</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 line-clamp-2" id="desc-perfil1">Especialistas en derecho
+                            colaborativo. Su objetivo es evitar el juzgado a toda costa mediante acuerdos de partición
+                            compensatorios.</p>
+                        <div id="perfil1"
+                            class="hidden mt-4 pt-4 border-t border-slate-100 text-sm text-slate-700 space-y-2">
+                            <p><strong>Cómo respira:</strong> Empático, calmado. Te hablará de mediación, de ceder en
+                                ciertas partidas para ganar tranquilidad.</p>
+                            <p><strong>Recomendable si:</strong> Quieres zanjar el tema rápido aunque pierdas algo de
+                                dinero respecto a lo que te correspondería estrictamente por ley.</p>
+                            <p><strong>Criterio de búsqueda:</strong> Busca despachos que destaquen "Mediación Familiar"
+                                junto a "Herencias".</p>
+                        </div>
+                        <button class="text-amber-600 font-semibold text-sm mt-2 focus:outline-none">Ver análisis
+                            ▼</button>
+                    </div>
+
+                    <div class="border-2 border-slate-100 rounded-xl p-6 hover:border-slate-300 transition-colors cursor-pointer"
+                        onclick="toggleDetails('perfil2')">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900">⚔️ El Litigante Agresivo</h3>
+                            <span class="text-2xl">⚖️</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 line-clamp-2" id="desc-perfil2">Acostumbrados a tribunales. Ven
+                            rápido las lagunas en la compraventa encubierta y van directamente a presionar con la
+                            demanda.</p>
+                        <div id="perfil2"
+                            class="hidden mt-4 pt-4 border-t border-slate-100 text-sm text-slate-700 space-y-2">
+                            <p><strong>Cómo respira:</strong> Directo, técnico, frío. Se enfoca en las pruebas
+                                (trazabilidad del dinero de tus padres, tasación del inmueble).</p>
+                            <p><strong>Recomendable si:</strong> Tus hermanas tienen una postura inamovible (como parece
+                                ser) y el valor del piso justifica meterse en un pleito de 3 años.</p>
+                            <p><strong>Criterio de búsqueda:</strong> Busca despachos con alto índice de litigiosidad en
+                                vía civil. Suelen pedir provisiones de fondos altas.</p>
+                        </div>
+                        <button class="text-amber-600 font-semibold text-sm mt-2 focus:outline-none">Ver análisis
+                            ▼</button>
+                    </div>
+
+                    <div class="border-2 border-slate-100 rounded-xl p-6 hover:border-slate-300 transition-colors cursor-pointer"
+                        onclick="toggleDetails('perfil3')">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900">🏛️ La Boutique de Sucesiones</h3>
+                            <span class="text-2xl">📜</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 line-clamp-2" id="desc-perfil3">Despachos pequeños (2-4 socios)
+                            hiper-especializados única y exclusivamente en herencias complejas en Madrid.</p>
+                        <div id="perfil3"
+                            class="hidden mt-4 pt-4 border-t border-slate-100 text-sm text-slate-700 space-y-2">
+                            <p><strong>Cómo respira:</strong> Académico, exhaustivo. Son los que mejor conocen la
+                                jurisprudencia del Tribunal Supremo sobre donaciones encubiertas.</p>
+                            <p><strong>Recomendable si:</strong> Buscas atención muy personalizada y rigor técnico. El
+                                presupuesto que recibiste encaja mucho con este perfil.</p>
+                            <p><strong>Ejemplos en Madrid:</strong> Despachos tipo ABA Abogadas, Marín & Mateo (tienen
+                                sedes), o bufetes con el apellido del socio fundador + "Especialistas en Herencias".</p>
+                        </div>
+                        <button class="text-amber-600 font-semibold text-sm mt-2 focus:outline-none">Ver análisis
+                            ▼</button>
+                    </div>
+
+                    <div class="border-2 border-slate-100 rounded-xl p-6 hover:border-slate-300 transition-colors cursor-pointer"
+                        onclick="toggleDetails('perfil4')">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900">🏢 El Despacho Multidisciplinar</h3>
+                            <span class="text-2xl">💼</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 line-clamp-2" id="desc-perfil4">Firmas medianas/grandes con
+                            departamentos separados de Civil, Fiscal y Penal.</p>
+                        <div id="perfil4"
+                            class="hidden mt-4 pt-4 border-t border-slate-100 text-sm text-slate-700 space-y-2">
+                            <p><strong>Cómo respira:</strong> Corporativo, protocolario. Te asignarán a un asociado bajo
+                                la supervisión de un socio.</p>
+                            <p><strong>Recomendable si:</strong> Además de la colación, hay un patrimonio inmenso,
+                                empresas familiares de por medio o implicaciones fiscales muy graves.</p>
+                            <p><strong>Advertencia:</strong> Pueden ser los más costosos y, a veces, menos ágiles para
+                                un caso puramente familiar a menos que la cuantía sea millonaria.</p>
+                        </div>
+                        <button class="text-amber-600 font-semibold text-sm mt-2 focus:outline-none">Ver análisis
+                            ▼</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="accion" class="p-8 md:p-12 hidden">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-4">Tu Plan de Acción</h2>
+                <p class="text-lg text-slate-700 mb-8">
+                    Usa esta lista interactiva para guiar tu proceso de selección durante las próximas semanas en
+                    Madrid. Haz clic en las tareas para marcarlas como completadas.
+                </p>
+
+                <div class="bg-stone-50 p-8 rounded-xl border border-stone-200">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Preparación y Entrevistas</h3>
+                    <div class="space-y-3" id="checklist">
+                        <label
+                            class="flex items-start space-x-3 cursor-pointer p-2 hover:bg-stone-100 rounded transition-colors">
+                            <input type="checkbox" class="mt-1 h-5 w-5 rounded text-amber-600 focus:ring-amber-500"
+                                onchange="toggleCheck(this)">
+                            <span class="text-slate-700 checklist-item font-medium">1. Recopilar la Escritura de
+                                Compraventa del piso de tu hermana (pedir Nota Simple o copia en la Notaría si se
+                                conoce).</span>
+                        </label>
+                        <label
+                            class="flex items-start space-x-3 cursor-pointer p-2 hover:bg-stone-100 rounded transition-colors">
+                            <input type="checkbox" class="mt-1 h-5 w-5 rounded text-amber-600 focus:ring-amber-500"
+                                onchange="toggleCheck(this)">
+                            <span class="text-slate-700 checklist-item font-medium">2. Seleccionar 3 despachos
+                                "Boutique" o especialistas en Madrid (descartar generalistas).</span>
+                        </label>
+                        <label
+                            class="flex items-start space-x-3 cursor-pointer p-2 hover:bg-stone-100 rounded transition-colors">
+                            <input type="checkbox" class="mt-1 h-5 w-5 rounded text-amber-600 focus:ring-amber-500"
+                                onchange="toggleCheck(this)">
+                            <span class="text-slate-700 checklist-item font-medium">3. En la entrevista, preguntar
+                                explícitamente: <em>"¿Qué porcentaje de sus casos de colación se resuelven sin ir a
+                                    juicio?"</em> (Mide si son negociadores o litigantes).</span>
+                        </label>
+                        <label
+                            class="flex items-start space-x-3 cursor-pointer p-2 hover:bg-stone-100 rounded transition-colors">
+                            <input type="checkbox" class="mt-1 h-5 w-5 rounded text-amber-600 focus:ring-amber-500"
+                                onchange="toggleCheck(this)">
+                            <span class="text-slate-700 checklist-item font-medium">4. Exigir que la Hoja de Encargo
+                                (Presupuesto) separe claramente las fases, tal como hizo tu primera opción (Estudio,
+                                Negociación, Judicial).</span>
+                        </label>
+                        <label
+                            class="flex items-start space-x-3 cursor-pointer p-2 hover:bg-stone-100 rounded transition-colors">
+                            <input type="checkbox" class="mt-1 h-5 w-5 rounded text-amber-600 focus:ring-amber-500"
+                                onchange="toggleCheck(this)">
+                            <span class="text-slate-700 checklist-item font-medium">5. Preguntar por los costes
+                                adicionales en la fase judicial (Procurador y, crucialmente, el Perito Tasador
+                                Inmobiliario).</span>
+                        </label>
+                        <label
+                            class="flex items-start space-x-3 cursor-pointer p-2 hover:bg-stone-100 rounded transition-colors">
+                            <input type="checkbox" class="mt-1 h-5 w-5 rounded text-amber-600 focus:ring-amber-500"
+                                onchange="toggleCheck(this)">
+                            <span class="text-slate-700 checklist-item font-medium">6. Valorar la empatía ("cómo
+                                respiran"): Si vas a estar 3 años litigando con tu familia, necesitas un abogado que te
+                                de tranquilidad, no más ansiedad.</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="mt-12 text-center text-slate-500 text-sm">
+            <p>Panel de análisis estratégico basado en las consultas del usuario. Este documento tiene fines
+                organizativos y no constituye asesoramiento legal formal.</p>
+        </footer>
+    </div>
+
+    <script>
+        const sections = ['contexto', 'proyeccion', 'abogados', 'accion'];
+        let chartInstance = null;
+
+        function showSection(sectionId) {
+            sections.forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+                document.getElementById(id).classList.remove('fade-in');
+                document.getElementById(`btn-${id}`).classList.remove('active');
+            });
+
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.remove('hidden');
+            activeSection.classList.add('fade-in');
+            document.getElementById(`btn-${sectionId}`).classList.add('active');
+
+            if (sectionId === 'proyeccion') {
+                renderChart();
+            }
+        }
+
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            const desc = document.getElementById(`desc-${id}`);
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                desc.classList.remove('line-clamp-2');
+            } else {
+                details.classList.add('hidden');
+                desc.classList.add('line-clamp-2');
+            }
+        }
+
+        function toggleCheck(checkbox) {
+            const span = checkbox.nextElementSibling;
+            if (checkbox.checked) {
+                span.classList.add('checked');
+            } else {
+                span.classList.remove('checked');
+            }
+        }
+
+        function renderChart() {
+            if (chartInstance) {
+                return;
+            }
+
+            const ctx = document.getElementById('costChart').getContext('2d');
+
+            Chart.defaults.font.family = "'Source Sans Pro', sans-serif";
+            Chart.defaults.color = '#475569';
+
+            const data = {
+                labels: ['Fase 1: Estudio', 'Fase 2: Negociación', 'Fase 3: Judicial (Colación)'],
+                datasets: [
+                    {
+                        label: 'Coste Estimado (€)',
+                        data: [500, 1500, 5000],
+                        backgroundColor: [
+                            'rgba(148, 163, 184, 0.8)',
+                            'rgba(71, 85, 105, 0.8)',
+                            'rgba(180, 83, 9, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(148, 163, 184, 1)',
+                            'rgba(71, 85, 105, 1)',
+                            'rgba(180, 83, 9, 1)'
+                        ],
+                        borderWidth: 1,
+                        borderRadius: 4,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Tiempo Estimado (Meses)',
+                        data: [1, 12, 36],
+                        type: 'line',
+                        backgroundColor: 'rgba(15, 23, 42, 1)',
+                        borderColor: 'rgba(15, 23, 42, 1)',
+                        borderWidth: 3,
+                        pointBackgroundColor: 'white',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        yAxisID: 'y1'
+                    }
+                ]
+            };
+
+            const options = {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    if (context.datasetIndex === 0) {
+                                        label += context.dataset.data[context.dataIndex] === 5000 ? 'Variable según tasación' : context.parsed.y + ' €';
+                                    } else {
+                                        label += context.parsed.y + ' Meses';
+                                    }
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Honorarios (€)'
+                        },
+                        ticks: {
+                            callback: function (value) {
+                                return value + ' €';
+                            }
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Duración (Meses)'
+                        },
+                        grid: {
+                            drawOnChartArea: false,
+                        },
+                        min: 0,
+                        max: 40
+                    }
+                }
+            };
+
+            chartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: options
+            });
+        }
+    </script>
+</body>
+
+</html>

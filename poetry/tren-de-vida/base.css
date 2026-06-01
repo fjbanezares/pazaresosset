@@ -1,7 +1,7 @@
 body {
   transition: background-color 1s ease;
   background-color: #000;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('background.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35)), url('background.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -125,4 +125,57 @@ body {
 
 .language {
   display: none;
+}
+
+.custom-select-lg {
+  font-size: 1.1rem;
+  height: auto;
+}
+
+/* Album Grid and Music styles */
+.album-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 215, 0, 0.15); /* Elegant gold outline */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  max-width: 280px;
+  margin: 0 auto;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.album-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  border-color: #1DB954; /* Glows Spotify green on hover */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(29, 185, 84, 0.25);
+}
+
+.album-cover {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.25);
+  cursor: pointer;
+}
+
+.album-info {
+  padding: 15px;
+}
+
+.album-title {
+  font-family: 'Philosopher', sans-serif;
+  color: #FFD700; /* Beautiful golden title */
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  min-height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-artist {
+  color: #bbb;
+  font-size: 0.8rem;
+  font-weight: bold;
 }

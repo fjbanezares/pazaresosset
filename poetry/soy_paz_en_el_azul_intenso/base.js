@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const langSelect = document.getElementById('language-select');
   if (langSelect) langSelect.value = 'spanish';
 
+  // --- Initial state for Spotify ---
+  const initialSpotifyLink = document.getElementById('spotify-link');
+  if (initialSpotifyLink) {
+    initialSpotifyLink.href = 'https://open.spotify.com/album/2wfwtLIpuzVdzYByWG4ZTQ?si=G0p9DK1OSmCOLyRsU5uUSA';
+  }
+  const initialSpotifyIframe = document.getElementById('spotify-iframe');
+  if (initialSpotifyIframe) {
+    initialSpotifyIframe.src = 'https://open.spotify.com/embed/album/2wfwtLIpuzVdzYByWG4ZTQ?utm_source=generator';
+  }
+
   // --- Language Selector ---
   if (langSelect) {
     langSelect.addEventListener('change', function () {
@@ -73,7 +83,39 @@ document.addEventListener('DOMContentLoaded', function () {
         audioButtonText.innerText = audioButtonTexts[selectedLanguage] || audioButtonTexts['spanish'];
       }
 
-      // Spotify update logic will go here when links are provided
+      // --- Spotify Dynamic Mapping and Updates ---
+      const spotifyMapping = {
+        'spanish': {
+          'album_link': 'https://open.spotify.com/album/2wfwtLIpuzVdzYByWG4ZTQ?si=G0p9DK1OSmCOLyRsU5uUSA',
+          'album_iframe': 'https://open.spotify.com/embed/album/2wfwtLIpuzVdzYByWG4ZTQ?utm_source=generator'
+        },
+        'english': {
+          'album_link': 'https://open.spotify.com/intl-es/album/0cX7k8W7IvlEF2RLJ92ddu?si=8ItIOpnWT1W2-pCqzOWhHg',
+          'album_iframe': 'https://open.spotify.com/embed/album/0cX7k8W7IvlEF2RLJ92ddu?utm_source=generator'
+        },
+        'italian': {
+          'album_link': 'https://open.spotify.com/album/1PKJ2zMcGgPsTU3KpsVcuG?si=3g4-Qq-2TpW-0ldG7T8s0w',
+          'album_iframe': 'https://open.spotify.com/embed/album/1PKJ2zMcGgPsTU3KpsVcuG?utm_source=generator'
+        },
+        'chinese': {
+          'album_link': 'https://open.spotify.com/album/2hawVluPMRIlfIjFoqbhoz?si=7lBOD9lXSayvRlTD4vGGJQ',
+          'album_iframe': 'https://open.spotify.com/embed/album/2hawVluPMRIlfIjFoqbhoz?utm_source=generator'
+        },
+        'russian': {
+          'album_link': 'https://open.spotify.com/album/4yYCb8WX4q6iEldFjDcDli?si=oNakA5sgR_iKEqzJjokbfg',
+          'album_iframe': 'https://open.spotify.com/embed/album/4yYCb8WX4q6iEldFjDcDli?utm_source=generator'
+        }
+      };
+
+      const selectedSpotify = spotifyMapping[selectedLanguage] || spotifyMapping['spanish'];
+      const spotifyLink = document.getElementById('spotify-link');
+      if (spotifyLink) {
+        spotifyLink.href = selectedSpotify.album_link;
+      }
+      const spotifyIframe = document.getElementById('spotify-iframe');
+      if (spotifyIframe) {
+        spotifyIframe.src = selectedSpotify.album_iframe;
+      }
     });
   }
 

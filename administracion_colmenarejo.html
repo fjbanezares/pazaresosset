@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Estrategia: Comunidad de Propietarios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+
+        .tab-active {
+            background-color: #1e3a8a;
+            color: white;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .tab-inactive {
+            background-color: transparent;
+            color: #475569;
+            border-left: 4px solid transparent;
+            hover: bg-slate-200;
+        }
+
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .accordion-content.open {
+            max-height: 1000px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 antialiased h-screen flex overflow-hidden">
+
+    <!-- Sidebar Navigation -->
+    <nav class="w-64 bg-white shadow-xl z-10 flex flex-col h-full hidden md:flex">
+        <div class="p-6 bg-slate-900 text-white">
+            <h1 class="text-xl font-bold tracking-tight">Panel de Defensa</h1>
+            <p class="text-xs text-slate-400 mt-1">Caso: Clorador Salino / Admin</p>
+        </div>
+        <div class="flex-1 overflow-y-auto py-4 space-y-1" id="nav-menu">
+            <button onclick="switchTab('legal')"
+                class="w-full text-left px-6 py-3 font-semibold text-sm transition-colors tab-active" id="nav-legal">
+                &#9658; 1. Análisis Legal y Riesgos
+            </button>
+            <button onclick="switchTab('comunidad')"
+                class="w-full text-left px-6 py-3 font-semibold text-sm transition-colors tab-inactive"
+                id="nav-comunidad">
+                &#9658; 2. Plan de Acción (LPH)
+            </button>
+            <button onclick="switchTab('protocolo')"
+                class="w-full text-left px-6 py-3 font-semibold text-sm transition-colors tab-inactive"
+                id="nav-protocolo">
+                &#9658; 3. Protocolo de Seguridad
+            </button>
+            <button onclick="switchTab('denuncias')"
+                class="w-full text-left px-6 py-3 font-semibold text-sm transition-colors tab-inactive"
+                id="nav-denuncias">
+                &#9658; 4. Vía Colegial / Disciplinaria
+            </button>
+        </div>
+        <div class="p-4 border-t border-slate-200 text-xs text-slate-500">
+            Confidencial y de uso personal. Recomendaciones basadas en análisis de situación.
+        </div>
+    </nav>
+
+    <!-- Mobile Header (Visible only on small screens) -->
+    <div
+        class="md:hidden fixed top-0 w-full bg-slate-900 text-white p-4 z-20 flex justify-between items-center shadow-md">
+        <h1 class="font-bold">Panel de Defensa</h1>
+        <select id="mobile-nav" onchange="switchTab(this.value)"
+            class="bg-slate-800 text-white border-none p-2 rounded text-sm">
+            <option value="legal">1. Análisis Legal</option>
+            <option value="comunidad">2. Plan de Acción</option>
+            <option value="protocolo">3. Protocolo Seguridad</option>
+            <option value="denuncias">4. Denuncias Colegiales</option>
+        </select>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto mt-16 md:mt-0 p-4 md:p-8 relative">
+
+        <!-- SECTION 1: Legal -->
+        <section id="sec-legal" class="block max-w-4xl mx-auto opacity-100 transition-opacity duration-300">
+            <header class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Análisis Legal y de Comunicaciones</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Evaluación de la amenaza recibida por correo, los límites de la libertad de expresión respecto al
+                    "derecho al honor" de la administradora, y cómo manejar la información con el resto de vecinos sin
+                    vulnerar la LOPD.
+                </p>
+            </header>
+
+            <div class="space-y-4">
+                <!-- Accordion Item 1 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm">
+                    <button
+                        class="w-full text-left px-6 py-4 font-bold text-lg flex justify-between items-center focus:outline-none"
+                        onclick="toggleAccordion('acc-honor')">
+                        ¿Hay delito de falta al honor por decir "clara manipulación"?
+                        <span class="text-slate-400 font-mono text-xl" id="acc-honor-icon">+</span>
+                    </button>
+                    <div id="acc-honor"
+                        class="accordion-content px-6 bg-slate-50 text-slate-700 text-sm leading-relaxed border-t border-slate-100">
+                        <p class="mb-3"><strong>Análisis Profundo:</strong> Es altamente improbable que tus palabras
+                            constituyan un delito penal de injurias o calumnias. El contexto es fundamental:</p>
+                        <ul class="list-disc pl-5 space-y-2 mb-3">
+                            <li><strong>Libertad de Expresión y Crítica a la Gestión:</strong> Como propietaria, tienes
+                                derecho a criticar la gestión de la administradora. Calificar de "manipulación del voto"
+                                el hecho de que ella haya introducido información técnica (supuestamente de la empresa
+                                de mantenimiento) sin pruebas documentales justo antes de votar, influyendo en el
+                                resultado, es una <em>opinión sobre un hecho fáctico</em>.</li>
+                            <li><strong>Falta de "Ánimo de Injuriar" (Animus Injuriandi):</strong> Tu intención no es
+                                insultar gratuitamente, sino salvaguardar el interés de la comunidad y la salud,
+                                basándote en testimonios (la vecina del bloque 9).</li>
+                            <li><strong>La coletilla del email:</strong> La frase de la administradora <em>"me reservo
+                                    expresamente el derecho de ejercitar las acciones legales..."</em> es una fórmula
+                                estándar y defensiva que usan muchos abogados cuando se sienten cuestionados.
+                                <strong>Suele ser una táctica disuasoria (un farol) para que dejes de insistir.</strong>
+                            </li>
+                        </ul>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
+                            <strong>Conclusión:</strong> Mantén la calma. Has sido objetiva en tus comunicaciones. No
+                            obstante, en el futuro, cambia la palabra "manipulación" por términos más descriptivos y
+                            menos acusatorios penalmente, como: <em>"interferencia indebida", "influencia no documentada
+                                en el voto", o "falta de imparcialidad en la presentación de datos"</em>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm">
+                    <button
+                        class="w-full text-left px-6 py-4 font-bold text-lg flex justify-between items-center focus:outline-none"
+                        onclick="toggleAccordion('acc-lopd')">
+                        ¿Puedo compartir el correo de amenaza con los vecinos o la prensa?
+                        <span class="text-slate-400 font-mono text-xl" id="acc-lopd-icon">+</span>
+                    </button>
+                    <div id="acc-lopd"
+                        class="accordion-content px-6 bg-slate-50 text-slate-700 text-sm leading-relaxed border-t border-slate-100">
+                        <p class="mb-3 text-red-600 font-semibold">⚠️ NO compartas el correo con la prensa.</p>
+                        <p class="mb-3">Las comunicaciones entre la administradora y un propietario tienen una
+                            expectativa de privacidad. Acudir a la prensa es desproporcionado, no resuelve el problema
+                            de la piscina y podría darle a ella argumentos para una demanda civil por intromisión en su
+                            honor profesional.</p>
+                        <p class="mb-3"><strong>¿Con los vecinos? (Comunidad de Propietarios):</strong></p>
+                        <p class="mb-3">Sí existe un <em>interés legítimo</em> en que los vecinos conozcan cómo responde
+                            la administradora a las peticiones. Sin embargo, reenviar el correo tal cual puede rozar los
+                            límites de la LOPD y el secreto de las comunicaciones.</p>
+                        <div class="bg-green-50 border-l-4 border-green-500 p-4 mt-4">
+                            <strong>Estrategia Recomendada:</strong> En lugar de reenviar su correo, redacta una
+                            circular tuya: <br><br>
+                            <em>"Estimados vecinos, os informo que he solicitado a la administración que se envíen los
+                                presupuestos del clorador y se repita la votación basándonos en datos técnicos.
+                                Lamentablemente, la respuesta de la administración ha sido negarse a tramitar la
+                                solicitud y responder con advertencias de acciones legales hacia mi persona por
+                                cuestionar cómo se desarrolló la votación en el bloque 9. Ante esta actitud que
+                                considero opaca y hostil, propongo..."</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Comunidad -->
+        <section id="sec-comunidad" class="hidden max-w-5xl mx-auto opacity-0 transition-opacity duration-300">
+            <header class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Plan de Acción: Superar la Muralla</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Cómo utilizar la Ley de Propiedad Horizontal (LPH) a tu favor para forzar la inclusión del clorador
+                    salino en el orden del día y abordar la designación irregular del presidente.
+                </p>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Left Column: Steps -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">El camino legal (Art. 16 LPH)</h3>
+                    <p class="text-sm text-slate-600 mb-4">La administradora tiene razón técnica en una cosa: ella no
+                        convoca, convoca el Presidente. Pero el presidente está obligado a incluir tu petición si sigues
+                        el cauce adecuado, o puedes forzar la junta si alcanzas un quórum.</p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold mr-3 mt-1">1</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Escrito Formal al Presidente Actual</h4>
+                                <p class="text-sm text-slate-600">No uses el WhatsApp. Envía un Burofax o correo
+                                    certificado con acuse de recibo al Presidente (con copia a la administradora)
+                                    solicitando formalmente: 1. Inclusión de la instalación del clorador salino en la
+                                    próxima Junta. 2. Aclaración del acta donde se le nombró presidente (ya que dices
+                                    que se presentó voluntario días después sin junta).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold mr-3 mt-1">2</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Recogida de Firmas (Forzar Junta Extraordinaria)
+                                </h4>
+                                <p class="text-sm text-slate-600">Si el presidente te ignora, el Art. 16.1 de la LPH te
+                                    permite convocar una Junta Extraordinaria si reúnes el apoyo del <strong>25% de los
+                                        propietarios que representen el 25% de las cuotas</strong>. Si en WhatsApp hay
+                                    silencio, toca el puerta a puerta con tu informe sobre el ahorro y la salud.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold mr-3 mt-1">3</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Impugnación de Acuerdos (Art. 18)</h4>
+                                <p class="text-sm text-slate-600">Si el presidente se "autoproclamó" sin votación en una
+                                    junta, esa designación es nula. Tienes 3 meses (o 1 año según el caso) para impugnar
+                                    en el juzgado. Solo mencionar que te estás asesorando para impugnar el nombramiento
+                                    por irregular a veces destraba la situación.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Visualization -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex flex-col justify-center items-center">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2 text-center">Objetivo: Forzar Junta Extraordinaria
+                    </h3>
+                    <p class="text-xs text-slate-500 mb-4 text-center">Apoyos necesarios según Art. 16.1 LPH (Cuotas de
+                        participación)</p>
+                    <div class="chart-container">
+                        <canvas id="quorumChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <button onclick="document.getElementById('nav-protocolo').click()"
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors text-sm">
+                            Ver Protocolo de Seguridad &#8594;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Protocolo -->
+        <section id="sec-protocolo" class="hidden max-w-4xl mx-auto opacity-0 transition-opacity duration-300">
+            <header class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Protocolo de Emergencia: Riesgos Químicos</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Instrucciones claras sobre cómo actuar y dejar registro legal irrebatible si este verano un
+                    socorrista o vecino sufre quemaduras por el uso de cloro líquido, estableciendo la responsabilidad
+                    civil o penal de la comunidad y la administración.
+                </p>
+            </header>
+
+            <div class="bg-red-50 border border-red-200 rounded-lg p-6 mb-6 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-2 h-full bg-red-600"></div>
+                <h3 class="text-xl font-bold text-red-800 mb-4 flex items-center">
+                    <span class="text-2xl mr-2">&#9888;&#65039;</span> ¿Qué hacer en caso de accidente químico
+                    (quemadura)?
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                    <div>
+                        <h4 class="font-bold text-slate-800 border-b border-red-200 pb-2 mb-3">Si afecta a un TRABAJADOR
+                            (Socorrista/Mantenedor)</h4>
+                        <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-700">
+                            <li><strong>Asistencia inmediata:</strong> Llamar al 112 informando de "accidente laboral
+                                por exposición a químicos". Exigir ambulancia para que quede registro oficial de la
+                                llamada y la causa.</li>
+                            <li><strong>Documentación:</strong> Tomar fotografías del estado de la piel (con permiso del
+                                afectado) y de los bidones de producto químico implicados.</li>
+                            <li><strong>Inspección de Trabajo:</strong> El trabajador (o tú como ciudadana) puede
+                                interponer una denuncia ante la Inspección de Trabajo y Seguridad Social por falta de
+                                EPIs (Equipos de Protección Individual) o negligencia en el manejo de productos
+                                peligrosos.</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 border-b border-red-200 pb-2 mb-3">Si afecta a un USUARIO
+                            (Vecino/Niño)</h4>
+                        <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-700">
+                            <li><strong>Urgencias Médicas:</strong> Acudir a urgencias o llamar al 112.
+                                <strong>Crucial:</strong> Al entrar en urgencias, especificar al médico que la quemadura
+                                es por el cloro de la piscina comunitaria. Exigir copia del <em>Parte de Lesiones</em>.
+                            </li>
+                            <li><strong>Identificar Testigos:</strong> Tomar nombre y teléfono de otros vecinos
+                                presentes en la piscina en ese momento.</li>
+                            <li><strong>Denuncia Policial:</strong> Con el parte de lesiones, acudir a la Guardia Civil
+                                o Policía Local (Policía de Galapagar) a presentar denuncia por posibles lesiones por
+                                imprudencia contra la Comunidad de Propietarios y la empresa mantenedora.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-white p-4 rounded border border-red-100 shadow-inner">
+                    <h4 class="font-bold text-slate-800 mb-2">Tu escudo preventivo (Haz esto HOY):</h4>
+                    <p class="text-sm text-slate-600">Para que tu advertencia tenga peso legal y demuestre la
+                        negligencia en caso de accidente, debes enviar un correo oficial (o burofax) a la Administradora
+                        y al Presidente diciendo exactamente:</p>
+                    <blockquote class="italic text-slate-500 text-sm mt-2 border-l-2 border-slate-300 pl-3">
+                        "Dejo expresa constancia por esta vía de mi advertencia sobre la peligrosidad del uso de cloro
+                        líquido sin las medidas y automatizaciones adecuadas en nuestra piscina. Ante la negativa a
+                        valorar alternativas más seguras (cloración salina o sólido), hago a la administración, a la
+                        empresa mantenedora y a la presidencia responsables civiles y subsidiarios de cualquier
+                        accidente, quemadura o afección dermatológica que sufran trabajadores o usuarios durante esta
+                        temporada, reservándome el derecho de informar a las autoridades competentes (Sanidad e
+                        Inspección de Trabajo) si se produjese cualquier incidente."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Denuncias Colegiales -->
+        <section id="sec-denuncias" class="hidden max-w-4xl mx-auto opacity-0 transition-opacity duration-300">
+            <header class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Vía Disciplinaria: Colegios Profesionales</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Estrategia para presentar una queja formal ante el Colegio de Abogados y el Colegio de
+                    Administradores de Fincas. Es vital enfocar la queja en la mala praxis y opacidad, no en el
+                    conflicto personal.
+                </p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Administradores -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold mr-3 text-xl">
+                            &#127970;</div>
+                        <h3 class="text-xl font-bold text-slate-800">Colegio de Administradores de Fincas (CAF Madrid)
+                        </h3>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4">Esta es la vía más efectiva. Los administradores tienen un
+                        código deontológico estricto respecto a la transparencia y la gestión de fondos.</p>
+
+                    <h4 class="font-bold text-sm text-slate-800 mb-2">Motivos sólidos para la queja:</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-sm text-slate-600 mb-4">
+                        <li><strong>Negativa a mostrar presupuestos:</strong> Ignorar la petición de un propietario para
+                            revisar los presupuestos (cloración, mantenimiento) es una infracción de sus deberes
+                            documentales.</li>
+                        <li><strong>Parcialidad e interferencia:</strong> Condicionar el voto de los vecinos
+                            transmitiendo verbalmente opiniones técnicas de terceros sin aportar el informe pericial o
+                            técnico correspondiente en la junta.</li>
+                        <li><strong>Gestión de cargos:</strong> Permitir o no advertir legalmente sobre la asunción de
+                            la presidencia por parte de un vecino fuera de los procedimientos de la LPH (Junta de
+                            Propietarios).</li>
+                    </ul>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 text-xs text-slate-500">
+                        <strong>Cómo hacerlo:</strong> Descarga el formulario de queja deontológica en la web del CAF
+                        Madrid. Adjunta tus correos solicitando documentación y la falta de respuesta.
+                    </div>
+                </div>
+
+                <!-- Abogados -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold mr-3 text-xl">
+                            &#9816;</div>
+                        <h3 class="text-xl font-bold text-slate-800">Colegio de Abogados (ICAM)</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4">Como su correo usa el dominio @icam.es, ejerce también como
+                        abogada. La queja aquí es más compleja, pero posible si usa su estatus para coaccionar.</p>
+
+                    <h4 class="font-bold text-sm text-slate-800 mb-2">Motivos sólidos para la queja:</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-sm text-slate-600 mb-4">
+                        <li><strong>Uso abusivo del requerimiento legal:</strong> Utilizar la amenaza genérica de
+                            acciones penales (falta al honor) como mecanismo de presión o coacción para silenciar a una
+                            propietaria que ejerce su legítimo derecho a la fiscalización de las cuentas y contratos de
+                            la comunidad.</li>
+                        <li><strong>Conflicto de intereses:</strong> Actuar en beneficio de ciertas decisiones
+                            (contratos de mantenimiento actuales) impidiendo el debate de alternativas viables (sal).
+                        </li>
+                    </ul>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100 text-xs text-slate-500">
+                        <strong>Cómo hacerlo:</strong> Se presenta a través del Departamento de Deontología del ICAM.
+                        Debes argumentar que su comunicación (el PDF) no es una advertencia legal legítima, sino un acto
+                        de intimidación a un consumidor/propietario.
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-slate-500 italic text-sm">
+                Nota: Antes de iniciar vías disciplinarias, concentra tus energías en conseguir el 25% de apoyos para la
+                Junta Extraordinaria. Cambiar a la administradora requiere mayoría simple en Junta.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Vanilla JS Logic -->
+    <script>
+        // State Management
+        let currentTab = 'legal';
+        let chartInstance = null;
+
+        // Navigation Logic
+        function switchTab(tabId) {
+            // Update mobile dropdown if changed externally
+            document.getElementById('mobile-nav').value = tabId;
+
+            // Hide all sections
+            const sections = ['legal', 'comunidad', 'protocolo', 'denuncias'];
+            sections.forEach(id => {
+                const el = document.getElementById('sec-' + id);
+                el.classList.add('hidden');
+                el.classList.remove('opacity-100');
+                el.classList.add('opacity-0');
+
+                // Update desktop nav styling
+                const navBtn = document.getElementById('nav-' + id);
+                if (navBtn) {
+                    if (id === tabId) {
+                        navBtn.classList.remove('tab-inactive');
+                        navBtn.classList.add('tab-active');
+                    } else {
+                        navBtn.classList.add('tab-inactive');
+                        navBtn.classList.remove('tab-active');
+                    }
+                }
+            });
+
+            // Show selected section
+            const activeEl = document.getElementById('sec-' + tabId);
+            activeEl.classList.remove('hidden');
+            // Small delay to allow display:block to render before fading in
+            setTimeout(() => {
+                activeEl.classList.remove('opacity-0');
+                activeEl.classList.add('opacity-100');
+            }, 50);
+
+            currentTab = tabId;
+
+            // Render charts if entering specific tabs
+            if (tabId === 'comunidad') {
+                renderQuorumChart();
+            }
+        }
+
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                content.classList.add('open');
+                icon.textContent = '-';
+            }
+        }
+
+        // Chart.js Logic
+        function renderQuorumChart() {
+            const ctx = document.getElementById('quorumChart');
+
+            // Destroy existing chart to prevent memory leaks/glitches when switching tabs
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            if (!ctx) return;
+
+            chartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Tu Objetivo (25%)', 'Resto de Cuotas (75%)'],
+                    datasets: [{
+                        data: [25, 75],
+                        backgroundColor: [
+                            '#3b82f6', // Blue (Goal)
+                            '#e2e8f0'  // Slate light (Remaining)
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: "'Inter', sans-serif"
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    }
+                },
+                plugins: [{
+                    id: 'textCenter',
+                    beforeDraw: function (chart) {
+                        var width = chart.width,
+                            height = chart.height,
+                            ctx = chart.ctx;
+
+                        ctx.restore();
+                        var fontSize = (height / 114).toFixed(2);
+                        ctx.font = "bold " + fontSize + "em sans-serif";
+                        ctx.textBaseline = "middle";
+                        ctx.fillStyle = "#1e293b";
+
+                        var text = "25%",
+                            textX = Math.round((width - ctx.measureText(text).width) / 2),
+                            textY = height / 2.2;
+
+                        ctx.fillText(text, textX, textY);
+
+                        ctx.font = "normal " + (fontSize * 0.4).toFixed(2) + "em sans-serif";
+                        ctx.fillStyle = "#64748b";
+                        var text2 = "Para forzar Junta",
+                            text2X = Math.round((width - ctx.measureText(text2).width) / 2),
+                            text2Y = height / 2.2 + 25;
+
+                        ctx.fillText(text2, text2X, text2Y);
+                        ctx.save();
+                    }
+                }]
+            });
+        }
+
+        // Initialize first view
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('legal');
+        });
+    </script>
+</body>
+
+</html>
