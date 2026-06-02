@@ -1,0 +1,11 @@
+Spotify_link_castellano: https://open.spotify.com/album/2cBBjcqPNixmMumh2YMgky?si=FkH-1V8bT4qPfvJXOY01Vw
+Spotify_iframe_castellano: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2cBBjcqPNixmMumh2YMgky?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Spotify_link_ingles: https://open.spotify.com/album/7tPfVlE15jpkeqz6lGXXCa?si=fedM6n_WT9qPW1O--7IOzQ
+Spotify_iframe_ingles: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/7tPfVlE15jpkeqz6lGXXCa?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+Spotify_link_arabe: https://open.spotify.com/album/6wHzjCWgx1fp7yTpTaBfEs?si=jUL6byuXT1G8i00RrzbUsA
+Spotify_iframe_arabe: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6wHzjCWgx1fp7yTpTaBfEs?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+
+
+
